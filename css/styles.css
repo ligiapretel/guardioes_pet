@@ -2,3 +2,39 @@
     box-sizing: border-box;
     margin: 0;
 }
+/*CSS Menu Chat ONG´s*/
+header{
+    width:40%;
+    border-radius: 5px;
+}
+#perfil-ong{
+    width: 100%;
+    padding-bottom: 10px;
+}
+.menu-ong , .menu-ong-sair{
+    background-color: orange;
+    width:100%;
+    color: white;
+    padding:10px;
+    margin-bottom:3%;
+    text-align: center;
+}
+.menu-ong:hover{
+    background-color: white;
+    color: orange;
+}
+.menu-ong-sair:hover{
+    background-color:red;
+    color:white;
+}
+/*BOX de mensagens para a ONG*/
+.mensagem-guardiao{
+    border: 3px groove orange;
+    padding:10px;
+    margin-bottom: 2%;
+
+}
+#perfil-chat-guardiao{
+    border-radius: 50%;
+    width: 20%;
+}
