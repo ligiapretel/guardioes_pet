@@ -34,7 +34,14 @@ header{
     margin-bottom: 2%;
 
 }
+.mensagem-guardiao:hover{
+    background-color:#ffa5003d;
+}
 #perfil-chat-guardiao{
     border-radius: 50%;
     width: 20%;
+}
+/*BOX Conversas chat*/
+#box-chat{
+    border: 1px solid black;;
 }
