@@ -29,7 +29,7 @@ header{
 }
 /*BOX de mensagens para a ONG*/
 .mensagem-guardiao{
-    border: 3px groove orange;
+    border: 3px groove #ff9640;
     padding:10px;
     margin-bottom: 2%;
 
@@ -44,4 +44,25 @@ header{
 /*BOX Conversas chat*/
 #box-chat{
     border: 1px solid black;;
+}
+/*Página Sobre.php - Quem somos*/
+div .foto-perfil{
+    background-color: gray;
+    border-radius: 50%;
+    padding: 20px;
+}
+.h3, h3{
+    color:#ff9640;
+    text-align: center;
+}
+p.texto-perfil{
+    text-align: justify;
+    padding: 3px;
+}
+.jumbotron{
+    background-image: url("../img/perfil-sobre/dogs.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    height: 700px;
 }
