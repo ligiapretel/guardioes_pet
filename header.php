@@ -19,28 +19,28 @@
       
         <ul class="col-10 nav d-flex justify-content-end">
             <li class="nav-item">
-              <a class="nav-link" href="#">Seja um guardião</a>
+              <a class="nav-link linkHeader" href="#">Seja um guardião</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Sobre nós</a>
+              <a class="nav-link linkHeader" href="#">Sobre nós</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Como funciona</a>
+              <a class="nav-link linkHeader" href="#">Como funciona</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Parceiros</a>
+              <a class="nav-link linkHeader" href="#">Parceiros</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Doações</a>
+                <a class="nav-link linkHeader" href="#">Doações</a>
               </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Contato</a>
+                <a class="nav-link linkHeader" href="#">Contato</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Login</a>
+                <a class="nav-link linkHeader" href="#">Login</a>
             </li> 
 
-            <button type="button" class="btn btn-success">Cadastre-se</button>
+            <button type="button" class="btn btnHeader">Cadastre-se</button>
           </ul>    
         </nav> 
         </div> 
