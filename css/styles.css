@@ -41,7 +41,22 @@ header{
     border-radius: 50%;
     width: 20%;
 }
-
+/*CSS PÁGINA SOBRE.PHP*/
+.jumbotron{
+    background-image: url("../img/perfil-sobre/dogs.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 700px;
+    color:white;
+}
+.h3, h3{
+    color:#ff9640;
+}
+.foto-perfil{
+    border-radius: 50%;
+    border: 1px solid #ff9640;
+    background-color: gray;
+}
 /*HEADER*/
 header{
     background-color: #e5e9f2;
