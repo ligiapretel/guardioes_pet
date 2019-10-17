@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Guardiões Pet</title>
 </head>
-    <header class="col-lg-3 col-md-3 col-sm-6 col-xs-6 p-5 m-2">
+    <header id="menu-ong" class="col-lg-3 col-md-3 col-sm-6 col-xs-6 p-5 m-2">
         <div class="card" style="width: 20rem;">
             <img id="perfil-ong" src="../img/foto_perfil_ong.jpg" alt="logo da ONG"/>
             <div class="card-body" style="width: 20rem;">

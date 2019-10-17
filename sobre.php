@@ -10,9 +10,9 @@
     <title>Guardiões Pet</title>
 </head>
 <body>
-    <!--include do menu-->
+    <?php include_once("includes/header.php")?>
     <main>
-        <div class="jumbotron">
+        <div class="jumbotron sobre">
             <h1 class="display-4">Quem Somos</h1>
             <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt amet nihil rerum obcaecati autem doloremque voluptatum iusto enim consequatur odio esse provident maxime, non natus. Possimus explicabo omnis distinctio? Cum.Fugit cumque officia, recusandae placeat aliquam pariatur magni natus sunt delectus eaque voluptatibus odit numquam corporis quis molestias. Tempore numquam quia illo quidem culpa accusamus molestiae recusandae explicabo eveniet nihil.</p>
             <hr class="my-4 bg-white">
@@ -35,34 +35,34 @@
             <div class="row">
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 d-flex flex-column justify-content-center align-items-center">
                     <img class="foto-perfil" src="img/perfil/aline.jpg" alt="foto perfil">
-                    <h3>Aline</h3>
+                    <h3>Aline Naoe</h3>
                     <p class="texto-perfil">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo impedit, nulla modi non iure necessitatibus aspernatur, tenetur ipsum odit sed nesciunt! Molestiae ab cupiditate voluptate facere iste obcaecati iusto dolores.</p>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4  d-flex flex-column justify-content-center align-items-center">
                     <img class="foto-perfil" src="img/perfil/claudia.jpg" alt="foto perfil">
-                    <h3>Cláudia</h3>
+                    <h3>Cláudia Leite</h3>
                     <p class="texto-perfil">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo impedit, nulla modi non iure necessitatibus aspernatur, tenetur ipsum odit sed nesciunt! Molestiae ab cupiditate voluptate facere iste obcaecati iusto dolores.</p>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4  d-flex flex-column justify-content-center align-items-center">
                     <img class="foto-perfil" src="img/perfil/luana.jpg" alt="foto perfil">
-                    <h3>Luana</h3>
+                    <h3>Luana Solimeno</h3>
                     <p class="texto-perfil">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo impedit, nulla modi non iure necessitatibus aspernatur, tenetur ipsum odit sed nesciunt! Molestiae ab cupiditate voluptate facere iste obcaecati iusto dolores.</p>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4  d-flex flex-column justify-content-center align-items-center">
                     <img class="foto-perfil" src="img/perfil/chaiana.jpg" alt="foto perfil">
-                    <h3>Chaiana</h3>
+                    <h3>Chaiana Hermes</h3>
                     <p class="texto-perfil">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo impedit, nulla modi non iure necessitatibus aspernatur, tenetur ipsum odit sed nesciunt! Molestiae ab cupiditate voluptate facere iste obcaecati iusto dolores.</p>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4  d-flex flex-column justify-content-center align-items-center">
                     <img class="foto-perfil" src="img/perfil/ligia.jpg" alt="foto perfil">
-                    <h3>Lígia</h3>
+                    <h3>Lígia Pretel</h3>
                     <p class="texto-perfil">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo impedit, nulla modi non iure necessitatibus aspernatur, tenetur ipsum odit sed nesciunt! Molestiae ab cupiditate voluptate facere iste obcaecati iusto dolores.</p>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4  d-flex flex-column justify-content-center align-items-center">
                     <img class="foto-perfil" src="img/perfil/anae.jpg" alt="foto perfil">
-                    <h3>Anaê</h3>
+                    <h3>Anaê Ross</h3>
                     <p class="texto-perfil">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo impedit, nulla modi non iure necessitatibus aspernatur, tenetur ipsum odit sed nesciunt! Molestiae ab cupiditate voluptate facere iste obcaecati iusto dolores.</p>
                 </div>
             </div>
