@@ -10,7 +10,7 @@
     <title>Guardiões Pet</title>
 </head>
 <body>
-    <!--include do menu-->
+    <?php include_once("includes/header.php")?>
     <main>
         <div class="jumbotron">
             <h1 class="display-4">Quem Somos</h1>
