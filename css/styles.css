@@ -38,3 +38,16 @@ header{
     border-radius: 50%;
     width: 20%;
 }
+
+/*HEADER*/
+header{
+    background-color: #e5e9f2;
+}
+
+.btn-success{
+    background-color: #B3ABD4 !important;
+}
+
+.nav-link{
+    color: black;
+}
