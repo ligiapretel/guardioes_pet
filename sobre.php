@@ -12,7 +12,7 @@
 <body>
     <?php include_once("includes/header.php")?>
     <main>
-        <div class="jumbotron">
+        <div class="jumbotron sobre">
             <h1 class="display-4">Quem Somos</h1>
             <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt amet nihil rerum obcaecati autem doloremque voluptatum iusto enim consequatur odio esse provident maxime, non natus. Possimus explicabo omnis distinctio? Cum.Fugit cumque officia, recusandae placeat aliquam pariatur magni natus sunt delectus eaque voluptatibus odit numquam corporis quis molestias. Tempore numquam quia illo quidem culpa accusamus molestiae recusandae explicabo eveniet nihil.</p>
             <hr class="my-4 bg-white">

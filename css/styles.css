@@ -3,9 +3,10 @@
     margin: 0;
 }
 /*CSS Menu Chat ONG´s*/
-header{
+#menu-ong{
     width:40%;
     border-radius: 5px;
+    background-color: white;
 }
 #perfil-ong{
     width: 100%;
@@ -42,7 +43,7 @@ header{
     width: 20%;
 }
 /*CSS PÁGINA SOBRE.PHP*/
-.jumbotron{
+.jumbotron.sobre{
     background-image: url("../img/perfil-sobre/dogs.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -56,6 +57,28 @@ header{
     border-radius: 50%;
     border: 1px solid #ff9640;
     background-color: gray;
+}
+/*CSS PÁGINA PARCEIROS*/
+.jumbotron.parceiros{
+    background-image: url("../img/parceiros/parceiro.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 700px;
+    color:black;
+}
+#titulo-jumbo-parceiros{
+    background-color:#ffffff82;
+    border-radius: 5px;
+    padding: 5px;
+    color: #ff9640;
+}
+.foto-parceiros{
+    width:30%;
+}
+#titulo-carousel-parceiros{
+    text-align:center;
+    padding:10px;
+    color:#ff9640;
 }
 /*HEADER*/
 header{
