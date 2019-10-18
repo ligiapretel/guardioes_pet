@@ -1,3 +1,4 @@
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -10,16 +11,17 @@
 }
 
 /*CSS Menu Chat ONG´s*/
-header{
+#menu-ong{
     width:40%;
     border-radius: 5px;
+    background-color: white;
 }
 #perfil-ong{
     width: 100%;
     padding-bottom: 10px;
 }
 .menu-ong , .menu-ong-sair{
-    background-color: orange;
+    background-color: #ff9640;
     width:100%;
     color: white;
     padding:10px;
@@ -36,10 +38,13 @@ header{
 }
 /*BOX de mensagens para a ONG*/
 .mensagem-guardiao{
-    border: 3px groove orange;
+    border: 3px groove #ff9640;
     padding:10px;
     margin-bottom: 2%;
 
+}
+.mensagem-guardiao:hover{
+    background-color:#ffa5003d;
 }
 #perfil-chat-guardiao{
     border-radius: 50%;
@@ -168,4 +173,72 @@ header{
 
 #doacoes-home button:hover{
     background-color: #4a3f78;
+}
+/*CSS PÁGINA SOBRE.PHP*/
+.jumbotron.sobre{
+    background-image: url("../img/perfil-sobre/dogs.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 700px;
+    color:white;
+}
+.h3, h3{
+    color:#ff9640;
+}
+.foto-perfil{
+    border-radius: 50%;
+    border: 1px solid #ff9640;
+    background-color: gray;
+}
+/*CSS PÁGINA PARCEIROS*/
+.jumbotron.parceiros{
+    background-image: url("../img/parceiros/parceiro.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 700px;
+    color:black;
+}
+#titulo-jumbo-parceiros{
+    background-color:#ffffff82;
+    border-radius: 5px;
+    padding: 5px;
+    color: #ff9640;
+}
+.foto-parceiros{
+    width:30%;
+}
+#titulo-carousel-parceiros{
+    text-align:center;
+    padding:10px;
+    color:#ff9640;
+}
+/*HEADER*/
+header{
+    background-color: #e5e9f2;
+}
+
+.btnHeader{
+    background-color: #B3ABD4 !important;
+    color: white !important;
+}
+
+.linkHeader{
+    color: black;
+}
+
+
+/*FOOTER*/
+.coresFooter{
+    background-color: #ff9640;
+    color: white;
+}
+
+
+.btnFooter{
+    background-color: #6e5dbe !important;
+    color: white;
+}
+
+.linkFooter{
+    color: white;
 }
