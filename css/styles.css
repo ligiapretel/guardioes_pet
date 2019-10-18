@@ -2,6 +2,13 @@
     box-sizing: border-box;
     margin: 0;
 }
+
+#main-home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 /*CSS Menu Chat ONG´s*/
 header{
     width:40%;
@@ -37,4 +44,128 @@ header{
 #perfil-chat-guardiao{
     border-radius: 50%;
     width: 20%;
+}
+
+/* Iniciando CSS do titulo do Carrossel - Home */
+.alinhamento-titulo-carrossel-home{
+    bottom: 490px;
+}
+
+.alinhamento-titulo-carrossel-home h1{
+    font-size: 3rem;
+}
+
+.alinhamento-titulo-carrossel-home p{
+    margin-bottom: 0px;
+}
+
+/* Iniciando CSS da seção de busca - Home */
+#container-busca-expandida{
+    background-color: #FF9640;
+    padding: 30px 40px;
+    position: relative;
+    bottom: 250px;
+}
+
+#container-busca-expandida h2{
+    color: #ffffff;
+    font-size: 2.5rem;   
+}
+
+#container-busca-expandida button{
+    background-color: #6E5DB3;
+    color: #ffffff;
+    text-transform: uppercase;
+    padding: 8px 30px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+}
+
+#container-busca-expandida button:hover{
+    background-color: #4a3f78;
+}
+
+/* Iniciando CSS da seção "Por que ser um Guardião PET?" - Home */
+#seja-guardiao-home{
+    text-align: center;
+    margin-top: -230px;
+}
+
+#seja-guardiao-home h2{
+    color: #343F4B;
+    font-size: 2.8rem; 
+    padding: 30px 0px;  
+}
+
+#seja-guardiao-home p{
+    color: #343F4B;
+    font-size: 1.4rem; 
+}
+
+/* Iniciando CSS da seção "Como funciona?" - Home */
+#como-funciona-home{
+    background-color: #F1F5FA;
+    padding: 40px 20px;
+    margin-top: 30px;
+}
+
+#como-funciona-home img{
+    padding-top: 30px;
+}
+
+#como-funciona-home h4{
+    color: #343F4B;
+    padding: 12px 0px;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+}
+
+#como-funciona-home p{
+    color: #343F4B;
+    font-size: 1.3rem;;
+}
+
+#como-funciona-home button{
+    background-color: #6E5DB3;
+    color: #ffffff;
+    text-transform: uppercase;
+    padding: 8px 30px;
+    border: none;    
+    border-radius: 5px;
+}
+
+#como-funciona-home button:hover{
+    background-color: #4a3f78;
+}
+
+/* Iniciando CSS da seção "Doações" - Home */
+#doacoes-home{
+    text-align: center;
+    padding: 30px 0px;
+}
+
+#doacoes-home h2{
+    color: #343F4B;
+    font-size: 2.8rem; 
+    padding: 30px 0px;  
+}
+
+#doacoes-home p{
+    color: #343F4B;
+    font-size: 1.4rem; 
+}
+
+#doacoes-home button{
+    background-color: #6E5DB3;
+    color: #ffffff;
+    text-transform: uppercase;
+    padding: 8px 30px;
+    border: none;    
+    border-radius: 5px;
+    margin: 20px 0px 50px 0px;
+}
+
+#doacoes-home button:hover{
+    background-color: #4a3f78;
 }
