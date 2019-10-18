@@ -52,15 +52,15 @@
 }
 
 /* Iniciando CSS do titulo do Carrossel - Home */
-.alinhamento-titulo-carrossel-home{
+.titulo-carrossel-home{
     bottom: 490px;
 }
 
-.alinhamento-titulo-carrossel-home h1{
+.titulo-carrossel-home h1{
     font-size: 3rem;
 }
 
-.alinhamento-titulo-carrossel-home p{
+.titulo-carrossel-home p{
     margin-bottom: 0px;
 }
 
@@ -218,7 +218,7 @@ header{
 }
 
 .btnHeader{
-    background-color: #B3ABD4 !important;
+    background-color: #6E5DB3 !important;
     color: white !important;
 }
 
@@ -235,7 +235,7 @@ header{
 
 
 .btnFooter{
-    background-color: #6e5dbe !important;
+    background-color: #6E5DB3 !important;
     color: white;
 }
 
