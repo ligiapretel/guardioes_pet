@@ -35,34 +35,34 @@
             <div class="row">
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 d-flex flex-column justify-content-center align-items-center">
                     <img class="foto-perfil" src="img/perfil/aline.jpg" alt="foto perfil">
-                    <h3>Aline Naoe</h3>
+                    <h3 id="subtitulo-sobre">Aline Naoe</h3>
                     <p class="texto-perfil">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo impedit, nulla modi non iure necessitatibus aspernatur, tenetur ipsum odit sed nesciunt! Molestiae ab cupiditate voluptate facere iste obcaecati iusto dolores.</p>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4  d-flex flex-column justify-content-center align-items-center">
                     <img class="foto-perfil" src="img/perfil/claudia.jpg" alt="foto perfil">
-                    <h3>Cláudia Leite</h3>
+                    <h3 id="subtitulo-sobre">Cláudia Leite</h3>
                     <p class="texto-perfil">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo impedit, nulla modi non iure necessitatibus aspernatur, tenetur ipsum odit sed nesciunt! Molestiae ab cupiditate voluptate facere iste obcaecati iusto dolores.</p>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4  d-flex flex-column justify-content-center align-items-center">
                     <img class="foto-perfil" src="img/perfil/luana.jpg" alt="foto perfil">
-                    <h3>Luana Solimeno</h3>
+                    <h3 id="subtitulo-sobre">Luana Solimeno</h3>
                     <p class="texto-perfil">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo impedit, nulla modi non iure necessitatibus aspernatur, tenetur ipsum odit sed nesciunt! Molestiae ab cupiditate voluptate facere iste obcaecati iusto dolores.</p>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4  d-flex flex-column justify-content-center align-items-center">
                     <img class="foto-perfil" src="img/perfil/chaiana.jpg" alt="foto perfil">
-                    <h3>Chaiana Hermes</h3>
+                    <h3 id="subtitulo-sobre">Chaiana Hermes</h3>
                     <p class="texto-perfil">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo impedit, nulla modi non iure necessitatibus aspernatur, tenetur ipsum odit sed nesciunt! Molestiae ab cupiditate voluptate facere iste obcaecati iusto dolores.</p>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4  d-flex flex-column justify-content-center align-items-center">
                     <img class="foto-perfil" src="img/perfil/ligia.jpg" alt="foto perfil">
-                    <h3>Lígia Pretel</h3>
+                    <h3 id="subtitulo-sobre">Lígia Pretel</h3>
                     <p class="texto-perfil">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo impedit, nulla modi non iure necessitatibus aspernatur, tenetur ipsum odit sed nesciunt! Molestiae ab cupiditate voluptate facere iste obcaecati iusto dolores.</p>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4  d-flex flex-column justify-content-center align-items-center">
                     <img class="foto-perfil" src="img/perfil/anae.jpg" alt="foto perfil">
-                    <h3>Anaê Ross</h3>
+                    <h3 id="subtitulo-sobre">Anaê Ross</h3>
                     <p class="texto-perfil">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo impedit, nulla modi non iure necessitatibus aspernatur, tenetur ipsum odit sed nesciunt! Molestiae ab cupiditate voluptate facere iste obcaecati iusto dolores.</p>
                 </div>
             </div>
