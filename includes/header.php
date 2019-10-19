@@ -14,7 +14,7 @@
         <div class="row">
         <nav class= "col-12 d-flex align-items-center p-3">
             <a class= "navbar-brand" href= "#">
-                <img src="img/lodo-dentro.png" width= "50%" height="50%" alt= "">
+                <img src="../img/lodo-dentro.png" width= "50%" height="50%" alt= "">
             </a>
       
         <ul class="col-10 nav d-flex justify-content-end">

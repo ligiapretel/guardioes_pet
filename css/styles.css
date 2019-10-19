@@ -235,10 +235,21 @@ header{
 
 
 .btnFooter{
-    background-color: #6E5DB3 !important;
-    color: white;
+    background-color: #6E5DB3;
+    color: #ffffff;
+    padding: 8px 30px;
+    border: none;    
+    border-radius: 5px;
+    text-transform: uppercase;
+    cursor: pointer;  
 }
 
 .linkFooter{
     color: white;
 }
+
+.espaco{
+    line-height: 2.2;
+}
+
+
