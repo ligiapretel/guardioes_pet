@@ -218,8 +218,12 @@ header{
 }
 
 .btnHeader{
-    background-color: #6E5DB3 !important;
-    color: white !important;
+    background-color: #B3ABD4;
+    color: #ffffff;
+    padding: 8px 15px;
+    border: none;    
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .linkHeader{
