@@ -116,7 +116,7 @@
                     <p>Ah, e você também pode entrar em contato com eles se quiser doar alguma quantia em dinheiro</p>
                 </div>
             </div>
-            <div class="row justify-content-around pt-3 col-11">
+            <div class="row justify-content-around pt-3 col-12">
                 <div class="col-3">
                     <figure class="figure">
                     <img src="img/perfil_doar_01.jpg" class="figure-img img-fluid rounded rounded-circle" alt="Photo by Autri Taheri on Unsplash">

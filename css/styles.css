@@ -279,6 +279,10 @@ header{
     border-radius: 5px;
 }
 
+.btn-envio:hover {
+    background-color:#4a3f78;
+}
+
 .btn-desativado {
     background-color: #ADB7C3;
     color: #ffffff;
@@ -294,5 +298,28 @@ header{
 }
 
 #botao-apadrinhar a:hover {
+    text-decoration: none;
+}
+
+/*busca reduzida nas páginas*/
+.busca-reduzida {
+    background-color: #FF9640;
+    width: 200px;
+    height: 45px;
+}
+
+.resultados-busca .card img:hover {
+    opacity: 0.5;
+}
+
+.resultados-busca .card-body {
+    background-color: #D6EBE8;
+}
+
+.resultados-busca a {
+    color: black;
+}
+
+.resultados-busca a:hover {
     text-decoration: none;
 }
