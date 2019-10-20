@@ -256,4 +256,43 @@ header{
     line-height: 2.2;
 }
 
+/*página de perfil do animal*/
+.perfil-animal {
+    background-color: #D6EBE8;
+}
 
+#dados-animal p {
+    line-height: 100%;
+}
+
+#perfil-animal-carrossel .carousel-indicators li {
+    width: 13px;
+    height: 13px;
+}
+
+.btn-envio {
+    background-color: #6E5DB3;
+    color: #ffffff;
+    text-transform: uppercase;
+    padding: 8px 30px;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn-desativado {
+    background-color: #ADB7C3;
+    color: #ffffff;
+    text-transform: uppercase;
+    padding: 8px 30px;
+    border: none;
+    border-radius: 5px;
+}
+
+
+#botao-apadrinhar a {
+    color: #ffffff;
+}
+
+#botao-apadrinhar a:hover {
+    text-decoration: none;
+}

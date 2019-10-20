@@ -1,14 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link href="../css/styles.css" rel="stylesheet"/>
-    <title>Footer</title>
-</head>
-<body>
     <footer class="coresFooter">
         <section class="container">
             <div class="row pt-4">
@@ -20,9 +9,9 @@
                         <li class= "espaco"><a class="linkFooter" href="#">Como funciona?</a></li>
                         <li class= "espaco"><a class="linkFooter" href="#">Parceiros</a></li>
                         <li class= "espaco"><a class="linkFooter" href="#">Doações</a></li>
-                        <a href="https://www.facebook.com/"><img class= "img-fluid mt-5" src="../img/face1.png" width="25%" height="30%" alt="facebook"></a>
-                        <a href="https://www.instagram.com/"><img class= "img-fluid mt-5" src="../img/instagram.png" width="25%" height="30%" alt="instagram"></a>
-                        <a href="https://www.twitter.com/"><img class= "img-fluid mt-5" src="../img/twitter.png" width="25%" height="30%" alt="twitter"></a>
+                        <a href="https://www.facebook.com/"><img class= "img-fluid mt-5" src="img/face1.png" width="25%" height="30%" alt="facebook"></a>
+                        <a href="https://www.instagram.com/"><img class= "img-fluid mt-5" src="img/instagram.png" width="25%" height="30%" alt="instagram"></a>
+                        <a href="https://www.twitter.com/"><img class= "img-fluid mt-5" src="img/twitter.png" width="25%" height="30%" alt="twitter"></a>
                         
                     </ul>
                     
@@ -56,5 +45,3 @@
             
         </section>
     </footer>
-</body>
-</html>
