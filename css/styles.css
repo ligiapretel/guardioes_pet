@@ -272,16 +272,17 @@ header{
     width: 200px;
 }
 
-/*CSS Cadastro Ong*/
+/*CSS Cadastro Ong AQUI NÃO SOBRESCREVEU CORRETAMENTE*/
 #formOng{
-    background-color: #E7E2FC;
+    background-color: rgb(161, 156, 180);
 }
 
 #botaoOng{
     width: 200px;
+}
+
 .espaco{
     line-height: 2.2;
-}
 
 /*página de perfil do animal*/
 .perfil-animal {
