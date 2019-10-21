@@ -48,7 +48,7 @@
                 <div></div>
                 <p>Tenho uma pelagem de tres cores que é puro charme e pra completar uma carinha inocente que é i-rre-sis-tível!Adoro tomar um solzinho na janela e tirar cochilos na ...</p>
             </div>
-            <div class="col-lg-4 testando pfong_cards">
+            <div class="col-lg-4 testando pfong_cards d-flex justify-content-center align-items-center">
                 <div id="pfong_animais_img2" class="pfong_animais_imgs"></div>
                 <h1>ELZA</h1>
                 <p>Tenho uma pelagem de tres cores que é puro charme e pra completar uma carinha inocente que é i-rre-sis-tível!Adoro tomar um solzinho na janela e tirar cochilos na ...</p>
