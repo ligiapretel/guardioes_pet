@@ -2,7 +2,7 @@
         <div class="row">
         <nav class= "col-12 d-flex align-items-center">
             <a class= "navbar-brand" href= "index.php">
-                <img src="img/escudo.png" width= "40%" height="40%" alt= "">
+                <img class= "logoHeader" src="img/escudo.png" width= "40%" height="40%" alt= ""> Guardiões Pet
             </a>
       
         <ul class="col-10 nav d-flex justify-content-end">

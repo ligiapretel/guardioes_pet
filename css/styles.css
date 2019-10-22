@@ -214,9 +214,12 @@
 }
 /*HEADER*/
 header{
-    background-color: #e5e9f2;    
+    background-color: #e5e9f2;   
 }
 
+.logoHeader{
+    color: #ff9640;
+}
 
 .btnHeader{
     background-color: #B3ABD4;
@@ -228,7 +231,7 @@ header{
 }
 
 .linkHeader{
-    color: black;
+    color: #47525E;
 }
 
 
