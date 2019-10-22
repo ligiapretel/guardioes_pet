@@ -31,42 +31,43 @@
                     eligendi nobis temporibus voluptas labore eos quos quasi! Et, consectetur.
                 </p>
         </section>
-        <section class="container mr-5">
-            <div class="row">
+        <section class="shadow p-3 mb-5 p-3 bg-white rounded">
+            <div class="row ml-3">
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 d-flex flex-column justify-content-center align-items-center">
-                    <img class="foto-perfil" src="img/perfil/aline.jpg" alt="foto perfil">
+                    <img class="foto-perfil" src="img/perfil-sobre/aline.jpg" alt="foto perfil">
                     <h3 id="subtitulo-sobre">Aline Naoe</h3>
-                    <p class="texto-perfil">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo impedit, nulla modi non iure necessitatibus aspernatur, tenetur ipsum odit sed nesciunt! Molestiae ab cupiditate voluptate facere iste obcaecati iusto dolores.</p>
+                    <p class="text-justify">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo impedit, nulla modi non iure necessitatibus aspernatur, tenetur ipsum odit sed nesciunt! Molestiae ab cupiditate voluptate facere iste obcaecati iusto dolores.</p>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4  d-flex flex-column justify-content-center align-items-center">
-                    <img class="foto-perfil" src="img/perfil/claudia.jpg" alt="foto perfil">
+                    <img class="foto-perfil" src="img/perfil-sobre/claudia.jpg" alt="foto perfil">
                     <h3 id="subtitulo-sobre">Cláudia Leite</h3>
-                    <p class="texto-perfil">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo impedit, nulla modi non iure necessitatibus aspernatur, tenetur ipsum odit sed nesciunt! Molestiae ab cupiditate voluptate facere iste obcaecati iusto dolores.</p>
+                    <p class="text-justify">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo impedit, nulla modi non iure necessitatibus aspernatur, tenetur ipsum odit sed nesciunt! Molestiae ab cupiditate voluptate facere iste obcaecati iusto dolores.</p>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4  d-flex flex-column justify-content-center align-items-center">
-                    <img class="foto-perfil" src="img/perfil/luana.jpg" alt="foto perfil">
+                    <img class="foto-perfil" src="img/perfil-sobre/luana.png" alt="foto perfil">
                     <h3 id="subtitulo-sobre">Luana Solimeno</h3>
-                    <p class="texto-perfil">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo impedit, nulla modi non iure necessitatibus aspernatur, tenetur ipsum odit sed nesciunt! Molestiae ab cupiditate voluptate facere iste obcaecati iusto dolores.</p>
+                    <p class="text-justify">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo impedit, nulla modi non iure necessitatibus aspernatur, tenetur ipsum odit sed nesciunt! Molestiae ab cupiditate voluptate facere iste obcaecati iusto dolores.</p>
                 </div>
             </div>
-            <div class="row">
+            <div class="clearfix"><hr></div>
+            <div class="row ml-3">
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4  d-flex flex-column justify-content-center align-items-center">
-                    <img class="foto-perfil" src="img/perfil/chaiana.jpg" alt="foto perfil">
+                    <img class="foto-perfil" src="img/perfil-sobre/chai.png" alt="foto perfil">
                     <h3 id="subtitulo-sobre">Chaiana Hermes</h3>
-                    <p class="texto-perfil">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo impedit, nulla modi non iure necessitatibus aspernatur, tenetur ipsum odit sed nesciunt! Molestiae ab cupiditate voluptate facere iste obcaecati iusto dolores.</p>
+                    <p class="text-justify">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo impedit, nulla modi non iure necessitatibus aspernatur, tenetur ipsum odit sed nesciunt! Molestiae ab cupiditate voluptate facere iste obcaecati iusto dolores.</p>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4  d-flex flex-column justify-content-center align-items-center">
-                    <img class="foto-perfil" src="img/perfil/ligia.jpg" alt="foto perfil">
+                    <img class="foto-perfil" src="img/perfil-sobre/ligia.png" alt="foto perfil">
                     <h3 id="subtitulo-sobre">Lígia Pretel</h3>
-                    <p class="texto-perfil">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo impedit, nulla modi non iure necessitatibus aspernatur, tenetur ipsum odit sed nesciunt! Molestiae ab cupiditate voluptate facere iste obcaecati iusto dolores.</p>
+                    <p class="text-justify">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo impedit, nulla modi non iure necessitatibus aspernatur, tenetur ipsum odit sed nesciunt! Molestiae ab cupiditate voluptate facere iste obcaecati iusto dolores.</p>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4  d-flex flex-column justify-content-center align-items-center">
-                    <img class="foto-perfil" src="img/perfil/anae.jpg" alt="foto perfil">
+                    <img class="foto-perfil" src="img/perfil-sobre/anae.png" alt="foto perfil">
                     <h3 id="subtitulo-sobre">Anaê Ross</h3>
-                    <p class="texto-perfil">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo impedit, nulla modi non iure necessitatibus aspernatur, tenetur ipsum odit sed nesciunt! Molestiae ab cupiditate voluptate facere iste obcaecati iusto dolores.</p>
+                    <p class="text-justify">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo impedit, nulla modi non iure necessitatibus aspernatur, tenetur ipsum odit sed nesciunt! Molestiae ab cupiditate voluptate facere iste obcaecati iusto dolores.</p>
                 </div>
             </div>
         </section>
-
+    <?php include_once("includes/footer.php");?>
     </main>
 </body>

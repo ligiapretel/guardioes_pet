@@ -187,6 +187,7 @@
 }
 .foto-perfil{
     border-radius: 50%;
+    width: 50%;
     border: 1px solid #ff9640;
     background-color: gray;
 }
@@ -214,7 +215,17 @@
 }
 /*HEADER*/
 header{
-    background-color: #e5e9f2;   
+    background-color: #010310cc;   
+}
+
+.fonteHeader{
+    color: #ff9640;
+    font-family: "Rockwell";
+    font-weight: bold;
+}
+
+.fonteHeader:hover{
+    color: #ff9640;
 }
 
 .logoHeader{
@@ -230,10 +241,18 @@ header{
     cursor: pointer;
 }
 
-.linkHeader{
-    color: #47525E;
+.btnHeader:hover{
+    background-color: #6E5DB3;
 }
 
+.linkHeader{
+    color: #ffffff;
+}
+
+.linkHeader:hover{
+    color: #ffffff;
+    text-decoration: underline !important;
+    }
 
 /*FOOTER*/
 .coresFooter{
@@ -250,6 +269,10 @@ header{
     border-radius: 5px;
     text-transform: uppercase;
     cursor: pointer;  
+}
+
+.btnFooter:hover{
+    background-color: #4a3f78;
 }
 
 .linkFooter{
@@ -362,8 +385,12 @@ header{
 .espaco{
     line-height: 2.2;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 199c68bb1fdc481036012c3f61930266b355991e
 /*página de perfil do animal*/
+
 .perfil-animal {
     background-color: #D6EBE8;
 }
