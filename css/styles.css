@@ -298,6 +298,9 @@ header{
 /*CSS Cadastro Guardião*/
 #formGuardiao{
     background-color: #e5e9f2;
+    margin-top: 8rem;
+    margin-left: 3rem;
+    margin-bottom: 2rem;
 }
 
 .tituloGuardiao{
@@ -311,6 +314,9 @@ header{
 /*CSS Cadastro Animal*/
 #formAnimal{
     background-color: #D6EBE8;
+    margin-top: 8rem;
+    margin-left: 3rem;
+    margin-bottom: 2rem;
 }
 
 .tituloAnimal{
@@ -341,6 +347,9 @@ header{
 /*CSS Cadastro Ong AQUI NÃO SOBRESCREVEU CORRETAMENTE*/
 #formOng{
     background-color: #E7E2FC;
+    margin-top: 8rem;
+    margin-left: 3rem;
+    margin-bottom: 2rem;
 }
 .tituloOng{
     color: #6E5DB3;
@@ -352,6 +361,7 @@ header{
 
 .espaco{
     line-height: 2.2;
+}
 
 /*página de perfil do animal*/
 .perfil-animal {

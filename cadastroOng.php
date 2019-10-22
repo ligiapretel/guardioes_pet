@@ -16,7 +16,7 @@
     <?php include_once("includes/header.php")?>
     
     <!-- início do formulário -->
-    <main class="row">
+    <main class="row" >
         <!-- include do menu lateral -->
         <?php include_once("includes/menu-ong.php")?> <form action="" class="card col-lg-8 col-md-6 col-sm-6 col-xs-6 p-5" id="formOng" >
             <!-- essa div é para o título -->
