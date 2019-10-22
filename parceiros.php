@@ -21,7 +21,7 @@
             <h1 id="titulo-carousel-parceiros">Conheça alguns de nossos parceiros!</h1>
             <div id="carouselExampleInterval" class="carousel slide bg-light" data-ride="carousel">
                 <div class="carousel-inner d-flex shadow p-3 mb-5 bg-white rounded">
-                    <div class="carousel-item active" data-interval="10000">
+                    <div class="carousel-item active" data-interval="1000">
                         <div class="row">
                             <div class="col-lg-4 col-md-4 col-sm-4 col-sm-4">
                                 <img src="img/parceiros/cobasi.png" class="d-block w-100 " alt="logo loja cobasi">
@@ -34,7 +34,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item" data-interval="10000">
+                    <div class="carousel-item" data-interval="1000">
                         <div class="row">
                             <div class="col-lg-4 col-md-4 col-sm-4 col-sm-4">
                                 <img src="img/parceiros/amigobicho.png" class="d-block w-100 " alt="Logo Ong Amigo Bicho">
@@ -47,7 +47,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item" data-interval="10000">
+                    <div class="carousel-item" data-interval="1000">
                         <div class="row">
                             <div class="col-lg-4 col-md-4 col-sm-4 col-sm-4">
                                 <img src="img/parceiros/viralata.png" class="d-block w-100 " alt="Logo ONG vira-lata">
@@ -92,10 +92,11 @@
                         <input type="telefone" class="form-control" name="telefone" placeholder="(00) 0000-0000">
                     </div>
                 </div>
-                <textarea type="text" rows="5" class="form-control p-5" name="mensagem"></textarea>
+                <textarea type="text" rows="5" class="form-control p-5"placeholder="Deixe sua mensagem aqui" name="mensagem"></textarea>
                 <button type="submit" class="btn btn-outline-info m-5">Quero ser um Parceiro!</button>
             </form> 
         </section>
+        <?php include_once("includes/footer.php");?>
     </main>
 <!--JAVASCRIPT BOOTSTRAP-->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
