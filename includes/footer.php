@@ -3,15 +3,15 @@
             <div class="row pt-4">
                 <div class= "col-7 d-flex">
                     <ul class= "col-4 align-content-around list-unstyled">
-                        <li class= "espaco"><a class="linkFooter" href="../index.php">Home</a></li>   
-                        <li class= "espaco"><a class="linkFooter" href="#">Seja um guardião</a></li>
-                        <li class= "espaco"><a class="linkFooter" href="../sobre.php">Sobre nós</a></li>
+                        <li class= "espaco"><a class="linkFooter" href="index.php">Home</a></li>   
+                        <li class= "espaco"><a class="linkFooter" href="cadastroGuardiao.php">Seja um guardião</a></li>
+                        <li class= "espaco"><a class="linkFooter" href="sobre.php">Sobre nós</a></li>
                         <li class= "espaco"><a class="linkFooter" href="#">Como funciona?</a></li>
-                        <li class= "espaco"><a class="linkFooter" href="#">Parceiros</a></li>
+                        <li class= "espaco"><a class="linkFooter" href="parceiros.php">Parceiros</a></li>
                         <li class= "espaco"><a class="linkFooter" href="#">Doações</a></li>
-                        <a href="https://www.facebook.com/"><img class= "img-fluid mt-5" src="img/face1.png" width="25%" height="30%" alt="facebook"></a>
-                        <a href="https://www.instagram.com/"><img class= "img-fluid mt-5" src="img/instagram.png" width="25%" height="30%" alt="instagram"></a>
-                        <a href="https://www.twitter.com/"><img class= "img-fluid mt-5" src="img/twitter.png" width="25%" height="30%" alt="twitter"></a>
+                        <a href="https://www.facebook.com/"><img class= "img-fluid mt-5 p-2" src="img/facebook1.png" width="25%" alt="facebook"></a>
+                        <a href="https://www.instagram.com/"><img class= "img-fluid mt-5 p-2" src="img/instagram1.png" width="25%" alt="instagram"></a>
+                        <a href="https://www.twitter.com/"><img class= "img-fluid mt-5 p-2" src="img/twitter1.png" width="25%" alt="twitter"></a>
                         
                     </ul>
                     
