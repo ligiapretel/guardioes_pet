@@ -14,55 +14,72 @@
 <body>
     <!-- include do header -->
     <?php include_once("includes/header.php")?>
-    <!-- include do menu lateral -->
-    <?php include_once("includes/menu-ong.php")?>
+       
     <!-- início do formulário -->
-    <main>
-        <section class="col-lg-9 col-md-6 col-sm-6 col-xs-6 p-5 m-2">
-            <form action="" class="card col-lg-12 col-md-6 col-sm-6 col-xs-6 p-5" id="formGuardiao" style="width: 50rem">
+    <main class="row">
+    <!-- include do menu lateral -->
+        <?php include_once("includes/menu-ong.php")?> <form action="" class="card col-lg-8 col-md-6 col-sm-6 col-xs-6 p-5" id="formGuardiao" style="width: 50rem">
                 <!-- essa div é para o título -->
                 <div class="form-group d-flex justify-content p-2">
-                    <h3>Cadastro de Guardião</h3>
+                    <h3 class="tituloGuardiao">Cadastro de Guardião</h3>
                 </div>
                 <!--aqui começa o formulário -->
-                <div class="form-group form-row">
-                    <label for="nomeGuardiao">Nome </label>
-                    <input type="text" class="form-control" id="nomeGuardiao" placeholder="Nome completo">
+                <div class="form-group row">
+                    <label for="nomeGuardiao" class="col-sm-4 col-form-label">Nome </label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="nomeGuardiao" placeholder="Nome completo">
+                    </div>    
                 </div>
-                <div class="form-group form-row">
-                    <label for="apelido">Apelido </label>
-                    <input type="text" class="form-control" id="apelido"
+                <div class="form-group row">
+                    <label for="apelido" class="col-sm-4 col-form-label">Apelido </label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="apelido"
                         placeholder="Como seu nome irá aparecer para outros usuários">
+                    </div>    
                 </div>
-                <div class="form-group form-row">
-                    <label for="data">Data de Nascimento </label>
-                    <input type="date" class="form-control" id="data">
+                <div class="form-group row">
+                    <label for="data"class="col-sm-4 col-form-label">Data de Nascimento </label>
+                    <div class="col-sm-8">
+                        <input type="date" class="form-control" id="data">
+                    </div>
                 </div>
-                <div class="form-group form-row">
-                    <label for="emailGuardiao">E-mail</label>
-                    <input type="email" class="form-control" id="emailGuardiao" placeholder="seunome@email.com">
+                <div class="form-group row">
+                    <label for="emailGuardiao" class="col-sm-4 col-form-label">E-mail</label>
+                    <div class="col-sm-8">
+                        <input type="email" class="form-control" id="emailGuardiao" placeholder="seunome@email.com">
+                    </div>
                 </div>
-                <div class="form-group form-row">
-                    <label for="telefone">Telefone </label>
-                    <input type="text" class="form-control" id="telefone" placeholder="(xx) xxxxx-xxxx">
+                <div class="form-group row">
+                    <label for="telefone" class="col-sm-4 col-form-label">Telefone </label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="telefone" placeholder="(xx) xxxxx-xxxx">
+                    </div>
                 </div>
-                <div class="form-group form-row">
-                    <label for="fotoGuardiao">Foto de Perfil</label>
-                    <input type="file" class="form-control-file" id="fotoGuardiao">
+                <div class="form-group row">
+                    <label for="fotoGuardiao" class="col-sm-4 col-form-label">Foto de Perfil</label>
+                    <div class="col-sm-8">
+                        <input type="file" class="form-control-file" id="fotoGuardiao">
+                    </div>
                 </div>
-                <div class="form-group form-row">
-                    <label for="senhaGuardiao">Defina uma senha</label>
-                    <input type="password" class="form-control" id="senhaGuardiao"
+                <div class="form-group row">
+                    <label for="senhaGuardiao" class="col-sm-4 col-form-label">Defina uma senha</label>
+                    <div class="col-sm-8">
+                        <input type="password" class="form-control" id="senhaGuardiao"
                         placeholder="Escolha sua senha de no mínimo 6 caracteres">
+                    </div>    
                 </div>
-                <div class="form-group form-row">
-                    <label for="senhaConfirmGuardiao">Confirme sua senha</label>
-                    <input type="password" class="form-control" id="senhaGuardiaoConfirm"
+                <div class="form-group row">
+                    <label for="senhaConfirmGuardiao" class="col-sm-4 col-form-label">Confirme sua senha</label>
+                    <div class="col-sm-8">
+                        <input type="password" class="form-control" id="senhaGuardiaoConfirm"
                         placeholder="Confirme sua senha">
+                    </div>
                 </div>
-                <div class="form-group form-row">
-                    <label for="enderecoGuardiao">Endereço</label>
-                    <input type="text" class="form-control" id="enderecoGuardiao" placeholder="Rua/Avenida/Logradouro">
+                <div class="form-group row">
+                    <label for="enderecoGuardiao" class="col-sm-4 col-form-label">Endereço</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="enderecoGuardiao" placeholder="Rua/Avenida/Logradouro">
+                    </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-6 p-1">
@@ -125,8 +142,7 @@
                         placeholder="Descreva por que você quer ser um(a) Guardião(ã)"></textarea>
                 </div>
                 <button type="submit" class="btn btn-secondary" id="botaoGuardiao">Salvar cadastro</button>
-            </form>
-        </section>
+            </form>x
     </main>
     <!-- incluindo o footer -->
     <?php include_once("includes/footer.php")?>
