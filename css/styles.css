@@ -187,6 +187,7 @@
 }
 .foto-perfil{
     border-radius: 50%;
+    width: 50%;
     border: 1px solid #ff9640;
     background-color: gray;
 }
