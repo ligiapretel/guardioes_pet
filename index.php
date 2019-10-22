@@ -113,7 +113,7 @@
                                 </select>
                             </div>
                             <div class="col p-3">
-                                <button type="submit" name="procurar">Procurar</button>
+                                <button class="btn-busca-expandida" type="submit" name="procurar">Procurar</button>
                             </div>
                         </div>
                     </form>
