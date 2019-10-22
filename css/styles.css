@@ -214,16 +214,24 @@
 }
 /*HEADER*/
 header{
-    background-color: #e5e9f2;
+    background-color: #e5e9f2;   
+}
+
+.logoHeader{
+    color: #ff9640;
 }
 
 .btnHeader{
-    background-color: #6E5DB3 !important;
-    color: white !important;
+    background-color: #B3ABD4;
+    color: #ffffff;
+    padding: 8px 15px;
+    border: none;    
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .linkHeader{
-    color: black;
+    color: #47525E;
 }
 
 
@@ -235,8 +243,13 @@ header{
 
 
 .btnFooter{
-    background-color: #6E5DB3 !important;
-    color: white;
+    background-color: #6E5DB3;
+    color: #ffffff;
+    padding: 8px 30px;
+    border: none;    
+    border-radius: 5px;
+    text-transform: uppercase;
+    cursor: pointer;  
 }
 
 .linkFooter{
@@ -280,4 +293,266 @@ header{
 
 .ico-seta-expande-busca:hover{
     color: #ffffff;  
+}
+
+/*CSS Cadastro Guardião*/
+#formGuardiao{
+    background-color: #e5e9f2;
+}
+
+#botaoGuardiao{
+    width: 200px;
+    margin-left: 517px;
+}
+
+/*CSS Cadastro Animal*/
+#formAnimal{
+    background-color: #D6EBE8;
+}
+
+#botaoAnimal{
+    width: 200px;
+}
+
+/*CSS Cadastro Ong*/
+#formOng{
+    background-color: #E7E2FC;
+}
+
+#botaoOng{
+    width: 200px;
+}
+.espaco{
+    line-height: 2.2;
+}
+
+/*página de perfil do animal*/
+.perfil-animal {
+    background-color: #D6EBE8;
+}
+
+#dados-animal p {
+    line-height: 100%;
+}
+
+#perfil-animal-carrossel .carousel-indicators li {
+    width: 13px;
+    height: 13px;
+}
+
+.btn-envio {
+    background-color: #6E5DB3;
+    color: #ffffff;
+    text-transform: uppercase;
+    padding: 8px 30px;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn-envio:hover {
+    background-color:#4a3f78;
+}
+
+.btn-desativado {
+    background-color: #ADB7C3;
+    color: #ffffff;
+    text-transform: uppercase;
+    padding: 8px 30px;
+    border: none;
+    border-radius: 5px;
+}
+
+
+#botao-apadrinhar a {
+    color: #ffffff;
+}
+
+#botao-apadrinhar a:hover {
+    text-decoration: none;
+}
+
+/*busca reduzida nas páginas*/
+.busca-reduzida {
+    background-color: #FF9640;
+    width: 200px;
+    height: 45px;
+}
+
+.resultados-busca .card img:hover {
+    opacity: 0.5;
+}
+
+.resultados-busca .card-body {
+    background-color: #D6EBE8;
+}
+
+.resultados-busca a {
+    color: black;
+}
+
+.resultados-busca a:hover {
+    text-decoration: none;
+}
+
+
+
+/* PERFIL DAS ONGS*/
+
+/*Informacoes perfil da ONG*/
+#pfong_cx_info_principal{
+    background-color: #E7E2FC;
+}
+
+
+#pfong_info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 70px 70px 70px 100px;
+    text-align: justify;
+
+}
+
+#pfong_info h1{
+    color: #47525e;
+    font-weight: bold;   
+}
+
+#pfong_info p {
+    color: #47525E;
+}
+
+/*Img do Perfil ONGS*/
+
+#pfong_img{  
+    background-image: url("../img/perfil_ong_imagem.png");
+    background-color: #C0CCDA;
+    width: 300px;
+    height: 300px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+/* Parte onde podemos enviar uma mensagem */
+
+#pfong_cx_i_txt i{
+    font-size: 80px;
+    color: #47525E;
+}
+
+#pfong_cx_i_txt p{
+    
+    margin-top:10px;
+    margin-left:10px;
+    font-weight: bold;
+
+}
+
+/* Iniciando a parte dos Animais que estao com as ONGS*/
+
+
+#pfong_cx_animais{
+    
+    padding-top:60px;
+    padding-bottom: 20px;
+}
+#pfong_cx_animais h1{
+    color: #47525e;
+    font-weight: bold;
+}
+#pfong_cx_animais p{
+    color: #8190A5;;
+
+}
+
+
+#pfong_animais{
+    margin-top:60px;
+    margin-bottom: 60px;
+    
+    
+}
+.pfong_animais_imgs{
+    width: 70%;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+#pfong_animais_img1{
+    background-color: #F3F2F5;
+   
+}
+#pfong_animais_img2{
+    background-color: #F3F2F5;
+
+}
+#pfong_animais_img3{
+    background-color: #F3F2F5;
+}
+.pfong_cards{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.pfong_cards h1{
+    width:70%;
+    margin-top:30px;
+    margin-bottom: 15px;
+}
+.pfong_cards p{
+   
+    text-align: justify;
+    width:70%;
+}
+#cx-btn{
+    width: 100%;
+    margin-right: 140px;
+    margin-top:20px;
+}
+#cx-btn button{
+    background-color: #6E5DB3;
+    padding:5px 15px 5px 15px;
+    color: white;
+    text-transform: uppercase;
+}
+
+/*Iniciando estamos precisando*/
+
+/*section*/
+#pfong_precisa_cx_principal{
+    background-color: #F3F2F5;
+    padding: 60px 70px 60px 100px;
+}
+#pfong_precisa_cx_principal h1{
+    margin-bottom:40px;
+    color: #47525e;
+    font-weight: bold;
+
+}
+
+
+#pfong_cx_precisa{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.pfong_precisando{
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 5px;
+    width: 300px;
+    height: 70px;
+    margin: 20px;
+    text-align: center;  
+    padding-top: 20px;
+
 }
