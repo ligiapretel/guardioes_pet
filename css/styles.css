@@ -15,6 +15,7 @@
     width:40%;
     border-radius: 5px;
     background-color: white;
+    margin-top: 5rem;
 }
 #perfil-ong{
     width: 100%;
@@ -385,10 +386,7 @@ header{
 .espaco{
     line-height: 2.2;
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> 199c68bb1fdc481036012c3f61930266b355991e
 /*página de perfil do animal*/
 
 .perfil-animal {
