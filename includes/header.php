@@ -7,19 +7,19 @@
       
         <ul class="col-10 nav d-flex justify-content-end">
             <li class="nav-item">
-              <a class="nav-link linkHeader" href="cadastroGuardiao.php">Seja um guardião</a>
+              <a class="nav-link linkHeader" href='index.php#seja-guardiao-home'>Ser um guardião</a>
             </li>
             <li class="nav-item">
               <a class="nav-link linkHeader" href="sobre.php">Sobre nós</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link linkHeader" href="#">Como funciona</a>
+              <a class="nav-link linkHeader" href='index.php#como-funciona-home'>Como funciona</a>
             </li>
             <li class="nav-item">
               <a class="nav-link linkHeader" href="parceiros.php">Parceiros</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link linkHeader" href="#">Doações</a>
+                <a class="nav-link linkHeader" href='index.php#doacoes-home'>Doações</a>
               </li>
             <li class="nav-item">
                 <a class="nav-link linkHeader" href="#">Contato</a>
