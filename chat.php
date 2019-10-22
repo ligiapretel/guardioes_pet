@@ -12,7 +12,7 @@
 <body>
 <?php include_once("includes/header.php");?>
     <div class="row d-flex align-items-center mt-5 m-5 p-3">
-        <div id="menu-ong" class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+        <div id="menu-ong" class="col-lg-3 col-md-3 col-sm-6 col-xs-6 mt-3">
             <div class="card" style="width: 20rem;">
                 <img id="perfil-ong" src="img/foto_perfil_ong.jpg" alt="logo da ONG"/>
                 <div class="card-body" style="width: 20rem;">
