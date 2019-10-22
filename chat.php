@@ -9,27 +9,28 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Guardiões Pet</title>
 </head>
-<div class="row d-fle align-items-center">
 <body>
-    <header id="menu-ong" class="col-lg-3 col-md-3 col-sm-6 col-xs-6 p-5 m-2">
-        <div class="card" style="width: 20rem;">
-            <img id="perfil-ong" src="img/foto_perfil_ong.jpg" alt="logo da ONG"/>
-            <div class="card-body" style="width: 20rem;">
-                <nav class="nav flex-column bg-light">
-                    <a class="nav-link menu-ong active" href="#">Meu Perfil</a>
-                    <a class="nav-link menu-ong" href="#">Animais Cadastrados</a>
-                    <a class="nav-link menu-ong" href="#">Cadastrar Novos Animais</a>
-                    <a class="nav-link menu-ong" href="#">Anúncios Cadastrados</a>
-                    <a class="nav-link menu-ong" href="#">Cadastrar Novos Anúncios</a>
-                    <a class="nav-link menu-ong" href="#">Mensagens</a>
-                    <a class="nav-link menu-ong-sair" href="#">Sair</a>
-                </nav>               
-            </div>    
-        </div>
-    </header>    
+<?php include_once("includes/header.php");?>
+    <div class="row d-flex align-items-center mt-5 m-5 p-3">
+        <div id="menu-ong" class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+            <div class="card" style="width: 20rem;">
+                <img id="perfil-ong" src="img/foto_perfil_ong.jpg" alt="logo da ONG"/>
+                <div class="card-body" style="width: 20rem;">
+                    <nav class="nav flex-column bg-light">
+                        <a class="nav-link menu-ong active" href="#">Meu Perfil</a>
+                        <a class="nav-link menu-ong" href="#">Animais Cadastrados</a>
+                        <a class="nav-link menu-ong" href="#">Cadastrar Novos Animais</a>
+                        <a class="nav-link menu-ong" href="#">Anúncios Cadastrados</a>
+                        <a class="nav-link menu-ong" href="#">Cadastrar Novos Anúncios</a>
+                        <a class="nav-link menu-ong" href="#">Mensagens</a>
+                        <a class="nav-link menu-ong-sair" href="#">Sair</a>
+                    </nav>               
+                </div>    
+            </div>
+        </div>    
     <section class="col-lg-3 col-md-3 col-sm-6 col-xs-6 m-5">
         <div class="card-body">
-            <div class="mensagem-guardiao">
+            <div class="mensagem-guardiao mt-5">
             <img id="perfil-chat-guardiao" src="img/johndoe.png" alt="foto perfil guardião"/>
                 <h6>John Doe</h6>
                     <p>Assunto: Lar Temporário</p>
@@ -78,6 +79,7 @@
                     <button type="submit" class="btn btn-outline-success d-flex justify-content-end m-3">Responder</button>
                 </form>
                  </div>
-    </div> 
+            </div>
+    <?php include_once("includes/footer.php");?>
 </body>
 </html>
