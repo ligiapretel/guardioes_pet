@@ -7,55 +7,71 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="css/styles.css" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" href="css/styles.css"/>
     <title>Cadastro ONG</title>
 </head>
 
 <body>
     <!-- include do header -->
     <?php include_once("includes/header.php")?>
-    <!-- include do menu lateral -->
-    <?php include_once("includes/menu-ong.php")?>
+    
     <!-- início do formulário -->
-    <main>
-        <form action="" class="card col-lg-9 col-md-6 col-sm-6 col-xs-6 p-5" id="formOng" style="width: 50rem">
+    <main class="row" >
+        <!-- include do menu lateral -->
+        <?php include_once("includes/menu-ong.php")?> <form action="" class="card col-lg-8 col-md-6 col-sm-6 col-xs-6 p-5" id="formOng" >
             <!-- essa div é para o título -->
             <div class="form-group d-flex justify-content p-2">
-                <h3>Cadastro de ONG</h3>
+                <h3 class="tituloOng">Cadastro de ONG</h3>
             </div>
             <!--aqui começa o formulário -->
-            <div class="form-group form-row">
-                <label for="nomeOng">Nome da ONG</label>
-                <input type="text" class="form-control" id="nomeOng" placeholder="Nome da sua ONG">
+            <div class="form-group row">
+                <label for="nomeOng" class="col-sm-4 col-form-label">Nome da ONG</label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control" id="nomeOng" placeholder="Nome da sua ONG">
+                </div>
             </div>
-            <div class="form-group form-row">
-                <label for="cnpj">CNPJ</label>
-                <input type="text" class="form-control" id="cnpj" placeholder="Número do CNPJ da ONG">
+            <div class="form-group row">
+                <label for="cnpj" class="col-sm-4 col-form-label">CNPJ</label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control" id="cnpj" placeholder="Número do CNPJ da ONG">
+                </div>
             </div>
-            <div class="form-group form-row">
-                <label for="fotoOng">Foto de Perfil</label>
-                <input type="file" class="form-control-file" id="fotoOng">
+            <div class="form-group row">
+                <label for="fotoOng" class="col-sm-4 col-form-label">Foto de Perfil</label>
+                <div class="col-sm-8">
+                    <input type="file" class="form-control-file" id="fotoOng">
+                </div>
             </div>
-            <div class="form-group form-row">
-                <label for="nomeResp">Nome do Responsável</label>
-                <input type="text" class="form-control" id="nomeResp" placeholder="Nome do responsavel da ONG">
+            <div class="form-group row">
+                <label for="nomeResp" class="col-sm-4 col-form-label">Nome do Responsável</label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control" id="nomeResp" placeholder="Nome do responsavel da ONG">
+                </div>
             </div>
-            <div class="form-group form-row">
-                <label for="email">E-mail</label>
-                <input type="email" class="form-control" id="email" placeholder="seunome@email.com">
+            <div class="form-group row">
+                <label for="email" class="col-sm-4 col-form-label">E-mail</label>
+                <div class="col-sm-8">
+                    <input type="email" class="form-control" id="email" placeholder="seunome@email.com">
+                </div>
             </div>
-            <div class="form-group form-row">
-                <label for="senhaOng">Defina uma senha</label>
-                <input type="password" class="form-control" id="senhaOng"
+            <div class="form-group row">
+                <label for="senhaOng" class="col-sm-4 col-form-label">Defina uma senha</label>
+                <div class="col-sm-8">
+                    <input type="password" class="form-control" id="senhaOng"
                     placeholder="Escolha sua senha de no mínimo 6 caracteres">
+                </div>    
             </div>
-            <div class="form-group form-row">
-                <label for="senhaConfirmOng">Confirme sua senha</label>
-                <input type="password" class="form-control" id="senhaOng" placeholder="Confirme sua senha">
+            <div class="form-group row">
+                <label for="senhaConfirmOng"class="col-sm-4 col-form-label">Confirme sua senha</label>
+                <div class="col-sm-8">
+                    <input type="password" class="form-control" id="senhaOngConfirm" placeholder="Confirme sua senha">
+                </div>    
             </div>
-            <div class="form-group form-row">
-                <label for="enderecoOng">Endereço</label>
-                <input type="text" class="form-control" id="enderecoOng" placeholder="Rua/Avenida/Logradouro">
+            <div class="form-group row">
+                <label for="enderecoOng" class="col-sm-4 col-form-label">Endereço</label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control" id="enderecoOng" placeholder="Rua/Avenida/Logradouro">
+                </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6 p-1">

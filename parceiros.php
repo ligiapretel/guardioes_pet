@@ -21,7 +21,7 @@
             <h1 id="titulo-carousel-parceiros">Conheça alguns de nossos parceiros!</h1>
             <div id="carouselExampleInterval" class="carousel slide bg-light" data-ride="carousel">
                 <div class="carousel-inner d-flex shadow p-3 mb-5 bg-white rounded">
-                    <div class="carousel-item active" data-interval="1000">
+                    <div class="carousel-item active" data-interval="1100">
                         <div class="row">
                             <div class="col-lg-4 col-md-4 col-sm-4 col-sm-4">
                                 <img src="img/parceiros/cobasi.png" class="d-block w-100 " alt="logo loja cobasi">
@@ -34,7 +34,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item" data-interval="1000">
+                    <div class="carousel-item" data-interval="1100">
                         <div class="row">
                             <div class="col-lg-4 col-md-4 col-sm-4 col-sm-4">
                                 <img src="img/parceiros/amigobicho.png" class="d-block w-100 " alt="Logo Ong Amigo Bicho">
@@ -47,7 +47,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item" data-interval="1000">
+                    <div class="carousel-item" data-interval="1100">
                         <div class="row">
                             <div class="col-lg-4 col-md-4 col-sm-4 col-sm-4">
                                 <img src="img/parceiros/viralata.png" class="d-block w-100 " alt="Logo ONG vira-lata">
