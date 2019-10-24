@@ -19,7 +19,12 @@
 </head>
 
 <body>
+    <?php include_once("includes/header.php"); ?>
 
+    
+
+    
+    
     <!--Onde esta localizado as informacoes da ONG e img-->
     <section id="pfong_cx_info_principal" class="container-fluid">
         <div class="row" id="pfong_cx_info">
@@ -41,6 +46,7 @@
             </div>
         </div>
     </section>
+    
 
     <!--Onde esta localizado os Animais com a ONG-->
     <section id="pfong_cx_principal_animais" class="container-fluid">
@@ -95,6 +101,8 @@
         </div>
 
     </section>
+   
+    <?php include_once("includes/footer.php");?>
 
 
 

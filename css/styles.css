@@ -451,7 +451,8 @@ header{
 /*Informacoes perfil da ONG*/
 #pfong_cx_info_principal{
     background-color: #E7E2FC;
-    padding:20px 70px 20px 70px;
+    padding:60px 70px 60px 70px;
+    margin-top: 102.8px;
 }
 
 #pfong_info{
@@ -501,7 +502,7 @@ header{
 
 
 #pfong_cx_principal_animais{   
-    padding:20px 70px 20px 70px;
+    padding:60px 70px 60px 70px;
 }
 
 #pfong_cx_principal_animais h1{
@@ -584,7 +585,7 @@ header{
 /*section*/
 #pfong_precisa_cx_principal{
     background-color: #F3F2F5;
-    padding:20px 70px 20px 70px;
+    padding:60px 70px 100px 70px;
 
 }
 #pfong_precisa_cx_principal h1{
@@ -607,7 +608,10 @@ header{
     width: 300px;
     height: 70px;
     text-align: center;  
-    padding-top: 20px;
-    margin-bottom: 20px;
+    padding-top: 20px; 
     margin-top: 20px;
 }
+
+
+
+
