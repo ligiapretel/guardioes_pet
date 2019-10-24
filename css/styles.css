@@ -42,7 +42,6 @@
     border: 3px groove #ff9640;
     padding:10px;
     margin-bottom: 2%;
-
 }
 .mensagem-guardiao:hover{
     background-color:#ffa5003d;
@@ -118,6 +117,12 @@
 
 #como-funciona-home img{
     padding-top: 30px;
+}
+
+#como-funciona-home h2{
+    color: #343F4B;
+    padding: 30px 0px;
+    font-size: 2.8rem;
 }
 
 #como-funciona-home h4{
