@@ -15,6 +15,7 @@
     width:40%;
     border-radius: 5px;
     background-color: white;
+    margin-top: 5rem;
 }
 #perfil-ong{
     width: 100%;
@@ -41,7 +42,6 @@
     border: 3px groove #ff9640;
     padding:10px;
     margin-bottom: 2%;
-
 }
 .mensagem-guardiao:hover{
     background-color:#ffa5003d;
@@ -119,6 +119,12 @@
     padding-top: 30px;
 }
 
+#como-funciona-home h2{
+    color: #343F4B;
+    padding: 30px 0px;
+    font-size: 2.8rem;
+}
+
 #como-funciona-home h4{
     color: #343F4B;
     padding: 12px 0px;
@@ -187,6 +193,7 @@
 }
 .foto-perfil{
     border-radius: 50%;
+    width: 50%;
     border: 1px solid #ff9640;
     background-color: gray;
 }
@@ -320,6 +327,9 @@ header{
 /*CSS Cadastro Guardião*/
 #formGuardiao{
     background-color: #e5e9f2;
+    margin-top: 8rem;
+    margin-left: 3rem;
+    margin-bottom: 2rem;
 }
 
 .tituloGuardiao{
@@ -333,6 +343,9 @@ header{
 /*CSS Cadastro Animal*/
 #formAnimal{
     background-color: #D6EBE8;
+    margin-top: 8rem;
+    margin-left: 3rem;
+    margin-bottom: 2rem;
 }
 
 .tituloAnimal{
@@ -360,9 +373,12 @@ header{
 }
 
 
-/*CSS Cadastro Ong AQUI NÃO SOBRESCREVEU CORRETAMENTE*/
+/*CSS Cadastro Ong*/
 #formOng{
     background-color: #E7E2FC;
+    margin-top: 8rem;
+    margin-left: 3rem;
+    margin-bottom: 2rem;
 }
 .tituloOng{
     color: #6E5DB3;
@@ -372,9 +388,27 @@ header{
     margin-left: 625px;
 }
 
+/*CSS Cadstro de Anúncio*/
+#formAnuncio{
+    background-color: #FBD49F;
+    margin-top: 8rem;
+    margin-left: 3rem;
+    margin-bottom: 2rem;
+}
+
+.tituloAnuncio{
+    color: #FF9640;
+}
+
+#botaoAnuncio{
+    width: 200px;
+    margin-left: 590px;
+}
+
 .espaco{
     line-height: 2.2;
 }
+
 /*página de perfil do animal*/
 
 .perfil-animal {
@@ -612,6 +646,144 @@ header{
     margin-top: 20px;
 }
 
+<<<<<<< HEAD
 
 
 
+=======
+/*CSS da página de Anúncios*/
+#anuncios{
+    margin-top: 9rem;
+    margin-bottom: 3rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    
+/* Iniciando CSS da página Login */
+#main-login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    padding: 10px 0px 60px 0px;
+    background-image: url(../img/bg_login.jpg);
+    background-size: cover;
+}
+
+#main-login h1{
+    color: #343F4B;
+    font-size: 2.8rem; 
+    padding: 30px 0px 15px 0px;  
+}
+
+#main-login h2{
+    color: #6E5DB3;
+    font-size: 1.8rem; 
+    padding: 0px 0px 15px 0px;  
+}
+
+#container-form-login{
+    background-color: rgba(255, 255, 255, 0.6);
+    padding-bottom: 40px;
+    margin-top: 50px;
+    border-radius: 20px;
+}
+
+.label-lembrar-dados{
+    font-size: 0.9rem;
+    color: #343F4B;
+}
+
+.esqueci-senha{
+    font-size: 0.9rem;
+    text-align: end;
+    color: #343F4B;
+}
+
+.esqueci-senha:hover{
+    color: #4a3f78;
+    font-weight: 500;
+}
+
+.btn-login-enviar {
+    background-color: #6E5DB3;
+    color: #ffffff;
+    text-transform: uppercase;
+    padding: 8px 30px;
+    border: none;
+    border-radius: 5px;
+    width: 180px;
+}
+
+.btn-login-enviar:hover {
+    background-color:#4a3f78;
+}
+
+/* Iniciando CSS da página Cadastre-se */
+#main-cadastre-se{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    padding: 10px 0px 60px 0px;
+    background-image: url(../img/bg_cadastre_se.jpg);
+    background-size: cover;
+}
+
+#container-box-cadastre-se{
+    background-color: rgba(255, 255, 255, 0.6);
+    margin: 50px 20px 0px 20px;
+    border-radius: 20px;
+    padding-bottom: 40px;
+}
+
+#container-box-cadastre-se h1{
+    color: #343F4B;
+    font-size: 2.8rem; 
+    padding: 55px 0px 15px 0px;  
+}
+
+#container-box-cadastre-se p{
+    color: #343F4B;
+    font-size: 1.1rem;
+    text-align: justify;
+    padding: 0px 0px 20px 0px;
+}
+
+#container-box-cadastre-se img{
+    position: relative;
+    top: 20px;
+}
+
+.bg-cadastre-se-guardiao{
+    background-color: #FF9640;
+    border-radius: 20px 20px 0px 0px;
+    height: 70px;
+}
+
+.bg-cadastre-se-ong{
+    background-color: #6E5DB3;
+    border-radius: 20px 20px 0px 0px;
+    height: 70px;
+}
+
+.cor-laranja{
+    background-color: #FF9640;
+}
+
+.cor-laranja:hover{
+    background-color: #E57011;
+}
+
+#container-box-cadastre-se .tem-cadastro{
+    font-size: 0.9rem;
+    color: #343F4B;
+    text-align: center;
+    padding: 30px 0px 0px 0px;
+    margin: 0px;
+}
+
+#container-box-cadastre-se .tem-cadastro:hover{
+    color: #4a3f78;
+    font-weight: 500;
+    text-decoration: none;
+}
+>>>>>>> 7e3b5ac77178d6428436b1af0b0e8617a3acb0ec

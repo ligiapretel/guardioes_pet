@@ -51,7 +51,7 @@
                     <h2>Encontre um amigo</h2>
                 </div>
                 <div class="col-11">
-                    <form action="#" method="POST">
+                    <form action="busca.php" method="POST">
                         <div class="row">
                             <div class="col p-3">
                                 <select name="animal" class="form-control">
@@ -61,38 +61,20 @@
                                 </select>
                             </div>
                             <div class="col p-3">
+                                <select name="animalEspecial" class="form-control">
+                                    <option disabled selected>Aceita animal especial?</option>
+                                    <option value="sim">Aceito</option>
+                                    <option value="nao">Talvez em outro momento</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col p-3">
                                 <select name="porte" class="form-control">
                                     <option disabled selected>Porte</option>
                                     <option value="pequeno">Pequeno</option>
                                     <option value="medio">Médio</option>
                                     <option value="grande">Grande</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col p-3">
-                                <select name="idade" class="form-control">
-                                    <option disabled selected>Idade</option>
-                                    <option value="filhote">Filhote</option>
-                                    <option value="jovem">Jovem</option>
-                                    <option value="adulto">Adulto</option>
-                                    <option value="idoso">Idoso</option>
-                                </select>
-                            </div>
-                            <div class="col p-3">
-                                <select name="sexo" class="form-control">
-                                    <option disabled selected>Sexo</option>
-                                    <option value="femea">Fêmea</option>
-                                    <option value="macho">Macho</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col p-3">
-                                <select name="animalEspecial" class="form-control">
-                                    <option disabled selected>Aceita animal especial?</option>
-                                    <option value="sim">Aceito</option>
-                                    <option value="nao">Talvez em outro momento</option>
                                 </select>
                             </div>
                             <div class="col p-3">
@@ -106,11 +88,29 @@
                         </div>
                         <div class="row">
                             <div class="col p-3">
+                                <select name="sexo" class="form-control">
+                                    <option disabled selected>Sexo</option>
+                                    <option value="femea">Fêmea</option>
+                                    <option value="macho">Macho</option>
+                                </select>
+                            </div>
+                            <div class="col p-3">
                                 <select name="ong" class="form-control">
                                     <option disabled selected>Selecionar a ONG</option>
                                     <option value="ong-a">ONG $A</option>
                                     <option value="ong-b">ONG $B</option>
                                     <option value="ong-c">ONG $C</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col p-3">
+                                <select name="idade" class="form-control">
+                                    <option disabled selected>Idade</option>
+                                    <option value="filhote">Filhote</option>
+                                    <option value="jovem">Jovem</option>
+                                    <option value="adulto">Adulto</option>
+                                    <option value="idoso">Idoso</option>
                                 </select>
                             </div>
                             <div class="col p-3">
@@ -132,6 +132,9 @@
         <!-- Fechando seção "Por que ser um Guardião PET?". -->
         <!-- Abrindo seção "Como funciona". -->
         <section id="como-funciona-home">
+            <div class="row justify-content-center">
+                <h2>Como funciona?</h2>
+            </div>
             <div class="row justify-content-around">
                 <div class="col-3">
                     <img src="img/img_lar_temp_home.jpg" class="img-fluid" alt="Lar temporário">
@@ -150,7 +153,7 @@
                 </div>
             </div>
             <div class="row justify-content-center">
-                <button>Encontre um amigo</button>
+                <a href="#container-busca-expandida"><button>Encontre um amigo</button></a>
             </div>
         </section>
         <!-- Fechando seção "Como funciona". -->
