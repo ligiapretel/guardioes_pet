@@ -141,7 +141,7 @@
                         placeholder="Descreva por que você quer ser um(a) Guardião(ã)"></textarea>
                 </div>
                 <button type="submit" class="btn btn-secondary" id="botaoGuardiao">Salvar cadastro</button>
-            </form>x
+            </form>
     </main>
     <!-- incluindo o footer -->
     <?php include_once("includes/footer.php")?>

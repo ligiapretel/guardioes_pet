@@ -368,7 +368,7 @@ header{
 }
 
 
-/*CSS Cadastro Ong AQUI NÃO SOBRESCREVEU CORRETAMENTE*/
+/*CSS Cadastro Ong*/
 #formOng{
     background-color: #E7E2FC;
     margin-top: 8rem;
@@ -381,6 +381,23 @@ header{
 #botaoOng{
     width: 200px;
     margin-left: 625px;
+}
+
+/*CSS Cadstro de Anúncio*/
+#formAnuncio{
+    background-color: #FBD49F;
+    margin-top: 8rem;
+    margin-left: 3rem;
+    margin-bottom: 2rem;
+}
+
+.tituloAnuncio{
+    color: #FF9640;
+}
+
+#botaoAnuncio{
+    width: 200px;
+    margin-left: 590px;
 }
 
 .espaco{
@@ -622,4 +639,12 @@ header{
     padding-top: 20px;
     margin-bottom: 20px;
     margin-top: 20px;
+}
+
+/*CSS da página de Anúncios*/
+#anuncios{
+    margin-top: 9rem;
+    margin-bottom: 3rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
 }

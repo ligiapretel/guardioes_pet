@@ -5,9 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/styles.css"/>
     <title>Cadastro ONG</title>
 </head>
 
@@ -16,7 +15,7 @@
     <?php include_once("includes/header.php")?>
     
     <!-- início do formulário -->
-    <main class="row" >
+    <main class="row">
         <!-- include do menu lateral -->
         <?php include_once("includes/menu-ong.php")?> <form action="" class="card col-lg-8 col-md-6 col-sm-6 col-xs-6 p-5" id="formOng" >
             <!-- essa div é para o título -->
