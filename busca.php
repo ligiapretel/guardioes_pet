@@ -20,12 +20,12 @@
 <body>
     <?php include_once('includes/header.php') ?>
 
-    <section class="busca-reduzida mt-4">
+    <!-- <section class="busca-reduzida mt-4">
         <div class="h-100">
             <img src="img/icon_search.png" class="h-100 p-2">
             <p class="d-inline text-white">Refazer busca</p>
         </div>
-    </section>
+    </section> -->
 
 
     <section class="m-5">
@@ -113,6 +113,12 @@
         </div>
 
     </section>
+    <!-- Abrindo seção para include da busca recolhida -->
+    <div class="alinhamento-busca-recolhida">
+        <section id="container-busca-recolhida" class="col-10">
+            <?php include_once('includes/buscaRecolhida.php')?>
+        </section>
+    </div>
 
     <?php include_once('includes/footer.php')?>
     <!-- Script JS Bootstrap | Manter código próximo ao fechamento do body -->

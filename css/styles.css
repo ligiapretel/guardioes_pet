@@ -299,11 +299,15 @@ header{
 }
 
 /* Iniciando CSS da busca recolhida (include) */
+.alinhamento-busca-recolhida{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
 #container-busca-recolhida{
-    background-color: #FF9640;
+    background-color: #4a3f78;
     padding: 10px 40px 30px 40px;
-    position: relative;
-    bottom: 250px;
 }
 
 #container-busca-recolhida h2{
@@ -335,6 +339,25 @@ header{
 
 .ico-seta-expande-busca:hover{
     color: #ffffff;  
+}
+
+.ico-seta-expande-busca, .ico-seta-expande-busca:focus {
+    outline: 0;
+    box-shadow: none!important;
+}
+
+.btn-busca-recolhida{
+    background-color: #FF9640;
+    color: #ffffff;
+    text-transform: uppercase;
+    padding: 8px 30px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.btn-busca-recolhida:hover{
+    background-color: #E57011;
 }
 
 /*CSS Cadastro Guardião*/
@@ -424,8 +447,9 @@ header{
 
 /*página de perfil do animal*/
 
-.perfil-animal {
+#perfil-animal {
     background-color: #D6EBE8;
+    padding-top: 85px;
 }
 
 #dados-animal p {
@@ -459,6 +483,9 @@ header{
     border-radius: 5px;
 }
 
+#apadrinhar{
+    background-color: #D6EBE8;
+}
 
 #botao-apadrinhar a {
     color: #ffffff;
@@ -473,6 +500,10 @@ header{
     background-color: #FF9640;
     width: 200px;
     height: 45px;
+}
+
+.resultados-busca{
+    padding-top: 85px;
 }
 
 .resultados-busca .card img:hover {
@@ -498,8 +529,7 @@ header{
 /*Informacoes perfil da ONG*/
 #pfong_cx_info_principal{
     background-color: #E7E2FC;
-    padding:60px 70px 60px 70px;
-    margin-top: 102.8px;
+    padding:130px 70px 60px 70px;
 }
 
 #pfong_info{
@@ -800,9 +830,8 @@ header{
 /*info e img perfil*/
 #pfG_cx_info_principal{
     background-color: #D6EBE8;
-    padding: 60px 90px 60px 90px;
+    padding: 130px 90px 60px 90px;
     width: 100%;
-    margin-top: 102.8px;   
 }
 
 #pfG_info{
