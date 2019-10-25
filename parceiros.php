@@ -1,20 +1,29 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Adote, abrigue, ajude. Seja um guardião pet. Encontre o cão ou gato que combina com seu perfil e ajude ONGs a transformarem a vida desses bichinhos.">
+    <meta name="author"
+        content="Aline Naoe, Anaê Ross, Chaiana Hermes, Claudia Leite, Ligia Pretel Eimantas, Luana Solimeno">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="css/styles.css" media="screen" />
-    <link href="img/escudo.png" sizes="32x32" rel="shortcut icon"/>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Guardiões Pet</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="img/escudo.png" sizes="32x32" rel="shortcut icon" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Rockwell' rel='stylesheet' type='text/css'>
+    <title>Guardiões Pet | Parceiros</title>
 </head>
+
 <body>
     <?php include_once("includes/header.php")?>
     <main>
         <section>
             <div class="jumbotron parceiros d-flex">
-                <h1 class="display-4 d-flex flex-row justify-content-center align-items-end"><span id="titulo-jumbo-parceiros">Seja um de nossos parceiros!</span></h1>
+                <h1 class="display-4 d-flex flex-row justify-content-center align-items-end"><span
+                        id="titulo-jumbo-parceiros">Seja um de nossos parceiros!</span></h1>
             </div>
         </section>
         <section>
@@ -37,13 +46,16 @@
                     <div class="carousel-item" data-interval="1100">
                         <div class="row">
                             <div class="col-lg-4 col-md-4 col-sm-4 col-sm-4">
-                                <img src="img/parceiros/amigobicho.png" class="d-block w-100 " alt="Logo Ong Amigo Bicho">
+                                <img src="img/parceiros/amigobicho.png" class="d-block w-100 "
+                                    alt="Logo Ong Amigo Bicho">
                             </div>
                             <div class="col-lg-4 col-md-4 col-sm-4 col-sm-4">
-                                <img src="img/parceiros/farmaciavet.png" class="d-block w-100 " alt="Logo loja Farmácia veterinário">
+                                <img src="img/parceiros/farmaciavet.png" class="d-block w-100 "
+                                    alt="Logo loja Farmácia veterinário">
                             </div>
                             <div class="col-lg-4 col-md-4 col-sm-4 col-sm-4 d-flex align-items-center">
-                                <img src="img/parceiros/institutomel.png" class="d-block w-100 " alt="Logo Instituto Luisa Mel">
+                                <img src="img/parceiros/institutomel.png" class="d-block w-100 "
+                                    alt="Logo Instituto Luisa Mel">
                             </div>
                         </div>
                     </div>
@@ -53,10 +65,12 @@
                                 <img src="img/parceiros/viralata.png" class="d-block w-100 " alt="Logo ONG vira-lata">
                             </div>
                             <div class="col-lg-4 col-md-4 col-sm-4 col-sm-4">
-                                <img src="img/parceiros/vetsatai.png" class="d-block w-100 " alt="Logo Veterinário Satai">
+                                <img src="img/parceiros/vetsatai.png" class="d-block w-100 "
+                                    alt="Logo Veterinário Satai">
                             </div>
                             <div class="col-lg-4 col-md-4 col-sm-4 col-sm-4 d-flex align-items-center">
-                                <img src="img/parceiros/vicioanimal.png" class="d-block w-100 " alt="Logo ONG Vicion Animal">
+                                <img src="img/parceiros/vicioanimal.png" class="d-block w-100 "
+                                    alt="Logo ONG Vicion Animal">
                             </div>
                         </div>
                     </div>
@@ -71,7 +85,8 @@
                 </a>
             </div>
         </section>
-        <h3 class="d-flex justify-content-center align-items-center p-5">Seja um de nossos parceiros preenchendo o formulário abaixo</h3>
+        <h3 class="d-flex justify-content-center align-items-center p-5">Seja um de nossos parceiros preenchendo o
+            formulário abaixo</h3>
         <section class="container d-flex justify-content-center align-items-center">
             <form method="POST" action="#">
                 <div class="row">
@@ -92,15 +107,23 @@
                         <input type="telefone" class="form-control" name="telefone" placeholder="(00) 0000-0000">
                     </div>
                 </div>
-                <textarea type="text" rows="5" class="form-control p-5"placeholder="Deixe sua mensagem aqui" name="mensagem"></textarea>
+                <textarea type="text" rows="5" class="form-control p-5" placeholder="Deixe sua mensagem aqui"
+                    name="mensagem"></textarea>
                 <button type="submit" class="btn btn-outline-info m-5">Quero ser um Parceiro!</button>
-            </form> 
+            </form>
         </section>
-        <?php include_once("includes/footer.php");?>
     </main>
-<!--JAVASCRIPT BOOTSTRAP-->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <?php include_once("includes/footer.php")?>
+    <!--JAVASCRIPT BOOTSTRAP-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
 </body>
+
 </html>

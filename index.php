@@ -7,6 +7,7 @@
     <meta name="author" content="Aline Naoe, Anaê Ross, Chaiana Hermes, Claudia Leite, Ligia Pretel Eimantas, Luana Solimeno">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="img/escudo.png" sizes="32x32" rel="shortcut icon"/>
     <link href="css/styles.css" rel="stylesheet"/>
     <link href='https://fonts.googleapis.com/css?family=Rockwell' rel='stylesheet' type='text/css'>
     <title>Guardiões Pet</title>
@@ -162,7 +163,7 @@
             <h2>Tem itens para doação? Ajude!</h2>
             <p>Roupinhas, remédios, ração...tá sobrando na sua casa? Tem muitas organizações - e muitos guardiões também! - precisando de todo tipo de item para cuidar e alimentar gatinhos e cachorros. Veja quais as necessidades e se você pode contribuir!</p>
             <div class="row justify-content-center">
-                <button>Quero doar</button>
+                <a href="anuncios.php"><button>Quero doar</button></a>
             </div>
         </section>
         <!-- Fechando seção "Doações". -->

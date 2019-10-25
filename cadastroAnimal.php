@@ -1,14 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Adote, abrigue, ajude. Seja um guardião pet. Encontre o cão ou gato que combina com seu perfil e ajude ONGs a transformarem a vida desses bichinhos.">
+    <meta name="author"
+        content="Aline Naoe, Anaê Ross, Chaiana Hermes, Claudia Leite, Ligia Pretel Eimantas, Luana Solimeno">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="css/styles.css" />
-    <title>Cadastro de Animais</title>
+    <link href="img/escudo.png" sizes="32x32" rel="shortcut icon" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Rockwell' rel='stylesheet' type='text/css'>
+    <title>Guardiões Pet | Cadastro de Animal</title>
 </head>
 
 <body>
@@ -204,51 +210,68 @@
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" name="caracAnimal" id="caracAnimal" value="docil">
+                            <input class="form-check-input" type="checkbox" name="caracAnimal" id="caracAnimal"
+                                value="docil">
                             <label class="form-check-label" for="caracAnimal">Dócil</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" name="carac" id="caracAnimal" value="carinho">
+                            <input class="form-check-input" type="checkbox" name="carac" id="caracAnimal"
+                                value="carinho">
                             <label class="form-check-label" for="caracAnimal">Gosta de carinho</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" name="carac" id="caracAnimal" value="crianca">
+                            <input class="form-check-input" type="checkbox" name="carac" id="caracAnimal"
+                                value="crianca">
                             <label class="form-check-label" for="caracAnimal">Gosta de crianças</label>
                         </div>
-                    </div>    
+                    </div>
                     <div class="col-lg-12 col-md-6 col-sm-6 col-xs-6">
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" name="carac" id="caracAnimal"value="idosos">
+                            <input class="form-check-input" type="checkbox" name="carac" id="caracAnimal"
+                                value="idosos">
                             <label class="form-check-label" for="caracAnimal">Gosta de idosos</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" name="carac" id="caracAnimal" value="outrosAnimais">
+                            <input class="form-check-input" type="checkbox" name="carac" id="caracAnimal"
+                                value="outrosAnimais">
                             <label class="form-check-label" for="caracAnimal">Convive bem com outros animais</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" name="carac" id="caracAnimal" value="brincar">
+                            <input class="form-check-input" type="checkbox" name="carac" id="caracAnimal"
+                                value="brincar">
                             <label class="form-check-label" for="caracAnimal">Gosta de brincar</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" name="carac" id="caracAnimal" value="necessidades">
+                            <input class="form-check-input" type="checkbox" name="carac" id="caracAnimal"
+                                value="necessidades">
                             <label class="form-check-label" for="caracAnimal">Faz as necessidades no lugar certo</label>
                         </div>
                     </div>
-            </div>
-            <div class="form-group row">
-                <label class="col-sm-4 col-form-label  tituloCaracteristicasAnimal"for="descricao">Descreva o pet:</label>
-                <textarea class="form-control" id="descricao" cols="30" rows="10"
-                            placeholder="Fale mais sobre o animal: qual a sua história, suas características físicas e comportamentais, o tipo de lar que mais se adequaria, do que ele(a) gosta, etc."></textarea>
-            </div>
-                    <div class="botaoLimparECadastro">
-                        <button type="reset" id="botaoAnimal">Limpar dados</button>
-                        <button type="submit" id="botaoAnimal">Cadastrar</button>
-                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-4 col-form-label  tituloCaracteristicasAnimal" for="descricao">Descreva o
+                        pet:</label>
+                    <textarea class="form-control" id="descricao" cols="30" rows="10"
+                        placeholder="Fale mais sobre o animal: qual a sua história, suas características físicas e comportamentais, o tipo de lar que mais se adequaria, do que ele(a) gosta, etc."></textarea>
+                </div>
+                <div class="botaoLimparECadastro">
+                    <button type="reset" id="botaoAnimal">Limpar dados</button>
+                    <button type="submit" id="botaoAnimal">Cadastrar</button>
+                </div>
         </form>
     </main>
     <!-- incluindo o footer -->
     <?php include_once("includes/footer.php")?>
-
+    <!-- Script JS Bootstrap | Manter código próximo ao fechamento do body -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>

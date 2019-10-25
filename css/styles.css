@@ -1,4 +1,3 @@
-
 *{
     box-sizing: border-box;
     margin: 0;
@@ -221,25 +220,36 @@
 }
 /*HEADER*/
 header{
-    background-color: #010310cc;   
+    background-color: #010310cc;
+    padding: 10px 0px;   
 }
 
 .fonteHeader{
     color: #ff9640;
     font-family: "Rockwell";
+    font-size: 2rem;
     font-weight: bold;
 }
 
 .fonteHeader:hover{
     color: #ff9640;
+    text-decoration: none;
 }
 
-.logoHeader{
+.logo{
     color: #ff9640;
+    width: 21%;
+}
+
+#header-nav{
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-end;
+    padding-right: 30px;
 }
 
 .btnHeader{
-    background-color: #B3ABD4;
+    background-color: #6E5DB3;
     color: #ffffff;
     padding: 8px 15px;
     border: none;    
@@ -248,7 +258,7 @@ header{
 }
 
 .btnHeader:hover{
-    background-color: #6E5DB3;
+    background-color: #4a3f78;
 }
 
 .linkHeader{
@@ -258,14 +268,17 @@ header{
 .linkHeader:hover{
     color: #ffffff;
     text-decoration: underline !important;
-    }
+}
 
 /*FOOTER*/
+#footer{
+    padding-top:30px;
+}
+
 .coresFooter{
     background-color: #ff9640;
     color: white;
 }
-
 
 .btnFooter{
     background-color: #6E5DB3;
@@ -652,13 +665,13 @@ header{
     margin-bottom: 3rem;
     margin-left: 3rem;
     margin-right: 3rem;
-    
+}
+
 /* Iniciando CSS da página Login */
 #main-login{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 100px;
     padding: 10px 0px 60px 0px;
     background-image: url(../img/bg_login.jpg);
     background-size: cover;
@@ -679,7 +692,7 @@ header{
 #container-form-login{
     background-color: rgba(255, 255, 255, 0.6);
     padding-bottom: 40px;
-    margin-top: 50px;
+    margin-top: 140px;
     border-radius: 20px;
 }
 
@@ -717,7 +730,6 @@ header{
 #main-cadastre-se{
     display: flex;
     justify-content: center;
-    margin-top: 100px;
     padding: 10px 0px 60px 0px;
     background-image: url(../img/bg_cadastre_se.jpg);
     background-size: cover;
@@ -725,7 +737,7 @@ header{
 
 #container-box-cadastre-se{
     background-color: rgba(255, 255, 255, 0.6);
-    margin: 50px 20px 0px 20px;
+    margin: 140px 20px 0px 20px;
     border-radius: 20px;
     padding-bottom: 40px;
 }
