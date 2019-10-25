@@ -20,6 +20,7 @@
 </head>
 
 <body>
+    <?php include_once("includes/header.php"); ?>
 
     <!--Onde esta localizado as informacoes da ONG e img-->
     <section id="pfong_cx_info_principal" class="container-fluid">
@@ -42,6 +43,7 @@
             </div>
         </div>
     </section>
+    
 
     <!--Onde esta localizado os Animais com a ONG-->
     <section id="pfong_cx_principal_animais" class="container-fluid">
@@ -108,6 +110,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
+   
 </body>
 
 </html>

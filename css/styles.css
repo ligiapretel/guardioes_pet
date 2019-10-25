@@ -498,7 +498,8 @@ header{
 /*Informacoes perfil da ONG*/
 #pfong_cx_info_principal{
     background-color: #E7E2FC;
-    padding:20px 70px 20px 70px;
+    padding:60px 70px 60px 70px;
+    margin-top: 102.8px;
 }
 
 #pfong_info{
@@ -548,7 +549,7 @@ header{
 
 
 #pfong_cx_principal_animais{   
-    padding:20px 70px 20px 70px;
+    padding:60px 70px 60px 70px;
 }
 
 #pfong_cx_principal_animais h1{
@@ -631,7 +632,7 @@ header{
 /*section*/
 #pfong_precisa_cx_principal{
     background-color: #F3F2F5;
-    padding:20px 70px 20px 70px;
+    padding:60px 70px 100px 70px;
 
 }
 #pfong_precisa_cx_principal h1{
@@ -654,8 +655,7 @@ header{
     width: 300px;
     height: 70px;
     text-align: center;  
-    padding-top: 20px;
-    margin-bottom: 20px;
+    padding-top: 20px; 
     margin-top: 20px;
 }
 
@@ -666,7 +666,7 @@ header{
     margin-left: 3rem;
     margin-right: 3rem;
 }
-
+  
 /* Iniciando CSS da página Login */
 #main-login{
     display: flex;
@@ -793,3 +793,224 @@ header{
     font-weight: 500;
     text-decoration: none;
 }
+
+
+
+/*PERFIL GUARDIAO*/
+/*info e img perfil*/
+#pfG_cx_info_principal{
+    background-color: #D6EBE8;
+    padding: 60px 90px 60px 90px;
+    width: 100%;
+    margin-top: 102.8px;   
+}
+
+#pfG_info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+}
+
+#pfG_info h1{
+    color: #47525e;
+    font-weight: bold;  
+    font-size: 2.3rem; 
+    padding-bottom: 20px;  
+}
+
+#pfG_info p {
+    color: #47525E;
+}
+
+#pfG_linha1{
+    border-width:0px 1px 0px 0px;
+    border-color: #47525E;
+    border-style: solid;   
+}
+
+#pfG_linha2{
+    border-width: 0px 0px 0px 1px;
+    border-color: #47525E;
+    border-style: solid;
+}
+
+#pfG_cx_img{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#pfG_img{  
+    background-image: url("../img/img_perfil_guardiao.jpeg");
+    width: 300px;
+    height: 300px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 20px;
+    border-radius: 50%;   
+}
+
+/* Enviar mesangem e Denunciar*/
+
+#pfG_cx_i_txt i{
+    font-size: 40px;
+    color: #47525E;
+}
+
+#pfG_cx_i_txt p{    
+    margin-top:10px;
+    margin-left:10px;
+    font-weight: bold;
+    margin-right: 20px;
+    font-size: 0.9rem;
+}
+
+/*Animais Apadrinhados*/
+
+#pfG_cx_animais{   
+    display: flex;
+    padding: 60px 90px 60px 90px;
+}
+
+#pfG_cx_animais h1{
+    color: #47525e;
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+
+#pfG_cx_animais p{
+    color: #8190A5;;
+
+}
+
+#pfG_animais{
+    margin-top:60px;
+    margin-bottom: 60px;
+    display: flex;
+    flex-wrap: wrap;  
+}
+
+#pfG_animais_card1{
+    align-items: flex-start;
+}
+#pfG_animais_card2{
+    align-items: center;
+}
+#pfG_animais_card3{    
+    align-items: flex-end;
+}
+
+.pfG_animais_imgs{
+    width: 70%;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#pfG_animais_img1{
+    background-image: url("../img/pfGuardiao_img1.jpg");  
+}
+
+#pfG_animais_img2{
+    background-image: url("../img/pfGuardiao_img_2.jpg");
+}
+
+#pfG_animais_img3{
+    background-image: url("../img/pfGuardiao_img_3.jpeg");
+}
+
+.pfG_cards{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;    
+}
+
+.pfG_cards h1{
+    width:70%;
+    margin-top:30px;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+}
+.pfG_cards p{
+   
+    text-align: justify;
+    width:70%;    
+}
+
+
+/*animais adotados e lar temporario*/
+#pfG_cx_adotados_lar_temp{
+    padding: 60px 90px 60px 90px;
+    background-color: #F3F2F5;  
+}
+
+#pfG_cx_adotados{
+    padding: 0px;
+   
+}
+
+#pfG_adotados{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 50%;  
+}
+
+#pfG_adotados h1{   
+    color: #47525E;
+    font-weight: bold;
+    font-size: 1.8rem;
+    padding-bottom: 20px;
+    padding-top: 10px;
+}
+
+#pfG_adotados p{
+    text-align: justify;
+}
+
+#pfG_animais_img4{
+    background-image: url("../img/pfGuardiao_img1.jpg");
+        width: 100%;
+    
+}
+#pfG_animais_img5{
+    background-image: url("../img/pfGuardiao_img_2.jpg");
+    width: 100%;    
+}
+
+
+#pfG_cx_temp{
+    padding: 0px;
+}
+
+#pfG_temp h1{
+    color: #47525E;
+    font-weight: bold;
+    font-size: 1.8rem;
+    padding-bottom: 20px;
+    padding-top: 10px;
+}
+
+#pfG_temp p {
+    text-align: justify;
+}
+
+#pfG_temp{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 50%;
+}
+
+    
+
+
+
