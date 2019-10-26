@@ -31,14 +31,16 @@
                     abrigar poucos, socorrer vários e castrar MUITOS, pois a castração é a única solução ao problema
                     estrutural da procriação de animais abandonados.</p>
                 <p>Nossa ONG é formada por profissionais liberais, gente comum que trabalha, estuda, enfim, vive!</p>
-                <div id="pfong_cx_i_txt" class="d-flex align-items-center">
-                    <i class="mdi mdi-email-outline"></i>
+                <div id="pfong_cx_i_txt" class="d-flex align-items-center justify-content-center">
+                    <a href=""><i class="mdi mdi-email-outline"></i></a>
                     <p>Quer conversar com a gente?<br> Envie uma mensagem!</p>
 
                 </div>
 
             </div>
-            <div class="col-lg-6 col-md-6 d-flex justify-content-center align-items-center" id="pfong_cx_img">
+            <div class="col-1" id="pfong_linha1"></div>
+            <div class="col-1" id="pfong_linha2"></div>
+            <div class="col-lg-4 col-md-6 d-flex justify-content-center align-items-center" id="pfong_cx_img">
                 <div id="pfong_img"></div>
             </div>
         </div>
