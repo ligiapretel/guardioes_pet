@@ -126,7 +126,7 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-11">
-                    <h2>Apadrinhar</h2>
+                    <h2>Fazer uma doação</h2>
                     <p>Não pode me adotar nem me abrigar, mas quer me ajudar? Meus tios e tias estão sempre precisando
                         de ração e outras coisinhas, que tal? Lá na página de anúncios da instituição que cuida de mim
                         você pode ver do que eles estão precisando.</p>
@@ -135,25 +135,31 @@
             </div>
             <div class="row justify-content-around pt-3 col-12">
                 <div class="col-3">
-                    <figure class="figure">
-                        <img src="img/perfil_doar_01.jpg" class="figure-img img-fluid rounded rounded-circle"
-                            alt="Photo by Autri Taheri on Unsplash">
-                        <figcaption class="figure-caption text-center">Shampoo</figcaption>
-                    </figure>
+                   <a href="http://localhost/guardioes_pet/anuncios.php">
+                        <figure class="figure">
+                            <img src="img/perfil_doar_01.jpg" class="figure-img img-fluid rounded rounded-circle"
+                                alt="Photo by Autri Taheri on Unsplash">
+                            <figcaption class="figure-caption text-center">Shampoo</figcaption>
+                        </figure>
+                    </a>
                 </div>
                 <div class="col-3">
-                    <figure class="figure">
-                        <img src="img/perfil_doar_02.jpg" class="figure-img img-fluid rounded rounded-circle"
-                            alt="Photo by Matthew Henry on Unsplash">
-                        <figcaption class="figure-caption text-center">Antipulgas</figcaption>
-                    </figure>
+                    <a href="http://localhost/guardioes_pet/anuncios.php">             
+                        <figure class="figure">
+                            <img src="img/perfil_doar_02.jpg" class="figure-img img-fluid rounded rounded-circle"
+                                alt="Photo by Matthew Henry on Unsplash">
+                            <figcaption class="figure-caption text-center">Antipulgas</figcaption>
+                        </figure>
+                    </a>
                 </div>
                 <div class="col-3">
-                    <figure class="figure">
-                        <img src="img/perfil_doar_03.jpg" class="figure-img img-fluid rounded rounded-circle"
-                            alt="Photo by Camylla Battani on Unsplash">
-                        <figcaption class="figure-caption text-center">Ração</figcaption>
-                    </figure>
+                    <a href="http://localhost/guardioes_pet/anuncios.php">
+                        <figure class="figure">
+                            <img src="img/perfil_doar_03.jpg" class="figure-img img-fluid rounded rounded-circle"
+                                alt="Photo by Camylla Battani on Unsplash">
+                            <figcaption class="figure-caption text-center">Ração</figcaption>
+                        </figure>
+                    </a>
                 </div>
             </div>
         </div>
