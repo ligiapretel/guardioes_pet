@@ -25,43 +25,75 @@
             <h3 class="tituloGeralAnuncios mb-4">Nossos Guardiões também precisam da sua ajuda!</h3>
         </section>
         <section>
-            <div class="row">
+            <div class="row p-3">
                 <div class="col-sm-3">
-                    <div class="card">
+                    <div class="card p-1 m-1">
                         <div class="card-body">
-                            <h5 class="card-title">Item necessário</h5>
-                            <p class="card-text">Exemplo: Ração Pedigree Filhotes</p>
+                            <h5 class="card-title">Ração Pedigree Filhotes</h5>
                             <p class="card-text">5 unidades</p>
                             <a href="#" class="btn btn-secondary">Entrar em contato</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-3">
-                    <div class="card">
+                    <div class="card p-1 m-1">
                         <div class="card-body">
-                            <h5 class="card-title">Item necessário</h5>
-                            <p class="card-text">Exemplo: Vermífugo para cães até 10kg </p>
+                            <h5 class="card-title">Vermífugo para cães até 10kg</h5>
                             <p class="card-text">2 unidades </p>
                             <a href="#" class="btn btn-secondary">Entrar em contato</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-3">
-                    <div class="card">
+                    <div class="card p-1 m-1">
                         <div class="card-body">
-                            <h5 class="card-title">Item necessário</h5>
-                            <p class="card-text">Exemplo: Areia higiênica para gatos </p>
+                            <h5 class="card-title">Areia higiênica para gatos</h5>
                             <p class="card-text">10 unidades </p>
                             <a href="#" class="btn btn-secondary">Entrar em contato</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-3">
-                    <div class="card">
+                    <div class="card p-1 m-1">
                         <div class="card-body">
-                            <h5 class="card-title">Item necessário</h5>
-                            <p class="card-text">Exemplo: Bola de brinquedo para cães </p>
+                            <h5 class="card-title">Bola de brinquedo para cães</h5>
                             <p class="card-text">1 unidade </p>
+                            <a href="#" class="btn btn-secondary">Entrar em contato</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="card p-1 m-1">
+                        <div class="card-body">
+                            <h5 class="card-title">Cortador de unhas para gatos</h5>
+                            <p class="card-text">1 unidade </p>
+                            <a href="#" class="btn btn-secondary">Entrar em contato</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="card p-1 m-1">
+                        <div class="card-body">
+                            <h5 class="card-title">Guia para cães até 10kg</h5>
+                            <p class="card-text">1 unidade </p>
+                            <a href="#" class="btn btn-secondary">Entrar em contato</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="card p-1 m-1">
+                        <div class="card-body">
+                            <h5 class="card-title">Ração para cães até 25kg</h5>
+                            <p class="card-text">5 unidades </p>
+                            <a href="#" class="btn btn-secondary">Entrar em contato</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="card p-1 m-1">
+                        <div class="card-body">
+                            <h5 class="card-title">Ração para gatos até 5kg</h5>
+                            <p class="card-text">3 unidades </p>
                             <a href="#" class="btn btn-secondary">Entrar em contato</a>
                         </div>
                     </div>

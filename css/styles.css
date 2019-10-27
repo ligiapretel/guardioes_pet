@@ -362,14 +362,14 @@ header{
 
 /*CSS Cadastro Guardião*/
 #formGuardiao{
-    background-color: #e5e9f2;
+    background-color: #FBD49F;
     margin-top: 8rem;
-    margin-left: 3rem;
+    margin-left: 15rem;
     margin-bottom: 2rem;
 }
 
 .tituloGuardiao{
-    color: #343F4B;
+    color: #FF9640;
 }
 #botaoGuardiao{
     width: 200px;
@@ -413,7 +413,7 @@ header{
 #formOng{
     background-color: #E7E2FC;
     margin-top: 8rem;
-    margin-left: 3rem;
+    margin-left: 15rem;
     margin-bottom: 2rem;
 }
 .tituloOng{
@@ -426,14 +426,14 @@ header{
 
 /*CSS Cadstro de Anúncio*/
 #formAnuncio{
-    background-color: #FBD49F;
+    background-color:  #e5e9f2;
     margin-top: 8rem;
     margin-left: 3rem;
     margin-bottom: 2rem;
 }
 
 .tituloAnuncio{
-    color: #FF9640;
+    color: #343F4B;
 }
 
 #botaoAnuncio{
