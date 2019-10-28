@@ -362,14 +362,14 @@ header{
 
 /*CSS Cadastro Guardião*/
 #formGuardiao{
-    background-color: #FBD49F;
+    background-color: #e5e9f2;
     margin-top: 8rem;
-    margin-left: 15rem;
+    margin-left: 3rem;
     margin-bottom: 2rem;
 }
 
 .tituloGuardiao{
-    color: #FF9640;
+    color: #343F4B;
 }
 #botaoGuardiao{
     width: 200px;
@@ -413,7 +413,7 @@ header{
 #formOng{
     background-color: #E7E2FC;
     margin-top: 8rem;
-    margin-left: 15rem;
+    margin-left: 3rem;
     margin-bottom: 2rem;
 }
 .tituloOng{
@@ -426,14 +426,14 @@ header{
 
 /*CSS Cadstro de Anúncio*/
 #formAnuncio{
-    background-color:  #e5e9f2;
+    background-color: #FBD49F;
     margin-top: 8rem;
     margin-left: 3rem;
     margin-bottom: 2rem;
 }
 
 .tituloAnuncio{
-    color: #343F4B;
+    color: #FF9640;
 }
 
 #botaoAnuncio{
@@ -527,9 +527,20 @@ header{
 /* PERFIL DAS ONGS*/
 
 /*Informacoes perfil da ONG*/
+#pfong_linha1{
+    border-width: 0px 1px 0px 0px;
+    border-color: rgb(0, 0, 0);
+    border-style: solid;
+}
+#pfong_linha2{
+    border-width: 0px 0px 0px 2px;
+    border-color: rgb(0, 0, 0);
+    border-style: solid;
+}
+
 #pfong_cx_info_principal{
     background-color: #E7E2FC;
-    padding:130px 70px 60px 70px;
+    padding:130px 110px 60px 100px;
 }
 
 #pfong_info{
@@ -554,7 +565,6 @@ header{
 
 #pfong_img{ 
     background-image: url("../img/perfil_ong_imagem.png");
-    background-color: #C0CCDA;
     width: 300px;
     height: 300px;
     background-position: center;
@@ -563,16 +573,22 @@ header{
 }
 
 /* Parte onde podemos enviar uma mensagem */
+#pfong_cx_i_txt{
+    background-color: rgb(166, 160, 189);
+    border-radius: 5px;
+}
 
 #pfong_cx_i_txt i{
     font-size: 80px;
-    color: #47525E;
+    color: rgb(0, 0, 0);
 }
 
 #pfong_cx_i_txt p{   
     margin-top:10px;
     margin-left:10px;
     font-weight: bold;
+    color: rgb(0, 0, 0);
+
 }
 
 /* Iniciando a parte dos Animais que estao com as ONGS*/
@@ -584,7 +600,8 @@ header{
 
 #pfong_cx_principal_animais h1{
     color: #47525e;
-    font-weight: bold;  
+    font-weight: bold; 
+    font-size: 2rem; 
 }
 
 #pfong_cx_animais p{
@@ -605,15 +622,15 @@ header{
 }
 
 #pfong_animais_img1{
-    background-color: #F3F2F5;   
+    background-image: url("../img/pfGuardiao_img1.jpg");
 }
 
 #pfong_animais_img2{
-    background-color: #F3F2F5;
+    background-image: url("../img/pfGuardiao_img_2.jpg");
 }
 
 #pfong_animais_img3{
-    background-color: #F3F2F5;
+    background-image: url("../img/pfGuardiao_img_2.jpg");
 }
 
 .pfong_cards{
@@ -669,6 +686,7 @@ header{
     margin-bottom:20px;
     color: #47525e;
     font-weight: bold;
+    font-size: 2rem;
 }
 
 #pfong_cx_precisa{
