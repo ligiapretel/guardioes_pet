@@ -3,9 +3,6 @@
     margin: 0;
 }
 
-/* Iniciando CSS extra large devices (1200px ou mais) */    
-@media(min-width: 1200px) {
-
     #main-home{
         display: flex;
         flex-direction: column;
@@ -224,13 +221,12 @@
     /*HEADER*/
     header{
         background-color: #010310cc;
-        padding: 10px 0px;   
     }
 
     .fonteHeader{
         color: #ff9640;
         font-family: "Rockwell";
-        font-size: 2rem;
+        font-size: 1.5rem;
         font-weight: bold;
     }
 
@@ -239,17 +235,6 @@
         text-decoration: none;
     }
 
-    .logo{
-        color: #ff9640;
-        width: 21%;
-    }
-
-    #header-nav{
-        display: flex;
-        align-items: baseline;
-        justify-content: flex-end;
-        padding-right: 30px;
-    }
 
     .btnHeader{
         background-color: #6E5DB3;
@@ -1060,6 +1045,9 @@
         width: 50%;
     }
 }
+
+/* Iniciando CSS extra large devices (1200px ou mais) */    
+@media(min-width: 1200px) {
 
 /* Iniciando CSS extra small devices (576px ou menos) */    
 @media(max-width: 576px) {
