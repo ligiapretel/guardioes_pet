@@ -23,7 +23,7 @@
     <?php include_once("includes/header.php"); ?>
 
     <!--Onde esta localizado as informacoes da ONG e img-->
-    <section class="container-fluid pfong_background_info" id="pfong_cx_info_principal"> <!-- id para background e padding. Dúvida: não estou conseguindo juntar essa classe e esse id numa coisa só -->
+    <section class="container-fluid" id="pfong_cx_info_principal"> <!-- id para background e padding -->
         <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-12 col-12 border-right border-dark"> <!-- falta corrigir a borda preta -->
                 <h1 class="text-dark font-weight-bolder">Cia dos Miados e Latidos</h1>
@@ -43,19 +43,18 @@
         </div>
     </section>
     
-
     <!--Onde esta localizado os Animais com a ONG-->
-    <section class="container-fluid" id="pfong_cx_principal_animais"> <!-- id sobre padding -->
+    <section class="container-fluid" id="perfilOngGuar_animais"> <!-- id sobre padding -->
         <div class="row">
             <h2 class="col-lg-12 text-dark font-weight-bold">Animais com a ONG (98)</h2>
 
             <div class="col-lg-4">
                 <div class="card">
-                    <img src="img/pfGuardiao_img1.jpg" class="card-img-top" height="300" width="300">
+                    <img src="img/pfGuardiao_img1.jpg" class="card-img-top" height="300" width="300"> <!-- arummar o tamanho dessa imagem -->
                     <div class="card-body">
                     <h4 class="card-title text-dark font-weight-bold">ELZA</h4>
                         <p class="card-text text-secondary">Tenho uma pelagem de tres cores que é puro charme e pra completar uma carinha inocente que é i-rre-sis-tível!Adoro tomar um solzinho na janela e tirar cochilos na ...</p>
-                        <a href="#" class="btn btn-primary">Saiba mais</a> <!-- ainda preciso arrumar o botão -->
+                        <a href="#" class="btn-roxo">Saiba mais</a> <!-- ainda preciso arrumar o botão -->
                     </div>
                 </div>
             </div>
@@ -66,7 +65,7 @@
                     <div class="card-body">
                     <h4 class="card-title text-dark font-weight-bold">CHICO</h4>
                         <p class="card-text text-secondary">Tenho uma pelagem de tres cores que é puro charme e pra completar uma carinha inocente que é i-rre-sis-tível!Adoro tomar um solzinho na janela e tirar cochilos na ...</p>
-                        <a href="#" class="btn btn-primary">Saiba mais</a>
+                        <a href="#" class="btn-roxo">Saiba mais</a>
                     </div>
                 </div>
             </div>
@@ -77,7 +76,7 @@
                     <div class="card-body">
                         <h4 class="card-title text-dark font-weight-bold">BELQUIOR</h4>
                         <p class="card-text text-secondary">Tenho uma pelagem de tres cores que é puro charme e pra completar uma carinha inocente que é i-rre-sis-tível!Adoro tomar um solzinho na janela e tirar cochilos na ...</p>
-                        <a href="#" class="btn btn-primary">Saiba mais</a>
+                        <a href="#" class="btn-roxo">Saiba mais</a>
                     </div>
                 </div>
             </div>
@@ -101,14 +100,17 @@
         </div>
 
     </section>
+
     <!-- Abrindo seção para include da busca recolhida -->
     <div class="alinhamento-busca-recolhida mt-5">
         <section id="container-busca-recolhida" class="col-10">
             <?php include_once('includes/buscaRecolhida.php')?>
         </section>
     </div>
+
     <!-- Incluindo footer -->
     <?php include_once("includes/footer.php")?>
+
     <!-- Script JS Bootstrap | Manter código próximo ao fechamento do body -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
