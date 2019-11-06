@@ -3,6 +3,9 @@
     margin: 0;
 }
 
+/* Iniciando CSS extra large devices (1200px ou mais) */    
+@media(min-width: 1200px) {
+
     #main-home{
         display: flex;
         flex-direction: column;
@@ -221,12 +224,13 @@
     /*HEADER*/
     header{
         background-color: #010310cc;
+        padding: 10px 0px;   
     }
 
     .fonteHeader{
         color: #ff9640;
         font-family: "Rockwell";
-        font-size: 1.5rem;
+        font-size: 2rem;
         font-weight: bold;
     }
 
@@ -235,6 +239,17 @@
         text-decoration: none;
     }
 
+    .logo{
+        color: #ff9640;
+        width: 21%;
+    }
+
+    #header-nav{
+        display: flex;
+        align-items: baseline;
+        justify-content: flex-end;
+        padding-right: 30px;
+    }
 
     .btnHeader{
         background-color: #6E5DB3;
@@ -515,29 +530,158 @@
     /* PERFIL DAS ONGS*/
 
     /*Informacoes perfil da ONG*/
-   
-    #pfong_cx_info_principal{
-        background-color: #E7E2FC;
-        padding:10% 5% 5% 5%;
+    /* #pfong_linha1{ Fazendo a linha vertical com border bootstrap
+        border-width: 0px 1px 0px 0px;
+        border-color: rgb(0, 0, 0);
+        border-style: solid;
     }
-  
-    /* Parte onde podemos enviar uma mensagem */
+    #pfong_linha2{ 
+        border-width: 0px 0px 0px 2px;
+        border-color: rgb(0, 0, 0);
+        border-style: solid;
+    } */
 
-    #pfong_cx_i_txt{
+    .pfong_background_info {
+        background-color: #E7E2FC;
+        width: 100%;
+        
+    }
+
+    #pfong_cx_info_principal{ 
+        padding: 10% 5% 5% 5%;
+        
+    }
+
+    /* #pfong_info{ Desnecessária
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;   
+        text-align: justify;
+        padding: 0px;
+    } */
+
+    /* #pfong_info h1{ Funciona com classes do bootstrap se aceitarem text-dark 
+        color: #47525e;
+        font-weight: bold;   
+    } */
+
+    /* #pfong_info p { Funciona com classes do bootstrap se aceitarem text-dark
+        color: #47525E;
+    } */
+
+    /*Img do Perfil ONGS*/
+
+    /* #pfong_img{ Foi trocado por <img
+        background-image: url("../img/perfil_ong_imagem.png");
+        width: 200px;
+        height: 200px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;    
+    } */
+
+    /* Parte onde podemos enviar uma mensagem */
+    #pfong_cx_i_txt{ 
         background-color: rgb(166, 160, 189);
         border-radius: 5px;
+    } 
+
+    #pfong_cx_i_txt i{ 
+        font-size: 80px;
+        color: rgb(0, 0, 0); 
     }
 
-    #pfong_cx_i_txt i{
-        font-size: 80px;
+    /* #pfong_cx_i_txt p{   
+        margin-top:10px;
+        margin-left:10px;
+        font-weight: bold;
         color: rgb(0, 0, 0);
-    }
+    } */
 
     /* Iniciando a parte dos Animais que estao com as ONGS*/
 
-    #pfong_cx_principal_animais{   
-        padding:60px 70px 60px 70px;
+
+    #pfong_cx_principal_animais{  
+        padding:60px 100px 60px 100px;
     }
+
+    /* #pfong_cx_principal_animais h1{ Poderia ser substituído por classes bootstrap
+        color: #47525e;
+        font-weight: bold; 
+        font-size: 2rem; 
+    } */
+
+    /* #pfong_cx_animais p{ Poderia ser substituído por classes bootstrap
+        color: #8190A5;;
+    } */
+
+    /* #pfong_animais{ Desnecessário se usar cards do bootstrap
+        display: flex;
+        justify-content: space-between;  
+    } */
+
+    /* .pfong_animais_imgs{ Substituído por card do bootstrap
+        width: 70%;
+        height: 200px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    } */
+
+    /* #pfong_animais_img1{  Direto nos cards do bootstrap
+        background-image: url("../img/pfGuardiao_img1.jpg");
+    } */
+
+    /* #pfong_animais_img2{ Direto nos cards do bootstrap
+        background-image: url("../img/pfGuardiao_img_2.jpg");
+    } */
+
+    /* #pfong_animais_img3{  Direto nos cards do bootstrap
+        background-image: url("../img/pfGuardiao_img_2.jpg");
+    } */
+
+    /* .pfong_cards{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+        margin-top:20px;   
+    } */
+
+    /* .pfong_cards h1{
+        width:70%;
+        margin-top:30px;
+        margin-bottom: 15px;
+    } */
+
+    /* .pfong_cards p{  
+        text-align: justify;
+        width:70%;
+    } */
+
+    /* #cx-btn{
+        width: 100%;
+        margin-right: 140px;
+        margin-top:20px;
+    } */
+
+    /* #cx-btn button{
+        background-color: #6E5DB3;
+        padding:5px 15px 5px 15px;
+        color: white;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    } */
+
+    /* #pfong_coluna_cardsDois{
+        align-items: center;
+    } */
+
+    /* #pfong_coluna_cardsTres{
+        align-items: flex-end;
+    } */
 
     .btn-primary {
         color: #fff;
@@ -545,28 +689,31 @@
         border: none;
 
     }
+
+    .btn-primary :hover{ /* ainda está aparecendo azul */
+        background-color: #4a3f78!important 
+    }
     
     /*Iniciando estamos precisando*/
 
     /*section*/
     #pfong_precisa_cx_principal{
-        background-color: #F3F2F5;
-        padding:60px 70px 100px 70px;
+        padding:60px 100px 100px 100px;
 
     }
-    #pfong_precisa_cx_principal h1{
+    /* #pfong_precisa_cx_principal h1{ Desnecessário se usar classes do bootstrap 
         margin-bottom:20px;
         color: #47525e;
         font-weight: bold;
         font-size: 2rem;
-    }
+    } */
 
-    #pfong_cx_precisa{
+    /* #pfong_cx_precisa{ Desnecessário se usar classes do bootstra
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;   
-    }
+    } */
 
     .pfong_precisando{
         background-color: white;
@@ -930,12 +1077,19 @@
     }
 }
 
-/* Iniciando CSS extra large devices (1200px ou mais) */    
-@media(min-width: 1200px) {
-
 /* Iniciando CSS extra small devices (576px ou menos) */    
 @media(max-width: 576px) {
 
+    /* perfil Ong */
+    .pfong_background_info { /* não entendi pq tenho que colocar de novo o bakcground */
+        background-color: #E7E2FC;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .pfong_background_info h1 { 
+        text-align: center;
+    }
 }
 
 /* Iniciando CSS small devices (577px ou mais) */    
