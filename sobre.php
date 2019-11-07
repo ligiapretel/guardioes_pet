@@ -19,7 +19,7 @@
 </head>
 
 <body>
-    <?php //include_once("includes/header.php")?>
+    <?php include_once("includes/header.php")?>
     <main id="main-sobre">
         <section id="banner-sobre" class="col-12">
             <h1 class="col-9 col-sm-6 col-md-5 col-xl-5">"A grandeza de uma nação e seu progresso moral podem ser julgados pela forma como seus animais são tratados"</h1>

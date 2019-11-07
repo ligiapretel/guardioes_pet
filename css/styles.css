@@ -876,16 +876,76 @@ header{
         padding: 25% 5% 5% 5%;
         width: 100vw;
     }
+
+    /* Iniciando CSS página Sobre  */
+    #banner-sobre h1{
+        text-align: left;
+    }
+
+    #banner-sobre p{
+        text-align: left;
+    }
  
 }
 
 /* Iniciando CSS medium devices (até 768px) */    
 @media(max-width: 768px) {
 
+    /* Iniciando CSS página Sobre  */
+    #banner-sobre{
+        height: auto;
+        width: 100vw;
+        padding: 100px 0px 30px 0px;
+    }
+
+    #banner-sobre h1{
+        font-size: 2rem;
+        margin-top: 0px;
+        line-height: 40px;
+    }
+
+    #sobre-nos h2{
+        font-size: 2rem;
+        padding: 10px 0px 15px 0px;
+    }
+
+    #sobre-nos p{
+        font-size: 1rem;
+    }
+
+    #equipe-sobre{
+        margin-top: 0px;
+        padding-top: 30px;
+    }
+
+    #equipe-sobre h3{
+        font-size: 1.4rem;
+    }
+
+    #equipe-sobre p{
+        padding: 0px;
+    }
+    
+    .foto-perfil{
+        width: 150px;
+    }
+
 }
 
 /* Iniciando CSS large devices (até 992px) */    
 @media(max-width: 992px) {
+
+    /* Iniciando CSS página Sobre  */
+    #banner-sobre{
+        padding: 100px 0px 30px 10px;
+        height: auto;
+    }
+
+    #banner-sobre h1{
+        margin-top: 0px;
+        line-height: 50px;
+    }
+    
 }
 
 
