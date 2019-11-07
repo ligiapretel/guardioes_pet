@@ -801,13 +801,29 @@
     #pfong_cx_info_principal{ /* ongs */
         padding:25% 5% 5% 5%;
         width: 100vw;
-        
+        height: 100vh;
     }
 
     #pfG_cx_info_principal{ /* guardiões */
         padding: 25% 5% 5% 5%;
         width: 100vw;
-        height: 
+        height: 100vh;
+    }
+
+    #perfilOng_imagem {
+        margin-top: 20px;
+        width: 60%;
+        height: 90%;
+    }
+
+    #perfilGua_imagem {
+        margin-bottom: 30px;
+        width: 60%;
+        height: 85%;
+    }
+
+    .pfOngGuard_titulo {
+        font-size: 1.7em;
     }
 
     
@@ -816,13 +832,99 @@
 /* Iniciando CSS medium devices (até 768px) */    
 @media(max-width: 768px) {
 
+    /* PERFIL DA ONG E DO GUARDIÃO */
+    #pfong_cx_info_principal{ /* ongs */
+        padding:15% 5% 5% 5%;
+        width: 100vw;
+    }
+
+    #pfG_cx_info_principal{ /* guardiões */
+        padding: 15% 5% 5% 5%;
+        width: 100vw;
+    }
+
+    #perfilOng_imagem {
+        margin-top: 60px;
+        width: 60%;
+        height: 60%;
+    }
+
+    #perfilGua_imagem {
+        margin-top: 60px;
+        width: 60%;
+        height: 60%;
+    }
+
+    .pfOngGuard_titulo {
+        font-size: 1.7em;
+    }
+    
+    
+
 }
 
 /* Iniciando CSS large devices (até 992px) */    
 @media(max-width: 992px) {
+
+    /* PERFIL DA ONG E DO GUARDIÃO */
+    #pfong_cx_info_principal{ /* ongs */
+        padding:15% 5% 5% 5%;
+        width: 100vw;
+    }
+
+    #pfG_cx_info_principal{ /* guardiões */
+        padding: 15% 5% 5% 5%;
+        width: 100vw;
+    }
+
+    #perfilOng_imagem {
+        margin-top: 15px;
+        width: 65%;
+        height: 85%;
+    }
+
+    #perfilGua_imagem {
+        margin-top: 15px;
+        width: 60%;
+        height: 85%;
+    }
+
+    .pfOngGuard_titulo {
+        font-size: 2em;
+    }
+
 }
 
 
 /* Iniciando CSS extra large devices (até 1200px) */    
 @media(max-width: 1200px) {
+
+     /* PERFIL DA ONG E DO GUARDIÃO */
+     #pfong_cx_info_principal{ /* ongs */
+        padding:15% 5% 5% 5%;
+        width: 100vw;
+    }
+
+    #pfG_cx_info_principal{ /* guardiões */
+        padding: 15% 5% 5% 5%;
+        width: 100vw;
+    }
+
+    #perfilOng_imagem {
+        margin-top: 15px;
+        width: 65%;
+        height: 85%;
+    }
+
+    #perfilGua_imagem {
+        margin-top: 15px;
+        width: 60%;
+        height: 85%;
+    }
+
+    .pfOngGuard_titulo {
+        font-size: 2em;
+    }
+
+
 }

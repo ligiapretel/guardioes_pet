@@ -27,11 +27,11 @@
     <section  class="container-fluid" id="pfG_cx_info_principal"> <!-- id de background e padding -->
         <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-12 col-12 d-flex justify-content-center">
-                <img class="rounded-circle" src="img/img_perfil_guardiao.jpeg" width="300" height="300">
+                <img id="perfilGua_imagem" class="rounded-circle" src="img/img_perfil_guardiao.jpeg" width="300" height="300">
             </div>
 
-            <div class="col-lg-6 col-md-6 col-sm-12 col-12 border-left border-dark"> <!-- falta corrigir a borda preta -->
-                <h1 class="text-dark font-weight-bolder">Claudia Leite</h1>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-12"> 
+                <h1 class="pfOngGuard_titulo text-dark font-weight-bolder">Claudia Leite</h1>
                 <p class="text-dark text-justify">Nossa ONG nasceu com intenções claras de resgate, castração e doação de animais. Nos empenhamos em
                     abrigar poucos, socorrer vários e castrar MUITOS, pois a castração é a única solução ao problema
                     estrutural da procriação de animais abandonados.</p>
@@ -49,37 +49,37 @@
     <!--Onde esta localizado os Animais Apadrinhados-->
     <section class="container-fluid" id="perfilOngGuar_animais"> <!-- id sobre padding -->
         <div class="row">
-            <h2 class="col-lg-12 text-dark font-weight-bold">Apadrinhados</h2>
+            <h2 class="col-lg-12 text-dark font-weight-bold pfOngGuard_titulo">Apadrinhados</h2>
 
-            <div class="col-lg-4">
+            <div class="col-lg-4 col-md-4 col-sm-6 col-12">
                 <div class="card">
                     <img src="img/pfGuardiao_img1.jpg" class="card-img-top" height="300" width="300">
                     <div class="card-body">
                     <h4 class="card-title text-dark font-weight-bold">ELZA</h4>
                         <p class="card-text text-secondary">Tenho uma pelagem de tres cores que é puro charme e pra completar uma carinha inocente que é i-rre-sis-tível!Adoro tomar um solzinho na janela e tirar cochilos na ...</p>
-                        <a href="#" class="btn-roxo">Saiba mais</a> <!-- ainda preciso arrumar o botão -->
+                        <a href="#" class="btn btn-primary">Saiba mais</a> <!-- ainda preciso arrumar o botão -->
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-4">
+            <div class="col-lg-4 col-md-4 col-sm-6 col-12">
                 <div class="card">
                     <img src="img/pfGuardiao_img_2.jpg" class="card-img-top" height="300" width="300">
                     <div class="card-body">
                     <h4 class="card-title text-dark font-weight-bold">CHICO</h4>
                         <p class="card-text text-secondary">Tenho uma pelagem de tres cores que é puro charme e pra completar uma carinha inocente que é i-rre-sis-tível!Adoro tomar um solzinho na janela e tirar cochilos na ...</p>
-                        <a href="#" class="btn-roxo">Saiba mais</a>
+                        <a href="#" class="btn btn-primary">Saiba mais</a>
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-4">
+            <div class="col-lg-4 col-md-4 col-sm-6 col-12">
                 <div class="card">
                     <img src="img/pfGuardiao_img_3.jpeg" class="card-img-top" height="300" width="300">
                     <div class="card-body">
                         <h4 class="card-title text-dark font-weight-bold">BELQUIOR</h4>
                         <p class="card-text text-secondary">Tenho uma pelagem de tres cores que é puro charme e pra completar uma carinha inocente que é i-rre-sis-tível!Adoro tomar um solzinho na janela e tirar cochilos na ...</p>
-                        <a href="#" class="btn-roxo">Saiba mais</a>
+                        <a href="#" class="btn btn-primary">Saiba mais</a>
                     </div>
                 </div>
             </div>
@@ -90,26 +90,26 @@
     <!--Onde estão os animais adotados -->
     <section class="container-fluid bg-light" id="perfilOngGuar_animais"> <!-- id sobre padding -->
         <div class="row">
-            <h2 class="col-lg-12 text-dark font-weight-bold">Adotados</h2>
+            <h2 class="col-lg-12 text-dark font-weight-bold pfOngGuard_titulo">Adotados</h2>
 
-            <div class="col-lg-4">
+            <div class="col-lg-4 col-md-4 col-sm-6 col-12">
                 <div class="card">
                     <img src="img/pfGuardiao_img1.jpg" class="card-img-top" height="300" width="300">
                     <div class="card-body">
                     <h4 class="card-title text-dark font-weight-bold">ELZA</h4>
                         <p class="card-text text-secondary">Tenho uma pelagem de tres cores que é puro charme e pra completar uma carinha inocente que é i-rre-sis-tível!Adoro tomar um solzinho na janela e tirar cochilos na ...</p>
-                        <a href="#" class="btn-roxo">Saiba mais</a> <!-- ainda preciso arrumar o botão -->
+                        <a href="#" class="btn btn-primary">Saiba mais</a> <!-- ainda preciso arrumar o botão -->
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-4">
+            <div class="col-lg-4 col-md-4 col-sm-6 col-12">
                 <div class="card">
                     <img src="img/pfGuardiao_img_2.jpg" class="card-img-top" height="300" width="300">
                     <div class="card-body">
                     <h4 class="card-title text-dark font-weight-bold">CHICO</h4>
                         <p class="card-text text-secondary">Tenho uma pelagem de tres cores que é puro charme e pra completar uma carinha inocente que é i-rre-sis-tível!Adoro tomar um solzinho na janela e tirar cochilos na ...</p>
-                        <a href="#" class="btn-roxo">Saiba mais</a>
+                        <a href="#" class="btn btn-primary">Saiba mais</a>
                     </div>
                 </div>
             </div>
@@ -120,26 +120,26 @@
     <!--Onde estão os animais lar temporário -->
     <section class="container-fluid" id="perfilOngGuar_animais"> <!-- id sobre padding -->
         <div class="row">
-            <h2 class="col-lg-12 text-dark font-weight-bold">Lar Temporário</h2>
+            <h2 class="col-lg-12 text-dark font-weight-bold pfOngGuard_titulo">Lar Temporário</h2>
 
-            <div class="col-lg-4">
+            <div class="col-lg-4 col-md-4 col-sm-6 col-12">
                 <div class="card">
                     <img src="img/pfGuardiao_img1.jpg" class="card-img-top" height="300" width="300">
                     <div class="card-body">
                     <h4 class="card-title text-dark font-weight-bold">ELZA</h4>
                         <p class="card-text text-secondary">Tenho uma pelagem de tres cores que é puro charme e pra completar uma carinha inocente que é i-rre-sis-tível!Adoro tomar um solzinho na janela e tirar cochilos na ...</p>
-                        <a href="#" class="btn-roxo">Saiba mais</a> <!-- ainda preciso arrumar o botão -->
+                        <a href="#" class="btn btn-primary">Saiba mais</a> <!-- ainda preciso arrumar o botão -->
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-4">
+            <div class="col-lg-4 col-md-4 col-sm-6 col-12">
                 <div class="card">
                     <img src="img/pfGuardiao_img_2.jpg" class="card-img-top" height="300" width="300">
                     <div class="card-body">
                     <h4 class="card-title text-dark font-weight-bold">CHICO</h4>
                         <p class="card-text text-secondary">Tenho uma pelagem de tres cores que é puro charme e pra completar uma carinha inocente que é i-rre-sis-tível!Adoro tomar um solzinho na janela e tirar cochilos na ...</p>
-                        <a href="#" class="btn-roxo">Saiba mais</a>
+                        <a href="#" class="btn btn-primary">Saiba mais</a>
                     </div>
                 </div>
             </div>
