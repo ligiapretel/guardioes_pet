@@ -3,6 +3,22 @@
     margin: 0;
 }
 
+    /* classes comuns a todas as páginas */
+
+    .btn-roxo {
+        background-color: #6E5DB3;
+        color: #ffffff;
+        text-transform: uppercase;
+        padding: 8px 30px;
+        border: none;
+        border-radius: 5px;
+    }
+
+    .btn-roxo:hover {
+        background-color:#4a3f78;
+    }
+
+
     #main-home{
         display: flex;
         flex-direction: column;
@@ -218,56 +234,33 @@
         padding:10px;
         color:#ff9640;
     }
+
     /*HEADER*/
     header{
         background-color: #010310cc;
-        padding: 10px 0px;   
     }
 
+    .header-menu {
+    }    
+    
     .fonteHeader{
         color: #ff9640;
         font-family: "Rockwell";
-        font-size: 2rem;
+        font-size: 1.5rem;
         font-weight: bold;
     }
 
-    .fonteHeader:hover{
+    .fonteHeader:hover {
         color: #ff9640;
         text-decoration: none;
     }
 
-    .logo{
-        color: #ff9640;
-        width: 21%;
+    .header-link {
+        color: #ffffff!important;
     }
 
-    #header-nav{
-        display: flex;
-        align-items: baseline;
-        justify-content: flex-end;
-        padding-right: 30px;
-    }
-
-    .btnHeader{
-        background-color: #6E5DB3;
-        color: #ffffff;
-        padding: 8px 15px;
-        border: none;    
-        border-radius: 5px;
-        cursor: pointer;
-    }
-
-    .btnHeader:hover{
-        background-color: #4a3f78;
-    }
-
-    .linkHeader{
-        color: #ffffff;
-    }
-
-    .linkHeader:hover{
-        color: #ffffff;
-        text-decoration: underline !important;
+    .header-link:hover{
+        color:#6e5db3!important;
     }
 
     /*FOOTER*/
@@ -544,178 +537,58 @@
         text-decoration: none;
     }
 
+    /* PERFIL DAS ONGS E GUARDIÕES */
 
-
-    /* PERFIL DAS ONGS*/
-
-    /*Informacoes perfil da ONG*/
-    #pfong_linha1{
-        border-width: 0px 1px 0px 0px;
-        border-color: rgb(0, 0, 0);
-        border-style: solid;
-    }
-    #pfong_linha2{
-        border-width: 0px 0px 0px 2px;
-        border-color: rgb(0, 0, 0);
-        border-style: solid;
-    }
-
-    #pfong_cx_info_principal{
+    /*Informacoes*/
+    #pfong_cx_info_principal{ /* ongs */
         background-color: #E7E2FC;
-        padding:130px 110px 60px 100px;
+        padding:10% 5% 5% 5%;
+        width: 100vw;
     }
 
-    #pfong_info{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-content: center;   
-        text-align: justify;
-        padding: 0px;
+    #pfG_cx_info_principal{ /* guardiões */
+        background-color: #D6EBE8;
+        padding: 10% 5% 5% 5%;
+        width: 100vw;
     }
-
-    #pfong_info h1{
-        color: #47525e;
-        font-weight: bold;   
-    }
-
-    #pfong_info p {
-        color: #47525E;
-    }
-
-    /*Img do Perfil ONGS*/
-
-    #pfong_img{ 
-        background-image: url("../img/perfil_ong_imagem.png");
-        width: 300px;
-        height: 300px;
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;    
-    }
-
-    /* Parte onde podemos enviar uma mensagem */
-    #pfong_cx_i_txt{
+ 
+    /* Enviar mensagem - Denunciar Perfil */ 
+    #pfong_cx_i_txt { /* ongs */
         background-color: rgb(166, 160, 189);
         border-radius: 5px;
     }
 
-    #pfong_cx_i_txt i{
+    #pfong_cx_i_txt i{ /* ongs */
         font-size: 80px;
         color: rgb(0, 0, 0);
     }
 
-    #pfong_cx_i_txt p{   
+    #pfG_cx_i_txt i { /* guardiões */
+        font-size: 40px;
+        color: #47525E;
+    }
+
+    #pfG_cx_i_txt p {  /* guardiões */   
         margin-top:10px;
         margin-left:10px;
         font-weight: bold;
-        color: rgb(0, 0, 0);
-
+        margin-right: 20px;
+        font-size: 0.9rem;
     }
 
-    /* Iniciando a parte dos Animais que estao com as ONGS*/
+    /* Animais das Ongs e dos Guardiões */
 
-
-    #pfong_cx_principal_animais{   
-        padding:60px 70px 60px 70px;
+    #perfilOngGuar_animais {   
+        padding: 5%;
     }
 
-    #pfong_cx_principal_animais h1{
-        color: #47525e;
-        font-weight: bold; 
-        font-size: 2rem; 
-    }
+    
+    /* Mural das Ongs - Estamos Precisando de */
 
-    #pfong_cx_animais p{
-        color: #8190A5;;
-    }
-
-    #pfong_animais{
-        display: flex;
-        justify-content: space-between;  
-    }
-
-    .pfong_animais_imgs{
-        width: 70%;
-        height: 200px;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-    }
-
-    #pfong_animais_img1{
-        background-image: url("../img/pfGuardiao_img1.jpg");
-    }
-
-    #pfong_animais_img2{
-        background-image: url("../img/pfGuardiao_img_2.jpg");
-    }
-
-    #pfong_animais_img3{
-        background-image: url("../img/pfGuardiao_img_2.jpg");
-    }
-
-    .pfong_cards{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 0px;
-        margin-top:20px;   
-    }
-
-    .pfong_cards h1{
-        width:70%;
-        margin-top:30px;
-        margin-bottom: 15px;
-    }
-
-    .pfong_cards p{  
-        text-align: justify;
-        width:70%;
-    }
-
-    #cx-btn{
-        width: 100%;
-        margin-right: 140px;
-        margin-top:20px;
-    }
-
-    #cx-btn button{
-        background-color: #6E5DB3;
-        padding:5px 15px 5px 15px;
-        color: white;
-        text-transform: uppercase;
-        margin-bottom: 20px;
-    }
-
-    #pfong_coluna_cardsDois{
-        align-items: center;
-    }
-
-    #pfong_coluna_cardsTres{
-        align-items: flex-end;
-    }
-    /*Iniciando estamos precisando*/
-
-    /*section*/
     #pfong_precisa_cx_principal{
         background-color: #F3F2F5;
         padding:60px 70px 100px 70px;
 
-    }
-    #pfong_precisa_cx_principal h1{
-        margin-bottom:20px;
-        color: #47525e;
-        font-weight: bold;
-        font-size: 2rem;
-    }
-
-    #pfong_cx_precisa{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;   
     }
 
     .pfong_precisando{
@@ -865,165 +738,6 @@
     }
 
 
-
-    /*PERFIL GUARDIAO*/
-    /*info e img perfil*/
-    #pfG_cx_info_principal{
-        background-color: #D6EBE8;
-        padding: 130px 90px 60px 90px;
-        width: 100%;
-    }
-
-    #pfG_info{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: justify;
-    }
-
-    #pfG_info h1{
-        color: #47525e;
-        font-weight: bold;  
-        font-size: 2.3rem; 
-        padding-bottom: 20px;  
-    }
-
-    #pfG_info p {
-        color: #47525E;
-    }
-
-    #pfG_linha1{
-        border-width:0px 1px 0px 0px;
-        border-color: #47525E;
-        border-style: solid;   
-    }
-
-    #pfG_linha2{
-        border-width: 0px 0px 0px 1px;
-        border-color: #47525E;
-        border-style: solid;
-    }
-
-    #pfG_cx_img{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    #pfG_img{  
-        background-image: url("../img/img_perfil_guardiao.jpeg");
-        width: 300px;
-        height: 300px;
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        margin-bottom: 20px;
-        border-radius: 50%;   
-    }
-
-    /* Enviar mesangem e Denunciar*/
-
-    #pfG_cx_i_txt i{
-        font-size: 40px;
-        color: #47525E;
-    }
-
-    #pfG_cx_i_txt p{    
-        margin-top:10px;
-        margin-left:10px;
-        font-weight: bold;
-        margin-right: 20px;
-        font-size: 0.9rem;
-    }
-
-    /*Animais Apadrinhados*/
-
-    #pfG_cx_animais{   
-        display: flex;
-        padding: 60px 90px 60px 90px;
-    }
-
-    #pfG_cx_animais h1{
-        color: #47525e;
-        font-weight: bold;
-        font-size: 1.8rem;
-    }
-
-    #pfG_cx_animais p{
-        color: #8190A5;;
-
-    }
-
-    #pfG_animais{
-        margin-top:60px;
-        margin-bottom: 60px;
-        display: flex;
-        flex-wrap: wrap;  
-    }
-
-    #pfG_animais_card1{
-        align-items: flex-start;
-    }
-    #pfG_animais_card2{
-        align-items: center;
-    }
-    #pfG_animais_card3{    
-        align-items: flex-end;
-    }
-
-    .pfG_animais_imgs{
-        width: 70%;
-        height: 200px;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-    }
-
-    #pfG_animais_img1{
-        background-image: url("../img/pfGuardiao_img1.jpg");  
-    }
-
-    #pfG_animais_img2{
-        background-image: url("../img/pfGuardiao_img_2.jpg");
-    }
-
-    #pfG_animais_img3{
-        background-image: url("../img/pfGuardiao_img_3.jpeg");
-    }
-
-    .pfG_cards{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 0px;    
-    }
-
-    .pfG_cards h1{
-        width:70%;
-        margin-top:30px;
-        margin-bottom: 15px;
-        font-size: 1.8rem;
-    }
-    .pfG_cards p{
-    
-        text-align: justify;
-        width:70%;    
-    }
-
-
-    /*animais adotados e lar temporario*/
-    #pfG_cx_adotados_lar_temp{
-        padding: 60px 90px 60px 90px;
-        background-color: #F3F2F5;  
-    }
-
-    #pfG_cx_adotados{
-        padding: 0px;
-    
-    }
-
     #pfG_adotados{
         display: flex;
         flex-direction: column;
@@ -1081,24 +795,56 @@
 
 
 /* Iniciando CSS extra small devices (576px ou menos) */    
+@media only screen and (max-width: 576px) {
+
+/* Estilos do header */
+
+    .header-menu {
+        padding: .3rem .2rem;
+    }
+
+    .fonteHeader {
+        font-size: 1.2rem;
+    }
+
+    .btn-roxo {
+        background-color:transparent;
+        text-transform: none;
+        padding: 8px 0px;
+        border: none;
+    }
+
+}
+
+/* Iniciando CSS extra small devices (até 576px) */    
 @media(max-width: 576px) {
-      .tituloGuardiao{
-       font-size: 1.3rem;
-   }
+
+    /* PERFIL DA ONG E DO GUARDIÃO */
+    #pfong_cx_info_principal{ /* ongs */
+        padding:25% 5% 5% 5%;
+        width: 100vw;
+        
+    }
+
+    #pfG_cx_info_principal{ /* guardiões */
+        padding: 25% 5% 5% 5%;
+        width: 100vw;
+        height: 
+    }
+
+    
 }
 
-/* Iniciando CSS small devices (577px ou mais) */    
-@media(min-width: 577px) {
+/* Iniciando CSS medium devices (até 768px) */    
+@media(max-width: 768px) {
 
 }
 
-/* Iniciando CSS medium devices (768px ou mais) */    
-@media(min-width: 768px) {
-
+/* Iniciando CSS large devices (até 992px) */    
+@media(max-width: 992px) {
 }
 
-/* Iniciando CSS large devices (992px ou mais) */    
-@media(min-width: 992px) {
 
+/* Iniciando CSS extra large devices (até 1200px) */    
+@media(max-width: 1200px) {
 }
-
