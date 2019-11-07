@@ -3,9 +3,6 @@
     margin: 0;
 }
 
-/* Iniciando CSS extra large devices (1200px ou mais) */    
-@media(min-width: 1200px) {
-
     #main-home{
         display: flex;
         flex-direction: column;
@@ -367,16 +364,25 @@
     #formGuardiao{
         background-color: #fdead1;
         margin-top: 8rem;
-        margin-left: 15rem;
+        margin-left: auto;
+        margin-right: auto;
         margin-bottom: 2rem;
     }
 
     .tituloGuardiao{
         color: #FF9640;
     }
-    #botaoGuardiao{
-        width: 200px;
-        margin-left: 625px;
+    .btnGuardiao{
+        background-color: #6E5DB3;
+        color: #ffffff;
+        border: none;    
+        border-radius: 5px;
+        cursor: pointer;
+        float: right;
+    }
+
+    .btnGuardiao:hover{
+        background-color: #4a3f78;
     }
 
     /*CSS Cadastro Animal*/
@@ -397,18 +403,21 @@
         font-size: 20px;
     }
 
-    #botaoAnimal{
-        background-color: #47525E;
+    .botaoAnimal{
+        background-color: #6E5DB3;
         color: #ffffff;
         padding: 8px 15px;
         border-radius: 5px;
         cursor: pointer;
-        width: 180px;
-        height: 45px;
         border: none;
     }
+
+    .botaoAnimal:hover{
+        background-color: #4a3f78;
+    }
+    
     .botaoLimparECadastro{
-        margin-left: 450px;
+        float: right;
     }
 
 
@@ -416,16 +425,26 @@
     #formOng{
         background-color: #E7E2FC;
         margin-top: 8rem;
-        margin-left: 15rem;
+        margin-left: auto;
+        margin-right: auto;
         margin-bottom: 2rem;
     }
     .tituloOng{
         color: #6E5DB3;
     }
-    #botaoOng{
-        width: 200px;
-        margin-left: 625px;
+    .btnOng{
+        background-color: #6E5DB3;
+        color: #ffffff;
+        border: none;    
+        border-radius: 5px;
+        cursor: pointer;
+        float: right;
     }
+
+    .btnOng:hover{
+        background-color: #4a3f78;
+    }
+    
 
     /*CSS Cadstro de Anúncio*/
     #formAnuncio{
@@ -1059,11 +1078,13 @@
         align-items: flex-start;
         width: 50%;
     }
-}
+
 
 /* Iniciando CSS extra small devices (576px ou menos) */    
 @media(max-width: 576px) {
-
+      .tituloGuardiao{
+       font-size: 1.3rem;
+   }
 }
 
 /* Iniciando CSS small devices (577px ou mais) */    
@@ -1080,3 +1101,4 @@
 @media(min-width: 992px) {
 
 }
+
