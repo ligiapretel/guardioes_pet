@@ -19,13 +19,14 @@
 
 <body>
     <!-- include do header -->
-    <?php include_once("includes/header.php")?>
+    <!--<?php include_once("includes/header.php")?>-->
 
     <!-- início do formulário -->
-    <main class="row">
+    <main class= "container-fluid">
+    <section class="row">
         <!-- include do menu lateral -->
         <!-- <?php include_once("includes/menu-ong.php")?>  -->
-        <form action="" class="card col-lg-8 col-md-6 col-sm-6 col-xs-6 p-5" id="formGuardiao" style="width: 50rem">
+        <form action="" class="card col-lg-8 col-md-12 col-sm-12 col-12 p-5" id="formGuardiao" style="width: 50rem">
             <!-- essa div é para o título -->
             <div class="form-group d-flex justify-content p-2">
                 <h3 class="tituloGuardiao">Cadastro de Guardião</h3>
@@ -148,11 +149,14 @@
                 <textarea class="form-control" id="textoGuardiao" cols="30" rows="10"
                     placeholder="Descreva por que você quer ser um(a) Guardião(ã)"></textarea>
             </div>
-            <button type="submit" class="btn btn-secondary" id="botaoGuardiao">Salvar cadastro</button>
+            <div>
+            <button type="submit" class="btn btnGuardiao">Salvar cadastro</button>
+            </div>
         </form>
+    </section>
     </main>
     <!-- incluindo o footer -->
-    <?php include_once("includes/footer.php")?>
+    <!--<?php include_once("includes/footer.php")?>-->
     <!-- Script JS Bootstrap | Manter código próximo ao fechamento do body -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">

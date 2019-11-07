@@ -1,37 +1,47 @@
-    <header class="fixed-top">
-      <div class="row align-items-baseline m-0">
-        <div class="col-3 pl-4">
-          <a class="fonteHeader" href="index.php">
-            <img class="logo" src="img/escudo.png" alt="Guardiões Pet">Guardiões Pet
-          </a>
-        </div>
-        <div class="col-9">
-          <nav id="header-nav">
-            <ul class="nav">
-              <li>
-                <a class="nav-link linkHeader" href='index.php#seja-guardiao-home'>Ser um guardião</a>
-              </li>
-              <li>
-                <a class="nav-link linkHeader" href="sobre.php">Sobre nós</a>
-              </li>
-              <li>
-                <a class="nav-link linkHeader" href='index.php#como-funciona-home'>Como funciona</a>
-              </li>
-              <li>
-                <a class="nav-link linkHeader" href="parceiros.php">Parceiros</a>
-              </li>
-              <li>
-                <a class="nav-link linkHeader" href="anuncios.php">Doações</a>
-              </li>
-              <li>
-                <a class="nav-link linkHeader" href="index.php#footer">Contato</a>
-              </li>
-              <li>
-                <a class="nav-link linkHeader" href="login.php">Login</a>
-              </li>
-              <a href="cadastre_se.php"><button type="button" class="btnHeader">Cadastre-se</button></a>
-            </ul>
-        </div>
+<header class="fixed-top">
+
+    <div class="container col-lg-12 col-md-11 col-sm-12 pt-2 pb-2">
+
+    <nav class="navbar navbar-expand-lg navbar-light header-menu">
+
+    <a class="fonteHeader" href="index.php">
+            <img src="img/escudo.png" alt="Guardiões Pet" width="35" class="d-inline-block align-center"> Guardiões Pet
+        </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+
+            <ul class="navbar-nav ml-md-auto mt-2 mt-lg-0">
+
+                    <li class="nav-item">
+                        <a class="nav-link header-link" href='index.php#seja-guardiao-home'>Ser um guardião</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link header-link" href="sobre.php">Sobre nós</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link header-link" href='index.php#como-funciona-home'>Como funciona</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link header-link" href="parceiros.php">Parceiros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link header-link" href="anuncios.php">Doações</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link header-link" href="index.php#footer">Contato</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link header-link" href="login.php">Login</a>
+                        <li class="nav-item">
+                    <a href="cadastre_se.php"><button type="button" class="btn-roxo">Cadastre-se</button></a>
+                </ul>
+
+            </div>
+
         </nav>
-      </div>
-    </header>
+        </div>
+</header>
