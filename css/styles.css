@@ -3,6 +3,22 @@
     margin: 0;
 }
 
+    /* classes comuns a todas as páginas */
+
+    .btn-roxo {
+        background-color: #6E5DB3;
+        color: #ffffff;
+        text-transform: uppercase;
+        padding: 8px 30px;
+        border: none;
+        border-radius: 5px;
+    }
+
+    .btn-roxo:hover {
+        background-color:#4a3f78;
+    }
+
+
     #main-home{
         display: flex;
         flex-direction: column;
@@ -218,11 +234,15 @@
         padding:10px;
         color:#ff9640;
     }
+
     /*HEADER*/
     header{
         background-color: #010310cc;
     }
 
+    .header-menu {
+    }    
+    
     .fonteHeader{
         color: #ff9640;
         font-family: "Rockwell";
@@ -230,32 +250,17 @@
         font-weight: bold;
     }
 
-    .fonteHeader:hover{
+    .fonteHeader:hover {
         color: #ff9640;
         text-decoration: none;
     }
 
-
-    .btnHeader{
-        background-color: #6E5DB3;
-        color: #ffffff;
-        padding: 8px 15px;
-        border: none;    
-        border-radius: 5px;
-        cursor: pointer;
+    .header-link {
+        color: #ffffff!important;
     }
 
-    .btnHeader:hover{
-        background-color: #4a3f78;
-    }
-
-    .linkHeader{
-        color: #ffffff;
-    }
-
-    .linkHeader:hover{
-        color: #ffffff;
-        text-decoration: underline !important;
+    .header-link:hover{
+        color:#6e5db3!important;
     }
 
     /*FOOTER*/
@@ -1044,13 +1049,27 @@
         align-items: flex-start;
         width: 50%;
     }
-}
 
-/* Iniciando CSS extra large devices (1200px ou mais) */    
-@media(min-width: 1200px) {
 
 /* Iniciando CSS extra small devices (576px ou menos) */    
-@media(max-width: 576px) {
+@media only screen and (max-width: 576px) {
+
+/* Estilos do header */
+
+    .header-menu {
+        padding: .3rem .2rem;
+    }
+
+    .fonteHeader {
+        font-size: 1.2rem;
+    }
+
+    .btn-roxo {
+        background-color:transparent;
+        text-transform: none;
+        padding: 8px 0px;
+        border: none;
+    }
 
 }
 
@@ -1067,4 +1086,6 @@
 /* Iniciando CSS large devices (992px ou mais) */    
 @media(min-width: 992px) {
 
-}
+
+/* Iniciando CSS extra large devices (1200px ou mais) */    
+@media(min-width: 1200px) {
