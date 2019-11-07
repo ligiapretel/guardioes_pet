@@ -9,7 +9,6 @@
 .btn-roxo {
     background-color: #6E5DB3;
     color: #ffffff;
-    text-transform: uppercase;
     padding: 8px 30px;
     border: none;
     border-radius: 5px;
@@ -859,11 +858,14 @@ header{
         font-size: 1.2rem;
     }
 
-    .btn-roxo {
-        background-color:transparent;
-        text-transform: none;
-        padding: 8px 0px;
-        border: none;
+    .header-link {
+        font-size: 1.2rem;
+        line-height: 2.5rem;
+    }
+
+    .lista-menu {
+        padding-left: 35px;        
+        padding-bottom: 35px;        
     }
 
     /* PERFIL DA ONG E DO GUARDIÃO */
@@ -909,6 +911,26 @@ header{
 /* Iniciando CSS medium devices (até 768px) */    
 @media(max-width: 768px) {
 
+/* Estilos do header */
+
+    .header-menu {
+        padding: .3rem .2rem;
+    }
+
+    .fonteHeader {
+        font-size: 1.2rem;
+    }
+
+    .header-link {
+        font-size: 1.2rem;
+        line-height: 2.5rem;
+    }
+
+    .lista-menu {
+        padding-left: 35px;        
+        padding-bottom: 35px;        
+    }
+    
     /* PERFIL DA ONG E DO GUARDIÃO */
     #pfong_cx_info_principal{ /* ongs */
         padding:15% 5% 5% 5%;
@@ -981,6 +1003,26 @@ header{
 /* Iniciando CSS large devices (até 992px) */    
 @media(max-width: 992px) {
 
+/* Estilos do header */
+
+    .header-menu {
+        padding: .3rem .2rem;
+    }
+
+    .fonteHeader {
+        font-size: 1.2rem;
+    }
+
+    .header-link {
+        font-size: 1.2rem;
+        line-height: 2.5rem;
+    }
+
+    .lista-menu {
+        padding-left: 35px;        
+        padding-bottom: 35px;        
+    }    
+
     /* PERFIL DA ONG E DO GUARDIÃO */
     #pfong_cx_info_principal{ /* ongs */
         padding:15% 5% 5% 5%;
@@ -1024,6 +1066,26 @@ header{
 
 /* Iniciando CSS extra large devices (até 1200px) */    
 @media(max-width: 1200px) {
+
+    /* Estilos do header */
+
+    .header-menu {
+        padding: .3rem .2rem;
+    }
+
+    .fonteHeader {
+        font-size: 1.2rem;
+    }
+
+    .header-link {
+        font-size: 1.2rem;
+        line-height: 2.5rem;
+    }
+
+    .lista-menu {
+        padding-left: 35px;        
+        padding-bottom: 35px;        
+    }    
 
      /* PERFIL DA ONG E DO GUARDIÃO */
      #pfong_cx_info_principal{ /* ongs */
