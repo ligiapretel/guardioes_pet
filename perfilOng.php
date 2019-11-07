@@ -20,7 +20,7 @@
 </head>
 
 <body>
-    <?php include_once("includes/header.php"); ?>
+    <?php //include_once("includes/header.php"); ?>
 
     <!--Onde esta localizado as informacoes da ONG e img-->
     <section class="container-fluid" id="pfong_cx_info_principal"> <!-- id para background e padding -->
@@ -31,14 +31,16 @@
                     abrigar poucos, socorrer vários e castrar MUITOS, pois a castração é a única solução ao problema
                     estrutural da procriação de animais abandonados.</p>
                 <p class="text-dark text-justify">Nossa ONG é formada por profissionais liberais, gente comum que trabalha, estuda, enfim, vive!</p>
-                <div id="pfong_cx_i_txt" class="d-flex align-items-center justify-content-center">
-                    <a href=""><i class="mdi mdi-email-outline"></i></a>
-                    <h6 class="ml-2 mb-0 text-body font-weight-bold">Quer conversar com a gente?<br> Envie uma mensagem!</h6>
+                <div id="pfG_cx_i_txt" class="d-flex align-items-center">
+                    <i class="mdi mdi-email-outline"></i>
+                    <p> Envie uma mensagem!</p>
+                    <i class="mdi mdi-alert-outline"></i>
+                    <p> Denunciar Perfil</p>
                 </div>
             </div>
 
             <div class="col-lg-6 col-md-6 col-sm-12 col-12 d-flex justify-content-center">
-                <img src="img/perfil_ong_imagem.png" width="300" height="300">
+                <img id="perfilOng_imagem" src="img/perfil_ong_imagem.png" width=300 height=300>
             </div>
         </div>
     </section>
@@ -48,7 +50,7 @@
         <div class="row">
             <h2 class="col-lg-12 text-dark font-weight-bold">Animais com a ONG (98)</h2>
 
-            <div class="col-lg-4">
+            <div class="col-lg-4 col-md-4 col-sm-6 col-12">
                 <div class="card">
                     <img src="img/pfGuardiao_img1.jpg" class="card-img-top" height="300" width="300"> <!-- arummar o tamanho dessa imagem -->
                     <div class="card-body">
@@ -59,7 +61,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-4">
+            <div class="col-lg-4 col-md-4 col-sm-6 col-12">
                 <div class="card">
                     <img src="img/pfGuardiao_img_2.jpg" class="card-img-top" height="300" width="300">
                     <div class="card-body">
@@ -70,7 +72,7 @@
                 </div>
             </div>
 
-            <div class="col-lg-4">
+            <div class="col-lg-4 col-md-4 col-sm-6 col-12">
                 <div class="card">
                     <img src="img/pfGuardiao_img_3.jpeg" class="card-img-top" height="300" width="300">
                     <div class="card-body">
@@ -88,7 +90,7 @@
     <section class="container-fluid bg-light" id="pfong_precisa_cx_principal"> <!-- id para padding -->
         <div class="row">
             <h2 class="text-dark font-weight-bold">Estamos Precisando!</h2>
-            <div class="col-lg-12 d-flex justify-content-around flex-wrap">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-12 d-flex justify-content-around flex-wrap">
                 <div class="pfong_precisando">Item 1</div>
                 <div class="pfong_precisando">Item 2</div>
                 <div class="pfong_precisando">Item 3</div>

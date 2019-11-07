@@ -794,21 +794,35 @@
 
 }
 
-/* Iniciando CSS small devices (577px ou mais) */    
-@media(min-width: 577px) {
+/* Iniciando CSS extra small devices (até 576px) */    
+@media(max-width: 576px) {
+
+    /* PERFIL DA ONG E DO GUARDIÃO */
+    #pfong_cx_info_principal{ /* ongs */
+        padding:25% 5% 5% 5%;
+        width: 100vw;
+        
+    }
+
+    #pfG_cx_info_principal{ /* guardiões */
+        padding: 25% 5% 5% 5%;
+        width: 100vw;
+        height: 
+    }
+
+    
+}
+
+/* Iniciando CSS medium devices (até 768px) */    
+@media(max-width: 768px) {
 
 }
 
-/* Iniciando CSS medium devices (768px ou mais) */    
-@media(min-width: 768px) {
-
-}
-
-/* Iniciando CSS large devices (992px ou mais) */    
-@media(min-width: 992px) {
+/* Iniciando CSS large devices (até 992px) */    
+@media(max-width: 992px) {
 }
 
 
-/* Iniciando CSS extra large devices (1200px ou mais) */    
-@media(min-width: 1200px) {
+/* Iniciando CSS extra large devices (até 1200px) */    
+@media(max-width: 1200px) {
 }
