@@ -24,8 +24,9 @@
     <!-- início do formulário -->
     <main class="row">
         <!-- include do menu lateral -->
-        <?php include_once("includes/menu-ong.php")?> <form action=""
-            class="card col-lg-8 col-md-6 col-sm-6 col-xs-6 p-5" id="formAnimal" style="width: 50rem">
+        <?php include_once("includes/menu-ong.php")?>
+        <form action=""
+            class="card col-lg-8 col-md-12 col-sm-12 col-12 p-5" id="formAnimal" style="width: 50rem">
             <!-- essa div é para o título -->
             <div class="form-group d-flex justify-content p-2">
                 <h3 class="tituloAnimal">Cadastro de novo animal</h3>
@@ -255,13 +256,13 @@
                         placeholder="Fale mais sobre o animal: qual a sua história, suas características físicas e comportamentais, o tipo de lar que mais se adequaria, do que ele(a) gosta, etc."></textarea>
                 </div>
                 <div class="botaoLimparECadastro">
-                    <button type="reset" id="botaoAnimal">Limpar dados</button>
-                    <button type="submit" id="botaoAnimal">Cadastrar</button>
+                    <button type="reset" class="botaoAnimal">Limpar dados</button>
+                    <button type="submit" class="botaoAnimal">Cadastrar</button>
                 </div>
         </form>
     </main>
     <!-- incluindo o footer -->
-    <?php include_once("includes/footer.php")?>
+    <!--<?php include_once("includes/footer.php")?>-->
     <!-- Script JS Bootstrap | Manter código próximo ao fechamento do body -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">

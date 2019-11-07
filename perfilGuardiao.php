@@ -23,98 +23,129 @@
 
     <?php include_once("includes/header.php")?>
 
-    <div>
-        <!--Onde esta localizado as informacoes do Guardiao e img-->
-        <section id="pfG_cx_info_principal" class="container-fluid">
-            <div class="row" id="pfG_cx_info">
-
-                <div class="col-lg-5 col-md-6" id="pfG_cx_img">
-                    <div id="pfG_img"></div>
-
-                </div>
-
-                <div id="pfG_linha1" class="col-lg-1"></div>
-                <div id="pfG_linha2" class="col-lg-1"></div>
-
-                <div class="col-lg-5 col-md-6 " id="pfG_info">
-                    <h1 id="pfG_info_titulo">Claudia Leite</h1>
-                    <p>Nossa ONG nasceu com intenções claras de resgate, castração e doação de animais. Nos empenhamos
-                        em
-                        abrigar poucos, socorrer vários e castrar MUITOS, pois a castração é a única solução ao problema
-                        estrutural da procriação de animais abandonados.</p>
-                    <p>Nossa ONG é formada por profissionais liberais, gente comum que trabalha, estuda, enfim, vive!
-                    </p>
-                    <div id="pfG_cx_i_txt" class="d-flex align-items-center">
-                        <i class="mdi mdi-email-outline"></i>
-                        <p> Envie uma mensagem!</p>
-                        <i class="mdi mdi-alert-outline"></i>
-                        <p> Denunciar Perfil</p>
-
-                    </div>
-
-                </div>
-
+    <!--Onde esta localizado as informacoes do Guardiao e img-->
+    <section  class="container-fluid" id="pfG_cx_info_principal"> <!-- id de background e padding -->
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-12 d-flex justify-content-center">
+                <img id="perfilGua_imagem" class="rounded-circle" src="img/img_perfil_guardiao.jpeg" width="300" height="300">
             </div>
-        </section>
 
-        <!--Onde esta localizado os Animais Apadrinhados-->
-        <section id="pfG_cx_animais" class="container-fluid">
-            <div id="pfG_cx_animais_secundaria" class="row">
-                <h1>APADRINHADOS</h1>
-                <div id="pfG_animais">
-                    <div class="col-lg-4 pfG_cards" id="pfG_animais_card1">
-                        <div id="pfG_animais_img1" class="pfG_animais_imgs"></div>
-                        <h1>ELZA</h1>
-
-                        <p>Tenho uma pelagem de tres cores que é puro charme e pra completar uma carinha inocente que é
-                            i-rre-sis-tível!Adoro tomar um solzinho na janela e tirar cochilos na ...</p>
-                    </div>
-                    <div class="col-lg-4 pfG_cards" id="pfG_animais_card2">
-                        <div id="pfG_animais_img2" class="pfG_animais_imgs"></div>
-                        <h1>CHICO</h1>
-                        <p>Tenho uma pelagem de tres cores que é puro charme e pra completar uma carinha inocente que é
-                            i-rre-sis-tível!Adoro tomar um solzinho na janela e tirar cochilos na ...</p>
-                    </div>
-                    <div class="col-lg-4 testando pfG_cards" id="pfG_animais_card3">
-                        <div id="pfG_animais_img3" class="pfG_animais_imgs"></div>
-                        <h1>BELCHIOR</h1>
-                        <p>Tenho uma pelagem de tres cores que é puro charme e pra completar uma carinha inocente que é
-                            i-rre-sis-tível!Adoro tomar um solzinho na janela e tirar cochilos na ...</p>
-                    </div>
-
-
-
+            <div class="col-lg-6 col-md-6 col-sm-12 col-12"> 
+                <h1 class="pfOngGuard_titulo text-dark font-weight-bolder">Claudia Leite</h1>
+                <p class="text-dark text-justify">Nossa ONG nasceu com intenções claras de resgate, castração e doação de animais. Nos empenhamos em
+                    abrigar poucos, socorrer vários e castrar MUITOS, pois a castração é a única solução ao problema
+                    estrutural da procriação de animais abandonados.</p>
+                <p class="text-dark text-justify">Nossa ONG é formada por profissionais liberais, gente comum que trabalha, estuda, enfim, vive!</p>
+                <div id="pfG_cx_i_txt" class="d-flex align-items-center">
+                    <i class="mdi mdi-email-outline"></i>
+                    <p> Envie uma mensagem!</p>
+                    <i class="mdi mdi-alert-outline"></i>
+                    <p> Denunciar Perfil</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="pfG_cx_adotados_lar_temp" class="container-fluid">
-            <div class="row" id="pfG_adotados_cx_secudaria">
-                <div class=" col-lg-6" id="pfG_cx_adotados">
-                    <div id="pfG_adotados">
-                        <h1>ADOTADOS</h1>
-                        <div id="pfG_animais_img4" class="pfG_animais_imgs"></div>
-                        <h1>BELCHIOR</h1>
-                        <p>Tenho uma pelagem de tres cores que é puro charme e pra completar uma carinha inocente que é
-                            i-rre-sis-tível!Adoro tomar um solzinho na janela e tirar cochilos na ...</p>
-                    </div>
-                </div>
-                <div class=" col-lg-6 " id="pfG_cx_temp">
-                    <div id="pfG_temp">
-                        <h1>LAR TEMPORARIO</h1>
-                        <div id="pfG_animais_img5" class="pfG_animais_imgs"></div>
-                        <h1>ERASMO</h1>
-                        <p>Tenho uma pelagem de tres cores que é puro charme e pra completar uma carinha inocente que é
-                            i-rre-sis-tível!Adoro tomar um solzinho na janela e tirar cochilos na ...</p>
+    <!--Onde esta localizado os Animais Apadrinhados-->
+    <section class="container-fluid" id="perfilOngGuar_animais"> <!-- id sobre padding -->
+        <div class="row">
+            <h2 class="col-lg-12 text-dark font-weight-bold pfOngGuard_titulo">Apadrinhados</h2>
+
+            <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+                <div class="card">
+                    <img src="img/pfGuardiao_img1.jpg" class="card-img-top" height="300" width="300">
+                    <div class="card-body">
+                    <h4 class="card-title text-dark font-weight-bold">ELZA</h4>
+                        <p class="card-text text-secondary">Tenho uma pelagem de tres cores que é puro charme e pra completar uma carinha inocente que é i-rre-sis-tível!Adoro tomar um solzinho na janela e tirar cochilos na ...</p>
+                        <a href="#" class="btn btn-primary">Saiba mais</a> <!-- ainda preciso arrumar o botão -->
                     </div>
                 </div>
             </div>
 
-        </section>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+                <div class="card">
+                    <img src="img/pfGuardiao_img_2.jpg" class="card-img-top" height="300" width="300">
+                    <div class="card-body">
+                    <h4 class="card-title text-dark font-weight-bold">CHICO</h4>
+                        <p class="card-text text-secondary">Tenho uma pelagem de tres cores que é puro charme e pra completar uma carinha inocente que é i-rre-sis-tível!Adoro tomar um solzinho na janela e tirar cochilos na ...</p>
+                        <a href="#" class="btn btn-primary">Saiba mais</a>
+                    </div>
+                </div>
+            </div>
 
+            <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+                <div class="card">
+                    <img src="img/pfGuardiao_img_3.jpeg" class="card-img-top" height="300" width="300">
+                    <div class="card-body">
+                        <h4 class="card-title text-dark font-weight-bold">BELQUIOR</h4>
+                        <p class="card-text text-secondary">Tenho uma pelagem de tres cores que é puro charme e pra completar uma carinha inocente que é i-rre-sis-tível!Adoro tomar um solzinho na janela e tirar cochilos na ...</p>
+                        <a href="#" class="btn btn-primary">Saiba mais</a>
+                    </div>
+                </div>
+            </div>
 
+        </div>
+    </section>
 
-    </div>
+    <!--Onde estão os animais adotados -->
+    <section class="container-fluid bg-light" id="perfilOngGuar_animais"> <!-- id sobre padding -->
+        <div class="row">
+            <h2 class="col-lg-12 text-dark font-weight-bold pfOngGuard_titulo">Adotados</h2>
+
+            <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+                <div class="card">
+                    <img src="img/pfGuardiao_img1.jpg" class="card-img-top" height="300" width="300">
+                    <div class="card-body">
+                    <h4 class="card-title text-dark font-weight-bold">ELZA</h4>
+                        <p class="card-text text-secondary">Tenho uma pelagem de tres cores que é puro charme e pra completar uma carinha inocente que é i-rre-sis-tível!Adoro tomar um solzinho na janela e tirar cochilos na ...</p>
+                        <a href="#" class="btn btn-primary">Saiba mais</a> <!-- ainda preciso arrumar o botão -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+                <div class="card">
+                    <img src="img/pfGuardiao_img_2.jpg" class="card-img-top" height="300" width="300">
+                    <div class="card-body">
+                    <h4 class="card-title text-dark font-weight-bold">CHICO</h4>
+                        <p class="card-text text-secondary">Tenho uma pelagem de tres cores que é puro charme e pra completar uma carinha inocente que é i-rre-sis-tível!Adoro tomar um solzinho na janela e tirar cochilos na ...</p>
+                        <a href="#" class="btn btn-primary">Saiba mais</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!--Onde estão os animais lar temporário -->
+    <section class="container-fluid" id="perfilOngGuar_animais"> <!-- id sobre padding -->
+        <div class="row">
+            <h2 class="col-lg-12 text-dark font-weight-bold pfOngGuard_titulo">Lar Temporário</h2>
+
+            <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+                <div class="card">
+                    <img src="img/pfGuardiao_img1.jpg" class="card-img-top" height="300" width="300">
+                    <div class="card-body">
+                    <h4 class="card-title text-dark font-weight-bold">ELZA</h4>
+                        <p class="card-text text-secondary">Tenho uma pelagem de tres cores que é puro charme e pra completar uma carinha inocente que é i-rre-sis-tível!Adoro tomar um solzinho na janela e tirar cochilos na ...</p>
+                        <a href="#" class="btn btn-primary">Saiba mais</a> <!-- ainda preciso arrumar o botão -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+                <div class="card">
+                    <img src="img/pfGuardiao_img_2.jpg" class="card-img-top" height="300" width="300">
+                    <div class="card-body">
+                    <h4 class="card-title text-dark font-weight-bold">CHICO</h4>
+                        <p class="card-text text-secondary">Tenho uma pelagem de tres cores que é puro charme e pra completar uma carinha inocente que é i-rre-sis-tível!Adoro tomar um solzinho na janela e tirar cochilos na ...</p>
+                        <a href="#" class="btn btn-primary">Saiba mais</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
 
     <?php include_once("includes/footer.php")?>
 

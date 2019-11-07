@@ -23,91 +23,96 @@
     <?php include_once("includes/header.php"); ?>
 
     <!--Onde esta localizado as informacoes da ONG e img-->
-    <section id="pfong_cx_info_principal" class="container-fluid">
-        <div class="row" id="pfong_cx_info">
-            <div class="col-lg-6 col-md-6 " id="pfong_info">
-                <h1 id="pfong_info_titulo">Cia dos Miados e Latidos</h1>
-                <p>Nossa ONG nasceu com intenções claras de resgate, castração e doação de animais. Nos empenhamos em
+    <section class="container-fluid" id="pfong_cx_info_principal"> <!-- id para background e padding -->
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                <h1 class="pfOngGuard_titulo text-dark font-weight-bolder">Cia dos Miados e Latidos</h1>
+                <p class="text-dark text-justify">Nossa ONG nasceu com intenções claras de resgate, castração e doação de animais. Nos empenhamos em
                     abrigar poucos, socorrer vários e castrar MUITOS, pois a castração é a única solução ao problema
                     estrutural da procriação de animais abandonados.</p>
-                <p>Nossa ONG é formada por profissionais liberais, gente comum que trabalha, estuda, enfim, vive!</p>
-                <div id="pfong_cx_i_txt" class="d-flex align-items-center justify-content-center">
-                    <a href=""><i class="mdi mdi-email-outline"></i></a>
-                    <p>Quer conversar com a gente?<br> Envie uma mensagem!</p>
-
+                <p class="text-dark text-justify">Nossa ONG é formada por profissionais liberais, gente comum que trabalha, estuda, enfim, vive!</p>
+                <div id="pfG_cx_i_txt" class="d-flex align-items-center">
+                    <i class="mdi mdi-email-outline"></i>
+                    <p> Envie uma mensagem!</p>
+                    <i class="mdi mdi-alert-outline"></i>
+                    <p> Denunciar Perfil</p>
                 </div>
-
             </div>
-            <div class="col-1" id="pfong_linha1"></div>
-            <div class="col-1" id="pfong_linha2"></div>
-            <div class="col-lg-4 col-md-6 d-flex justify-content-center align-items-center" id="pfong_cx_img">
-                <div id="pfong_img"></div>
+
+            <div class="col-lg-6 col-md-6 col-sm-12 col-12 d-flex justify-content-center">
+                <img id="perfilOng_imagem" src="img/perfil_ong_imagem.png" width=300 height=300>
             </div>
         </div>
     </section>
     
-
     <!--Onde esta localizado os Animais com a ONG-->
-    <section id="pfong_cx_principal_animais" class="container-fluid">
-        <div class="row" id="pfong_cx_animais">
-            <h1 id="pfong_animais_titulo">Animais com a ONG (98)</h1>
-            <div id="pfong_animais" class="d-flex">
-                <div class="col-lg-4 pfong_cards" id="pfong_coluna_cardsUm">
-                    <div>
-                        <div id="pfong_animais_img1" class="pfong_animais_imgs"></div>
-                        <h1>ELZA</h1>
+    <section class="container-fluid" id="perfilOngGuar_animais"> <!-- id sobre padding -->
+        <div class="row">
+            <h2 class="col-lg-12 text-dark font-weight-bold pfOngGuard_titulo">Animais com a ONG (98)</h2>
 
-                        <p>Tenho uma pelagem de tres cores que é puro charme e pra completar uma carinha inocente que é
-                            i-rre-sis-tível!Adoro tomar um solzinho na janela e tirar cochilos na ...</p>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+                <div class="card">
+                    <img src="img/pfGuardiao_img1.jpg" class="card-img-top" height="300" width="300"> <!-- arummar o tamanho dessa imagem -->
+                    <div class="card-body">
+                    <h4 class="card-title text-dark font-weight-bold">ELZA</h4>
+                        <p class="card-text text-secondary">Tenho uma pelagem de tres cores que é puro charme e pra completar uma carinha inocente que é i-rre-sis-tível!Adoro tomar um solzinho na janela e tirar cochilos na ...</p>
+                        <a href="#" class="btn btn-primary">Saiba mais</a> <!-- ainda preciso arrumar o botão -->
                     </div>
                 </div>
-                <div class="col-lg-4 testando pfong_cards" id="pfong_coluna_cardsDois">
-                    <div id="pfong_animais_img2" class="pfong_animais_imgs"></div>
-                    <h1>CHICO</h1>
-                    <p>Tenho uma pelagem de tres cores que é puro charme e pra completar uma carinha inocente que é
-                        i-rre-sis-tível!Adoro tomar um solzinho na janela e tirar cochilos na ...</p>
-                </div>
-                <div class="col-lg-4 testando pfong_cards" id="pfong_coluna_cardsTres">
-                    <div id="pfong_animais_img3" class="pfong_animais_imgs"></div>
-                    <h1>BELCHIOR</h1>
-                    <p>Tenho uma pelagem de tres cores que é puro charme e pra completar uma carinha inocente que é
-                        i-rre-sis-tível!Adoro tomar um solzinho na janela e tirar cochilos na ...</p>
-                </div>
+            </div>
 
+            <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+                <div class="card">
+                    <img src="img/pfGuardiao_img_2.jpg" class="card-img-top" height="300" width="300">
+                    <div class="card-body">
+                    <h4 class="card-title text-dark font-weight-bold">CHICO</h4>
+                        <p class="card-text text-secondary">Tenho uma pelagem de tres cores que é puro charme e pra completar uma carinha inocente que é i-rre-sis-tível!Adoro tomar um solzinho na janela e tirar cochilos na ...</p>
+                        <a href="#" class="btn btn-primary">Saiba mais</a>
+                    </div>
+                </div>
             </div>
-            <div id="cx-btn" class="d-flex justify-content-end align-items-center">
-                <button>Ver Mais</button>
+
+            <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+                <div class="card">
+                    <img src="img/pfGuardiao_img_3.jpeg" class="card-img-top" height="300" width="300">
+                    <div class="card-body">
+                        <h4 class="card-title text-dark font-weight-bold">BELQUIOR</h4>
+                        <p class="card-text text-secondary">Tenho uma pelagem de tres cores que é puro charme e pra completar uma carinha inocente que é i-rre-sis-tível!Adoro tomar um solzinho na janela e tirar cochilos na ...</p>
+                        <a href="#" class="btn btn-primary">Saiba mais</a>
+                    </div>
+                </div>
             </div>
+
         </div>
     </section>
 
     <!--Onde a ONG coloco os itens que estao necessitando-->
-    <section class="container-fluid" id="pfong_precisa_cx_principal">
-        <div class="row" id="pfong_precisa_cx_secundaria">
-            <h1>Estamos Precisando!</h1>
-            <div id="pfong_cx_precisa">
-                <div class="pfong_precisando">Antipulgas Bravecto</div>
-                <div class="pfong_precisando">Antipulgas Bravecto</div>
-                <div class="pfong_precisando">Antipulgas Bravecto</div>
-                <div class="pfong_precisando">Antipulgas Bravecto</div>
-                <div class="pfong_precisando">Antipulgas Bravecto</div>
-                <div class="pfong_precisando">Antipulgas Bravecto</div>
-                <div class="pfong_precisando">Antipulgas Bravecto</div>
-                <div class="pfong_precisando">Antipulgas Bravecto</div>
-                <div class="pfong_precisando">Antipulgas Bravecto</div>
+    <section class="container-fluid bg-light" id="pfong_precisa_cx_principal"> <!-- id para padding -->
+        <div class="row">
+            <h2 class="text-dark font-weight-bold pfOngGuard_titulo">Estamos Precisando!</h2>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-12 d-flex justify-content-around flex-wrap">
+                <div class="pfong_precisando">Item 1</div>
+                <div class="pfong_precisando">Item 2</div>
+                <div class="pfong_precisando">Item 3</div>
+                <div class="pfong_precisando">Item 4</div>
+                <div class="pfong_precisando">Item 5</div> 
+                <div class="pfong_precisando">Item 6</div> 
+                <div class="pfong_precisando">Item 7</div> 
             </div>
-
         </div>
 
     </section>
+
     <!-- Abrindo seção para include da busca recolhida -->
     <div class="alinhamento-busca-recolhida mt-5">
         <section id="container-busca-recolhida" class="col-10">
             <?php include_once('includes/buscaRecolhida.php')?>
         </section>
     </div>
+
     <!-- Incluindo footer -->
     <?php include_once("includes/footer.php")?>
+
     <!-- Script JS Bootstrap | Manter código próximo ao fechamento do body -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
