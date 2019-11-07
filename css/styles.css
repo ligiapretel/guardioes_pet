@@ -1067,26 +1067,6 @@ header{
 /* Iniciando CSS extra large devices (até 1200px) */    
 @media(max-width: 1200px) {
 
-    /* Estilos do header */
-
-    .header-menu {
-        padding: .3rem .2rem;
-    }
-
-    .fonteHeader {
-        font-size: 1.2rem;
-    }
-
-    .header-link {
-        font-size: 1.2rem;
-        line-height: 2.5rem;
-    }
-
-    .lista-menu {
-        padding-left: 35px;        
-        padding-bottom: 35px;        
-    }    
-
      /* PERFIL DA ONG E DO GUARDIÃO */
      #pfong_cx_info_principal{ /* ongs */
         padding:15% 5% 5% 5%;
