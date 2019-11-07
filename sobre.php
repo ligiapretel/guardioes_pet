@@ -14,91 +14,84 @@
     <link href="img/escudo.png" sizes="32x32" rel="shortcut icon" />
     <link href="css/styles.css" rel="stylesheet" />
     <link href='https://fonts.googleapis.com/css?family=Rockwell' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Satisfy&display=swap" rel="stylesheet">
     <title>Guardiões Pet</title>
 </head>
 
 <body>
     <?php include_once("includes/header.php")?>
-    <main>
-        <div class="jumbotron sobre">
-            <h1 class="display-4 mt-5">Quem Somos</h1>
-            <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt amet nihil rerum obcaecati
-                autem doloremque voluptatum iusto enim consequatur odio esse provident maxime, non natus. Possimus
-                explicabo omnis distinctio? Cum.Fugit cumque officia, recusandae placeat aliquam pariatur magni natus
-                sunt delectus eaque voluptatibus odit numquam corporis quis molestias. Tempore numquam quia illo quidem
-                culpa accusamus molestiae recusandae explicabo eveniet nihil.</p>
-            <hr class="my-4 bg-white">
-            <h1 class="display-4">O que fazemos?</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A beatae laudantium officiis nulla corrupti
-                error laborum asperiores sunt nihil placeat cupiditate voluptatum explicabo voluptatem aspernatur, odit
-                amet alias laboriosam unde.Assumenda, incidunt quos! Iusto sapiente voluptatem quaerat. Aspernatur
-                numquam sed culpa doloribus odio, officiis sapiente ratione quaerat illo, laborum ad eaque error et in
-                dolore nisi natus corporis ut consectetur.</p>
-        </div>
-        <section class="container m-5">
+    <main id="main-sobre">
+        <section id="banner-sobre" class="col-12">
+            <h1 class="col-9 col-sm-6 col-md-5 col-xl-5">"A grandeza de uma nação e seu progresso moral podem ser julgados pela forma como seus animais são tratados"</h1>
+            <p class="col-9 col-sm-6 col-md-5 col-xl-5">Mahatma Gandhi</p>
+        </section>
+        <section id="sobre-nos" class="col-10 col-xl-8">
             <h2>Sobre Nós</h2>
-            <br>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa officiis fugit
-                accusamus architecto dignissimos, iusto quibusdam dolorem expedita non dolor
-                eligendi nobis temporibus voluptas labore eos quos quasi! Et, consectetur.
-            </p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa officiis fugit
-                accusamus architecto dignissimos, iusto quibusdam dolorem expedita non dolor
-                eligendi nobis temporibus voluptas labore eos quos quasi! Et, consectetur.
+            <p>Apaixonadas por animais, mas cansadas de ver tantos bichinhos abandonados por aí, a Guardiões Pet surgiu para facilitar a conexão entre ONGs e voluntários que queiram adotar, oferecer um lar temporário, apadrinhar ou doar itens para cães e gatos. O objetivo da plataforma é ser uma ferramenta de divulgação de animais para ONGs, que em grande parte não possuem estrutura para divulgar seus pets, ampliando assim as chances dos bichinhos encontrarem uma família. 
             </p>
         </section>
-        <section class="shadow p-3 mb-5 p-3 bg-white rounded">
-            <div class="row ml-3">
-                <div
-                    class="col-lg-4 col-md-4 col-sm-4 col-xs-4 d-flex flex-column justify-content-center align-items-center">
-                    <img class="foto-perfil" src="img/perfil-sobre/aline.jpg" alt="foto perfil">
-                    <h3 id="subtitulo-sobre">Aline Naoe</h3>
-                    <p class="text-justify">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo impedit,
+        <section id="equipe-sobre">
+            <div class="row justify-content-around">
+                <div class="col-12 col-sm-5 col-xl-4 d-flex flex-column align-items-center">
+                    <img class="foto-perfil img-fluid" src="img/perfil-sobre/aline.jpg" alt="foto perfil">
+                    <h3>Aline Naoe</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo impedit,
                         nulla modi non iure necessitatibus aspernatur, tenetur ipsum odit sed nesciunt! Molestiae ab
                         cupiditate voluptate facere iste obcaecati iusto dolores.</p>
                 </div>
-                <div
-                    class="col-lg-4 col-md-4 col-sm-4 col-xs-4  d-flex flex-column justify-content-center align-items-center">
-                    <img class="foto-perfil" src="img/perfil-sobre/claudia.jpg" alt="foto perfil">
-                    <h3 id="subtitulo-sobre">Cláudia Leite</h3>
-                    <p class="text-justify">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo impedit,
+                <!-- <hr class="col-10 d-xl-none d-sm-none"> -->
+                <div class="col-12 col-sm-5 col-xl-4 d-flex flex-column align-items-center">
+                    <img class="foto-perfil img-fluid" src="img/perfil-sobre/claudia.jpg" alt="foto perfil">
+                    <h3>Cláudia Leite</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo impedit,
                         nulla modi non iure necessitatibus aspernatur, tenetur ipsum odit sed nesciunt! Molestiae ab
                         cupiditate voluptate facere iste obcaecati iusto dolores.</p>
                 </div>
-                <div
-                    class="col-lg-4 col-md-4 col-sm-4 col-xs-4  d-flex flex-column justify-content-center align-items-center">
-                    <img class="foto-perfil" src="img/perfil-sobre/luana.png" alt="foto perfil">
-                    <h3 id="subtitulo-sobre">Luana Solimeno</h3>
-                    <p class="text-justify">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo impedit,
+                <!-- <hr class="col-10 d-xl-none"> -->
+                <div class="col-12 col-sm-5 col-xl-4 d-flex flex-column align-items-center">
+                    <img class="foto-perfil img-fluid" src="img/perfil-sobre/luana.png" alt="foto perfil">
+                    <h3>Luana Solimeno</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo impedit,
                         nulla modi non iure necessitatibus aspernatur, tenetur ipsum odit sed nesciunt! Molestiae ab
                         cupiditate voluptate facere iste obcaecati iusto dolores.</p>
                 </div>
-            </div>
-            <div class="clearfix">
-                <hr>
-            </div>
-            <div class="row ml-3">
-                <div
-                    class="col-lg-4 col-md-4 col-sm-4 col-xs-4  d-flex flex-column justify-content-center align-items-center">
-                    <img class="foto-perfil" src="img/perfil-sobre/chai.png" alt="foto perfil">
-                    <h3 id="subtitulo-sobre">Chaiana Hermes</h3>
-                    <p class="text-justify">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo impedit,
+            <!-- </div> -->
+            <!-- <div class="d-flex justify-content-center px-xl-4">
+                <hr class="col-11 col-xl-12 d-sm-none">
+            </div> -->
+            <!-- <div class="row justify-content-around"> -->
+                <div class="col-12 col-sm-5 col-xl-4 d-flex flex-column align-items-center">
+                    <img class="foto-perfil img-fluid" src="img/perfil-sobre/chai.png" alt="foto perfil">
+                    <h3>Chaiana Hermes</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo impedit,
                         nulla modi non iure necessitatibus aspernatur, tenetur ipsum odit sed nesciunt! Molestiae ab
                         cupiditate voluptate facere iste obcaecati iusto dolores.</p>
                 </div>
-                <div
-                    class="col-lg-4 col-md-4 col-sm-4 col-xs-4  d-flex flex-column justify-content-center align-items-center">
-                    <img class="foto-perfil" src="img/perfil-sobre/ligia.png" alt="foto perfil">
-                    <h3 id="subtitulo-sobre">Ligia Pretel</h3>
-                    <p class="text-justify">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo impedit,
+                <!-- <hr class="col-10 d-xl-none"> -->
+                <div class="col-12 col-sm-5 col-xl-4 d-flex flex-column align-items-center">
+                    <img class="foto-perfil img-fluid" src="img/perfil-sobre/ligia.png" alt="foto perfil">
+                    <h3>Ligia Pretel</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo impedit,
                         nulla modi non iure necessitatibus aspernatur, tenetur ipsum odit sed nesciunt! Molestiae ab
                         cupiditate voluptate facere iste obcaecati iusto dolores.</p>
                 </div>
-                <div
-                    class="col-lg-4 col-md-4 col-sm-4 col-xs-4  d-flex flex-column justify-content-center align-items-center">
-                    <img class="foto-perfil" src="img/perfil-sobre/anae.png" alt="foto perfil">
-                    <h3 id="subtitulo-sobre">Anaê Ross</h3>
-                    <p class="text-justify">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo impedit,
+                <!-- <hr class="col-10 d-xl-none d-sm-none"> -->
+                <div class="col-12 col-sm-5 col-xl-4 d-flex flex-column align-items-center">
+                    <img class="foto-perfil img-fluid" src="img/perfil-sobre/anae.png" alt="foto perfil">
+                    <h3>Anaê Ross</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo impedit,
+                        nulla modi non iure necessitatibus aspernatur, tenetur ipsum odit sed nesciunt! Molestiae ab
+                        cupiditate voluptate facere iste obcaecati iusto dolores.</p>
+                </div>
+            <!-- </div> -->
+            <!-- <div class="d-flex justify-content-center px-xl-4">
+                <hr class="col-11 col-xl-12">
+            </div> -->
+            <!-- <div class="row"> -->
+                <div class="col-12 col-sm-5 col-xl-4 d-flex flex-column align-items-center">
+                    <img class="foto-perfil img-fluid" src="img/perfil-sobre/giuliana.jpg" alt="foto perfil">
+                    <h3>Giuliana Gabrielli</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo impedit,
                         nulla modi non iure necessitatibus aspernatur, tenetur ipsum odit sed nesciunt! Molestiae ab
                         cupiditate voluptate facere iste obcaecati iusto dolores.</p>
                 </div>
