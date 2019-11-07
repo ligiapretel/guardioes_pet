@@ -4,8 +4,6 @@
 }
 
 /* Iniciando CSS extra large devices (1200px ou mais) */    
-@media(min-width: 1200px) {
-
     #main-home{
         display: flex;
         flex-direction: column;
@@ -183,21 +181,77 @@
         background-color: #4a3f78;
     }
     /*CSS PÁGINA SOBRE.PHP*/
-    .jumbotron.sobre{
-        background-image: url("../img/perfil-sobre/dogs.jpg");
+    #main-sobre{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #banner-sobre{
+        background-image: url("../img/perfil-sobre/bg_sobre.jpg");
         background-size: cover;
         background-repeat: no-repeat;
-        height: 700px;
+        background-position: right top;
+        height: 100vh;
+        padding: 150px 0px 30px 70px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #banner-sobre h1{
+        font-family: 'Satisfy', cursive;
         color:white;
+        text-align: right;
+        line-height: 60px;
+        margin-top: 82px;
     }
-    #subtitulo-sobre{
+
+    #banner-sobre p{
+        color:white;
+        text-align: right;
+    }
+
+    #sobre-nos{
+        text-align: center;
+        padding: 20px 0px;
+    }
+
+    #sobre-nos h2{
+        color: #343F4B;
+        font-size: 2.8rem;
+        padding: 20px 0px 30px 0px;
+    }
+
+    #sobre-nos p{
+        color: #343F4B;
+        font-size: 1.4rem;
+    }
+   
+    #equipe-sobre{
+        background-color: #F1F5FA;
+        padding: 30px 20px;
+        margin-top: 30px;
+    }
+
+    #equipe-sobre h3{
         color:#ff9640;
+        padding: 10px 0px 5px 0px;
+        font-size: 1.5rem;
+        text-transform: uppercase;
     }
+
+    #equipe-sobre p{
+        color: #343F4B;
+        padding: 0px 20px;
+        text-align: justify;
+    }
+
     .foto-perfil{
         border-radius: 50%;
         width: 50%;
         border: 1px solid #ff9640;
-        background-color: gray;
+        margin-top: 2rem;
     }
     /*CSS PÁGINA PARCEIROS*/
     .jumbotron.parceiros{
@@ -1035,7 +1089,6 @@
         width: 100%;    
     }
 
-
     #pfG_cx_temp{
         padding: 0px;
     }
@@ -1059,24 +1112,3 @@
         align-items: flex-start;
         width: 50%;
     }
-}
-
-/* Iniciando CSS extra small devices (576px ou menos) */    
-@media(max-width: 576px) {
-
-}
-
-/* Iniciando CSS small devices (577px ou mais) */    
-@media(min-width: 577px) {
-
-}
-
-/* Iniciando CSS medium devices (768px ou mais) */    
-@media(min-width: 768px) {
-
-}
-
-/* Iniciando CSS large devices (992px ou mais) */    
-@media(min-width: 992px) {
-
-}
