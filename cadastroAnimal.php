@@ -19,7 +19,7 @@
 
 <body>
     <!-- include do header -->
-    <!--<?php include_once("includes/header.php")?>-->
+    <?php include_once("includes/header.php")?>
 
     <!-- início do formulário -->
     <main class="row">

@@ -19,13 +19,12 @@
 
 <body>
     <!-- include do header -->
-    <!--<?php include_once("includes/header.php")?>-->
+    <?php include_once("includes/header.php")?>
 
     <!-- início do formulário -->
     <main class= "container-fluid">
     <section class="row">
-        <!-- include do menu lateral -->
-        <!-- <?php include_once("includes/menu-ong.php")?>  -->
+        
         <form action="" class="card col-lg-8 col-md-12 col-sm-12 col-12 p-5" id="formOng">
             <!-- essa div é para o título -->
             <div class="form-group d-flex justify-content p-2">
