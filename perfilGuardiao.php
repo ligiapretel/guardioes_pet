@@ -24,10 +24,10 @@
     <?php include_once("includes/header.php")?>
 
     <!--Onde esta localizado as informacoes do Guardiao e img-->
-    <section  class="container-fluid" id="pfG_cx_info_principal"> <!-- id de background e padding -->
+    <section  class="container-fluid" id="pfG_cx_info_principal"> 
         <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-12 col-12 d-flex justify-content-center">
-                <img id="perfilGua_imagem" class="rounded-circle" src="img/img_perfil_guardiao.jpeg" width="300" height="300">
+                <img id="perfilGua_imagem" class="rounded-circle" src="img/img_perfil_guardiao.jpeg">
             </div>
 
             <div class="col-lg-6 col-md-6 col-sm-12 col-12"> 

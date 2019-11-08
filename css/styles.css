@@ -605,6 +605,11 @@ header{
     width: 100vw;
 }
 
+#perfilGua_imagem {
+    height: 60%;
+    width: 90%;
+}
+
 /* Enviar mensagem - Denunciar Perfil */ 
 #pfong_cx_i_txt { /* ongs */
     background-color: rgb(166, 160, 189);
@@ -881,19 +886,19 @@ header{
         height: 100vh;
     }
 
-    #perfilOng_imagem {
+    #perfilOng_imagem { /* ongs */
         margin-top: 20px;
         width: 60%;
         height: 90%;
     }
 
-    #perfilGua_imagem {
+    #perfilGua_imagem { /* guardiões */
         margin-bottom: 30px;
         width: 60%;
         height: 85%;
     }
 
-    .pfOngGuard_titulo {
+    .pfOngGuard_titulo { /* ambos */
         font-size: 1.7em;
     }
 
@@ -942,19 +947,19 @@ header{
         width: 100vw;
     }
 
-    #perfilOng_imagem {
+    #perfilOng_imagem { /* ongs */
         margin-top: 60px;
         width: 60%;
         height: 60%;
     }
 
-    #perfilGua_imagem {
+    #perfilGua_imagem { /* guardiões */
         margin-top: 60px;
         width: 60%;
         height: 60%;
     }
 
-    .pfOngGuard_titulo {
+    .pfOngGuard_titulo { /* ambos */
         font-size: 1.7em;
     }
     
@@ -1034,19 +1039,19 @@ header{
         width: 100vw;
     }
 
-    #perfilOng_imagem {
+    #perfilOng_imagem { /* ongs */
         margin-top: 15px;
         width: 65%;
         height: 85%;
     }
 
-    #perfilGua_imagem {
+    #perfilGua_imagem { /* guardiões */
         margin-top: 15px;
         width: 60%;
         height: 85%;
     }
 
-    .pfOngGuard_titulo {
+    .pfOngGuard_titulo { /* ambos */
         font-size: 2em;
     }
 
@@ -1078,454 +1083,9 @@ header{
         width: 100vw;
     }
 
-    #perfilOng_imagem {
+    #perfilOng_imagem { /* ongs */
         margin-top: 15px;
         width: 65%;
         height: 85%;
     }
-}
-
-/* Iniciando CSS extra small devices (576px ou menos) */    
-@media(max-width: 576px) {
-    /*CSS da página index*/
-    .titulo-carrossel-home h1{
-        font-size: 2rem;
-    }
-    .titulo-carrossel-home p{
-        color: transparent;
-    }
-    #container-busca-expandida{
-        background-color:  #FF9640;
-        padding: 20px 0px;
-        position: relative;
-        height: 66vh;
-    }
-    #container-busca-expandida h2{
-        color: #ffffff;
-        font-size: 1.7rem;   
-    }
-
-    .formulario-index{
-        flex-direction: column;
-    }
-
-    .formulario-index-itens{
-        margin-bottom: -19px;
-    }
-
-    .botao-home{
-        background-color: #6E5DB3;
-        color: #ffffff;
-        text-transform: uppercase;
-        padding: 8px 30px;
-        border: none;
-        border-radius: 5px;
-        width: 100%;
-    }
-
-    .botao-home:hover{
-        background-color: #4a3f78;
-    }
-
-    
-    #seja-guardiao-home{
-        text-align: center;
-        margin-top: -18px;
-    }
-
-    #seja-guardiao-home h2{
-        color: #343F4B;
-        font-size: 1.8rem; 
-        padding: 20px 0px;  
-    }
-
-    #seja-guardiao-home p{
-        color: #343F4B;
-        font-size: 1.187rem; 
-    }
-
-    #como-funciona-home{
-        background-color: #F1F5FA;
-        padding: 40px 20px;
-        margin-top: 30px;
-    }
-
-    #como-funciona-home img{
-        padding-top: 30px;
-    }
-
-    #como-funciona-home h2{
-        color: #343F4B;
-        padding: 30px 0px;
-        font-size: 2.8rem;
-    }
-
-    #como-funciona-home h4{
-        color: #343F4B;
-        padding: 12px 0px;
-        text-transform: uppercase;
-        font-size: 1.6rem;
-    }
-
-    #como-funciona-home p{
-        color: #343F4B;
-        font-size: 1.3rem;;
-    }
-
-    #doacoes-home{
-        text-align: center;
-        padding: 30px 0px;
-    }
-
-    #doacoes-home h2{
-        color: #343F4B;
-        font-size: 2.8rem; 
-        padding: 30px 0px;  
-    }
-
-    #doacoes-home p{
-        color: #343F4B;
-        font-size: 1.4rem; 
-    }
-
-    /*Fim da página Index*/
-}
-
-/* Iniciando CSS small devices (577px ou mais) */    
-@media(min-width: 577px) {
-/*Início da página Index*/
-    .titulo-carrossel-home{
-        bottom: 85px;
-    }
-
-    .titulo-carrossel-home h1{
-        font-size: 2rem;
-    }
-
-    .titulo-carrossel-home p{
-        margin-bottom: 0px;
-        font-size: 0.8rem;
-    }
-
-    #container-busca-expandida{
-        background-color: #FF9640;
-        padding: 30px 40px;
-        position: relative;
-        bottom: 90px;
-        margin-left: 8.4%;
-    }
-
-    #container-busca-expandida h2{
-        color: #ffffff;
-        font-size: 2rem;   
-    }
-
-    .formulario-coluna{
-        flex-direction: column;
-        padding: 0.2rem;
-    }
-
-    .botao-home{
-        background-color: #6E5DB3;
-        color: #ffffff;
-        text-transform: uppercase;
-        padding: 8px 30px!important;
-        border: none;
-        border-radius: 5px;
-        width: 100%;
-    
-    }
-
-    .botao-home:hover{
-        background-color: #4a3f78;
-    }
-
-    #seja-guardiao-home{
-        text-align: center;
-        margin-top: -60px;
-    }
-
-    #seja-guardiao-home h2{
-        color: #343F4B;
-        font-size: 2.4rem; 
-        padding: 30px 0px;  
-    }
-
-    #seja-guardiao-home p{
-        color: #343F4B;
-        font-size: 1.2rem; 
-    }
-
-    #como-funciona-home{
-        background-color: #F1F5FA;
-        padding: 40px 20px;
-        margin-top: 30px;
-    }
-
-    #como-funciona-home img{
-        padding-top: 30px;
-    }
-
-    #como-funciona-home h2{
-        color: #343F4B;
-        padding: 0px 0px;
-        font-size: 2.8rem;
-    }
-
-    #como-funciona-home h4{
-        color: #343F4B;
-        padding: 9px 0px;
-        text-transform: uppercase;
-        font-size: 1.6rem;
-        margin-bottom: 0rem;
-    }
-
-    #como-funciona-home p{
-        color: #343F4B;
-        font-size: 1rem;;
-    }
-
-    #doacoes-home{
-        text-align: center;
-        padding: 30px 0px;
-        margin-left: 3.5%;
-    }
-
-    #doacoes-home h2{
-        color: #343F4B;
-        font-size: 1.8rem; 
-        padding: 30px 0px;  
-    }
-
-    #doacoes-home p{
-        color: #343F4B;
-        font-size: 1rem; 
-    }
-    /*Fim da página Index*/
-}
-
-/* Iniciando CSS medium devices (768px ou mais) */    
-@media(min-width: 768px) {
-    /*Início da página Index*/
-    .titulo-carrossel-home{
-        bottom: 150px;
-    }
-
-    .titulo-carrossel-home h1{
-        font-size: 3rem;
-    }
-
-    .titulo-carrossel-home p{
-        margin-bottom: 0px;
-    }
-
-    #container-busca-expandida{
-        background-color: #FF9640;
-        padding: 30px 40px;
-        position: relative;
-        bottom: 90px;
-        margin-left: 8%;
-    }
-
-    #container-busca-expandida h2{
-        color: #ffffff;
-        font-size: 2.5rem;   
-    }
-
-    .botao-home{
-        background-color: #6E5DB3;
-        color: #ffffff;
-        text-transform: uppercase;
-        padding: 8px 30px;
-        border: none;
-        border-radius: 5px;
-        width: 100%;
-    }
-
-    .botao-home:hover{
-        background-color: #4a3f78;
-    }
-
-    
-
-
-    #seja-guardiao-home{
-        text-align: center;
-        margin-top: -60px;
-    }
-
-    #seja-guardiao-home h2{
-        color: #343F4B;
-        font-size: 2.8rem; 
-        padding: 30px 0px;  
-    }
-
-    #seja-guardiao-home p{
-        color: #343F4B;
-        font-size: 1.5rem; 
-    }
-
-    #como-funciona-home{
-        background-color: #F1F5FA;
-        padding: 40px 20px;
-        margin-top: 30px;
-    }
-
-    #como-funciona-home img{
-        padding-top: 30px;
-    }
-
-    #como-funciona-home h2{
-        color: #343F4B;
-        padding: 0px 0px;
-        font-size: 2.8rem;
-    }
-
-    #como-funciona-home h4{
-        color: #343F4B;
-        padding: 9px 0px;
-        text-transform: uppercase;
-        font-size: 1.6rem;
-        margin-bottom: 0rem;
-    }
-
-    #como-funciona-home p{
-        color: #343F4B;
-        font-size: 1rem;;
-    }
-
-    #doacoes-home{
-        text-align: center;
-        padding: 30px 0px;
-    }
-
-    #doacoes-home h2{
-        color: #343F4B;
-        font-size: 1.8rem; 
-        padding: 30px 0px;  
-    }
-
-    #doacoes-home p{
-        color: #343F4B;
-        font-size: 1rem; 
-    }
-    /*Fim da página Index*/
-    
-    #perfilGua_imagem {
-        margin-top: 15px;
-        width: 60%;
-        height: 85%;
-    }
-
-    .pfOngGuard_titulo {
-        font-size: 2em;
-    }
-}
-
-/* Iniciando CSS large devices (992px ou mais) */    
-@media(min-width: 992px) {
-    /*Início da página Index*/
-    .titulo-carrossel-home{
-        bottom: 150px;
-    }
-
-    .titulo-carrossel-home h1{
-        font-size: 3rem;
-    }
-
-    .titulo-carrossel-home p{
-        margin-bottom: 0px;
-    }
-
-    #container-busca-expandida{
-        background-color: #FF9640;
-        padding: 30px 40px;
-        position: relative;
-        bottom: 90px;
-        margin-left: 8%;
-    }
-
-    #container-busca-expandida h2{
-        color: #ffffff;
-        font-size: 2.5rem;   
-    }
-
-    .botao-home{
-        background-color: #6E5DB3;
-        color: #ffffff;
-        text-transform: uppercase;
-        padding: 8px 30px;
-        border: none;
-        border-radius: 5px;
-        width: 100%;
-    }
-
-    .botao-home:hover{
-        background-color: #4a3f78;
-    }
-
-    #seja-guardiao-home{
-        text-align: center;
-        margin-top: -60px;
-        margin-left: 2.5rem;
-    }
-
-    #seja-guardiao-home h2{
-        color: #343F4B;
-        font-size: 2.8rem; 
-        padding: 30px 0px;  
-    }
-
-    #seja-guardiao-home p{
-        color: #343F4B;
-        font-size: 1.5rem; 
-    }
-
-    #como-funciona-home{
-        background-color: #F1F5FA;
-        padding: 40px 20px;
-        margin-top: 30px;
-    }
-
-    #como-funciona-home img{
-        padding-top: 30px;
-    }
-
-    #como-funciona-home h2{
-        color: #343F4B;
-        padding: 0px 0px;
-        font-size: 2.8rem;
-    }
-
-    #como-funciona-home h4{
-        color: #343F4B;
-        padding: 9px 0px;
-        text-transform: uppercase;
-        font-size: 1.6rem;
-        margin-bottom: 0rem;
-    }
-
-    #como-funciona-home p{
-        color: #343F4B;
-        font-size: 1.2rem;;
-    }
-
-    #doacoes-home{
-        text-align: center;
-        padding: 30px 0px;
-        margin-left: 2.5rem;
-    }
-
-    #doacoes-home h2{
-        color: #343F4B;
-        font-size: 1.8rem; 
-        padding: 30px 0px;  
-    }
-
-    #doacoes-home p{
-        color: #343F4B;
-        font-size: 1rem; 
-    }
-    /*Fim da página Index*/
-
 }
