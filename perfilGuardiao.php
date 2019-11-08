@@ -147,6 +147,14 @@
         </div>
     </section>
 
+    <!-- Abrindo seção para include da busca recolhida -->
+    <div class="alinhamento-busca-recolhida mt-5">
+        <section id="container-busca-recolhida" class="col-10">
+            <?php include_once('includes/buscaRecolhida.php')?>
+        </section>
+    </div>
+    
+    <!-- Incluindo footer -->
     <?php include_once("includes/footer.php")?>
 
     <!-- Script JS Bootstrap | Manter código próximo ao fechamento do body -->

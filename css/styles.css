@@ -605,9 +605,14 @@ header{
     width: 100vw;
 }
 
-#perfilGua_imagem {
-    height: 60%;
-    width: 90%;
+#perfilOng_imagem { /* ongs */
+    height: 95%;
+    width: 55%;
+}
+
+#perfilGua_imagem { /* guardiões */
+    height: 95%;
+    width: 55%;
 }
 
 /* Enviar mensagem - Denunciar Perfil */ 
@@ -850,6 +855,193 @@ header{
     width: 50%;
 }
 
+
+
+
+
+
+/* Iniciando CSS extra large devices (até 1200px) */    
+@media(max-width: 1200px) {
+
+    /* PERFIL DA ONG E DO GUARDIÃO */
+    #pfong_cx_info_principal{ /* ongs */
+       padding:15% 5% 5% 5%;
+       width: 100vw;
+   }
+
+   #pfG_cx_info_principal{ /* guardiões */
+       padding: 15% 5% 5% 5%;
+       width: 100vw;
+   }
+
+   #perfilOng_imagem { /* ongs */
+       margin-top: 15px;
+       width: 65%;
+       height: 85%;
+   }
+}
+
+
+/* Iniciando CSS large devices (até 992px) */    
+@media(max-width: 992px) {
+
+    /* Estilos do header */
+    
+        .header-menu {
+            padding: .3rem .2rem;
+        }
+    
+        .fonteHeader {
+            font-size: 1.2rem;
+        }
+    
+        .header-link {
+            font-size: 1.2rem;
+            line-height: 2.5rem;
+        }
+    
+        .lista-menu {
+            padding-left: 35px;        
+            padding-bottom: 35px;        
+        }    
+    
+        /* PERFIL DA ONG E DO GUARDIÃO */
+        #pfong_cx_info_principal{ /* ongs */
+            padding:15% 5% 5% 5%;
+            width: 100vw;
+        }
+    
+        #pfG_cx_info_principal{ /* guardiões */
+            padding: 15% 5% 5% 5%;
+            width: 100vw;
+        }
+    
+        #perfilOng_imagem { /* ongs */
+            margin-top: 15px;
+            width: 65%;
+            height: 85%;
+        }
+    
+        #perfilGua_imagem { /* guardiões */
+            margin-top: 15px;
+            width: 60%;
+            height: 85%;
+        }
+    
+        .pfOngGuard_titulo { /* ambos */
+            font-size: 2em;
+        }
+    
+        /* Iniciando CSS página Sobre  */
+        #banner-sobre{
+            padding: 100px 0px 30px 10px;
+            height: auto;
+        }
+    
+        #banner-sobre h1{
+            margin-top: 0px;
+            line-height: 50px;
+        }
+        
+    }
+
+
+
+
+/* Iniciando CSS medium devices (até 768px) */    
+@media(max-width: 768px) {
+
+    /* Estilos do header */
+    
+        .header-menu {
+            padding: .3rem .2rem;
+        }
+    
+        .fonteHeader {
+            font-size: 1.2rem;
+        }
+    
+        .header-link {
+            font-size: 1.2rem;
+            line-height: 2.5rem;
+        }
+    
+        .lista-menu {
+            padding-left: 35px;        
+            padding-bottom: 35px;        
+        }
+        
+        /* PERFIL DA ONG E DO GUARDIÃO */
+        #pfong_cx_info_principal{ /* ongs */
+            padding:15% 5% 5% 5%;
+            width: 100vw;
+        }
+    
+        #pfG_cx_info_principal{ /* guardiões */
+            padding: 15% 5% 5% 5%;
+            width: 100vw;
+        }
+    
+        #perfilOng_imagem { /* ongs */
+            margin-top: 60px;
+            width: 60%;
+            height: 60%;
+        }
+    
+        #perfilGua_imagem { /* guardiões */
+            margin-top: 60px;
+            width: 60%;
+            height: 60%;
+        }
+    
+        .pfOngGuard_titulo { /* ambos */
+            font-size: 1.7em;
+        }
+        
+        
+        /* Iniciando CSS página Sobre  */
+        #banner-sobre{
+            height: auto;
+            width: 100vw;
+            padding: 100px 0px 30px 0px;
+        }
+    
+        #banner-sobre h1{
+            font-size: 2rem;
+            margin-top: 0px;
+            line-height: 40px;
+        }
+    
+        #sobre-nos h2{
+            font-size: 2rem;
+            padding: 10px 0px 15px 0px;
+        }
+    
+        #sobre-nos p{
+            font-size: 1rem;
+        }
+    
+        #equipe-sobre{
+            margin-top: 0px;
+            padding-top: 30px;
+        }
+    
+        #equipe-sobre h3{
+            font-size: 1.4rem;
+        }
+    
+        #equipe-sobre p{
+            padding: 0px;
+        }
+        
+        .foto-perfil{
+            width: 150px;
+        }
+    
+    }
+    
+
+
 /* Iniciando CSS extra small devices (até 576px) */    
 @media(max-width: 576px) {
 
@@ -875,7 +1067,7 @@ header{
 
     /* PERFIL DA ONG E DO GUARDIÃO */
     #pfong_cx_info_principal{ /* ongs */
-        padding:25% 5% 5% 5%;
+        padding: 25% 5% 5% 5%;
         width: 100vw;
         height: 100vh;
     }
@@ -911,181 +1103,4 @@ header{
         text-align: left;
     }
  
-}
-
-/* Iniciando CSS medium devices (até 768px) */    
-@media(max-width: 768px) {
-
-/* Estilos do header */
-
-    .header-menu {
-        padding: .3rem .2rem;
-    }
-
-    .fonteHeader {
-        font-size: 1.2rem;
-    }
-
-    .header-link {
-        font-size: 1.2rem;
-        line-height: 2.5rem;
-    }
-
-    .lista-menu {
-        padding-left: 35px;        
-        padding-bottom: 35px;        
-    }
-    
-    /* PERFIL DA ONG E DO GUARDIÃO */
-    #pfong_cx_info_principal{ /* ongs */
-        padding:15% 5% 5% 5%;
-        width: 100vw;
-    }
-
-    #pfG_cx_info_principal{ /* guardiões */
-        padding: 15% 5% 5% 5%;
-        width: 100vw;
-    }
-
-    #perfilOng_imagem { /* ongs */
-        margin-top: 60px;
-        width: 60%;
-        height: 60%;
-    }
-
-    #perfilGua_imagem { /* guardiões */
-        margin-top: 60px;
-        width: 60%;
-        height: 60%;
-    }
-
-    .pfOngGuard_titulo { /* ambos */
-        font-size: 1.7em;
-    }
-    
-    
-    /* Iniciando CSS página Sobre  */
-    #banner-sobre{
-        height: auto;
-        width: 100vw;
-        padding: 100px 0px 30px 0px;
-    }
-
-    #banner-sobre h1{
-        font-size: 2rem;
-        margin-top: 0px;
-        line-height: 40px;
-    }
-
-    #sobre-nos h2{
-        font-size: 2rem;
-        padding: 10px 0px 15px 0px;
-    }
-
-    #sobre-nos p{
-        font-size: 1rem;
-    }
-
-    #equipe-sobre{
-        margin-top: 0px;
-        padding-top: 30px;
-    }
-
-    #equipe-sobre h3{
-        font-size: 1.4rem;
-    }
-
-    #equipe-sobre p{
-        padding: 0px;
-    }
-    
-    .foto-perfil{
-        width: 150px;
-    }
-
-}
-
-/* Iniciando CSS large devices (até 992px) */    
-@media(max-width: 992px) {
-
-/* Estilos do header */
-
-    .header-menu {
-        padding: .3rem .2rem;
-    }
-
-    .fonteHeader {
-        font-size: 1.2rem;
-    }
-
-    .header-link {
-        font-size: 1.2rem;
-        line-height: 2.5rem;
-    }
-
-    .lista-menu {
-        padding-left: 35px;        
-        padding-bottom: 35px;        
-    }    
-
-    /* PERFIL DA ONG E DO GUARDIÃO */
-    #pfong_cx_info_principal{ /* ongs */
-        padding:15% 5% 5% 5%;
-        width: 100vw;
-    }
-
-    #pfG_cx_info_principal{ /* guardiões */
-        padding: 15% 5% 5% 5%;
-        width: 100vw;
-    }
-
-    #perfilOng_imagem { /* ongs */
-        margin-top: 15px;
-        width: 65%;
-        height: 85%;
-    }
-
-    #perfilGua_imagem { /* guardiões */
-        margin-top: 15px;
-        width: 60%;
-        height: 85%;
-    }
-
-    .pfOngGuard_titulo { /* ambos */
-        font-size: 2em;
-    }
-
-    /* Iniciando CSS página Sobre  */
-    #banner-sobre{
-        padding: 100px 0px 30px 10px;
-        height: auto;
-    }
-
-    #banner-sobre h1{
-        margin-top: 0px;
-        line-height: 50px;
-    }
-    
-}
-
-
-/* Iniciando CSS extra large devices (até 1200px) */    
-@media(max-width: 1200px) {
-
-     /* PERFIL DA ONG E DO GUARDIÃO */
-     #pfong_cx_info_principal{ /* ongs */
-        padding:15% 5% 5% 5%;
-        width: 100vw;
-    }
-
-    #pfG_cx_info_principal{ /* guardiões */
-        padding: 15% 5% 5% 5%;
-        width: 100vw;
-    }
-
-    #perfilOng_imagem { /* ongs */
-        margin-top: 15px;
-        width: 65%;
-        height: 85%;
-    }
 }

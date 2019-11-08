@@ -40,7 +40,7 @@
             </div>
 
             <div class="col-lg-6 col-md-6 col-sm-12 col-12 d-flex justify-content-center">
-                <img id="perfilOng_imagem" src="img/perfil_ong_imagem.png" width=300 height=300>
+                <img id="perfilOng_imagem" src="img/perfil_ong_imagem.png">
             </div>
         </div>
     </section>
