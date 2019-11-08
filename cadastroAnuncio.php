@@ -24,8 +24,8 @@
     <!-- início do formulário -->
     <main class="row">
         <!-- include do menu lateral -->
-        <?php include_once("includes/menu-ong.php")?> <form action=""
-            class="card col-lg-8 col-md-6 col-sm-6 col-xs-6 p-5" id="formAnuncio">
+        <?php include_once("includes/menu-ong.php")?> 
+        <form method="POST" action="" class="card col-lg-8 col-md-6 col-sm-6 col-xs-6 p-5" id="formAnuncio">
             <!-- essa div é para o título -->
             <div class="form-group d-flex justify-content p-2">
                 <h3 class="tituloAnuncio">Cadastro de Anúncio</h3>
