@@ -47,37 +47,37 @@
     </section>
 
     <!--Onde esta localizado os Animais Apadrinhados-->
-    <section class="container-fluid" id="perfilOngGuar_animais"> <!-- id sobre padding -->
+    <section class="container-fluid" id="perfilOngGuar_animais"> 
         <div class="row">
             <h2 class="col-lg-12 text-dark font-weight-bold pfOngGuard_titulo">Apadrinhados</h2>
 
-            <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+            <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                 <div class="card">
                     <img src="img/pfGuardiao_img1.jpg" class="card-img-top" height="300" width="300">
                     <div class="card-body">
-                    <h4 class="card-title text-dark font-weight-bold">ELZA</h4>
+                    <h4 class="card-title text-dark font-weight-bold">Elza</h4>
                         <p class="card-text text-secondary">Tenho uma pelagem de tres cores que é puro charme e pra completar uma carinha inocente que é i-rre-sis-tível!Adoro tomar um solzinho na janela e tirar cochilos na ...</p>
                         <a href="#" class="btn btn-primary">Saiba mais</a> <!-- ainda preciso arrumar o botão -->
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+            <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                 <div class="card">
                     <img src="img/pfGuardiao_img_2.jpg" class="card-img-top" height="300" width="300">
                     <div class="card-body">
-                    <h4 class="card-title text-dark font-weight-bold">CHICO</h4>
+                    <h4 class="card-title text-dark font-weight-bold">Chico</h4>
                         <p class="card-text text-secondary">Tenho uma pelagem de tres cores que é puro charme e pra completar uma carinha inocente que é i-rre-sis-tível!Adoro tomar um solzinho na janela e tirar cochilos na ...</p>
                         <a href="#" class="btn btn-primary">Saiba mais</a>
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+            <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                 <div class="card">
                     <img src="img/pfGuardiao_img_3.jpeg" class="card-img-top" height="300" width="300">
                     <div class="card-body">
-                        <h4 class="card-title text-dark font-weight-bold">BELQUIOR</h4>
+                        <h4 class="card-title text-dark font-weight-bold">Belquior</h4>
                         <p class="card-text text-secondary">Tenho uma pelagem de tres cores que é puro charme e pra completar uma carinha inocente que é i-rre-sis-tível!Adoro tomar um solzinho na janela e tirar cochilos na ...</p>
                         <a href="#" class="btn btn-primary">Saiba mais</a>
                     </div>
@@ -88,26 +88,26 @@
     </section>
 
     <!--Onde estão os animais adotados -->
-    <section class="container-fluid bg-light" id="perfilOngGuar_animais"> <!-- id sobre padding -->
+    <section class="container-fluid bg-light" id="perfilOngGuar_animais"> 
         <div class="row">
             <h2 class="col-lg-12 text-dark font-weight-bold pfOngGuard_titulo">Adotados</h2>
 
-            <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+            <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                 <div class="card">
                     <img src="img/pfGuardiao_img1.jpg" class="card-img-top" height="300" width="300">
                     <div class="card-body">
-                    <h4 class="card-title text-dark font-weight-bold">ELZA</h4>
+                    <h4 class="card-title text-dark font-weight-bold">Elza</h4>
                         <p class="card-text text-secondary">Tenho uma pelagem de tres cores que é puro charme e pra completar uma carinha inocente que é i-rre-sis-tível!Adoro tomar um solzinho na janela e tirar cochilos na ...</p>
                         <a href="#" class="btn btn-primary">Saiba mais</a> <!-- ainda preciso arrumar o botão -->
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+            <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                 <div class="card">
                     <img src="img/pfGuardiao_img_2.jpg" class="card-img-top" height="300" width="300">
                     <div class="card-body">
-                    <h4 class="card-title text-dark font-weight-bold">CHICO</h4>
+                    <h4 class="card-title text-dark font-weight-bold">Chico</h4>
                         <p class="card-text text-secondary">Tenho uma pelagem de tres cores que é puro charme e pra completar uma carinha inocente que é i-rre-sis-tível!Adoro tomar um solzinho na janela e tirar cochilos na ...</p>
                         <a href="#" class="btn btn-primary">Saiba mais</a>
                     </div>
@@ -118,26 +118,26 @@
     </section>
 
     <!--Onde estão os animais lar temporário -->
-    <section class="container-fluid" id="perfilOngGuar_animais"> <!-- id sobre padding -->
+    <section class="container-fluid" id="perfilOngGuar_animais"> 
         <div class="row">
             <h2 class="col-lg-12 text-dark font-weight-bold pfOngGuard_titulo">Lar Temporário</h2>
 
-            <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+            <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                 <div class="card">
                     <img src="img/pfGuardiao_img1.jpg" class="card-img-top" height="300" width="300">
                     <div class="card-body">
-                    <h4 class="card-title text-dark font-weight-bold">ELZA</h4>
+                    <h4 class="card-title text-dark font-weight-bold">Elza</h4>
                         <p class="card-text text-secondary">Tenho uma pelagem de tres cores que é puro charme e pra completar uma carinha inocente que é i-rre-sis-tível!Adoro tomar um solzinho na janela e tirar cochilos na ...</p>
                         <a href="#" class="btn btn-primary">Saiba mais</a> <!-- ainda preciso arrumar o botão -->
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+            <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                 <div class="card">
                     <img src="img/pfGuardiao_img_2.jpg" class="card-img-top" height="300" width="300">
                     <div class="card-body">
-                    <h4 class="card-title text-dark font-weight-bold">CHICO</h4>
+                    <h4 class="card-title text-dark font-weight-bold">Chico</h4>
                         <p class="card-text text-secondary">Tenho uma pelagem de tres cores que é puro charme e pra completar uma carinha inocente que é i-rre-sis-tível!Adoro tomar um solzinho na janela e tirar cochilos na ...</p>
                         <a href="#" class="btn btn-primary">Saiba mais</a>
                     </div>
@@ -153,7 +153,7 @@
             <?php include_once('includes/buscaRecolhida.php')?>
         </section>
     </div>
-    
+
     <!-- Incluindo footer -->
     <?php include_once("includes/footer.php")?>
 

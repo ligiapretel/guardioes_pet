@@ -23,7 +23,7 @@
     <?php include_once("includes/header.php"); ?>
 
     <!--Onde esta localizado as informacoes da ONG e img-->
-    <section class="container-fluid" id="pfong_cx_info_principal"> <!-- id para background e padding -->
+    <section class="container-fluid" id="pfong_cx_info_principal"> 
         <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-12 col-12">
                 <h1 class="pfOngGuard_titulo text-dark font-weight-bolder">Cia dos Miados e Latidos</h1>
@@ -46,37 +46,37 @@
     </section>
     
     <!--Onde esta localizado os Animais com a ONG-->
-    <section class="container-fluid" id="perfilOngGuar_animais"> <!-- id sobre padding -->
+    <section class="container-fluid" id="perfilOngGuar_animais"> 
         <div class="row">
             <h2 class="col-lg-12 text-dark font-weight-bold pfOngGuard_titulo">Animais com a ONG (98)</h2>
 
-            <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+            <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                 <div class="card">
                     <img src="img/pfGuardiao_img1.jpg" class="card-img-top" height="300" width="300"> <!-- arummar o tamanho dessa imagem -->
                     <div class="card-body">
-                    <h4 class="card-title text-dark font-weight-bold">ELZA</h4>
+                    <h4 class="card-title text-dark font-weight-bold">Elza</h4>
                         <p class="card-text text-secondary">Tenho uma pelagem de tres cores que é puro charme e pra completar uma carinha inocente que é i-rre-sis-tível!Adoro tomar um solzinho na janela e tirar cochilos na ...</p>
                         <a href="#" class="btn btn-primary">Saiba mais</a> <!-- ainda preciso arrumar o botão -->
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+            <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                 <div class="card">
                     <img src="img/pfGuardiao_img_2.jpg" class="card-img-top" height="300" width="300">
                     <div class="card-body">
-                    <h4 class="card-title text-dark font-weight-bold">CHICO</h4>
+                    <h4 class="card-title text-dark font-weight-bold">Chico</h4>
                         <p class="card-text text-secondary">Tenho uma pelagem de tres cores que é puro charme e pra completar uma carinha inocente que é i-rre-sis-tível!Adoro tomar um solzinho na janela e tirar cochilos na ...</p>
                         <a href="#" class="btn btn-primary">Saiba mais</a>
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+            <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                 <div class="card">
                     <img src="img/pfGuardiao_img_3.jpeg" class="card-img-top" height="300" width="300">
                     <div class="card-body">
-                        <h4 class="card-title text-dark font-weight-bold">BELQUIOR</h4>
+                        <h4 class="card-title text-dark font-weight-bold">Belquior</h4>
                         <p class="card-text text-secondary">Tenho uma pelagem de tres cores que é puro charme e pra completar uma carinha inocente que é i-rre-sis-tível!Adoro tomar um solzinho na janela e tirar cochilos na ...</p>
                         <a href="#" class="btn btn-primary">Saiba mais</a>
                     </div>
@@ -87,7 +87,7 @@
     </section>
 
     <!--Onde a ONG coloco os itens que estao necessitando-->
-    <section class="container-fluid bg-light" id="pfong_precisa_cx_principal"> <!-- id para padding -->
+    <section class="container-fluid bg-light" id="pfong_precisa_cx_principal"> 
         <div class="row">
             <h2 class="text-dark font-weight-bold pfOngGuard_titulo">Estamos Precisando!</h2>
             <div class="col-lg-12 col-md-12 col-sm-12 col-12 d-flex justify-content-around flex-wrap">

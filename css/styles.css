@@ -645,6 +645,15 @@ header{
     padding: 5%;
 }
 
+.btn-primary {
+    background-color: #6E5DB3!important;
+    border: none
+}
+
+.btn-primary:hover {
+    background-color:#4a3f78!important;
+}
+
 
 /* Mural das Ongs - Estamos Precisando de */
 
@@ -917,19 +926,19 @@ header{
         }
     
         #perfilOng_imagem { /* ongs */
-            margin-top: 15px;
+            margin-top: 50px;
             width: 65%;
-            height: 85%;
+            height: 65%;
         }
     
         #perfilGua_imagem { /* guardiões */
-            margin-top: 15px;
-            width: 60%;
-            height: 85%;
+            margin-top: 50px;
+            width: 65%;
+            height: 65%;
         }
     
         .pfOngGuard_titulo { /* ambos */
-            font-size: 2em;
+            font-size: 1.5em;
         }
     
         /* Iniciando CSS página Sobre  */
@@ -974,12 +983,10 @@ header{
         /* PERFIL DA ONG E DO GUARDIÃO */
         #pfong_cx_info_principal{ /* ongs */
             padding:15% 5% 5% 5%;
-            width: 100vw;
         }
     
         #pfG_cx_info_principal{ /* guardiões */
             padding: 15% 5% 5% 5%;
-            width: 100vw;
         }
     
         #perfilOng_imagem { /* ongs */
@@ -1068,14 +1075,10 @@ header{
     /* PERFIL DA ONG E DO GUARDIÃO */
     #pfong_cx_info_principal{ /* ongs */
         padding: 25% 5% 5% 5%;
-        width: 100vw;
-        height: 100vh;
     }
 
     #pfG_cx_info_principal{ /* guardiões */
         padding: 25% 5% 5% 5%;
-        width: 100vw;
-        height: 100vh;
     }
 
     #perfilOng_imagem { /* ongs */
@@ -1085,13 +1088,14 @@ header{
     }
 
     #perfilGua_imagem { /* guardiões */
+        margin-top: 0;
         margin-bottom: 30px;
         width: 60%;
         height: 85%;
     }
 
     .pfOngGuard_titulo { /* ambos */
-        font-size: 1.7em;
+        font-size: 1.5em;
     }
 
     /* Iniciando CSS página Sobre  */
