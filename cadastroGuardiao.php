@@ -41,7 +41,7 @@
                 <label for="apelido" class="col-sm-4 col-form-label">Apelido </label>
                 <div class="col-sm-8">
                     <input type="text" class="form-control" id="apelido"
-                        placeholder="Como seu nome irá aparecer para outros usuários">
+                        placeholder="Como nome irá aparecer para outros usuários">
                 </div>
             </div>
             <div class="form-group row">
@@ -72,7 +72,7 @@
                 <label for="senhaGuardiao" class="col-sm-4 col-form-label">Defina uma senha</label>
                 <div class="col-sm-8">
                     <input type="password" class="form-control" id="senhaGuardiao"
-                        placeholder="Escolha sua senha de no mínimo 6 caracteres">
+                        placeholder="Senha mínimo 6 caracteres">
                 </div>
             </div>
             <div class="form-group row">

@@ -52,7 +52,7 @@
             <div class="form-group row">
                 <label for="nomeResp" class="col-sm-4 col-form-label">Nome do Responsável</label>
                 <div class="col-sm-8">
-                    <input type="text" class="form-control" id="nomeResp" placeholder="Nome do responsavel da ONG">
+                    <input type="text" class="form-control" id="nomeResp" placeholder="Responsavel da ONG">
                 </div>
             </div>
             <div class="form-group row">
@@ -65,7 +65,7 @@
                 <label for="senhaOng" class="col-sm-4 col-form-label">Defina uma senha</label>
                 <div class="col-sm-8">
                     <input type="password" class="form-control" id="senhaOng"
-                        placeholder="Escolha sua senha de no mínimo 6 caracteres">
+                        placeholder="Senha minimo 6 caracteres">
                 </div>
             </div>
             <div class="form-group row">

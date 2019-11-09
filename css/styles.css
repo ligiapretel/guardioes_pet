@@ -18,7 +18,6 @@
     background-color:#4a3f78;
 }
 
-
 #main-home{
     display: flex;
     flex-direction: column;
@@ -809,7 +808,6 @@ header{
     text-decoration: none;
 }
 
-
 #pfG_adotados{
     display: flex;
     flex-direction: column;
@@ -863,10 +861,6 @@ header{
     align-items: flex-start;
     width: 50%;
 }
-
-
-
-
 
 
 /* Iniciando CSS extra large devices (até 1200px) */    
@@ -951,10 +945,21 @@ header{
             margin-top: 0px;
             line-height: 50px;
         }
+
+        /*Cadastro Guardiao*/
+        #formGuardiao{
+            margin-top: 72px;
+        }
         
+        /*Cadastro Ong*/
+        #formOng{
+            margin-top: 72px;
+        }
+         /*Cadastro Animal*/
+         #formAnimal{
+            margin-left: 0px;
+        }
     }
-
-
 
 
 /* Iniciando CSS medium devices (até 768px) */    
@@ -1044,10 +1049,24 @@ header{
         .foto-perfil{
             width: 150px;
         }
-    
+
+         /*Cadastro Guardiao*/
+        #formGuardiao{
+            margin-top: 72px;
+        }
+
+         /*Cadastro Ong*/
+        #formOng{
+            margin-top: 72px;
+        }
+
+        /*Cadastro Animal*/
+        #formAnimal{
+            margin-left: 0px;
+        }
+
     }
     
-
 
 /* Iniciando CSS extra small devices (até 576px) */    
 @media(max-width: 576px) {
@@ -1106,5 +1125,32 @@ header{
     #banner-sobre p{
         text-align: left;
     }
- 
+
+    /*Cadastro Guardiao*/
+    .tituloGuardiao{ 
+        font-size: 1.3rem;
+    }
+
+    #formGuardiao{
+        margin-top: 72px;
+    }
+
+    /*Cadastro Ong*/
+    .tituloOng{
+        font-size: 1.62rem;
+    }
+    #formOng{
+        margin-top: 72px;
+    }
+
+    /*Cadastro Animal*/
+    #formAnimal{
+        margin-left: 0px;
+    }
+    ::placeholder{
+        text-align: justify;
+    }
+   .botaoAnimal{
+       margin-top: 10px;
+   }
 }
