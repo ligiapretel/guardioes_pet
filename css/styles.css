@@ -352,20 +352,12 @@ header{
 
 #container-busca-recolhida{
     background-color: #4a3f78;
-    padding: 10px 40px 30px 40px;
+    padding: 10px 30px 10px 30px;
 }
 
 #container-busca-recolhida h2{
     color: #ffffff;
     font-size: 2.5rem;   
-}
-
-.container-seta-expande-busca{
-    height: 30px;
-}
-
-.container-h2-expande-busca{
-    height: 30px;
 }
 
 .ico-seta-expande-busca{
@@ -374,12 +366,7 @@ header{
     transform: rotate(90deg);
     background-color: transparent;
     border: none;
-    padding: 0px;
-    width: 0px;
-    height: 0px;
-    position: relative;
-    left: 360px;
-    top: 10px;
+    line-height: 0;
 }
 
 .ico-seta-expande-busca:hover{
@@ -389,6 +376,10 @@ header{
 .ico-seta-expande-busca, .ico-seta-expande-busca:focus {
     outline: 0;
     box-shadow: none!important;
+}
+
+#busca-recolhida-titulo {
+    padding: 10px 15px;
 }
 
 .btn-busca-recolhida{
@@ -1153,4 +1144,15 @@ header{
    .botaoAnimal{
        margin-top: 10px;
    }
+
+    /* Busca recolhida  */
+
+    #container-busca-recolhida h2 {
+    font-size: 1.2rem;
+    }
+
+.ico-seta-expande-busca {
+    font-size: 3rem;
+    }
+    
 }
