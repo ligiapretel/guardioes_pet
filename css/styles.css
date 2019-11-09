@@ -316,31 +316,21 @@ header{
 }
 
 /*FOOTER*/
-#footer{
-    padding-top:30px;
-}
 
-.coresFooter{
+footer {
     background-color: #ff9640;
     color: white;
+    padding: 40px 20px;
 }
 
-.btnFooter{
-    background-color: #6E5DB3;
+footer .menu-link {
     color: #ffffff;
-    padding: 8px 30px;
-    border: none;    
-    border-radius: 5px;
-    text-transform: uppercase;
-    cursor: pointer;  
+    line-height: 2;
 }
 
-.btnFooter:hover{
-    background-color: #4a3f78;
-}
-
-.linkFooter{
-    color: white;
+footer img {
+    width: 30px;
+    margin-right: 15px;
 }
 
 /* Iniciando CSS da busca recolhida (include) */
@@ -880,7 +870,11 @@ header{
 @media(max-width: 992px) {
 
     /* Estilos do header */
-    
+
+        header {
+            width: 100vw;
+        }
+
         .header-menu {
             padding: .3rem .2rem;
         }
@@ -1154,5 +1148,5 @@ header{
 .ico-seta-expande-busca {
     font-size: 3rem;
     }
-    
+
 }
