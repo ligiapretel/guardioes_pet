@@ -24,7 +24,7 @@
     align-items: center;
 }
 
-/*CSS Menu Chat ONG´s*/
+/*CSS Menu lateral ONG´s*/
 #menu-ong{
     width:40%;
     border-radius: 5px;
@@ -32,7 +32,7 @@
     margin-top: 5rem;
 }
 #perfil-ong{
-    width: 100%;
+    width: 80%;
     padding-bottom: 10px;
 }
 .menu-ong , .menu-ong-sair{
@@ -51,6 +51,17 @@
     background-color:red;
     color:white;
 }
+/*menu lateral ong para deixar responsivo*/
+.navbar-menu-principal{ 
+    display: none;
+}
+.navbar-menu-itens.collapse { 
+    display: block; 
+}
+.navbar-menu-itens.show { 
+    display: block; 
+}
+
 /*BOX de mensagens para a ONG*/
 .mensagem-guardiao{
     border: 3px groove #ff9640;
@@ -1049,7 +1060,24 @@ footer img {
         #formAnimal{
             margin-left: 0px;
         }
-
+        /*Menu Lateral ONG*/
+        .navbar-menu-principal{
+            display: none;
+        }
+        /*Menu lateral da ong*/
+        .navbar-menu-principal{ 
+            display: block;
+            background-color:#ff9640;
+            color:white;
+            width:100%;
+            padding: 10px;
+        }
+        .navbar-menu-itens.collapse { 
+            display: none; 
+        }
+        .navbar-menu-itens.show { 
+            display: block; 
+        }
     }
     
 
@@ -1150,3 +1178,4 @@ footer img {
     }
 
 }
+
