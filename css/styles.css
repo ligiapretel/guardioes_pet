@@ -1078,9 +1078,14 @@ footer img {
         .navbar-menu-itens.show { 
             display: block; 
         }
+        #perfil-ong{
+            display: none;
+        }
         /*Página cadastro Anúncio*/
         #formAnuncio{
             margin-top: 0%;
+            margin-left: 0%;
+            margin-bottom: 0%;
         }
     }
     
