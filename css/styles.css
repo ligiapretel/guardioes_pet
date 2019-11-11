@@ -1,22 +1,21 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
 }
 
-/* Iniciando CSS extra large devices (1200px ou mais) */    
+/* Iniciando CSS extra large devices (1200px ou mais) */
 /* classes comuns a todas as páginas */
 
 .btn-roxo {
     background-color: #6E5DB3;
     color: #ffffff;
-    text-transform: uppercase;
     padding: 8px 30px;
     border: none;
     border-radius: 5px;
 }
 
 .btn-roxo:hover {
-    background-color:#4a3f78;
+    background-color: #4a3f78;
 }
 
 ::selection {
@@ -24,80 +23,102 @@
     color: #FFFFFF;
 }
 
-/*CSS Menu Chat ONG´s*/
-#menu-ong{
-    width:40%;
+/*CSS Menu lateral ONG´s*/
+#menu-ong {
+    width: 40%;
     border-radius: 5px;
     background-color: white;
     margin-top: 5rem;
 }
-#perfil-ong{
-    width: 100%;
+
+#perfil-ong {
+    width: 80%;
     padding-bottom: 10px;
 }
-.menu-ong , .menu-ong-sair{
+
+.menu-ong,
+.menu-ong-sair {
     background-color: #ff9640;
-    width:100%;
+    width: 100%;
     color: white;
-    padding:10px;
-    margin-bottom:3%;
+    padding: 10px;
+    margin-bottom: 3%;
     text-align: center;
 }
-.menu-ong:hover{
+
+.menu-ong:hover {
     background-color: white;
     color: orange;
 }
-.menu-ong-sair:hover{
-    background-color:red;
-    color:white;
+
+.menu-ong-sair:hover {
+    background-color: red;
+    color: white;
 }
+
+/*menu lateral ong para deixar responsivo*/
+.navbar-menu-principal {
+    display: none;
+}
+
+.navbar-menu-itens.collapse {
+    display: block;
+}
+
+.navbar-menu-itens.show {
+    display: block;
+}
+
 /*BOX de mensagens para a ONG*/
-.mensagem-guardiao{
+.mensagem-guardiao {
     border: 3px groove #ff9640;
-    padding:10px;
+    padding: 10px;
     margin-bottom: 2%;
 }
-.mensagem-guardiao:hover{
-    background-color:#ffa5003d;
+
+.mensagem-guardiao:hover {
+    background-color: #ffa5003d;
 }
-#perfil-chat-guardiao{
+
+#perfil-chat-guardiao {
     border-radius: 50%;
     width: 20%;
 }
 
-/* Iniciando CSS do título do Carrossel - Home */
+/* Iniciando CSS Home */
 #main-home{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.titulo-carrossel-home{
+/* Iniciando CSS do titulo do Carrossel - Home */
+.titulo-carrossel-home {
     bottom: 490px;
 }
 
-.titulo-carrossel-home h1{
+.titulo-carrossel-home h1 {
     font-size: 3rem;
 }
 
-.titulo-carrossel-home p{
+.titulo-carrossel-home p {
     margin-bottom: 0px;
 }
 
 /* Iniciando CSS da seção de busca - Home */
-#container-busca-expandida{
+#container-busca-expandida {
     background-color: #FF9640;
     padding: 30px 40px;
     position: relative;
     bottom: 250px;
 }
 
-#container-busca-expandida h2{
+#container-busca-expandida h2 {
     color: #ffffff;
-    font-size: 2.5rem;   
+    font-size: 2.5rem;
 }
 
-.btn-busca-expandida{
+.btn-busca-expandida {
     background-color: #6E5DB3;
     color: #ffffff;
     text-transform: uppercase;
@@ -107,107 +128,109 @@
     width: 100%;
 }
 
-.btn-busca-expandida:hover{
+.btn-busca-expandida:hover {
     background-color: #4a3f78;
 }
 
 /* Iniciando CSS da seção "Por que ser um Guardião PET?" - Home */
-#seja-guardiao-home{
+#seja-guardiao-home {
     text-align: center;
     margin-top: -230px;
 }
 
-#seja-guardiao-home h2{
+#seja-guardiao-home h2 {
     color: #343F4B;
-    font-size: 2.8rem; 
-    padding: 30px 0px;  
+    font-size: 2.8rem;
+    padding: 30px 0px;
 }
 
-#seja-guardiao-home p{
+#seja-guardiao-home p {
     color: #343F4B;
-    font-size: 1.4rem; 
+    font-size: 1.4rem;
 }
 
 /* Iniciando CSS da seção "Como funciona?" - Home */
-#como-funciona-home{
+#como-funciona-home {
     background-color: #F1F5FA;
     padding: 40px 20px;
     margin-top: 30px;
 }
 
-#como-funciona-home img{
+#como-funciona-home img {
     padding-top: 30px;
 }
 
-#como-funciona-home h2{
+#como-funciona-home h2 {
     color: #343F4B;
     padding: 30px 0px;
     font-size: 2.8rem;
 }
 
-#como-funciona-home h4{
+#como-funciona-home h4 {
     color: #343F4B;
     padding: 12px 0px;
     text-transform: uppercase;
     font-size: 1.6rem;
 }
 
-#como-funciona-home p{
+#como-funciona-home p {
     color: #343F4B;
-    font-size: 1.3rem;;
+    font-size: 1.3rem;
+    ;
 }
 
-#como-funciona-home button{
+#como-funciona-home button {
     background-color: #6E5DB3;
     color: #ffffff;
     text-transform: uppercase;
     padding: 8px 30px;
-    border: none;    
+    border: none;
     border-radius: 5px;
 }
 
-#como-funciona-home button:hover{
+#como-funciona-home button:hover {
     background-color: #4a3f78;
 }
 
 /* Iniciando CSS da seção "Doações" - Home */
-#doacoes-home{
+#doacoes-home {
     text-align: center;
     padding: 30px 0px;
 }
 
-#doacoes-home h2{
+#doacoes-home h2 {
     color: #343F4B;
-    font-size: 2.8rem; 
-    padding: 30px 0px;  
+    font-size: 2.8rem;
+    padding: 30px 0px;
 }
 
-#doacoes-home p{
+#doacoes-home p {
     color: #343F4B;
-    font-size: 1.4rem; 
+    font-size: 1.4rem;
 }
 
-#doacoes-home button{
+#doacoes-home button {
     background-color: #6E5DB3;
     color: #ffffff;
     text-transform: uppercase;
     padding: 8px 30px;
-    border: none;    
+    border: none;
     border-radius: 5px;
     margin: 20px 0px 50px 0px;
 }
 
-#doacoes-home button:hover{
+#doacoes-home button:hover {
     background-color: #4a3f78;
 }
+
 /*CSS PÁGINA SOBRE.PHP*/
-#main-sobre{
+#main-sobre {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-#banner-sobre{
+#banner-sobre {
     background-image: url("../img/perfil-sobre/bg_sobre.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -219,55 +242,55 @@
     justify-content: center;
 }
 
-#banner-sobre h1{
+#banner-sobre h1 {
     font-family: 'Satisfy', cursive;
-    color:white;
+    color: white;
     text-align: right;
     line-height: 60px;
     margin-top: 82px;
 }
 
-#banner-sobre p{
-    color:white;
+#banner-sobre p {
+    color: white;
     text-align: right;
 }
 
-#sobre-nos{
+#sobre-nos {
     text-align: center;
     padding: 20px 0px;
 }
 
-#sobre-nos h2{
+#sobre-nos h2 {
     color: #343F4B;
     font-size: 2.8rem;
     padding: 20px 0px 30px 0px;
 }
 
-#sobre-nos p{
+#sobre-nos p {
     color: #343F4B;
     font-size: 1.4rem;
 }
 
-#equipe-sobre{
+#equipe-sobre {
     background-color: #F1F5FA;
     padding: 30px 20px;
     margin-top: 30px;
 }
 
-#equipe-sobre h3{
-    color:#ff9640;
+#equipe-sobre h3 {
+    color: #ff9640;
     padding: 10px 0px 5px 0px;
     font-size: 1.5rem;
     text-transform: uppercase;
 }
 
-#equipe-sobre p{
+#equipe-sobre p {
     color: #343F4B;
     padding: 0px 20px;
     text-align: justify;
 }
 
-.foto-perfil{
+.foto-perfil {
     border-radius: 50%;
     width: 50%;
     border: 1px solid #ff9640;
@@ -288,7 +311,6 @@
     font-size: 3rem;
     color:white;
     text-align: right;
-    margin-top: 62px;
     line-height: 65px;
     height: 70vh;
 }
@@ -330,11 +352,11 @@
 }
 
 /*HEADER*/
-header{
+header {
     background-color: #010310cc;
 }
 
-.fonteHeader{
+.fonteHeader {
     color: #ff9640;
     font-family: "Rockwell";
     font-size: 1.5rem;
@@ -347,90 +369,72 @@ header{
 }
 
 .header-link {
-    color: #ffffff!important;
+    color: #ffffff !important;
 }
 
-.header-link:hover{
-    color:#6e5db3!important;
+.header-link:hover {
+    color: #6e5db3 !important;
 }
 
 /*FOOTER*/
-#footer{
-    padding-top:30px;
-}
 
-.coresFooter{
+footer {
     background-color: #ff9640;
     color: white;
+    padding: 40px 20px;
 }
 
-.btnFooter{
-    background-color: #6E5DB3;
+footer .menu-link {
     color: #ffffff;
-    padding: 8px 30px;
-    border: none;    
-    border-radius: 5px;
-    text-transform: uppercase;
-    cursor: pointer;  
+    line-height: 2;
 }
 
-.btnFooter:hover{
-    background-color: #4a3f78;
-}
-
-.linkFooter{
-    color: white;
+footer img {
+    width: 30px;
+    margin-right: 15px;
 }
 
 /* Iniciando CSS da busca recolhida (include) */
-.alinhamento-busca-recolhida{
+.alinhamento-busca-recolhida {
     display: flex;
     justify-content: center;
     margin-bottom: 50px;
 }
 
-#container-busca-recolhida{
+#container-busca-recolhida {
     background-color: #4a3f78;
-    padding: 10px 40px 30px 40px;
+    padding: 10px 30px 10px 30px;
 }
 
-#container-busca-recolhida h2{
+#container-busca-recolhida h2 {
     color: #ffffff;
-    font-size: 2.5rem;   
+    font-size: 2.5rem;
 }
 
-.container-seta-expande-busca{
-    height: 30px;
-}
-
-.container-h2-expande-busca{
-    height: 30px;
-}
-
-.ico-seta-expande-busca{
+.ico-seta-expande-busca {
     font-size: 6rem;
     color: rgba(255, 255, 255, 0.8);
     transform: rotate(90deg);
     background-color: transparent;
     border: none;
-    padding: 0px;
-    width: 0px;
-    height: 0px;
-    position: relative;
-    left: 360px;
-    top: 10px;
+    line-height: 0;
 }
 
-.ico-seta-expande-busca:hover{
-    color: #ffffff;  
+.ico-seta-expande-busca:hover {
+    color: #ffffff;
 }
 
-.ico-seta-expande-busca, .ico-seta-expande-busca:focus {
+.ico-seta-expande-busca,
+.ico-seta-expande-busca:focus {
     outline: 0;
-    box-shadow: none!important;
+    box-shadow: none !important;
 }
 
-.btn-busca-recolhida{
+#busca-recolhida-titulo {
+    padding: 10px 15px;
+}
+
+.btn-busca-recolhida {
     background-color: #FF9640;
     color: #ffffff;
     text-transform: uppercase;
@@ -440,12 +444,12 @@ header{
     width: 100%;
 }
 
-.btn-busca-recolhida:hover{
+.btn-busca-recolhida:hover {
     background-color: #E57011;
 }
 
 /*CSS Cadastro Guardião*/
-#formGuardiao{
+#formGuardiao {
     background-color: #fdead1;
     margin-top: 8rem;
     margin-left: auto;
@@ -453,41 +457,42 @@ header{
     margin-bottom: 2rem;
 }
 
-.tituloGuardiao{
+.tituloGuardiao {
     color: #FF9640;
 }
-.btnGuardiao{
+
+.btnGuardiao {
     background-color: #6E5DB3;
     color: #ffffff;
-    border: none;    
+    border: none;
     border-radius: 5px;
     cursor: pointer;
     float: right;
 }
 
-.btnGuardiao:hover{
+.btnGuardiao:hover {
     background-color: #4a3f78;
 }
 
 /*CSS Cadastro Animal*/
-#formAnimal{
+#formAnimal {
     background-color: #D6EBE8;
     margin-top: 8rem;
     margin-left: 3rem;
     margin-bottom: 2rem;
 }
 
-.tituloAnimal{
+.tituloAnimal {
     color: #2F7169;
 }
 
-.tituloCaracteristicasAnimal{
+.tituloCaracteristicasAnimal {
     color: #343F4B;
     font-weight: 700;
     font-size: 20px;
 }
 
-.botaoAnimal{
+.botaoAnimal {
     background-color: #6E5DB3;
     color: #ffffff;
     padding: 8px 15px;
@@ -496,58 +501,60 @@ header{
     border: none;
 }
 
-.botaoAnimal:hover{
+.botaoAnimal:hover {
     background-color: #4a3f78;
 }
 
-.botaoLimparECadastro{
+.botaoLimparECadastro {
     float: right;
 }
 
 
 /*CSS Cadastro Ong*/
-#formOng{
+#formOng {
     background-color: #E7E2FC;
     margin-top: 8rem;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 2rem;
 }
-.tituloOng{
+
+.tituloOng {
     color: #6E5DB3;
 }
-.btnOng{
+
+.btnOng {
     background-color: #6E5DB3;
     color: #ffffff;
-    border: none;    
+    border: none;
     border-radius: 5px;
     cursor: pointer;
     float: right;
 }
 
-.btnOng:hover{
+.btnOng:hover {
     background-color: #4a3f78;
 }
 
 
 /*CSS Cadstro de Anúncio*/
-#formAnuncio{
-    background-color:#e5e9f2;
-    margin-top: 8rem;
-    margin-left: 3rem;
-    margin-bottom: 2rem;
+#formAnuncio {
+    background-color: #e5e9f2;
+    margin-top: 0%;
+    margin-left: 0%;
+    margin-bottom: 0%;
 }
 
-.tituloAnuncio{
+.tituloAnuncio {
     color: #343F4B;
 }
 
-#botaoAnuncio{
+#botaoAnuncio {
     width: 200px;
     margin-left: 590px;
 }
 
-.espaco{
+.espaco {
     line-height: 2.2;
 }
 
@@ -577,7 +584,7 @@ header{
 }
 
 .btn-envio:hover {
-    background-color:#4a3f78;
+    background-color: #4a3f78;
 }
 
 .btn-desativado {
@@ -589,7 +596,7 @@ header{
     border-radius: 5px;
 }
 
-#apadrinhar{
+#apadrinhar {
     background-color: #D6EBE8;
 }
 
@@ -608,7 +615,7 @@ header{
     height: 45px;
 }
 
-.resultados-busca{
+.resultados-busca {
     padding-top: 85px;
 }
 
@@ -631,25 +638,36 @@ header{
 /* PERFIL DAS ONGS E GUARDIÕES */
 
 /*Informacoes*/
-#pfong_cx_info_principal{ /* ongs */
+#pfong_cx_info_principal {
+    /* ongs */
     background-color: #E7E2FC;
-    padding:10% 5% 5% 5%;
-    width: 100vw;
+    padding: 10% 5% 5% 5%;
 }
 
-#pfG_cx_info_principal{ /* guardiões */
+#pfG_cx_info_principal {
+    /* guardiões */
     background-color: #D6EBE8;
     padding: 10% 5% 5% 5%;
-    width: 100vw;
 }
 
-/* Enviar mensagem - Denunciar Perfil */ 
-#pfong_cx_i_txt { /* ongs */
+#perfilOng_imagem { /* ongs */
+    height: 300px;
+    width: 300px;
+}
+
+#perfilGua_imagem { /* guardiões */
+    height: 300px;
+    width: 300px;
+}
+
+/* Enviar mensagem - Denunciar Perfil */
+#pfong_cx_i_txt {
+    /* ongs */
     background-color: rgb(166, 160, 189);
     border-radius: 5px;
 }
 
-#pfong_cx_i_txt i{ /* ongs */
+#pfong_cx_i_txt i { /* ongs */
     font-size: 80px;
     color: rgb(0, 0, 0);
 }
@@ -659,9 +677,9 @@ header{
     color: #47525E;
 }
 
-#pfG_cx_i_txt p {  /* guardiões */   
-    margin-top:10px;
-    margin-left:10px;
+#pfG_cx_i_txt p { /* guardiões */
+    margin-top: 10px;
+    margin-left: 10px;
     font-weight: bold;
     margin-right: 20px;
     font-size: 0.9rem;
@@ -669,32 +687,41 @@ header{
 
 /* Animais das Ongs e dos Guardiões */
 
-#perfilOngGuar_animais {   
+#perfilOngGuar_animais {
     padding: 5%;
+}
+
+.btn-primary {
+    background-color: #6E5DB3 !important;
+    border: none
+}
+
+.btn-primary:hover {
+    background-color: #4a3f78 !important;
 }
 
 
 /* Mural das Ongs - Estamos Precisando de */
 
-#pfong_precisa_cx_principal{
+#pfong_precisa_cx_principal {
     background-color: #F3F2F5;
-    padding:60px 70px 100px 70px;
+    padding: 60px 70px 100px 70px;
 
 }
 
-.pfong_precisando{
+.pfong_precisando {
     background-color: white;
     border: 1px solid gray;
     border-radius: 5px;
     width: 300px;
     height: 70px;
-    text-align: center;  
-    padding-top: 20px; 
+    text-align: center;
+    padding-top: 20px;
     margin-top: 20px;
 }
 
 /*CSS da página de Anúncios*/
-#anuncios{
+#anuncios {
     margin-top: 9rem;
     margin-bottom: 3rem;
     margin-left: 3rem;
@@ -702,7 +729,7 @@ header{
 }
 
 /* Iniciando CSS da página Login */
-#main-login{
+#main-login {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -711,37 +738,37 @@ header{
     background-size: cover;
 }
 
-#main-login h1{
+#main-login h1 {
     color: #343F4B;
-    font-size: 2.8rem; 
-    padding: 30px 0px 15px 0px;  
+    font-size: 2.8rem;
+    padding: 30px 0px 15px 0px;
 }
 
-#main-login h2{
+#main-login h2 {
     color: #6E5DB3;
-    font-size: 1.8rem; 
-    padding: 0px 0px 15px 0px;  
+    font-size: 1.8rem;
+    padding: 0px 0px 15px 0px;
 }
 
-#container-form-login{
+#container-form-login {
     background-color: rgba(255, 255, 255, 0.6);
     padding-bottom: 40px;
     margin-top: 140px;
     border-radius: 20px;
 }
 
-.label-lembrar-dados{
+.label-lembrar-dados {
     font-size: 0.9rem;
     color: #343F4B;
 }
 
-.esqueci-senha{
+.esqueci-senha {
     font-size: 0.9rem;
     text-align: end;
     color: #343F4B;
 }
 
-.esqueci-senha:hover{
+.esqueci-senha:hover {
     color: #4a3f78;
     font-weight: 500;
 }
@@ -757,11 +784,11 @@ header{
 }
 
 .btn-login-enviar:hover {
-    background-color:#4a3f78;
+    background-color: #4a3f78;
 }
 
 /* Iniciando CSS da página Cadastre-se */
-#main-cadastre-se{
+#main-cadastre-se {
     display: flex;
     justify-content: center;
     padding: 10px 0px 60px 0px;
@@ -769,52 +796,52 @@ header{
     background-size: cover;
 }
 
-#container-box-cadastre-se{
+#container-box-cadastre-se {
     background-color: rgba(255, 255, 255, 0.6);
     margin: 140px 20px 0px 20px;
     border-radius: 20px;
     padding-bottom: 40px;
 }
 
-#container-box-cadastre-se h1{
+#container-box-cadastre-se h1 {
     color: #343F4B;
-    font-size: 2.8rem; 
-    padding: 55px 0px 15px 0px;  
+    font-size: 2.8rem;
+    padding: 55px 0px 15px 0px;
 }
 
-#container-box-cadastre-se p{
+#container-box-cadastre-se p {
     color: #343F4B;
     font-size: 1.1rem;
     text-align: justify;
     padding: 0px 0px 20px 0px;
 }
 
-#container-box-cadastre-se img{
+#container-box-cadastre-se img {
     position: relative;
     top: 20px;
 }
 
-.bg-cadastre-se-guardiao{
+.bg-cadastre-se-guardiao {
     background-color: #FF9640;
     border-radius: 20px 20px 0px 0px;
     height: 70px;
 }
 
-.bg-cadastre-se-ong{
+.bg-cadastre-se-ong {
     background-color: #6E5DB3;
     border-radius: 20px 20px 0px 0px;
     height: 70px;
 }
 
-.cor-laranja{
+.cor-laranja {
     background-color: #FF9640;
 }
 
-.cor-laranja:hover{
+.cor-laranja:hover {
     background-color: #E57011;
 }
 
-#container-box-cadastre-se .tem-cadastro{
+#container-box-cadastre-se .tem-cadastro {
     font-size: 0.9rem;
     color: #343F4B;
     text-align: center;
@@ -822,22 +849,21 @@ header{
     margin: 0px;
 }
 
-#container-box-cadastre-se .tem-cadastro:hover{
+#container-box-cadastre-se .tem-cadastro:hover {
     color: #4a3f78;
     font-weight: 500;
     text-decoration: none;
 }
 
-
-#pfG_adotados{
+#pfG_adotados {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    width: 50%;  
+    width: 50%;
 }
 
-#pfG_adotados h1{   
+#pfG_adotados h1 {
     color: #47525E;
     font-weight: bold;
     font-size: 1.8rem;
@@ -845,25 +871,26 @@ header{
     padding-top: 10px;
 }
 
-#pfG_adotados p{
+#pfG_adotados p {
     text-align: justify;
 }
 
-#pfG_animais_img4{
+#pfG_animais_img4 {
     background-image: url("../img/pfGuardiao_img1.jpg");
-        width: 100%;
-    
-}
-#pfG_animais_img5{
-    background-image: url("../img/pfGuardiao_img_2.jpg");
-    width: 100%;    
+    width: 100%;
+
 }
 
-#pfG_cx_temp{
+#pfG_animais_img5 {
+    background-image: url("../img/pfGuardiao_img_2.jpg");
+    width: 100%;
+}
+
+#pfG_cx_temp {
     padding: 0px;
 }
 
-#pfG_temp h1{
+#pfG_temp h1 {
     color: #47525E;
     font-weight: bold;
     font-size: 1.8rem;
@@ -875,10 +902,590 @@ header{
     text-align: justify;
 }
 
-#pfG_temp{
+#pfG_temp {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     width: 50%;
+}
+
+
+/* Iniciando CSS large devices (até 1200px) */
+@media(max-width: 1200px) {
+
+    /* PERFIL DA ONG E DO GUARDIÃO */
+    #pfong_cx_info_principal { /* ongs */
+        padding: 12% 5% 5% 5%;
+    }
+
+    #pfG_cx_info_principal { /* guardiões */
+        padding: 12% 5% 5% 5%;
+    }
+
+    #perfilOng_imagem {
+        /* ongs */
+        margin-top: 15px;
+        width: 65%;
+        height: 85%;
+    }
+
+    /*Início Página Index*/
+    .titulo-carrossel-home h1 {
+        font-size: 2.5rem;
+    }
+
+    .titulo-carrossel-home {
+        bottom: 200px;
+    }
+
+    #container-busca-expandida {
+        bottom: 92px;
+    }
+
+    #container-busca-expandida h2 {
+        font-size: 2rem;
+    }
+
+
+    #seja-guardiao-home {
+        margin-top: -45px;
+    }
+
+    #seja-guardiao-home h2 {
+        font-size: 2rem;
+        padding: 22px 0px;
+    }
+
+    #seja-guardiao-home p {
+        font-size: 1.4rem;
+        margin-top: -10px;
+    }
+
+    #como-funciona-home {
+        padding: 0px 10px;
+    }
+
+    #como-funciona-home h2 {
+        padding: 10px 0px;
+        font-size: 2rem;
+    }
+
+    #como-funciona-home h4 {
+        font-size: 1.2rem;
+    }
+
+    #como-funciona-home p {
+        font-size: 1rem;
+    }
+
+    #como-funciona-home button {
+        margin-bottom: 20px;
+    }
+
+    #doacoes-home h2 {
+        font-size: 2rem;
+    }
+
+    #doacoes-home p {
+        font-size: 1.4rem;
+        margin: 17px;
+    }
+
+    /*Fim da página Index*/
+}
+
+
+/* Iniciando CSS medium devices (até 992px) */
+@media(max-width: 992px) {
+
+    /* Estilos do header */
+
+        header {
+            width: 100vw;
+        }
+
+        .header-menu {
+            padding: .3rem .2rem;
+        }
+    
+        .fonteHeader {
+            font-size: 1.2rem;
+        }
+    
+        .header-link {
+            font-size: 1.2rem;
+            line-height: 2.5rem;
+        }
+    
+        .lista-menu {
+            padding-left: 35px;        
+            padding-bottom: 35px;        
+        }    
+    
+        /* PERFIL DA ONG E DO GUARDIÃO */
+        #pfong_cx_info_principal{ /* ongs */
+            padding: 15% 5% 5% 5%;
+        }
+    
+        #pfG_cx_info_principal{ /* guardiões */
+            padding: 15% 5% 5% 5%;
+        }
+    
+        #perfilOng_imagem { /* ongs */
+            width: 260px;
+            height: 260px;
+        }
+    
+        #perfilGua_imagem { /* guardiões */
+            width: 260px;
+            height: 260px;
+        }
+    
+        .pfOngGuard_titulo { /* ambos */
+            font-size: 1.5em;
+        }
+    
+        /* Iniciando CSS página Sobre  */
+        #banner-sobre{
+            padding: 100px 0px 30px 10px;
+            height: auto;
+        }
+    
+        #banner-sobre h1{
+            margin-top: 0px;
+            line-height: 50px;
+        }
+
+        /*Cadastro Guardiao*/
+        #formGuardiao{
+            margin-top: 72px;
+        }
+        
+        /*Cadastro Ong*/
+        #formOng{
+            margin-top: 72px;
+        }
+         /*Cadastro Animal*/
+         #formAnimal{
+            margin-left: 0px;
+        }
+
+        /* Iniciando CSS página Parceiros  */
+        #banner-parceiros{
+            padding: 100px 0px 30px 10px;
+            height: auto;
+        }
+
+        #banner-parceiros h1{
+            font-size: 2.5rem;
+            margin-top: 62px;
+            line-height: 50px;
+        }
+    }
+
+
+/* Iniciando CSS small devices (até 768px) */    
+@media(max-width: 768px) {
+
+    /* Estilos do header */
+    
+        .header-menu {
+            padding: .3rem .2rem;
+        }
+    
+        .fonteHeader {
+            font-size: 1.2rem;
+        }
+    
+        .header-link {
+            font-size: 1.2rem;
+            line-height: 2.5rem;
+        }
+    
+        .lista-menu {
+            padding-left: 35px;        
+            padding-bottom: 35px;        
+        }
+        
+        /* PERFIL DA ONG E DO GUARDIÃO */
+        #pfong_cx_info_principal{ /* ongs */
+            padding: 15% 5% 5% 5%;
+        }
+    
+        #pfG_cx_info_principal{ /* guardiões */
+            padding: 15% 5% 5% 5%;
+        }
+    
+        #perfilOng_imagem { /* ongs */
+            margin-top: 45px;
+            width: 230px;
+            height: 230px;
+        }
+    
+        #perfilGua_imagem { /* guardiões */
+            margin-top: 45px;
+            width: 230px;
+            height: 230px;
+        }
+    
+        .pfOngGuard_titulo { /* ambos */
+            font-size: 1.7em;
+        }
+        
+        
+        /* Iniciando CSS página Sobre  */
+        #banner-sobre{
+            height: auto;
+            width: 100vw;
+            padding: 100px 0px 30px 0px;
+        }
+    
+        #banner-sobre h1{
+            font-size: 2rem;
+            margin-top: 0px;
+            line-height: 40px;
+        }
+    
+        #sobre-nos h2{
+            font-size: 2rem;
+            padding: 10px 0px 15px 0px;
+        }
+    
+        #sobre-nos p{
+            font-size: 1rem;
+        }
+    
+        #equipe-sobre{
+            margin-top: 0px;
+            padding-top: 30px;
+        }
+    
+        #equipe-sobre h3{
+            font-size: 1.4rem;
+        }
+    
+        #equipe-sobre p{
+            padding: 0px;
+        }
+        
+        .foto-perfil{
+            width: 150px;
+        }
+
+         /*Cadastro Guardiao*/
+        #formGuardiao{
+            margin-top: 72px;
+        }
+
+         /*Cadastro Ong*/
+        #formOng{
+            margin-top: 72px;
+        }
+
+        /*Cadastro Animal*/
+        #formAnimal{
+            margin-left: 0px;
+        }
+        /*Menu Lateral ONG*/
+        .navbar-menu-principal{
+            display: none;
+        }
+        /*Menu lateral da ong*/
+        .navbar-menu-principal{ 
+            display: block;
+            background-color:#ff9640;
+            color:white;
+            width:100%;
+            padding: 10px;
+        }
+        .navbar-menu-itens.collapse { 
+            display: none; 
+        }
+        .navbar-menu-itens.show { 
+            display: block; 
+        }
+        #perfil-ong{
+            display: none;
+        }
+        /*Página cadastro Anúncio*/
+        #formAnuncio{
+            margin-top: 0%;
+            margin-left: 0%;
+            margin-bottom: 0%;
+        }
+
+        /* Iniciando CSS página Parceiros  */
+        #banner-parceiros{
+            height: auto;
+            width: 100vw;
+            padding: 100px 0px 30px 0px;
+        }
+
+        #titulo-carousel-parceiros{
+            font-size: 2rem;
+        }
+
+        #form-parceiros h2{
+            text-align: center;
+            font-size: 2rem;
+        }
+        
+        #form-parceiros p{
+            text-align: center;
+            font-size: 1rem;
+        }
+    }
+    
+
+/* Iniciando CSS extra small devices (até 576px) */    
+@media(max-width: 576px) {
+
+    /* Estilos do header */
+
+    .header-menu {
+        padding: .3rem .2rem;
+    }
+
+    .fonteHeader {
+        font-size: 1.2rem;
+    }
+
+    .header-link {
+        font-size: 1.2rem;
+        line-height: 2.5rem;
+    }
+
+    .lista-menu {
+        padding-left: 35px;
+        padding-bottom: 35px;
+    }
+
+    /* PERFIL DA ONG E DO GUARDIÃO */
+    #pfong_cx_info_principal{ /* ongs */
+        padding: 30% 5% 5% 5%;
+    }
+
+    #pfG_cx_info_principal{ /* guardiões */
+        padding: 30% 5% 5% 5%;
+    }
+
+    #perfilOng_imagem { /* ongs */
+        margin-top: 20px;
+        margin-bottom: 10px;
+        width: 170px;
+        height: 170px;
+    }
+
+    #perfilGua_imagem { /* guardiões */
+        margin-top: 0;
+        margin-bottom: 20px;
+        width: 170px;
+        height: 170px;
+    }
+
+    .pfOngGuard_titulo {
+        /* ambos */
+        font-size: 1.7em;
+    }
+
+     /* Iniciando CSS página Sobre  */
+     #banner-sobre h1{
+        text-align: left;
+    }
+
+    #banner-sobre p{
+        text-align: left;
+    }
+
+    /*Cadastro Guardiao*/
+    .tituloGuardiao {
+        font-size: 1.3rem;
+    }
+
+    #formGuardiao {
+        margin-top: 72px;
+    }
+
+    /*Cadastro Ong*/
+    .tituloOng {
+        font-size: 1.62rem;
+    }
+
+    #formOng {
+        margin-top: 72px;
+    }
+
+    /*Cadastro Animal*/
+    #formAnimal {
+        margin-left: 0px;
+    }
+
+    ::placeholder {
+        text-align: justify;
+    }
+    
+    .botaoAnimal {
+        margin-top: 10px;
+    }
+
+    /*Menu Lateral ONG*/
+    .navbar-menu-principal {
+        display: none;
+    }
+
+    /*Menu lateral da ong*/
+    .navbar-menu-principal {
+        display: block;
+        background-color: #ff9640;
+        color: white;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .navbar-menu-itens.collapse {
+        display: none;
+    }
+
+    .navbar-menu-itens.show {
+        display: block;
+    }
+
+    /*Página cadastro Anúncio*/
+    #formAnuncio {
+        margin-top: 0%;
+        margin-left: 0%;
+        margin-bottom: 0%;
+    }
+
+    /* Busca recolhida  */
+    
+    #container-busca-recolhida h2 {
+        font-size: 1.2rem;
+    }
+    
+    .ico-seta-expande-busca {
+        font-size: 3rem;
+    }
+    
+    /*Início Página de login*/
+    #main-login h1 {
+        font-size: 1.8rem;
+    }
+    
+    .p-2 {
+        width: 90%;
+    }
+    
+    .sobre-senha {
+        width: 43%;
+    }
+    
+    #main-login h2 {
+        font-size: 1.3rem;
+    }
+    
+    #container-form-login {
+        margin-top: 90px;
+    }
+    
+    /*Fim Página de login*/
+
+    /*Início Página Index*/
+    .titulo-carrossel-home h1 {
+        font-size: 1.4rem;
+    }
+    
+    .titulo-carrossel-home p {
+        color: transparent;
+    }
+    
+    .titulo-carrossel-home {
+        bottom: 10px;
+    }
+    
+    #container-busca-expandida {
+        bottom: 0px;
+        height: 50%;
+    }
+    
+    #container-busca-expandida h2 {
+        font-size: 1.5rem;
+    }
+    
+    .formulario-index {
+        flex-direction: column;
+    }
+    
+    .formulario-index-itens {
+        margin-bottom: -19px;
+    }
+    
+    .botao-home {
+        background-color: #6E5DB3;
+        color: #ffffff;
+        text-transform: uppercase;
+        padding: 8px 30px;
+        border: none;
+        border-radius: 5px;
+        width: 100%;
+    }
+    
+    .botao-home:hover {
+        background-color: #4a3f78;
+    }
+    
+    #seja-guardiao-home {
+        margin-top: -15px;
+    }
+    
+    #seja-guardiao-home h2 {
+        font-size: 1.8rem;
+        padding: 22px 0px;
+    }
+    
+    #seja-guardiao-home p {
+        font-size: 1.1rem;
+        margin-top: -10px;
+    }
+    
+    #como-funciona-home {
+        padding: 0px 10px;
+    }
+    
+    #como-funciona-home h2 {
+        padding: 10px 0px;
+        font-size: 1.8rem;
+    }
+    
+    #como-funciona-home h4 {
+        font-size: 1.2rem;
+    }
+    
+    #como-funciona-home p {
+        font-size: 1rem;
+    }
+    
+    #como-funciona-home button {
+        margin-bottom: 20px;
+    }
+    
+    #doacoes-home h2 {
+        font-size: 1.8rem;
+    }
+    
+    #doacoes-home p {
+        font-size: 1rem;
+        margin: 5px;
+    }
+
+    /*Fim da página Index*/
+
+    /* Iniciando CSS página Parceiros  */
+    #banner-parceiros h1{
+        text-align: left;
+        font-size: 2rem;
+        line-height: 40px;
+        margin-top: 20px;
+    }
 }

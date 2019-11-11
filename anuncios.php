@@ -26,37 +26,37 @@
         </section>
         <section>
             <div class="row p-3 d-flex justify-content-center align-items-center">
-                <div class="col-sm-3 shadow p-3 bg-white rounded">
-                    <div class="card p-1 m-1">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 shadow p-3">
+                    <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title text-center">Ração Pedigree Filhotes</h5>
+                            <h5 class="card-title text-center col-12">Ração Pedigree Filhotes</h5>
                             <p class="card-text text-center">5 unidades</p>
                             <a href="#" class="btn btn-outline-secondary d-flex justify-content-center">Entrar em contato</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-3 shadow p-3 bg-white rounded">
-                    <div class="card p-1 m-1">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 shadow p-3">
+                    <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title text-center">Vermífugo para cães até 10kg</h5>
+                            <h5 class="card-title text-center col-12">Vermífugo para cães até 10kg</h5>
                             <p class="card-text text-center">2 unidades </p>
                             <a href="#" class="btn btn-outline-secondary d-flex justify-content-center">Entrar em contato</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-3 shadow p-3 bg-white rounded">
-                    <div class="card p-1 m-1">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 shadow p-3">
+                    <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title text-center">Areia higiênica para gatos</h5>
+                            <h5 class="card-title text-center col-12">Areia higiênica para gatos</h5>
                             <p class="card-text text-center">10 unidades </p>
                             <a href="#" class="btn btn-outline-secondary d-flex justify-content-center">Entrar em contato</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-3 shadow p-3 bg-white rounded">
-                    <div class="card p-1 m-1">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 shadow p-3">
+                    <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title text-center">Bola de brinquedo para cães</h5>
+                            <h5 class="card-title text-center col-12">Bola de brinquedo para cães</h5>
                             <p class="card-text text-center">1 unidade </p>
                             <a href="#" class="btn btn-outline-secondary d-flex justify-content-center">Entrar em contato</a>
                         </div>
@@ -64,37 +64,37 @@
                 </div>
             </div>
             <div class="row p-3 d-flex justify-content-center align-items-center">
-                <div class="col-sm-3 shadow p-3 bg-white rounded">
-                    <div class="card p-1 m-1">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 shadow p-3">
+                    <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title text-center">Cortador de unhas para gatos</h5>
+                            <h5 class="card-title text-center col-12">Cortador de unhas para gatos</h5>
                             <p class="card-text text-center">1 unidade </p>
                             <a href="#" class="btn btn-outline-secondary d-flex justify-content-center">Entrar em contato</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-3 shadow p-3 bg-white rounded">
-                    <div class="card p-1 m-1">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 shadow p-3">
+                    <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title text-center">Guia para cães até 10kg</h5>
+                            <h5 class="card-title text-center col-12">Guia para cães até 10kg</h5>
                             <p class="card-text text-center">1 unidade </p>
                             <a href="#" class="btn btn-outline-secondary d-flex justify-content-center">Entrar em contato</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-3 shadow p-3 bg-white rounded">
-                    <div class="card p-1 m-1">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 shadow p-3">
+                    <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title text-center">Ração para cães até 25kg</h5>
-                            <p class="card-text text-center">5 unidades </p>
+                            <h5 class="card-title text-center">Ração para cães de até 25kg</h5>
+                            <p class="card-text text-center col-12">5 unidades </p>
                             <a href="#" class="btn btn-outline-secondary d-flex justify-content-center">Entrar em contato</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-3 shadow p-3 bg-white rounded">
-                    <div class="card p-1 m-1">
+                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 shadow p-3">
+                    <div class="card">
                         <div class="card-body text-center">
-                            <h5 class="card-title text-center">Ração para gatos até 5kg</h5>
+                            <h5 class="card-title text-center col-12">Ração para gatos até 5kg</h5>
                             <p class="card-text">3 unidades </p>
                             <a href="#" class="btn btn-outline-secondary d-flex justify-content-center">Entrar em contato</a>
                         </div>

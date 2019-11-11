@@ -19,13 +19,12 @@
 
 <body>
     <!-- include do header -->
-    <!--<?php include_once("includes/header.php")?>-->
+    <?php include_once("includes/header.php")?>
 
     <!-- início do formulário -->
     <main class= "container-fluid">
     <section class="row">
-        <!-- include do menu lateral -->
-        <!-- <?php include_once("includes/menu-ong.php")?>  -->
+        
         <form action="" class="card col-lg-8 col-md-12 col-sm-12 col-12 p-5" id="formGuardiao" style="width: 50rem">
             <!-- essa div é para o título -->
             <div class="form-group d-flex justify-content p-2">
@@ -42,7 +41,7 @@
                 <label for="apelido" class="col-sm-4 col-form-label">Apelido </label>
                 <div class="col-sm-8">
                     <input type="text" class="form-control" id="apelido"
-                        placeholder="Como seu nome irá aparecer para outros usuários">
+                        placeholder="Como nome irá aparecer para outros usuários">
                 </div>
             </div>
             <div class="form-group row">
@@ -73,7 +72,7 @@
                 <label for="senhaGuardiao" class="col-sm-4 col-form-label">Defina uma senha</label>
                 <div class="col-sm-8">
                     <input type="password" class="form-control" id="senhaGuardiao"
-                        placeholder="Escolha sua senha de no mínimo 6 caracteres">
+                        placeholder="Senha mínimo 6 caracteres">
                 </div>
             </div>
             <div class="form-group row">
