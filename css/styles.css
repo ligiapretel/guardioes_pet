@@ -906,6 +906,7 @@ footer img {
         width: 65%;
         height: 85%;
     }
+
     /*Início Página Index*/
     .titulo-carrossel-home h1 {
         font-size: 2.5rem;
@@ -1261,277 +1262,288 @@ footer img {
 
 
 /* Iniciando CSS extra small devices (até 576px) */
-    /* Estilos do header */
-        .header-menu {
-            padding: .3rem .2rem;
-        }
-    
-        .fonteHeader {
-            font-size: 1.2rem;
-        }
-    
-        .header-link {
-            font-size: 1.2rem;
-            line-height: 2.5rem;
-        }
-    
-        .lista-menu {
-            padding-left: 35px;        
-            padding-bottom: 35px;        
-        }
-        
-        /* PERFIL DA ONG E DO GUARDIÃO */
-        #pfong_cx_info_principal{ /* ongs */
-            padding:15% 5% 5% 5%;
-        }
-    
-        #pfG_cx_info_principal{ /* guardiões */
-            padding: 15% 5% 5% 5%;
-        }
-    
-        #perfilOng_imagem { /* ongs */
-            margin-top: 60px;
-            width: 60%;
-            height: 60%;
-        }
-    
-        #perfilGua_imagem { /* guardiões */
-            margin-top: 60px;
-            width: 60%;
-            height: 60%;
-        }
-    
-        .pfOngGuard_titulo { /* ambos */
-            font-size: 1.7em;
-        }
-        
-        
-        /* Iniciando CSS página Sobre  */
-        #banner-sobre h1 {
-            text-align: left;
-        }
-    
-        #banner-sobre p {
-            text-align: left;
-        }
+@media(max-width: 576px) {
+/* Estilos do header */
+.header-menu {
+    padding: .3rem .2rem;
+}
 
-        #banner-sobre{
-            height: auto;
-            width: 100vw;
-            padding: 100px 0px 30px 0px;
-        }
-    
-        #banner-sobre h1{
-            font-size: 2rem;
-            margin-top: 0px;
-            line-height: 40px;
-        }
-    
-        #sobre-nos h2{
-            font-size: 2rem;
-            padding: 10px 0px 15px 0px;
-        }
-    
-        #sobre-nos p{
-            font-size: 1rem;
-        }
-    
-        #equipe-sobre{
-            margin-top: 0px;
-            padding-top: 30px;
-        }
-    
-        #equipe-sobre h3{
-            font-size: 1.4rem;
-        }
-    
-        #equipe-sobre p{
-            padding: 0px;
-        }
-        
-        .foto-perfil{
-            width: 150px;
-        }
+.fonteHeader {
+    font-size: 1.2rem;
+}
 
-         /*Cadastro Guardiao*/
-         .tituloGuardiao {
-            font-size: 1.3rem;
-        }
-    
-        #formGuardiao {
-            margin-top: 72px;
-        }
+.header-link {
+    font-size: 1.2rem;
+    line-height: 2.5rem;
+}
 
-         /*Cadastro Ong*/
-         .tituloOng {
-            font-size: 1.62rem;
-        }
-    
-        #formOng {
-            margin-top: 72px;
-        }
+.lista-menu {
+    padding-left: 35px;
+    padding-bottom: 35px;
+}
 
-        /*Cadastro Animal*/
-        #formAnimal {
-            margin-left: 0px;
-        }
-    
-        ::placeholder {
-            text-align: justify;
-        }
-    
-        .botaoAnimal {
-            margin-top: 10px;
-        }
+/* PERFIL DA ONG E DO GUARDIÃO */
+#pfong_cx_info_principal {
+    /* ongs */
+    padding: 15% 5% 5% 5%;
+}
 
-        /*Menu Lateral ONG*/
-        .navbar-menu-principal{
-            display: none;
-        }
-        /*Menu lateral da ong*/
-        .navbar-menu-principal{ 
-            display: block;
-            background-color:#ff9640;
-            color:white;
-            width:100%;
-            padding: 10px;
-        }
-        .navbar-menu-itens.collapse { 
-            display: none; 
-        }
-        .navbar-menu-itens.show { 
-            display: block; 
-        }
-        #perfil-ong{
-            display: none;
-        }
-        /*Página cadastro Anúncio*/
-        #formAnuncio{
-            margin-top: 0%;
-            margin-left: 0%;
-            margin-bottom: 0%;
-        }
-        /* Busca recolhida  */
+#pfG_cx_info_principal {
+    /* guardiões */
+    padding: 15% 5% 5% 5%;
+}
 
-    #container-busca-recolhida h2 {
-        font-size: 1.2rem;
-    }
+#perfilOng_imagem {
+    /* ongs */
+    margin-top: 60px;
+    width: 60%;
+    height: 60%;
+}
 
-    .ico-seta-expande-busca {
-        font-size: 3rem;
-    }
+#perfilGua_imagem {
+    /* guardiões */
+    margin-top: 60px;
+    width: 60%;
+    height: 60%;
+}
 
-    /*Início Página de login*/
-    #main-login h1 {
-        font-size: 1.8rem;
-    }
+.pfOngGuard_titulo {
+    /* ambos */
+    font-size: 1.7em;
+}
 
-    .p-2 {
-        width: 90%;
-    }
 
-    .sobre-senha {
-        width: 43%;
-    }
+/* Iniciando CSS página Sobre  */
+#banner-sobre h1 {
+    text-align: left;
+}
 
-    #main-login h2 {
-        font-size: 1.3rem;
-    }
+#banner-sobre p {
+    text-align: left;
+}
 
-    #container-form-login {
-        margin-top: 90px;
-    }
+#banner-sobre {
+    height: auto;
+    width: 100vw;
+    padding: 100px 0px 30px 0px;
+}
 
-    /*Fim Página de login*/
+#banner-sobre h1 {
+    font-size: 2rem;
+    margin-top: 0px;
+    line-height: 40px;
+}
 
-    /*Início Página Index*/
-    .titulo-carrossel-home h1 {
-        font-size: 1.4rem;
-    }
+#sobre-nos h2 {
+    font-size: 2rem;
+    padding: 10px 0px 15px 0px;
+}
 
-    .titulo-carrossel-home p {
-        color: transparent;
-    }
+#sobre-nos p {
+    font-size: 1rem;
+}
 
-    .titulo-carrossel-home {
-        bottom: 10px;
-    }
+#equipe-sobre {
+    margin-top: 0px;
+    padding-top: 30px;
+}
 
-    #container-busca-expandida {
-        bottom: 0px;
-        height: 50%;
-    }
+#equipe-sobre h3 {
+    font-size: 1.4rem;
+}
 
-    #container-busca-expandida h2 {
-        font-size: 1.5rem;
-    }
+#equipe-sobre p {
+    padding: 0px;
+}
 
-    .formulario-index {
-        flex-direction: column;
-    }
+.foto-perfil {
+    width: 150px;
+}
 
-    .formulario-index-itens {
-        margin-bottom: -19px;
-    }
+/*Cadastro Guardiao*/
+.tituloGuardiao {
+    font-size: 1.3rem;
+}
 
-    .botao-home {
-        background-color: #6E5DB3;
-        color: #ffffff;
-        text-transform: uppercase;
-        padding: 8px 30px;
-        border: none;
-        border-radius: 5px;
-        width: 100%;
-    }
+#formGuardiao {
+    margin-top: 72px;
+}
 
-    .botao-home:hover {
-        background-color: #4a3f78;
-    }
+/*Cadastro Ong*/
+.tituloOng {
+    font-size: 1.62rem;
+}
 
-    #seja-guardiao-home {
-        margin-top: -15px;
-    }
+#formOng {
+    margin-top: 72px;
+}
 
-    #seja-guardiao-home h2 {
-        font-size: 1.8rem;
-        padding: 22px 0px;
-    }
+/*Cadastro Animal*/
+#formAnimal {
+    margin-left: 0px;
+}
 
-    #seja-guardiao-home p {
-        font-size: 1.1rem;
-        margin-top: -10px;
-    }
+::placeholder {
+    text-align: justify;
+}
 
-    #como-funciona-home {
-        padding: 0px 10px;
-    }
+.botaoAnimal {
+    margin-top: 10px;
+}
 
-    #como-funciona-home h2 {
-        padding: 10px 0px;
-        font-size: 1.8rem;
-    }
+/*Menu Lateral ONG*/
+.navbar-menu-principal {
+    display: none;
+}
 
-    #como-funciona-home h4 {
-        font-size: 1.2rem;
-    }
+/*Menu lateral da ong*/
+.navbar-menu-principal {
+    display: block;
+    background-color: #ff9640;
+    color: white;
+    width: 100%;
+    padding: 10px;
+}
 
-    #como-funciona-home p {
-        font-size: 1rem;
-    }
+.navbar-menu-itens.collapse {
+    display: none;
+}
 
-    #como-funciona-home button {
-        margin-bottom: 20px;
-    }
+.navbar-menu-itens.show {
+    display: block;
+}
 
-    #doacoes-home h2 {
-        font-size: 1.8rem;
-    }
+#perfil-ong {
+    display: none;
+}
 
-    #doacoes-home p {
-        font-size: 1rem;
-        margin: 5px;
-    }
+/*Página cadastro Anúncio*/
+#formAnuncio {
+    margin-top: 0%;
+    margin-left: 0%;
+    margin-bottom: 0%;
+}
 
-    /*Fim da página Index*/
-    }
-    
+/* Busca recolhida  */
+
+#container-busca-recolhida h2 {
+    font-size: 1.2rem;
+}
+
+.ico-seta-expande-busca {
+    font-size: 3rem;
+}
+
+/*Início Página de login*/
+#main-login h1 {
+    font-size: 1.8rem;
+}
+
+.p-2 {
+    width: 90%;
+}
+
+.sobre-senha {
+    width: 43%;
+}
+
+#main-login h2 {
+    font-size: 1.3rem;
+}
+
+#container-form-login {
+    margin-top: 90px;
+}
+
+/*Fim Página de login*/
+
+/*Início Página Index*/
+.titulo-carrossel-home h1 {
+    font-size: 1.4rem;
+}
+
+.titulo-carrossel-home p {
+    color: transparent;
+}
+
+.titulo-carrossel-home {
+    bottom: 10px;
+}
+
+#container-busca-expandida {
+    bottom: 0px;
+    height: 50%;
+}
+
+#container-busca-expandida h2 {
+    font-size: 1.5rem;
+}
+
+.formulario-index {
+    flex-direction: column;
+}
+
+.formulario-index-itens {
+    margin-bottom: -19px;
+}
+
+.botao-home {
+    background-color: #6E5DB3;
+    color: #ffffff;
+    text-transform: uppercase;
+    padding: 8px 30px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.botao-home:hover {
+    background-color: #4a3f78;
+}
+
+#seja-guardiao-home {
+    margin-top: -15px;
+}
+
+#seja-guardiao-home h2 {
+    font-size: 1.8rem;
+    padding: 22px 0px;
+}
+
+#seja-guardiao-home p {
+    font-size: 1.1rem;
+    margin-top: -10px;
+}
+
+#como-funciona-home {
+    padding: 0px 10px;
+}
+
+#como-funciona-home h2 {
+    padding: 10px 0px;
+    font-size: 1.8rem;
+}
+
+#como-funciona-home h4 {
+    font-size: 1.2rem;
+}
+
+#como-funciona-home p {
+    font-size: 1rem;
+}
+
+#como-funciona-home button {
+    margin-bottom: 20px;
+}
+
+#doacoes-home h2 {
+    font-size: 1.8rem;
+}
+
+#doacoes-home p {
+    font-size: 1rem;
+    margin: 5px;
+}
+
+/*Fim da página Index*/
+}
