@@ -39,7 +39,6 @@
                         nulla modi non iure necessitatibus aspernatur, tenetur ipsum odit sed nesciunt! Molestiae ab
                         cupiditate voluptate facere iste obcaecati iusto dolores.</p>
                 </div>
-                <!-- <hr class="col-10 d-xl-none d-sm-none"> -->
                 <div class="col-12 col-sm-5 col-xl-4 d-flex flex-column align-items-center">
                     <img class="foto-perfil img-fluid" src="img/perfil-sobre/claudia.jpg" alt="foto perfil">
                     <h3>Cláudia Leite</h3>
@@ -47,7 +46,6 @@
                         nulla modi non iure necessitatibus aspernatur, tenetur ipsum odit sed nesciunt! Molestiae ab
                         cupiditate voluptate facere iste obcaecati iusto dolores.</p>
                 </div>
-                <!-- <hr class="col-10 d-xl-none"> -->
                 <div class="col-12 col-sm-5 col-xl-4 d-flex flex-column align-items-center">
                     <img class="foto-perfil img-fluid" src="img/perfil-sobre/luana.png" alt="foto perfil">
                     <h3>Luana Solimeno</h3>
@@ -55,11 +53,6 @@
                         nulla modi non iure necessitatibus aspernatur, tenetur ipsum odit sed nesciunt! Molestiae ab
                         cupiditate voluptate facere iste obcaecati iusto dolores.</p>
                 </div>
-            <!-- </div> -->
-            <!-- <div class="d-flex justify-content-center px-xl-4">
-                <hr class="col-11 col-xl-12 d-sm-none">
-            </div> -->
-            <!-- <div class="row justify-content-around"> -->
                 <div class="col-12 col-sm-5 col-xl-4 d-flex flex-column align-items-center">
                     <img class="foto-perfil img-fluid" src="img/perfil-sobre/chai.png" alt="foto perfil">
                     <h3>Chaiana Hermes</h3>
@@ -67,7 +60,6 @@
                         nulla modi non iure necessitatibus aspernatur, tenetur ipsum odit sed nesciunt! Molestiae ab
                         cupiditate voluptate facere iste obcaecati iusto dolores.</p>
                 </div>
-                <!-- <hr class="col-10 d-xl-none"> -->
                 <div class="col-12 col-sm-5 col-xl-4 d-flex flex-column align-items-center">
                     <img class="foto-perfil img-fluid" src="img/perfil-sobre/ligia.png" alt="foto perfil">
                     <h3>Ligia Pretel</h3>
@@ -75,7 +67,6 @@
                         nulla modi non iure necessitatibus aspernatur, tenetur ipsum odit sed nesciunt! Molestiae ab
                         cupiditate voluptate facere iste obcaecati iusto dolores.</p>
                 </div>
-                <!-- <hr class="col-10 d-xl-none d-sm-none"> -->
                 <div class="col-12 col-sm-5 col-xl-4 d-flex flex-column align-items-center">
                     <img class="foto-perfil img-fluid" src="img/perfil-sobre/anae.png" alt="foto perfil">
                     <h3>Anaê Ross</h3>
@@ -83,11 +74,6 @@
                         nulla modi non iure necessitatibus aspernatur, tenetur ipsum odit sed nesciunt! Molestiae ab
                         cupiditate voluptate facere iste obcaecati iusto dolores.</p>
                 </div>
-            <!-- </div> -->
-            <!-- <div class="d-flex justify-content-center px-xl-4">
-                <hr class="col-11 col-xl-12">
-            </div> -->
-            <!-- <div class="row"> -->
                 <div class="col-12 col-sm-5 col-xl-4 d-flex flex-column align-items-center">
                     <img class="foto-perfil img-fluid" src="img/perfil-sobre/giuliana.jpg" alt="foto perfil">
                     <h3>Giuliana Gabrielli</h3>

@@ -14,103 +14,63 @@
     <link href="img/escudo.png" sizes="32x32" rel="shortcut icon" />
     <link href="css/styles.css" rel="stylesheet" />
     <link href='https://fonts.googleapis.com/css?family=Rockwell' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Satisfy&display=swap" rel="stylesheet">
     <title>Guardiões Pet | Parceiros</title>
 </head>
 
 <body>
     <?php include_once("includes/header.php")?>
-    <main>
-        <section>
-            <div class="jumbotron parceiros d-flex">
-                <h1 class="display-4 d-flex flex-row justify-content-center align-items-end"><span
-                        id="titulo-jumbo-parceiros">Seja um de nossos parceiros!</span></h1>
-            </div>
+    <main class="d-flex flex-column justify-content-center">
+        <section id="banner-parceiros" class="col-12">
+            <h1 class="col-9 col-sm-6 col-md-5 col-xl-5">Sua empresa ou instituição pode ser parceira e ajudar animais, ONGs e guardiões de muitas formas.</h1>
         </section>
         <section>
-            <h1 id="titulo-carousel-parceiros">Conheça alguns de nossos parceiros!</h1>
-            <div id="carouselExampleInterval" class="carousel slide bg-light" data-ride="carousel">
-                <div class="carousel-inner d-flex shadow p-3 mb-5 bg-white rounded">
-                    <div class="carousel-item active" data-interval="1100">
-                        <div class="row">
-                            <div class="col-lg-4 col-md-4 col-sm-4 col-sm-4">
-                                <img src="img/parceiros/cobasi.png" class="d-block w-100 " alt="logo loja cobasi">
-                            </div>
-                            <div class="col-lg-4 col-md-4 col-sm-4 col-sm-4">
-                                <img src="img/parceiros/petz.png" class="d-block w-100 " alt="logo loja petz">
-                            </div>
-                            <div class="col-lg-4 col-md-4 col-sm-4 col-sm-4 d-flex align-items-center">
-                                <img src="img/parceiros/drhato.png" class="d-block w-100 " alt="logo loja Dr. Hato">
-                            </div>
-                        </div>
+            <h1 id="titulo-carousel-parceiros">Conheça alguns de nossos parceiros</h1>
+            <div id="carrossel" class="carousel slide" data-ride="carousel" data-interval="4000">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="img/parceiros/slide01_xl.jpg" class="d-none d-sm-none d-md-block w-100" alt="Parceiros">
+                        <img src="img/parceiros/slide01_sm.jpg" class="d-block d-md-none d-lg-none d-xl-none w-100" alt="Parceiros">
                     </div>
-                    <div class="carousel-item" data-interval="1100">
-                        <div class="row">
-                            <div class="col-lg-4 col-md-4 col-sm-4 col-sm-4">
-                                <img src="img/parceiros/amigobicho.png" class="d-block w-100 "
-                                    alt="Logo Ong Amigo Bicho">
-                            </div>
-                            <div class="col-lg-4 col-md-4 col-sm-4 col-sm-4">
-                                <img src="img/parceiros/farmaciavet.png" class="d-block w-100 "
-                                    alt="Logo loja Farmácia veterinário">
-                            </div>
-                            <div class="col-lg-4 col-md-4 col-sm-4 col-sm-4 d-flex align-items-center">
-                                <img src="img/parceiros/institutomel.png" class="d-block w-100 "
-                                    alt="Logo Instituto Luisa Mel">
-                            </div>
-                        </div>
+                    <div class="carousel-item">
+                        <img src="img/parceiros/slide02_xl.jpg" class="d-none d-sm-none d-md-block w-100" alt="Parceiros">
+                        <img src="img/parceiros/slide02_sm.jpg" class="d-block d-md-none d-lg-none d-xl-none w-100" alt="Parceiros">
                     </div>
-                    <div class="carousel-item" data-interval="1100">
-                        <div class="row">
-                            <div class="col-lg-4 col-md-4 col-sm-4 col-sm-4">
-                                <img src="img/parceiros/viralata.png" class="d-block w-100 " alt="Logo ONG vira-lata">
-                            </div>
-                            <div class="col-lg-4 col-md-4 col-sm-4 col-sm-4">
-                                <img src="img/parceiros/vetsatai.png" class="d-block w-100 "
-                                    alt="Logo Veterinário Satai">
-                            </div>
-                            <div class="col-lg-4 col-md-4 col-sm-4 col-sm-4 d-flex align-items-center">
-                                <img src="img/parceiros/vicioanimal.png" class="d-block w-100 "
-                                    alt="Logo ONG Vicion Animal">
-                            </div>
-                        </div>
+                    <div class="carousel-item">
+                        <img src="img/parceiros/slide03_xl.jpg" class="d-none d-sm-none d-md-block w-100" alt="Parceiros">
+                        <img src="img/parceiros/slide03_sm.jpg" class="d-block d-md-none d-lg-none d-xl-none w-100" alt="Parceiros">
                     </div>
                 </div>
-                <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
+                <a class="carousel-control-prev" href="#carrossel" role="button" data-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only bg-dark">Previous</span>
                 </a>
-                <a class="carousel-control-next" href="#carouselExampleInterval" role="button" data-slide="next">
+                <a class="carousel-control-next" href="#carrossel" role="button" data-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only bg-dark">Next</span>
                 </a>
             </div>
         </section>
-        <h3 class="d-flex justify-content-center align-items-center p-5">Seja um de nossos parceiros preenchendo o
-            formulário abaixo</h3>
-        <section class="container d-flex justify-content-center align-items-center">
-            <form method="POST" action="#">
-                <div class="row">
-                    <div class="form-group col-lg-3 col-md-3 col-sm3 col-xs-3">
-                        <label>Nome Social/Jurídico:</label>
-                        <input type="text" class="form-control" name="nome" placeholder="Digite seu nome">
-                    </div>
-                    <div class="form-group col-lg-3 col-md-3 col-sm3 col-xs-3">
-                        <label>CPF ou CNPJ:</label><br>
-                        <input type="text" class="form-control" name="cpfCnpj" placeholder="Digite seu CPF ou CNPJ">
-                    </div>
-                    <div class="form-group col-lg-3 col-md-3 col-sm3 col-xs-3">
-                        <label>E-mail:</label><br>
-                        <input type="email" class="form-control" name="email" placeholder="Digite seu e-mail">
-                    </div>
-                    <div class="form-group col-lg-3 col-md-3 col-sm3 col-xs-3">
-                        <label>Telefone:</label><br>
-                        <input type="telefone" class="form-control" name="telefone" placeholder="(00) 0000-0000">
-                    </div>
+        <section id="form-parceiros">
+            <div class="row d-flex justify-content-around px-md-5">
+                <div class="col-12 col-md-6 col-lg-5 text-right">
+                    <h2>Ficou interessado?</h2>
+                    <p>Se você se identifica com essa causa e quer contribuir com o projeto, registre seu interesse no formulário ao lado. Retornaremos seu contato propondo opções de parceria.</p>
                 </div>
-                <textarea type="text" rows="5" class="form-control p-5" placeholder="Deixe sua mensagem aqui"
-                    name="mensagem"></textarea>
-                <button type="submit" class="btn btn-outline-info m-5">Quero ser um Parceiro!</button>
-            </form>
+                <div class="col-12 col-md-6 col-lg-5">
+                    <form method="POST" action="#">
+                        <input type="text" class="form-control mb-3" name="nome-parceria" placeholder="Nome">
+                        <input type="text" class="form-control mb-3" name="empresa-parceria" placeholder="Empresa">
+                        <input type="email" class="form-control mb-3" name="email-parceria" placeholder="E-mail">
+                        <input type="telefone" class="form-control mb-3" name="telefone-parceria"
+                            placeholder="Telefone (00) 0000-0000">
+                        <textarea type="text" rows="5" class="form-control mb-3"
+                            placeholder="Que tipo de parceria você gostaria de propor?"
+                            name="mensagem-parceria"></textarea>
+                        <div class="row justify-content-center justify-content-md-end">
+                            <button type="submit" class="mr-md-3">Quero ser um parceiro</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </section>
     </main>
     <?php include_once("includes/footer.php")?>

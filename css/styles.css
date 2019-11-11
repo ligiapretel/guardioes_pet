@@ -19,11 +19,9 @@
     background-color:#4a3f78;
 }
 
-
-#main-home{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+::selection {
+    background-color: #4a3f78;
+    color: #FFFFFF;
 }
 
 /*CSS Menu Chat ONG´s*/
@@ -67,7 +65,13 @@
     width: 20%;
 }
 
-/* Iniciando CSS do titulo do Carrossel - Home */
+/* Iniciando CSS do título do Carrossel - Home */
+#main-home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .titulo-carrossel-home{
     bottom: 490px;
 }
@@ -269,27 +273,60 @@
     border: 1px solid #ff9640;
     margin-top: 2rem;
 }
+
 /*CSS PÁGINA PARCEIROS*/
-.jumbotron.parceiros{
-    background-image: url("../img/parceiros/parceiro.jpg");
+#banner-parceiros{
+    background-image: url("../img/parceiros/bg_parceiros.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    height: 700px;
-    color:black;
+    background-position: right top;
+    padding: 150px 0px 30px 70px;
 }
-#titulo-jumbo-parceiros{
-    background-color:#ffffff82;
-    border-radius: 5px;
-    padding: 5px;
-    color: #ff9640;
+
+#banner-parceiros h1{
+    font-family: 'Satisfy', cursive;
+    font-size: 3rem;
+    color:white;
+    text-align: right;
+    margin-top: 62px;
+    line-height: 65px;
+    height: 70vh;
 }
-.foto-parceiros{
-    width:30%;
-}
+
 #titulo-carousel-parceiros{
     text-align:center;
-    padding:10px;
-    color:#ff9640;
+    padding: 60px 0px 30px 0px;
+    color:#343F4B;
+    font-size: 2.8rem;
+}
+
+#form-parceiros{
+    background-color: #F1F5FA;
+    padding: 80px 20px;
+}
+
+#form-parceiros h2{
+    color: #343F4B;
+    font-size: 2.5rem;
+    padding-bottom: 20px;
+}
+
+#form-parceiros p{
+    color: #343F4B;
+    font-size: 1.4rem;
+}
+
+#form-parceiros button{
+    background-color: #6E5DB3;
+    color: #ffffff;
+    text-transform: uppercase;
+    padding: 8px 30px;
+    border: none;
+    border-radius: 5px;
+}
+
+#form-parceiros button:hover {
+    background-color:#4a3f78;
 }
 
 /*HEADER*/
@@ -844,112 +881,4 @@ header{
     justify-content: center;
     align-items: flex-start;
     width: 50%;
-}
-
-/* Iniciando CSS extra small devices (até 576px) */    
-@media(max-width: 576px) {
-
-    /* Estilos do header */
-
-    .header-menu {
-        padding: .3rem .2rem;
-    }
-
-    .fonteHeader {
-        font-size: 1.2rem;
-    }
-
-    .btn-roxo {
-        background-color:transparent;
-        text-transform: none;
-        padding: 8px 0px;
-        border: none;
-    }
-
-    /* PERFIL DA ONG E DO GUARDIÃO */
-    #pfong_cx_info_principal{ /* ongs */
-        padding:25% 5% 5% 5%;
-        width: 100vw;   
-    }
-
-    #pfG_cx_info_principal{ /* guardiões */
-        padding: 25% 5% 5% 5%;
-        width: 100vw;
-    }
-
-    /* Iniciando CSS página Sobre  */
-    #banner-sobre h1{
-        text-align: left;
-    }
-
-    #banner-sobre p{
-        text-align: left;
-    }
- 
-}
-
-/* Iniciando CSS medium devices (até 768px) */    
-@media(max-width: 768px) {
-
-    /* Iniciando CSS página Sobre  */
-    #banner-sobre{
-        height: auto;
-        width: 100vw;
-        padding: 100px 0px 30px 0px;
-    }
-
-    #banner-sobre h1{
-        font-size: 2rem;
-        margin-top: 0px;
-        line-height: 40px;
-    }
-
-    #sobre-nos h2{
-        font-size: 2rem;
-        padding: 10px 0px 15px 0px;
-    }
-
-    #sobre-nos p{
-        font-size: 1rem;
-    }
-
-    #equipe-sobre{
-        margin-top: 0px;
-        padding-top: 30px;
-    }
-
-    #equipe-sobre h3{
-        font-size: 1.4rem;
-    }
-
-    #equipe-sobre p{
-        padding: 0px;
-    }
-    
-    .foto-perfil{
-        width: 150px;
-    }
-
-}
-
-/* Iniciando CSS large devices (até 992px) */    
-@media(max-width: 992px) {
-
-    /* Iniciando CSS página Sobre  */
-    #banner-sobre{
-        padding: 100px 0px 30px 10px;
-        height: auto;
-    }
-
-    #banner-sobre h1{
-        margin-top: 0px;
-        line-height: 50px;
-    }
-    
-}
-
-
-/* Iniciando CSS extra large devices (até 1200px) */    
-@media(max-width: 1200px) {
-
 }
