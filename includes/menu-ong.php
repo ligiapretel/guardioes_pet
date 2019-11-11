@@ -34,8 +34,7 @@
                         
                     </div>
                 </div>
-            </aside>
-            
+            </aside>         
       
             
             
