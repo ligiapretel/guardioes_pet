@@ -586,24 +586,22 @@ footer img {
 /*Informacoes*/
 #pfong_cx_info_principal{ /* ongs */
     background-color: #E7E2FC;
-    padding:10% 5% 5% 5%;
-    width: 100vw;
+    padding: 10% 5% 5% 5%;
 }
 
 #pfG_cx_info_principal{ /* guardiões */
     background-color: #D6EBE8;
     padding: 10% 5% 5% 5%;
-    width: 100vw;
 }
 
 #perfilOng_imagem { /* ongs */
-    height: 95%;
-    width: 55%;
+    height: 300px;
+    width: 300px;
 }
 
 #perfilGua_imagem { /* guardiões */
-    height: 95%;
-    width: 55%;
+    height: 300px;
+    width: 300px;
 }
 
 /* Enviar mensagem - Denunciar Perfil */ 
@@ -612,7 +610,7 @@ footer img {
     border-radius: 5px;
 }
 
-#pfong_cx_i_txt i{ /* ongs */
+#pfong_cx_i_txt i { /* ongs */
     font-size: 80px;
     color: rgb(0, 0, 0);
 }
@@ -860,21 +858,18 @@ footer img {
 
     /* PERFIL DA ONG E DO GUARDIÃO */
     #pfong_cx_info_principal{ /* ongs */
-       padding:15% 5% 5% 5%;
-       width: 100vw;
+       padding: 12% 5% 5% 5%;
    }
 
    #pfG_cx_info_principal{ /* guardiões */
-       padding: 15% 5% 5% 5%;
-       width: 100vw;
+       padding: 12% 5% 5% 5%;
    }
 
-   #perfilOng_imagem { /* ongs */
-       margin-top: 15px;
-       width: 65%;
-       height: 85%;
-   }
+   
 }
+
+
+
 
 
 /* Iniciando CSS large devices (até 992px) */    
@@ -906,25 +901,21 @@ footer img {
     
         /* PERFIL DA ONG E DO GUARDIÃO */
         #pfong_cx_info_principal{ /* ongs */
-            padding:15% 5% 5% 5%;
-            width: 100vw;
+            padding: 15% 5% 5% 5%;
         }
     
         #pfG_cx_info_principal{ /* guardiões */
             padding: 15% 5% 5% 5%;
-            width: 100vw;
         }
     
         #perfilOng_imagem { /* ongs */
-            margin-top: 50px;
-            width: 65%;
-            height: 65%;
+            width: 260px;
+            height: 260px;
         }
     
         #perfilGua_imagem { /* guardiões */
-            margin-top: 50px;
-            width: 65%;
-            height: 65%;
+            width: 260px;
+            height: 260px;
         }
     
         .pfOngGuard_titulo { /* ambos */
@@ -983,7 +974,7 @@ footer img {
         
         /* PERFIL DA ONG E DO GUARDIÃO */
         #pfong_cx_info_principal{ /* ongs */
-            padding:15% 5% 5% 5%;
+            padding: 15% 5% 5% 5%;
         }
     
         #pfG_cx_info_principal{ /* guardiões */
@@ -991,15 +982,15 @@ footer img {
         }
     
         #perfilOng_imagem { /* ongs */
-            margin-top: 60px;
-            width: 60%;
-            height: 60%;
+            margin-top: 45px;
+            width: 230px;
+            height: 230px;
         }
     
         #perfilGua_imagem { /* guardiões */
-            margin-top: 60px;
-            width: 60%;
-            height: 60%;
+            margin-top: 45px;
+            width: 230px;
+            height: 230px;
         }
     
         .pfOngGuard_titulo { /* ambos */
@@ -1115,24 +1106,25 @@ footer img {
 
     /* PERFIL DA ONG E DO GUARDIÃO */
     #pfong_cx_info_principal{ /* ongs */
-        padding: 25% 5% 5% 5%;
+        padding: 30% 5% 5% 5%;
     }
 
     #pfG_cx_info_principal{ /* guardiões */
-        padding: 25% 5% 5% 5%;
+        padding: 30% 5% 5% 5%;
     }
 
     #perfilOng_imagem { /* ongs */
         margin-top: 20px;
-        width: 60%;
-        height: 90%;
+        margin-bottom: 10px;
+        width: 170px;
+        height: 170px;
     }
 
     #perfilGua_imagem { /* guardiões */
         margin-top: 0;
-        margin-bottom: 30px;
-        width: 60%;
-        height: 85%;
+        margin-bottom: 20px;
+        width: 170px;
+        height: 170px;
     }
 
     .pfOngGuard_titulo { /* ambos */
