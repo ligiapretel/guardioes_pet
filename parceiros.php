@@ -22,7 +22,7 @@
     <?php include_once("includes/header.php")?>
     <main class="d-flex flex-column justify-content-center">
         <section id="banner-parceiros" class="col-12">
-            <h1 class="col-9 col-sm-6 col-md-5 col-xl-5">Sua empresa ou instituição pode ser parceira e ajudar animais, ONGs e guardiões de muitas formas.</h1>
+            <h1 class="col-9 col-sm-6 col-md-6 col-l-5">Sua empresa ou instituição pode ser parceira e ajudar animais, ONGs e guardiões de muitas formas.</h1>
         </section>
         <section>
             <h1 id="titulo-carousel-parceiros">Conheça alguns de nossos parceiros</h1>
@@ -30,15 +30,15 @@
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <img src="img/parceiros/slide01_xl.jpg" class="d-none d-sm-none d-md-block w-100" alt="Parceiros">
-                        <img src="img/parceiros/slide01_sm.jpg" class="d-block d-md-none d-lg-none d-xl-none w-100" alt="Parceiros">
+                        <img src="img/parceiros/slide01_xs.jpg" class="d-block d-md-none d-lg-none d-xl-none w-100" alt="Parceiros">
                     </div>
                     <div class="carousel-item">
                         <img src="img/parceiros/slide02_xl.jpg" class="d-none d-sm-none d-md-block w-100" alt="Parceiros">
-                        <img src="img/parceiros/slide02_sm.jpg" class="d-block d-md-none d-lg-none d-xl-none w-100" alt="Parceiros">
+                        <img src="img/parceiros/slide02_xs.jpg" class="d-block d-md-none d-lg-none d-xl-none w-100" alt="Parceiros">
                     </div>
                     <div class="carousel-item">
                         <img src="img/parceiros/slide03_xl.jpg" class="d-none d-sm-none d-md-block w-100" alt="Parceiros">
-                        <img src="img/parceiros/slide03_sm.jpg" class="d-block d-md-none d-lg-none d-xl-none w-100" alt="Parceiros">
+                        <img src="img/parceiros/slide03_xs.jpg" class="d-block d-md-none d-lg-none d-xl-none w-100" alt="Parceiros">
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carrossel" role="button" data-slide="prev">
