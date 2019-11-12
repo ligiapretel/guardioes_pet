@@ -20,10 +20,12 @@
 <body>
     <?php include_once('includes/header.php');?>
     <section id="perfil-animal">
+        <!--H1 que ficara ativado somente no mobile -->
+        <h1 id="perfil-anim-nome-responsivo" class="text-center">Bernardo</h1>
         <div class="container">
-            <div class="row justify-content-center pt-5 pb-5">
-                <div id="dados-animal" class="col-5">
-                    <h1>Bernardo</h1>
+            <div id="perfil-anim-cx-info" class="row justify-content-center">
+                <div id="dados-animal" class="col-11 col-sm-6 col-md-6 col-lg-6 col-xl-5">
+                    <h1 id="perfil-anim-nome-desk" class="perfil-anim-titulo">Bernardo</h1>
                     <p><b>Idade</b>: 3 anos</p>
                     <p><b>Sexo</b>: macho</p>
                     <p><b>Porte</b>: grande</p>
@@ -33,17 +35,17 @@
                     <p><b>Outras informações</b>: tem medo de dormir sozinho, gosta de morder sapatos</p>
                     <br>
 
-                    <div class="row">
-                        <div class="col">
-                            <img src="img/icon_mail.png" class="w-100">
+                    <div class="row" id="perfil-anim-icon-msgm-respos">
+                        <div>
+                            <a href="#"><img id="perfil_anim_icon-msgm" src="img/icon_mail.png"></a>
                         </div>
-                        <div class="col-10">
+                        <div id="perfil-anim-msgm-respons" class="col-9 col-sm-10 col-md-9 col-lg-10 col-xl-10">
                             <p>Quer perguntar algo sobre mim?<br>Envie uma mensagem!</p>
                         </div>
                     </div>
 
                 </div>
-                <div class="col-6">
+                <div id="perfil-anim-cx-img" class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                     <div class=container>
                         <div class="row">
                             <div id="perfil-animal-carrossel" class="carousel slide" data-ride="carousel">
@@ -72,28 +74,28 @@
                             </div>
                         </div>
                         <div class="row justify-content-between mt-1">
-                            <div class="col-6 pl-0">
-                                <img src="img/icon_whatsapp.png" alt="">
-                                <img src="img/icon_facebook.png" alt="">
-                                <img src="img/icon_twitter.png" alt="">
-                                <p class="d-inline">Compartilhar</p>
+                            <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 pl-0">
+                                <img class="perfil-anim-icon-respos" src="img/icon_whatsapp.png" alt="">
+                                <img class="perfil-anim-icon-respos" src="img/icon_facebook.png" alt="">
+                                <img class="perfil-anim-icon-respos" src="img/icon_twitter.png" alt="">
+                                <p class="d-inline"><a href="#">Compartilhar</a></p>
                             </div>
 
-                            <div class="col-6 pr-0 text-right">
-                                <p class="d-inline">Favoritar</p>
-                                <img src="img/like_no.png" class="col-1 pr-0 pl-0 ml-1">
+                            <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 pr-0 text-right">
+                                <p class="d-inline"><a href="#">Favoritar</a></p>
+                                <img class="perfil-anim-icon-respos col-1 pr-0 pl-0 ml-1" src="img/like_no.png">
                             </div>
                         </div>
                         <div class="row justify-content-between mt-4">
-                            <div>
-                                <button class="btn-envio">Adotar</button>
+                            <div class="cx-btn-respons">
+                                <button class="perfil-anim-btn-envio">Adotar</button>
                             </div>
-                            <div>
-                                <button class="btn-desativado" title="Opção indisponível no momento">Lar
+                            <div class="cx-btn-respons">
+                                <button class="perfil-anim-btn-desativado" title="Opção indisponível no momento">Lar
                                     temporário</button>
                             </div>
-                            <div id=botao-apadrinhar>
-                                <button class="btn-envio"><a href="#apadrinhar">Apadrinhar</a></button>
+                            <div class="cx-btn-respons" id="pefil-anim-botao-apadrinhar">
+                                <button class="perfil-anim-btn-envio"><a href="#apadrinhar">Apadrinhar</a></button>
                             </div>
                         </div>
                     </div>
@@ -107,8 +109,8 @@
     <section class="perfil-animal">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-11 pt-5 pb-5">
-                    <h2>Sobre mim</h2>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-11 pt-5 pb-5 text-justify">
+                    <h2 class="perfil-anim-titulo">Sobre mim</h2>
                     <p>Ele foi encontrado em meio a Rodovia Fernão Dias, atropelado e sem conseguir se levantar. No
                         veterinário, o prognóstico é que ele não andaria mais, mas pra quem quer viver, isso não é nada
                         né?</p>
@@ -123,19 +125,19 @@
 
 
     <section class="pt-5 pb-5" id="apadrinhar">
-        <div class="container">
+        <div class="container d-flex-justify-content-center">
             <div class="row justify-content-center">
-                <div class="col-11">
-                    <h2>Fazer uma doação</h2>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-11 text-justify">
+                    <h2 class="perfil-anim-titulo">Fazer uma doação</h2>
                     <p>Não pode me adotar nem me abrigar, mas quer me ajudar? Meus tios e tias estão sempre precisando
                         de ração e outras coisinhas, que tal? Lá na página de anúncios da instituição que cuida de mim
                         você pode ver do que eles estão precisando.</p>
                     <p>Ah, e você também pode entrar em contato com eles se quiser doar alguma quantia em dinheiro</p>
                 </div>
             </div>
-            <div class="row justify-content-around pt-3 col-12">
-                <div class="col-3">
-                   <a href="http://localhost/guardioes_pet/anuncios.php">
+            <div class="row justify-content-between m-0 pt-5 col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <div class="col-4 col-sm-4 col-md-3 col-lg-3 col-xl-3 ">
+                    <a href="http://localhost/guardioes_pet/anuncios.php">
                         <figure class="figure">
                             <img src="img/perfil_doar_01.jpg" class="figure-img img-fluid rounded rounded-circle"
                                 alt="Photo by Autri Taheri on Unsplash">
@@ -143,8 +145,8 @@
                         </figure>
                     </a>
                 </div>
-                <div class="col-3">
-                    <a href="http://localhost/guardioes_pet/anuncios.php">             
+                <div class="col-4 col-sm-4 col-md-3 col-lg-3 col-xl-3 ">
+                    <a href="http://localhost/guardioes_pet/anuncios.php">
                         <figure class="figure">
                             <img src="img/perfil_doar_02.jpg" class="figure-img img-fluid rounded rounded-circle"
                                 alt="Photo by Matthew Henry on Unsplash">
@@ -152,7 +154,7 @@
                         </figure>
                     </a>
                 </div>
-                <div class="col-3">
+                <div class="col-4 col-sm-4 col-md-3 col-lg-3 col-xl-3 ">
                     <a href="http://localhost/guardioes_pet/anuncios.php">
                         <figure class="figure">
                             <img src="img/perfil_doar_03.jpg" class="figure-img img-fluid rounded rounded-circle"
@@ -166,7 +168,7 @@
     </section>
     <!-- Abrindo seção para include da busca recolhida -->
     <div class="alinhamento-busca-recolhida mt-5">
-        <section id="container-busca-recolhida" class="col-10">
+        <section id="container-busca-recolhida" class="col-10 col-sm-10 col-md-8 col-lg-9 col-xl-10">
             <?php include_once('includes/buscaRecolhida.php')?>
         </section>
     </div>

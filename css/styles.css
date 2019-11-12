@@ -559,6 +559,27 @@ footer img {
 }
 
 /*página de perfil do animal*/
+#perfil-anim-cx-info {
+    padding: 40px 0px 40px 0px;
+}
+
+#perfil_anim_icon-msgm {
+    width: 54px;
+    margin-left: 15px;
+}
+
+.perfil-anim-icon-respos {
+    width: 20px;
+}
+
+.perfil-anim-titulo {
+    margin-bottom: 40px;
+
+}
+
+#perfil-anim-nome-responsivo {
+    display: none;
+}
 
 #perfil-animal {
     background-color: #D6EBE8;
@@ -574,7 +595,7 @@ footer img {
     height: 13px;
 }
 
-.btn-envio {
+.perfil-anim-btn-envio {
     background-color: #6E5DB3;
     color: #ffffff;
     text-transform: uppercase;
@@ -583,11 +604,11 @@ footer img {
     border-radius: 5px;
 }
 
-.btn-envio:hover {
+.perfil-anim-btn-envio:hover {
     background-color: #4a3f78;
 }
 
-.btn-desativado {
+.perfil-anim-btn-desativado {
     background-color: #ADB7C3;
     color: #ffffff;
     text-transform: uppercase;
@@ -988,6 +1009,25 @@ footer img {
     }
 
     /*Fim da página Index*/
+
+    /*---INICIO PERFIL DOS ANIMAIS ---*/
+    .perfil-anim-btn-envio {
+        padding: 10px 15px;
+    }
+    .perfil-anim-btn-desativado {
+        padding: 10px 15px;
+    }
+    #perfil_anim_icon-msgm {
+        width: 40px;
+        margin-left: 15px;
+    }
+    #perfil-anim-nome-responsivo {
+        display: none;
+    }
+    #perfil-anim-cx-info {
+        padding-top: 40px;
+    }
+    /*--FIM PERFIL ANIMAL--*/
 }
 
 
@@ -1077,6 +1117,41 @@ footer img {
             margin-top: 62px;
             line-height: 50px;
         }
+
+        /*---INICIO PERFIL DOS ANIMAIS---*/
+        .perfil-anim-btn-envio {
+            padding: 5px 10px;
+        } 
+        .perfil-anim-btn-desativado {
+            padding: 5px 5px;
+        }  
+        #perfil-anim-nome-responsivo {
+            display: none;
+        }  
+        #perfil-anim-nome-desk {
+            display: block;  
+        } 
+        #perfil-anim-cx-img {  
+            padding: 0;
+        }  
+        #perfil-anim-cx-info {
+            padding-top: 40px;
+        }  
+        .perfil-anim-icon-respos {
+            display: none;
+        }     
+        #perfil-anim-icon-msgm-respos {
+            display: flex;
+        }
+        #dados-animal {
+            margin-top: 0;
+            border: none;
+            padding: 30px 10px;
+            border-radius: 5px;
+            padding-top: 0;
+            padding-left: 28px;
+        }
+        /*--FIM PERFIL ANIMAL--*/
     }
 
 
@@ -1239,6 +1314,52 @@ footer img {
             text-align: center;
             font-size: 1rem;
         }
+
+        /*---INICIO PERFIL DOS ANIMAIS*/
+        .perfil-anim-btn-envio {
+            width: 100%;
+        }
+        .perfil-anim-btn-desativado {
+            padding: 10px 15px;
+            width: 100%;
+            margin: 10px 0px;
+        }
+        .cx-btn-respons {
+            width: 100%;
+        }   
+        #perfil-anim-nome-responsivo {
+            display: none;
+        }   
+        #perfil-anim-nome-desk {
+            display: block;
+        }   
+        #perfil-anim-cx-img {
+            order: -1;
+            padding: 0;
+        }   
+        #perfil-anim-cx-info {
+            order: -2;
+            margin-top: 20px;
+        }   
+        .perfil-anim-icon-respos {
+            display: none;
+        }   
+        #perfil-anim-msgm-respons {
+            display: none;
+        }   
+        #perfil-anim-icon-msgm-respos {
+            display: flex;
+            justify-content: center;
+        }   
+        #dados-animal {
+            margin-top: 0;
+            border: none;
+            padding: 30px 10px;
+            border-radius: 5px;
+            padding-top: 0;
+            padding-left: 28px;    
+        }
+        /*--FIM PERFIL ANIMAL--*/
     }
     
 
@@ -1498,4 +1619,53 @@ footer img {
         line-height: 40px;
         margin-top: 20px;
     }
+
+    /*---INICIO PAGINA PERFIL DOS ANIMAIS---*/
+    .perfil-anim-btn-envio {
+        width: 100%;
+    }
+    .perfil-anim-btn-desativado {
+        width: 100%;
+        margin: 20px 0px;
+    }
+    .cx-btn-respons {
+        width: 100%;
+    }
+    #perfil-anim-nome-responsivo {
+        display: block;
+        background-color: #E57011;
+        margin: 20px 20px 0px 20px;
+        padding: 20px;
+        border-radius: 5px 5px 0px 0px;
+        box-shadow: inset 0px 0px 15px 0px;
+    }
+    #perfil-anim-nome-desk {
+        display: none;
+    }
+    #perfil-anim-cx-img {
+        order: -1;
+        padding: 0px 20px;
+        
+    }
+    #perfil-anim-cx-info {
+        order: -2;
+    }
+    #dados-animal {
+        margin-top: 40px;
+        padding: 15px 5px;
+    }
+    .perfil-anim-icon-respos {
+        display: none;
+    }
+    #perfil-anim-msgm-respons {
+        display: none;
+    }
+    #perfil-anim-icon-msgm-respos {
+        display: flex;
+        justify-content: center;
+    }
+    #perfil-animal-carrossel {
+        background-color: #E57011;
+    }
+    /*---FIM PERFIL ANIMAL---*/
 }
