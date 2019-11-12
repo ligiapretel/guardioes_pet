@@ -15,8 +15,8 @@
 <body>
     <!-- Incluindo header -->
     <?php include_once("includes/header.php")?>
-    <main id="main-cadastre-se">
-        <div id="container-box-cadastre-se" class="col-4">
+    <main id="main-cadastre-se" >
+        <div id="container-box-cadastre-se" class="col-lg-4 col-md-5 col-sm-5 col-xs-4">
             <div class="row justify-content-center bg-cadastre-se-ong">
                 <img src="img/ico-cadastre-se-ong.png" alt="Cadastro da ONG" />
             </div>
@@ -31,9 +31,8 @@
                 </div>
             </div>
             <div class="row justify-content-center">
-                <div class="col-10 text-center">
-                <a href="cadastroOng.php"><button class="btn-busca-expandida" type="submit" name="cadastre-se-ong">Cadastro
-                        ONG</button></a>
+                <div class="botaoCadOng col-10 text-center">
+                <a href="cadastroOng.php"><button class="btn-busca-expandida" type="submit" name="cadastre-se-ong">Cadastro ONG</button></a>
                 </div>
             </div>
             <div class="row justify-content-center">
@@ -42,7 +41,7 @@
                 </div>
             </div>
         </div>
-        <div id="container-box-cadastre-se" class="col-4">
+        <div id="container-box-cadastre-se" class="col-lg-4 col-md-5 col-sm-5 col-xs-4">
             <div class="row justify-content-center bg-cadastre-se-guardiao">
                 <img src="img/ico-cadastre-se-guardiao.png" alt="Cadastro do Guardião" />
             </div>
@@ -58,8 +57,7 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-10 text-center">
-                <a href="cadastroGuardiao.php"><button class="btn-busca-expandida cor-laranja" type="submit" name="cadastre-se-guardiao">Cadastro
-                        Guardião</button></a>
+                <a href="cadastroGuardiao.php"><button class="botaoCadGuardiao btn-busca-expandida cor-laranja" type="submit" name="cadastre-se-guardiao">Cadastro Guardião</button></a>
                 </div>
             </div>
             <div class="row justify-content-center">
