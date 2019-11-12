@@ -86,7 +86,7 @@
 }
 
 /* Iniciando CSS Home */
-#main-home{
+#main-home {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -296,7 +296,7 @@
 }
 
 /*CSS PÁGINA PARCEIROS*/
-#banner-parceiros{
+#banner-parceiros {
     background-image: url("../img/parceiros/bg_parceiros.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -306,39 +306,39 @@
     flex-direction: column;
 }
 
-#banner-parceiros h1{
+#banner-parceiros h1 {
     font-family: 'Satisfy', cursive;
     font-size: 3rem;
-    color:white;
+    color: white;
     text-align: right;
     line-height: 65px;
     margin-top: 82px;
 }
 
-#titulo-carousel-parceiros{
-    text-align:center;
+#titulo-carousel-parceiros {
+    text-align: center;
     padding: 60px 0px 30px 0px;
-    color:#343F4B;
+    color: #343F4B;
     font-size: 2.8rem;
 }
 
-#form-parceiros{
+#form-parceiros {
     background-color: #F1F5FA;
     padding: 80px 20px;
 }
 
-#form-parceiros h2{
+#form-parceiros h2 {
     color: #343F4B;
     font-size: 2.5rem;
     padding-bottom: 20px;
 }
 
-#form-parceiros p{
+#form-parceiros p {
     color: #343F4B;
     font-size: 1.4rem;
 }
 
-#form-parceiros button{
+#form-parceiros button {
     background-color: #6E5DB3;
     color: #ffffff;
     text-transform: uppercase;
@@ -348,7 +348,7 @@
 }
 
 #form-parceiros button:hover {
-    background-color:#4a3f78;
+    background-color: #4a3f78;
 }
 
 /*HEADER*/
@@ -559,6 +559,27 @@ footer img {
 }
 
 /*página de perfil do animal*/
+#perfil-anim-cx-info {
+    padding: 40px 0px 40px 0px;
+}
+
+#perfil_anim_icon-msgm {
+    width: 54px;
+    margin-left: 15px;
+}
+
+.perfil-anim-icon-respos {
+    width: 20px;
+}
+
+.perfil-anim-titulo {
+    margin-bottom: 40px;
+
+}
+
+#perfil-anim-nome-responsivo {
+    display: none;
+}
 
 #perfil-animal {
     background-color: #D6EBE8;
@@ -574,7 +595,7 @@ footer img {
     height: 13px;
 }
 
-.btn-envio {
+.perfil-anim-btn-envio {
     background-color: #6E5DB3;
     color: #ffffff;
     text-transform: uppercase;
@@ -583,11 +604,11 @@ footer img {
     border-radius: 5px;
 }
 
-.btn-envio:hover {
+.perfil-anim-btn-envio:hover {
     background-color: #4a3f78;
 }
 
-.btn-desativado {
+.perfil-anim-btn-desativado {
     background-color: #ADB7C3;
     color: #ffffff;
     text-transform: uppercase;
@@ -635,6 +656,10 @@ footer img {
     text-decoration: none;
 }
 
+#resul-busca-match {
+    display: none;
+}
+
 /* PERFIL DAS ONGS E GUARDIÕES */
 
 /*Informacoes*/
@@ -650,12 +675,14 @@ footer img {
     padding: 10% 5% 5% 5%;
 }
 
-#perfilOng_imagem { /* ongs */
+#perfilOng_imagem {
+    /* ongs */
     height: 300px;
     width: 300px;
 }
 
-#perfilGua_imagem { /* guardiões */
+#perfilGua_imagem {
+    /* guardiões */
     height: 300px;
     width: 300px;
 }
@@ -667,17 +694,20 @@ footer img {
     border-radius: 5px;
 }
 
-#pfong_cx_i_txt i { /* ongs */
+#pfong_cx_i_txt i {
+    /* ongs */
     font-size: 80px;
     color: rgb(0, 0, 0);
 }
 
-#pfG_cx_i_txt i { /* guardiões */
+#pfG_cx_i_txt i {
+    /* guardiões */
     font-size: 40px;
     color: #47525E;
 }
 
-#pfG_cx_i_txt p { /* guardiões */
+#pfG_cx_i_txt p {
+    /* guardiões */
     margin-top: 10px;
     margin-left: 10px;
     font-weight: bold;
@@ -908,4 +938,913 @@ footer img {
     justify-content: center;
     align-items: flex-start;
     width: 50%;
+}
+
+/* Iniciando CSS large devices (até 1200px) */
+@media(max-width: 1200px) {
+
+    /* PERFIL DA ONG E DO GUARDIÃO */
+    #pfong_cx_info_principal {
+        /* ongs */
+        padding: 12% 5% 5% 5%;
+    }
+
+    #pfG_cx_info_principal {
+        /* guardiões */
+        padding: 12% 5% 5% 5%;
+    }
+
+
+
+    /*Início Página Index*/
+    .titulo-carrossel-home h1 {
+        font-size: 2.5rem;
+    }
+
+    .titulo-carrossel-home {
+        bottom: 200px;
+    }
+
+    #container-busca-expandida {
+        bottom: 92px;
+    }
+
+    #container-busca-expandida h2 {
+        font-size: 2rem;
+    }
+
+
+    #seja-guardiao-home {
+        margin-top: -45px;
+    }
+
+    #seja-guardiao-home h2 {
+        font-size: 2rem;
+        padding: 22px 0px;
+    }
+
+    #seja-guardiao-home p {
+        font-size: 1.4rem;
+        margin-top: -10px;
+    }
+
+    #como-funciona-home {
+        padding: 0px 10px;
+    }
+
+    #como-funciona-home h2 {
+        padding: 10px 0px;
+        font-size: 2rem;
+    }
+
+    #como-funciona-home h4 {
+        font-size: 1.2rem;
+    }
+
+    #como-funciona-home p {
+        font-size: 1rem;
+    }
+
+    #como-funciona-home button {
+        margin-bottom: 20px;
+    }
+
+    #doacoes-home h2 {
+        font-size: 2rem;
+    }
+
+    #doacoes-home p {
+        font-size: 1.4rem;
+        margin: 17px;
+    }
+
+    /*Fim da página Index*/
+
+    /*Início da página cadastre-se*/
+    .botaoCadGuardiao {
+        margin-top: 23px;
+    }
+
+    #main-cadastre-se {
+        padding: 100px 0px;
+    }
+
+    /*Fim da página cadastre-se*/
+}
+
+
+
+
+
+
+/* Iniciando CSS medium devices (até 992px) */
+@media(max-width: 992px) {
+
+    /* Estilos do header */
+
+    header {
+        width: 100vw;
+    }
+
+    .header-menu {
+        padding: .3rem .2rem;
+    }
+
+    .fonteHeader {
+        font-size: 1.2rem;
+    }
+
+    .header-link {
+        font-size: 1.2rem;
+        line-height: 2.5rem;
+    }
+
+    .lista-menu {
+        padding-left: 35px;
+        padding-bottom: 35px;
+    }
+
+    /* PERFIL DA ONG E DO GUARDIÃO */
+    #pfong_cx_info_principal {
+        /* ongs */
+        padding: 15% 5% 5% 5%;
+    }
+
+    #pfG_cx_info_principal {
+        /* guardiões */
+        padding: 15% 5% 5% 5%;
+    }
+
+    #perfilOng_imagem {
+        /* ongs */
+        width: 260px;
+        height: 260px;
+    }
+
+    #perfilGua_imagem {
+        /* guardiões */
+        width: 260px;
+        height: 260px;
+    }
+
+    .pfOngGuard_titulo {
+        /* ambos */
+        font-size: 1.5em;
+    }
+
+    /* Iniciando CSS página Sobre  */
+    #banner-sobre h1 {
+        line-height: 50px;
+    }
+
+    /*Cadastro Guardiao*/
+    #formGuardiao {
+        margin-top: 72px;
+    }
+
+    /*Cadastro Ong*/
+    #formOng {
+        margin-top: 72px;
+    }
+
+    /*Cadastro Animal*/
+    #formAnimal {
+        margin-left: 0px;
+    }
+
+    /* Iniciando CSS página Parceiros  */
+    #banner-parceiros h1{
+        margin-top: 0px;
+        font-size: 2.5rem;
+        line-height: 50px;
+    }
+
+    /*---INICIO PERFIL DOS ANIMAIS---*/
+    .perfil-anim-btn-envio {
+        padding: 10px 15px;
+    }
+
+    .perfil-anim-btn-desativado {
+        padding: 10px 15px;
+    }
+
+    #perfil_anim_icon-msgm {
+        width: 40px;
+        margin-left: 15px;
+    }
+
+    #perfil-anim-nome-responsivo {
+        display: none;
+    }
+
+    #perfil-anim-nome-desk {
+        display: block;
+    }
+
+    #perfil-anim-cx-img {
+        padding: 0;
+    }
+
+    #perfil-anim-cx-info {
+        padding-top: 40px;
+    }
+
+    .perfil-anim-icon-respos {
+        display: none;
+    }
+
+    #perfil-anim-icon-msgm-respos {
+        display: flex;
+    }
+
+    #dados-animal {
+        margin-top: 0;
+        border: none;
+        padding: 30px 10px;
+        border-radius: 5px;
+        padding-top: 0;
+        padding-left: 28px;
+    }
+
+    /*--FIM PERFIL ANIMAL--*/
+
+    /*--INICIO RESULTADO BUSCA--*/
+    /*precisamos verificar o certo*/
+    /* #resul-busca-match {
+            display: none;
+            } */
+    /*--FIM RESULTADO BUSCA--*/
+    /*--INICIO RESULTADO BUSCA--*/
+    #resul-busca-match {
+        display: block;
+        border-radius: 5px;
+        padding: 5px 10px;
+        box-shadow: 0 0 20px 0px #6E5DB3;
+    }
+
+    #resul-busca-match-desk {
+        display: none;
+    }
+
+    #result-busca-cx {
+        margin: 0;
+        padding: 0;
+    }
+
+    .resul-busca-card {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #resul-busca-btn-final {
+        padding: 8px 40px;
+    }
+
+    /*--FIM RESULTADO BUSCA--*/
+}
+
+
+/* Iniciando CSS small devices (até 768px) */
+@media(max-width: 768px) {
+
+    /* Estilos do header */
+    
+        .header-menu {
+            padding: .3rem .2rem;
+        }
+    
+        .fonteHeader {
+            font-size: 1.2rem;
+        }
+    
+        .header-link {
+            font-size: 1.2rem;
+            line-height: 2.5rem;
+        }
+    
+        .lista-menu {
+            padding-left: 35px;        
+            padding-bottom: 35px;        
+        }
+        
+        /* PERFIL DA ONG E DO GUARDIÃO */
+        #pfong_cx_info_principal{ /* ongs */
+            padding: 15% 5% 5% 5%;
+        }
+    
+        #pfG_cx_info_principal{ /* guardiões */
+            padding: 15% 5% 5% 5%;
+        }
+    
+        #perfilOng_imagem { /* ongs */
+            margin-bottom: 30px;
+            width: 230px;
+            height: 230px;
+        }
+    
+        #perfilGua_imagem { /* guardiões */
+            margin-top: 45px;
+            width: 230px;
+            height: 230px;
+        }
+    
+        .pfOngGuard_titulo { /* ambos */
+            font-size: 1.7em;
+        }
+
+        #pfOng_cx_info_principal_ordem { /*ong */
+            order: 2;
+        }
+        
+        /* Iniciando CSS página Sobre  */
+        #banner-sobre h1{
+            font-size: 2rem;
+            margin-top: 0px;
+            line-height: 40px;
+        }
+    
+        #sobre-nos h2{
+            font-size: 2rem;
+            padding: 10px 0px 15px 0px;
+        }
+    
+        #sobre-nos p{
+            font-size: 1rem;
+        }
+    
+        #equipe-sobre{
+            margin-top: 0px;
+            padding-top: 30px;
+        }
+    
+        #equipe-sobre h3{
+            font-size: 1.4rem;
+        }
+    
+        #equipe-sobre p{
+            padding: 0px;
+        }
+        
+        .foto-perfil{
+            width: 150px;
+        }
+
+         /*Cadastro Guardiao*/
+        #formGuardiao{
+            margin-top: 72px;
+        }
+
+         /*Cadastro Ong*/
+        #formOng{
+            margin-top: 72px;
+        }
+
+        /*Cadastro Animal*/
+        #formAnimal{
+            margin-bottom: 0px;
+            margin-left: 0px;
+            margin-top: 0px;
+            padding-top: 30px !important;
+        }
+        /*Menu Lateral ONG*/
+        .navbar-menu-principal{
+            display: none;
+        }
+        /*Menu lateral da ong*/
+        .navbar-menu-principal{ 
+            display: block;
+            background-color:#ff9640;
+            color:white;
+            width:100%;
+            padding: 10px;
+        }
+        .navbar-menu-itens.collapse { 
+            display: none; 
+        }
+        .navbar-menu-itens.show { 
+            display: block; 
+        }
+        #perfil-ong{
+            display: none;
+        }
+
+        #menu-ong{
+            width: 100%;
+            margin-top: 72px;
+            padding: 0px !important;
+        }
+
+        /*Página cadastro Anúncio*/
+        #formAnuncio{
+            margin-top: 0%;
+            margin-left: 0%;
+            margin-bottom: 0%;
+        }
+
+        /* Iniciando CSS página Parceiros  */
+        #titulo-carousel-parceiros{
+            font-size: 2rem;
+        }
+
+        #form-parceiros h2{
+            text-align: center;
+            font-size: 2rem;
+        }
+        
+        #form-parceiros p{
+            text-align: center;
+            font-size: 1rem;
+        }
+
+        /*---INICIO PERFIL DOS ANIMAIS*/
+        .perfil-anim-btn-envio {
+            width: 100%;
+        }
+        .perfil-anim-btn-desativado {
+            padding: 10px 15px;
+            width: 100%;
+            margin: 10px 0px;
+        }
+        .cx-btn-respons {
+            width: 100%;
+        }   
+        #perfil-anim-nome-responsivo {
+            display: none;
+        }   
+        #perfil-anim-nome-desk {
+            display: block;
+        }   
+        #perfil-anim-cx-img {
+            order: -1;
+            padding: 0;
+        }   
+        #perfil-anim-cx-info {
+            order: -2;
+            margin-top: 20px;
+        }   
+        .perfil-anim-icon-respos {
+            display: none;
+        }   
+        #perfil-anim-msgm-respons {
+            display: none;
+        }   
+        #perfil-anim-icon-msgm-respos {
+            display: flex;
+            justify-content: center;
+        }   
+        #dados-animal {
+            margin-top: 0;
+            border: none;
+            padding: 30px 10px;
+            border-radius: 5px;
+            padding-top: 0;
+            padding-left: 28px;    
+        }
+        /*--FIM PERFIL ANIMAL--*/
+
+        /*---INICIO RESULTADO BUSCA---*/
+   
+        #resul-busca-match {
+            display: block;
+            border-radius: 5px;
+            padding: 5px 10px;
+            box-shadow:0 0 20px 0px #6E5DB3;
+        }    
+        #resul-busca-match-desk {
+            display: none; 
+        }  
+        #result-busca-cx {
+            margin: 0;
+            padding: 0;
+        }   
+        .resul-busca-card {
+            display: flex;
+            flex-direction: column;
+        }   
+        #resul-busca-btn-final {
+            padding: 8px 40px;   
+        }
+        /*--FIM RESULTADO BUSCA--*/
+
+        /*Início da página cadastre-se*/
+        #container-box-cadastre-se {
+            margin: 100px 20px 0px 20px;
+            width: 100%;
+        }
+
+        .botaoCadOng {
+            margin-top: 26px;
+        }
+
+        .botaoCadGuardiao {
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-top: 52px;
+            height: 40px;
+        }
+
+    /*Fim da página cadastre-se*/
+    }    
+
+/* Iniciando CSS extra small devices (até 576px) */    
+@media(max-width: 576px) {
+
+    /* Estilos do header */
+
+    .header-menu {
+        padding: .3rem .2rem;
+    }
+
+    .fonteHeader {
+        font-size: 1.2rem;
+    }
+
+    .header-link {
+        font-size: 1.2rem;
+        line-height: 2.5rem;
+    }
+
+    .lista-menu {
+        padding-left: 35px;
+        padding-bottom: 35px;
+    }
+
+    /* PERFIL DA ONG E DO GUARDIÃO */
+    #pfong_cx_info_principal {
+        /* ongs */
+        padding: 30% 5% 5% 5%;
+    }
+
+    #pfG_cx_info_principal {
+        /* guardiões */
+        padding: 30% 5% 5% 5%;
+    }
+
+    #perfilOng_imagem { /* ongs */
+        margin-top: 5px;
+        margin-bottom: 20px;
+        width: 170px;
+        height: 170px;
+    }
+
+    #perfilGua_imagem {
+        /* guardiões */
+        margin-top: 0;
+        margin-bottom: 20px;
+        width: 170px;
+        height: 170px;
+    }
+
+    .pfOngGuard_titulo { /* ambos */
+        font-size: 1.5em;
+    }
+
+    #pfOng_cx_info_principal_ordem { /*ong */
+        order: 2;
+    }
+
+    /* Iniciando CSS página Sobre  */
+    #banner-sobre{
+        display: none;
+    }
+
+    #sobre-nos{
+        padding-top: 100px;
+    }
+
+    /*Cadastro Guardiao*/
+    .tituloGuardiao {
+        font-size: 1.3rem;
+    }
+
+    #formGuardiao {
+        margin-top: 72px;
+        margin-bottom: 0px;
+    }
+
+    /*Cadastro Ong*/
+    .tituloOng {
+        font-size: 1.62rem;
+    }
+
+    #formOng {
+        margin-top: 72px;
+        margin-bottom: 0px;
+    }
+
+    /*Cadastro Animal*/
+    #formAnimal {
+        margin-left: 0px;
+        margin-bottom: 0px;
+        padding-top: 30px !important;
+        padding-right: 30px !important;
+        padding-left: 48px !important;
+    }
+
+    ::placeholder {
+        text-align: justify;
+    }
+
+    .botaoAnimal {
+        margin-top: 10px;
+    }
+
+    /*Menu Lateral ONG*/
+    .navbar-menu-principal {
+        display: none;
+    }
+
+    /*Menu lateral da ong*/
+    .navbar-menu-principal {
+        display: block;
+        background-color: #ff9640;
+        color: white;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .navbar-menu-itens.collapse {
+        display: none;
+    }
+
+    .navbar-menu-itens.show {
+        display: block;
+    }
+
+    /*Página cadastro Anúncio*/
+    #formAnuncio {
+        margin-top: 0%;
+        margin-left: 0%;
+        margin-bottom: 0%;
+    }
+
+    /* Busca recolhida  */
+
+    #container-busca-recolhida h2 {
+        font-size: 1.2rem;
+    }
+
+    .ico-seta-expande-busca {
+        font-size: 3rem;
+    }
+
+    .buscaRecolAjudar {
+        order: 1;
+    }
+
+    .buscaRecolPorte {
+        order: -0;
+    }
+
+    .buscaReclOng {
+        order: 1;
+    }
+
+    .buscaRecolBotao {
+        order: 1;
+    }
+
+    /*Início Página de login*/
+    #main-login h1 {
+        font-size: 1.8rem;
+    }
+
+    .p-2 {
+        width: 90%;
+    }
+
+    .sobre-senha {
+        width: 43%;
+    }
+
+    #main-login h2 {
+        font-size: 1.3rem;
+    }
+
+    #container-form-login {
+        margin-top: 90px;
+    }
+
+    /*Fim Página de login*/
+
+    /*Início Página Index*/
+    .titulo-carrossel-home h1 {
+        font-size: 1.4rem;
+    }
+
+    .titulo-carrossel-home p {
+        color: transparent;
+    }
+
+    .titulo-carrossel-home {
+        bottom: 10px;
+    }
+
+    #carrossel {
+        margin-top: 72px;
+        background-color: #F1F5FA;
+    }
+
+    #container-busca-expandida {
+        bottom: 0px;
+        height: 50%;
+    }
+
+    #container-busca-expandida h2 {
+        font-size: 1.5rem;
+    }
+
+    .formulario-index {
+        flex-direction: column;
+    }
+
+    .formulario-index-itens {
+        margin-bottom: -19px;
+    }
+
+    .formPet {
+        order: -3;
+    }
+
+    .formAjudar {
+        order: 1;
+    }
+
+    .formSexo {
+        order: -3;
+    }
+
+    .formBotao {
+        order: 1;
+    }
+
+    .botao-home {
+        background-color: #6E5DB3;
+        color: #ffffff;
+        text-transform: uppercase;
+        padding: 8px 30px;
+        border: none;
+        border-radius: 5px;
+        width: 100%;
+    }
+
+    .botao-home:hover {
+        background-color: #4a3f78;
+    }
+
+    #seja-guardiao-home {
+        margin-top: -15px;
+    }
+
+    #seja-guardiao-home h2 {
+        font-size: 1.8rem;
+        padding: 22px 0px;
+    }
+
+    #seja-guardiao-home p {
+        font-size: 1.1rem;
+        margin-top: -10px;
+    }
+
+    #como-funciona-home {
+        padding: 0px 10px;
+    }
+
+    #como-funciona-home h2 {
+        padding: 10px 0px;
+        font-size: 1.8rem;
+    }
+
+    #como-funciona-home h4 {
+        font-size: 1.2rem;
+    }
+
+    #como-funciona-home p {
+        font-size: 1rem;
+    }
+
+    #como-funciona-home button {
+        margin-bottom: 20px;
+    }
+
+    #doacoes-home h2 {
+        font-size: 1.8rem;
+    }
+
+    #doacoes-home p {
+        font-size: 1rem;
+        margin: 5px;
+    }
+
+    /*Fim da página Index*/
+
+    /*Início da página cadastre-se*/
+    #main-cadastre-se {
+        flex-direction: column;
+    }
+
+    #container-box-cadastre-se {
+        margin: 70px 20px 0px 17px;
+        width: 90%;
+    }
+
+    #container-box-cadastre-se p {
+        font-size: 1rem;
+    }
+
+    .botaoCadGuardiao {
+        font-size: 0.9rem;
+        height: 42px;
+        font-weight: normal;
+    }
+
+    /*Fim da página cadastre-se*/
+    /* Iniciando CSS página Parceiros  */
+    #banner-parceiros{
+        display: none;
+    }
+
+    #titulo-carousel-parceiros{
+        padding: 120px 0px 30px 0px;
+    }
+
+    /*---INICIO PAGINA PERFIL DOS ANIMAIS---*/
+    .perfil-anim-btn-envio {
+        width: 100%;
+    }
+
+    .perfil-anim-btn-desativado {
+        width: 100%;
+        margin: 20px 0px;
+    }
+
+    .cx-btn-respons {
+        width: 100%;
+    }
+
+    #perfil-anim-nome-responsivo {
+        display: block;
+        background-color: #E57011;
+        margin: 20px 20px 0px 20px;
+        padding: 20px;
+        border-radius: 5px 5px 0px 0px;
+        box-shadow: inset 0px 0px 15px 0px;
+    }
+
+    #perfil-anim-nome-desk {
+        display: none;
+    }
+
+    #perfil-anim-cx-img {
+        order: -1;
+        padding: 0px 20px;
+
+    }
+
+    #perfil-anim-cx-info {
+        order: -2;
+    }
+
+    #dados-animal {
+        margin-top: 40px;
+        padding: 15px 5px;
+    }
+
+    .perfil-anim-icon-respos {
+        display: none;
+    }
+
+    #perfil-anim-msgm-respons {
+        display: none;
+    }
+
+    #perfil-anim-icon-msgm-respos {
+        display: flex;
+        justify-content: center;
+    }
+
+    #perfil-animal-carrossel {
+        background-color: #E57011;
+    }
+
+    /*---FIM PERFIL ANIMAL---*/
+
+    /*---INICIO RESULTADO BUSCA---*/
+    #resul-busca-match {
+        display: block;
+        border-radius: 5px;
+        padding: 5px 10px;
+        box-shadow: 0 0 20px 0px #6E5DB3;
+    }
+
+    #resul-busca-match-desk {
+        display: none;
+    }
+
+    #result-busca-cx {
+        margin: 0;
+        padding: 0;
+    }
+
+    /*--FIM RESULTADO BUSCA--*/
 }

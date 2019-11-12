@@ -54,14 +54,14 @@
                 <div class="formulario-coluna col-11">
                     <form action="busca.php" method="POST">
                         <div class="formulario-index row">
-                            <div class="formulario-index-itens col p-3">
+                            <div class="formPet formulario-index-itens col-md-6 p-3">
                                 <select name="animal" class="form-control">
                                     <option disabled selected>Pet</option>
                                     <option value="cachorro">Cachorro</option>
                                     <option value="gato">Gato</option>
                                 </select>
                             </div>
-                            <div class="formulario-index-itens col p-3">
+                            <div class="formAjudar formulario-index-itens col-md-6 p-3">
                                 <select name="comoQueroAjudar" class="form-control">
                                     <option disabled selected>Como quer ajudar?</option>
                                     <option value="adocao">Adoção</option>
@@ -69,9 +69,9 @@
                                     <option value="lartemporario">Lar temporário</option>
                                 </select>
                             </div>
-                        </div>
+                        <!-- </div> -->
                             <!-- CH: comentei duas opções de busca do filtro, conforme feedback.
-                            <div class="col p-3">
+                            <div class="col-md-6 p-3">
                                 <select name="animalEspecial" class="form-control">
                                     <option disabled selected>Aceita animal especial?</option>
                                     <option value="sim">Aceito</option>
@@ -79,8 +79,8 @@
                                 </select>
                             </div> -->
                         
-                        <div class="formulario-index row">
-                            <div class="formulario-index-itens col p-3">
+                        <!-- <div class="formulario-index row"> -->
+                            <div class="formulario-index-itens col-md-6 p-3">
                                 <select name="porte" class="form-control">
                                     <option disabled selected>Porte</option>
                                     <option value="pequeno">Pequeno</option>
@@ -88,7 +88,7 @@
                                     <option value="grande">Grande</option>
                                 </select>
                             </div>
-                            <div class="formulario-index-itens col p-3">
+                            <div class="formulario-index-itens col-md-6 p-3">
                                 <select name="ong" class="form-control">
                                     <option disabled selected>Selecionar a ONG</option>
                                     <option value="ong-a">ONG $A</option>
@@ -96,17 +96,17 @@
                                     <option value="ong-c">ONG $C</option>
                                 </select>
                             </div>
-                        </div>
+                        <!-- </div> -->
                         
-                        <div class="formulario-index row">
-                            <div class="formulario-index-itens col p-3">
+                        <!-- <div class="formulario-index row"> -->
+                            <div class="formSexo formulario-index-itens col-md-6 p-3">
                                 <select name="sexo" class="form-control">
                                     <option disabled selected>Sexo</option>
                                     <option value="femea">Fêmea</option>
                                     <option value="macho">Macho</option>
                                 </select>
                             </div>
-                            <div class="formulario-index col p-3">
+                            <div class="formBotao formulario-index col-md-6 p-3">
                                 <button class="formulario-index-itens btn-busca-expandida botao-home" type="submit" name="procurar">Procurar</button>
                             </div>
                         </div>
