@@ -96,15 +96,15 @@
             </div>
             <div class="form-group row">
                 <label for="opcao" class="col-sm-4 col-form-label">Quais as opções para esse animal?</label>
-                <div class="form-check form-check-inline">
+                <div class="form-check form-check-inline col-sm-4">
                     <input class="form-check-input" type="checkbox" name="opcao" id="opcaoAnimal" value="adocao">
                     <label class="form-check-label" for="opcaoAnimal">Adoção</label>
                 </div>
-                <div class="form-check form-check-inline">
+                <div class="form-check form-check-inline col-sm-4">
                     <input class="form-check-input" type="checkbox" name="opcao" id="opcaoAnimal" value="temporario">
                     <label class="form-check-label" for="opcaoAnimal">Lar Temporário</label>
                 </div>
-                <div class="form-check form-check-inline">
+                <div class="form-check form-check-inline col-sm-4">
                     <input class="form-check-input" type="checkbox" name="opcao" id="opcaoAnimal"
                         value="apadrinhamento">
                     <label class="form-check-label" for="opcaoAnimal">Apadrinhamento</label>
@@ -215,48 +215,40 @@
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                     <div class="col-lg-6 col-md-8 col-sm-6 col-xs-6">
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" name="caracAnimal" id="caracAnimal"
-                                value="docil">
-                            <label class="form-check-label" for="caracAnimal">Dócil</label>
+                            <input class="form-check-input" type="checkbox" name="caracAnimal" id="caracAnimal"                        value="docil">
+                            <label class="form-check-label caracAnimal" for="caracAnimal">Dócil</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" name="carac" id="caracAnimal"
-                                value="carinho">
-                            <label class="form-check-label" for="caracAnimal">Gosta de carinho</label>
+                            <input class="form-check-input" type="checkbox" name="carac" id="caracAnimal" value="carinho">
+                            <label class="form-check-label caracAnimal" for="caracAnimal">Gosta de carinho</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" name="carac" id="caracAnimal"
-                                value="crianca">
-                            <label class="form-check-label" for="caracAnimal">Gosta de crianças</label>
+                            <input class="form-check-input" type="checkbox" name="carac" id="caracAnimal" value="crianca">
+                            <label class="form-check-label caracAnimal" for="caracAnimal">Gosta de crianças</label>
                         </div>
                     </div>
                     <div class="col-lg-12 col-md-8 col-sm-6 col-xs-6">
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" name="carac" id="caracAnimal"
-                                value="idosos">
-                            <label class="form-check-label" for="caracAnimal">Gosta de idosos</label>
+                            <input class="form-check-input" type="checkbox" name="carac" id="caracAnimal" value="idosos">
+                            <label class="form-check-label caracAnimal" for="caracAnimal">Gosta de idosos</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" name="carac" id="caracAnimal"
-                                value="outrosAnimais">
-                            <label class="form-check-label" for="caracAnimal">Convive bem com outros animais</label>
+                            <input class="form-check-input" type="checkbox" name="carac" id="caracAnimal" value="outrosAnimais">
+                            <label class="form-check-label caracAnimal" for="caracAnimal">Convive bem com outros animais</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" name="carac" id="caracAnimal"
-                                value="brincar">
-                            <label class="form-check-label" for="caracAnimal">Gosta de brincar</label>
+                            <input class="form-check-input" type="checkbox" name="carac" id="caracAnimal" value="brincar">
+                            <label class="form-check-label caracAnimal" for="caracAnimal">Gosta de brincar</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" name="carac" id="caracAnimal"
-                                value="necessidades">
-                            <label class="form-check-label" for="caracAnimal">Faz as necessidades no lugar certo</label>
+                            <input class="form-check-input" type="checkbox" name="carac" id="caracAnimal" value="necessidades">
+                            <label class="form-check-label caracAnimal" for="caracAnimal">Faz as necessidades no lugar certo</label>
                         </div>
                     </div>
                 </div>
                 </div>
                 <div class="form-group row">
-                    <label class="col-sm-4 col-form-label  tituloCaracteristicasAnimal" for="descricao">Descreva o
-                        pet:</label>
+                    <label class="col-sm-4 col-form-label  tituloCaracteristicasAnimal" for="descricao">Descreva o pet:</label>
                     <textarea class="form-control" id="descricao" cols="30" rows="10"
                         placeholder="Fale mais sobre o animal: qual a sua história, suas características físicas e comportamentais, o tipo de lar que mais se adequaria, do que ele(a) gosta, etc."></textarea>
                 </div>

@@ -1556,6 +1556,10 @@ footer img {
         margin-top: 10px;
     }
 
+    .caracAnimal{
+        margin-top: 5px;
+    }
+
     /*Menu Lateral ONG*/
     .navbar-menu-principal {
         display: none;
