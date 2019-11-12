@@ -15,7 +15,7 @@
     <title>Guardiões Pet</title>
 </head>
 <body>       
-    <aside id="menu-ong" class="col-lg-3 col-md-3 col-sm-10 col-xs-8 p-5">
+    <aside id="menu-ong" class="col-lg-3 col-md-3 col-sm-10 col-xs-8 p-4">
         <a href="#menu-principal" data-toggle="collapse" aria-expanded="false" class="navbar-menu-principal collapsed col-12">
             <i class="fa fa-bars"></i>
         </a>	 
