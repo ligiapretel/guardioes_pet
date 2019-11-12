@@ -656,6 +656,10 @@ footer img {
     text-decoration: none;
 }
 
+#resul-busca-match {
+    display: none;
+}
+
 /* PERFIL DAS ONGS E GUARDIÕES */
 
 /*Informacoes*/
@@ -1028,6 +1032,13 @@ footer img {
         padding-top: 40px;
     }
     /*--FIM PERFIL ANIMAL--*/
+
+    /*--INICIO RESULTADO BUSCA--*/
+    #resul-busca-match {
+        display: none;
+    }
+    /*--FIM RESULTADO BUSCA--*/
+
 }
 
 
@@ -1152,6 +1163,30 @@ footer img {
             padding-left: 28px;
         }
         /*--FIM PERFIL ANIMAL--*/
+
+        /*--INICIO RESULTADO BUSCA--*/
+        #resul-busca-match {
+            display: block;
+            border-radius: 5px;
+            padding: 5px 10px;
+            box-shadow:0 0 20px 0px #6E5DB3;
+        }   
+        #resul-busca-match-desk {
+            display: none;   
+        }  
+        #result-busca-cx {
+            margin: 0;
+            padding: 0;
+        }   
+        .resul-busca-card {
+            display: flex;
+            flex-direction: column;
+        }   
+        #resul-busca-btn-final {
+            padding: 8px 40px;  
+        }
+                 
+        /*--FIM RESULTADO BUSCA--*/
     }
 
 
@@ -1360,6 +1395,30 @@ footer img {
             padding-left: 28px;    
         }
         /*--FIM PERFIL ANIMAL--*/
+
+        /*---INICIO RESULTADO BUSCA---*/
+   
+        #resul-busca-match {
+            display: block;
+            border-radius: 5px;
+            padding: 5px 10px;
+            box-shadow:0 0 20px 0px #6E5DB3;
+        }    
+        #resul-busca-match-desk {
+            display: none; 
+        }  
+        #result-busca-cx {
+            margin: 0;
+            padding: 0;
+        }   
+        .resul-busca-card {
+            display: flex;
+            flex-direction: column;
+        }   
+        #resul-busca-btn-final {
+            padding: 8px 40px;   
+        }
+        /*--FIM RESULTADO BUSCA--*/
     }
     
 
@@ -1668,4 +1727,20 @@ footer img {
         background-color: #E57011;
     }
     /*---FIM PERFIL ANIMAL---*/
+
+    /*---INICIO RESULTADO BUSCA---*/
+    #resul-busca-match {
+        display: block;
+        border-radius: 5px;
+        padding: 5px 10px;
+        box-shadow:0 0 20px 0px #6E5DB3;
+    }
+    #resul-busca-match-desk {
+        display: none;
+    }
+    #result-busca-cx {
+        margin: 0;
+        padding: 0;
+    }
+    /*--FIM RESULTADO BUSCA--*/
 }
