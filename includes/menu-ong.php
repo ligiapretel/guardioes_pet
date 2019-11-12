@@ -16,8 +16,8 @@
 </head>
 <body>       
     <aside id="menu-ong" class="col-lg-3 col-md-12 col-sm-10 col-xs-8 p-4">
-        <a href="#menu-principal" data-toggle="collapse" aria-expanded="false" class="navbar-menu-principal collapsed col-12">
-            <i class="fa fa-bars"></i>
+        <a href="#menu-principal" data-toggle="collapse" aria-expanded="false" class="navbar-menu-principal collapsed col-12 dropdown-toggle">
+            <img src="img/user-icon.png" class="ml-3" alt="icone de usuário" id="user-icon">
         </a>	 
         <div class="card navbar-menu-itens collapse" style="width: 20rem;" id="menu-principal">
                 <img id="perfil-ong" class="ml-4" src="img/foto_perfil_ong.jpg" alt="logo da ONG" />

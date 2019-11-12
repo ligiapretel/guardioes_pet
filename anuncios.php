@@ -26,7 +26,7 @@
         </section>
         <section>
             <div class="row p-3 d-flex justify-content-center align-items-center">
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 shadow p-3">
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 shadow p-3">
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title text-center col-12">Ração Pedigree Filhotes</h5>
@@ -35,7 +35,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 shadow p-3">
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 shadow p-3">
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title text-center col-12">Vermífugo para cães até 10kg</h5>
@@ -44,7 +44,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 shadow p-3">
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 shadow p-3">
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title text-center col-12">Areia higiênica para gatos</h5>
@@ -53,7 +53,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 shadow p-3">
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 shadow p-3">
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title text-center col-12">Bola de brinquedo para cães</h5>
@@ -62,9 +62,9 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="row p-3 d-flex justify-content-center align-items-center">
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 shadow p-3">
+            <!-- </div>
+            <div class="row p-3 d-flex justify-content-center align-items-center"> -->
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 shadow p-3">
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title text-center col-12">Cortador de unhas para gatos</h5>
@@ -73,7 +73,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 shadow p-3">
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 shadow p-3">
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title text-center col-12">Guia para cães até 10kg</h5>
@@ -82,7 +82,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 shadow p-3">
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 shadow p-3">
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title text-center">Ração para cães de até 25kg</h5>
@@ -91,7 +91,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6 shadow p-3">
+                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 shadow p-3">
                     <div class="card">
                         <div class="card-body text-center">
                             <h5 class="card-title text-center col-12">Ração para gatos até 5kg</h5>

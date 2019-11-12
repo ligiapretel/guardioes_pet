@@ -47,6 +47,9 @@
     background-color: white;
     margin-top: 5rem;
 }
+#user-icon{
+    width:24px;
+}
 
 #perfil-ong {
     width: 80%;
@@ -560,6 +563,10 @@ footer img {
     margin-top: 0%;
     margin-left: 0%;
     margin-bottom: 0%;
+}
+
+.formAnuncio {
+    margin-right: 0;
 }
 
 .tituloAnuncio {
@@ -1488,6 +1495,10 @@ footer img {
         margin-top: 10px;
     }
 
+    .caracAnimal{
+        margin-top: 5px;
+    }
+
     /*Menu Lateral ONG*/
     .navbar-menu-principal {
         display: none;
@@ -1580,7 +1591,7 @@ footer img {
     }
 
     #carrossel {
-        margin-top: 72px;
+        margin-top: 71px;
         background-color: #F1F5FA;
     }
 
