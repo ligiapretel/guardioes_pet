@@ -21,11 +21,11 @@
     <?php include_once('includes/header.php');?>
     <section id="perfil-animal">
         <!--H1 que ficara ativado somente no mobile -->
-        <h1 id="perfil-anim-nome-responsivo" class="text-center">Bernardo</h1>
+        <!-- <h1 class="text-center">Bernardo</h1> -->
         <div class="container">
             <div id="perfil-anim-cx-info" class="row justify-content-center">
                 <div id="dados-animal" class="col-11 col-sm-6 col-md-6 col-lg-6 col-xl-5">
-                    <h1 id="perfil-anim-nome-desk" class="perfil-anim-titulo">Bernardo</h1>
+                    <h1>Bernardo</h1>
                     <p><b>Idade</b>: 3 anos</p>
                     <p><b>Sexo</b>: macho</p>
                     <p><b>Porte</b>: grande</p>
@@ -37,7 +37,7 @@
 
                     <div class="row" id="perfil-anim-icon-msgm-respos">
                         <div>
-                            <a href="#"><img id="perfil_anim_icon-msgm" src="img/icon_mail.png"></a>
+                            <a href="#"><img class="mb-2" id="perfil_anim_icon-msgm" src="img/icon_mail.png"></a>
                         </div>
                         <div id="perfil-anim-msgm-respons" class="col-9 col-sm-10 col-md-9 col-lg-10 col-xl-10">
                             <p>Quer perguntar algo sobre mim?<br>Envie uma mensagem!</p>
@@ -46,7 +46,7 @@
 
                 </div>
                 <div id="perfil-anim-cx-img" class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
-                    <div class=container>
+                    <div class="container">
                         <div class="row">
                             <div id="perfil-animal-carrossel" class="carousel slide" data-ride="carousel">
                                 <ol class="carousel-indicators">
@@ -88,14 +88,16 @@
                         </div>
                         <div class="row justify-content-between mt-4">
                             <div class="cx-btn-respons">
-                                <button class="perfil-anim-btn-envio">Adotar</button>
+                                <a href="login.php"><button class="btn-roxo text-uppercase w-100">Adotar</button></a>
                             </div>
                             <div class="cx-btn-respons">
-                                <button class="perfil-anim-btn-desativado" title="Opção indisponível no momento">Lar
+                                <button class="perfil-anim-btn-desativado w-100"
+                                    title="Opção indisponível no momento">Lar
                                     temporário</button>
                             </div>
-                            <div class="cx-btn-respons" id="pefil-anim-botao-apadrinhar">
-                                <button class="perfil-anim-btn-envio"><a href="#apadrinhar">Apadrinhar</a></button>
+                            <div class="cx-btn-respons">
+                                <a href="login.php"><button
+                                        class="btn-roxo text-uppercase w-100">Apadrinhar</button></a>
                             </div>
                         </div>
                     </div>
@@ -106,11 +108,11 @@
 
     </section>
 
-    <section class="perfil-animal">
+    <section class="perfil-animal-sobre">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-11 pt-5 pb-5 text-justify">
-                    <h2 class="perfil-anim-titulo">Sobre mim</h2>
+                    <h2 class="mb-5">Sobre mim</h2>
                     <p>Ele foi encontrado em meio a Rodovia Fernão Dias, atropelado e sem conseguir se levantar. No
                         veterinário, o prognóstico é que ele não andaria mais, mas pra quem quer viver, isso não é nada
                         né?</p>
@@ -128,7 +130,7 @@
         <div class="container d-flex-justify-content-center">
             <div class="row justify-content-center">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-11 text-justify">
-                    <h2 class="perfil-anim-titulo">Fazer uma doação</h2>
+                    <h2 class="mb-5">Fazer uma doação</h2>
                     <p>Não pode me adotar nem me abrigar, mas quer me ajudar? Meus tios e tias estão sempre precisando
                         de ração e outras coisinhas, que tal? Lá na página de anúncios da instituição que cuida de mim
                         você pode ver do que eles estão precisando.</p>
@@ -137,7 +139,7 @@
             </div>
             <div class="row justify-content-between m-0 pt-5 col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                 <div class="col-4 col-sm-4 col-md-3 col-lg-3 col-xl-3 ">
-                    <a href="http://localhost/guardioes_pet/anuncios.php">
+                    <a href="anuncios.php">
                         <figure class="figure">
                             <img src="img/perfil_doar_01.jpg" class="figure-img img-fluid rounded rounded-circle"
                                 alt="Photo by Autri Taheri on Unsplash">
@@ -146,7 +148,7 @@
                     </a>
                 </div>
                 <div class="col-4 col-sm-4 col-md-3 col-lg-3 col-xl-3 ">
-                    <a href="http://localhost/guardioes_pet/anuncios.php">
+                    <a href="anuncios.php">
                         <figure class="figure">
                             <img src="img/perfil_doar_02.jpg" class="figure-img img-fluid rounded rounded-circle"
                                 alt="Photo by Matthew Henry on Unsplash">
@@ -155,7 +157,7 @@
                     </a>
                 </div>
                 <div class="col-4 col-sm-4 col-md-3 col-lg-3 col-xl-3 ">
-                    <a href="http://localhost/guardioes_pet/anuncios.php">
+                    <a href="anuncios.php">
                         <figure class="figure">
                             <img src="img/perfil_doar_03.jpg" class="figure-img img-fluid rounded rounded-circle"
                                 alt="Photo by Camylla Battani on Unsplash">

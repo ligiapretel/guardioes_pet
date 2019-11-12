@@ -18,6 +18,23 @@
     background-color: #4a3f78;
 }
 
+.btn-roxo-outline{
+    background-color: transparent;
+    border: 1px solid #4a3f78;
+    border-radius: 5px;
+    color: #4a3f78;
+    padding: 0.4rem 0.7rem;
+}
+
+.btn-roxo-outline:hover{
+    background-color: #4a3f78;
+    color: #ffffff;
+}
+
+.border-none{
+    border: none;
+}
+
 ::selection {
     background-color: #4a3f78;
     color: #FFFFFF;
@@ -572,18 +589,26 @@ footer img {
     width: 20px;
 }
 
-.perfil-anim-titulo {
-    margin-bottom: 40px;
-
-}
-
-#perfil-anim-nome-responsivo {
-    display: none;
-}
-
 #perfil-animal {
     background-color: #D6EBE8;
     padding-top: 85px;
+}
+
+#perfil-animal p, #perfil-animal h1{
+    color: #343F4B;
+}
+
+#perfil-animal a{
+    text-decoration: none;
+    color: #343F4B;
+}
+
+#perfil-animal a:hover{
+    font-weight: 500;
+}
+
+.perfil-animal-sobre{
+    color: #343F4B;
 }
 
 #dados-animal p {
@@ -619,6 +644,7 @@ footer img {
 
 #apadrinhar {
     background-color: #D6EBE8;
+    color: #343F4B;
 }
 
 #botao-apadrinhar a {
@@ -649,15 +675,11 @@ footer img {
 }
 
 .resultados-busca a {
-    color: black;
+    color: #343F4B;
 }
 
 .resultados-busca a:hover {
     text-decoration: none;
-}
-
-#resul-busca-match {
-    display: none;
 }
 
 /* PERFIL DAS ONGS E GUARDIÕES */
@@ -1133,20 +1155,8 @@ footer img {
         margin-left: 15px;
     }
 
-    #perfil-anim-nome-responsivo {
-        display: none;
-    }
-
-    #perfil-anim-nome-desk {
-        display: block;
-    }
-
     #perfil-anim-cx-img {
         padding: 0;
-    }
-
-    #perfil-anim-cx-info {
-        padding-top: 40px;
     }
 
     .perfil-anim-icon-respos {
@@ -1168,39 +1178,6 @@ footer img {
 
     /*--FIM PERFIL ANIMAL--*/
 
-    /*--INICIO RESULTADO BUSCA--*/
-    /*precisamos verificar o certo*/
-    /* #resul-busca-match {
-            display: none;
-            } */
-    /*--FIM RESULTADO BUSCA--*/
-    /*--INICIO RESULTADO BUSCA--*/
-    #resul-busca-match {
-        display: block;
-        border-radius: 5px;
-        padding: 5px 10px;
-        box-shadow: 0 0 20px 0px #6E5DB3;
-    }
-
-    #resul-busca-match-desk {
-        display: none;
-    }
-
-    #result-busca-cx {
-        margin: 0;
-        padding: 0;
-    }
-
-    .resul-busca-card {
-        display: flex;
-        flex-direction: column;
-    }
-
-    #resul-busca-btn-final {
-        padding: 8px 40px;
-    }
-
-    /*--FIM RESULTADO BUSCA--*/
 }
 
 
@@ -1368,18 +1345,12 @@ footer img {
         .cx-btn-respons {
             width: 100%;
         }   
-        #perfil-anim-nome-responsivo {
-            display: none;
-        }   
-        #perfil-anim-nome-desk {
-            display: block;
-        }   
+
         #perfil-anim-cx-img {
-            order: -1;
             padding: 0;
         }   
+
         #perfil-anim-cx-info {
-            order: -2;
             margin-top: 20px;
         }   
         .perfil-anim-icon-respos {
@@ -1392,39 +1363,7 @@ footer img {
             display: flex;
             justify-content: center;
         }   
-        #dados-animal {
-            margin-top: 0;
-            border: none;
-            padding: 30px 10px;
-            border-radius: 5px;
-            padding-top: 0;
-            padding-left: 28px;    
-        }
         /*--FIM PERFIL ANIMAL--*/
-
-        /*---INICIO RESULTADO BUSCA---*/
-   
-        #resul-busca-match {
-            display: block;
-            border-radius: 5px;
-            padding: 5px 10px;
-            box-shadow:0 0 20px 0px #6E5DB3;
-        }    
-        #resul-busca-match-desk {
-            display: none; 
-        }  
-        #result-busca-cx {
-            margin: 0;
-            padding: 0;
-        }   
-        .resul-busca-card {
-            display: flex;
-            flex-direction: column;
-        }   
-        #resul-busca-btn-final {
-            padding: 8px 40px;   
-        }
-        /*--FIM RESULTADO BUSCA--*/
 
         /*Início da página cadastre-se*/
         #container-box-cadastre-se {
@@ -1609,7 +1548,7 @@ footer img {
         font-size: 1.8rem;
     }
 
-    .p-2 {
+    .largura-form-xs {
         width: 90%;
     }
 
@@ -1782,27 +1721,8 @@ footer img {
         width: 100%;
     }
 
-    #perfil-anim-nome-responsivo {
-        display: block;
-        background-color: #E57011;
-        margin: 20px 20px 0px 20px;
-        padding: 20px;
-        border-radius: 5px 5px 0px 0px;
-        box-shadow: inset 0px 0px 15px 0px;
-    }
-
-    #perfil-anim-nome-desk {
-        display: none;
-    }
-
     #perfil-anim-cx-img {
-        order: -1;
         padding: 0px 20px;
-
-    }
-
-    #perfil-anim-cx-info {
-        order: -2;
     }
 
     #dados-animal {
@@ -1823,28 +1743,14 @@ footer img {
         justify-content: center;
     }
 
-    #perfil-animal-carrossel {
-        background-color: #E57011;
+    #perfil-animal{
+        padding-top: 0px;
+    }
+
+    #perfil-anim-cx-info{
+        margin-top: 0px;
     }
 
     /*---FIM PERFIL ANIMAL---*/
 
-    /*---INICIO RESULTADO BUSCA---*/
-    #resul-busca-match {
-        display: block;
-        border-radius: 5px;
-        padding: 5px 10px;
-        box-shadow: 0 0 20px 0px #6E5DB3;
-    }
-
-    #resul-busca-match-desk {
-        display: none;
-    }
-
-    #result-busca-cx {
-        margin: 0;
-        padding: 0;
-    }
-
-    /*--FIM RESULTADO BUSCA--*/
 }

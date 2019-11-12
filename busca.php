@@ -20,125 +20,120 @@
 <body>
     <?php include_once('includes/header.php') ?>
 
-    <!-- <section class="busca-reduzida mt-4">
-        <div class="h-100">
-            <img src="img/icon_search.png" class="h-100 p-2">
-            <p class="d-inline text-white">Refazer busca</p>
-        </div>
-    </section> -->
+    <section class="py-2 p-md-4">
 
-
-    <section class="p-4" id="result-busca-cx">
-
-        <div class="container-fluid resultados-busca">
-            <h2 id="resul-busca-match-desk">Deu match! 12 animais têm o perfil que você buscou. Conheça:</h2>
-            <div id="resul-busca-match" class=" row text-center">
-                <h2>Deu MATCH!</h2>
-                <h4>12 Animais :</h4>
-            </div>
-            <div class="card-deck row mt-5 resul-busca-card">
-
-
-                <div class="card mb-3 resul-busca-cx-card">
+        <div class="resultados-busca">
+            <h1 class="text-center">Deu match! </h1>
+            <h3 class="text-center">12 animais têm o perfil que você buscou. Conheça:</h3>
+            <div class="row justify-content-center mt-5">
+                <div class="card mb-4 col-11 col-sm-5 col-md-4 col-lg-3 border-none">
                     <a href="paginaAnimal.php">
                         <img src="img/perfil_animal_01.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Bernardo</h5>
                             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
                                 additional content. This content is a little bit longer.</p>
-                            <div id="resul-busca-btn" class="d-flex justify-content-center">
-                                <button type="button" class="btn btn-primary">+ Info</button>
+                            <div class="d-flex justify-content-center">
+                                <button type="button" class="btn-roxo-outline">Veja mais</button>
                             </div>
                         </div>
                     </a>
                 </div>
-
-                <div class="card mb-3">
-                    <img src="img/perfil_animal_02.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Layla</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
-                        <div id="resul-busca-btn" class="d-flex justify-content-center">
-                            <button type="button" class="btn btn-primary">+ Info</button>
+                <div class="card mb-4 col-11 col-sm-5 col-md-4 col-lg-3 border-none">
+                    <a href="paginaAnimal.php">
+                        <img src="img/perfil_animal_02.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Layla</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.</p>
+                            <div class="d-flex justify-content-center">
+                                <button type="button" class="btn-roxo-outline">Veja mais</button>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
-                <div class="card mb-3">
-                    <img src="img/perfil_animal_03.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Erasmo</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
-                        <div id="resul-busca-btn" class="d-flex justify-content-center">
-                            <button type="button" class="btn btn-primary">+ Info</button>
+                <div class="card mb-4 col-11 col-sm-5 col-md-4 col-lg-3 border-none">
+                    <a href="paginaAnimal.php">
+                        <img src="img/perfil_animal_03.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Erasmo</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.</p>
+                            <div class="d-flex justify-content-center">
+                                <button type="button" class="btn-roxo-outline">Veja mais</button>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
-                <div class="card mb-3">
-                    <img src="img/perfil_animal_01.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Julio</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
-                        <div id="resul-busca-btn" class="d-flex justify-content-center">
-                            <button type="button" class="btn btn-primary">+ Info</button>
+                <div class="card mb-4 col-11 col-sm-5 col-md-4 col-lg-3 border-none">
+                    <a href="paginaAnimal.php">
+                        <img src="img/perfil_animal_01.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Julio</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.</p>
+                            <div class="d-flex justify-content-center">
+                                <button type="button" class="btn-roxo-outline">Veja mais</button>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
-            </div>
-            <div class="card-deck row resul-busca-card">
-                <div class="card mb-3 ">
-                    <img src="img/perfil_animal_01.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Boris</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
-                        <div id="resul-busca-btn" class="d-flex justify-content-center">
-                            <button type="button" class="btn btn-primary">+ Info</button>
+                <div class="card mb-4 col-11 col-sm-5 col-md-4 col-lg-3 border-none">
+                    <a href="paginaAnimal.php">
+                        <img src="img/perfil_animal_01.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Boris</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.</p>
+                            <div class="d-flex justify-content-center">
+                                <button type="button" class="btn-roxo-outline">Veja mais</button>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
-                <div class="card mb-3">
+                <div class="card mb-4 col-11 col-sm-5 col-md-4 col-lg-3 border-none">
                     <img src="img/perfil_animal_02.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Bela</h5>
                         <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
                             additional content. This content is a little bit longer.</p>
-                        <div id="resul-busca-btn" class="d-flex justify-content-center">
-                            <button type="button" class="btn btn-primary">+ Info</button>
+                        <div class="d-flex justify-content-center">
+                            <button type="button" class="btn-roxo-outline">Veja mais</button>
                         </div>
                     </div>
                 </div>
-                <div class="card mb-3">
-                    <img src="img/perfil_animal_03.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Amora</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
-                        <div id="resul-busca-btn" class="d-flex justify-content-center">
-                            <button type="button" class="btn btn-primary">+ Info</button>
+                <div class="card mb-4 col-11 col-sm-5 col-md-4 col-lg-3 border-none">
+                    <a href="paginaAnimal.php">
+                        <img src="img/perfil_animal_03.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Amora</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.</p>
+                            <div class="d-flex justify-content-center">
+                                <button type="button" class="btn-roxo-outline">Veja mais</button>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
-                <div class="card mb-3">
-                    <img src="img/perfil_animal_01.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Caetano</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
-                        <div id="resul-busca-btn" class="d-flex justify-content-center">
-                            <button type="button" class="btn btn-primary">+ Info</button>
+                <div class="card mb-4 col-11 col-sm-5 col-md-4 col-lg-3 border-none">
+                    <a href="paginaAnimal.php">
+                        <img src="img/perfil_animal_01.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Caetano</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                additional content. This content is a little bit longer.</p>
+                            <div id="resul-busca-btn" class="d-flex justify-content-center">
+                                <button type="button" class="btn-roxo-outline">Veja mais</button>
+                            </div>
                         </div>
-
-                    </div>
+                    </a>
                 </div>
             </div>
 
         </div>
 
-        <div class="d-flex justify-content-center" id="resul-busca-cx-btn-final">
-            <button id="resul-busca-btn-final">Veja mais</button>
+        <div class="d-flex justify-content-center my-5">
+            <button class="btn-roxo text-uppercase">Mostrar mais pets</button>
         </div>
 
     </section>
