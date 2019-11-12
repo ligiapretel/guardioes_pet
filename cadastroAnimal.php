@@ -112,7 +112,9 @@
             </div>
             <div class="form-group row">
                 <label for="idade" class="col-sm-4 col-form-label">Idade do Animal</label>
-                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6">
+            </div>      
+                <div class= "row">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="idade" id="idadeAnimal" value="filhote">
                         <label class="form-check-label" for="idadeAnimal">até 1 ano (filhotes)</label>
@@ -138,7 +140,7 @@
                         <label class="form-check-label" for="idadeAnimal">de 5 a 6 anos (adultos)</label>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="idade" id="idadeAnimal" value="jovem">
                         <label class="form-check-label" for="idadeAnimal">de 6 a 7 anos (adultos)</label>
@@ -163,7 +165,7 @@
             </div>
 
             <div>
-                <div class="form-group row">
+                <div class="form-group row mt-4">
                     <label class="col-sm-4 col-form-label" for="castrado">Castrado?</label>
                     <div class="col-sm-2">
                         <input class="form-check-input" type="radio" name="castrado" id="castrado" value="sim">
@@ -209,6 +211,7 @@
                         for="caracteristicas">Características do Pet:</label>
                 </div>
                 <p>Indique características do comportamento do animal. Marque todas as opções que se aplicam:</p>
+                <div class= "form-group row">
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                         <div class="form-check form-check-inline">
@@ -250,6 +253,7 @@
                         </div>
                     </div>
                 </div>
+                </div>
                 <div class="form-group row">
                     <label class="col-sm-4 col-form-label  tituloCaracteristicasAnimal" for="descricao">Descreva o
                         pet:</label>
@@ -264,7 +268,7 @@
     </section>
     </main>
     <!-- incluindo o footer -->
-    <!--<?php include_once("includes/footer.php")?>-->
+    <?php include_once("includes/footer.php")?>
     <!-- Script JS Bootstrap | Manter código próximo ao fechamento do body -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">

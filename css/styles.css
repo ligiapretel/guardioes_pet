@@ -1059,6 +1059,8 @@ footer img {
         /*Cadastro Animal*/
         #formAnimal{
             margin-left: 0px;
+            margin-top: 0px;
+            padding-top: 30px !important;
         }
         /*Menu Lateral ONG*/
         .navbar-menu-principal{
@@ -1081,6 +1083,13 @@ footer img {
         #perfil-ong{
             display: none;
         }
+
+        #menu-ong{
+            width: 100%;
+            margin-top: 72px;
+            padding: 0px !important;
+        }
+
         /*Página cadastro Anúncio*/
         #formAnuncio{
             margin-top: 0%;
@@ -1155,6 +1164,7 @@ footer img {
 
     #formGuardiao{
         margin-top: 72px;
+        margin-bottom: 0px;
     }
 
     /*Cadastro Ong*/
@@ -1163,12 +1173,18 @@ footer img {
     }
     #formOng{
         margin-top: 72px;
+        margin-bottom: 0px;
     }
 
     /*Cadastro Animal*/
     #formAnimal{
         margin-left: 0px;
+        margin-bottom: 0px;
+        padding-top: 30px !important;
+        padding-right: 30px !important;
+        padding-left: 48px !important;
     }
+    
     ::placeholder{
         text-align: justify;
     }
