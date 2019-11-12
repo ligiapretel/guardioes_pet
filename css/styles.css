@@ -1223,7 +1223,7 @@ footer img {
         }
     
         #perfilOng_imagem { /* ongs */
-            margin-top: 45px;
+            margin-bottom: 30px;
             width: 230px;
             height: 230px;
         }
@@ -1237,7 +1237,10 @@ footer img {
         .pfOngGuard_titulo { /* ambos */
             font-size: 1.7em;
         }
-        
+
+        #pfOng_cx_info_principal_ordem { /*ong */
+            order: 2;
+        }
         
         /* Iniciando CSS página Sobre  */
         #banner-sobre{
@@ -1456,8 +1459,8 @@ footer img {
     }
 
     #perfilOng_imagem { /* ongs */
-        margin-top: 20px;
-        margin-bottom: 10px;
+        margin-top: 5px;
+        margin-bottom: 20px;
         width: 170px;
         height: 170px;
     }
@@ -1469,9 +1472,12 @@ footer img {
         height: 170px;
     }
 
-    .pfOngGuard_titulo {
-        /* ambos */
-        font-size: 1.7em;
+    .pfOngGuard_titulo { /* ambos */
+        font-size: 1.5em;
+    }
+
+    #pfOng_cx_info_principal_ordem { /*ong */
+        order: 2;
     }
 
      /* Iniciando CSS página Sobre  */
