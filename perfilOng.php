@@ -25,7 +25,7 @@
     <!--Onde esta localizado as informacoes da ONG e img-->
     <section class="container-fluid" id="pfong_cx_info_principal"> 
         <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+            <div id="pfOng_cx_info_principal_ordem" class="col-lg-6 col-md-6 col-sm-12 col-12">
                 <h1 class="pfOngGuard_titulo text-dark font-weight-bolder">Cia dos Miados e Latidos</h1>
                 <p class="text-dark text-justify">Nossa ONG nasceu com intenções claras de resgate, castração e doação de animais. Nos empenhamos em
                     abrigar poucos, socorrer vários e castrar MUITOS, pois a castração é a única solução ao problema

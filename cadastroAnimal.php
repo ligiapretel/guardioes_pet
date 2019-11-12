@@ -207,13 +207,13 @@
             </div>
             <div>
                 <div class="row">
-                    <label class="col-sm-4 col-form-label tituloCaracteristicasAnimal"
+                    <label class="col-sm-6 col-form-label tituloCaracteristicasAnimal"
                         for="caracteristicas">Características do Pet:</label>
                 </div>
                 <p>Indique características do comportamento do animal. Marque todas as opções que se aplicam:</p>
                 <div class= "form-group row">
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <div class="col-lg-6 col-md-8 col-sm-6 col-xs-6">
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="checkbox" name="caracAnimal" id="caracAnimal"
                                 value="docil">
@@ -230,7 +230,7 @@
                             <label class="form-check-label" for="caracAnimal">Gosta de crianças</label>
                         </div>
                     </div>
-                    <div class="col-lg-12 col-md-6 col-sm-6 col-xs-6">
+                    <div class="col-lg-12 col-md-8 col-sm-6 col-xs-6">
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="checkbox" name="carac" id="caracAnimal"
                                 value="idosos">

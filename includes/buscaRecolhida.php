@@ -16,7 +16,7 @@
                         <option value="gato">Gato</option>
                     </select>
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-12 p-3">
+                <div class="buscaRecolAjudar col-lg-6 col-md-6 col-sm-12 p-3">
                 <select name="comoQueroAjudar" class="form-control">
                         <option disabled selected>Como quer ajudar?</option>
                         <option value="adocao">Adoção</option>
@@ -24,10 +24,10 @@
                         <option value="lartemporario">Lar temporário</option>
                     </select>
                 </div>
-            </div>
+            <!-- </div> -->
             
-            <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-12 p-3">
+            <!-- <div class="row"> -->
+                <div class="buscaRecolPorte col-lg-6 col-md-6 col-sm-12 p-3">
                     <select name="porte" class="form-control">
                         <option disabled selected>Porte</option>
                         <option value="pequeno">Pequeno</option>
@@ -35,7 +35,7 @@
                         <option value="grande">Grande</option>
                     </select>
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-12 p-3">
+                <div class="buscaReclOng col-lg-6 col-md-6 col-sm-12 p-3">
                     <select name="ong" class="form-control">
                         <option disabled selected>Selecionar a ONG</option>
                         <option value="ong-a">ONG $A</option>
@@ -43,9 +43,9 @@
                         <option value="ong-c">ONG $C</option>
                     </select>
                 </div>
-            </div>
+            <!-- </div> -->
             
-            <div class="row">
+            <!-- <div class="row"> -->
                 <div class="col-lg-6 col-md-6 col-sm-12 p-3">
                     <select name="sexo" class="form-control">
                         <option disabled selected>Sexo</option>
@@ -53,7 +53,7 @@
                         <option value="macho">Macho</option>
                     </select>
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-12 p-3">
+                <div class="buscaRecolBotao col-lg-6 col-md-6 col-sm-12 p-3">
                     <button class="btn-busca-recolhida" type="submit" name="procurar">Procurar</button>
                 </div>
             </div>
