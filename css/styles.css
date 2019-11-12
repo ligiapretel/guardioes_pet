@@ -970,6 +970,16 @@ footer img {
     }
 
     /*Fim da página Index*/
+
+    /*Início da página cadastre-se*/
+    .botaoCadGuardiao{
+        margin-top: 23px;
+    }
+    #main-cadastre-se {
+        padding: 100px 0px;
+    }
+
+    /*Fim da página cadastre-se*/
 }
 
 
@@ -1057,6 +1067,7 @@ footer img {
     #formAnimal {
         margin-left: 0px;
     }
+
 }
 
 
@@ -1212,6 +1223,21 @@ footer img {
         font-size: 2rem;
     }
 
+    .formPet{
+        order: -3;
+    }
+
+    .formAjudar{
+        order: 1;
+    }
+
+    .formSexo{
+        order: -3;
+    }
+
+    .formBotao{
+        order: 1;
+    }
 
     #seja-guardiao-home {
         margin-top: -45px;
@@ -1258,292 +1284,369 @@ footer img {
     }
 
     /*Fim da página Index*/
+
+    /*Início da página cadastre-se*/
+    #container-box-cadastre-se {
+        margin: 100px 20px 0px 20px;
+        width:100%;
+    }
+
+    .botaoCadOng{
+        margin-top: 26px;
+    }
+
+    .botaoCadGuardiao{
+        font-size: 0.8rem;
+        font-weight: bold;
+        margin-top: 52px;
+        height: 40px;
+    }
+
+    /*Fim da página cadastre-se*/
 }
 
 
 /* Iniciando CSS extra small devices (até 576px) */
 @media(max-width: 576px) {
-/* Estilos do header */
-.header-menu {
-    padding: .3rem .2rem;
-}
 
-.fonteHeader {
-    font-size: 1.2rem;
-}
+    /* Estilos do header */
+    .header-menu {
+        padding: .3rem .2rem;
+    }
 
-.header-link {
-    font-size: 1.2rem;
-    line-height: 2.5rem;
-}
+    .fonteHeader {
+        font-size: 1.2rem;
+    }
 
-.lista-menu {
-    padding-left: 35px;
-    padding-bottom: 35px;
-}
+    .header-link {
+        font-size: 1.2rem;
+        line-height: 2.5rem;
+    }
 
-/* PERFIL DA ONG E DO GUARDIÃO */
-#pfong_cx_info_principal {
-    /* ongs */
-    padding: 15% 5% 5% 5%;
-}
+    .lista-menu {
+        padding-left: 35px;
+        padding-bottom: 35px;
+    }
 
-#pfG_cx_info_principal {
-    /* guardiões */
-    padding: 15% 5% 5% 5%;
-}
+    /* PERFIL DA ONG E DO GUARDIÃO */
+    #pfong_cx_info_principal {
+        /* ongs */
+        padding: 15% 5% 5% 5%;
+    }
 
-#perfilOng_imagem {
-    /* ongs */
-    margin-top: 60px;
-    width: 60%;
-    height: 60%;
-}
+    #pfG_cx_info_principal {
+        /* guardiões */
+        padding: 15% 5% 5% 5%;
+    }
 
-#perfilGua_imagem {
-    /* guardiões */
-    margin-top: 60px;
-    width: 60%;
-    height: 60%;
-}
+    #perfilOng_imagem {
+        /* ongs */
+        margin-top: 60px;
+        width: 60%;
+        height: 60%;
+    }
 
-.pfOngGuard_titulo {
-    /* ambos */
-    font-size: 1.7em;
-}
+    #perfilGua_imagem {
+        /* guardiões */
+        margin-top: 60px;
+        width: 60%;
+        height: 60%;
+    }
+
+    .pfOngGuard_titulo {
+        /* ambos */
+        font-size: 1.7em;
+    }
 
 
-/* Iniciando CSS página Sobre  */
-#banner-sobre h1 {
-    text-align: left;
-}
+    /* Iniciando CSS página Sobre  */
+    #banner-sobre h1 {
+        text-align: left;
+    }
 
-#banner-sobre p {
-    text-align: left;
-}
+    #banner-sobre p {
+        text-align: left;
+    }
 
-#banner-sobre {
-    height: auto;
-    width: 100vw;
-    padding: 100px 0px 30px 0px;
-}
+    #banner-sobre {
+        height: auto;
+        width: 100vw;
+        padding: 100px 0px 30px 0px;
+    }
 
-#banner-sobre h1 {
-    font-size: 2rem;
-    margin-top: 0px;
-    line-height: 40px;
-}
+    #banner-sobre h1 {
+        font-size: 2rem;
+        margin-top: 0px;
+        line-height: 40px;
+    }
 
-#sobre-nos h2 {
-    font-size: 2rem;
-    padding: 10px 0px 15px 0px;
-}
+    #sobre-nos h2 {
+        font-size: 2rem;
+        padding: 10px 0px 15px 0px;
+    }
 
-#sobre-nos p {
-    font-size: 1rem;
-}
+    #sobre-nos p {
+        font-size: 1rem;
+    }
 
-#equipe-sobre {
-    margin-top: 0px;
-    padding-top: 30px;
-}
+    #equipe-sobre {
+        margin-top: 0px;
+        padding-top: 30px;
+    }
 
-#equipe-sobre h3 {
-    font-size: 1.4rem;
-}
+    #equipe-sobre h3 {
+        font-size: 1.4rem;
+    }
 
-#equipe-sobre p {
-    padding: 0px;
-}
+    #equipe-sobre p {
+        padding: 0px;
+    }
 
-.foto-perfil {
-    width: 150px;
-}
+    .foto-perfil {
+        width: 150px;
+    }
 
-/*Cadastro Guardiao*/
-.tituloGuardiao {
-    font-size: 1.3rem;
-}
+    /*Cadastro Guardiao*/
+    .tituloGuardiao {
+        font-size: 1.3rem;
+    }
 
-#formGuardiao {
-    margin-top: 72px;
-}
+    #formGuardiao {
+        margin-top: 72px;
+    }
 
-/*Cadastro Ong*/
-.tituloOng {
-    font-size: 1.62rem;
-}
+    /*Cadastro Ong*/
+    .tituloOng {
+        font-size: 1.62rem;
+    }
 
-#formOng {
-    margin-top: 72px;
-}
+    #formOng {
+        margin-top: 72px;
+    }
 
-/*Cadastro Animal*/
-#formAnimal {
-    margin-left: 0px;
-}
+    /*Cadastro Animal*/
+    #formAnimal {
+        margin-left: 0px;
+    }
 
-::placeholder {
-    text-align: justify;
-}
+    ::placeholder {
+        text-align: justify;
+    }
 
-.botaoAnimal {
-    margin-top: 10px;
-}
+    .botaoAnimal {
+        margin-top: 10px;
+    }
 
-/*Menu Lateral ONG*/
-.navbar-menu-principal {
-    display: none;
-}
+    /*Menu Lateral ONG*/
+    .navbar-menu-principal {
+        display: none;
+    }
 
-/*Menu lateral da ong*/
-.navbar-menu-principal {
-    display: block;
-    background-color: #ff9640;
-    color: white;
-    width: 100%;
-    padding: 10px;
-}
+    /*Menu lateral da ong*/
+    .navbar-menu-principal {
+        display: block;
+        background-color: #ff9640;
+        color: white;
+        width: 100%;
+        padding: 10px;
+    }
 
-.navbar-menu-itens.collapse {
-    display: none;
-}
+    .navbar-menu-itens.collapse {
+        display: none;
+    }
 
-.navbar-menu-itens.show {
-    display: block;
-}
+    .navbar-menu-itens.show {
+        display: block;
+    }
 
-#perfil-ong {
-    display: none;
-}
+    #perfil-ong {
+        display: none;
+    }
 
-/*Página cadastro Anúncio*/
-#formAnuncio {
-    margin-top: 0%;
-    margin-left: 0%;
-    margin-bottom: 0%;
-}
+    /*Página cadastro Anúncio*/
+    #formAnuncio {
+        margin-top: 0%;
+        margin-left: 0%;
+        margin-bottom: 0%;
+    }
 
-/* Busca recolhida  */
+    /* Busca recolhida  */
 
-#container-busca-recolhida h2 {
-    font-size: 1.2rem;
-}
+    #container-busca-recolhida h2 {
+        font-size: 1.2rem;
+    }
 
-.ico-seta-expande-busca {
-    font-size: 3rem;
-}
+    .ico-seta-expande-busca {
+        font-size: 3rem;
+    }
 
-/*Início Página de login*/
-#main-login h1 {
-    font-size: 1.8rem;
-}
+    .buscaRecolAjudar{
+        order: 1;
+    }
 
-.p-2 {
-    width: 90%;
-}
+    .buscaRecolPorte{
+        order: -0;
+    }
 
-.sobre-senha {
-    width: 43%;
-}
+    .buscaReclOng{
+        order: 1;
+    }
 
-#main-login h2 {
-    font-size: 1.3rem;
-}
+    .buscaRecolBotao{
+        order: 1;
+    }
 
-#container-form-login {
-    margin-top: 90px;
-}
+    /*Início Página de login*/
+    #main-login h1 {
+        font-size: 1.8rem;
+    }
 
-/*Fim Página de login*/
+    .p-2 {
+        width: 90%;
+    }
 
-/*Início Página Index*/
-.titulo-carrossel-home h1 {
-    font-size: 1.4rem;
-}
+    .sobre-senha {
+        width: 43%;
+    }
 
-.titulo-carrossel-home p {
-    color: transparent;
-}
+    #main-login h2 {
+        font-size: 1.3rem;
+    }
 
-.titulo-carrossel-home {
-    bottom: 10px;
-}
+    #container-form-login {
+        margin-top: 90px;
+    }
 
-#container-busca-expandida {
-    bottom: 0px;
-    height: 50%;
-}
+    /*Fim Página de login*/
 
-#container-busca-expandida h2 {
-    font-size: 1.5rem;
-}
+    /*Início Página Index*/
+    .titulo-carrossel-home h1 {
+        font-size: 1.4rem;
+    }
 
-.formulario-index {
-    flex-direction: column;
-}
+    .titulo-carrossel-home p {
+        color: transparent;
+    }
 
-.formulario-index-itens {
-    margin-bottom: -19px;
-}
+    .titulo-carrossel-home {
+        bottom: 10px;
+    }
 
-.botao-home {
-    background-color: #6E5DB3;
-    color: #ffffff;
-    text-transform: uppercase;
-    padding: 8px 30px;
-    border: none;
-    border-radius: 5px;
-    width: 100%;
-}
+    #carrossel{
+        margin-top: 72px;
+        background-color: #F1F5FA;
+    }
+    
+    #container-busca-expandida {
+        bottom: 0px;
+        height: 50%;
+    }
 
-.botao-home:hover {
-    background-color: #4a3f78;
-}
+    #container-busca-expandida h2 {
+        font-size: 1.5rem;
+    }
 
-#seja-guardiao-home {
-    margin-top: -15px;
-}
+    .formulario-index {
+        flex-direction: column;
+    }
 
-#seja-guardiao-home h2 {
-    font-size: 1.8rem;
-    padding: 22px 0px;
-}
+    .formulario-index-itens {
+        margin-bottom: -19px;
+    }
 
-#seja-guardiao-home p {
-    font-size: 1.1rem;
-    margin-top: -10px;
-}
+    .formPet{
+        order: -3;
+    }
 
-#como-funciona-home {
-    padding: 0px 10px;
-}
+    .formAjudar{
+        order: 1;
+    }
 
-#como-funciona-home h2 {
-    padding: 10px 0px;
-    font-size: 1.8rem;
-}
+    .formSexo{
+        order: -3;
+    }
 
-#como-funciona-home h4 {
-    font-size: 1.2rem;
-}
+    .formBotao{
+        order: 1;
+    }
 
-#como-funciona-home p {
-    font-size: 1rem;
-}
+    .botao-home {
+        background-color: #6E5DB3;
+        color: #ffffff;
+        text-transform: uppercase;
+        padding: 8px 30px;
+        border: none;
+        border-radius: 5px;
+        width: 100%;
+    }
 
-#como-funciona-home button {
-    margin-bottom: 20px;
-}
+    .botao-home:hover {
+        background-color: #4a3f78;
+    }
 
-#doacoes-home h2 {
-    font-size: 1.8rem;
-}
+    #seja-guardiao-home {
+        margin-top: -15px;
+    }
 
-#doacoes-home p {
-    font-size: 1rem;
-    margin: 5px;
-}
+    #seja-guardiao-home h2 {
+        font-size: 1.8rem;
+        padding: 22px 0px;
+    }
 
-/*Fim da página Index*/
+    #seja-guardiao-home p {
+        font-size: 1.1rem;
+        margin-top: -10px;
+    }
+
+    #como-funciona-home {
+        padding: 0px 10px;
+    }
+
+    #como-funciona-home h2 {
+        padding: 10px 0px;
+        font-size: 1.8rem;
+    }
+
+    #como-funciona-home h4 {
+        font-size: 1.2rem;
+    }
+
+    #como-funciona-home p {
+        font-size: 1rem;
+    }
+
+    #como-funciona-home button {
+        margin-bottom: 20px;
+    }
+
+    #doacoes-home h2 {
+        font-size: 1.8rem;
+    }
+
+    #doacoes-home p {
+        font-size: 1rem;
+        margin: 5px;
+    }
+
+    /*Fim da página Index*/
+
+    /*Início da página cadastre-se*/
+    #main-cadastre-se {
+        flex-direction: column;
+    }
+
+    #container-box-cadastre-se {
+        margin: 70px 20px 0px 17px;
+        width: 90%;
+    }
+
+    #container-box-cadastre-se p {
+        font-size: 1rem;
+    }
+
+    .botaoCadGuardiao{
+        font-size: 0.9rem;
+        height: 42px;
+    }
+    /*Fim da página cadastre-se*/
 }
