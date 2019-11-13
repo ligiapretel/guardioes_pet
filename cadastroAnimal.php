@@ -26,7 +26,7 @@
     <section class="row">
         <!-- include do menu lateral -->
         <?php include_once("includes/menu-ong.php")?>
-        <form action=""
+        <form action="perfilOng.php"
             class="card col-lg-8 col-md-12 col-sm-12 col-12 p-5" id="formAnimal" style="width: 50rem">
             <!-- essa div é para o título -->
             <div class="form-group d-flex justify-content p-2">

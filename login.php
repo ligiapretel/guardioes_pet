@@ -17,7 +17,7 @@
     <?php include_once("includes/header.php")?>
     <main id="main-login" class="col-lg-12 col-md-12 col-sm-12 col-xs-6">
         <div id="container-form-login" class="col-lg-5 col-md-6 col-sm-6 col-xs-6">
-            <form action="#" method="POST">
+            <form action="perfilGuardiao.php" method="POST">
                 <div class="row justify-content-center">
                     <div class="col-lg-10 col-md-10 col-sm-10 col-xs-6 text-center">
                         <h1>Acesse sua conta</h1>

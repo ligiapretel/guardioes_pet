@@ -25,7 +25,7 @@
     <main class= "container-fluid">
     <section class="row">
         
-        <form action="" class="card col-lg-8 col-md-12 col-sm-12 col-12 p-5" id="formOng">
+        <form action="cadastroAnimal.php" class="card col-lg-8 col-md-12 col-sm-12 col-12 p-5" id="formOng">
             <!-- essa div é para o título -->
             <div class="form-group d-flex justify-content p-2">
                 <h3 class="tituloOng">Cadastro de ONG</h3>
