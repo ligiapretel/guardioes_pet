@@ -27,7 +27,7 @@
                             <a class="nav-link menu-ong" href="#">Animais Cadastrados</a>
                             <a class="nav-link menu-ong" href="#">Cadastrar Novos Animais</a>
                             <a class="nav-link menu-ong" href="#">Anúncios Cadastrados</a>
-                            <a class="nav-link menu-ong" href="#">Cadastrar Novos Anúncios</a>
+                            <a class="nav-link menu-ong" href="cadastroAnuncio.php">Cadastrar Novos Anúncios</a>
                             <a class="nav-link menu-ong" href="#">Mensagens</a>
                             <a class="nav-link menu-ong-sair" href="#">Sair</a>
                         </nav>
