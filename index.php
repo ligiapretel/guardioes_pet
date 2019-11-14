@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Adote, abrigue, ajude. Seja um guardião pet. Encontre o cão ou gato que combina com seu perfil e ajude ONGs a transformarem a vida desses bichinhos.">
-    <meta name="author" content="Aline Naoe, Anaê Ross, Chaiana Hermes, Claudia Leite, Ligia Pretel Eimantas, Luana Solimeno">
+    <meta name="author" content="Aline Naoe, Anaê Ross, Chaiana Hermes, Claudia Leite, Giuliana Gabrielli, Ligia Pretel Eimantas, Luana Solimeno">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="img/escudo.png" sizes="32x32" rel="shortcut icon"/>
@@ -107,7 +107,7 @@
                                 </select>
                             </div>
                             <div class="formBotao formulario-index col-md-6 p-3">
-                                <button class="formulario-index-itens btn-busca-expandida botao-home" type="submit" name="procurar">Procurar</button>
+                                <button class="btn-roxo formulario-index-itens btn-busca-expandida botao-home" type="submit" name="procurar">Procurar</button>
                             </div>
                         </div>
                         <!-- CH: comentei duas opções de busca do filtro, conforme feedback.
@@ -158,7 +158,7 @@
                 </div>
             </div>
             <div class="row justify-content-center">
-                <a href="#container-busca-expandida"><button class="botao-home">Encontre um amigo</button></a>
+                <a href="#container-busca-expandida"><button class="btn-roxo botao-home">Encontre um amigo</button></a>
             </div>
         </section>
         <!-- Fechando seção "Como funciona". -->
@@ -167,7 +167,7 @@
             <h2>Tem itens para doação? Ajude!</h2>
             <p>Roupinhas, remédios, ração...tá sobrando na sua casa? Tem muitas organizações - e muitos guardiões também! - precisando de todo tipo de item para cuidar e alimentar gatinhos e cachorros. Veja quais as necessidades e se você pode contribuir!</p>
             <div class="row justify-content-center">
-                <a href="anuncios.php"><button class="botao-home">Quero doar</button></a>
+                <a href="anuncios.php"><button class="btn-roxo botao-home">Quero doar</button></a>
             </div>
         </section>
         <!-- Fechando seção "Doações". -->

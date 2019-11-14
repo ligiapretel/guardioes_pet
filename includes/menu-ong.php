@@ -19,7 +19,8 @@
         <a href="#menu-principal" data-toggle="collapse" aria-expanded="false" class="navbar-menu-principal collapsed col-12 dropdown-toggle">
             <img src="img/user-icon.png" class="ml-3" alt="icone de usuário" id="user-icon">
         </a>	 
-        <div class="card navbar-menu-itens collapse" style="width: 20rem;" id="menu-principal">
+        
+        <div class="card navbar-menu-itens collapse" style="width: 20rem;" id="menu-principal"> 
                 <img id="perfil-ong" class="ml-4" src="img/foto_perfil_ong.jpg" alt="logo da ONG" />
                 <div class="card-body" style="width: 20rem;">
                         <nav class="nav flex-column bg-light">

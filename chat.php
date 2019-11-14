@@ -4,13 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Adote, abrigue, ajude. Seja um guardião pet. Encontre o cão ou gato que combina com seu perfil e ajude ONGs a transformarem a vida desses bichinhos.">
-    <meta name="author"
-        content="Aline Naoe, Anaê Ross, Chaiana Hermes, Claudia Leite, Ligia Pretel Eimantas, Luana Solimeno">
+    <meta name="description" content="Adote, abrigue, ajude. Seja um guardião pet. Encontre o cão ou gato que combina com seu perfil e ajude ONGs a transformarem a vida desses bichinhos.">
+    <meta name="author" content="Aline Naoe, Anaê Ross, Chaiana Hermes, Claudia Leite, Giuliana Gabrielli, Ligia Pretel Eimantas, Luana Solimeno">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="img/escudo.png" sizes="32x32" rel="shortcut icon" />
     <link href="css/styles.css" rel="stylesheet" />
     <link href='https://fonts.googleapis.com/css?family=Rockwell' rel='stylesheet' type='text/css'>
@@ -19,7 +16,7 @@
 
 <body>
     <?php include_once("includes/header.php");?>
-    <div class="row d-flex align-items-center mt-5 m-5 p-3">
+    <!-- <div class="row d-flex align-items-center mt-5 m-5 p-3">
         <div id="menu-ong" class="col-lg-3 col-md-3 col-sm-6 col-xs-6 mt-3">
             <div class="card" style="width: 20rem;">
                 <img id="perfil-ong" src="img/foto_perfil_ong.jpg" alt="logo da ONG" />
@@ -35,7 +32,12 @@
                     </nav>
                 </div>
             </div>
-        </div>
+        </div> -->
+    <!-- início do chat -->
+    <main class="row" >
+    <!-- include do menu lateral -->
+    <?php include_once("includes/menu-ong.php")?> 
+        <!-- Início do chat-->
         <section class="col-lg-3 col-md-3 col-sm-6 col-xs-6 m-5">
             <div class="card-body">
                 <div class="mensagem-guardiao mt-5">
@@ -85,14 +87,14 @@
             <form>
                 <textarea class="form-control" type="text" rows="10"
                     placeholder="Responder a mensagem do Guardião aqui." name=""></textarea>
-                <button type="submit" class="btn btn-outline-success d-flex justify-content-end m-3">Responder</button>
+                <button type="submit" class="btn btn-roxo-outline d-flex justify-content-end m-3">Responder</button>
             </form>
         </div>
     </div>
+    </main>
     <?php include_once("includes/footer.php")?>
     <!-- Script JS Bootstrap | Manter código próximo ao fechamento do body -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">

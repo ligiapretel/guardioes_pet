@@ -7,7 +7,7 @@
     <meta name="description"
         content="Adote, abrigue, ajude. Seja um guardião pet. Encontre o cão ou gato que combina com seu perfil e ajude ONGs a transformarem a vida desses bichinhos.">
     <meta name="author"
-        content="Aline Naoe, Anaê Ross, Chaiana Hermes, Claudia Leite, Ligia Pretel Eimantas, Luana Solimeno">
+        content="Aline Naoe, Anaê Ross, Chaiana Hermes, Claudia Leite, Giuliana Gabrielli, Ligia Pretel Eimantas, Luana Solimeno">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -89,7 +89,7 @@
                     </div>
                 </div>
 
-                <div class="form-group row">
+                <div class="row mt-1">
                     <input class="form-check-input" type="checkbox" name="brinquedo" id="brinquedo" value="brinquedo">
                     <label for="brinquedo" class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-form-label">Brinquedos</label>
                     <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
@@ -97,7 +97,7 @@
                     </div>
                 </div>
 
-                <div class="form-group row">
+                <div class="row mt-1">
                     <input class="form-check-input" type="checkbox" name="acessorio" id="acessorio" value="acessorio">
                     <label for="acessório" class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-form-label">Acessórios</label>
                     <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
@@ -106,7 +106,7 @@
                     </div>
                 </div>
 
-                <div class="form-group row">
+                <div class="row mt-2">
                     <input class="form-check-input" type="checkbox" name="outros" id="outros" value="outros">
                     <label for="outros" class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-form-label">Outros</label>
                     <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
@@ -114,7 +114,7 @@
                             placeholder="Descreva"></textarea>
                     </div>
                 </div>
-                <button type="submit" class="btn btnGuardiao" id="botaoAnuncio">Salvar anúncio</button>
+                <button type="submit" class="btn btn-roxo btnGuardiao mt-2" id="botaoAnuncio">Salvar anúncio</button>
             </div>
 
         </form>

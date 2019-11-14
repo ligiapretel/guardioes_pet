@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Adote, abrigue, ajude. Seja um guardião pet. Encontre o cão ou gato que combina com seu perfil e ajude ONGs a transformarem a vida desses bichinhos.">
-    <meta name="author" content="Aline Naoe, Anaê Ross, Chaiana Hermes, Claudia Leite, Ligia Pretel Eimantas, Luana Solimeno">
+    <meta name="author" content="Aline Naoe, Anaê Ross, Chaiana Hermes, Claudia Leite, Giuliana Gabrielli, Ligia Pretel Eimantas, Luana Solimeno">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="img/escudo.png" sizes="32x32" rel="shortcut icon"/>
@@ -29,7 +29,7 @@
                         <input class="form-control" type="password" name="senha" placeholder="Senha">
                     </div>
                     <div class="col-lg-10 col-md-10 col-sm-10 col-xs-6 p-2 largura-form-xs">
-                        <button class="btn-busca-expandida" type="submit" name="procurar">Entrar</button>
+                        <button class="btn-roxo btn-busca-expandida" type="submit" name="procurar">Entrar</button>
                     </div>
                 </div>
                 <div class="row justify-content-center align-items-baseline">
@@ -49,10 +49,10 @@
                     <h2>ou cadastre-se</h2>
                 </div>
                 <div class="col-lg-5 col-md-10 col-sm-10 col-xs-5 p-2 largura-form-xs m-1 text-center">
-                    <a href="cadastroOng.php"><button class="btn-login-enviar" type="submit" name="sou-ong">Sou ONG</button></a>
+                    <a href="cadastroOng.php"><button class="btn-roxo btn-login-enviar" type="submit" name="sou-ong">Sou ONG</button></a>
                 </div>
                 <div class="col-lg-5 col-md-10 col-sm-10 col-xs-5 p-2 largura-form-xs m-1 text-center">
-                    <a href="cadastroGuardiao.php"><button class="btn-login-enviar" type="submit"
+                    <a href="cadastroGuardiao.php"><button class="btn-roxo btn-login-enviar" type="submit"
                             name="sou-guardiao">Sou Guardião</button></a>
                 </div>
             </div>

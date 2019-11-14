@@ -7,7 +7,7 @@
     <meta name="description"
         content="Adote, abrigue, ajude. Seja um guardião pet. Encontre o cão ou gato que combina com seu perfil e ajude ONGs a transformarem a vida desses bichinhos.">
     <meta name="author"
-        content="Aline Naoe, Anaê Ross, Chaiana Hermes, Claudia Leite, Ligia Pretel Eimantas, Luana Solimeno">
+        content="Aline Naoe, Anaê Ross, Chaiana Hermes, Claudia Leite, Giuliana Gabrielli, Ligia Pretel Eimantas, Luana Solimeno">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -143,13 +143,13 @@
                     </select>
                 </div>
             </div>
-            <div class="form-group row">
+            <div class="form-group row p-3">
                 <label for="textoGuardiao">Fale sobre você</label>
                 <textarea class="form-control" id="textoGuardiao" cols="30" rows="10"
                     placeholder="Descreva por que você quer ser um(a) Guardião(ã)"></textarea>
             </div>
             <div>
-            <button type="submit" class="btn btnGuardiao">Salvar cadastro</button>
+            <button type="submit" class="btn btn-roxo btnGuardiao">Salvar cadastro</button>
             </div>
         </form>
     </section>

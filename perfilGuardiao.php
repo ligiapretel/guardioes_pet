@@ -4,15 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Adote, abrigue, ajude. Seja um guardião pet. Encontre o cão ou gato que combina com seu perfil e ajude ONGs a transformarem a vida desses bichinhos.">
-    <meta name="author"
-        content="Aline Naoe, Anaê Ross, Chaiana Hermes, Claudia Leite, Ligia Pretel Eimantas, Luana Solimeno">
+    <meta name="description" content="Adote, abrigue, ajude. Seja um guardião pet. Encontre o cão ou gato que combina com seu perfil e ajude ONGs a transformarem a vida desses bichinhos.">
+    <meta name="author" content="Aline Naoe, Anaê Ross, Chaiana Hermes, Claudia Leite, Giuliana Gabrielli, Ligia Pretel Eimantas, Luana Solimeno">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!--Para os icones -->
     <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.5.95/css/materialdesignicons.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="img/escudo.png" sizes="32x32" rel="shortcut icon">
     <link href="css/styles.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Rockwell' rel='stylesheet' type='text/css'>
@@ -32,9 +29,7 @@
 
             <div class="col-lg-6 col-md-6 col-sm-12 col-12"> 
                 <h1 class="pfOngGuard_titulo text-dark font-weight-bolder">Claudia Leite</h1>
-                <p class="text-dark text-justify">Nossa ONG nasceu com intenções claras de resgate, castração e doação de animais. Nos empenhamos em
-                    abrigar poucos, socorrer vários e castrar MUITOS, pois a castração é a única solução ao problema
-                    estrutural da procriação de animais abandonados.</p>
+                <p class="text-dark text-justify">Nossa ONG nasceu com intenções claras de resgate, castração e doação de animais. Nos empenhamos em abrigar poucos, socorrer vários e castrar MUITOS, pois a castração é a única solução ao problema estrutural da procriação de animais abandonados.</p>
                 <p class="text-dark text-justify">Nossa ONG é formada por profissionais liberais, gente comum que trabalha, estuda, enfim, vive!</p>
                 <div id="pfG_cx_i_txt" class="d-flex align-items-center">
                     <i class="mdi mdi-email-outline"></i>
@@ -52,23 +47,23 @@
             <h2 class="col-lg-12 text-dark font-weight-bold pfOngGuard_titulo">Apadrinhados</h2>
 
             <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-                <div class="card">
+                <div class="card" style="background-color: #E7E2FC">
                     <img src="img/pfGuardiao_cachorro1.jpg" class="card-img-top img-fluid" height="300" width="300">
                     <div class="card-body">
                     <h4 class="card-title text-dark font-weight-bold">Elza</h4>
                         <p class="card-text text-secondary">Tenho uma pelagem de tres cores que é puro charme e pra completar uma carinha inocente que é i-rre-sis-tível!Adoro tomar um solzinho na janela e tirar cochilos na ...</p>
-                        <a href="#" class="btn btn-primary">Saiba mais</a> 
+                        <a href="#" class="btn btn-roxo-outline">Saiba mais</a> 
                     </div>
                 </div>
             </div>
 
             <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-                <div class="card">
+                <div class="card" style="background-color: #E7E2FC">
                     <img src="img/pfGuardiao_gato1.jpeg" class="card-img-top img-fluid" height="300" width="300">
                     <div class="card-body">
                     <h4 class="card-title text-dark font-weight-bold">Chico</h4>
                         <p class="card-text text-secondary">Tenho uma pelagem de tres cores que é puro charme e pra completar uma carinha inocente que é i-rre-sis-tível!Adoro tomar um solzinho na janela e tirar cochilos na ...</p>
-                        <a href="#" class="btn btn-primary">Saiba mais</a>
+                        <a href="#" class="btn btn-roxo-outline">Saiba mais</a>
                     </div>
                 </div>
             </div>
@@ -76,10 +71,10 @@
             <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                 <div class="card">
                     <img src="img/pfGuardiao_cachorro2.jpg" class="card-img-top img-fluid" height="300" width="300">
-                    <div class="card-body">
+                    <div class="card-body" style="background-color: #E7E2FC">
                         <h4 class="card-title text-dark font-weight-bold">Belquior</h4>
                         <p class="card-text text-secondary">Tenho uma pelagem de tres cores que é puro charme e pra completar uma carinha inocente que é i-rre-sis-tível!Adoro tomar um solzinho na janela e tirar cochilos na ...</p>
-                        <a href="#" class="btn btn-primary">Saiba mais</a>
+                        <a href="#" class="btn btn-roxo-outline">Saiba mais</a>
                     </div>
                 </div>
             </div>
@@ -95,10 +90,10 @@
             <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                 <div class="card">
                     <img src="img/pfGuardiao_cachorro1.jpg" class="card-img-top img-fluid" height="300" width="300">
-                    <div class="card-body">
+                    <div class="card-body" style="background-color:#D6EBE8">
                     <h4 class="card-title text-dark font-weight-bold">Elza</h4>
                         <p class="card-text text-secondary">Tenho uma pelagem de tres cores que é puro charme e pra completar uma carinha inocente que é i-rre-sis-tível!Adoro tomar um solzinho na janela e tirar cochilos na ...</p>
-                        <a href="#" class="btn btn-primary">Saiba mais</a> 
+                        <a href="#" class="btn btn-roxo-outline">Saiba mais</a> 
                     </div>
                 </div>
             </div>
@@ -106,10 +101,10 @@
             <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                 <div class="card">
                     <img src="img/pfGuardiao_gato1.jpeg" class="card-img-top img-fluid" height="300" width="300">
-                    <div class="card-body">
+                    <div class="card-body" style="background-color:#D6EBE8">
                     <h4 class="card-title text-dark font-weight-bold">Chico</h4>
                         <p class="card-text text-secondary">Tenho uma pelagem de tres cores que é puro charme e pra completar uma carinha inocente que é i-rre-sis-tível!Adoro tomar um solzinho na janela e tirar cochilos na ...</p>
-                        <a href="#" class="btn btn-primary">Saiba mais</a>
+                        <a href="#" class="btn btn-roxo-outline">Saiba mais</a>
                     </div>
                 </div>
             </div>
@@ -125,10 +120,10 @@
             <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                 <div class="card">
                     <img src="img/pfGuardiao_cachorro1.jpg" class="card-img-top img-fluid" height="300" width="300">
-                    <div class="card-body">
+                    <div class="card-body" style="background-color:#fdead1">
                     <h4 class="card-title text-dark font-weight-bold">Elza</h4>
                         <p class="card-text text-secondary">Tenho uma pelagem de tres cores que é puro charme e pra completar uma carinha inocente que é i-rre-sis-tível!Adoro tomar um solzinho na janela e tirar cochilos na ...</p>
-                        <a href="#" class="btn btn-primary">Saiba mais</a> 
+                        <a href="#" class="btn btn-roxo-outline">Saiba mais</a> 
                     </div>
                 </div>
             </div>
@@ -136,10 +131,10 @@
             <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                 <div class="card">
                     <img src="img/pfGuardiao_gato1.jpeg" class="card-img-top img-fluid" height="300" width="300">
-                    <div class="card-body">
+                    <div class="card-body" style="background-color:#fdead1">
                     <h4 class="card-title text-dark font-weight-bold">Chico</h4>
                         <p class="card-text text-secondary">Tenho uma pelagem de tres cores que é puro charme e pra completar uma carinha inocente que é i-rre-sis-tível!Adoro tomar um solzinho na janela e tirar cochilos na ...</p>
-                        <a href="#" class="btn btn-primary">Saiba mais</a>
+                        <a href="#" class="btn btn-roxo-outline">Saiba mais</a>
                     </div>
                 </div>
             </div>

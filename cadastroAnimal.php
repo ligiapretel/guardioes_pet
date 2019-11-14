@@ -7,7 +7,7 @@
     <meta name="description"
         content="Adote, abrigue, ajude. Seja um guardião pet. Encontre o cão ou gato que combina com seu perfil e ajude ONGs a transformarem a vida desses bichinhos.">
     <meta name="author"
-        content="Aline Naoe, Anaê Ross, Chaiana Hermes, Claudia Leite, Ligia Pretel Eimantas, Luana Solimeno">
+        content="Aline Naoe, Anaê Ross, Chaiana Hermes, Claudia Leite, Giuliana Gabrielli, Ligia Pretel Eimantas, Luana Solimeno">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -96,17 +96,16 @@
             </div>
             <div class="form-group row">
                 <label for="opcao" class="col-sm-4 col-form-label">Quais as opções para esse animal?</label>
-                <div class="form-check form-check-inline col-sm-4">
+                <div class="form-check form-check-inline col-lg-2 col-md-3 col-sm-4">
                     <input class="form-check-input" type="checkbox" name="opcao" id="opcaoAnimal" value="adocao">
                     <label class="form-check-label" for="opcaoAnimal">Adoção</label>
                 </div>
-                <div class="form-check form-check-inline col-sm-4">
+                <div class="form-check form-check-inline col-lg-3 col-md-3 col-sm-4">
                     <input class="form-check-input" type="checkbox" name="opcao" id="opcaoAnimal" value="temporario">
                     <label class="form-check-label" for="opcaoAnimal">Lar Temporário</label>
                 </div>
-                <div class="form-check form-check-inline col-sm-4">
-                    <input class="form-check-input" type="checkbox" name="opcao" id="opcaoAnimal"
-                        value="apadrinhamento">
+                <div class="form-check form-check-inline col-lg-2 col-md-3 col-sm-4">
+                    <input class="form-check-input" type="checkbox" name="opcao" id="opcaoAnimal" value="apadrinhamento">
                     <label class="form-check-label" for="opcaoAnimal">Apadrinhamento</label>
                 </div>
             </div>
@@ -247,14 +246,14 @@
                     </div>
                 </div>
                 </div>
-                <div class="form-group row">
+                <div class="form-group row p-3">
                     <label class="col-sm-4 col-form-label  tituloCaracteristicasAnimal" for="descricao">Descreva o pet:</label>
                     <textarea class="form-control" id="descricao" cols="30" rows="10"
                         placeholder="Fale mais sobre o animal: qual a sua história, suas características físicas e comportamentais, o tipo de lar que mais se adequaria, do que ele(a) gosta, etc."></textarea>
                 </div>
                 <div class="botaoLimparECadastro">
-                    <button type="reset" class="botaoAnimal">Limpar dados</button>
-                    <button type="submit" class="botaoAnimal">Cadastrar</button>
+                    <button type="reset" class="btn-roxo botaoAnimal">Limpar dados</button>
+                    <button type="submit" class="btn-roxo botaoAnimal">Cadastrar</button>
                 </div>
         </form>
     </section>

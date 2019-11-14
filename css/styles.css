@@ -45,7 +45,7 @@
     width: 40%;
     border-radius: 5px;
     background-color: white;
-    margin-top: 5rem;
+    margin-top: 3.4rem;
 }
 #user-icon{
     width:24px;
@@ -139,17 +139,8 @@
 }
 
 .btn-busca-expandida {
-    background-color: #6E5DB3;
-    color: #ffffff;
     text-transform: uppercase;
-    padding: 8px 30px;
-    border: none;
-    border-radius: 5px;
     width: 100%;
-}
-
-.btn-busca-expandida:hover {
-    background-color: #4a3f78;
 }
 
 /* Iniciando CSS da seção "Por que ser um Guardião PET?" - Home */
@@ -200,16 +191,7 @@
 }
 
 #como-funciona-home button {
-    background-color: #6E5DB3;
-    color: #ffffff;
     text-transform: uppercase;
-    padding: 8px 30px;
-    border: none;
-    border-radius: 5px;
-}
-
-#como-funciona-home button:hover {
-    background-color: #4a3f78;
 }
 
 /* Iniciando CSS da seção "Doações" - Home */
@@ -230,17 +212,8 @@
 }
 
 #doacoes-home button {
-    background-color: #6E5DB3;
-    color: #ffffff;
     text-transform: uppercase;
-    padding: 8px 30px;
-    border: none;
-    border-radius: 5px;
     margin: 20px 0px 50px 0px;
-}
-
-#doacoes-home button:hover {
-    background-color: #4a3f78;
 }
 
 /*CSS PÁGINA SOBRE.PHP*/
@@ -359,17 +332,9 @@
 }
 
 #form-parceiros button {
-    background-color: #6E5DB3;
-    color: #ffffff;
     text-transform: uppercase;
-    padding: 8px 30px;
-    border: none;
-    border-radius: 5px;
 }
 
-#form-parceiros button:hover {
-    background-color: #4a3f78;
-}
 
 /*HEADER*/
 header {
@@ -482,17 +447,10 @@ footer img {
 }
 
 .btnGuardiao {
-    background-color: #6E5DB3;
-    color: #ffffff;
-    border: none;
-    border-radius: 5px;
     cursor: pointer;
     float: right;
 }
 
-.btnGuardiao:hover {
-    background-color: #4a3f78;
-}
 
 /*CSS Cadastro Animal*/
 #formAnimal {
@@ -513,17 +471,10 @@ footer img {
 }
 
 .botaoAnimal {
-    background-color: #6E5DB3;
-    color: #ffffff;
     padding: 8px 15px;
-    border-radius: 5px;
     cursor: pointer;
-    border: none;
 }
 
-.botaoAnimal:hover {
-    background-color: #4a3f78;
-}
 
 .botaoLimparECadastro {
     float: right;
@@ -544,20 +495,12 @@ footer img {
 }
 
 .btnOng {
-    background-color: #6E5DB3;
-    color: #ffffff;
-    border: none;
-    border-radius: 5px;
     cursor: pointer;
     float: right;
 }
 
-.btnOng:hover {
-    background-color: #4a3f78;
-}
 
-
-/*CSS Cadstro de Anúncio*/
+/*CSS Cadastro de Anúncio*/
 #formAnuncio {
     background-color: #e5e9f2;
     margin-top: 0%;
@@ -700,7 +643,7 @@ footer img {
 
 #pfG_cx_info_principal {
     /* guardiões */
-    background-color: #D6EBE8;
+    background-color: #fdead1;
     padding: 10% 5% 5% 5%;
 }
 
@@ -750,15 +693,6 @@ footer img {
     padding: 5%;
 }
 
-.btn-primary {
-    background-color: #6E5DB3 !important;
-    border: none
-}
-
-.btn-primary:hover {
-    background-color: #4a3f78 !important;
-}
-
 
 /* Mural das Ongs - Estamos Precisando de */
 
@@ -786,6 +720,12 @@ footer img {
     margin-left: 3rem;
     margin-right: 3rem;
 }
+
+.tituloGeralAnuncios{
+    font-size: 2.8rem;
+    color: #6E5DB3;
+}
+
 
 /* Iniciando CSS da página Login */
 #main-login {
@@ -833,18 +773,10 @@ footer img {
 }
 
 .btn-login-enviar {
-    background-color: #6E5DB3;
-    color: #ffffff;
     text-transform: uppercase;
-    padding: 8px 30px;
-    border: none;
-    border-radius: 5px;
     width: 180px;
 }
 
-.btn-login-enviar:hover {
-    background-color: #4a3f78;
-}
 
 /* Iniciando CSS da página Cadastre-se */
 #main-cadastre-se {
@@ -914,6 +846,15 @@ footer img {
     text-decoration: none;
 }
 
+.btn-busca-expandida{
+    color: #ffffff;
+    text-transform: uppercase;
+    padding: 8px 30px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+}
+
 #pfG_adotados {
     display: flex;
     flex-direction: column;
@@ -969,7 +910,13 @@ footer img {
     width: 50%;
 }
 
-/* Iniciando CSS large devices (até 1200px) */
+#box-chat{
+    margin-top: 200px;
+}
+
+/* INICIANDO CSS LARGE DEVICES (até 1200px) */
+/* INICIANDO CSS LARGE DEVICES (até 1200px) */
+/* INICIANDO CSS LARGE DEVICES (até 1200px) */
 @media(max-width: 1200px) {
 
     /* PERFIL DA ONG E DO GUARDIÃO */
@@ -1066,7 +1013,9 @@ footer img {
 
 
 
-/* Iniciando CSS medium devices (até 992px) */
+/* INICIANDO CSS MEDIUM DEVICES (até 992px) */
+/* INICIANDO CSS MEDIUM DEVICES (até 992px) */
+/* INICIANDO CSS MEDIUM DEVICES (até 992px) */
 @media(max-width: 992px) {
 
     /* Estilos do header */
@@ -1188,7 +1137,9 @@ footer img {
 }
 
 
-/* Iniciando CSS small devices (até 768px) */
+/* INICIANDO CSS SMALL DEVICES (até 768px) */
+/* INICIANDO CSS SMALL DEVICES (até 768px) */
+/* INICIANDO CSS SMALL DEVICES (até 768px) */
 @media(max-width: 768px) {
 
     /* Estilos do header */
@@ -1392,7 +1343,9 @@ footer img {
     /*Fim da página cadastre-se*/
     }    
 
-/* Iniciando CSS extra small devices (até 576px) */    
+/* INICIANDO CSS EXTRA SMALL DEVICES (até 576px) */
+/* INICIANDO CSS EXTRA SMALL DEVICES (até 576px) */
+/* INICIANDO CSS EXTRA SMALL DEVICES (até 576px) */    
 @media(max-width: 576px) {
 
     /* Estilos do header */
@@ -1528,6 +1481,10 @@ footer img {
         margin-bottom: 0%;
     }
 
+    .tituloGeralAnuncios{
+        font-size: 1.7rem;
+    }
+
     /* Busca recolhida  */
 
     #container-busca-recolhida h2 {
@@ -1628,20 +1585,6 @@ footer img {
         order: 1;
     }
 
-    .botao-home {
-        background-color: #6E5DB3;
-        color: #ffffff;
-        text-transform: uppercase;
-        padding: 8px 30px;
-        border: none;
-        border-radius: 5px;
-        width: 100%;
-    }
-
-    .botao-home:hover {
-        background-color: #4a3f78;
-    }
-
     #seja-guardiao-home {
         margin-top: -15px;
     }
@@ -1667,10 +1610,12 @@ footer img {
 
     #como-funciona-home h4 {
         font-size: 1.2rem;
+        text-align: center;
     }
 
     #como-funciona-home p {
         font-size: 1rem;
+        text-align: center;
     }
 
     #como-funciona-home button {
@@ -1734,11 +1679,13 @@ footer img {
 
     #perfil-anim-cx-img {
         padding: 0px 20px;
+        margin-top: 50px;
     }
 
     #dados-animal {
-        margin-top: 40px;
+        margin-top: 60px;
         padding: 15px 5px;
+        order: 1;
     }
 
     .perfil-anim-icon-respos {
