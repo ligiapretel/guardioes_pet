@@ -1006,6 +1006,16 @@ footer img {
     }
 
     /*Fim da página cadastre-se*/
+
+    /*INCIO PAGINA PERFIL ANIMAL*/
+    .cx-btn-respons{
+        width: 100%;
+    }
+    .perfil-anim-btn-desativado{
+        margin: 10px 0px;
+    }
+   
+    /*FIM PAGINA PERFIL ANIMAL*/
 }
 
 
@@ -1104,6 +1114,7 @@ footer img {
 
     .perfil-anim-btn-desativado {
         padding: 10px 15px;
+        margin: 10px 0px;
     }
 
     #perfil_anim_icon-msgm {
@@ -1131,6 +1142,10 @@ footer img {
         padding-top: 0;
         padding-left: 28px;
     }
+    .cx-btn-respons{
+        width: 100%;
+    }
+   
 
     /*--FIM PERFIL ANIMAL--*/
 
@@ -1670,7 +1685,6 @@ footer img {
 
     .perfil-anim-btn-desativado {
         width: 100%;
-        margin: 20px 0px;
     }
 
     .cx-btn-respons {
