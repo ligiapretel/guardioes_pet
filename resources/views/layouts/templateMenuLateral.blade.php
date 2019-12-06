@@ -62,7 +62,9 @@
 </header>
 <!--FINAL DO HEADER-->
 
-
+<main>
+    @yield('content')
+</main>
 
 <!--MENU LATERAL-->
 <main class="container">
