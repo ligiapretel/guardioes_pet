@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class GuardiaoController extends Controller
 {
-    public function viewPerfilGuardioes(Resquest $request){
+    public function viewPerfilGuardioes(Request $request){
         return view('/perfilGuardioes.perfilGuardiao');
     }
 }

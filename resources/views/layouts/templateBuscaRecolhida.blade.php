@@ -69,11 +69,11 @@
 <!--BUSCA RECOLHIDA-->
 <main class="container">
     <div class="row">
-        <section class="col-lg-3">
+        <section class="col-lg-6">
         <!--Busca recolhida-->
             <div class="row d-flex flex-row justify-content-between align-items-center" id="busca-recolhida-titulo">
             <h2>Encontre um amigo</h2>
-            <button class="ico-seta-expande-busca" data-toggle="collapse"
+            <button class="icon-seta-expande-busca" data-toggle="collapse"
                 data-target="#collapseExample">&#8250;
             </button>
         </div>
