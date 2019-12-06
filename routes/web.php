@@ -19,3 +19,5 @@ Route::get('/', function() {
     return view('welcome');
 });
 Route::get('/home',"SiteController@viewHome");
+
+Route::get('/Pets/paginaAnimal', "PetController@viewPaginaAnimal");
