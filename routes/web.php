@@ -16,4 +16,13 @@ Route::get('/', function () {
 });
 
 Route::get('/Ong/perfilOng','OngController@viewPerfilOng');
+Route::get('/', function() {
+    return view('welcome');
+});
+Route::get('/home',"SiteController@viewHome");
+
+Route::get('/Pets/paginaAnimal', "PetController@viewPaginaAnimal");
+Route::get('/ads',"AdController@viewAds");
+Route::get('/chat', 'ChatController@viewChat');
+Route::get('/login', "LoginController@viewLogin");
 Route::get('/Pets/paginaAnimal', "PetController@viewPaginaAnimal");
