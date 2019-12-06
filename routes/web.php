@@ -16,3 +16,4 @@ Route::get('/', function () {
 });
 
 Route::get('/Ong/perfilOng','OngController@viewPerfilOng');
+Route::get('/Pets/paginaAnimal', "PetController@viewPaginaAnimal");

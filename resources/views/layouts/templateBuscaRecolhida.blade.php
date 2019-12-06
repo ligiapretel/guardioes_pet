@@ -62,6 +62,9 @@
     </header>
 <!--FINAL DO HEADER-->
 
+<main>
+    @yield('content')
+</main>
 
 <!--BUSCA RECOLHIDA-->
 <main class="container">
