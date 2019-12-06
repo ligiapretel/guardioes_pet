@@ -20,7 +20,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark header-menu">
 
 <a class="fonteHeader" href="index.php">
-        <img src="img/escudo.png" alt="Guardiões Pet" width="35" class="d-inline-block align-center"> Guardiões Pet
+        <img src="/img/escudo.png" alt="Guardiões Pet" width="35" class="d-inline-block align-center"> Guardiões Pet
     </a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -73,11 +73,11 @@
             <!--menu lateral na esquerda-->
             <aside id="menu-ong" class="col-lg-3 col-md-12 col-sm-10 col-xs-8 p-4">
                 <a href="#menu-principal" data-toggle="collapse" aria-expanded="false" class="navbar-menu-principal collapsed col-12 dropdown-toggle">
-                    <img src="img/user-icon.png" class="ml-3" alt="icone de usuário" id="user-icon">
+                    <img src="/img/user-icon.png" class="ml-3" alt="icone de usuário" id="user-icon">
                 </a>	 
                 
                 <div class="card navbar-menu-itens collapse" style="width: 20rem;" id="menu-principal"> 
-                    <img id="perfil-ong" class="ml-4" src="img/foto_perfil_ong.jpg" alt="logo da ONG" />
+                    <img id="perfil-ong" class="ml-4" src="/img/foto_perfil_ong.jpg" alt="logo da ONG" />
                         <div class="card-body" style="width: 20rem;">
                             <nav class="nav flex-column bg-light">
                                     <a class="nav-link menu-ong active" href="#">Meu Perfil</a>
@@ -128,9 +128,9 @@
 
                     <div class="row">
                         <div class="col-12 pt-5 pb-5">
-                            <a href="https://www.facebook.com/"><img src="img/facebook1.png" alt="facebook"></a>
-                            <a href="https://www.instagram.com/"><img src="img/instagram1.png" alt="instagram"></a>
-                            <a href="https://www.twitter.com/"><img src="img/twitter1.png" alt="twitter"></a>                    
+                            <a href="https://www.facebook.com/"><img src="/img/facebook1.png" alt="facebook"></a>
+                            <a href="https://www.instagram.com/"><img src="/img/instagram1.png" alt="instagram"></a>
+                            <a href="https://www.twitter.com/"><img src="/img/twitter1.png" alt="twitter"></a>                    
                         </div>
                     </div> 
 

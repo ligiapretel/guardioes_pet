@@ -20,7 +20,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark header-menu">
 
     <a class="fonteHeader" href="index.php">
-            <img src="img/escudo.png" alt="Guardiões Pet" width="35" class="d-inline-block align-center"> Guardiões Pet
+            <img src="/img/escudo.png" alt="Guardiões Pet" width="35" class="d-inline-block align-center"> Guardiões Pet
         </a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
@@ -92,9 +92,9 @@
 
                     <div class="row">
                         <div class="col-12 pt-5 pb-5">
-                            <a href="https://www.facebook.com/"><img src="img/facebook1.png" alt="facebook"></a>
-                            <a href="https://www.instagram.com/"><img src="img/instagram1.png" alt="instagram"></a>
-                            <a href="https://www.twitter.com/"><img src="img/twitter1.png" alt="twitter"></a>                    
+                            <a href="https://www.facebook.com/"><img src="/img/facebook1.png" alt="facebook"></a>
+                            <a href="https://www.instagram.com/"><img src="/img/instagram1.png" alt="instagram"></a>
+                            <a href="https://www.twitter.com/"><img src="/img/twitter1.png" alt="twitter"></a>                    
                         </div>
                     </div> 
 
