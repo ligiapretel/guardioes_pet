@@ -8,7 +8,7 @@
     <link href="img/escudo.png" sizes="32x32" rel="shortcut icon"/>
     <link href="/css/styles.css" rel="stylesheet"/>
     <link href='https://fonts.googleapis.com/css?family=Rockwell' rel='stylesheet' type='text/css'>
-    <title>Document</title>
+    <title>@yield('title')</title>
 </head>
 <body>
     
