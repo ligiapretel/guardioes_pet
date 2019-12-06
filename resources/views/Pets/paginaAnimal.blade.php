@@ -23,7 +23,7 @@
 
                     <div class="row" id="perfil-anim-icon-msgm-respos">
                         <div>
-                            <a href="#"><img class="mb-2" id="perfil_anim_icon-msgm" src="img/icon_mail.png"></a>
+                            <a href="#"><img class="mb-2" id="perfil_anim_icon-msgm" src="/img/icon_mail.png"></a>
                         </div>
                         <div id="perfil-anim-msgm-respons" class="col-9 col-sm-10 col-md-9 col-lg-10 col-xl-10">
                             <p>Quer perguntar algo sobre mim?<br>Envie uma mensagem!</p>
@@ -45,15 +45,15 @@
                                 </ol>
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <img class="d-block w-100 rounded" src="img/perfil_animal_01.jpg"
+                                        <img class="d-block w-100 rounded" src="/img/perfil_animal_01.jpg"
                                             alt="First slide">
                                     </div>
                                     <div class="carousel-item">
-                                        <img class="d-block w-100 rounded" src="img/perfil_animal_02.jpg"
+                                        <img class="d-block w-100 rounded" src="/img/perfil_animal_02.jpg"
                                             alt="Photo by Holly Bartley on Unsplash">
                                     </div>
                                     <div class="carousel-item">
-                                        <img class="d-block w-100 rounded" src="img/perfil_animal_03.jpg"
+                                        <img class="d-block w-100 rounded" src="/img/perfil_animal_03.jpg"
                                             alt="Photo by Bogdan Todoran on Unsplash">
                                     </div>
                                 </div>
@@ -61,15 +61,15 @@
                         </div>
                         <div class="row justify-content-between mt-1">
                             <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 pl-0">
-                                <img class="perfil-anim-icon-respos" src="img/icon_whatsapp.png" alt="">
-                                <img class="perfil-anim-icon-respos" src="img/icon_facebook.png" alt="">
-                                <img class="perfil-anim-icon-respos" src="img/icon_twitter.png" alt="">
+                                <img class="perfil-anim-icon-respos" src="/img/icon_whatsapp.png" alt="">
+                                <img class="perfil-anim-icon-respos" src="/img/icon_facebook.png" alt="">
+                                <img class="perfil-anim-icon-respos" src="/img/icon_twitter.png" alt="">
                                 <p class="d-inline"><a href="#">Compartilhar</a></p>
                             </div>
 
                             <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 pr-0 text-right">
                                 <p class="d-inline"><a href="#">Favoritar</a></p>
-                                <img class="perfil-anim-icon-respos col-1 pr-0 pl-0 ml-1" src="img/like_no.png">
+                                <img class="perfil-anim-icon-respos col-1 pr-0 pl-0 ml-1" src="/img/like_no.png">
                             </div>
                         </div>
                         <div class="row justify-content-between mt-4">
@@ -127,7 +127,7 @@
                 <div class="col-4 col-sm-4 col-md-3 col-lg-3 col-xl-3 ">
                     <a href="anuncios.php">
                         <figure class="figure">
-                            <img src="img/perfil_doar_01.jpg" class="figure-img img-fluid rounded rounded-circle"
+                            <img src="/img/perfil_doar_01.jpg" class="figure-img img-fluid rounded rounded-circle"
                                 alt="Photo by Autri Taheri on Unsplash">
                             <figcaption class="figure-caption text-center">Shampoo</figcaption>
                         </figure>
@@ -136,7 +136,7 @@
                 <div class="col-4 col-sm-4 col-md-3 col-lg-3 col-xl-3 ">
                     <a href="anuncios.php">
                         <figure class="figure">
-                            <img src="img/perfil_doar_02.jpg" class="figure-img img-fluid rounded rounded-circle"
+                            <img src="/img/perfil_doar_02.jpg" class="figure-img img-fluid rounded rounded-circle"
                                 alt="Photo by Matthew Henry on Unsplash">
                             <figcaption class="figure-caption text-center">Antipulgas</figcaption>
                         </figure>
@@ -145,7 +145,7 @@
                 <div class="col-4 col-sm-4 col-md-3 col-lg-3 col-xl-3 ">
                     <a href="anuncios.php">
                         <figure class="figure">
-                            <img src="img/perfil_doar_03.jpg" class="figure-img img-fluid rounded rounded-circle"
+                            <img src="/img/perfil_doar_03.jpg" class="figure-img img-fluid rounded rounded-circle"
                                 alt="Photo by Camylla Battani on Unsplash">
                             <figcaption class="figure-caption text-center">Ração</figcaption>
                         </figure>
