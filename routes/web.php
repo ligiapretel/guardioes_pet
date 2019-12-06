@@ -16,3 +16,4 @@ Route::get('/', function () {
 });
 
 Route::get('/login', "LoginController@viewLogin");
+Route::get('/Pets/paginaAnimal', "PetController@viewPaginaAnimal");
