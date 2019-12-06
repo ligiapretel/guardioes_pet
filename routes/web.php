@@ -16,3 +16,4 @@ Route::get('/', function () {
 });
 
 Route::get('/ads',"AdController@viewAds");
+Route::get('/Pets/paginaAnimal', "PetController@viewPaginaAnimal");
