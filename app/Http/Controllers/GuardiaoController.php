@@ -8,6 +8,6 @@ use Illuminate\Http\Request;
 class GuardiaoController extends Controller
 {
     public function viewPerfilGuardioes(Request $request){
-        return view('/perfilGuardioes.perfilGuardiao');
+        return view('/Guardioes.perfilGuardiao');
     }
 }

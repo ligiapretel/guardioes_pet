@@ -17,9 +17,9 @@
                 <p class="text-dark text-justify">Nossa ONG nasceu com intenções claras de resgate, castração e doação de animais. Nos empenhamos em abrigar poucos, socorrer vários e castrar MUITOS, pois a castração é a única solução ao problema estrutural da procriação de animais abandonados.</p>
                 <p class="text-dark text-justify">Nossa ONG é formada por profissionais liberais, gente comum que trabalha, estuda, enfim, vive!</p>
                 <div id="pfG_cx_i_txt" class="d-flex align-items-center">
-                    <i class="mdi mdi-email-outline"></i>
+                    <i class="mdi mdi-email-outline"></i> <!--Verificar essas classes. Não estão no css-->
                     <p> Envie uma mensagem!</p>
-                    <i class="mdi mdi-alert-outline"></i>
+                    <i class="mdi mdi-alert-outline"></i> <!--Verificar essas classes. Não estão no css-->
                     <p> Denunciar Perfil</p>
                 </div>
             </div>

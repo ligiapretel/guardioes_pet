@@ -16,21 +16,21 @@
 
             <ul class="navbar-nav ml-md-auto mt-2 mt-lg-0 lista-menu">
 
-                    <li class="nav-item">
-                        <a class="nav-link header-link" href='index.php#seja-guardiao-home'>Ser um guardião</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link header-link" href="sobre.php">Sobre nós</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link header-link" href='index.php#como-funciona-home'>Como funciona</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link header-link" href="parceiros.php">Parceiros</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link header-link" href="anuncios.php">Doações</a>
-                    </li>
+                <li class="nav-item">
+                    <a class="nav-link header-link" href='index.php#seja-guardiao-home'>Ser um guardião</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link header-link" href="sobre.php">Sobre nós</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link header-link" href='index.php#como-funciona-home'>Como funciona</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link header-link" href="parceiros.php">Parceiros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link header-link" href="anuncios.php">Doações</a>
+                </li>
                     <!-- <li class="nav-item">
                         <a class="nav-link header-link" href="index.php#footer">Contato</a>
                     </li> -->
