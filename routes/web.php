@@ -15,6 +15,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/perfilGuardiao', "GuardiaoController@viewPerfilGuardioes");
+Route::get('/Ong/perfilOng','OngController@viewPerfilOng');
+Route::get('/home',"SiteController@viewHome");
+Route::get('/Pets/paginaAnimal', "PetController@viewPaginaAnimal");
+Route::get('/ads',"AdController@viewAds");
 Route::get('/chat', 'ChatController@viewChat');
 Route::get('/login', "LoginController@viewLogin");
-Route::get('/Pets/paginaAnimal', "PetController@viewPaginaAnimal");
+
