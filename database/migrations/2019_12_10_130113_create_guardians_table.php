@@ -24,7 +24,7 @@ class CreateGuardiansTable extends Migration
             $table->string('address', 300);   
             $table->string('number', 14);    
             $table->string('complement', 100);    
-            $table->interger('zip_code', 8);    
+            $table->string('zip_code', 8);    
             $table->string('neighborhood', 100);   
             $table->string('city', 100);   
             $table->string('state', 100);   
