@@ -28,8 +28,8 @@ Route::get('/cadastroAnimal', "RegisterPetsController@viewRegisterPets");
 Route::get('/cadastroAnuncio', "RegisterAdsController@viewRegisterAds");
 Route::get('/cadastroGuardiao', "RegisterGuardianController@viewRegisterGuardian");
 Route::get('/cadastroOng', "RegisterNgoController@viewRegisterNgo");
-Route::get('/parceiros', "PartnersController@viewPartners");
-Route::get('/sobre', "AboutController@viewAbout");
+Route::get('/parceiros', "SiteController@viewPartners");
+Route::get('/sobre', "SiteController@viewAbout");
 Route::get('/login', "LoginController@viewLogin");
 
 /*FAZER A ROTA DE LOGIN CONFORME OS ARQUIVOS QUE O LARAVEL FORNECE */

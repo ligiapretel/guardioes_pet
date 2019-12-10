@@ -11,4 +11,12 @@ class SiteController extends Controller
     public function viewHome(Request $request){
         return view('home');
     }
+
+    public function viewAbout(Request $request){
+        return view('about');
+    } 
+
+    public function viewPartners(Request $request){
+        return view('partners');
+    }
 }
