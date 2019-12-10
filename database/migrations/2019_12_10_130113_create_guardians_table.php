@@ -30,7 +30,7 @@ class CreateGuardiansTable extends Migration
             $table->string('state', 100);   
             $table->text('about_the_guardian', 5000);   
             $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('Users');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });
     }

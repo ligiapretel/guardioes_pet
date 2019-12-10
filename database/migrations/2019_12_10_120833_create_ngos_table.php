@@ -33,7 +33,7 @@ class CreateNgosTable extends Migration
             $table->string('bank_agency', 15);
             $table->string('bank_account', 15);
             $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('Users');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });    
     }
