@@ -40,7 +40,7 @@
                         cupiditate voluptate facere iste obcaecati iusto dolores.</p>
                 </div>
                 <div class="col-12 col-sm-5 col-xl-4 d-flex flex-column align-items-center">
-                    <img class="foto-perfil img-fluid" src="img/perfil-sobre/chaipipo.jpg" alt="foto perfil">
+                    <img class="foto-perfil img-fluid" src="img/perfil-sobre/chaipipo.png" alt="foto perfil">
                     <h3>Chaiana Hermes</h3>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo impedit,
                         nulla modi non iure necessitatibus aspernatur, tenetur ipsum odit sed nesciunt! Molestiae ab
