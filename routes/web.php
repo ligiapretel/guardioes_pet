@@ -15,11 +15,20 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/perfilGuardiao', "GuardiaoController@viewPerfilGuardioes");
-Route::get('/Ong/perfilOng','OngController@viewPerfilOng');
+Route::get('/perfilGuardiao', "GuardianController@viewProfileGuardian");
+Route::get('/perfilOng','NgoController@viewProfileNgo');
 Route::get('/home',"SiteController@viewHome");
-Route::get('/Pets/paginaAnimal', "PetController@viewPaginaAnimal");
-Route::get('/ads',"AdController@viewAds");
+Route::get('/paginaAnimal', "PetController@viewPets");
+Route::get('/anuncios',"AdController@viewAds");
 Route::get('/chat', 'ChatController@viewChat');
-Route::get('/login', "LoginController@viewLogin");
+Route::get('/busca', "SearchController@viewSearch");
+Route::get('/cadastre-se', "RegisterController@viewRegister");
+Route::get('/cadastroAnimal', "RegisterPetsController@viewRegisterPets");
+Route::get('/cadastroAnuncio', "RegisterAdsController@viewRegisterAds");
+Route::get('/cadastroGuardiao', "RegisterGuardianController@viewRegisterGuardian");
+Route::get('/cadastroOng', "RegisterNgoController@viewRegisterNgo");
+Route::get('/parceiros', "PartnersController@viewPartners");
+Route::get('sobre', "AboutController@viewAbout");
 
+
+/*FAZER A ROTA DE LOGIN CONFORME OS ARQUIVOS QUE O LARAVEL FORNECE */
