@@ -5,10 +5,10 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class OngController extends Controller
+class NgoController extends Controller
 {
     //metodo para retornar para view
-    public function viewPerfilOng(Request $request){
-        return view('Ongs.perfilOng');
+    public function viewProfileNgo(Request $request){
+        return view('Ngos.profileNgo');
     }
 }

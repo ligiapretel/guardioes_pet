@@ -1,13 +1,13 @@
 @extends('layouts.templateMenuLateral')
 
 @section('title')
-Guardiões Pet | Chat
+    Guardiões Pet | Chat
 @endsection
 
 @section('content')
-<section class="row" >
+    <section class="col d-flex" >
         <!-- Início do chat-->
-        <section class="col-lg-3 col-md-3 col-sm-6 col-xs-6 m-5">
+        <section class="col-lg-4 col-md-3 col-sm-6 col-xs-6 m-5">
             <div class="card-body">
                 <div class="mensagem-guardiao mt-5">
                     <img id="perfil-chat-guardiao" src="img/johndoe.png" alt="foto perfil guardião" />

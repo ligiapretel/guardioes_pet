@@ -2,8 +2,7 @@
 <!--nome que foi colocado no template-->
  <!--Essa info vai pra dentro do yield no template guardioes-->
 @section('title')
-   
-    Página Home
+    Guardiões Pet
 @endsection
 
 @section('content')

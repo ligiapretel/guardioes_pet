@@ -19,7 +19,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark header-menu">
 
-<a class="fonteHeader" href="index.php">
+<a class="fonteHeader" href="home">
         <img src="/img/escudo.png" alt="Guardiões Pet" width="35" class="d-inline-block align-center"> Guardiões Pet
     </a>
 
@@ -32,27 +32,29 @@
         <ul class="navbar-nav ml-md-auto mt-2 mt-lg-0 lista-menu">
 
                 <li class="nav-item">
-                    <a class="nav-link header-link" href='index.php#seja-guardiao-home'>Ser um guardião</a>
+                    <a class="nav-link header-link" href='home#seja-guardiao-home'>Ser um guardião</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link header-link" href="sobre.php">Sobre nós</a>
+                    <a class="nav-link header-link" href="sobre">Sobre nós</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link header-link" href='index.php#como-funciona-home'>Como funciona</a>
+                    <a class="nav-link header-link" href='home#como-funciona-home'>Como funciona</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link header-link" href="parceiros.php">Parceiros</a>
+                    <a class="nav-link header-link" href="parceiros">Parceiros</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link header-link" href="anuncios.php">Doações</a>
+                    <a class="nav-link header-link" href="anuncios">Doações</a>
                 </li>
                 <!-- <li class="nav-item">
                     <a class="nav-link header-link" href="index.php#footer">Contato</a>
                 </li> -->
+
+                <!--VERIFICAR A ROTA DE LOGIN-->
                 <li class="nav-item">
                     <a class="nav-link header-link" href="login.php">Login</a>
                     <li class="nav-item">
-                <a href="cadastre_se.php" class="header-link"><button type="button" class="btn-roxo">Cadastre-se</button></a>
+                <a href="cadastre-se" class="header-link"><button type="button" class="btn-roxo">Cadastre-se</button></a>
             </ul>
 
         </div>
@@ -62,14 +64,11 @@
 </header>
 <!--FINAL DO HEADER-->
 
-<main>
-    @yield('content')
-</main>
+
 
 <!--MENU LATERAL-->
-<main class="container">
-    <div class="row">
-        <section class="col-lg-3">
+    <main class="row d-flex" >
+        <section class="col-lg-3 d-flex">
             <!--menu lateral na esquerda-->
             <aside id="menu-ong" class="col-lg-3 col-md-12 col-sm-10 col-xs-8 p-4">
                 <a href="#menu-principal" data-toggle="collapse" aria-expanded="false" class="navbar-menu-principal collapsed col-12 dropdown-toggle">
@@ -80,25 +79,21 @@
                     <img id="perfil-ong" class="ml-4" src="/img/foto_perfil_ong.jpg" alt="logo da ONG" />
                         <div class="card-body" style="width: 20rem;">
                             <nav class="nav flex-column bg-light">
-                                    <a class="nav-link menu-ong active" href="#">Meu Perfil</a>
-                                    <a class="nav-link menu-ong" href="#">Animais Cadastrados</a>
-                                    <a class="nav-link menu-ong" href="#">Cadastrar Novos Animais</a>
-                                    <a class="nav-link menu-ong" href="#">Anúncios Cadastrados</a>
-                                    <a class="nav-link menu-ong" href="cadastroAnuncio.php">Cadastrar Novos Anúncios</a>
-                                    <a class="nav-link menu-ong" href="#">Mensagens</a>
-                                    <a class="nav-link menu-ong-sair" href="#">Sair</a>
-                                </nav>
-                                
-                            </div>
+                                <a class="nav-link menu-ong active" href="#">Meu Perfil</a>
+                                <a class="nav-link menu-ong" href="#">Animais Cadastrados</a>
+                                <a class="nav-link menu-ong" href="#">Cadastrar Novos Animais</a>
+                                <a class="nav-link menu-ong" href="#">Anúncios Cadastrados</a>
+                                <a class="nav-link menu-ong" href="cadastroAnuncio.php">Cadastrar Novos Anúncios</a>
+                                <a class="nav-link menu-ong" href="#">Mensagens</a>
+                                <a class="nav-link menu-ong-sair" href="#">Sair</a>
+                            </nav>    
                         </div>
-                    </aside>         
+                </div>
+            </aside>         
         </section>
-    </div>
+        @yield('content')
+    </main>
 
-
-
-@yield('conteudo')
-</main>
 
 
 
@@ -110,12 +105,12 @@
                     <div class="row">
 
                         <ul class="col-lg-4 col-md-5 col-sm-6 align-content-around list-unstyled">
-                            <li><a class="menu-link" href="index.php">Home</a></li>
-                            <li><a class="menu-link" href="index.php#seja-guardiao-home">Ser um guardião</a></li>
-                            <li><a class="menu-link" href="sobre.php">Sobre nós</a></li>
-                            <li><a class="menu-link" href="index.php#como-funciona-home">Como funciona?</a></li>
-                            <li><a class="menu-link" href="parceiros.php">Parceiros</a></li>
-                            <li><a class="menu-link" href="anuncios.php">Doações</a></li>
+                            <li><a class="menu-link" href="home">Home</a></li>
+                            <li><a class="menu-link" href="home#seja-guardiao-home">Ser um guardião</a></li>
+                            <li><a class="menu-link" href="sobre">Sobre nós</a></li>
+                            <li><a class="menu-link" href="home#como-funciona-home">Como funciona?</a></li>
+                            <li><a class="menu-link" href="parceiros">Parceiros</a></li>
+                            <li><a class="menu-link" href="anuncios">Doações</a></li>
                         </ul>
 
                         <ul class="col-lg-8 col-md-7 col-sm-6 list-unstyled">
