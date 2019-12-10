@@ -38,13 +38,14 @@
         </section>
         <!-- Fechando seção do carrossel da home. -->
         <!-- Abrindo seção quer permite fazer busca pelo perfil do animal. -->
-        <section id="container-busca-expandida" class="col-lg-10 col-md-10 col-sm-10 col-xs-6">
+        <section id="container-busca-expandida" class="col-sm-10 col-xs-6">
             <div class="row justify-content-center">
                 <div class="col-11">
                     <h2>Encontre um amigo</h2>
                 </div>
                 <div class="formulario-coluna col-11">
-                    <form action="busca.php" method="POST">
+                    <form action="busca" method="POST">
+                    @csrf
                         <div class="formulario-index row">
                             <div class="formPet formulario-index-itens col-md-6 p-3">
                                 <select name="animal" class="form-control">
@@ -159,7 +160,7 @@
             <h2>Tem itens para doação? Ajude!</h2>
             <p>Roupinhas, remédios, ração...tá sobrando na sua casa? Tem muitas organizações - e muitos guardiões também! - precisando de todo tipo de item para cuidar e alimentar gatinhos e cachorros. Veja quais as necessidades e se você pode contribuir!</p>
             <div class="row justify-content-center">
-                <a href="anuncios.php"><button class="btn-roxo botao-home">Quero doar</button></a>
+                <a href="anuncios"><button class="btn-roxo botao-home">Quero doar</button></a>
             </div>
         </section>
         <!-- Fechando seção "Doações". -->

@@ -8,6 +8,8 @@
     <link href="img/escudo.png" sizes="32x32" rel="shortcut icon"/>
     <link href="/css/styles.css" rel="stylesheet"/>
     <link href='https://fonts.googleapis.com/css?family=Rockwell' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Satisfy&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.5.95/css/materialdesignicons.min.css">
     <title>@yield('title')</title>
 </head>
 <body>

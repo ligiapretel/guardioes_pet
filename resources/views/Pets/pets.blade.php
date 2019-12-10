@@ -74,7 +74,7 @@
                         </div>
                         <div class="row justify-content-between mt-4">
                             <div class="cx-btn-respons">
-                                <a href="login.php"><button class="btn-roxo text-uppercase w-100">Adotar</button></a>
+                                <a href="login"><button class="btn-roxo text-uppercase w-100">Adotar</button></a>
                             </div>
                             <div class="cx-btn-respons">
                                 <button class="perfil-anim-btn-desativado w-100"
@@ -82,7 +82,7 @@
                                     temporário</button>
                             </div>
                             <div class="cx-btn-respons">
-                                <a href="login.php"><button
+                                <a href="login"><button
                                         class="btn-roxo text-uppercase w-100">Apadrinhar</button></a>
                             </div>
                         </div>

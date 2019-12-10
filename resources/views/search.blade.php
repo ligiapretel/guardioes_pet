@@ -13,7 +13,7 @@
             <h3 class="text-center">12 animais têm o perfil que você buscou. Conheça:</h3>
             <div class="row justify-content-center mt-5">
                 <div class="card mb-4 col-11 col-sm-5 col-md-4 col-lg-3 border-none">
-                    <a href="paginaAnimal.php">
+                    <a href="paginaAnimal">
                         <img src="img/perfil_animal_01.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Bernardo</h5>

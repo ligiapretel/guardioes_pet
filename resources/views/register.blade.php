@@ -23,12 +23,12 @@
             </div>
             <div class="row justify-content-center">
                 <div class="botaoCadOng col-10 text-center">
-                <a href="cadastroOng.php"><button class="btn-roxo btn-busca-expandida" type="submit" name="cadastre-se-ong">Cadastro ONG</button></a>
+                <a href="cadastroOng"><button class="btn-roxo btn-busca-expandida" type="submit" name="cadastre-se-ong">Cadastro ONG</button></a>
                 </div>
             </div>
             <div class="row justify-content-center">
                 <div class="col-10 text-center">
-                    <a href="login.php"><p class="tem-cadastro">Já tem um cadastro?</p></a>
+                    <a href="login"><p class="tem-cadastro">Já tem um cadastro?</p></a>
                 </div>
             </div>
         </div>
@@ -48,12 +48,12 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-10 text-center">
-                <a href="cadastroGuardiao.php"><button class="botaoCadGuardiao btn-busca-expandida cor-laranja" type="submit" name="cadastre-se-guardiao">Cadastro Guardião</button></a>
+                <a href="cadastroGuardiao"><button class="botaoCadGuardiao btn-busca-expandida cor-laranja" type="submit" name="cadastre-se-guardiao">Cadastro Guardião</button></a>
                 </div>
             </div>
             <div class="row justify-content-center">
                 <div class="col-10 text-center">
-                    <a href="login.php"><p class="tem-cadastro">Já tem um cadastro?</p></a>
+                    <a href="login"><p class="tem-cadastro">Já tem um cadastro?</p></a>
                 </div>
             </div>
         </div>
