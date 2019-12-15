@@ -1,4 +1,4 @@
-@extends('layouts.templateGuardioes')
+@extends('layouts.templateMenuLateral')
 
 @section('title')
     Guardiões Pet | Cadastro ONG

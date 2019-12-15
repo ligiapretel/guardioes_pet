@@ -21,7 +21,13 @@ Route::get('/cadastroGuardiao', "RegisterGuardianController@viewRegisterGuardian
 
 //Ngo´s Routes
 Route::get('/perfilOng','NgoController@viewProfileNgo');
-Route::get('/cadastroOng', "RegisterNgoController@viewRegisterNgo");
+Route::get('/cadastroOng', "NgoController@registerNgo");
+Route::post('/cadastroOng', "NgoController@doRegisterNgo");
+Route::get('/editaOng/{id?}',"NgoController@editNgo");
+Route::post('/editaOng',"NgoController@doEditNgo");
+Route::post('/deleteOng',"NgoController@deleteNgo");
+Route::post('/getNgo/{id?}',"NgoController@getNgo");
+
 
 //Site´s Routes
 Route::get('/home',"SiteController@viewHome");
