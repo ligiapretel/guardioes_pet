@@ -15,21 +15,38 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//Guardian´s Routes
 Route::get('/perfilGuardiao', "GuardianController@viewProfileGuardian");
-Route::get('/perfilOng','NgoController@viewProfileNgo');
-Route::get('/home',"SiteController@viewHome");
-Route::get('/paginaAnimal', "PetController@viewPets");
-Route::get('/anuncios',"AdController@viewAds");
-Route::get('/chat', 'ChatController@viewChat');
-Route::get('/busca', "SearchController@viewSearch");
-Route::post('/busca', "SearchController@viewSearch");
-Route::get('/cadastre-se', "RegisterController@viewRegister");
-Route::get('/cadastroAnimal', "RegisterPetsController@viewRegisterPets");
-Route::get('/cadastroAnuncio', "RegisterAdsController@viewRegisterAds");
 Route::get('/cadastroGuardiao', "RegisterGuardianController@viewRegisterGuardian");
+
+//Ngo´s Routes
+Route::get('/perfilOng','NgoController@viewProfileNgo');
 Route::get('/cadastroOng', "RegisterNgoController@viewRegisterNgo");
+
+//Site´s Routes
+Route::get('/home',"SiteController@viewHome");
 Route::get('/parceiros', "SiteController@viewPartners");
 Route::get('/sobre', "SiteController@viewAbout");
+
+//Pet´s Routes
+Route::get('/paginaAnimal', "PetController@viewPets");
+Route::get('/cadastroAnimal', "RegisterPetsController@viewRegisterPets");
+
+//Ad´s Routes
+Route::get('/anuncios',"AdController@viewAds");
+Route::get('/cadastroAnuncio', "RegisterAdsController@viewRegisterAds");
+
+//Chat´s Routes
+Route::get('/chat', 'ChatController@viewChat');
+
+//Search´s Routes
+Route::get('/busca', "SearchController@viewSearch");
+Route::post('/busca', "SearchController@viewSearch");
+
+//Register´s Route
+Route::get('/cadastre-se', "RegisterController@viewRegister");
+
+//Login´s Route
 Route::get('/login', "LoginController@viewLogin");
 
 /*FAZER A ROTA DE LOGIN CONFORME OS ARQUIVOS QUE O LARAVEL FORNECE */
