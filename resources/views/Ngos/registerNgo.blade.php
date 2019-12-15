@@ -6,124 +6,137 @@
 
 @section('content')
         
-        <form action="{{ ('doRegisterNgo') }}" method="POST" class="card col-lg-8 col-md-12 col-sm-12 col-12 p-5" id="formOng">
+        <form action="{{ ('doEditNgo') }}" method="POST" class="card col-lg-8 col-md-12 col-sm-12 col-12 p-5" id="formOng">
+        {{ csrf_field() }} <!--gera token de segurança - verifica se o usuário é autenticado-->
             <!-- essa div é para o título -->
             <div class="form-group d-flex justify-content p-2">
                 <h3 class="tituloOng">Cadastro de ONG</h3>
             </div>
             <!--aqui começa o formulário -->
+            <input  class="form-control" type="hidden"name="id" value="{{ isset($ngo['id']) ? $ngo['id'] : '' }}"/> <!--puxa o id da ong-->
             <div class="form-group row">
-                <label for="nomeOng" class="col-sm-4 col-form-label">Nome da ONG</label>
+                <label for="socialNameNgo" class="col-sm-4 col-form-label">Nome da ONG</label>
                 <div class="col-sm-8">
-                    <input type="text" class="form-control" id="nomeOng" placeholder="Nome da sua ONG">
+                    <input type="text" class="form-control" name="social_name" placeholder="Nome da sua ONG">
                 </div>
             </div>
             <div class="form-group row">
-                <label for="cnpj" class="col-sm-4 col-form-label">CNPJ</label>
+                <label for="cnpjNgo" class="col-sm-4 col-form-label">CNPJ</label>
                 <div class="col-sm-8">
-                    <input type="text" class="form-control" id="cnpj" placeholder="Número do CNPJ da ONG">
+                    <input type="text" class="form-control" name="cnpj" placeholder="Número do CNPJ da ONG">
                 </div>
             </div>
             <div class="form-group row">
-                <label for="fotoOng" class="col-sm-4 col-form-label">Foto de Perfil</label>
+                <label for="pictureNgo" class="col-sm-4 col-form-label">Foto de Perfil</label>
                 <div class="col-sm-8">
-                    <input type="file" class="form-control-file" id="fotoOng">
+                    <input type="file" class="form-control-file" name="profile_picture">
                 </div>
             </div>
             <div class="form-group row">
-                <label for="nomeResp" class="col-sm-4 col-form-label">Nome do Responsável</label>
+                <label for="nameNgo" class="col-sm-4 col-form-label">Nome do Responsável</label>
                 <div class="col-sm-8">
-                    <input type="text" class="form-control" id="nomeResp" placeholder="Responsavel da ONG">
+                    <input type="text" class="form-control" name="responsable_name" placeholder="Responsavel da ONG">
                 </div>
             </div>
             <div class="form-group row">
-                <label for="email" class="col-sm-4 col-form-label">E-mail</label>
+                <label for="emailNgo" class="col-sm-4 col-form-label">E-mail</label>
                 <div class="col-sm-8">
-                    <input type="email" class="form-control" id="email" placeholder="seunome@email.com">
+                    <input type="email" class="form-control" name="email" placeholder="seunome@email.com">
                 </div>
             </div>
             <div class="form-group row">
-                <label for="senhaOng" class="col-sm-4 col-form-label">Defina uma senha</label>
+                <label for="passwordNgo" class="col-sm-4 col-form-label">Defina uma senha</label>
                 <div class="col-sm-8">
-                    <input type="password" class="form-control" id="senhaOng"
-                        placeholder="Senha minimo 6 caracteres">
+                    <input type="password" class="form-control" name="user_id" placeholder="Nova senha minimo 6 caracteres" >
                 </div>
             </div>
             <div class="form-group row">
-                <label for="senhaConfirmOng" class="col-sm-4 col-form-label">Confirme sua senha</label>
+                <label for="passwordNgo" class="col-sm-4 col-form-label">Confirme sua senha</label>
                 <div class="col-sm-8">
-                    <input type="password" class="form-control" id="senhaOngConfirm" placeholder="Confirme sua senha">
+                    <input type="password" class="form-control" name="user_id" placeholder="Confirme sua nova senha">
                 </div>
             </div>
             <div class="form-group row">
-                <label for="enderecoOng" class="col-sm-4 col-form-label">Endereço</label>
+                <label for="zipCodeNgo" class="col-sm-4 col-form-label">CEP</label>
                 <div class="col-sm-8">
-                    <input type="text" class="form-control" id="enderecoOng" placeholder="Rua/Avenida/Logradouro">
+                    <input type="text" class="form-control" id="cep" name="zip_code" placeholder="CEP">
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6 p-1">
-                    <label for="numeroOng">Número</label>
-                    <input type="number" class="form-control" id="numeroOng" placeholder="No.">
+                    <label for="numberNgo">Número</label>
+                    <input type="number" class="form-control" name="number" placeholder="No.">
                 </div>
                 <div class="form-group col-md-6 p-1">
-                    <label for="complementoOng">Complemento</label>
-                    <input type="number" class="form-control" id="complementoOng" placeholder="Ex.: Bloco B">
+                    <label for="complementNgo">Complemento</label>
+                    <input type="text" class="form-control" name="complement" placeholder="Ex.: Bloco B">
                 </div>
                 <div class="form-group col-md-6 p-1">
-                    <label for="cepOng">CEP</label>
-                    <input type="number" class="form-control" id="cepOng" placeholder="CEP">
+                    <label for="addressNgo">Endereço</label>
+                    <input type="text" id="rua" class="form-control" name="address" placeholder="Rua/Avenida/Logradouro">
                 </div>
                 <div class="form-group col-md-6 p-1">
-                    <label for="bairroOng">Bairro</label>
-                    <input type="text" class="form-control" id="bairroOng" placeholder="Bairro">
+                    <label for="neighborhoodNgo">Bairro</label>
+                    <input type="text" id="bairro" class="form-control" name="neighborhood" placeholder="Bairro">
                 </div>
                 <div class="form-group col-md-6 p-1">
-                    <label for="cidadeOng">Cidade</label>
-                    <input type="text" class="form-control" id="cidadeOng" placeholder="Cidade">
+                    <label for="cityNgo">Cidade</label>
+                    <input type="text" id="cidade" class="form-control" name="city" placeholder="Cidade">
                 </div>
                 <div class="form-group col-md-6 p-1">
-                    <label for="estadoOng">Estado</label>
-                    <select class="form-control" id="estadoOng">
-                        <option>Selecione</option>
-                        <option>Acre</option>
-                        <option>Alagoas</option>
-                        <option>Amapá</option>
-                        <option>Amazonas</option>
-                        <option>Bahia</option>
-                        <option>Ceará</option>
-                        <option>Distrito Federal</option>
-                        <option>Espírito Santo</option>
-                        <option>Goiás</option>
-                        <option>Maranhão</option>
-                        <option>Mato Grosso</option>
-                        <option>Mato Grosso do Sul</option>
-                        <option>Minas Gerais</option>
-                        <option>Pará</option>
-                        <option>Paraíba</option>
-                        <option>Paraná</option>
-                        <option>Pernambuco</option>
-                        <option>Piauí</option>
-                        <option>Rio de Janeiro</option>
-                        <option>Rio Grande do Norte</option>
-                        <option>Rio Grando do Sul</option>
-                        <option>Rondônia</option>
-                        <option>Roraima</option>
-                        <option>Santa Catarina</option>
-                        <option>São Paulo</option>
-                        <option>Sergipe</option>
-                        <option>Tocantins</option>
+                    <label for="stateNgo">Estado</label>
+                    <input type="text" id="uf" class="form-control" name="state" placeholder="Estado">
+                </div>
+                <div class="form-group col-md-6 p-1">
+                    <label for="siteNgo">Site</label>
+                    <input type="text" class="form-control" name="site" placeholder="Site">
+                </div>
+                <div class="form-group col-md-6 p-1">
+                    <label for="phoneNumberNgo">Telefone</label>
+                    <input type="text" class="form-control" name="phone_number" placeholder="Telefone/Celular">
+                </div>
+                <div class="form-group col-6 md-4 p-1">
+                    <label>Tipo de Conta:</label>
+                    <select class="form-control">
+                        <option selected disable>Seleciona uma Opção</option>
+                        <option value="type_account">Conta Corrente</option>
+                        <option value="type_account">Conta Poupança</option>
                     </select>
                 </div>
-            </div>
-            <div class="form-group form-row">
+                <div class="form-group col-md-6 p-1">
+                    <label for="bankNameOng">Nome do Banco</label>
+                    <input type="text" class="form-control" name="bank_name" placeholder="Nome do Banco(Número)">
+                </div>
+                    <div class="form-group col-md-6 p-1">
+                    <label for="bankAgencyNgo">Agência</label>
+                    <input type="text" class="form-control" name="bank_agency" placeholder="Agência">
+                </div>
+                <div class="form-group col-md-6 p-1">
+                    <label for="bankAccountNgo">Número Conta</label>
+                    <input type="text" class="form-control" name="bank_account" placeholder="Número Conta">
+                </div>
+            <div class="form-group form-row col-12">
                 <label for="texto">Fale sobre a ONG</label>
-                <textarea class="form-control" id="texto" cols="30" rows="10"
+                <textarea class="form-control" name="about_the_ngo" cols="30" rows="10"
                     placeholder="Descreva o trabalho desenvolvido pela ONG"></textarea>
             </div>
+        </div>
             <div>
-            <button type="submit" class="btn btn-roxo btnOng">Salvar cadastro</button>
+                <button type="submit" class="btn btn-roxo btnOng">Salvar Cadastro</button>
             </div>
         </form>
 
+          <!-- Mostra os erros de validação na view-->
+            @if (count($errors) > 0)
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+
+        <script src="/js/completaCep.js" type="text/javascript"></script>
+        <script src="/js/mascaraTel.js" type="text/javascript"></script>
 @endsection

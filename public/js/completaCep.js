@@ -9,11 +9,6 @@ $(document).ready(function () {
         $("#cidade").val("");
         $("#uf").val("");
         $("#ibge").val("");
-
-        $("#Cliente_Endereco").val("");
-        $("#Cliente_Bairro").val("");
-        $("#Cliente_Cidade").val("");
-        $("#Cliente_Estado").val("");
     }
 
     //Quando o campo cep perde o foco.

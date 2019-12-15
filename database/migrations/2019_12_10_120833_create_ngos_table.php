@@ -27,8 +27,10 @@ class CreateNgosTable extends Migration
             $table->string('zip_code',8);
             $table->string('neighborhood', 100);
             $table->string('city', 100);
+            $table->string('email', 100);
             $table->string('state', 100);
             $table->text('about_the_ngo', 5000);
+            $table->text('type_account',100);
             $table->string('bank_name', 100);
             $table->string('bank_agency', 15);
             $table->string('bank_account', 15);
