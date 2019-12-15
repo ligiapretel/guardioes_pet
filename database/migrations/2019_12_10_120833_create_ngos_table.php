@@ -12,7 +12,7 @@ class CreateNgosTable extends Migration
      * @return void
      */
     public function up()
-    {
+    { //incluido campo email e tipo de conta 
         Schema::create('ngos', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('social_name', 300);
