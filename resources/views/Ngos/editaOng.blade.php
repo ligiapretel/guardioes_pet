@@ -5,8 +5,8 @@
 @endsection
 
 @section('content')
-        
-        <form action="{{ ('doRegisterNgo') }}" method="POST" class="card col-lg-8 col-md-12 col-sm-12 col-12 p-5" id="formOng">
+
+        <form action="{{ url('/editaOng') }}" method="POST" class="card col-lg-8 col-md-12 col-sm-12 col-12 p-5" id="formOng">
         {{ csrf_field() }} <!--gera token de segurança - verifica se o usuário é autenticado-->
         
             <!-- essa div é para o título -->
@@ -30,7 +30,7 @@
             <div class="form-group row">
                 <label for="pictureNgo" class="col-sm-4 col-form-label">Foto de Perfil</label>
                 <div class="col-sm-8">
-                    <input type="file" class="form-control-file" name="profile_picture" value="{{ isset($ngo['profile_picture']) ? $ngo['profile_picture'] : '' }}">
+                    <input type="file" class="form-control-file" name="profile_picture" value="{{ isset($ngo['profile_picture']) ? $ngo['fileDir'] : '' }}">
                 </div>
             </div>
             <div class="form-group row">
@@ -45,16 +45,22 @@
                     <input type="email" class="form-control" name="email" placeholder="seunome@email.com" value="{{ isset($ngo['email']) ? $ngo['email'] : '' }}">
                 </div>
             </div>
-            <div class="form-group row">
+            <div class="form-group row" id="campo">
                 <label for="passwordNgo" class="col-sm-4 col-form-label">Defina uma senha</label>
-                <div class="col-sm-8">
-                    <input type="password" class="form-control" name="password" placeholder="Nova senha minimo 6 caracteres"  value="{{ isset($ngo['user_id']) ? $ngo['user_id'] : '' }}">
+                <div class="col-sm-6">
+                    <input type="password" class="form-control pwd" name="password" value="password" placeholder="Nova senha minimo 6 caracteres"  value="{{ isset($ngo['user_id']) ? $ngo['user_id'] : '' }}">
+                </div>
+                <div class="col-sm-2 d-flex align-items-center">
+                    <img src="http://i.stack.imgur.com/H9Sb2.png" title="Visualizar a senha" alt="visualizar senha" id="olho">
                 </div>
             </div>
-            <div class="form-group row">
+            <div class="form-group row" id="campo2">
                 <label for="passwordNgo" class="col-sm-4 col-form-label">Confirme sua senha</label>
-                <div class="col-sm-8">
-                    <input type="password" class="form-control" name="re-password" placeholder="Confirme sua nova senha" value="{{ isset($ngo['user_id']) ? $ngo['user_id'] : '' }}">
+                <div class="col-sm-6">
+                    <input type="password" class="form-control" name="re-password" value="password" placeholder="Confirme sua nova senha" value="{{ isset($ngo['user_id']) ? $ngo['user_id'] : '' }}">
+                </div>
+                <div class="col-sm-2 d-flex align-items-center">
+                    <img src="http://i.stack.imgur.com/H9Sb2.png" title="Visualizar a senha" alt="visualizar senha" id="olho">
                 </div>
             </div>
             <div class="form-group row">
@@ -94,7 +100,10 @@
                 </div>
                 <div class="form-group col-md-6 p-1">
                     <label for="phoneNumberNgo">Telefone</label>
-                    <input type="text" class="form-control" name="phone_number" placeholder="Telefone/Celular" value="{{ isset($ngo['phone_number']) ? $ngo['phone_number'] : '' }}">
+                    <input type="text" id="telefone" class="form-control" 
+                                name="phone_number" 
+                                placeholder="Telefone/Celular" 
+                                value="{{ isset($ngo['phone_number']) ? $ngo['phone_number'] : '' }}">
                 </div>
                 <div class="form-group col-6 md-4 p-1">
                     <label>Tipo de Conta:</label>
@@ -145,8 +154,9 @@
                         @endforeach
                     </ul>
                 </div>
-            @endif
-        <script type='text/javascript' src='https://code.jquery.com/jquery-3.4.1.min.js'></script>
-        <script src="/js/completaCep.js" type="text/javascript"></script>
-        <script src="/js/mascaraTel.js" type="text/javascript"></script>
+            @endif        
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script> 
+        <script src="/js/completaCep.js" type="text/javascript"></script>         
+        <script src="/js/mostrarSenha.js" type="text/javascript"></script>         
+        <script src="/js/mascaraTel.js" type="text/javascript"></script>         
 @endsection

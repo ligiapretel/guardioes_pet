@@ -20,13 +20,13 @@ Route::get('/perfilGuardiao', "GuardianController@viewProfileGuardian");
 Route::get('/cadastroGuardiao', "RegisterGuardianController@viewRegisterGuardian");
 
 //Ngo´s Routes
-Route::get('/perfilOng','NgoController@viewProfileNgo');
+Route::get('/perfilOng/{id?}','NgoController@viewProfileNgo');
 Route::get('/cadastroOng', "NgoController@registerNgo");
-Route::post('/cadastroOng', "NgoController@doRegisterNgo");
-Route::get('/editaOng/{id?}',"NgoController@editNgo");
+Route::post('/cadastroOng', "NgoController@doRegisterNgo"); 
+Route::get('/editaOng/{id?}',"NgoController@editNgo"); 
 Route::post('/editaOng',"NgoController@doEditNgo");
-Route::post('/deleteOng',"NgoController@deleteNgo");
-Route::post('/getNgo/{id?}',"NgoController@getNgo");
+Route::post('/deletaOng',"NgoController@deleteNgo");
+Route::post('/visualizarOng',"NgoController@getNgo");
 
 
 //Site´s Routes

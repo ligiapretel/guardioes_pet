@@ -8,7 +8,7 @@
         
         <form action="{{ ('cadastroOng') }}" method="POST" class="card col-lg-8 col-md-12 col-sm-12 col-12 p-5" id="formOng" enctype='multipart/form-data'>
         {{ csrf_field() }} <!--gera token de segurança - verifica se o usuário é autenticado-->
-        <input type='hidden' name='user_id' value='{{ Auth::user()->User_id }}'><!--Chama o id do usuário logado-->
+        <input type='hidden' name='id' value='{{ Auth::ngo()->id }}'><!--Chama o id do usuário logado-->
             <!-- essa div é para o título -->
             <div class="form-group d-flex justify-content p-2">
                 <h3 class="tituloOng">Cadastro de ONG</h3>
@@ -94,7 +94,7 @@
                 </div>
                 <div class="form-group col-md-6 p-1">
                     <label for="phoneNumberNgo">Telefone</label>
-                    <input type="text" class="form-control" name="phone_number" placeholder="Telefone/Celular">
+                    <input type="text" id="telefone" class="form-control" name="phone_number" placeholder="Telefone/Celular">
                 </div>
                 <div class="form-group col-6 md-4 p-1">
                     <label>Tipo de Conta:</label>

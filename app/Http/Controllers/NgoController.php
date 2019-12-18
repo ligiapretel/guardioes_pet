@@ -9,9 +9,12 @@ use Illuminate\Http\Request;
 class NgoController extends Controller
 {
     //metodo para retornar para view
-    public function viewProfileNgo(Request $request){
+    public function viewProfileNgo($ngoId){
         //AQUI PRECISA DE UMA VALIDAÇÃO SE A ONG ESTÁ LOGADA
-        return view('Ngos.profileNgo');
+        $ngo = Ngos::find($ngoId);
+        
+        //$ngoAll[''] = Ngos::
+        return view('Ngos.profileNgo', compact('ngo'));
     }
 
     public function registerNgo(){
@@ -43,7 +46,7 @@ class NgoController extends Controller
             'email' => 'required',
             'password' => 'required',
             'state' => 'required',
-            'about_the_ngo' => 'required',
+            //'about_the_ngo' => 'required',
             'type_account'=>'required',
             'bank_name' => 'required',
             'bank_agency' => 'required',
@@ -89,16 +92,20 @@ class NgoController extends Controller
     //método para buscar os dados da ong
     public function editNgo($id){
         $ngo = Ngos::where('id', $id)->first(); //recebe o id da ong cadastrada o método first busca todos os registros
-        return view('Ngos.editNgo', ["ngo"=>$ngo]);
+        return view('Ngos.editaOng', ["ngo"=>$ngo]);
     }   
 
     //método para fazer a edição dos dados da ong
     public function doEditNgo(Request $request){
-        $ngo = new Ngo($request->post()); // atribuo os novos valores vindo pelo formulário editado 
+
+        $request->validate([]);
+
+        $ngo = new Ngos($request->post()); // atribuo os novos valores vindo pelo formulário editado 
         //retorno na condicional informando se deu certo
         if($ngo->save()){ //se deu certo ele salva os dados e retorna para perfil da ong
             echo  "<script>alert('Dados editados com sucesso!);</script>";
-            return view('Ngos.profileNgo');
+            
+            return redirect('/perfilOng/' . $request->post()['id'] );
         }else{
             echo  "<script>alert('Falha ao editar dados');</script>";
         }
@@ -108,7 +115,7 @@ class NgoController extends Controller
     public function deleteNgo(Request $request){
         //recebo os dados da ong pego o id e removo pelo metodo delete()
         $data = $request->post();
-        $ngo = Ngo::where('id', $data['id'])->get()[0]; //pega o primeiro índice do array  
+        $ngo = Ngos::where('id', $data['id'])->get()[0]; //pega o primeiro índice do array  
         $ngo->delete();
         return view('Ngos.profileNgo');
     }
