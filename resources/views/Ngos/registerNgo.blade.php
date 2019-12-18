@@ -6,7 +6,7 @@
 
 @section('content')
         
-        <form action="{{ ('doEditNgo') }}" method="POST" class="card col-lg-8 col-md-12 col-sm-12 col-12 p-5" id="formOng">
+        <form action="{{ ('cadastroOng') }}" method="POST" class="card col-lg-8 col-md-12 col-sm-12 col-12 p-5" id="formOng" enctype='multipart/form-data'>
         {{ csrf_field() }} <!--gera token de segurança - verifica se o usuário é autenticado-->
             <!-- essa div é para o título -->
             <div class="form-group d-flex justify-content p-2">
@@ -53,7 +53,7 @@
             <div class="form-group row">
                 <label for="passwordNgo" class="col-sm-4 col-form-label">Confirme sua senha</label>
                 <div class="col-sm-8">
-                    <input type="password" class="form-control" name="user_id" placeholder="Confirme sua nova senha">
+                    <input type="password" class="form-control" name="re-pwd" placeholder="Confirme sua nova senha">
                 </div>
             </div>
             <div class="form-group row">
@@ -97,10 +97,10 @@
                 </div>
                 <div class="form-group col-6 md-4 p-1">
                     <label>Tipo de Conta:</label>
-                    <select class="form-control">
+                    <select name="type_account" class="form-control">
                         <option selected disable>Seleciona uma Opção</option>
-                        <option value="type_account">Conta Corrente</option>
-                        <option value="type_account">Conta Poupança</option>
+                        <option value="Conta Corrente">Conta Corrente</option>
+                        <option value="Conta Poupança">Conta Poupança</option>
                     </select>
                 </div>
                 <div class="form-group col-md-6 p-1">
@@ -136,7 +136,7 @@
                     </ul>
                 </div>
             @endif
-
+        <script type='text/javascript' src='https://code.jquery.com/jquery-3.4.1.min.js'></script>
         <script src="/js/completaCep.js" type="text/javascript"></script>
         <script src="/js/mascaraTel.js" type="text/javascript"></script>
 @endsection

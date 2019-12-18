@@ -28,12 +28,10 @@ class NgoController extends Controller
     //inicio da função para cadastro da ong via formulário  
     public function doRegisterNgo(Request $request){
     //informado campos requeridos no preenchimento do formulário via controller
-        $request->validate([
-            'Id' => 'required',
+        
+        $request->validate([   //campos que são requeridos (obrigatórios)         
             'social_name' => 'required',
             'cnpj' => 'required',
-            'profile_picture' => 'required',
-            'site' => 'required',
             'phone_number' => 'required',
             'responsable_name' => 'required',
             'address' => 'required',
@@ -48,13 +46,27 @@ class NgoController extends Controller
             'type_account'=>'required',
             'bank_name' => 'required',
             'bank_agency' => 'required',
-            'bank_account' => 'required',
-            'user_id' => 'required',
-            'created_at' => 'required',
-            'updated_at' => 'required',
+            'bank_account' => 'required', 
         ]);
+        
+        $profile_pictures = $_FILES['profile_picture']; //capturo o array da imagem
+        $fileDir = ''; //criei uma variável para salvar o caminho da imagem
+        if(!empty($profile_pictures)){ //se for diferente de vazio 
+            $name = explode('.', $profile_pictures['name']);//transforma a string em um array
+            $formato = end($name); //pega o último elemento do array
+            
+            $image = time(). '.' . $formato; //ele armazena na variavel image com a data time do cadastro e a extensão da imagem.
+            
+            if(move_uploaded_file($profile_pictures['tmp_name'], 'img/' . $image)) { //pego apenas o caminho da imagem(tmp_name)
+                $fileDir = 'img/logo-ong/' . $image; //armazeno dentro da variável o caminho da imagem
+            } 
+        } 
+
+        $data = $request->post(); //salvo os dados via post
+        $data['profile_picture'] = $fileDir; // armazena o dado enviado pelo form no campo picture dentro de filedir = caminho da imagem
+
         //criado variável com a classe ngos criada no model para receber os dados do post
-        $ngo = Ngos::create($request->post());
+        $ngo = Ngos::create( $data );
         
         //criando condicional para informar o cadastro
         if ($ngo){
