@@ -41,6 +41,7 @@ class NgoController extends Controller
             'neighborhood' => 'required',
             'city' => 'required',
             'email' => 'required',
+            'password' => 'required',
             'state' => 'required',
             'about_the_ngo' => 'required',
             'type_account'=>'required',
@@ -62,7 +63,15 @@ class NgoController extends Controller
             } 
         } 
 
+        $realPass = $_POST['password'];
+        $confirmPass = $_POST['re-password'];
+
+        if($realPass != $confirmPass){ //se a senha for diferente da confirmação da senha
+            echo "<script>alert('As senhas não estão iguais!')</script>";
+        }else{
         $data = $request->post(); //salvo os dados via post
+        }
+
         $data['profile_picture'] = $fileDir; // armazena o dado enviado pelo form no campo picture dentro de filedir = caminho da imagem
 
         //criado variável com a classe ngos criada no model para receber os dados do post
@@ -76,6 +85,7 @@ class NgoController extends Controller
             echo  "<script>alert('Falha ao realizar o cadastro);</script>";
         }
     }    
+
     //método para buscar os dados da ong
     public function editNgo($id){
         $ngo = Ngos::where('id', $id)->first(); //recebe o id da ong cadastrada o método first busca todos os registros

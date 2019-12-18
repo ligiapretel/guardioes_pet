@@ -23,6 +23,7 @@ class Ngos extends Model
         'neighborhood',
         'city',
         'email',
+        'password',
         'state',
         'about_the_ngo',
         'type_account',

@@ -8,6 +8,7 @@
         
         <form action="{{ ('cadastroOng') }}" method="POST" class="card col-lg-8 col-md-12 col-sm-12 col-12 p-5" id="formOng" enctype='multipart/form-data'>
         {{ csrf_field() }} <!--gera token de segurança - verifica se o usuário é autenticado-->
+        <input type='hidden' name='user_id' value='{{ Auth::user()->User_id }}'><!--Chama o id do usuário logado-->
             <!-- essa div é para o título -->
             <div class="form-group d-flex justify-content p-2">
                 <h3 class="tituloOng">Cadastro de ONG</h3>
@@ -47,13 +48,13 @@
             <div class="form-group row">
                 <label for="passwordNgo" class="col-sm-4 col-form-label">Defina uma senha</label>
                 <div class="col-sm-8">
-                    <input type="password" class="form-control" name="user_id" placeholder="Nova senha minimo 6 caracteres" >
+                    <input type="password" class="form-control" name="password" placeholder="Nova senha minimo 6 caracteres" >
                 </div>
             </div>
             <div class="form-group row">
                 <label for="passwordNgo" class="col-sm-4 col-form-label">Confirme sua senha</label>
                 <div class="col-sm-8">
-                    <input type="password" class="form-control" name="re-pwd" placeholder="Confirme sua nova senha">
+                    <input type="password" class="form-control" name="re-password" placeholder="Confirme sua nova senha">
                 </div>
             </div>
             <div class="form-group row">

@@ -12,7 +12,7 @@ class CreateNgosTable extends Migration
      * @return void
      */
     public function up()
-    { //incluido campo email e tipo de conta 
+    { //incluido campo email , tipo de conta  e password
         Schema::create('ngos', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('social_name', 300);
@@ -28,9 +28,10 @@ class CreateNgosTable extends Migration
             $table->string('neighborhood', 100);
             $table->string('city', 100);
             $table->string('email', 100);
+            $table->string('password', 100);
             $table->string('state', 100);
             $table->text('about_the_ngo', 5000);
-            $table->text('type_account',100);
+            $table->string('type_account',100);
             $table->string('bank_name', 100);
             $table->string('bank_agency', 15);
             $table->string('bank_account', 15);
