@@ -8,7 +8,6 @@
         
         <form action="{{ ('cadastroOng') }}" method="POST" class="card col-lg-8 col-md-12 col-sm-12 col-12 p-5" id="formOng" enctype='multipart/form-data'>
         {{ csrf_field() }} <!--gera token de segurança - verifica se o usuário é autenticado-->
-        <input type='hidden' name='id' value='{{ Auth::ngo()->id }}'><!--Chama o id do usuário logado-->
             <!-- essa div é para o título -->
             <div class="form-group d-flex justify-content p-2">
                 <h3 class="tituloOng">Cadastro de ONG</h3>

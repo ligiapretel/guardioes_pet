@@ -108,7 +108,7 @@
                 <div class="form-group col-6 md-4 p-1">
                     <label>Tipo de Conta:</label>
                     <select class="form-control">
-                        <option name="type_account" selected disable>Seleciona uma Opção</option>
+                        <option name="type_account" value="{{ isset($ngo['type_account']) ? $ngo['type_account'] : '' }}" selected disable>Seleciona uma Opção</option>
                         <option name="Conta Corrente">Conta Corrente</option>
                         <option name="Conta Poupança">Conta Poupança</option>
                     </select>

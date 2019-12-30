@@ -14,7 +14,7 @@ class NgoController extends Controller
         $ngo = Ngos::find($ngoId);
         
         //$ngoAll[''] = Ngos::
-        return view('Ngos.profileNgo', compact('ngo'));
+        return view('Ngos.profileNgo', compact('ngo')); //compact = Cria um array contendo variáveis e seus valores.
     }
 
     public function registerNgo(){

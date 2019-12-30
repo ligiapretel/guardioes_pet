@@ -12,11 +12,9 @@
     <div class="row">
         <div id="pfOng_cx_info_principal_ordem" class="col-lg-6 col-md-6 col-sm-12 col-12">
             <h1 class="pfOngGuard_titulo text-dark font-weight-bolder">{{ $ngo->social_name }}</h1>
-            <p class="text-dark text-justify">Nossa ONG nasceu com intenções claras de resgate, castração e doação de animais. Nos empenhamos em abrigar poucos, socorrer vários e castrar MUITOS, pois a castração é a única solução ao problema estrutural da procriação de animais abandonados.</p>
-            <p class="text-dark text-justify">Nossa ONG é formada por profissionais liberais, gente comum que trabalha, estuda, enfim, vive!</p>
+            <p class="text-dark text-justify">{{ $ngo->about_the_ngo }}</p>
             <div id="pfG_cx_i_txt" class="d-flex align-items-center">
                 <i class="mdi mdi-email-outline"></i>
-                <!--<img src='{{ $ngo->profile_picture }}'>-->
                 <p> Envie uma mensagem!</p>
                 <i class="mdi mdi-alert-outline"></i>
                 <p> Denunciar Perfil</p>
@@ -24,7 +22,7 @@
         </div>
 
         <div class="col-lg-6 col-md-6 col-sm-12 col-12 d-flex justify-content-center">
-            <img id="perfilOng_imagem" src="/img/perfil_ong_imagem.png">
+            <img id="perfilOng_imagem" src='{{ $ngo->profile_picture }}'>
         </div>
     </div>
 </section>
