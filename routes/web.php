@@ -55,4 +55,14 @@ Route::get('/cadastre-se', "RegisterController@viewRegister");
 //Login´s Route
 Route::get('/login', "LoginController@viewLogin");
 
+//Admin´s Routes
+Route::get('/cadastroAdmin', "AdminController@create");
+Route::post('/cadastroAdmin', "AdminController@create");
+Route::get('/editaAdmin/{id?}', "AdminController@update");
+Route::post('/editaAdmin', "AdminController@update"); // SE USAR O MESMO MÉTODO, COMO FICA O {ID?}?
+
+// Route::get('/admin/{id?}','AdminController@');
+// Route::post('/deletaAdmin',"AdminController@");
+// Route::post('/visualizarAdmin',"AdminController@g");
+
 /*FAZER A ROTA DE LOGIN CONFORME OS ARQUIVOS QUE O LARAVEL FORNECE */
