@@ -11,7 +11,7 @@
 
                 <h3 class="mt-10">Cadastro Admin</h3>
 
-                <form action="{{ ('cadastroAdmin') }}" method="POST" class="card p-4">
+                <form action="/admin/cadastro" method="POST" class="card p-4">
                 @csrf    
 
                     <div class="form-group">

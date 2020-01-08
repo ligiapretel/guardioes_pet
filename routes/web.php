@@ -56,13 +56,12 @@ Route::get('/cadastre-se', "RegisterController@viewRegister");
 Route::get('/login', "LoginController@viewLogin");
 
 //Admin´s Routes
-Route::get('/cadastroAdmin', "AdminController@create");
-Route::post('/cadastroAdmin', "AdminController@create");
-Route::get('/editaAdmin/{id?}', "AdminController@update");
-Route::post('/editaAdmin', "AdminController@update"); // SE USAR O MESMO MÉTODO, COMO FICA O {ID?}?
-
-// Route::get('/admin/{id?}','AdminController@');
-// Route::post('/deletaAdmin',"AdminController@");
-// Route::post('/visualizarAdmin',"AdminController@g");
+Route::get('/admin/cadastro', "AdminController@createAdmin");
+Route::post('/admin/cadastro', "AdminController@createAdmin");
+Route::get('/admin/atualizar/{id?}', "AdminController@updateAdmin");
+Route::post('/admin/atualizar', "AdminController@updateAdmin"); // SE USAR O MESMO MÉTODO, COMO FICA O {ID?}?
+Route::post('/admin/deletar/{id?}',"AdminController@deleteAdmin"); // PRECISA DE {ID?}????
+Route::get('/admin', "AdminController@viewAllAdmin"); // visualização da lista de todos os admin
+// Route::get('/admin/{id?}','AdminController@viewOneAdmin'); VALE A PENA TER UM VISUALIZAÇÃO DE UM ÚNICO ADMIN SENDO QUE SÃO POUCAS INFORMAÇÕES DE CADA UM?
 
 /*FAZER A ROTA DE LOGIN CONFORME OS ARQUIVOS QUE O LARAVEL FORNECE */

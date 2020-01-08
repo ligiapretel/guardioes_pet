@@ -12,7 +12,7 @@
                 <h3 class="mt-10">Atualização de dados Admin</h3>
 
                 @if(isset($admin)) 
-                <form action="{{ ('editaAdmin') }}" method="POST" class="card p-4">
+                <form action="/admin/atualizar" method="POST" class="card p-4">
                 @csrf      
                     <!-- input hidden com o id do Admin -->
                     <input type="text" name="idAdmin" hidden value="{{ $admin->id }}"> 
