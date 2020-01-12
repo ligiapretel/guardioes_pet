@@ -10,4 +10,8 @@ class PetController extends Controller
     public function viewPets(Request $request) {
         return view('Pets.pets');
     }
+
+    public function viewForm (Request $request) {
+        return view ('Pets.registerPet');
+    }
 }

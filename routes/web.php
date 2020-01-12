@@ -36,7 +36,7 @@ Route::get('/sobre', "SiteController@viewAbout");
 
 //Pet´s Routes
 Route::get('/paginaAnimal', "PetController@viewPets");
-Route::get('/cadastroAnimal', "RegisterPetsController@viewRegisterPets");
+Route::get('/pet/cadastro', "PetController@viewForm"); 
 
 //Ad´s Routes
 Route::get('/anuncios',"AdController@viewAds");
