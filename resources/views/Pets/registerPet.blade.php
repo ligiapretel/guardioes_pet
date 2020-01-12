@@ -8,181 +8,151 @@
 
 <!-- início do formulário -->
 
-        <form action="perfilOng.php"
+        <form action="/pet/cadastro" method="post"
             class="card col-lg-8 col-md-12 col-sm-12 col-12 p-5" id="formAnimal" style="width: 50rem">
+            @csrf
+
+            <div class="row">
+        <div class="col-12">
+            @if(isset($result))
+                @if($result)
+                    <h3>Seu pet foi cadastrado!</h3>
+                @else
+                    <h3>O pet não foi cadastrado. Tente novamente</h3>
+                @endif
+            @endif
+        </div>
+    </div>
+
+
             <!-- essa div é para o título -->
-            <div class="form-group d-flex justify-content p-2">
+            <div class="form-group d-flex justify-content pb-2">
                 <h3 class="tituloAnimal">Cadastro de novo animal</h3>
             </div>
             <!--aqui começa o formulário -->
-            <div class="form-group row">
-                <label for="nomeAnimal" class="col-sm-4 col-form-label">Nome do Animal</label>
-                <div class="col-sm-8">
-                    <input type="text" class="form-control" id="nomeAnimal" placeholder="Nome do Pet">
+                <div class="form-group row">
+                    <label for="nomeAnimal" class="col-sm-4 col-form-label">Nome do Animal</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" name="name" id="nomeAnimal" placeholder="Nome do Pet">
+                    </div>
                 </div>
-            </div>
-            <div class="form-group row">
-                <label class="col-sm-4 col-form-label" for="tipo">Tipo de Animal</label>
-                <div class="col-sm-2">
-                    <input class="form-check-input" type="radio" name="tipo" id="tipoAnimal" value="cachorro">
-                    <label class="form-check-label" for="tipoAnimal">Cachorro</label>
+
+                <div class="form-group row">
+                    <label class="col-sm-4 col-form-label" for="tipo">Tipo de Animal</label>
+                    <div class="col-sm-2">
+                        <input class="form-check-input" type="radio" name="type" id="type" value="cachorro">
+                        <label class="form-check-label" for="type">Cachorro</label>
+                    </div>
+                    <div class="col-sm-2">
+                        <input class="form-check-input" type="radio" name="type" id="type" value="gato">
+                        <label class="form-check-label" for="type">Gato</label>
+                    </div>
                 </div>
-                <div class="col-sm-2">
-                    <input class="form-check-input" type="radio" name="tipo" id="tipoAnimal" value="gato">
-                    <label class="form-check-label" for="tipoAnimal">Gato</label>
-                </div>
-            </div>
+
             <div class="form-group row">
                 <label class="col-sm-4 col-form-label" for="genero">Sexo do Animal</label>
                 <div class="col-sm-2">
-                    <input class="form-check-input" type="radio" name="sexo" id="sexoAnimal" value="macho">
+                    <input class="form-check-input" type="radio" name="sex" id="sex" value="M">
                     <label class="form-check-label" for="sexoAnimal">Macho</label>
                 </div>
                 <div class="col-sm-2">
-                    <input class="form-check-input" type="radio" name="sexo" id="sexoAnimal" value="femea">
-                    <label class="form-check-label" for="sexoAnimal">Fêmea</label>
+                    <input class="form-check-input" type="radio" name="sex" id="sex" value="F">
+                    <label class="form-check-label" for="sex">Fêmea</label>
                 </div>
             </div>
             <div class="form-group row">
-                <label class="col-sm-4 col-form-label" for="porte">Porte do Animal</label>
+                <label class="col-sm-4 col-form-label" for="animal_bearing">Porte do Animal</label>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" name="porte" id="porteAnimal" value="pequeno">
-                    <label class="form-check-label" for="porteAnimal">Pequeno (até 10kg)</label>
+                    <input class="form-check-input" type="checkbox" name="animal_bearing" id="animal_bearing" value="pequeno">
+                    <label class="form-check-label" for="animal_bearing">Pequeno (até 10kg)</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" name="porte" id="porteAnimal" value="medio">
-                    <label class="form-check-label" for="porteAnimal">Médio (de 10 a 25kg)</label>
+                    <input class="form-check-input" type="checkbox" name="animal_bearing" id="animal_bearing" value="medio">
+                    <label class="form-check-label" for="animal_bearing">Médio (de 10 a 25kg)</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" name="porte" id="porteAnimal" value="grande">
-                    <label class="form-check-label" for="porteAnimal">Grande (acima de 25kg)</label>
+                    <input class="form-check-input" type="checkbox" name="animal_bearing" id="animal_bearing" value="grande">
+                    <label class="form-check-label" for="animal_bearing">Grande (acima de 25kg)</label>
                 </div>
             </div>
             <div class="form-group row">
-                <label for="pelagem" class="col-sm-4 col-form-label">Pelagem</label>
+                <label for="coal_type" class="col-sm-4 col-form-label">Pelagem</label>
                 <div class="col-sm-8">
-                    <input type="text" class="form-control" id="pelagem" placeholder="Cor e tipo de pêlo">
+                    <input type="text" class="form-control" name="coal_type" id="coal_type" placeholder="Cor e tipo de pêlo">
                 </div>
             </div>
             <div class="form-group row">
                 <label for="raca" class="col-sm-4 col-form-label">Raça</label>
                 <div class="col-sm-8">
-                    <input type="text" class="form-control" id="raca" placeholder="Descrição da raça">
+                    <input type="text" class="form-control" name="breed" id="breed" placeholder="Descrição da raça">
                 </div>
             </div>
             <div class="form-group row">
                 <label for="fotoAnimal" class="col-sm-4 col-form-label">Foto do Animal</label>
                 <div class="col-sm-8">
-                    <input type="file" class="form-control-file" id="fotoAnimal">
+                    <input type="file" class="form-control-file" id="picture" name="picture">
                 </div>
             </div>
             <div class="form-group row">
                 <label for="opcao" class="col-sm-4 col-form-label">Quais as opções para esse animal?</label>
                 <div class="form-check form-check-inline col-lg-2 col-md-3 col-sm-4">
-                    <input class="form-check-input" type="checkbox" name="opcao" id="opcaoAnimal" value="adocao">
+                    <input class="form-check-input" type="checkbox" name="adoption_available" id="opcaoAnimal" value="1">
                     <label class="form-check-label" for="opcaoAnimal">Adoção</label>
                 </div>
                 <div class="form-check form-check-inline col-lg-3 col-md-3 col-sm-4">
-                    <input class="form-check-input" type="checkbox" name="opcao" id="opcaoAnimal" value="temporario">
+                    <input class="form-check-input" type="checkbox" name="temporary_home_available" id="opcaoAnimal" value="1">
                     <label class="form-check-label" for="opcaoAnimal">Lar Temporário</label>
                 </div>
                 <div class="form-check form-check-inline col-lg-2 col-md-3 col-sm-4">
-                    <input class="form-check-input" type="checkbox" name="opcao" id="opcaoAnimal" value="apadrinhamento">
+                    <input class="form-check-input" type="checkbox" name="sponsorship_available" id="opcaoAnimal" value="1">
                     <label class="form-check-label" for="opcaoAnimal">Apadrinhamento</label>
                 </div>
             </div>
             <div class="form-group row">
-                <label for="idade" class="col-sm-4 col-form-label">Idade do Animal</label>
+                <label for="age" class="col-sm-4 col-form-label">Idade do animal</label>
+                <div class="col-sm-8">
+                    <input type="number" class="form-control" name="age">
+                </div>
             </div>      
-                <div class= "row">
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="idade" id="idadeAnimal" value="filhote">
-                        <label class="form-check-label" for="idadeAnimal">até 1 ano (filhotes)</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="idade" id="idadeAnimal" value="jovem">
-                        <label class="form-check-label" for="idadeAnimal">de 1 a 2 anos (jovens)</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="idade" id="idadeAnimal" value="jovem">
-                        <label class="form-check-label" for="idadeAnimal">de 2 a 3 anos (jovens)</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="idade" id="idadeAnimal" value="jovem">
-                        <label class="form-check-label" for="idadeAnimal">de 3 a 4 anos (jovens)</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="idade" id="idadeAnimal" value="jovem">
-                        <label class="form-check-label" for="idadeAnimal">de 4 a 5 anos (jovens)</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="idade" id="idadeAnimal" value="jovem">
-                        <label class="form-check-label" for="idadeAnimal">de 5 a 6 anos (adultos)</label>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="idade" id="idadeAnimal" value="jovem">
-                        <label class="form-check-label" for="idadeAnimal">de 6 a 7 anos (adultos)</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="idade" id="idadeAnimal" value="jovem">
-                        <label class="form-check-label" for="idadeAnimal">de 7 a 8 anos (adultos)</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="idade" id="idadeAnimal" value="jovem">
-                        <label class="form-check-label" for="idadeAnimal">de 8 a 9 anos (adultos)</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="idade" id="idadeAnimal" value="jovem">
-                        <label class="form-check-label" for="idadeAnimal">de 9 a 10 anos (adultos)</label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="idade" id="idadeAnimal" value="jovem">
-                        <label class="form-check-label" for="idadeAnimal">acima de 11 anos (idosos)</label>
-                    </div>
-                </div>
-            </div>
 
             <div>
                 <div class="form-group row mt-4">
-                    <label class="col-sm-4 col-form-label" for="castrado">Castrado?</label>
+                    <label class="col-sm-4 col-form-label" for="castration">Castrado?</label>
                     <div class="col-sm-2">
-                        <input class="form-check-input" type="radio" name="castrado" id="castrado" value="sim">
-                        <label class="form-check-label" for="castrado">Sim</label>
+                        <input class="form-check-input" type="radio" name="castration" id="castration" value="1">
+                        <label class="form-check-label" for="castration">Sim</label>
                     </div>
                     <div class="col-sm-2">
-                        <input class="form-check-input" type="radio" name="castrado" id="castrado" value="nao">
-                        <label class="form-check-label" for="castrado">Não</label>
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <div class="form-group row">
-                    <label class="col-sm-4 col-form-label" for="vacina">Vacinado?</label>
-                    <div class="col-sm-2">
-                        <input class="form-check-input" type="radio" name="vacinado" id="vacinado" value="sim">
-                        <label class="form-check-label" for="vacinado">Sim</label>
-                    </div>
-                    <div class="col-sm-2">
-                        <input class="form-check-input" type="radio" name="vacinado" id="vacinado" value="nao">
-                        <label class="form-check-label" for="vacinado">Não</label>
+                        <input class="form-check-input" type="radio" name="castration" id="castration" value="0">
+                        <label class="form-check-label" for="castration">Não</label>
                     </div>
                 </div>
             </div>
 
             <div>
                 <div class="form-group row">
-                    <label class="col-sm-4 col-form-label" for="vermes">Desvermifugado?</label>
+                    <label class="col-sm-4 col-form-label" for="vaccinated">Vacinado?</label>
                     <div class="col-sm-2">
-                        <input class="form-check-input" type="radio" name="vermes" id="vermes" value="sim">
-                        <label class="form-check-label" for="vermes">Sim</label>
+                        <input class="form-check-input" type="radio" name="vaccinated" id="vaccinated" value="1">
+                        <label class="form-check-label" for="vaccinated">Sim</label>
                     </div>
                     <div class="col-sm-2">
-                        <input class="form-check-input" type="radio" name="vermes" id="vermes" value="nao">
-                        <label class="form-check-label" for="vermes">Não</label>
+                        <input class="form-check-input" type="radio" name="vaccinated" id="vaccinated" value="0">
+                        <label class="form-check-label" for="vaccinated">Não</label>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="form-group row">
+                    <label class="col-sm-4 col-form-label" for="deworming">Vermifugado?</label>
+                    <div class="col-sm-2">
+                        <input class="form-check-input" type="radio" name="deworming" id="deworming" value="1">
+                        <label class="form-check-label" for="deworming">Sim</label>
+                    </div>
+                    <div class="col-sm-2">
+                        <input class="form-check-input" type="radio" name="deworming" id="deworming" value="0">
+                        <label class="form-check-label" for="deworming">Não</label>
                     </div>
                 </div>
             </div>
@@ -196,41 +166,37 @@
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                     <div class="col-lg-6 col-md-8 col-sm-6 col-xs-6">
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" name="caracAnimal" id="caracAnimal"                        value="docil">
+                            <input class="form-check-input" type="checkbox" name="docile" id="caracAnimal"                        value="1">
                             <label class="form-check-label caracAnimal" for="caracAnimal">Dócil</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" name="carac" id="caracAnimal" value="carinho">
+                            <input class="form-check-input" type="checkbox" name="like_affection" id="caracAnimal" value="1">
                             <label class="form-check-label caracAnimal" for="caracAnimal">Gosta de carinho</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" name="carac" id="caracAnimal" value="crianca">
+                            <input class="form-check-input" type="checkbox" name="like_children" id="caracAnimal" value="1">
                             <label class="form-check-label caracAnimal" for="caracAnimal">Gosta de crianças</label>
                         </div>
                     </div>
                     <div class="col-lg-12 col-md-8 col-sm-6 col-xs-6">
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" name="carac" id="caracAnimal" value="idosos">
-                            <label class="form-check-label caracAnimal" for="caracAnimal">Gosta de idosos</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" name="carac" id="caracAnimal" value="outrosAnimais">
+                            <input class="form-check-input" type="checkbox" name="live_well_with_animals" id="caracAnimal" value="1">
                             <label class="form-check-label caracAnimal" for="caracAnimal">Convive bem com outros animais</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" name="carac" id="caracAnimal" value="brincar">
+                            <input class="form-check-input" type="checkbox" name="like_to_play" id="caracAnimal" value="1">
                             <label class="form-check-label caracAnimal" for="caracAnimal">Gosta de brincar</label>
                         </div>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" name="carac" id="caracAnimal" value="necessidades">
+                            <input class="form-check-input" type="checkbox" name="well_behaved" id="caracAnimal" value="1">
                             <label class="form-check-label caracAnimal" for="caracAnimal">Faz as necessidades no lugar certo</label>
                         </div>
                     </div>
                 </div>
                 </div>
                 <div class="form-group row p-3">
-                    <label class="col-sm-4 col-form-label  tituloCaracteristicasAnimal" for="descricao">Descreva o pet:</label>
-                    <textarea class="form-control" id="descricao" cols="30" rows="10"
+                    <label class="col-sm-4 col-form-label  tituloCaracteristicasAnimal" for="description">Descreva o pet:</label>
+                    <textarea class="form-control" id="descricao" name="description" cols="30" rows="10"
                         placeholder="Fale mais sobre o animal: qual a sua história, suas características físicas e comportamentais, o tipo de lar que mais se adequaria, do que ele(a) gosta, etc."></textarea>
                 </div>
                 <div class="botaoLimparECadastro">
@@ -238,6 +204,7 @@
                     <button type="submit" class="btn-roxo botaoAnimal">Cadastrar</button>
                 </div>
         </form>
+
 
 
 @endsection
