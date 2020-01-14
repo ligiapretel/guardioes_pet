@@ -42,7 +42,8 @@ Route::post('/pet/cadastro', "PetController@register");
 
 //Ad´s Routes
 Route::get('/anuncios',"AdController@viewAds");
-Route::get('/cadastroAnuncio', "RegisterAdsController@viewRegisterAds");
+Route::post('/anuncios',"AdController@create");
+Route::get('/cadastroAnuncio', "AdController@viewRegisterAds");
 
 //Chat´s Routes
 Route::get('/chat', 'ChatController@viewChat');
@@ -53,12 +54,6 @@ Route::post('/busca', "SearchController@viewSearch");
 
 //Register´s Route
 Route::get('/cadastre-se', "RegisterController@viewRegister");
-Route::get('/cadastroAnimal', "RegisterPetsController@viewRegisterPets");
-Route::get('/cadastroAnuncio', "AdController@viewRegisterAds");
-Route::get('/cadastroGuardiao', "RegisterGuardianController@viewRegisterGuardian");
-Route::get('/cadastroOng', "RegisterNgoController@viewRegisterNgo");
-Route::get('/parceiros', "SiteController@viewPartners");
-Route::get('/sobre', "SiteController@viewAbout");
 
 //Login´s Route
 Route::get('/login', "LoginController@viewLogin");

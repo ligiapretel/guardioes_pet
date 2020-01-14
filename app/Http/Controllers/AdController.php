@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Ad;
 
 class AdController extends Controller
 {
@@ -20,8 +21,18 @@ class AdController extends Controller
         $newAd->medicine = $request->medicamento;
         $newAd->hygiene_supply = $request->higiene;
         $newAd->food = $request->alimentos;
-        $newAd->toy = $request->brinquedo;
-        $newAd->accessories = $request->acessorio;
+        $newAd->toys = $request->brinquedos;
+        $newAd->accessories = $request->acessorios;
         $newAd->others = $request->outros;
+        // Passando um valor de user_id fixo por enquanto
+        $newAd->user_id = 1;
+
+        $result = $newAd->save();
+
+        if($result){
+            echo "Deu certo";
+        }else{
+            echo "Lascou, deu ruim";
+        }
     }
 }

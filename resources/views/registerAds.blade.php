@@ -6,7 +6,9 @@
 
 @section('content')
 
-        <form method="POST" action="anuncios.php" class="card col-lg-8 col-md-12 col-sm-6 col-xs-6 p-5 formAnuncio" id="formAnimal">
+        <form method="POST" action="/anuncios" class="card col-lg-8 col-md-12 col-sm-6 col-xs-6 p-5 formAnuncio" id="formAnimal">
+        <!-- Token de segurança do Laravel para forms. Deve ser colocado em todos os forms. -->
+        @csrf
             <!-- essa div é para o título -->
             <div class="form-group d-flex justify-content p-2">
                 <h3 class="tituloAnuncio">Cadastro de Anúncio</h3>
