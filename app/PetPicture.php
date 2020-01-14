@@ -13,6 +13,6 @@ class PetPicture extends Model
     ];
  
     public function pet() {
-        return $this->belongsTo('App\Pet', 'pets', 'id');
+        return $this->belongsTo('App\Pet');
     }
 }

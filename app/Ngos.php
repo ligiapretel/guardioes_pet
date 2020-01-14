@@ -30,7 +30,7 @@ class Ngos extends Model
         'bank_name',
         'bank_agency',
         'bank_account',
-        'user_id',
+        //'user_id',
         'created_at',
         'updated_at'        
     ];

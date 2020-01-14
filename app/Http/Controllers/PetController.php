@@ -44,21 +44,28 @@ class PetController extends Controller
         $newPet->sponsorship_available = $request->sponsorship_available;
 
         //$newPet->id_ngo = Auth::user()->id;
+
         $result = $newPet->save();
+
+
+        $newPetPicture = new PetPicture;
+        $newPetPicture->picture = $request->picture;
+        $newPetPicture->pet_id = $newPet->id;
+    
+        if($request->hasFile('picture') && $request->file('picture')->isValid()) {
+
+            $name = date('HisYmd');
+            $extension = $request->picture->extension();
+            $fileName = "{$name}.{$extension}";
+
+            $upload = $request->picture->storeAs('pets_pictures', $fileName);
+            $newPetPicture->picture = $fileName;
+            $newPetPicture->save();
+        }    
 
         return view('Pets.registerPet', ["result"=>$result]);
         //se houver result, será mostrada uma mensagem de sucesso (está na view)
     }
-
-    // public function savePicture (Request $request) {
-    //     $newPetPicture = new PetPicture;
-    //     $newPetPicture->picture = $request->picture;
-    //     $newPetPicture->pet_id = $request->pet_id;
-    
-    //     if($request->hasFile('picture') && $request->file('picture')->isValid()) {
-    //         $upload = $request->picture->store('pets_pictures');
-    //     }     
-    // }
 
 
 }
