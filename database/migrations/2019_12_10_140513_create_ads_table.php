@@ -21,10 +21,8 @@ class CreateAdsTable extends Migration
             $table->text('toys', 3000);   
             $table->text('accessories', 3000);    
             $table->text('others', 3000);    
-            $table->unsignedBigInteger('guardian_id');
-            $table->foreign('guardian_id')->references('id')->on('guardians');
-            $table->unsignedBigInteger('ngo_id');
-            $table->foreign('ngo_id')->references('id')->on('ngos');  
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');   
             $table->timestamps();
         });
     }

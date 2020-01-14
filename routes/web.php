@@ -25,7 +25,7 @@ Route::get('/busca', "SearchController@viewSearch");
 Route::post('/busca', "SearchController@viewSearch");
 Route::get('/cadastre-se', "RegisterController@viewRegister");
 Route::get('/cadastroAnimal', "RegisterPetsController@viewRegisterPets");
-Route::get('/cadastroAnuncio', "RegisterAdsController@viewRegisterAds");
+Route::get('/cadastroAnuncio', "AdController@viewRegisterAds");
 Route::get('/cadastroGuardiao', "RegisterGuardianController@viewRegisterGuardian");
 Route::get('/cadastroOng', "RegisterNgoController@viewRegisterNgo");
 Route::get('/parceiros', "SiteController@viewPartners");

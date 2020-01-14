@@ -19,84 +19,56 @@
                     <input type="text" class="form-control" id="nomeAnuncio" placeholder="Nome do Cadastro">
                 </div>
             </div>
-            <p>Preciso de:</p>
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" name="medicamento" id="medicamento"
-                        value="medicamento">
-                    <label class="form-check-label" for="medicamento">Medicamentos</label>
-                </div>
+            <p class="font-weight-bold">Preciso de:</p>
                 <div class="row">
-                    <label for="especifique" class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-form-label">Especifique</label>
-                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
-                        <input type="text" class="form-control" id="especifique"
-                            placeholder="Ex.: Antipulgas, Vermífugo">
+                    <div class="col-4">
+                        <label for="medicamentoId" class="col-form-label">Medicamentos</label>
                     </div>
-                    <label for="quantidade" class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-form-label">Quantidade</label>
-                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
-                        <input type="number" class="form-control mt-1" id="quantidade" placeholder="Ex.: 2">
+                    <div class="col-8">
+                        <input type="text" class="form-control" id="medicamentoId" name="medicamento" placeholder="Ex.: Antipulgas, Vermífugo">
                     </div>
                 </div>
-
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" name="higiene" id="higiene" value="higiene">
-                    <label class="form-check-label" for="higiene">Produtos de Higiene</label>
-                </div>
-                <div class="row">
-                    <label for="especifique" class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-form-label">Especifique</label>
-                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
-                        <input type="text" class="form-control" id="especifique"
-                            placeholder="Ex.: Fraldas, Tapetes Higiênicos">
+                <div class="row mt-3">
+                    <div class="col-4">
+                        <label for="higieneId" class="col-form-label">Produtos de Higiene</label>
                     </div>
-                    <label for="quantidade" class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-form-label">Quantidade</label>
-                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
-                        <input type="number" class="form-control mt-1" id="quantidade" placeholder="Ex.: 2">
+                    <div class="col-8">
+                        <input type="text" class="form-control" id="higieneId" name="higiene" placeholder="Ex.: Fraldas, Tapetes Higiênicos">
                     </div>
                 </div>
-
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" name="alimentos" id="alimentos" value="alimentos">
-                    <label class="form-check-label" for="alimentos">Alimentos</label>
-                </div>
-                <div class="row">
-                    <label for="especifique" class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-form-label">Especifique</label>
-                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
-                        <input type="text" class="form-control" id="especifique"
-                            placeholder="Ex.: Ração comum, Ração para obesos">
+                <div class="row mt-3">
+                    <div class="col-4">
+                        <label for="alimentosId" class="col-form-label">Alimentos</label>
                     </div>
-                    <label for="quantidade" class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-form-label">Quantidade</label>
-                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
-                        <input type="number" class="form-control mt-1" id="quantidade" placeholder="Ex.: 2">
+                    <div class="col-8">
+                        <input type="text" class="form-control" id="alimentosId" name="alimentos" placeholder="Ex.: Ração comum, Ração para obesos">
                     </div>
                 </div>
-
-                <div class="row mt-1">
-                    <input class="form-check-input" type="checkbox" name="brinquedo" id="brinquedo" value="brinquedo">
-                    <label for="brinquedo" class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-form-label">Brinquedos</label>
-                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
-                        <input type="text" class="form-control mt-1" id="brinquedos" placeholder="Ex.: Bola, Corda">
+                <div class="row mt-3">
+                    <div class="col-4">
+                        <label for="brinquedosId" class="col-form-label">Brinquedos</label>
+                    </div>
+                    <div class="col-8">
+                        <input type="text" class="form-control" id="brinquedosId" name="brinquedos" placeholder="Ex.: Bola, Corda">
                     </div>
                 </div>
-
-                <div class="row mt-1">
-                    <input class="form-check-input" type="checkbox" name="acessorio" id="acessorio" value="acessorio">
-                    <label for="acessório" class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-form-label">Acessórios</label>
-                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
-                        <input type="text" class="form-control mt-1" id="acessórios"
-                            placeholder="Ex.: Camas, Coleiras, Guias">
+                <div class="row mt-3">
+                    <div class="col-4">
+                        <label for="acessoriosId" class="col-form-label">Acessórios</label>
+                    </div>
+                    <div class="col-8">
+                        <input type="text" class="form-control" id="acessoriosId" name="acessorios" placeholder="Ex.: Camas, Coleiras, Guias">
                     </div>
                 </div>
-
-                <div class="row mt-2">
-                    <input class="form-check-input" type="checkbox" name="outros" id="outros" value="outros">
-                    <label for="outros" class="col-lg-4 col-md-4 col-sm-4 col-xs-4 col-form-label">Outros</label>
-                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
-                        <textarea class="form-control" id="outros" cols="30" rows="10"
-                            placeholder="Descreva"></textarea>
+                <div class="row mt-3">
+                    <div class="col-4">
+                        <label for="outrosId" class="col-form-label">Outros</label>
+                    </div>
+                    <div class="col-8">
+                        <textarea class="form-control" id="outrosId" name="outros" placeholder="Descreva" cols="30" rows="10"></textarea>
                     </div>
                 </div>
-                <button type="submit" class="btn btn-roxo btnGuardiao mt-2" id="botaoAnuncio">Salvar anúncio</button>
-            </div>
+                <button type="submit" class="btn-roxo mt-2" id="botaoAnuncio">Salvar anúncio</button>
 
         </form>
 
