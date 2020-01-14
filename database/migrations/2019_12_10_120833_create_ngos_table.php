@@ -19,7 +19,7 @@ class CreateNgosTable extends Migration
             $table->string('cnpj', 18);
             $table->string('profile_picture', 300);
             $table->string('site', 300);
-            $table->string('phone_number', 14);
+            $table->string('phone_number', 15);
             $table->string('responsable_name', 300);
             $table->string('address', 300);
             $table->string('number', 14);
@@ -35,7 +35,7 @@ class CreateNgosTable extends Migration
             $table->string('bank_name', 100);
             $table->string('bank_agency', 15);
             $table->string('bank_account', 15);
-            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('user_id')->nullable();
             $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });    

@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 //Guardian´s Routes
@@ -36,11 +36,14 @@ Route::get('/sobre', "SiteController@viewAbout");
 
 //Pet´s Routes
 Route::get('/paginaAnimal', "PetController@viewPets");
-Route::get('/cadastroAnimal', "RegisterPetsController@viewRegisterPets");
+Route::get('/pet/cadastro', "PetController@viewForm"); //precisa colocar o middleware
+Route::post('/pet/cadastro', "PetController@register");
+//Route::post('/pet/cadastro', "PetController@savePicture"); 
 
 //Ad´s Routes
 Route::get('/anuncios',"AdController@viewAds");
-Route::get('/cadastroAnuncio', "RegisterAdsController@viewRegisterAds");
+Route::post('/anuncios',"AdController@create");
+Route::get('/cadastroAnuncio', "AdController@viewRegisterAds");
 
 //Chat´s Routes
 Route::get('/chat', 'ChatController@viewChat');

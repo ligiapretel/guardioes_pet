@@ -18,7 +18,7 @@ class NgoController extends Controller
     }
 
     public function registerNgo(){
-        return view("Ngos.registerNgo");
+        return view("Ngos.registerNgo"); //chama a view para cadastro
     }
     //selecionar dados da ong
     public function getNgo($id = 0){
@@ -62,10 +62,11 @@ class NgoController extends Controller
             $image = time(). '.' . $formato; //ele armazena na variavel image com a data time do cadastro e a extensão da imagem.
             
             if(move_uploaded_file($profile_pictures['tmp_name'], 'img/' . $image)) { //pego apenas o caminho da imagem(tmp_name)
-                $fileDir = 'img/logo-ong/' . $image; //armazeno dentro da variável o caminho da imagem
+                $fileDir = 'img/' . $image; //armazeno dentro da variável o caminho da imagem
             } 
         } 
 
+        //checa se as senhas são iguais, - nao sei se está correto
         $realPass = $_POST['password'];
         $confirmPass = $_POST['re-password'];
 
