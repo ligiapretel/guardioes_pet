@@ -6,7 +6,9 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\User;
 use App\Pet;
+use App\PetPicture;
 use Auth;
+
 
 class PetController extends Controller
 {
@@ -46,6 +48,17 @@ class PetController extends Controller
 
         return view('Pets.registerPet', ["result"=>$result]);
         //se houver result, será mostrada uma mensagem de sucesso (está na view)
-
     }
+
+    // public function savePicture (Request $request) {
+    //     $newPetPicture = new PetPicture;
+    //     $newPetPicture->picture = $request->picture;
+    //     $newPetPicture->pet_id = $request->pet_id;
+    
+    //     if($request->hasFile('picture') && $request->file('picture')->isValid()) {
+    //         $upload = $request->picture->store('pets_pictures');
+    //     }     
+    // }
+
+
 }
