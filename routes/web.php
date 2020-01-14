@@ -59,7 +59,7 @@ Route::get('/login', "LoginController@viewLogin");
 Route::get('/admin/cadastro', "AdminController@createAdmin");
 Route::post('/admin/cadastro', "AdminController@createAdmin");
 Route::get('/admin/atualizar/{id?}', "AdminController@updateAdmin");
-Route::post('/admin/atualizar', "AdminController@updateAdmin"); // SE USAR O MESMO MÉTODO, COMO FICA O {ID?}?
+Route::post('/admin/atualizar', "AdminController@updateAdmin"); // Dúvida: é possível usar o mesmo método em rotas parametrizadas?
 Route::post('/admin/deletar/{id?}',"AdminController@deleteAdmin"); // PRECISA DE {ID?}????
 Route::get('/admin', "AdminController@viewAllAdmin"); // visualização da lista de todos os admin
 // Route::get('/admin/{id?}','AdminController@viewOneAdmin'); VALE A PENA TER UM VISUALIZAÇÃO DE UM ÚNICO ADMIN SENDO QUE SÃO POUCAS INFORMAÇÕES DE CADA UM?
