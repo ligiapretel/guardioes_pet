@@ -1726,3 +1726,10 @@ footer img {
     /*---FIM PERFIL ANIMAL---*/
 
 }
+/*CSS MOSTRAR SENHA - form editar ong*/
+#olho {
+    cursor: pointer;
+    position: absolute;
+    width: 20px;
+}
+
