@@ -38,7 +38,8 @@ Route::get('/sobre', "SiteController@viewAbout");
 Route::get('/paginaAnimal', "PetController@viewPets");
 Route::get('/pet/cadastro', "PetController@viewForm"); //precisa colocar o middleware
 Route::post('/pet/cadastro', "PetController@register");
-//Route::post('/pet/cadastro', "PetController@savePicture"); 
+Route::get('/pet/atualizar/{id?}','PetController@viewFormUpdate');
+Route::post('/pet/atualizar', "PetController@update");
 
 //Ad´s Routes
 Route::get('/anuncios',"AdController@viewAds");
