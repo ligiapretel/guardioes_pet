@@ -17,7 +17,7 @@ Route::get('/', function () {
 
 //Guardian´s Routes
 Route::get('/perfilGuardiao', "GuardianController@viewProfileGuardian");
-Route::get('/cadastroGuardiao', "RegisterGuardianController@viewRegisterGuardian");
+Route::get('/cadastroGuardiao', "GuardianController@viewRegisterGuardian");
 
 //Ngo´s Routes
 Route::get('/perfilOng/{id?}','NgoController@viewProfileNgo');

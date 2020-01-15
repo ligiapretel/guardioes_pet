@@ -6,6 +6,7 @@
 
 @section('content') 
 
+    @if(isset($guardian))
         <form action="" class="card col-lg-8 col-md-12 col-sm-12 col-12 p-5" id="formGuardiao" style="width: 50rem">
             @csrf
             <!-- essa div é para o título -->
@@ -135,15 +136,20 @@
             </div>
         </form>
 
+    @elseif(isset($result))
+
+    @else
+        <h3>Você não passou um id ou o guardião não existe</h3>
+    @endif
 
         {{-- Teste de erro --}}
         <div class="row">
             <div class="col-md-6">
                 @if(isset($result))
                     @if($result)
-                        <h3>Cadastro realizado com sucesso!</h3>
+                        <h3>Atualização realizada com sucesso!</h3>
                     @else
-                        <h3>Não foi possível fazer o cadastro</h3>
+                        <h3>Não foi possível fazer a atualização</h3>
                     @endif
             </div>
         </div>
