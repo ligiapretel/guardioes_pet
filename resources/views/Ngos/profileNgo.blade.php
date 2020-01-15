@@ -11,8 +11,8 @@
  
     <div class="row"> 
         <div id="pfOng_cx_info_principal_ordem" class="col-lg-6 col-md-6 col-sm-12 col-12">
-            <h1 class="pfOngGuard_titulo text-dark font-weight-bolder">{{ $ngo ?? '' ?? ''->social_name }}</h1>
-            <p class="text-dark text-justify">{{ $ngo ?? '' ?? ''->about_the_ngo }}</p>
+            <h1 class="pfOngGuard_titulo text-dark font-weight-bolder">{{ $ngo->social_name ?? '' }}</h1>
+            <p class="text-dark text-justify">{{ $ngo->about_the_ngo ?? '' }}</p>
             <div id="pfG_cx_i_txt" class="d-flex align-items-center">
                 <i class="mdi mdi-email-outline"></i>
                 <p> Envie uma mensagem!</p>
@@ -22,7 +22,7 @@
         </div>
 
         <div class="col-lg-6 col-md-6 col-sm-12 col-12 d-flex justify-content-center">
-            <img id="perfilOng_imagem" src='{{ $ngo ?? '' ?? ''->profile_picture }}'>
+            <img id="perfilOng_imagem" src= "{{ $ngo['profile_picture'] ?? '' }}">
         </div>
     </div>
 </section>

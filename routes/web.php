@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 //Guardian´s Routes
@@ -38,11 +38,13 @@ Route::get('/sobre', "SiteController@viewAbout");
 Route::get('/paginaAnimal', "PetController@viewPets");
 Route::get('/pet/cadastro', "PetController@viewForm"); //precisa colocar o middleware
 Route::post('/pet/cadastro', "PetController@register");
-//Route::post('/pet/cadastro', "PetController@savePicture"); 
+Route::get('/pet/atualizar/{id?}','PetController@viewFormUpdate');
+Route::post('/pet/atualizar', "PetController@update");
 
 //Ad´s Routes
 Route::get('/anuncios',"AdController@viewAds");
-Route::get('/cadastroAnuncio', "RegisterAdsController@viewRegisterAds");
+Route::post('/anuncios',"AdController@create");
+Route::get('/cadastroAnuncio', "AdController@viewRegisterAds");
 
 //Chat´s Routes
 Route::get('/chat', 'ChatController@viewChat');
@@ -61,7 +63,7 @@ Route::get('/login', "LoginController@viewLogin");
 Route::get('/admin/cadastro', "AdminController@createAdmin");
 Route::post('/admin/cadastro', "AdminController@createAdmin");
 Route::get('/admin/atualizar/{id?}', "AdminController@updateAdmin");
-Route::post('/admin/atualizar', "AdminController@updateAdmin"); // SE USAR O MESMO MÉTODO, COMO FICA O {ID?}?
+Route::post('/admin/atualizar', "AdminController@updateAdmin"); // Dúvida: é possível usar o mesmo método em rotas parametrizadas?
 Route::post('/admin/deletar/{id?}',"AdminController@deleteAdmin"); // PRECISA DE {ID?}????
 Route::get('/admin', "AdminController@viewAllAdmin"); // visualização da lista de todos os admin
 // Route::get('/admin/{id?}','AdminController@viewOneAdmin'); VALE A PENA TER UM VISUALIZAÇÃO DE UM ÚNICO ADMIN SENDO QUE SÃO POUCAS INFORMAÇÕES DE CADA UM?
