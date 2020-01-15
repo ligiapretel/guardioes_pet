@@ -5,10 +5,11 @@
 @endsection
 
 @section('content')
+<div class="margem">
     <div class="container">
-        <div class="row justify-content-center">
+        <div class="row justify-content-center mt-10">
             <div class="col-lg-6 m-5">
-
+            
                 <h3 class="mt-10">Atualização de dados Admin</h3>
 
                 @if(isset($user)) 
@@ -19,7 +20,7 @@
 
                     <div class="form-group">
                         <label for="nameAdmin">Nome Completo</label>
-                        <input name="nameAdmin" type="text" class="form-control" id="nameAdmin" value="{{ $admin->name }}"> <!-- o nome completo está em outra tabela, a Administrators. Isso está certo> -->
+                        <input name="nameAdmin" type="text" class="form-control" id="nameAdmin" value="{{ $nameAdmin }}"> 
                     </div>
 
                     <div class="form-group">
@@ -32,29 +33,20 @@
                         <input name="passwordAdmin" type="password" class="form-control" id="passwordAdmin" value="{{ $user->password }}">
                     </div>
 
+                    <div class="form-group">
+                        <label for="statusAdmin">Status</label>
+                        <input name="statusAdmin" type="text" class="form-control" id="statusAdmin" value="{{ $status ?? '' }}"> <!-- CONTINUA NÃO ACEITANDO O STATUS DE ADMINCONTROLLER -->
+                    </div>
+
                     <div class="col-lg p-0">
                        <button type="submit" class="btn btn-roxo">Atualizar</button> 
                     </div>
                     
                 </form>
-                @elseif(isset($result)) <!-- NÃO ENTENDI ESSA PASSAGEM -->
-
-                @else
-                    <h3>O usuário não existe ou id incorreto</h3>
                 @endif
 
             </div>    
-        </div>  
-
-        <div class="row justify-content-center">
-            <div class="col-lg-6">  
-                @if(isset($result))
-                    @if($result)
-                        <h3>Dados atualizados com sucesso.</h3>
-                    @else 
-                        <h3>Não foi possível atualizar os dados.</h3>
-            </div>
-        </div>
+        </div> 
     </div>
-
+</div>
 @endsection

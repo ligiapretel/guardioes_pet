@@ -5,6 +5,7 @@
 @endsection
 
 @section('content')
+<div class="margem">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-6 m-5">
@@ -52,5 +53,5 @@
             </div>
         </div>
     </div>
-
+</div>
 @endsection
