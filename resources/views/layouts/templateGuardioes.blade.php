@@ -60,7 +60,6 @@
                     <li class="nav-item">
                         <a class="nav-link header-link" href="/login">Login</a>
                         <li class="nav-item">
-<<<<<<< HEAD
                     <a href="cadastre-se" class="header-link"><button type="button" class="btn-roxo">Cadastre-se</button></a>
                     @else
                     <li class="nav-item dropdown">
@@ -81,9 +80,6 @@
                                 </div> -->
                             </li>
                         @endguest
-=======
-                    <a href="/cadastre-se" class="header-link"><button type="button" class="btn-roxo">Cadastre-se</button></a>
->>>>>>> 1a0f4007b5c82361e680c65b3feed15c98ed8797
                 </ul>
 
             </div>
