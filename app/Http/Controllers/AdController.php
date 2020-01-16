@@ -8,12 +8,14 @@ use App\Ad;
 
 class AdController extends Controller
 {
-    public function viewAds(Request $request){
-        return view('ads');
+    
+    public function viewAllAds(Request $request){
+        $listAds = Ad::all();
+        return view('Ads.ads',["listAds"=>$listAds]);
     }
 
     public function viewRegisterAds(Request $request){
-        return view('registerAds');
+        return view('Ads.registerAds');
     }
 
     public function create(Request $request){
@@ -35,4 +37,17 @@ class AdController extends Controller
             echo "Lascou, deu ruim";
         }
     }
+
+    public function viewFormUpdate(Request $request, $id=0){
+        // Dentro do () do find estou recuperando o que veio pela rota
+        $ad = Ad::find($id);
+        if($ad){
+            // Passar um array associativo como parâmetro da view: primeiro o nome da associação, que pode ser qualquer nome, e depois a variável aonde armazenei o esse parâmetro.
+            return view('Ads.updateAds',["ad"=>$ad]);
+        }else{
+            return view('Ads.updateAds');
+        }
+    }
+
+    
 }
