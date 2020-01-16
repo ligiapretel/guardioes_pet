@@ -8,14 +8,12 @@ use Illuminate\Http\Request;
 
 class NgoController extends Controller
 {
-    //metodo para retornar para view
+    //método para visualização da ong
     public function viewProfileNgo($ngoId){
-        //AQUI PRECISA DE UMA VALIDAÇÃO SE A ONG ESTÁ LOGADA
         $ngo = Ngos::find($ngoId);
-        
-        //$ngoAll[''] = Ngos::
         return view('Ngos.profileNgo', compact('ngo')); //compact = Cria um array contendo variáveis e seus valores.
     }
+
 
     public function registerNgo(){
         return view("Ngos.registerNgo"); //chama a view para cadastro
@@ -26,6 +24,12 @@ class NgoController extends Controller
         $ngos['ngos'] = Ngos::getNgo($id);
 
         echo ($ngos); // mostra os dados
+    }
+
+    //método para visualização perfil painel ong
+    public function viewMyAccountNgo($ngoId){
+        $ngo = Ngos::find($ngoId);
+        return view("Ngos.accountNgo");
     }
 
     //inicio da função para cadastro da ong via formulário  
@@ -46,7 +50,6 @@ class NgoController extends Controller
             'email' => 'required',
             'password' => 'required',
             'state' => 'required',
-            //'about_the_ngo' => 'required',
             'type_account'=>'required',
             'bank_name' => 'required',
             'bank_agency' => 'required',
@@ -84,7 +87,7 @@ class NgoController extends Controller
         //criando condicional para informar o cadastro
         if ($ngo){
             echo "<script>alert('Cadastro realizado com Sucesso!);</script>";
-            return view('Ngos/profileNgo');
+            return view('login');
         } else {
             echo  "<script>alert('Falha ao realizar o cadastro);</script>";
         }
@@ -93,7 +96,7 @@ class NgoController extends Controller
     //método para buscar os dados da ong
     public function editNgo($id){
         $ngo = Ngos::where('id', $id)->first(); //recebe o id da ong cadastrada o método first busca todos os registros
-        return view('Ngos.editaOng', ["ngo"=>$ngo]);
+        return view('Ngos.editNgo', ["ngo"=>$ngo]);
     }   
 
     //método para fazer a edição dos dados da ong
