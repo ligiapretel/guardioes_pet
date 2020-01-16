@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\DB;
 use App\User; 
 use App\Administrator; 
 use App\Status; 
-use App\Users_group; 
+use App\Users_group;
 
 class AdminController extends Controller
 {
@@ -104,7 +104,7 @@ class AdminController extends Controller
 
     //visualizando a lista de usuários admin
     public function viewAllAdmin(Request $request){
-        $listAdmin = Administrators::all();
+        $listAdmin = Administrator::all();
         return view('Admin.listAdmin', ["listAdmin"=>$listAdmin]); 
     }
 

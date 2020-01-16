@@ -17,7 +17,11 @@ Route::get('/', function () {
 
 //Guardian´s Routes
 Route::get('/perfilGuardiao', "GuardianController@viewProfileGuardian");
-Route::get('/cadastroGuardiao', "GuardianController@viewRegisterGuardian");
+Route::get('/cadastroGuardiao', "GuardianController@createGuardian");
+Route::post('/cadastroGuardiao', "GuardianController@createGuardian");
+Route::get('/guardiao/editar/{id?}', "GuardianController@formUpdate");
+Route::post('/guardiao/editar', "GuardianController@storeUpdate");
+Route::post('/guardiao/deletar', "GuardianController@delete");
 
 //Ngo´s Routes
 Route::get('/perfilOng/{id?}','NgoController@viewProfileNgo');
@@ -67,5 +71,3 @@ Route::post('/admin/atualizar', "AdminController@updateAdmin"); // Dúvida: é p
 Route::post('/admin/deletar/{id?}',"AdminController@deleteAdmin"); // PRECISA DE {ID?}????
 Route::get('/admin', "AdminController@viewAllAdmin"); // visualização da lista de todos os admin
 // Route::get('/admin/{id?}','AdminController@viewOneAdmin'); VALE A PENA TER UM VISUALIZAÇÃO DE UM ÚNICO ADMIN SENDO QUE SÃO POUCAS INFORMAÇÕES DE CADA UM?
-
-/*FAZER A ROTA DE LOGIN CONFORME OS ARQUIVOS QUE O LARAVEL FORNECE */

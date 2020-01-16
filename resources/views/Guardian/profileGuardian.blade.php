@@ -4,7 +4,7 @@
     Guardiões Pet | Perfil do Guardião
 @endsection
 
-@section('content')
+@section('content') 
 
 <section  class="container-fluid" id="pfG_cx_info_principal"> 
         <div class="row">

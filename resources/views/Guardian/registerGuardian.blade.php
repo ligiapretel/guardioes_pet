@@ -6,94 +6,99 @@
 
 @section('content') 
 
-        <form action="" class="card col-lg-8 col-md-12 col-sm-12 col-12 p-5" id="formGuardiao" style="width: 50rem">
+        <form action="/cadastroGuardiao" method="POST" enctype="multipart/form-data" class="card col-lg-8 col-md-12 col-sm-12 col-12 p-5" id="formGuardiao" style="width: 50rem">
             @csrf
+
+            <!-- input hidden com status de Status e user_type de Users_group -->
+            <input hidden type="text" name="statusGuardian"  value="ativo"> 
+            <input hidden type="text" name="user_typeGuardian" value="3">
+
             <!-- essa div é para o título -->
             <div class="form-group d-flex justify-content p-2">
                 <h3 class="tituloGuardiao">Cadastro de Guardião</h3>
             </div>
             <!--aqui começa o formulário -->
             <div class="form-group row">
-                <label for="nomeGuardiao" class="col-sm-4 col-form-label">Nome </label>
+                <label for="name" class="col-sm-4 col-form-label">Nome </label>
                 <div class="col-sm-8">
-                    <input type="text" class="form-control" id="nomeGuardiao" placeholder="Nome completo">
+                    <input name="name" type="text" class="form-control" id="nomeGuardiao" placeholder="Nome completo">
                 </div>
             </div>
             <div class="form-group row">
-                <label for="apelido" class="col-sm-4 col-form-label">Apelido </label>
+                <label for="nickname" class="col-sm-4 col-form-label">Apelido </label>
                 <div class="col-sm-8">
-                    <input type="text" class="form-control" id="apelido"
+                    <input name="nickname" type="text" class="form-control" id="apelido"
                         placeholder="Como nome irá aparecer para outros usuários">
                 </div>
             </div>
             <div class="form-group row">
-                <label for="data" class="col-sm-4 col-form-label">Data de Nascimento </label>
+                <label for="date_of_birth" class="col-sm-4 col-form-label">Data de Nascimento </label>
                 <div class="col-sm-8">
-                    <input type="date" class="form-control" id="data">
+                    <input name="date_of_birth" type="date" class="form-control" id="data">
                 </div>
             </div>
             <div class="form-group row">
-                <label for="emailGuardiao" class="col-sm-4 col-form-label">E-mail</label>
+                <label for="email" class="col-sm-4 col-form-label">E-mail</label>
                 <div class="col-sm-8">
-                    <input type="email" class="form-control" id="emailGuardiao" placeholder="seunome@email.com">
+                    <input name="email" type="email" class="form-control" id="emailGuardiao" placeholder="seunome@email.com">
                 </div>
             </div>
             <div class="form-group row">
-                <label for="telefone" class="col-sm-4 col-form-label">Telefone </label>
+                <label for="phone_number" class="col-sm-4 col-form-label">Telefone </label>
                 <div class="col-sm-8">
-                    <input type="text" class="form-control" id="telefone" placeholder="(xx) xxxxx-xxxx">
+                    <input name="phone_number" type="text" class="form-control" id="telefone" placeholder="(xx) xxxxx-xxxx">
                 </div>
             </div>
             <div class="form-group row">
-                <label for="fotoGuardiao" class="col-sm-4 col-form-label">Foto de Perfil</label>
+                <label for="profile_picture" class="col-sm-4 col-form-label">Foto de Perfil</label>
                 <div class="col-sm-8">
-                    <input type="file" class="form-control-file" id="fotoGuardiao">
+                    <input name="profile_picture" type="file" class="form-control-file" id="fotoGuardiao">
                 </div>
             </div>
             <div class="form-group row">
                 <label for="senhaGuardiao" class="col-sm-4 col-form-label">Defina uma senha</label>
                 <div class="col-sm-8">
-                    <input type="password" class="form-control" id="senhaGuardiao"
+                    <input name="senhaGuardiao" type="password" class="form-control" id="senhaGuardiao"
                         placeholder="Senha mínimo 6 caracteres">
                 </div>
             </div>
             <div class="form-group row">
                 <label for="senhaConfirmGuardiao" class="col-sm-4 col-form-label">Confirme sua senha</label>
                 <div class="col-sm-8">
-                    <input type="password" class="form-control" id="senhaGuardiaoConfirm"
+                    <input name="senhaConfirmGuardiao" type="password" class="form-control" id="senhaGuardiaoConfirm"
                         placeholder="Confirme sua senha">
                 </div>
             </div>
             <div class="form-group row">
-                <label for="enderecoGuardiao" class="col-sm-4 col-form-label">Endereço</label>
+                <label for="adress" class="col-sm-4 col-form-label">Endereço</label>
                 <div class="col-sm-8">
-                    <input type="text" class="form-control" id="enderecoGuardiao" placeholder="Rua/Avenida/Logradouro">
+                    <input name="adress" type="text" class="form-control" id="enderecoGuardiao" placeholder="Rua/Avenida/Logradouro">
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6 p-1">
-                    <label for="numeroGuardiao">Número</label>
-                    <input type="number" class="form-control" id="numeroGuardiao" placeholder="No.">
+                    <label for="number">Número</label>
+                    <input name="number" type="number" class="form-control" id="numeroGuardiao" placeholder="No.">
                 </div>
                 <div class="form-group col-md-6 p-1">
-                    <label for="complementoGuardiao">Complemento</label>
-                    <input type="number" class="form-control" id="complementoGuardiao" placeholder="Ex.: Bloco B">
+                    <label for="complement">Complemento</label>
+                    <input name="complement" type="number" class="form-control" id="complementoGuardiao" placeholder="Ex.: Bloco B">
                 </div>
                 <div class="form-group col-md-6 p-1">
-                    <label for="cepGuardiao">CEP</label>
-                    <input type="number" class="form-control" id="cepGuardiao" placeholder="CEP">
+                    <label for="zip_code">CEP</label>
+                    <input name="zip_code" type="number" class="form-control" id="cepGuardiao" placeholder="CEP">
                 </div>
                 <div class="form-group col-md-6 p-1">
-                    <label for="bairroGuardiao">Bairro</label>
-                    <input type="text" class="form-control" id="bairroGuardiao" placeholder="Bairro">
+                    <label for="neighborhood">Bairro</label>
+                    <input name="neighborhood" type="text" class="form-control" id="bairroGuardiao" placeholder="Bairro">
                 </div>
                 <div class="form-group col-md-6 p-1">
-                    <label for="cidadeGuardiao">Cidade</label>
-                    <input type="text" class="form-control" id="cidadeGuardiao" placeholder="Cidade">
+                    <label for="city">Cidade</label>
+                    <input name="city" type="text" class="form-control" id="cidadeGuardiao" placeholder="Cidade">
                 </div>
                 <div class="form-group col-md-6 p-1">
-                    <label for="estadoGuardiao">Estado</label>
-                    <select class="form-control" id="estadoGuardiao">
+                    <label for="state">Estado</label>
+                    <select name="state" class="form-control" id="estadoGuardiao">
                         <option>Selecione</option>
                         <option>Acre</option>
                         <option>Alagoas</option>
@@ -126,8 +131,8 @@
                 </div>
             </div>
             <div class="form-group row p-3">
-                <label for="textoGuardiao">Fale sobre você</label>
-                <textarea class="form-control" id="textoGuardiao" cols="30" rows="10"
+                <label for="about_the_guardian">Fale sobre você</label>
+                <textarea name="about_the_guardian" class="form-control" id="textoGuardiao" cols="30" rows="10"
                     placeholder="Descreva por que você quer ser um(a) Guardião(ã)"></textarea>
             </div>
             <div>
@@ -135,17 +140,18 @@
             </div>
         </form>
 
-
-        {{-- Teste de erro --}}
-        <div class="row">
-            <div class="col-md-6">
-                @if(isset($result))
-                    @if($result)
-                        <h3>Cadastro realizado com sucesso!</h3>
-                    @else
-                        <h3>Não foi possível fazer o cadastro</h3>
-                    @endif
-            </div>
-        </div>
+{{-- Teste de erro --}}
+<div class="row justify-content-center ml-5">
+    <div class="col-md-12">
+        @if(isset($result))
+            @if($result)
+                <h3>Cadastro realizado com sucesso!</h3>
+            @else
+                <h3>Não foi possível realizar o cadastro.</h3>
+            @endif
+        @endif
+    </div>
+</div>
+        
 
 @endsection
