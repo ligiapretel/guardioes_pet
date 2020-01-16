@@ -66,7 +66,7 @@ class GuardianController extends Controller
             $newGuardian->email = $request->email;
             $newGuardian->phone_number = $request->phone_number;
             $newGuardian->profile_picture = $request->profile_picture;
-            $newGuardian->address = $request->adress;
+            $newGuardian->address = $request->address;
             $newGuardian->number = $request->number;
             $newGuardian->complement = $request->complement;
             $newGuardian->zip_code = $request->zip_code;
@@ -84,10 +84,9 @@ class GuardianController extends Controller
         }
     }
     
-
+    //Essa função está funcionando!!
     public function formUpdate(Request $request, $id=0){
 
-        //if($request->isMethod('GET')){
             $guardian = Guardian::find($id);
 
             if($guardian){
@@ -95,12 +94,9 @@ class GuardianController extends Controller
             } else {
                 return view('Guardian.formUpdateGuardian');
             }
-        //} else {
-            //echo "Não foi possível atualizar";
-        //}
     }
 
-
+    //não precisa o campo email aqui:
     public function storeUpdate(Request $request){
         $guardian = Guardian::find($request->idGuardian);
         $guardian->name = $request->name;
@@ -118,8 +114,15 @@ class GuardianController extends Controller
         $guardian->state = $request->state;
         $guardian->about_the_guardian = $request->about_the_guardian;
 
-
         $result = $guardian->save();
+
+        //selcionando o usuário. Depois que criptografar a senha descomentar.
+        //Como está, está funcionando.
+        $user = User::find($guardian->user_id);
+        $user->email = $request->email;
+        //$user->password = $request->password;
+
+        $user->save();
 
         return view('guardian.formUpdateGuardian', ["result"=>$result]);
 
