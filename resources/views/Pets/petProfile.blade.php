@@ -5,20 +5,108 @@
 @endsection
 
 @section('content')
+
     <section id="perfil-animal">
         <!--H1 que ficara ativado somente no mobile -->
         <!-- <h1 class="text-center">Bernardo</h1> -->
+
+        @if(isset($pet))
+
         <div class="container">
             <div id="perfil-anim-cx-info" class="row justify-content-center">
                 <div id="dados-animal" class="col-11 col-sm-6 col-md-6 col-lg-6 col-xl-5">
-                    <h1>Bernardo</h1>
-                    <p><b>Idade</b>: 3 anos</p>
-                    <p><b>Sexo</b>: macho</p>
-                    <p><b>Porte</b>: grande</p>
-                    <p><b>Temperamento</b>: dócil, brincalhão</p>
-                    <p><b>Sociável com outros animais</b>: não</p>
-                    <p><b>Sociável com crianças</b>: sim</p>
-                    <p><b>Outras informações</b>: tem medo de dormir sozinho, gosta de morder sapatos</p>
+                    <h1>{{$pet->name}}</h1>
+                    <p><b>Idade</b>: {{$pet->age}} anos</p>
+                    <p><b>Sexo</b>: 
+                    @if($pet->sex == "M")
+                        macho
+                    @else 
+                        fêmea
+                    @endif
+                    </p>
+                    <p><b>Porte</b>:                   
+                    @if ($pet->animal_bearing == "pequeno")
+                        pequeno
+                    @elseif ($pet->animal_bearing == "medio")
+                        médio
+                    @else
+                        grande
+                    @endif</p>
+
+                    <p><b>Pelagem</b>: {{$pet->coal_type}} </p>
+                    <p><b>Raça</b>: {{$pet->breed}} </p>
+
+                    <p><b>Castrado</b>: 
+                    @if($pet->castration == "1")
+                    Sim</p>
+                    @else
+                    Não</p>
+                    @endif            
+
+                    <p><b>Vacinado</b>: 
+                    @if($pet->vaccinated == "1")
+                    Sim</p>
+                    @else
+                    Não</p>
+                    @endif                    
+                    </p>
+
+                    <p><b>Vermifugado</b>: 
+                    @if($pet->deworming == "1")
+                    Sim</p>
+                    @else
+                    Não</p>
+                    @endif                    
+                    </p>
+
+                    <p><b>Dócil</b>: 
+                    @if($pet->docile == "1")
+                    Sim</p>
+                    @else
+                    Não</p>
+                    @endif                    
+                    </p>
+
+                    <p><b>Gosta de carinho</b>: 
+                    @if($pet->like_affection == "1")
+                    Sim</p>
+                    @else
+                    Não</p>
+                    @endif                    
+                    </p>
+
+                    <p><b>Gosta de crianças</b>: 
+                    @if($pet->like_children == "1")
+                    Sim</p>
+                    @else
+                    Não</p>
+                    @endif                    
+                    </p>
+
+                    <p><b>Convive bem com outros animais</b>: 
+                    @if($pet->live_well_with_animals == "1")
+                    Sim</p>
+                    @else
+                    Não</p>
+                    @endif                    
+                    </p>
+
+                    <p><b>Gosta de brincar</b>: 
+                    @if($pet->like_to_play == "1")
+                    Sim</p>
+                    @else
+                    Não</p>
+                    @endif                    
+                    </p>
+
+                    <p><b>Faz as necessidades no lugar certo</b>: 
+                    @if($pet->well_behaved == "1")
+                    Sim</p>
+                    @else
+                    Não</p>
+                    @endif                    
+                    </p>
+ 
                     <br>
 
                     <div class="row" id="perfil-anim-icon-msgm-respos">
@@ -43,8 +131,20 @@
                                     <li data-target="#perfil-animal-carrossel" data-slide-to="2" class="rounded-circle">
                                     </li>
                                 </ol>
+
+
                                 <div class="carousel-inner">
+
+
+                                @foreach ($pet_pictures as $picture)
+                                                                                                                
                                     <div class="carousel-item active">
+                                        <img class="d-block w-100 rounded" src="{{asset('storage/pets_pictures/'.$picture->picture)}}">
+                                    </div>
+                                    
+                                @endforeach
+
+                                    <!-- <div class="carousel-item active">
                                         <img class="d-block w-100 rounded" src="/img/perfil_animal_01.jpg"
                                             alt="First slide">
                                     </div>
@@ -55,7 +155,7 @@
                                     <div class="carousel-item">
                                         <img class="d-block w-100 rounded" src="/img/perfil_animal_03.jpg"
                                             alt="Photo by Bogdan Todoran on Unsplash">
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
@@ -99,12 +199,7 @@
             <div class="row justify-content-center">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-11 pt-5 pb-5 text-justify">
                     <h2 class="mb-5">Sobre mim</h2>
-                    <p>Ele foi encontrado em meio a Rodovia Fernão Dias, atropelado e sem conseguir se levantar. No
-                        veterinário, o prognóstico é que ele não andaria mais, mas pra quem quer viver, isso não é nada
-                        né?</p>
-                    <p>Olhem aí, todo lindo e andando normalmente. Por causa da idade, sua adoção é difícil, mas
-                        garantimos que isso é só um número, o Manoel é bem forte e tem muitos anos pela frente. Então,
-                        se você não tem preconceito e tem o coração aberto pra receber muito amor, adota esse lindão!
+                    <p>{{$pet->description}}</p>
                     </p>
                 </div>
             </div>
@@ -154,5 +249,10 @@
             </div>
         </div>
     </section>
+
+    @else
+        <h3>Você tentou acessar uma página que não existe :(</h3>
+    @endif
+
 @endsection
 

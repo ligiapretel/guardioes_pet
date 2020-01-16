@@ -9,14 +9,16 @@ use App\Pet;
 use App\PetPicture;
 use Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
+
 
 
 
 class PetController extends Controller
 {
-    public function viewPets(Request $request) {
-        return view('Pets.pets');
-    }
+    // public function viewPets(Request $request) {
+    //     return view('Pets.pets');
+    // }
 
     public function viewForm (Request $request) {
         return view ('Pets.registerPet');
@@ -44,7 +46,7 @@ class PetController extends Controller
         $newPet->adoption_available = $request->adoption_available;
         $newPet->temporary_home_available = $request->temporary_home_available;
         $newPet->sponsorship_available = $request->sponsorship_available;
-
+        $newPet->id_ngo = '1';
         //$newPet->id_ngo = Auth::user()->id;
 
         $result = $newPet->save();
@@ -60,7 +62,7 @@ class PetController extends Controller
             $extension = $request->picture->extension();
             $fileName = "{$name}.{$extension}";
 
-            $upload = $request->picture->storeAs('pets_pictures', $fileName);
+            $upload = $request->picture->storeAs('public/pets_pictures', $fileName);
             $newPetPicture->picture = $fileName;
             $newPetPicture->save();
         }    
@@ -103,6 +105,9 @@ class PetController extends Controller
         $pet->temporary_home_available = $request->temporary_home_available;
         $pet->sponsorship_available = $request->sponsorship_available;
 
+        // $picture = PetPicture::find()->where('pet_id', '=', $pet->id)->get();
+        // dd($picture); //VER COMO DEIXAR A FOTO QUE JÁ EXISTE NO BANCO
+
         //$pet->id_ngo = Auth::user()->id;
 
         $result = $pet->save();
@@ -111,7 +116,7 @@ class PetController extends Controller
 
             $newPetPicture = new PetPicture;
             $newPetPicture->picture = $request->picture;
-            $newPetPicture->pet_id = $newPet->id;
+            $newPetPicture->pet_id = $newPet->id; //TEM QUE ARRUMAR AQUI NA HORA DE ATUALIZAR
 
             $name = date('HisYmd');
             $extension = $request->picture->extension();
@@ -126,4 +131,31 @@ class PetController extends Controller
         //se houver result, será mostrada uma mensagem de sucesso (está na view)
     }
 
+    public function delete (Request $request, $id=0) {
+        $result = Pet::destroy($id);
+        if($result) {
+            return redirect('/pet/cadastro');
+            //mesma coisa que o header Location
+        }
+    }
+
+    public function viewPetProfile(Request $request, $id=1) {
+        $pet = Pet::find($id);
+
+        $pet_pictures = DB::table('pets_pictures')
+            ->where('pet_id', '=', $pet->id)
+            ->get();
+
+        if($pet) {
+           return view('Pets.petProfile', ['pet'=>$pet, 'pet_pictures'=>$pet_pictures]);
+        }
+    }
+ 
+    public function viewAllPets() {
+        $pets = Pet::all();
+        return view ('Pets.allPets', ['pets'=>$pets]);
+    }
+
+
 }
+

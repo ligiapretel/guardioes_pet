@@ -21,7 +21,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-dark header-menu">
 
-<a class="fonteHeader" href="home">
+<a class="fonteHeader" href="/home">
         <img src="/img/escudo.png" alt="Guardiões Pet" width="35" class="d-inline-block align-center"> Guardiões Pet
     </a>
 
@@ -34,19 +34,19 @@
         <ul class="navbar-nav ml-md-auto mt-2 mt-lg-0 lista-menu">
 
                 <li class="nav-item">
-                    <a class="nav-link header-link" href='home#seja-guardiao-home'>Ser um guardião</a>
+                    <a class="nav-link header-link" href='/home#seja-guardiao-home'>Ser um guardião</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link header-link" href="sobre">Sobre nós</a>
+                    <a class="nav-link header-link" href="/sobre">Sobre nós</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link header-link" href='home#como-funciona-home'>Como funciona</a>
+                    <a class="nav-link header-link" href='/home#como-funciona-home'>Como funciona</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link header-link" href="parceiros">Parceiros</a>
+                    <a class="nav-link header-link" href="/parceiros">Parceiros</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link header-link" href="anuncios">Doações</a>
+                    <a class="nav-link header-link" href="/anuncios">Doações</a>
                 </li>
                 <!-- <li class="nav-item">
                     <a class="nav-link header-link" href="index.php#footer">Contato</a>
@@ -54,9 +54,9 @@
 
                 <!--VERIFICAR A ROTA DE LOGIN-->
                 <li class="nav-item">
-                    <a class="nav-link header-link" href="login.php">Login</a>
+                    <a class="nav-link header-link" href="/login.php">Login</a>
                     <li class="nav-item">
-                <a href="cadastre-se" class="header-link"><button type="button" class="btn-roxo">Cadastre-se</button></a>
+                <a href="/cadastre-se" class="header-link"><button type="button" class="btn-roxo">Cadastre-se</button></a>
             </ul>
 
         </div>
@@ -84,9 +84,9 @@
                                 <a class="nav-link menu-ong active" href="#">Meu Perfil</a>
                                 <a class="nav-link menu-ong" href="#">Animais Cadastrados</a>
                                 <a class="nav-link menu-ong" href="#">Cadastrar Novos Animais</a>
-                                <a class="nav-link menu-ong" href="#">Anúncios Cadastrados</a>
-                                <a class="nav-link menu-ong" href="cadastroAnuncio.php">Cadastrar Novos Anúncios</a>
-                                <a class="nav-link menu-ong" href="#">Mensagens</a>
+                                <a class="nav-link menu-ong" href="/anuncios/meus-anuncios">Anúncios Cadastrados</a>
+                                <a class="nav-link menu-ong" href="/anuncios/cadastro">Cadastrar Novos Anúncios</a>
+                                <a class="nav-link menu-ong" href="/chat">Mensagens</a>
                                 <a class="nav-link menu-ong-sair" href="#">Sair</a>
                             </nav>    
                         </div>
@@ -107,12 +107,12 @@
                     <div class="row">
 
                         <ul class="col-lg-4 col-md-5 col-sm-6 align-content-around list-unstyled">
-                            <li><a class="menu-link" href="home">Home</a></li>
-                            <li><a class="menu-link" href="home#seja-guardiao-home">Ser um guardião</a></li>
-                            <li><a class="menu-link" href="sobre">Sobre nós</a></li>
-                            <li><a class="menu-link" href="home#como-funciona-home">Como funciona?</a></li>
-                            <li><a class="menu-link" href="parceiros">Parceiros</a></li>
-                            <li><a class="menu-link" href="anuncios">Doações</a></li>
+                            <li><a class="menu-link" href="/home">Home</a></li>
+                            <li><a class="menu-link" href="/home#seja-guardiao-home">Ser um guardião</a></li>
+                            <li><a class="menu-link" href="/sobre">Sobre nós</a></li>
+                            <li><a class="menu-link" href="/home#como-funciona-home">Como funciona?</a></li>
+                            <li><a class="menu-link" href="/parceiros">Parceiros</a></li>
+                            <li><a class="menu-link" href="/anuncios">Doações</a></li>
                         </ul>
 
                         <ul class="col-lg-8 col-md-7 col-sm-6 list-unstyled">

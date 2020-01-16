@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\DB;
 use App\User; 
 use App\Administrator; 
 use App\Status; 
-use App\Users_group; 
+use App\Users_group;
 
 class AdminController extends Controller
 {
