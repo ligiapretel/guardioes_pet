@@ -7,6 +7,9 @@
 @section('content')
 
 <main id="main-login" class="col-lg-12 col-md-12 col-sm-12 col-xs-6">
+    @if( isset($message))
+        <script>alert('Cadastro realizado com Sucesso!');</script>
+    @endif
         <div id="container-form-login" class="col-lg-5 col-md-6 col-sm-6 col-xs-6">
             <form action="perfilGuardiao.php" method="POST">
                 <div class="row justify-content-center">

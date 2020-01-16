@@ -24,13 +24,12 @@ Route::post('/guardiao/editar', "GuardianController@storeUpdate");
 Route::post('/guardiao/deletar', "GuardianController@delete");
 
 //Ngo´s Routes
-Route::get('ong/perfilOng/{id?}','NgoController@viewProfileNgo');
-Route::get('ong/cadastroOng', "NgoController@registerNgo");
-Route::post('ong/cadastroOng', "NgoController@doRegisterNgo"); 
-Route::get('ong/editaOng/{id?}',"NgoController@editNgo"); 
-Route::post('ong/editaOng',"NgoController@doEditNgo");
-Route::post('ong/deletaOng',"NgoController@deleteNgo");
-Route::post('ong/visualizarOng',"NgoController@getNgo");
+Route::get('ong/perfil/{id?}','NgoController@viewProfileNgo');
+Route::get('ong/cadastro', "NgoController@registerNgo");
+Route::post('ong/cadastro', "NgoController@doRegisterNgo"); 
+Route::get('ong/editar/{id?}',"NgoController@editNgo"); 
+Route::post('ong/editar',"NgoController@doEditNgo");
+Route::post('ong/deleta/{id?}',"NgoController@deleteNgo");
 
 
 //Site´s Routes

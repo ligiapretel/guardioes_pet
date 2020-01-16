@@ -10,8 +10,11 @@
         {{ csrf_field() }} <!--gera token de segurança - verifica se o usuário é autenticado-->
         
             <!-- essa div é para o título -->
-            <div class="form-group d-flex justify-content p-2">
-                <h3 class="tituloOng">Editar dados</h3>
+            <div class="row d-flex justify-content-center mb-2">
+                <h1 class="tituloOng text-center">Meu Perfil</h1>
+            </div>
+            <div class="row d-flex justify-content-center mb-5">
+                <h3 class="tituloOng text-center">Editar dados</h3>
             </div>
             <!--aqui começa o formulário -->
             <input  class="form-control" type="hidden"name="id" value="{{ isset($ngo['id']) ? $ngo['id'] : '' }}"/> <!--puxa o id da ong-->
