@@ -64,7 +64,7 @@ Route::get('/admin/cadastro', "AdminController@createAdmin");
 Route::post('/admin/cadastro', "AdminController@createAdmin");
 Route::get('/admin/atualizar/{id?}', "AdminController@viewUpdateAdmin");
 Route::post('/admin/atualizar', "AdminController@updateAdmin"); // Dúvida: é possível usar o mesmo método em rotas parametrizadas?
-Route::post('/admin/deletar/{id?}',"AdminController@deleteAdmin"); 
+Route::get('/admin/deletar/{id?}',"AdminController@deleteAdmin"); 
 Route::get('/admin', "AdminController@viewAllAdmin"); 
 
 /*FAZER A ROTA DE LOGIN CONFORME OS ARQUIVOS QUE O LARAVEL FORNECE */
