@@ -27,7 +27,7 @@ class AdController extends Controller
         $newAd->accessories = $request->acessorios;
         $newAd->others = $request->outros;
         // Passando um valor de user_id fixo por enquanto
-        $newAd->user_id = 1;
+        $newAd->user_id = 3;
 
         $result = $newAd->save();
 
@@ -47,6 +47,26 @@ class AdController extends Controller
         }else{
             return view('Ads.updateAds');
         }
+    }
+
+    public function update(Request $request){
+        // No find, o request traz tudo que foi enviado pelo usuário, então seleciono a informação pelo nome do atributo - igual ao que está no form    
+        $ad = Ad::find($request->idAd);
+        $ad->medicine = $request->medicamento;
+        $ad->hygiene_supply = $request->higiene;
+        $ad->food = $request->alimentos;
+        $ad->toys = $request->brinquedos;
+        $ad->accessories = $request->acessorios;
+        $ad->others = $request->outros;
+
+        // O result é um booleano, então coloco como parâmetro da view para que a view exiba a informação de acordo com o booleano.
+        $result = $ad->save();
+
+        return view('Ads.updateAds',["result"=>$result]);
+    }
+
+    public function viewMyAds(Request $request){
+        return view('Ads.myAds');
     }
 
     
