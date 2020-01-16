@@ -23,6 +23,8 @@ class NgoController extends Controller
             ->get();
         }
 
+        //return $pet_pictures;
+
         
         //$ngoAll[''] = Ngos::
         return view('Ngos.profileNgo', compact('ngo'),['pets'=>$pets,'pet_pictures'=>$pet_pictures]); //compact = Cria um array contendo variáveis e seus valores.
@@ -138,9 +140,11 @@ class NgoController extends Controller
         return view('Ngos.profileNgo');
     }
 
-    public function accountViewMyPets(Request $request) {
-
-        return view('Ngos.accountMyPets');
+    public function accountViewMyPets($ngoId) {
+        $ngo = Ngos::find($ngoId);
+        $pets = Pet::where('id_ngo', '=', $ngoId)->get();
+        return view('Ngos.accountMyPets', compact('ngo'),['pets'=>$pets]); 
     }
 
 }
+

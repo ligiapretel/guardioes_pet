@@ -31,6 +31,8 @@ Route::get('ong/editaOng/{id?}',"NgoController@editNgo");
 Route::post('ong/editaOng',"NgoController@doEditNgo");
 Route::post('ong/deletaOng',"NgoController@deleteNgo");
 Route::post('ong/visualizarOng',"NgoController@getNgo");
+Route::get('ong/{id?}/minhaconta/pets',"NgoController@accountViewMyPets");
+
 
 
 //Site´s Routes
