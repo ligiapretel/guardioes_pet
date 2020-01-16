@@ -7,20 +7,22 @@ Guardiões Pet | Anúncios
 @section('content')
 <section id="anuncios">
         <section>
-            <h3 class="tituloGeralAnuncios mb-4 d-flex justify-content-center align-items-center">Nossos Guardiões também precisam da sua ajuda!</h3>
+            <h3 class="tituloGeralAnuncios mb-4 d-flex justify-content-center">Nossos Guardiões também precisam da sua ajuda!</h3>
         </section>
         <section>
             <div class="row p-3 d-flex justify-content-center align-items-center">
-                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 shadow p-3">
+            @foreach($listAds as $ad)
+                <div class="col-6 col-md-4 col-lg-3 shadow p-3">
                     <div class="card" style="border-color:  #FF9640;">
                         <div class="card-body">
-                            <h5 class="card-title text-center col-12">Ração Pedigree Filhotes</h5>
-                            <p class="card-text text-center">5 unidades</p>
+                            <h5 class="card-title text-center col-12">{{$ad->user_id}}</h5>
+                            <p class="card-text text-center">{{$ad->medicine}}</p>
                             <a href="#" class="btn btn-roxo-outline d-flex justify-content-center">Entrar em contato</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 shadow p-3">
+                @endforeach
+                <!-- <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 shadow p-3">
                     <div class="card" style="border-color:  #FF9640;">
                         <div class="card-body">
                             <h5 class="card-title text-center col-12">Vermífugo para cães até 10kg</h5>
@@ -47,8 +49,6 @@ Guardiões Pet | Anúncios
                         </div>
                     </div>
                 </div>
-            <!-- </div>
-            <div class="row p-3 d-flex justify-content-center align-items-center"> -->
                 <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 shadow p-3">
                     <div class="card" style="border-color:  #FF9640;">
                         <div class="card-body">
@@ -84,8 +84,8 @@ Guardiões Pet | Anúncios
                             <a href="#" class="btn btn-roxo-outline d-flex justify-content-center">Entrar em contato</a>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </section>
-    </section>
+</section>
 @endsection
