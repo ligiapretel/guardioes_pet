@@ -8,6 +8,7 @@ use App\User;
 use App\Administrator; 
 use App\Status; 
 use App\Users_group;
+use Illuminate\Support\Facades\Hash;
 
 class AdminController extends Controller
 {
@@ -36,7 +37,7 @@ class AdminController extends Controller
             //criando novo user na tabela Users:
             $newUser = new User();
             $newUser->email = $request->emailAdmin; 
-            $newUser->password = $request->passwordAdmin;
+            $newUser->password = Hash::make($request->passwordAdmin);
             $newUser->user_group_id = $newUser_group->id;
             $newUser->status_id = $newStatus->id;
 

@@ -16,21 +16,21 @@
 
                     <!-- input hidden com status de Status e user_type de Users_group -->
                     <input hidden type="text" name="statusAdmin"  value="ativo"> 
-                    <input hidden type="text" name="user_typeAdmin" value="1"> 
+                    <input hidden type="text" name="user_typeAdmin" value="admin"> 
 
                     <div class="form-group">
                         <label for="nameAdmin">Nome Completo</label>
-                        <input name="nameAdmin" type="text" class="form-control" id="nameAdmin" placeholder="Digite seu nome completo">
+                        <input name="nameAdmin" type="text" class="form-control" id="nameAdmin" placeholder="Digite seu nome completo" required>
                     </div>
 
                     <div class="form-group">
                         <label for="emailAdmin">E-mail</label>
-                        <input name="emailAdmin" type="email" class="form-control" id="emailAdmin" placeholder="Digite seu e-mail">
+                        <input name="emailAdmin" type="email" class="form-control" id="emailAdmin" placeholder="Digite seu e-mail" required>
                     </div>
 
                     <div class="form-group">
                         <label for="passwordAdmin">Senha</label>
-                        <input name="passwordAdmin" type="password" class="form-control" id="passwordAdmin" placeholder="Digite sua senha de 8 dígitos">
+                        <input name="passwordAdmin" type="password" class="form-control" id="passwordAdmin" placeholder="Digite sua senha de 8 dígitos" required>
                     </div>
 
                     <div class="col-lg p-0">
