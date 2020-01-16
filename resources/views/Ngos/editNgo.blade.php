@@ -127,8 +127,8 @@
                 </div>
             <div class="form-group form-row col-12">
                 <label for="texto">Fale sobre a ONG</label>
-                <textarea class="form-control" name="about_the_ngo" cols="30" rows="10"
-                    placeholder="Descreva o trabalho desenvolvido pela ONG" value="{{ isset($ngo['about_the_ngo']) ? $ngo['about_the_ngo'] : '' }}"></textarea>
+                <textarea class="form-control" name="about_the_ngo" cols="30" rows="10">
+                    {{ isset($ngo['about_the_ngo']) ? $ngo['about_the_ngo'] : '' }}</textarea>
             </div>
         </div>
             <div>

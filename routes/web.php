@@ -24,13 +24,13 @@ Route::post('/guardiao/editar', "GuardianController@storeUpdate");
 Route::post('/guardiao/deletar', "GuardianController@delete");
 
 //Ngo´s Routes
-Route::get('/perfilOng/{id?}','NgoController@viewProfileNgo');
-Route::get('/cadastroOng', "NgoController@registerNgo");
-Route::post('/cadastroOng', "NgoController@doRegisterNgo"); 
-Route::get('/editaOng/{id?}',"NgoController@editNgo"); 
-Route::post('/editaOng',"NgoController@doEditNgo");
-Route::post('/deletaOng',"NgoController@deleteNgo");
-Route::post('/visualizarOng',"NgoController@getNgo");
+Route::get('ong/perfilOng/{id?}','NgoController@viewProfileNgo');
+Route::get('ong/cadastroOng', "NgoController@registerNgo");
+Route::post('ong/cadastroOng', "NgoController@doRegisterNgo"); 
+Route::get('ong/editaOng/{id?}',"NgoController@editNgo"); 
+Route::post('ong/editaOng',"NgoController@doEditNgo");
+Route::post('ong/deletaOng',"NgoController@deleteNgo");
+Route::post('ong/visualizarOng',"NgoController@getNgo");
 
 
 //Site´s Routes
@@ -45,12 +45,15 @@ Route::get('/pet/atualizar/{id?}','PetController@viewFormUpdate');
 Route::post('/pet/atualizar', "PetController@update");
 Route::get('/pet/excluir/{id?}','PetController@delete');
 Route::get('/pet/perfil/{id?}', "PetController@viewPetProfile");
-//Route::get('/pets', "PetController@viewAllPets");
+Route::get('/pets', "PetController@viewAllPets");
 
 //Ad´s Routes
-Route::get('/anuncios',"AdController@viewAds");
+Route::get('/anuncios',"AdController@viewAllAds");
 Route::post('/anuncios',"AdController@create");
-Route::get('/cadastroAnuncio', "AdController@viewRegisterAds");
+Route::get('/anuncios/cadastro', "AdController@viewRegisterAds");
+Route::get('/anuncios/editar/{id?}', "AdController@viewFormUpdate");
+Route::post('/anuncios/editar', "AdController@update");
+Route::get('/anuncios/meus-anuncios', "AdController@viewMyAds");
 
 //Chat´s Routes
 Route::get('/chat', 'ChatController@viewChat');

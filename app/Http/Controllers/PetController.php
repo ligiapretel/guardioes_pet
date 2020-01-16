@@ -46,7 +46,7 @@ class PetController extends Controller
         $newPet->adoption_available = $request->adoption_available;
         $newPet->temporary_home_available = $request->temporary_home_available;
         $newPet->sponsorship_available = $request->sponsorship_available;
-
+        $newPet->id_ngo = '1';
         //$newPet->id_ngo = Auth::user()->id;
 
         $result = $newPet->save();
@@ -62,7 +62,7 @@ class PetController extends Controller
             $extension = $request->picture->extension();
             $fileName = "{$name}.{$extension}";
 
-            $upload = $request->picture->storeAs('pets_pictures', $fileName);
+            $upload = $request->picture->storeAs('public/pets_pictures', $fileName);
             $newPetPicture->picture = $fileName;
             $newPetPicture->save();
         }    
@@ -113,7 +113,7 @@ class PetController extends Controller
 
             $newPetPicture = new PetPicture;
             $newPetPicture->picture = $request->picture;
-            $newPetPicture->pet_id = $newPet->id;
+            $newPetPicture->pet_id = $newPet->id; //TEM QUE ARRUMAR AQUI NA HORA DE ATUALIZAR
 
             $name = date('HisYmd');
             $extension = $request->picture->extension();
@@ -147,12 +147,12 @@ class PetController extends Controller
            return view('Pets.petProfile', ['pet'=>$pet, 'pet_pictures'=>$pet_pictures]);
         }
     }
+ 
+    public function viewAllPets() {
+        $pets = Pet::all();
+        return view ('Pets.allPets', ['pets'=>$pets]);
+    }
 
-    // // echo asset('10473820200114.png');
-    // echo public_path('storage/10473820200114.png');
-    // }
-    // $url = Storage::url('10473820200114.png');
-    // echo $url;
-    // }
+
 }
 

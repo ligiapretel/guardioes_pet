@@ -36,8 +36,8 @@ class CreatePetsTable extends Migration
             $table->tinyInteger('temporary_home_available')->nullable();
             $table->tinyInteger('sponsorship_available')->nullable();
             $table->string('status', 2)->default(1);
-            //$table->unsignedBigInteger('id_ngo');
-            //$table->foreign('id_ngo')->references('id')->on('ngos');
+            $table->unsignedBigInteger('id_ngo');
+            $table->foreign('id_ngo')->references('id')->on('ngos');
             $table->timestamps();
         });
     }
