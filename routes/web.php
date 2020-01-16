@@ -37,6 +37,7 @@ Route::get('ong/{id?}/minhaconta/pets',"NgoController@accountViewMyPets");
 
 //Site´s Routes
 Route::get('/home',"SiteController@viewHome");
+Route::post('/home', "Auth\LoginController@login");
 Route::get('/parceiros', "SiteController@viewPartners");
 Route::get('/sobre', "SiteController@viewAbout");
 
@@ -68,7 +69,8 @@ Route::post('/busca', "SearchController@viewSearch");
 Route::get('/cadastre-se', "RegisterController@viewRegister");
 
 //Login´s Route
-Route::get('/login', "LoginController@viewLogin");
+Route::get('/login', "Auth\LoginController@viewLogin");
+Route::post('/login', "Auth\LoginController@login"); //ROTA POST LOGIN. VER PARA ONDE DIRECIONAR (NAT/VITOR)
 
 //Admin´s Routes
 Route::get('/admin/cadastro', "AdminController@createAdmin");

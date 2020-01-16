@@ -42,12 +42,6 @@ class NgoController extends Controller
         echo ($ngos); // mostra os dados
     }
 
-    //método para visualização perfil painel ong
-    public function viewMyAccountNgo($ngoId){
-        $ngo = Ngos::find($ngoId);
-        return view("Ngos.accountNgo");
-    }
-
     //inicio da função para cadastro da ong via formulário  
     public function doRegisterNgo(Request $request){
     //informado campos requeridos no preenchimento do formulário via controller
@@ -72,6 +66,7 @@ class NgoController extends Controller
             'bank_account' => 'required', 
         ]);
         
+        //Salvar imagem da ONG - LOGO
         $profile_pictures = $_FILES['profile_picture']; //capturo o array da imagem
         $fileDir = ''; //criei uma variável para salvar o caminho da imagem
         if(!empty($profile_pictures)){ //se for diferente de vazio 
@@ -83,7 +78,15 @@ class NgoController extends Controller
             if(move_uploaded_file($profile_pictures['tmp_name'], 'img/' . $image)) { //pego apenas o caminho da imagem(tmp_name)
                 $fileDir = 'img/' . $image; //armazeno dentro da variável o caminho da imagem
             } 
-        } 
+        }
+        //fim salvamento foto logo
+        
+        //Criptografar a senha.
+        // Validate the new password length...
+        /* $request->ngos()->fill([
+            'password' => Hash::make($request->newPassword)
+        ])->save();
+     */
 
         //checa se as senhas são iguais, - nao sei se está correto
         $realPass = $_POST['password'];
@@ -99,13 +102,15 @@ class NgoController extends Controller
 
         //criado variável com a classe ngos criada no model para receber os dados do post
         $ngo = Ngos::create( $data );
+        /* $user = User::create( $data ); */
         
         //criando condicional para informar o cadastro
         if ($ngo){
-            echo "<script>alert('Cadastro realizado com Sucesso!);</script>";
-            return view('login');
+            /* echo "<script>alert('Cadastro realizado com Sucesso!);</script>"; */
+            /* return view('login', ['message'=>'Cadastro realizado com sucesso!']); */
+           return redirect('login')->with('success', ['Cadastro Realizado com sucesso!!']);
         } else {
-            echo  "<script>alert('Falha ao realizar o cadastro);</script>";
+            return view('ong/cadastro');
         }
     }    
 

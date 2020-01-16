@@ -7,14 +7,18 @@
 @section('content')
 
 <main id="main-login" class="col-lg-12 col-md-12 col-sm-12 col-xs-6">
+    @if( isset($message))
+        <script>alert('Cadastro realizado com Sucesso!');</script>
+    @endif
         <div id="container-form-login" class="col-lg-5 col-md-6 col-sm-6 col-xs-6">
-            <form action="perfilGuardiao.php" method="POST">
+            <form action="/home" method="POST">
+            {{ csrf_field() }} <!--gera o token de segurança, verifica se o usuário é autenticado-->
                 <div class="row justify-content-center">
                     <div class="col-lg-10 col-md-10 col-sm-10 col-xs-6 text-center">
                         <h1>Acesse sua conta</h1>
                     </div>
                     <div class="col-lg-10 col-md-10 col-sm-10 col-xs-6 p-2 largura-form-xs">
-                        <input class="form-control" type="text" name="login" placeholder="E-mail">
+                        <input class="form-control" type="text" name="email" placeholder="E-mail">
                     </div>
                     <div class="col-lg-10 col-md-10 col-sm-10 col-xs-6 p-2 largura-form-xs">
                         <input class="form-control" type="password" name="senha" placeholder="Senha">
