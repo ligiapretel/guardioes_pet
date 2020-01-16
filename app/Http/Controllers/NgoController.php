@@ -6,6 +6,7 @@ use App\Ngos;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Pet;
+use App\PetPicture;
 
 class NgoController extends Controller
 {
@@ -16,9 +17,16 @@ class NgoController extends Controller
 
         //PARA PUXAR APENAS OS PETS DA ONG
         $pets = Pet::where('id_ngo', '=', $ngoId)->get();
+
+        foreach ($pets as $pet) {
+            $pet_pictures = PetPicture::
+            where('pet_id', '=', $pet->id)
+            ->get();
+        }
+
         
         //$ngoAll[''] = Ngos::
-        return view('Ngos.profileNgo', compact('ngo'),['pets'=>$pets]); //compact = Cria um array contendo variáveis e seus valores.
+        return view('Ngos.profileNgo', compact('ngo'),['pets'=>$pets,'pet_pictures'=>$pet_pictures]); //compact = Cria um array contendo variáveis e seus valores.
     }
 
     public function registerNgo(){
@@ -125,5 +133,9 @@ class NgoController extends Controller
         return view('Ngos.profileNgo');
     }
 
+    public function accountViewMyPets(Request $request) {
+
+        return view('Ngos.accountMyPets');
+    }
 
 }

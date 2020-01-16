@@ -31,7 +31,8 @@ Route::get('/editaOng/{id?}',"NgoController@editNgo");
 Route::post('/editaOng',"NgoController@doEditNgo");
 Route::post('/deletaOng',"NgoController@deleteNgo");
 Route::post('/visualizarOng',"NgoController@getNgo");
-
+Route::get('/editaOng/{id?}',"NgoController@editNgo"); 
+Route::get('/minhaconta/{id?}/pets',"NgoController@accountViewMyPets"); 
 
 //Site´s Routes
 Route::get('/home',"SiteController@viewHome");
