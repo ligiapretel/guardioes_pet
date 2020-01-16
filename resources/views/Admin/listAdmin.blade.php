@@ -23,9 +23,9 @@
                 <tbody>
                 @forelse ($listAdmin as $admin)
                     <tr>
-                        <th scope="row"> {{$admin->user_id}} </th>
+                        <th scope="row"> {{$admin->id}} </th>
                         <td> {{$admin->name}} </td>
-                        <td> {{ $emails }} </td>
+                        <td> {{ $admin->email }} </td>
                         <td>
                             <a class="btn btn-primary" href="/admin/atualizar/{{$admin->id}}">Atualizar</a>
                             <a class="btn btn-danger" href="/admin/deletar/{{$admin->id}}">Deletar</a>

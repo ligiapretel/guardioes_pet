@@ -31,6 +31,8 @@ Route::get('ong/editaOng/{id?}',"NgoController@editNgo");
 Route::post('ong/editaOng',"NgoController@doEditNgo");
 Route::post('ong/deletaOng',"NgoController@deleteNgo");
 Route::post('ong/visualizarOng',"NgoController@getNgo");
+Route::get('ong/{id?}/minhaconta/pets',"NgoController@accountViewMyPets");
+
 
 
 //Site´s Routes
@@ -73,10 +75,14 @@ Route::get('/admin/cadastro', "AdminController@createAdmin");
 Route::post('/admin/cadastro', "AdminController@createAdmin");
 Route::get('/admin/atualizar/{id?}', "AdminController@viewUpdateAdmin");
 Route::post('/admin/atualizar', "AdminController@updateAdmin"); // Dúvida: é possível usar o mesmo método em rotas parametrizadas?
+<<<<<<< HEAD
+Route::get('/admin/deletar/{id?}',"AdminController@deleteAdmin"); 
+=======
 Route::post('/admin/deletar/{id?}',"AdminController@deleteAdmin"); // PRECISA DE {ID?}????
 Route::get('/admin', "AdminController@viewAllAdmin"); // visualização da lista de todos os admin
 // Route::get('/admin/{id?}','AdminController@viewOneAdmin'); VALE A PENA TER UM VISUALIZAÇÃO DE UM ÚNICO ADMIN SENDO QUE SÃO POUCAS INFORMAÇÕES DE CADA UM?
 Route::post('/admin/deletar/{id?}',"AdminController@deleteAdmin"); 
+>>>>>>> 62342110ff1899eab1db2f23f4a7664572a0214f
 Route::get('/admin', "AdminController@viewAllAdmin"); 
 
 /*FAZER A ROTA DE LOGIN CONFORME OS ARQUIVOS QUE O LARAVEL FORNECE */

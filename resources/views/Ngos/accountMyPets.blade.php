@@ -12,23 +12,18 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col">id</th>
                         <th scope="col">Nome do pet</th>
-                        <th scope="col">Ver página</th>
                         <th scope="col">Ações</th>
                     </tr>
                 </thead>
                  <tbody>
-                    @forelse($pets as $pet)
+                    @forelse($pets ?? '' as $pet)
                         <tr>
-                            <th scope="row">{{$pet->id}}</th>
-                                <td>{{$pet->name}}</td>
-                                <td>{{$product->description}}</td>
-                                <td>{{$product->quantity}}</td>
+                                <td><a href="/pet/perfil/{{$pet->id}}">{{$pet->name}}</a></td>
 
                                 <td>
-                                    <a class="btn btn-primary" href="pet/atualizar/{{$pet->id}}">Atualizar</a>
-                                    <a class="btn btn-danger"  href="/produtos/deletar/{{$product->id}}">Deletar</a>
+                                    <a class="btn btn-primary" href="/pet/atualizar/{{$pet->id}}">Atualizar</a>
+                                    <a class="btn btn-danger"  href="/pet/excluir/{{$pet->id}}">Deletar</a>
                                 </td>
                             </th>
                         </tr>

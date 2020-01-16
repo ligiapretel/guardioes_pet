@@ -105,6 +105,9 @@ class PetController extends Controller
         $pet->temporary_home_available = $request->temporary_home_available;
         $pet->sponsorship_available = $request->sponsorship_available;
 
+        // $picture = PetPicture::find()->where('pet_id', '=', $pet->id)->get();
+        // dd($picture); //VER COMO DEIXAR A FOTO QUE JÁ EXISTE NO BANCO
+
         //$pet->id_ngo = Auth::user()->id;
 
         $result = $pet->save();
