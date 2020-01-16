@@ -9,14 +9,16 @@ use App\Pet;
 use App\PetPicture;
 use Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
+
 
 
 
 class PetController extends Controller
 {
-    public function viewPets(Request $request) {
-        return view('Pets.pets');
-    }
+    // public function viewPets(Request $request) {
+    //     return view('Pets.pets');
+    // }
 
     public function viewForm (Request $request) {
         return view ('Pets.registerPet');
@@ -126,4 +128,31 @@ class PetController extends Controller
         //se houver result, será mostrada uma mensagem de sucesso (está na view)
     }
 
+    public function delete (Request $request, $id=0) {
+        $result = Pet::destroy($id);
+        if($result) {
+            return redirect('/pet/cadastro');
+            //mesma coisa que o header Location
+        }
+    }
+
+    public function viewPetProfile(Request $request, $id=1) {
+        $pet = Pet::find($id);
+
+        $pet_pictures = DB::table('pets_pictures')
+            ->where('pet_id', '=', $pet->id)
+            ->get();
+
+        if($pet) {
+           return view('Pets.petProfile', ['pet'=>$pet, 'pet_pictures'=>$pet_pictures]);
+        }
+    }
+
+    // // echo asset('10473820200114.png');
+    // echo public_path('storage/10473820200114.png');
+    // }
+    // $url = Storage::url('10473820200114.png');
+    // echo $url;
+    // }
 }
+

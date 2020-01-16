@@ -189,7 +189,7 @@
                         placeholder="Fale mais sobre o animal: qual a sua história, suas características físicas e comportamentais, o tipo de lar que mais se adequaria, do que ele(a) gosta, etc.">{{ $pet->description }}</textarea>
                 </div>
                 <div class="botaoLimparECadastro">
-                    <button type="reset" class="btn-roxo botaoAnimal">Limpar dados</button>
+                    <a class="btn-roxo bg-danger botaoAnimal" href="/pet/excluir/{{$pet->id}}">Excluir cadastro</a>
                     <button type="submit" class="btn-roxo botaoAnimal">Atualizar informações</button>
                 </div>
         </form>

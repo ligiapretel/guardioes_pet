@@ -35,11 +35,13 @@ Route::get('/parceiros', "SiteController@viewPartners");
 Route::get('/sobre', "SiteController@viewAbout");
 
 //Pet´s Routes
-Route::get('/paginaAnimal', "PetController@viewPets");
 Route::get('/pet/cadastro', "PetController@viewForm"); //precisa colocar o middleware
 Route::post('/pet/cadastro', "PetController@register");
 Route::get('/pet/atualizar/{id?}','PetController@viewFormUpdate');
 Route::post('/pet/atualizar', "PetController@update");
+Route::get('/pet/excluir/{id?}','PetController@delete');
+Route::get('/pet/perfil/{id?}', "PetController@viewPetProfile");
+//Route::get('/pets', "PetController@viewAllPets");
 
 //Ad´s Routes
 Route::get('/anuncios',"AdController@viewAds");
