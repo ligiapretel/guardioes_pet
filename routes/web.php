@@ -17,7 +17,11 @@ Route::get('/', function () {
 
 //Guardian´s Routes
 Route::get('/perfilGuardiao', "GuardianController@viewProfileGuardian");
-Route::get('/cadastroGuardiao', "RegisterGuardianController@viewRegisterGuardian");
+Route::get('/cadastroGuardiao', "GuardianController@createGuardian");
+Route::post('/cadastroGuardiao', "GuardianController@createGuardian");
+Route::get('/guardiao/editar/{id?}', "GuardianController@formUpdate");
+Route::post('/guardiao/editar', "GuardianController@storeUpdate");
+Route::post('/guardiao/deletar', "GuardianController@delete");
 
 //Ngo´s Routes
 Route::get('/perfilOng/{id?}','NgoController@viewProfileNgo');
@@ -44,9 +48,12 @@ Route::get('/pet/perfil/{id?}', "PetController@viewPetProfile");
 Route::get('/pets', "PetController@viewAllPets");
 
 //Ad´s Routes
-Route::get('/anuncios',"AdController@viewAds");
+Route::get('/anuncios',"AdController@viewAllAds");
 Route::post('/anuncios',"AdController@create");
-Route::get('/cadastroAnuncio', "AdController@viewRegisterAds");
+Route::get('/anuncios/cadastro', "AdController@viewRegisterAds");
+Route::get('/anuncios/editar/{id?}', "AdController@viewFormUpdate");
+Route::post('/anuncios/editar', "AdController@update");
+Route::get('/anuncios/meus-anuncios', "AdController@viewMyAds");
 
 //Chat´s Routes
 Route::get('/chat', 'ChatController@viewChat');
@@ -66,6 +73,9 @@ Route::get('/admin/cadastro', "AdminController@createAdmin");
 Route::post('/admin/cadastro', "AdminController@createAdmin");
 Route::get('/admin/atualizar/{id?}', "AdminController@viewUpdateAdmin");
 Route::post('/admin/atualizar', "AdminController@updateAdmin"); // Dúvida: é possível usar o mesmo método em rotas parametrizadas?
+Route::post('/admin/deletar/{id?}',"AdminController@deleteAdmin"); // PRECISA DE {ID?}????
+Route::get('/admin', "AdminController@viewAllAdmin"); // visualização da lista de todos os admin
+// Route::get('/admin/{id?}','AdminController@viewOneAdmin'); VALE A PENA TER UM VISUALIZAÇÃO DE UM ÚNICO ADMIN SENDO QUE SÃO POUCAS INFORMAÇÕES DE CADA UM?
 Route::post('/admin/deletar/{id?}',"AdminController@deleteAdmin"); 
 Route::get('/admin', "AdminController@viewAllAdmin"); 
 

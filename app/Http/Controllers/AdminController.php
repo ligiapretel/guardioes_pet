@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\DB;
 use App\User; 
 use App\Administrator; 
 use App\Status; 
-use App\Users_group; 
+use App\Users_group;
 
 class AdminController extends Controller
 {
@@ -113,6 +113,10 @@ class AdminController extends Controller
 
     //visualizando a lista de usuários admin PROBLEMA PARA PEGAR EMAIL, COMO PEGAR SÓ ELE NO ARRAY?
     public function viewAllAdmin(Request $request){
+<<<<<<< HEAD
+        $listAdmin = Administrator::all();
+        return view('Admin.listAdmin', ["listAdmin"=>$listAdmin]); 
+=======
         //pegando user_id e name
         $listAdmin = Administrator::all();  
 
@@ -120,6 +124,7 @@ class AdminController extends Controller
         $emails = User::leftJoin('administrators', 'administrators.user_id', '=', 'users.id')->select('users.*')->get();
 
         return view('Admin.listAdmin', ["listAdmin"=>$listAdmin], ["emails"=>$emails]); 
+>>>>>>> 22df009d1d1a6438438f823a17dc1a9188992611
     }
 
 
