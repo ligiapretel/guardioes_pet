@@ -62,7 +62,7 @@ class PetController extends Controller
             $extension = $request->picture->extension();
             $fileName = "{$name}.{$extension}";
 
-            $upload = $request->picture->storeAs('pets_pictures', $fileName);
+            $upload = $request->picture->storeAs('public/pets_pictures', $fileName);
             $newPetPicture->picture = $fileName;
             $newPetPicture->save();
         }    
@@ -104,6 +104,9 @@ class PetController extends Controller
         $pet->adoption_available = $request->adoption_available;
         $pet->temporary_home_available = $request->temporary_home_available;
         $pet->sponsorship_available = $request->sponsorship_available;
+
+        // $picture = PetPicture::find()->where('pet_id', '=', $pet->id)->get();
+        // dd($picture); //VER COMO DEIXAR A FOTO QUE JÁ EXISTE NO BANCO
 
         //$pet->id_ngo = Auth::user()->id;
 

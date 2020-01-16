@@ -46,6 +46,7 @@
                 @if(isset($result))
                     @if($result)
                         <h3>Cadastro realizado com sucesso!</h3>
+                        <a href="/login">Login</a>
                     @else
                         <h3>Não foi possível realizar o cadastro.</h3>
                     @endif
