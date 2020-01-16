@@ -4,6 +4,9 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use App\User;
+use Illuminate\Http\Request;
+use Auth;
 
 class LoginController extends Controller
 {
@@ -37,16 +40,58 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
-    //VICTOR: O AUTHENTICATESUSERS JÁ VALIDA/AUTENTICA E TB RETORNA VIEW (VERIFICAR OS NOMES)
-    //NATI FAZER AS FUNÇÕES ACESSO BANCO, VIEW E AUTENTICAÇÕES (COM SENHA CRIPTOGRAFADA)
+    //inicio luana 
+    //vizualização da pagina login
+    public function viewLogin(){
+        return view('/login');
+    }
     
-    // public function dbAcess(Request $request){
-    //     $login = Users::where('email', $email)->get();
+    public function login(Request $request){
+        $login = User::where('email', $request->email)->get(); //value('email');
+        // dd($login);
+        // exit;
+        //$password = password_verify($request->password, $login->password);
+        //senha deu certo manda x, deu errado login
+        //Auth::login($login, true);
+        if($login){
+        return view('/home', ["login"=>$login]);
+        } else {
+            echo "Não deu";
+        }
+        // if($login){
+        //     return $login;
+        // }
+    }
+
+    // public function authLogin(){
+    //     $login = $this->login($request);
+    //     Auth::login($login, true);
     //     return view('/home');
     // }
 
-    // public function viewLogin(){
-    //     return view('/login');
-    // }
+    public function username(){
+        return 'email';
+    }
+
+
+    // private function loginUser(){
+    //     //session_start();
+    //     $email = $_POST['email'];
+    //     //acessa tabela usuario
+    //     $user = new Login();
+    //     $resultado = $user->loginUser($email);
+
+    //     // $senha = password_verify($_POST['senha'], $resultado[0]['senha']);
+      
+    //     // if($senha){
+    //     //     $_SESSION['fake']['user'] = $resultado;
+    //     //     header('Location:/fake-instagram-POO/posts');
+
+    //     // } else {
+    //     //     $_SESSION['loginError'] = "NÃO LOGADO";
+    //     //     header('Location:login');
+    //     // }
+
+    // public function 
 
 }
