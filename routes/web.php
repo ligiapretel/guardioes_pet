@@ -41,9 +41,12 @@ Route::post('/pet/cadastro', "PetController@register");
 //Route::post('/pet/cadastro', "PetController@savePicture"); 
 
 //Ad´s Routes
-Route::get('/anuncios',"AdController@viewAds");
+Route::get('/anuncios',"AdController@viewAllAds");
 Route::post('/anuncios',"AdController@create");
-Route::get('/cadastroAnuncio', "AdController@viewRegisterAds");
+Route::get('/anuncios/cadastro', "AdController@viewRegisterAds");
+Route::get('/anuncios/editar/{id?}', "AdController@viewFormUpdate");
+Route::post('/anuncios/editar', "AdController@update");
+Route::get('/anuncios/meus-anuncios', "AdController@viewMyAds");
 
 //Chat´s Routes
 Route::get('/chat', 'ChatController@viewChat');
