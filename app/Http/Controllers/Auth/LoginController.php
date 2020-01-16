@@ -36,4 +36,17 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+
+    //VICTOR: O AUTHENTICATESUSERS JÁ VALIDA/AUTENTICA E TB RETORNA VIEW (VERIFICAR OS NOMES)
+    //NATI FAZER AS FUNÇÕES ACESSO BANCO, VIEW E AUTENTICAÇÕES (COM SENHA CRIPTOGRAFADA)
+    
+    // public function dbAcess(Request $request){
+    //     $login = Users::where('email', $email)->get();
+    //     return view('/home');
+    // }
+
+    // public function viewLogin(){
+    //     return view('/login');
+    // }
+
 }

@@ -56,6 +56,7 @@ Route::get('/cadastre-se', "RegisterController@viewRegister");
 
 //Login´s Route
 Route::get('/login', "LoginController@viewLogin");
+//Route::post('/login', "LoginController@login"); ROTA POST LOGIN. VER PARA ONDE DIRECIONAR (NAT/VITOR)
 
 //Admin´s Routes
 Route::get('/admin/cadastro', "AdminController@createAdmin");
