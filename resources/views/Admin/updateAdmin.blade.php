@@ -9,10 +9,9 @@
     <div class="container">
         <div class="row justify-content-center mt-10">
             <div class="col-lg-6 m-5">
-            
-                <h3 class="mt-10">Atualização de dados Admin</h3>
 
                 @if(isset($user)) 
+                <h3 class="mt-10">Atualização de dados Admin</h3>
                 <form action="/admin/atualizar" method="POST" class="card p-4">
                 @csrf      
                     <!-- input hidden com o id do admin em Users -->
@@ -35,7 +34,7 @@
 
                     <div class="form-group">
                         <label for="statusAdmin">Status</label>
-                        <input name="statusAdmin" type="text" class="form-control" id="statusAdmin" value="{{ $status ?? '' }}"> <!-- CONTINUA NÃO ACEITANDO O STATUS DE ADMINCONTROLLER -->
+                        <input name="statusAdmin" type="text" class="form-control" id="statusAdmin" value="{{ $status }}"> 
                     </div>
 
                     <div class="col-lg p-0">
@@ -43,7 +42,28 @@
                     </div>
                     
                 </form>
+                @elseif(isset($result))
+
+                @else
+                    <h3>O usuário não existe ou id incorreto.</h3>
                 @endif
+
+                <div class="row">
+                    <div class="col-md-12">
+                        @if(isset($result)) <!-- se existe -->
+                            @if($result) <!-- se é verdadeiro ou falso -->
+                                <h3>Atualização realizada com sucesso!</h3>
+                                <a href="/home">Voltar</a>
+                            @else
+                                <h3>Não deu certo!</h3>
+                                <a href="/atualizar/{id?}"></a>
+                            @endif
+                        @endif
+
+                    </div>
+                </div>
+
+
 
             </div>    
         </div> 

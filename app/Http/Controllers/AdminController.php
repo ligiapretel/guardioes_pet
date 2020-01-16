@@ -12,7 +12,7 @@ use App\Users_group;
 class AdminController extends Controller
 {
 
-    //criando usuário admin em um único método separado em get e post:
+    //criando usuário admin:
     public function createAdmin(Request $request){
 
         if($request->isMethod('GET')){
@@ -55,8 +55,7 @@ class AdminController extends Controller
     }
 
 
-    //A PARTIR DAQUI NÃO ESTÁ FINALIZADO AINDA. 14/1
-
+    //view do formulário de update: OKKK
     public function viewUpdateAdmin(Request $request, $id=0){
         
         //encontrando o id em Users:
@@ -68,16 +67,16 @@ class AdminController extends Controller
         //encontranto o status em Status: 
         $status = Status::leftJoin('users', 'users.status_id', '=', 'status.id')->select('status.*')->value('status');
         
-        //enviando os objetos para a view: PROBLEMA!!! ELE NÃO ACEITA 3 OBJETOS!!!!
+        //enviando os objetos para a view: 
         if($user){
-            return view('Admin.updateAdmin', ["user"=>$user], ["nameAdmin"=>$nameAdmin], ["status"=>$status]);
+            return view('Admin.updateAdmin', ["user"=>$user, "nameAdmin"=>$nameAdmin, "status"=>$status]);
         } else {
             return view('Admin.updateAdmin');
         }
         //TENTAR COLOCAR DESSE MODO DEPOIS DE FINALIZADO if($request->isMethod('GET')){ 
 }
 
-    //editando usuário admin. Tentando fazer com um único método.
+    //editando usuário admin: OKKK
     public function updateAdmin(Request $request){
 
         //alterando email e senha na tabela Users:
@@ -87,14 +86,14 @@ class AdminController extends Controller
         
         $result = $user->save();
         
-        //alterando nome na tabela Administrators: PROBLEMAS!
-        $admin = Administrator::find($request->nameAdmin);
+        //alterando nome na tabela Administrators: 
+        $admin = Administrator::where('user_id', $user->id)->first();
         $admin->name = $request->nameAdmin;
 
         $result = $admin->save();
-        
+
         //alterando status na tabela Status: PROBLEMAS!
-        $status = Status::find($request->statusAdmin);
+        $status = Status::where('id', $user->status_id)->first();
         $status->status = $request->statusAdmin;
 
         $result = $status->save();
@@ -103,7 +102,7 @@ class AdminController extends Controller
         return view('Admin.updateAdmin', ["result"=>$result]);
     }
 
-    //deletando usuário admin: PROBLEMA!!!
+    //deletando usuário: PROBLEMA!!!
     public function deleteAdmin(Request $request, $id=0){
         $result = User::destroy($id);
         if($result){
@@ -111,15 +110,12 @@ class AdminController extends Controller
         }
     } 
 
-    //visualizando a lista de usuários admin PROBLEMA PARA PEGAR EMAIL, COMO PEGAR SÓ ELE NO ARRAY?
-    public function viewAllAdmin(Request $request){
-        //pegando user_id e name
-        $listAdmin = Administrator::all();  
+    //visualizando a lista de usuários admin 
+    public function viewAllAdmin(Request $request){ 
 
-        //pegando email 
-        $emails = User::leftJoin('administrators', 'administrators.user_id', '=', 'users.id')->select('users.*')->get();
+        $listAdmin = User::leftJoin('administrators', 'administrators.user_id', '=', 'users.id')->select('users.email', 'users.id', 'administrators.name')->get();
 
-        return view('Admin.listAdmin', ["listAdmin"=>$listAdmin], ["emails"=>$emails]); 
+        return view('Admin.listAdmin', ["listAdmin"=>$listAdmin]); 
     }
 
 

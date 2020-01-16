@@ -23,7 +23,7 @@
             </div>
             <div class="row justify-content-center">
                 <div class="botaoCadOng col-10 text-center">
-                <a href="cadastroOng"><button class="btn-roxo btn-busca-expandida" type="submit" name="cadastre-se-ong">Cadastro ONG</button></a>
+                <a href="ong/cadastro"><button class="btn-roxo btn-busca-expandida" type="submit" name="cadastre-se-ong">Cadastro ONG</button></a>
                 </div>
             </div>
             <div class="row justify-content-center">

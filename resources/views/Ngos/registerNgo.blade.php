@@ -6,7 +6,7 @@
 
 @section('content') 
         
-        <form action="{{ ('cadastroOng') }}" method="POST" class="card col-lg-8 col-md-12 col-sm-12 col-12 p-5" id="formOng" enctype='multipart/form-data'>
+        <form action="{{ ('cadastro') }}" method="POST" class="card col-lg-8 col-md-12 col-sm-12 col-12 p-5" id="formOng" enctype='multipart/form-data'>
         {{ csrf_field() }} <!--gera token de segurança - verifica se o usuário é autenticado-->
             <!-- essa div é para o título -->
             <div class="form-group d-flex justify-content p-2">
@@ -136,7 +136,6 @@
                     </ul>
                 </div>
             @endif
-        <script type='text/javascript' src='https://code.jquery.com/jquery-3.4.1.min.js'></script>
         <script src="/js/completaCep.js" type="text/javascript"></script>
         <script src="/js/mascaraTel.js" type="text/javascript"></script>
 @endsection

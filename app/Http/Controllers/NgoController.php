@@ -5,17 +5,31 @@ namespace App\Http\Controllers;
 use App\Ngos;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Pet;
+use App\PetPicture;
 
 class NgoController extends Controller
 {
-    //metodo para retornar para view
+    //método para visualização da ong
     public function viewProfileNgo($ngoId){
-        //AQUI PRECISA DE UMA VALIDAÇÃO SE A ONG ESTÁ LOGADA
         $ngo = Ngos::find($ngoId);
+
+        //PARA PUXAR APENAS OS PETS DA ONG
+        $pets = Pet::where('id_ngo', '=', $ngoId)->get();
+
+        foreach ($pets as $pet) {
+            $pet_pictures = PetPicture::
+            where('pet_id', '=', $pet->id)
+            ->get();
+        }
+
+        //return $pet_pictures;
+
         
         //$ngoAll[''] = Ngos::
-        return view('Ngos.profileNgo', compact('ngo')); //compact = Cria um array contendo variáveis e seus valores.
+        return view('Ngos.profileNgo', compact('ngo'),['pets'=>$pets,'pet_pictures'=>$pet_pictures]); //compact = Cria um array contendo variáveis e seus valores.
     }
+
 
     public function registerNgo(){
         return view("Ngos.registerNgo"); //chama a view para cadastro
@@ -46,13 +60,13 @@ class NgoController extends Controller
             'email' => 'required',
             'password' => 'required',
             'state' => 'required',
-            //'about_the_ngo' => 'required',
             'type_account'=>'required',
             'bank_name' => 'required',
             'bank_agency' => 'required',
             'bank_account' => 'required', 
         ]);
         
+        //Salvar imagem da ONG - LOGO
         $profile_pictures = $_FILES['profile_picture']; //capturo o array da imagem
         $fileDir = ''; //criei uma variável para salvar o caminho da imagem
         if(!empty($profile_pictures)){ //se for diferente de vazio 
@@ -64,7 +78,15 @@ class NgoController extends Controller
             if(move_uploaded_file($profile_pictures['tmp_name'], 'img/' . $image)) { //pego apenas o caminho da imagem(tmp_name)
                 $fileDir = 'img/' . $image; //armazeno dentro da variável o caminho da imagem
             } 
-        } 
+        }
+        //fim salvamento foto logo
+        
+        //Criptografar a senha.
+        // Validate the new password length...
+        /* $request->ngos()->fill([
+            'password' => Hash::make($request->newPassword)
+        ])->save();
+     */
 
         //checa se as senhas são iguais, - nao sei se está correto
         $realPass = $_POST['password'];
@@ -80,20 +102,22 @@ class NgoController extends Controller
 
         //criado variável com a classe ngos criada no model para receber os dados do post
         $ngo = Ngos::create( $data );
+        /* $user = User::create( $data ); */
         
         //criando condicional para informar o cadastro
         if ($ngo){
-            echo "<script>alert('Cadastro realizado com Sucesso!);</script>";
-            return view('Ngos/profileNgo');
+            /* echo "<script>alert('Cadastro realizado com Sucesso!);</script>"; */
+            /* return view('login', ['message'=>'Cadastro realizado com sucesso!']); */
+           return redirect('login')->with('success', ['Cadastro Realizado com sucesso!!']);
         } else {
-            echo  "<script>alert('Falha ao realizar o cadastro);</script>";
+            return view('ong/cadastro');
         }
     }    
 
     //método para buscar os dados da ong
     public function editNgo($id){
         $ngo = Ngos::where('id', $id)->first(); //recebe o id da ong cadastrada o método first busca todos os registros
-        return view('Ngos.editaOng', ["ngo"=>$ngo]);
+        return view('Ngos.editNgo', ["ngo"=>$ngo]);
     }   
 
     //método para fazer a edição dos dados da ong
@@ -121,5 +145,11 @@ class NgoController extends Controller
         return view('Ngos.profileNgo');
     }
 
+    public function accountViewMyPets($ngoId) {
+        $ngo = Ngos::find($ngoId);
+        $pets = Pet::where('id_ngo', '=', $ngoId)->get();
+        return view('Ngos.accountMyPets', compact('ngo'),['pets'=>$pets]); 
+    }
 
 }
+

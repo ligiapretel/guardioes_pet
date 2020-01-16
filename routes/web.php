@@ -24,17 +24,20 @@ Route::post('/guardiao/editar', "GuardianController@storeUpdate");
 Route::post('/guardiao/deletar', "GuardianController@delete");
 
 //Ngo´s Routes
-Route::get('/perfilOng/{id?}','NgoController@viewProfileNgo');
-Route::get('/cadastroOng', "NgoController@registerNgo");
-Route::post('/cadastroOng', "NgoController@doRegisterNgo"); 
-Route::get('/editaOng/{id?}',"NgoController@editNgo"); 
-Route::post('/editaOng',"NgoController@doEditNgo");
-Route::post('/deletaOng',"NgoController@deleteNgo");
-Route::post('/visualizarOng',"NgoController@getNgo");
+Route::get('ong/perfilOng/{id?}','NgoController@viewProfileNgo');
+Route::get('ong/cadastroOng', "NgoController@registerNgo");
+Route::post('ong/cadastroOng', "NgoController@doRegisterNgo"); 
+Route::get('ong/editaOng/{id?}',"NgoController@editNgo"); 
+Route::post('ong/editaOng',"NgoController@doEditNgo");
+Route::post('ong/deletaOng',"NgoController@deleteNgo");
+Route::post('ong/visualizarOng',"NgoController@getNgo");
+Route::get('ong/{id?}/minhaconta/pets',"NgoController@accountViewMyPets");
+
 
 
 //Site´s Routes
 Route::get('/home',"SiteController@viewHome");
+Route::post('/home', "Auth\LoginController@login");
 Route::get('/parceiros', "SiteController@viewPartners");
 Route::get('/sobre', "SiteController@viewAbout");
 
@@ -45,7 +48,7 @@ Route::get('/pet/atualizar/{id?}','PetController@viewFormUpdate');
 Route::post('/pet/atualizar', "PetController@update");
 Route::get('/pet/excluir/{id?}','PetController@delete');
 Route::get('/pet/perfil/{id?}', "PetController@viewPetProfile");
-//Route::get('/pets', "PetController@viewAllPets");
+Route::get('/pets', "PetController@viewAllPets");
 
 //Ad´s Routes
 Route::get('/anuncios',"AdController@viewAllAds");
@@ -66,17 +69,22 @@ Route::post('/busca', "SearchController@viewSearch");
 Route::get('/cadastre-se', "RegisterController@viewRegister");
 
 //Login´s Route
-Route::get('/login', "LoginController@viewLogin");
+Route::get('/login', "Auth\LoginController@viewLogin");
+Route::post('/login', "Auth\LoginController@login"); //ROTA POST LOGIN. VER PARA ONDE DIRECIONAR (NAT/VITOR)
 
 //Admin´s Routes
 Route::get('/admin/cadastro', "AdminController@createAdmin");
 Route::post('/admin/cadastro', "AdminController@createAdmin");
 Route::get('/admin/atualizar/{id?}', "AdminController@viewUpdateAdmin");
 Route::post('/admin/atualizar', "AdminController@updateAdmin"); // Dúvida: é possível usar o mesmo método em rotas parametrizadas?
+<<<<<<< HEAD
+Route::get('/admin/deletar/{id?}',"AdminController@deleteAdmin"); 
+=======
 Route::post('/admin/deletar/{id?}',"AdminController@deleteAdmin"); // PRECISA DE {ID?}????
 Route::get('/admin', "AdminController@viewAllAdmin"); // visualização da lista de todos os admin
 // Route::get('/admin/{id?}','AdminController@viewOneAdmin'); VALE A PENA TER UM VISUALIZAÇÃO DE UM ÚNICO ADMIN SENDO QUE SÃO POUCAS INFORMAÇÕES DE CADA UM?
 Route::post('/admin/deletar/{id?}',"AdminController@deleteAdmin"); 
+>>>>>>> 62342110ff1899eab1db2f23f4a7664572a0214f
 Route::get('/admin', "AdminController@viewAllAdmin"); 
 
 /*FAZER A ROTA DE LOGIN CONFORME OS ARQUIVOS QUE O LARAVEL FORNECE */
