@@ -17,7 +17,7 @@ class CreatePetsPicturesTable extends Migration
             $table->bigIncrements('id');
             $table->string('picture',500);
             $table->unsignedBigInteger('pet_id');
-            $table->foreign('pet_id')->references('id')->on('pets');
+            $table->foreign('pet_id')->references('id')->on('pets')->onDelete('cascade');
             $table->timestamps();
         });
     }
