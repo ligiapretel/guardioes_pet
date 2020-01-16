@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Ngos;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Pet;
 
 class NgoController extends Controller
 {
@@ -12,9 +13,12 @@ class NgoController extends Controller
     public function viewProfileNgo($ngoId){
         //AQUI PRECISA DE UMA VALIDAÇÃO SE A ONG ESTÁ LOGADA
         $ngo = Ngos::find($ngoId);
+
+        //PARA PUXAR APENAS OS PETS DA ONG
+        $pets = Pet::where('id_ngo', '=', $ngoId)->get();
         
         //$ngoAll[''] = Ngos::
-        return view('Ngos.profileNgo', compact('ngo')); //compact = Cria um array contendo variáveis e seus valores.
+        return view('Ngos.profileNgo', compact('ngo'),['pets'=>$pets]); //compact = Cria um array contendo variáveis e seus valores.
     }
 
     public function registerNgo(){
