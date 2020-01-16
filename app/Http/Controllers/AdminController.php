@@ -46,7 +46,6 @@ class AdminController extends Controller
             $newAdmin = new Administrator();
             $newAdmin->name = $request->nameAdmin; 
             $newAdmin->user_id = $newUser->id;;
-            //dúvida se o id de Users vai automaticamente para user_id de Administrators
 
             $result = $newAdmin->save();
 
@@ -58,43 +57,53 @@ class AdminController extends Controller
 
     //A PARTIR DAQUI NÃO ESTÁ FINALIZADO AINDA. 14/1
 
-    //editando usuário admin. Tentando fazer com um único método. COMO FICA O {ID?}???????
-    public function updateAdmin(Request $request, $id=0){
-
-        if($request->isMethod('GET')){
-            //encontrando o id na tabela Users:
-            $user = User::find($id); 
-
-            if($user){
-                return view('Admin.updateAdmin', ["user"=>$user]);
-            } else {
-                return view('Admin.updateAdmin');
-            }
+    public function viewUpdateAdmin(Request $request, $id=0){
+        
+        //encontrando o id em Users:
+        $user = User::find($id);
+        
+        //encontrando o name em Administrators:
+        $nameAdmin = Administrator::where('user_id', $id)->value('name');
+        
+        //encontranto o status em Status: 
+        $status = Status::leftJoin('users', 'users.status_id', '=', 'status.id')->select('status.*')->value('status');
+        
+        //enviando os objetos para a view: PROBLEMA!!! ELE NÃO ACEITA 3 OBJETOS!!!!
+        if($user){
+            return view('Admin.updateAdmin', ["user"=>$user], ["nameAdmin"=>$nameAdmin], ["status"=>$status]);
         } else {
-
-            //buscando email e senha do formulário de atualização:
-            $user = User::find($request->idAdmin);
-            $user->email = $request->emailAdmin;
-            $user->password = $request->passwordAdmin;
-
-            $result = $user->save();
-
-            if($result){ //PRECISA DISSO???
-                
-                //buscando nome do formulário de atualização:
-                $admin = Administrator::find($request->idAdmin); 
-                $admin->name = $request->nameAdmin;
-    
-                $result = $admin->save();
-
-            }
-            
-
-            return view('Admin.updateAdmin', ["result"=>$result]);
+            return view('Admin.updateAdmin');
         }
+        //TENTAR COLOCAR DESSE MODO DEPOIS DE FINALIZADO if($request->isMethod('GET')){ 
+}
+
+    //editando usuário admin. Tentando fazer com um único método.
+    public function updateAdmin(Request $request){
+
+        //alterando email e senha na tabela Users:
+        $user = User::find($request->idAdmin); 
+        $user->email = $request->emailAdmin;
+        $user->password = $request->passwordAdmin;
+        
+        $result = $user->save();
+        
+        //alterando nome na tabela Administrators: PROBLEMAS!
+        $admin = Administrator::find($request->nameAdmin);
+        $admin->name = $request->nameAdmin;
+
+        $result = $admin->save();
+        
+        //alterando status na tabela Status: PROBLEMAS!
+        $status = Status::find($request->statusAdmin);
+        $status->status = $request->statusAdmin;
+
+        $result = $status->save();
+        
+
+        return view('Admin.updateAdmin', ["result"=>$result]);
     }
 
-    //deletando usuário admin: Dúvida->tabela Users ou Administrators?
+    //deletando usuário admin: PROBLEMA!!!
     public function deleteAdmin(Request $request, $id=0){
         $result = User::destroy($id);
         if($result){
@@ -102,10 +111,20 @@ class AdminController extends Controller
         }
     } 
 
-    //visualizando a lista de usuários admin
+    //visualizando a lista de usuários admin PROBLEMA PARA PEGAR EMAIL, COMO PEGAR SÓ ELE NO ARRAY?
     public function viewAllAdmin(Request $request){
+<<<<<<< HEAD
         $listAdmin = Administrator::all();
         return view('Admin.listAdmin', ["listAdmin"=>$listAdmin]); 
+=======
+        //pegando user_id e name
+        $listAdmin = Administrator::all();  
+
+        //pegando email 
+        $emails = User::leftJoin('administrators', 'administrators.user_id', '=', 'users.id')->select('users.*')->get();
+
+        return view('Admin.listAdmin', ["listAdmin"=>$listAdmin], ["emails"=>$emails]); 
+>>>>>>> 22df009d1d1a6438438f823a17dc1a9188992611
     }
 
 
