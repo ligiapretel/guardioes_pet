@@ -69,9 +69,9 @@ class LoginController extends Controller
     //     return view('/home');
     // }
 
-    public function username(){
-        return 'email';
-    }
+    // public function username(){
+    //     return 'email';
+    // }
 
 
     // private function loginUser(){
