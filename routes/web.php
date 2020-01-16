@@ -45,7 +45,7 @@ Route::get('/pet/atualizar/{id?}','PetController@viewFormUpdate');
 Route::post('/pet/atualizar', "PetController@update");
 Route::get('/pet/excluir/{id?}','PetController@delete');
 Route::get('/pet/perfil/{id?}', "PetController@viewPetProfile");
-//Route::get('/pets', "PetController@viewAllPets");
+Route::get('/pets', "PetController@viewAllPets");
 
 //Ad´s Routes
 Route::get('/anuncios',"AdController@viewAllAds");
