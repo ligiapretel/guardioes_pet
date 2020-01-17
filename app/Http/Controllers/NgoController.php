@@ -20,18 +20,15 @@ class NgoController extends Controller
 
         //PARA PUXAR APENAS OS PETS DA ONG
         $pets = Pet::where('id_ngo', '=', $ngoId)->get();
-
-
-        if(isset($pets)){
+          
+        $pet_pictures = 0;
         foreach ($pets as $pet) {
             $pet_pictures = PetPicture::
             where('pet_id', '=', $pet->id)
-            ->get();
+            ->get();  
         }
-    }else{
-        echo "Você não possui pets cadastrados";
-    }
-    return view('Ngos.profileNgo', compact('ngo'),['pets'=>$pets,'pet_pictures'=>$pet_pictures]); //compact = Cria um array contendo variáveis e seus valores.
+      
+    return view('Ngos.profileNgo', compact(['ngo','pets','pet_pictures'])); //compact = Cria um array contendo variáveis e seus valores.
     }
 
 
@@ -91,8 +88,8 @@ class NgoController extends Controller
             
             $image = time(). '.' . $formato; //ele armazena na variavel image com a data time do cadastro e a extensão da imagem.
             
-            if(move_uploaded_file($profile_pictures['tmp_name'], 'img/' . $image)) { //pego apenas o caminho da imagem(tmp_name)
-                $fileDir = 'img/' . $image; //armazeno dentro da variável o caminho da imagem
+            if(move_uploaded_file($profile_pictures['tmp_name'], 'img/logo-ong' . $image)) { //pego apenas o caminho da imagem(tmp_name)
+                $fileDir = 'img/logo-ong' . $image; //armazeno dentro da variável o caminho da imagem
             } 
         }
         //fim salvamento foto logo

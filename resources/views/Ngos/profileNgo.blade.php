@@ -22,7 +22,7 @@
         </div>
 
         <div class="col-lg-6 col-md-6 col-sm-12 col-12 d-flex justify-content-center">
-            <img id="perfilOng_imagem" src= "{{ $ngo['profile_picture'] ?? '' }}">
+            <img id="perfilOng_imagem" src= "{{ asset($ngo['profile_picture'] ?? '')  }}">
         </div>
     </div>
 </section>
@@ -35,7 +35,9 @@
     @foreach ($pets ?? '' as $pet)
         <div class="col-lg-4 col-md-6 col-sm-6 col-12">
             <div class="card">
+            @if($pet_pictures == 0)
                 <img src="{{asset('storage/pets_pictures/'.$pet_pictures[0]->picture)}}" class="card-img-top img-fluid" height="300" width="300"> 
+            @endif   
                 <div class="card-body" style="background-color: #E7E2FC">
                 <h4 class="card-title text-dark font-weight-bold">{{$pet->name}}</h4>
                     <p class="card-text text-secondary">{{$pet->description}}</p>
