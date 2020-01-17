@@ -7,6 +7,10 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Pet;
 use App\PetPicture;
+use App\User;
+use App\Users_group;
+use App\Status;
+use Illuminate\Support\Facades\Hash;
 
 class NgoController extends Controller
 {
@@ -17,17 +21,17 @@ class NgoController extends Controller
         //PARA PUXAR APENAS OS PETS DA ONG
         $pets = Pet::where('id_ngo', '=', $ngoId)->get();
 
+
+        if(isset($pets)){
         foreach ($pets as $pet) {
             $pet_pictures = PetPicture::
             where('pet_id', '=', $pet->id)
             ->get();
         }
-
-        //return $pet_pictures;
-
-        
-        //$ngoAll[''] = Ngos::
-        return view('Ngos.profileNgo', compact('ngo'),['pets'=>$pets,'pet_pictures'=>$pet_pictures]); //compact = Cria um array contendo variáveis e seus valores.
+    }else{
+        echo "Você não possui pets cadastrados";
+    }
+    return view('Ngos.profileNgo', compact('ngo'),['pets'=>$pets,'pet_pictures'=>$pet_pictures]); //compact = Cria um array contendo variáveis e seus valores.
     }
 
 
@@ -44,6 +48,18 @@ class NgoController extends Controller
 
     //inicio da função para cadastro da ong via formulário  
     public function doRegisterNgo(Request $request){
+
+
+    
+
+        //criando novo usuário na tabela Users:
+        $newUser = new User();
+        $newUser->email = $request->email;
+        $newUser->password = Hash::make($request->password);
+        $newUser->user_group_id = 2;
+        $newUser->status_id = 1;
+
+        $result = $newUser->save();
     //informado campos requeridos no preenchimento do formulário via controller
         
         $request->validate([   //campos que são requeridos (obrigatórios)         
@@ -65,7 +81,7 @@ class NgoController extends Controller
             'bank_agency' => 'required',
             'bank_account' => 'required', 
         ]);
-        
+
         //Salvar imagem da ONG - LOGO
         $profile_pictures = $_FILES['profile_picture']; //capturo o array da imagem
         $fileDir = ''; //criei uma variável para salvar o caminho da imagem
@@ -81,12 +97,11 @@ class NgoController extends Controller
         }
         //fim salvamento foto logo
         
-        //Criptografar a senha.
-        // Validate the new password length...
-        /* $request->ngos()->fill([
+/*         //Criptografar a senha.
+        $request->getNgo()->fill([
             'password' => Hash::make($request->newPassword)
-        ])->save();
-     */
+        ])->save(); */
+     
 
         //checa se as senhas são iguais, - nao sei se está correto
         $realPass = $_POST['password'];
@@ -130,7 +145,7 @@ class NgoController extends Controller
         if($ngo->save()){ //se deu certo ele salva os dados e retorna para perfil da ong
             echo  "<script>alert('Dados editados com sucesso!);</script>";
             
-            return redirect('/perfilOng/' . $request->post()['id'] );
+            return redirect('perfil/' . $request->post()['id'] );
         }else{
             echo  "<script>alert('Falha ao editar dados');</script>";
         }
