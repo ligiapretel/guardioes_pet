@@ -1,12 +1,15 @@
 <?php
 
 namespace App\Http\Controllers\Auth;
+//namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use App\User;
 use Illuminate\Http\Request;
 use Auth;
+use Illuminate\Support\Facades\DB;
+//use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
@@ -47,27 +50,32 @@ class LoginController extends Controller
     }
     
     public function login(Request $request){
-        $login = User::where('email', $request->email)->get(); //value('email');
+        $login = User::where('email', $request->email)->where('password', $request->password)->exists(); //value('email');
         // dd($login);
         // exit;
         //$password = password_verify($request->password, $login->password);
         //senha deu certo manda x, deu errado login
         //Auth::login($login, true);
         if($login){
-        return view('/home', ["login"=>$login]);
+            //$username = User::where('email', $request->email);
+            $this->authenticate($request);
+        return view('/home');
+
         } else {
-            echo "Não deu";
+            echo "Senha ou email incorretos";
         }
-        // if($login){
-        //     return $login;
-        // }
     }
 
-    // public function authLogin(){
-    //     $login = $this->login($request);
-    //     Auth::login($login, true);
-    //     return view('/home');
-    // }
+    public function authenticate(Request $request)
+    {
+        $credentials = $request->only('email', 'password');
+        dd(Auth::attempt($credentials));
+        exit;
+        if (Auth::attempt($credentials)) {
+            
+            return redirect()->intended('dashboard');
+        }
+    }
 
     // public function username(){
     //     return 'email';

@@ -21,7 +21,7 @@
                         <input class="form-control" type="text" name="email" placeholder="E-mail">
                     </div>
                     <div class="col-lg-10 col-md-10 col-sm-10 col-xs-6 p-2 largura-form-xs">
-                        <input class="form-control" type="password" name="senha" placeholder="Senha">
+                        <input class="form-control" type="password" name="password" placeholder="Senha">
                     </div>
                     <div class="col-lg-10 col-md-10 col-sm-10 col-xs-6 p-2 largura-form-xs">
                         <button class="btn-roxo btn-busca-expandida" type="submit" name="procurar">Entrar</button>
