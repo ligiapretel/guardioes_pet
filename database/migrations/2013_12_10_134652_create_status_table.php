@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use App\Status;
 
 class CreateStatusTable extends Migration
 {
@@ -18,6 +19,11 @@ class CreateStatusTable extends Migration
             $table->string('status',45);
             $table->timestamps();
         });
+
+        Status::insert([
+            ['status' => 'ativo'],
+            ['status' => 'inativo']
+        ]);
     }
 
     /**
