@@ -16,12 +16,12 @@ Route::get('/', function () {
 });
 
 //Guardian´s Routes
-Route::get('/perfilGuardiao', "GuardianController@viewProfileGuardian");
+Route::get('/guardiao/perfil/{id?}', "GuardianController@viewProfileGuardian");
 Route::get('/cadastroGuardiao', "GuardianController@createGuardian");
 Route::post('/cadastroGuardiao', "GuardianController@createGuardian");
 Route::get('/guardiao/editar/{id?}', "GuardianController@formUpdate");
 Route::post('/guardiao/editar', "GuardianController@storeUpdate");
-Route::post('/guardiao/deletar', "GuardianController@delete");
+Route::get('/guardiao/deletar/{id?}', "GuardianController@delete");
 
 //Ngo´s Routes
 Route::get('ong/perfilOng/{id?}','NgoController@viewProfileNgo');

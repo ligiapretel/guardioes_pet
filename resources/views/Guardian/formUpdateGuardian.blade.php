@@ -1,4 +1,4 @@
-@extends('layouts.templateMenuLateral')
+@extends('layouts.templateGuardioes')
 
 @section('title')
     Guardiões Pet | Cadastro Guardião
@@ -66,9 +66,9 @@
                 </div>
             </div>
             <div class="form-group row">
-                <label for="adress" class="col-sm-4 col-form-label">Endereço</label>
+                <label for="address" class="col-sm-4 col-form-label">Endereço</label>
                 <div class="col-sm-8">
-                    <input name="adress" type="text" class="form-control" id="enderecoGuardiao" value="{{$guardian->adress}}"  placeholder="Rua/Avenida/Logradouro">
+                    <input name="address" type="text" class="form-control" id="enderecoGuardiao" value="{{$guardian->address}}"  placeholder="Rua/Avenida/Logradouro">
                 </div>
             </div>
             <div class="form-row">
@@ -128,11 +128,10 @@
             </div>
             <div class="form-group row p-3">
                 <label for="about_the_guardian">Fale sobre você</label>
-                <textarea name="about_the_guardian" class="form-control" id="textoGuardiao" value="{{$guardian->about_the_guardian}}" cols="30" rows="10"
-                    placeholder="Descreva por que você quer ser um(a) Guardião(ã)"></textarea>
+                <textarea name="about_the_guardian" class="form-control" id="textoGuardiao" cols="30" rows="10">{{$guardian->about_the_guardian}}</textarea>
             </div>
             <div>
-            <button type="submit" class="btn btn-roxo btnGuardiao">Salvar cadastro</button>
+            <button type="submit" class="btn btn-roxo btnGuardiao">Salvar atualização</button>
             </div>
         </form>
 
@@ -143,8 +142,8 @@
     @endif
 
         {{-- Teste de erro --}}
-        <div class="row">
-            <div class="col-md-6">
+        <div class="row justify-content-center ml-5">
+            <div class="col-md-12">
                 @if(isset($result))
                     @if($result)
                         <h3>Atualização realizada com sucesso!</h3>

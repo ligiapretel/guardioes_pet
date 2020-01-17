@@ -1,4 +1,4 @@
-@extends('layouts.templateMenuLateral')
+@extends('layouts.templateGuardioes')
 
 @section('title')
     Guardiões Pet | Cadastro Guardião
@@ -70,9 +70,9 @@
                 </div>
             </div>
             <div class="form-group row">
-                <label for="adress" class="col-sm-4 col-form-label">Endereço</label>
+                <label for="address" class="col-sm-4 col-form-label">Endereço</label>
                 <div class="col-sm-8">
-                    <input name="adress" type="text" class="form-control" id="enderecoGuardiao" placeholder="Rua/Avenida/Logradouro">
+                    <input name="address" type="text" class="form-control" id="enderecoGuardiao" placeholder="Rua/Avenida/Logradouro">
                 </div>
             </div>
             <div class="form-row">
@@ -137,6 +137,9 @@
             </div>
             <div>
             <button type="submit" class="btn btn-roxo btnGuardiao">Salvar cadastro</button>
+            </div>
+            <div>
+                <button type="reset" class="btn btn-danger ">Deletar cadastro</button>
             </div>
         </form>
 
