@@ -34,8 +34,17 @@
 
                     <div class="form-group">
                         <label for="statusAdmin">Status</label>
-                        <input name="statusAdmin" type="text" class="form-control" id="statusAdmin" value="{{ $status }}"> 
+                        <select class="form-control" name="statusAdmin">
+                        <option selected>{{ $user->status_id }}</option>
+                        <option value="1">1 - Ativo</option>
+                        <option value="2">2 - Inativo</option>
+                        </select>
                     </div>
+
+                    <!-- <div class="form-group">
+                        <label for="statusAdmin">Status</label>
+                        <input name="statusAdmin" type="text" class="form-control" id="statusAdmin" value="{{ $user->status_id }}"> 
+                    </div> -->
 
                     <div class="col-lg p-0">
                        <button type="submit" class="btn btn-roxo">Atualizar</button> 
