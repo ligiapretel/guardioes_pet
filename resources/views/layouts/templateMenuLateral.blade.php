@@ -89,6 +89,7 @@
                                 <a class="nav-link menu-ong" href="/anuncios/cadastro">Cadastrar Novos Anúncios</a>
                                 <a class="nav-link menu-ong" href="/chat">Mensagens</a>
                                 <a class="nav-link menu-ong-sair" href="#">Sair</a>
+                                <a class="nav-link menu-ong-sair" href="#">Deletar Conta</a>
                             </nav>    
                         </div>
                 </div>

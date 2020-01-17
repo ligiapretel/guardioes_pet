@@ -25,6 +25,12 @@
                 </div>
             </div>
             <div class="form-group row">
+                <label for="fantasy_name" class="col-sm-4 col-form-label">Nome fantasia da ONG</label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control" name="fantasy_name" placeholder="Nome fantasia da sua ONG" value="{{ isset($ngo['fantasy_name']) ? $ngo['fantasy_name'] : '' }}"><!--se existir o dado mostra o valor-->
+                </div>
+            </div>
+            <div class="form-group row">
                 <label for="cnpjNgo" class="col-sm-4 col-form-label">CNPJ</label>
                 <div class="col-sm-8">
                     <input type="text" class="form-control" name="cnpj" placeholder="Número do CNPJ da ONG" value="{{ isset($ngo['cnpj']) ? $ngo['cnpj'] : '' }}">

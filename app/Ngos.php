@@ -11,6 +11,7 @@ class Ngos extends Model
     protected $fillable = [
         'Id',
         'social_name',
+        'fantasy_name',
         'cnpj',
         'profile_picture',
         'site',

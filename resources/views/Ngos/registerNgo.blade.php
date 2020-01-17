@@ -21,6 +21,12 @@
                 </div>
             </div>
             <div class="form-group row">
+                <label for="fantasy_name" class="col-sm-4 col-form-label">Nome Fantasia da ONG</label>
+                <div class="col-sm-8">
+                    <input type="text" class="form-control" name="fantasy_name" placeholder="Nome fantasia da sua ONG">
+                </div>
+            </div>
+            <div class="form-group row">
                 <label for="cnpjNgo" class="col-sm-4 col-form-label">CNPJ</label>
                 <div class="col-sm-8">
                     <input type="text" class="form-control" name="cnpj" placeholder="Número do CNPJ da ONG">
@@ -131,7 +137,7 @@
             @if($result)
                 <script>alert("Cadastro realizado com sucesso!");</script>
             @else
-                <script>alert("Não foi possível realizar o cadastro").</script>
+                <script>alert("Não foi possível realizar o cadastro");</script>
             @endif
         @endif
     </div>

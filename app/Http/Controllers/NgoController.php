@@ -70,13 +70,8 @@ class NgoController extends Controller
             'zip_code' => 'required',
             'neighborhood' => 'required',
             'city' => 'required',
-            'email' => 'required',
-            'password' => 'required',
             'state' => 'required',
-            'type_account'=>'required',
-            'bank_name' => 'required',
-            'bank_agency' => 'required',
-            'bank_account' => 'required', 
+
         ]);
 
         //Salvar imagem da ONG - LOGO

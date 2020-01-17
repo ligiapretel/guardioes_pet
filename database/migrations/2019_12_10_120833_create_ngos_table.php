@@ -16,19 +16,20 @@ class CreateNgosTable extends Migration
         Schema::create('ngos', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('social_name', 300);
+            $table->string('fantasy_name', 300);
             $table->string('cnpj', 18);
             $table->string('profile_picture', 300);
             $table->string('site', 300);
             $table->string('phone_number', 15);
             $table->string('responsable_name', 300);
+            $table->string('email', 100);
+            $table->string('password', 256);
             $table->string('address', 300);
             $table->string('number', 14);
             $table->string('complement', 100);
             $table->string('zip_code',8);
             $table->string('neighborhood', 100);
             $table->string('city', 100);
-            $table->string('email', 100);
-            $table->string('password', 100);
             $table->string('state', 100);
             $table->text('about_the_ngo', 5000);
             $table->string('type_account',100);
