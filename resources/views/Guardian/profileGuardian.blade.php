@@ -7,10 +7,12 @@
 @section('content') 
 
 <section  class="container-fluid" id="pfG_cx_info_principal"> 
-    @if(isset($guardian))
+    @if(isset($profile))
         <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-12 col-12 d-flex justify-content-center">
-                <img id="perfilGua_imagem" class="rounded-circle" src="{{asset('storage/guardians_pictures/'.$guardian->profile_picture)}}"> 
+                <img id="perfilGua_imagem" class="rounded-circle" src="{{asset('storage/guardians_pictures/'.$profile->profile_picture)}}">
+{{-- Está mostrando o caminho certo no inspecionar, mas a foto não está aparencendo na tela --}}
+{{-- Apareceu depois que dei o comando php artisan storage:link no bash --}}
                 {{--Caminho da imagem: img/img_perfil_guardiao.jpeg --}}
             </div>
 
@@ -19,15 +21,15 @@
                     {{-- Comando para gerar o apelido do Guardião na página de perfil do guardião --}}
                     {{-- Essa função if verifica se existe o campo e se o mesmo está preenchido, estando ele imprime o apelido. É a mesma forma de escrever com o ?? ''. --}}
                     {{-- if(isset($guardian[`nickname`] && $guardian[`nickname`]) $guardian[`nickname`] --}}
-                    {{ $guardian['nickname'] ?? '' }}
+                    {{ $profile['name'] ?? '' }}
                 {{-- Claudia Leite --}}
                 </h1>
                 <p class="text-dark text-justify">
-                    {{ $guardian['about_the_guardian'] ?? ''}}
+                    {{ $profile['about_the_guardian'] ?? ''}}
                     {{-- Nossa ONG nasceu com intenções claras de resgate, castração e doação de animais. Nos empenhamos em abrigar poucos, socorrer vários e castrar MUITOS, pois a castração é a única solução ao problema estrutural da procriação de animais abandonados. --}}
                 </p>
                 {{-- VERIFICAR SE PRECISA MANTER ESSE  --}}
-                <p class="text-dark text-justify">Nossa ONG é formada por profissionais liberais, gente comum que trabalha, estuda, enfim, vive!</p>
+                {{-- <p class="text-dark text-justify">Nossa ONG é formada por profissionais liberais, gente comum que trabalha, estuda, enfim, vive!</p> --}}
                 <div id="pfG_cx_i_txt" class="d-flex align-items-center">
                     <i class="mdi mdi-email-outline"></i> 
                     <p> Envie uma mensagem!</p>
@@ -48,7 +50,7 @@
 
             <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                 <div class="card" style="background-color: #E7E2FC">
-                    <img src="img/pfGuardiao_cachorro1.jpg" class="card-img-top img-fluid" height="300" width="300">
+                    <img src="/img/pfGuardiao_cachorro1.jpg" class="card-img-top img-fluid" height="300" width="300">
                     <div class="card-body">
                     <h4 class="card-title text-dark font-weight-bold">Elza</h4>
                         <p class="card-text text-secondary">Tenho uma pelagem de tres cores que é puro charme e pra completar uma carinha inocente que é i-rre-sis-tível!Adoro tomar um solzinho na janela e tirar cochilos na ...</p>
@@ -59,7 +61,7 @@
 
             <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                 <div class="card" style="background-color: #E7E2FC">
-                    <img src="img/pfGuardiao_gato1.jpeg" class="card-img-top img-fluid" height="300" width="300">
+                    <img src="/img/pfGuardiao_gato1.jpeg" class="card-img-top img-fluid" height="300" width="300">
                     <div class="card-body">
                     <h4 class="card-title text-dark font-weight-bold">Chico</h4>
                         <p class="card-text text-secondary">Tenho uma pelagem de tres cores que é puro charme e pra completar uma carinha inocente que é i-rre-sis-tível!Adoro tomar um solzinho na janela e tirar cochilos na ...</p>
@@ -70,7 +72,7 @@
 
             <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                 <div class="card">
-                    <img src="img/pfGuardiao_cachorro2.jpg" class="card-img-top img-fluid" height="300" width="300">
+                    <img src="/img/pfGuardiao_cachorro2.jpg" class="card-img-top img-fluid" height="300" width="300">
                     <div class="card-body" style="background-color: #E7E2FC">
                         <h4 class="card-title text-dark font-weight-bold">Belquior</h4>
                         <p class="card-text text-secondary">Tenho uma pelagem de tres cores que é puro charme e pra completar uma carinha inocente que é i-rre-sis-tível!Adoro tomar um solzinho na janela e tirar cochilos na ...</p>
@@ -89,7 +91,7 @@
 
             <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                 <div class="card">
-                    <img src="img/pfGuardiao_cachorro1.jpg" class="card-img-top img-fluid" height="300" width="300">
+                    <img src="/img/pfGuardiao_cachorro1.jpg" class="card-img-top img-fluid" height="300" width="300">
                     <div class="card-body" style="background-color:#D6EBE8">
                     <h4 class="card-title text-dark font-weight-bold">Elza</h4>
                         <p class="card-text text-secondary">Tenho uma pelagem de tres cores que é puro charme e pra completar uma carinha inocente que é i-rre-sis-tível!Adoro tomar um solzinho na janela e tirar cochilos na ...</p>
@@ -100,7 +102,7 @@
 
             <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                 <div class="card">
-                    <img src="img/pfGuardiao_gato1.jpeg" class="card-img-top img-fluid" height="300" width="300">
+                    <img src="/img/pfGuardiao_gato1.jpeg" class="card-img-top img-fluid" height="300" width="300">
                     <div class="card-body" style="background-color:#D6EBE8">
                     <h4 class="card-title text-dark font-weight-bold">Chico</h4>
                         <p class="card-text text-secondary">Tenho uma pelagem de tres cores que é puro charme e pra completar uma carinha inocente que é i-rre-sis-tível!Adoro tomar um solzinho na janela e tirar cochilos na ...</p>
@@ -119,7 +121,7 @@
 
             <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                 <div class="card">
-                    <img src="img/pfGuardiao_cachorro1.jpg" class="card-img-top img-fluid" height="300" width="300">
+                    <img src="/img/pfGuardiao_cachorro1.jpg" class="card-img-top img-fluid" height="300" width="300">
                     <div class="card-body" style="background-color:#fdead1">
                     <h4 class="card-title text-dark font-weight-bold">Elza</h4>
                         <p class="card-text text-secondary">Tenho uma pelagem de tres cores que é puro charme e pra completar uma carinha inocente que é i-rre-sis-tível!Adoro tomar um solzinho na janela e tirar cochilos na ...</p>
@@ -130,7 +132,7 @@
 
             <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                 <div class="card">
-                    <img src="img/pfGuardiao_gato1.jpeg" class="card-img-top img-fluid" height="300" width="300">
+                    <img src="/img/pfGuardiao_gato1.jpeg" class="card-img-top img-fluid" height="300" width="300">
                     <div class="card-body" style="background-color:#fdead1">
                     <h4 class="card-title text-dark font-weight-bold">Chico</h4>
                         <p class="card-text text-secondary">Tenho uma pelagem de tres cores que é puro charme e pra completar uma carinha inocente que é i-rre-sis-tível!Adoro tomar um solzinho na janela e tirar cochilos na ...</p>

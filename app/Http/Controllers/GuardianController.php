@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
 use App\Guardian;
 use App\User;
@@ -14,9 +15,11 @@ use App\Status;
 class GuardianController extends Controller
 {
     // Função para ver  perfil do guardião
-    public function viewProfileGuardian(Request $request, $id=0){
+    public function viewProfileGuardian(Request $request, $id=3){
         $profile = Guardian::find($id);
-        return view('/Guardian.profileGuardian', ['profile'=>$profile]);
+        if($profile){
+            return view('/Guardian.profileGuardian', ['profile'=>$profile]);
+        }
     }
 
 
@@ -47,7 +50,7 @@ class GuardianController extends Controller
             //criando novo usuário na tabela Users:
             $newUser = new User();
             $newUser->email = $request->email;
-            $newUser->password = $request->senhaGuardiao;
+            $newUser->password = Hash::make($request->senhaGuardiao);
             $newUser->user_group_id = $newUser_group->id;
             $newUser->status_id = $newStatus->id;
 

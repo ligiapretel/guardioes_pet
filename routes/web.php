@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 
 //Guardian´s Routes
-Route::get('/perfilGuardiao', "GuardianController@viewProfileGuardian");
+Route::get('/guardiao/perfil/{id?}', "GuardianController@viewProfileGuardian");
 Route::get('/cadastroGuardiao', "GuardianController@createGuardian");
 Route::post('/cadastroGuardiao', "GuardianController@createGuardian");
 Route::get('/guardiao/editar/{id?}', "GuardianController@formUpdate");
