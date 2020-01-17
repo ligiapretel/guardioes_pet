@@ -9,10 +9,12 @@ use App\User;
 use Illuminate\Http\Request;
 use Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 //use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
+    //session_start();
     /*
     |--------------------------------------------------------------------------
     | Login Controller
@@ -49,57 +51,25 @@ class LoginController extends Controller
         return view('/login');
     }
     
-    public function login(Request $request){
-        $login = User::where('email', $request->email)->where('password', $request->password)->exists(); //value('email');
-        // dd($login);
-        // exit;
-        //$password = password_verify($request->password, $login->password);
-        //senha deu certo manda x, deu errado login
-        //Auth::login($login, true);
+    public function login(Request $request){    
+        //$login = User::where('email', $request->email)->where('password', $request->password)->exists();
+        $login = User::where('email', $request->email)->exists();
+        //dd($login);
+        //exit;
         if($login){
-            //$username = User::where('email', $request->email);
-            $this->authenticate($request);
-        return view('/home');
+            $passwordVerify = User::where('email', $request->email)->first();
+        //dd($passwordVerify);
+        //exit;    
+            if(Hash::check($request->password, $passwordVerify->password)){
+                // $_SESSION [] ABRIR SESSION AQUI
+                $request->session()->put('email', $request->email);
 
+                return view('/home');
+            } else {
+                echo "Deu erro";
+            } 
         } else {
-            echo "Senha ou email incorretos";
-        }
+            echo "Senha ou email incorretos";  
+        }   
     }
-
-    public function authenticate(Request $request)
-    {
-        $credentials = $request->only('email', 'password');
-        dd(Auth::attempt($credentials));
-        exit;
-        if (Auth::attempt($credentials)) {
-            
-            return redirect()->intended('dashboard');
-        }
-    }
-
-    // public function username(){
-    //     return 'email';
-    // }
-
-
-    // private function loginUser(){
-    //     //session_start();
-    //     $email = $_POST['email'];
-    //     //acessa tabela usuario
-    //     $user = new Login();
-    //     $resultado = $user->loginUser($email);
-
-    //     // $senha = password_verify($_POST['senha'], $resultado[0]['senha']);
-      
-    //     // if($senha){
-    //     //     $_SESSION['fake']['user'] = $resultado;
-    //     //     header('Location:/fake-instagram-POO/posts');
-
-    //     // } else {
-    //     //     $_SESSION['loginError'] = "NÃO LOGADO";
-    //     //     header('Location:login');
-    //     // }
-
-    // public function 
-
-}
+}    
