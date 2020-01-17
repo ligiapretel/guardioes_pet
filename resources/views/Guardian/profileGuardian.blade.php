@@ -7,9 +7,10 @@
 @section('content') 
 
 <section  class="container-fluid" id="pfG_cx_info_principal"> 
+    @if(isset($guardian))
         <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-12 col-12 d-flex justify-content-center">
-                <img id="perfilGua_imagem" class="rounded-circle" src="{{ $guardian['profile_picture'] ?? ''}}"> 
+                <img id="perfilGua_imagem" class="rounded-circle" src="{{asset('storage/guardians_pictures/'.$guardian->profile_picture)}}"> 
                 {{--Caminho da imagem: img/img_perfil_guardiao.jpeg --}}
             </div>
 
@@ -35,6 +36,8 @@
                 </div>
             </div>
         </div>
+        @endif
+    
     </section>
 
     {{-- Essa parte aqui também deve ser feita com back-end? Pra trazer os animais apadrinhados, lar temporário.... --}}
@@ -138,5 +141,4 @@
 
         </div>
     </section>
-
 @endsection

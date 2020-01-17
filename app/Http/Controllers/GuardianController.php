@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
 use App\Guardian;
 use App\User;
@@ -12,11 +13,6 @@ use App\Status;
 
 class GuardianController extends Controller
 {
-
-    // CRIAR UM NEW USER FAZER UM IF PRA VERIFICAR SE DEU CERTO. DANDO CERTO, PASSA PRO 
-    // NEW GUARDIAN. GUARDA A INFORMAÇÃO NO RESULT QUE SERÁ USADA NA VIEW, COMO CADASTRO 
-    // COM SUCESSO OU NÃO
-
     // Função para ver  perfil do guardião
     public function viewProfileGuardian(Request $request, $id=0){
         $profile = Guardian::find($id);
@@ -65,7 +61,7 @@ class GuardianController extends Controller
             $newGuardian->date_of_birth = $request->date_of_birth;
             $newGuardian->email = $request->email;
             $newGuardian->phone_number = $request->phone_number;
-            $newGuardian->profile_picture = $request->profile_picture;
+            //$newGuardian->profile_picture = $request->profile_picture;
             $newGuardian->address = $request->address;
             $newGuardian->number = $request->number;
             $newGuardian->complement = $request->complement;
@@ -78,8 +74,19 @@ class GuardianController extends Controller
 
             //$newGuardian->user_id = Auth()->user()->id;
 
+            if($request->hasFile('profile_picture') && $request->file('profile_picture')->isValid()){
+                $name = date('HisYmd');
+                $extension = $request->profile_picture->extension();
+                $fileName = "{$name}.{$extension}";
+
+                //salvando a foto no storage:
+                $upload = $request->profile_picture->storeAs('guardians_pictures', $fileName);
+                //salvando a foto no BD:
+                $newGuardian->profile_picture = $fileName;
+            }
+
             $result = $newGuardian->save();
-            
+        
             return view('Guardian.registerGuardian', ["result"=>$result]);
         }
     }
@@ -97,6 +104,7 @@ class GuardianController extends Controller
     }
 
     //não precisa o campo email aqui:
+    //Essa função está funcionando!!
     public function storeUpdate(Request $request){
         $guardian = Guardian::find($request->idGuardian);
         $guardian->name = $request->name;
@@ -104,7 +112,7 @@ class GuardianController extends Controller
         $guardian->date_of_birth = $request->date_of_birth;
         $guardian->email = $request->email;
         $guardian->phone_number = $request->phone_number;
-        $guardian->profile_picture = $request->profile_picture;
+        //$guardian->profile_picture = $request->profile_picture;
         $guardian->address = $request->address;
         $guardian->number = $request->number;
         $guardian->complement = $request->complement;
@@ -124,21 +132,30 @@ class GuardianController extends Controller
 
         $user->save();
 
+        if($request->hasFile('profile_picture') && $request->file('profile_picture')->isValid()){
+            $name = date('HisYmd');
+            $extension = $request->profile_picture->extension();
+            $fileName = "{$name}.{$extension}";
+
+            //salvando a foto no storage:
+            $upload = $request->profile_picture->storeAs('guardians_pictures', $fileName);
+            //salvando a foto no BD:
+            $guardian->profile_picture = $fileName;
+        }
+
+        $result = $guardian->save();
+
         return view('guardian.formUpdateGuardian', ["result"=>$result]);
 
     }
 
+    //essa função está deletando um usuário da tabela guardians. Apenas.
+    public function delete(Request $request, $id=0){
+    
+        $result = Guardian::destroy($id);
 
-    public function delete(Request $request){
-        
-        $data = $request->post();
-        $guardian = Guardian::where('id', $data['id']->get()[0]);
-        $guardian->delete();
-        return view('Guardian.profileGuardian');
-        // $result = Guardian::destroy($id);
-
-        // if($result){
-        //     return redirect('/home');
-        // }
+        if($result){
+            return redirect('/home');
+        }
     }
 }
