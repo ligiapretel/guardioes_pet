@@ -72,13 +72,13 @@
             <div class="form-group row">
                 <label for="address" class="col-sm-4 col-form-label">Endereço</label>
                 <div class="col-sm-8">
-                    <input name="address" type="text" class="form-control" id="enderecoGuardiao" placeholder="Rua/Avenida/Logradouro">
+                    <input name="address" type="text" class="form-control" id="rua" placeholder="Rua/Avenida/Logradouro">
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6 p-1">
                     <label for="number">Número</label>
-                    <input name="number" type="number" class="form-control" id="numeroGuardiao" placeholder="No.">
+                    <input name="number" type="number" class="form-control" id="telefone" placeholder="No.">
                 </div>
                 <div class="form-group col-md-6 p-1">
                     <label for="complement">Complemento</label>
@@ -86,19 +86,21 @@
                 </div>
                 <div class="form-group col-md-6 p-1">
                     <label for="zip_code">CEP</label>
-                    <input name="zip_code" type="number" class="form-control" id="cepGuardiao" placeholder="CEP">
+                    <input name="zip_code" type="number" class="form-control" id="cep" placeholder="CEP">
                 </div>
                 <div class="form-group col-md-6 p-1">
                     <label for="neighborhood">Bairro</label>
-                    <input name="neighborhood" type="text" class="form-control" id="bairroGuardiao" placeholder="Bairro">
+                    <input name="neighborhood" type="text" class="form-control" id="bairro" placeholder="Bairro">
                 </div>
                 <div class="form-group col-md-6 p-1">
                     <label for="city">Cidade</label>
-                    <input name="city" type="text" class="form-control" id="cidadeGuardiao" placeholder="Cidade">
+                    <input name="city" type="text" class="form-control" id="cidade" placeholder="Cidade">
                 </div>
                 <div class="form-group col-md-6 p-1">
                     <label for="state">Estado</label>
-                    <select name="state" class="form-control" id="estadoGuardiao">
+                    <input name="state" type="text" class="form-control" id="uf" placeholder="">
+
+                    {{-- <select name="state" class="form-control" id="uf">
                         <option>Selecione</option>
                         <option>Acre</option>
                         <option>Alagoas</option>
@@ -127,7 +129,7 @@
                         <option>São Paulo</option>
                         <option>Sergipe</option>
                         <option>Tocantins</option>
-                    </select>
+                    </select> --}}
                 </div>
             </div>
             <div class="form-group row p-3">
@@ -156,5 +158,6 @@
     </div>
 </div>
         
-
+<script src="/js/completaCep.js" type="text/javascript"></script>
+<script src="/js/mascaraTel.js" type="text/javascript"></script>
 @endsection
