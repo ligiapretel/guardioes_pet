@@ -75,9 +75,9 @@ Route::post('/login', "Auth\LoginController@login"); //ROTA POST LOGIN. VER PARA
 //Admin´s Routes
 Route::get('/admin/cadastro', "AdminController@createAdmin");
 Route::post('/admin/cadastro', "AdminController@createAdmin");
-Route::get('/admin/atualizar/{id?}', "AdminController@updateAdmin");
+Route::get('/admin/atualizar/{id?}', "AdminController@updateAdmin")->middleware('checkuser');
 Route::post('/admin/atualizar', "AdminController@updateAdmin"); 
-Route::get('/admin/deletar/{id?}',"AdminController@deleteAdmin"); 
-Route::get('/admin', "AdminController@viewAllAdmin"); 
+Route::get('/admin/deletar/{id?}',"AdminController@deleteAdmin")->middleware('checkuser'); 
+Route::get('/admin', "AdminController@viewAllAdmin")->middleware('checkuser'); 
 
 /*FAZER A ROTA DE LOGIN CONFORME OS ARQUIVOS QUE O LARAVEL FORNECE */
