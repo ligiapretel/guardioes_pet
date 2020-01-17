@@ -56,10 +56,30 @@
                     </li> -->
 
                     <!--VERIFICAR A ROTA DE LOGIN-->
+                    @guest
                     <li class="nav-item">
                         <a class="nav-link header-link" href="/login">Login</a>
                         <li class="nav-item">
-                    <a href="/cadastre-se" class="header-link"><button type="button" class="btn-roxo">Cadastre-se</button></a>
+                    <a href="cadastre-se" class="header-link"><button type="button" class="btn-roxo">Cadastre-se</button></a>
+                    @else
+                    <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ $login->email }} <span class="caret"></span>
+                                </a>
+
+                                <!-- <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                                </div> -->
+                            </li>
+                        @endguest
                 </ul>
 
             </div>

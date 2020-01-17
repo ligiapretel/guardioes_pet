@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use App\Users_group;
 
 class CreateUsersGroupTable extends Migration
 {
@@ -15,9 +16,15 @@ class CreateUsersGroupTable extends Migration
     {
         Schema::create('users_group', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('user_type');
+            $table->string('user_type',45);
             $table->timestamps();
         });
+
+        Users_group::insert([
+            ['user_type' => 'administrador'],
+            ['user_type' => 'ONG'],
+            ['user_type' => 'guardiao']
+        ]);
     }
 
     /**
