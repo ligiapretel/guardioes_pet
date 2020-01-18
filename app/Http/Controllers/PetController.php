@@ -75,8 +75,11 @@ class PetController extends Controller
         $pet = Pet::find($id);
         //$picture = DB::table('pets_pictures')->where('pet_id', $pet->id)->first();
 
+        $pictures = PetPicture::find($id)->where('pet_id', '=', $pet->id)->get();
+        //dd($picture); //VER COMO DEIXAR A FOTO QUE JÁ EXISTE NO BANCO
+
         if($pet) {
-             return view('Pets.updatePet', ['pet'=>$pet]);
+             return view('Pets.updatePet', ['pet'=>$pet, 'pictures'=>$pictures]);
         } else {
             return view('Pets.updatePet');
         }
@@ -105,9 +108,6 @@ class PetController extends Controller
         $pet->temporary_home_available = $request->temporary_home_available;
         $pet->sponsorship_available = $request->sponsorship_available;
 
-        // $picture = PetPicture::find()->where('pet_id', '=', $pet->id)->get();
-        // dd($picture); //VER COMO DEIXAR A FOTO QUE JÁ EXISTE NO BANCO
-
         //$pet->id_ngo = Auth::user()->id;
 
         $result = $pet->save();
@@ -116,7 +116,7 @@ class PetController extends Controller
 
             $newPetPicture = new PetPicture;
             $newPetPicture->picture = $request->picture;
-            $newPetPicture->pet_id = $newPet->id; //TEM QUE ARRUMAR AQUI NA HORA DE ATUALIZAR
+            $newPetPicture->pet_id = $pet->id; //TEM QUE ARRUMAR AQUI NA HORA DE ATUALIZAR
 
             $name = date('HisYmd');
             $extension = $request->picture->extension();
@@ -127,7 +127,7 @@ class PetController extends Controller
             $newPetPicture->save();
         }    
 
-        return view('Pets.updatePet', ["result"=>$result]);
+        return view('Pets.updatePet', ["result"=>$result, 'picture'=>$picture]);
         //se houver result, será mostrada uma mensagem de sucesso (está na view)
     }
 
