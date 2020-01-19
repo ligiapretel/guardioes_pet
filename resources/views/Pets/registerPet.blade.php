@@ -16,7 +16,7 @@
         <div class="col-12">
             @if(isset($result))
                 @if($result)
-                    <h3>Seu pet foi cadastrado!</h3>
+                    <h4 class="mb-5">Seu pet foi cadastrado! Quer cadastrar outro pet?</h4>
                 @else
                     <h3>O pet não foi cadastrado. Tente novamente</h3>
                 @endif
@@ -63,15 +63,15 @@
             <div class="form-group row">
                 <label class="col-sm-4 col-form-label" for="animal_bearing">Porte do Animal</label>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" name="animal_bearing" id="animal_bearing" value="pequeno">
+                    <input class="form-check-input" type="radio" name="animal_bearing" id="animal_bearing" value="pequeno">
                     <label class="form-check-label" for="animal_bearing">Pequeno (até 10kg)</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" name="animal_bearing" id="animal_bearing" value="medio">
+                    <input class="form-check-input" type="radio" name="animal_bearing" id="animal_bearing" value="medio">
                     <label class="form-check-label" for="animal_bearing">Médio (de 10 a 25kg)</label>
                 </div>
                 <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" name="animal_bearing" id="animal_bearing" value="grande">
+                    <input class="form-check-input" type="radio" name="animal_bearing" id="animal_bearing" value="grande">
                     <label class="form-check-label" for="animal_bearing">Grande (acima de 25kg)</label>
                 </div>
             </div>
@@ -92,6 +92,7 @@
                 <div class="col-sm-8">
                     <input type="file" class="form-control-file" id="picture" name="picture">
                 </div>
+
             </div>
             <div class="form-group row">
                 <label for="opcao" class="col-sm-4 col-form-label">Quais as opções para esse animal?</label>

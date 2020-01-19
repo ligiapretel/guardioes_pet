@@ -56,6 +56,7 @@
                     </li> -->
 
                     <!--VERIFICAR A ROTA DE LOGIN-->
+                    
                     @guest
                     <li class="nav-item">
                         <a class="nav-link header-link" href="/login">Login</a>
@@ -64,7 +65,9 @@
                     @else
                     <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user() }} <span class="caret"></span>
+                                
+                                    {{ session('email') }}     
+                                    <span class="caret"></span>
                                 </a>
 
                                 <!-- <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -80,6 +83,7 @@
                                 </div> -->
                             </li>
                         @endguest
+                    
                 </ul>
 
             </div>

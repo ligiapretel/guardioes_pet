@@ -29,11 +29,11 @@ Route::get('/guardioes', "GuardianController@viewAllGuardians");
 Route::get('ong/perfil/{id?}','NgoController@viewProfileNgo');
 Route::get('ong/cadastro', "NgoController@registerNgo");
 Route::post('ong/cadastro', "NgoController@doRegisterNgo"); 
-Route::get('ong/edita/{id?}',"NgoController@editNgo"); 
+Route::get('ong/edita/{id?}',"NgoController@editNgo")->middleware('checkngo'); 
 Route::post('ong/edita',"NgoController@doEditNgo");
 Route::post('ong/deleta',"NgoController@deleteNgo");
 Route::post('ong/visualizar',"NgoController@getNgo");
-Route::get('ong/{id?}/minhaconta/pets',"NgoController@accountViewMyPets");
+Route::get('ong/{id?}/minhaconta/pets',"NgoController@accountViewMyPets")->middleware('checkngo');
 
 
 
@@ -44,7 +44,7 @@ Route::get('/parceiros', "SiteController@viewPartners");
 Route::get('/sobre', "SiteController@viewAbout");
 
 //Pet´s Routes
-Route::get('/pet/cadastro', "PetController@viewForm"); //precisa colocar o middleware
+Route::get('/pet/cadastro', "PetController@viewForm")->middleware('checkngo');
 Route::post('/pet/cadastro', "PetController@register");
 Route::get('/pet/atualizar/{id?}','PetController@viewFormUpdate');
 Route::post('/pet/atualizar', "PetController@update");
