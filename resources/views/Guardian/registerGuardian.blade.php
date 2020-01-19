@@ -6,6 +6,19 @@
 
 @section('content') 
 
+{{-- Teste de erro --}}
+<div class="row justify-content-center ml-5 mt-5">
+    <div class="col-md-12">
+        @if(isset($result))
+            @if($result)
+                <h3>Cadastro realizado com sucesso!</h3>
+            @else
+                <h3>Não foi possível realizar o cadastro.</h3>
+            @endif
+        @endif
+    </div>
+</div>
+
         <form action="/cadastroGuardiao" method="POST" enctype="multipart/form-data" class="card col-lg-8 col-md-12 col-sm-12 col-12 p-5" id="formGuardiao" style="width: 50rem">
             @csrf
 
@@ -145,18 +158,7 @@
             </div>
         </form>
 
-{{-- Teste de erro --}}
-<div class="row justify-content-center ml-5">
-    <div class="col-md-12">
-        @if(isset($result))
-            @if($result)
-                <h3>Cadastro realizado com sucesso!</h3>
-            @else
-                <h3>Não foi possível realizar o cadastro.</h3>
-            @endif
-        @endif
-    </div>
-</div>
+
         
 <script src="/js/completaCep.js" type="text/javascript"></script>
 <script src="/js/mascaraTel.js" type="text/javascript"></script>
