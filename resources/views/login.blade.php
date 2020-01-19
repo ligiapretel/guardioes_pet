@@ -18,11 +18,25 @@
                         <h1>Acesse sua conta</h1>
                     </div>
                     <div class="col-lg-10 col-md-10 col-sm-10 col-xs-6 p-2 largura-form-xs">
-                        <input class="form-control" type="text" name="email" placeholder="E-mail">
+                        <input class="form-control @error('email') is-invalid @enderror" type="text" name="email" placeholder="E-mail" required>
                     </div>
+
+                    @error('email') 
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
+
                     <div class="col-lg-10 col-md-10 col-sm-10 col-xs-6 p-2 largura-form-xs">
-                        <input class="form-control" type="password" name="password" placeholder="Senha">
+                        <input class="form-control @error('password') is-invalid @enderror" type="password" name="password" placeholder="Senha" required>
                     </div>
+
+                    @error('password')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
+
                     <div class="col-lg-10 col-md-10 col-sm-10 col-xs-6 p-2 largura-form-xs">
                         <button class="btn-roxo btn-busca-expandida" type="submit" name="procurar">Entrar</button>
                     </div>

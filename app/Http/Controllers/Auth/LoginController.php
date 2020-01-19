@@ -45,31 +45,55 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
-    //inicio luana 
+
     //vizualização da pagina login
     public function viewLogin(){
         return view('/login');
     }
     
-    public function login(Request $request){    
-        //$login = User::where('email', $request->email)->where('password', $request->password)->exists();
-        $login = User::where('email', $request->email)->exists();
-        //dd($login);
-        //exit;
-        if($login){
-            $passwordVerify = User::where('email', $request->email)->first();
-        //dd($passwordVerify);
-        //exit;    
-            if(Hash::check($request->password, $passwordVerify->password)){
-                // $_SESSION [] ABRIR SESSION AQUI
-                $request->session()->put('email', $request->email);
+    public function login(Request $request){   
 
-                return view('/home');
-            } else {
-                echo "Deu erro";
-            } 
-        } else {
-            echo "Senha ou email incorretos";  
-        }   
+        $credentials = $request->only('email', 'password');
+
+        if(Auth::attempt($credentials)){
+
+            return redirect()->intended('home');
+ 
+        }
+                   
     }
+
+    public function logout(Request $request){   
+
+        Auth::logout();
+        return redirect()->intended('home');
+                   
+    }
+
+    //inicio luana 
+
+    // public function login(Request $request){    
+        
+    //     $login = User::where('email', $request->email)->exists();
+        
+    //     if($login){
+    //         $passwordVerify = User::where('email', $request->email)->first();
+           
+    //         if(Hash::check($request->password, $passwordVerify->password)){
+    //             // $_SESSION [] ABRIR SESSION AQUI
+    //             $request->session()->put('email', $request->email);
+
+    //             return view('/home');
+    //         } else {
+    //             echo "Deu erro";
+    //         } 
+    //     } else {
+    //         echo "Senha ou email incorretos";  
+    //     }   
+    // }
 }    
+
+
+
+
+   
