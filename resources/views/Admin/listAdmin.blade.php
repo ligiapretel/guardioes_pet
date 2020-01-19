@@ -18,6 +18,7 @@
                         <th scope="col">id</th>
                         <th scope="col">Nome do usuário</th>
                         <th scope="col">E-mail</th>
+                        <th scope="col">Status</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -26,6 +27,7 @@
                         <th scope="row"> {{$admin->id}} </th>
                         <td> {{$admin->name}} </td>
                         <td> {{ $admin->email }} </td>
+                        <td> {{ $admin->status_id }} </td>
                         <td>
                             <a class="btn btn-primary" href="/admin/atualizar/{{$admin->id}}">Atualizar</a>
                             <a class="btn btn-danger" href="/admin/deletar/{{$admin->id}}">Deletar</a>

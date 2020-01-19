@@ -56,6 +56,7 @@
                     </li> -->
 
                     <!--VERIFICAR A ROTA DE LOGIN-->
+                    
                     @guest
                     <li class="nav-item">
                         <a class="nav-link header-link" href="/login">Login</a>
@@ -64,22 +65,27 @@
                     @else
                     <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user() }} <span class="caret"></span>
+                                
+                                {{ Auth::user()->email }}     
+                                    <span class="caret"></span>
                                 </a>
-
-                                <!-- <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="/logout"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
 
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    <form id="logout-form" action="/logout" method="POST" style="">
                                         @csrf
                                     </form>
-                                </div> -->
+                                </div>
+                                
+                                
                             </li>
                         @endguest
+                    
                 </ul>
 
             </div>

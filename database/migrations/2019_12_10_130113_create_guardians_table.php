@@ -18,7 +18,6 @@ class CreateGuardiansTable extends Migration
             $table->string('name', 300);   
             $table->string('nickname', 300);
             $table->date('date_of_birth'); 
-            $table->string('email', 300);
             $table->string('phone_number', 14);    
             $table->string('profile_picture', 300);   
             $table->string('address', 300);   
@@ -30,7 +29,7 @@ class CreateGuardiansTable extends Migration
             $table->string('state', 100);   
             $table->text('about_the_guardian', 5000);   
             $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });
     }

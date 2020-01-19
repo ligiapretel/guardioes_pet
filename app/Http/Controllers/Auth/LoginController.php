@@ -9,10 +9,12 @@ use App\User;
 use Illuminate\Http\Request;
 use Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 //use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
+    //session_start();
     /*
     |--------------------------------------------------------------------------
     | Login Controller
@@ -43,63 +45,55 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
-    //inicio luana 
+
     //vizualização da pagina login
     public function viewLogin(){
         return view('/login');
     }
     
-    public function login(Request $request){
-        $login = User::where('email', $request->email)->where('password', $request->password)->exists(); //value('email');
-        // dd($login);
-        // exit;
-        //$password = password_verify($request->password, $login->password);
-        //senha deu certo manda x, deu errado login
-        //Auth::login($login, true);
-        if($login){
-            //$username = User::where('email', $request->email);
-            $this->authenticate($request);
-        return view('/home');
+    public function login(Request $request){   
 
-        } else {
-            echo "Senha ou email incorretos";
-        }
-    }
-
-    public function authenticate(Request $request)
-    {
         $credentials = $request->only('email', 'password');
-        dd(Auth::attempt($credentials));
-        exit;
-        if (Auth::attempt($credentials)) {
-            
-            return redirect()->intended('dashboard');
+
+        if(Auth::attempt($credentials)){
+
+            return redirect()->intended('home');
+ 
         }
+                   
     }
 
-    // public function username(){
-    //     return 'email';
+    public function logout(Request $request){   
+
+        Auth::logout();
+        return redirect()->intended('home');
+                   
+    }
+
+    //inicio luana 
+
+    // public function login(Request $request){    
+        
+    //     $login = User::where('email', $request->email)->exists();
+        
+    //     if($login){
+    //         $passwordVerify = User::where('email', $request->email)->first();
+           
+    //         if(Hash::check($request->password, $passwordVerify->password)){
+    //             // $_SESSION [] ABRIR SESSION AQUI
+    //             $request->session()->put('email', $request->email);
+
+    //             return view('/home');
+    //         } else {
+    //             echo "Deu erro";
+    //         } 
+    //     } else {
+    //         echo "Senha ou email incorretos";  
+    //     }   
     // }
+}    
 
 
-    // private function loginUser(){
-    //     //session_start();
-    //     $email = $_POST['email'];
-    //     //acessa tabela usuario
-    //     $user = new Login();
-    //     $resultado = $user->loginUser($email);
 
-    //     // $senha = password_verify($_POST['senha'], $resultado[0]['senha']);
-      
-    //     // if($senha){
-    //     //     $_SESSION['fake']['user'] = $resultado;
-    //     //     header('Location:/fake-instagram-POO/posts');
 
-    //     // } else {
-    //     //     $_SESSION['loginError'] = "NÃO LOGADO";
-    //     //     header('Location:login');
-    //     // }
-
-    // public function 
-
-}
+   

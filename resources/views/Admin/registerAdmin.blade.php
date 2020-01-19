@@ -15,8 +15,8 @@
                 @csrf    
 
                     <!-- input hidden com status de Status e user_type de Users_group -->
-                    <input hidden type="text" name="statusAdmin"  value="ativo"> 
-                    <input hidden type="text" name="user_typeAdmin" value="admin"> 
+                    <input hidden type="text" name="statusAdmin"  value="1"> 
+                    <input hidden type="text" name="user_groupAdmin" value="1"> 
 
                     <div class="form-group">
                         <label for="nameAdmin">Nome Completo</label>

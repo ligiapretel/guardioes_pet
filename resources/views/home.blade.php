@@ -1,6 +1,5 @@
 @extends('layouts.templateGuardioes')
-<!--nome que foi colocado no template-->
- <!--Essa info vai pra dentro do yield no template guardioes-->
+
 @section('title')
     Guardiões Pet
 @endsection
@@ -62,17 +61,7 @@
                                     <option value="lartemporario">Lar temporário</option>
                                 </select>
                             </div>
-                        <!-- </div> -->
-                            <!-- CH: comentei duas opções de busca do filtro, conforme feedback.
-                            <div class="col-md-6 p-3">
-                                <select name="animalEspecial" class="form-control">
-                                    <option disabled selected>Aceita animal especial?</option>
-                                    <option value="sim">Aceito</option>
-                                    <option value="nao">Talvez em outro momento</option>
-                                </select>
-                            </div> -->
                         
-                        <!-- <div class="formulario-index row"> -->
                             <div class="formulario-index-itens col-md-6 p-3">
                                 <select name="porte" class="form-control">
                                     <option disabled selected>Porte</option>
@@ -89,9 +78,7 @@
                                     <option value="ong-c">ONG $C</option>
                                 </select>
                             </div>
-                        <!-- </div> -->
                         
-                        <!-- <div class="formulario-index row"> -->
                             <div class="formSexo formulario-index-itens col-md-6 p-3">
                                 <select name="sexo" class="form-control">
                                     <option disabled selected>Sexo</option>
@@ -103,18 +90,7 @@
                                 <button class="btn-roxo formulario-index-itens btn-busca-expandida botao-home" type="submit" name="procurar">Procurar</button>
                             </div>
                         </div>
-                        <!-- CH: comentei duas opções de busca do filtro, conforme feedback.
-                        <div class="row">
-                            <div class="col p-3">
-                                <select name="idade" class="form-control">
-                                    <option disabled selected>Idade</option>
-                                    <option value="filhote">Filhote</option>
-                                    <option value="jovem">Jovem</option>
-                                    <option value="adulto">Adulto</option>
-                                    <option value="idoso">Idoso</option>
-                                </select>
-                            </div>
-                        </div> -->
+                       
                     </form>
                 </div>
             </div>
