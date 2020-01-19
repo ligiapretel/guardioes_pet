@@ -22,6 +22,8 @@ Route::post('/cadastroGuardiao', "GuardianController@createGuardian");
 Route::get('/guardiao/editar/{id?}', "GuardianController@formUpdate");
 Route::post('/guardiao/editar', "GuardianController@storeUpdate");
 Route::get('/guardiao/deletar/{id?}', "GuardianController@delete");
+Route::get('/guardioes', "GuardianController@viewAllGuardians");
+
 
 //Ngo´s Routes
 Route::get('ong/perfil/{id?}','NgoController@viewProfileNgo');

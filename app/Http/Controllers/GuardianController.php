@@ -35,24 +35,13 @@ class GuardianController extends Controller
         if($request->isMethod('GET')){
             return view('/Guardian.registerGuardian');
         } else {
-            //criando status de novo usuário na tabela Status:
-            $newStatus = new Status();
-            $newStatus->status = $request->statusGuardian;
-
-            $result = $newStatus->save();
-            
-            //criando o tipo de usuário na tabela Users_group:
-            $newUser_group = new Users_group();
-            $newUser_group->user_type = $request->user_typeGuardian;
-
-            $result = $newUser_group->save();
 
             //criando novo usuário na tabela Users:
             $newUser = new User();
             $newUser->email = $request->email;
             $newUser->password = Hash::make($request->senhaGuardiao);
-            $newUser->user_group_id = $newUser_group->id;
-            $newUser->status_id = $newStatus->id;
+            $newUser->user_group_id = 3;
+            $newUser->status_id = 1;
 
             $result = $newUser->save();
 
@@ -62,7 +51,7 @@ class GuardianController extends Controller
             $newGuardian->name = $request->name;
             $newGuardian->nickname = $request->nickname;
             $newGuardian->date_of_birth = $request->date_of_birth;
-            $newGuardian->email = $request->email;
+            //$newGuardian->email = $request->email;
             $newGuardian->phone_number = $request->phone_number;
             //$newGuardian->profile_picture = $request->profile_picture;
             $newGuardian->address = $request->address;
@@ -75,7 +64,20 @@ class GuardianController extends Controller
             $newGuardian->about_the_guardian = $request->about_the_guardian;
             $newGuardian->user_id = $newUser->id;
 
-            //$newGuardian->user_id = Auth()->user()->id;
+
+            $request->validate([   //campos que são requeridos (obrigatórios)         
+                'name' => 'required',
+                'nickname' => 'required',
+                'date_of_birth' => 'required',
+                'phone_number' => 'required',
+                'address' => 'required',
+                'number' => 'required',
+                'complement' => 'required',
+                'zip_code' => 'required',
+                'neighborhood' => 'required',
+                'city' => 'required',
+                'state' => 'required',
+            ]);
 
             if($request->hasFile('profile_picture') && $request->file('profile_picture')->isValid()){
                 $name = date('HisYmd');
@@ -113,7 +115,7 @@ class GuardianController extends Controller
         $guardian->name = $request->name;
         $guardian->nickname = $request->nickname;
         $guardian->date_of_birth = $request->date_of_birth;
-        $guardian->email = $request->email;
+        //$guardian->email = $request->email;
         $guardian->phone_number = $request->phone_number;
         //$guardian->profile_picture = $request->profile_picture;
         $guardian->address = $request->address;
@@ -127,8 +129,8 @@ class GuardianController extends Controller
 
         $result = $guardian->save();
 
-        //selcionando o usuário. Depois que criptografar a senha descomentar.
-        //Como está, está funcionando.
+        //selcionando o usuário. Depois que criptografar a senha descomentar..
+        //NÃO ESTÁ PUXANDO O EMAIL CADASTRADO. Mas está atualizando com o novo email informado.
         $user = User::find($guardian->user_id);
         $user->email = $request->email;
         //$user->password = $request->password;
@@ -160,5 +162,12 @@ class GuardianController extends Controller
         if($result){
             return redirect('/home');
         }
+    }
+
+
+
+    public function viewAllGuardians(){
+        $guardians = Guardian::all();
+        return view('Guardian.allGuardians', ['guardians'=>$guardians]);
     }
 }
