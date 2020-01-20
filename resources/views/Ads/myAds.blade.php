@@ -6,28 +6,42 @@
 
 @section('content')
 
-    <!-- Se existir anúncio sendo passado pelo parâmetro, ele abre o formulário com os dados do anúncio a ser atualizado -->
-    @if(isset($ad))
-            <h3 class="tituloAnuncio pb-3">Meus anúncios</h3>
-            <p>Aqui serão exibidos os anúncios cadastrados daquele usuário</p>
-            <section>
-            <div class="row p-3 d-flex justify-content-center align-items-center">
-                <div class="col-6 col-md-4 col-lg-3 shadow p-3">
-                    <div class="card" style="border-color:  #FF9640;">
-                        <div class="card-body">
-                            <h5 class="card-title text-center col-12">User name</h5>
-                            <p class="card-text text-center">Medicine</p>
-                            <a href="#"><button>Editar</button></a>
-                            <a href="#"><button>Excluir</button></a>
-                        </div>
-                    </div>
-                </div>
+<div class="card col-lg-8 p-5 mt-5">
+       <div class="mt-5">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Item</th>
+                        <th scope="col">Medicamentos</th>
+                        <th scope="col">Produtos de Higiene</th>
+                        <th scope="col">Alimentos</th>
+                        <th scope="col">Brinquedos</th>
+                        <th scope="col">Acessórios</th>
+                        <th scope="col">Outros</th>                        
+                    </tr>
+                </thead>
+                <tbody>
+                    @forelse($ads as $ad)
+                        <tr>
+                            <th scope="row">{{$ad->id}}</th>
+                            <td>{{$ad->medicine}}</td>
+                            <td>{{$ad->hygiene_supply}}</td>
+                            <td>{{$ad->food}}</td>
+                            <td>R$ {{$ad->toys}}</td>
+                            <td>{{$ad->user->accessories}}</td>
+                            <td>{{$ad->user->others}}</td>
+                            <td>{{$ad->created_at}}</td>
+                            <td>{{$ad->updated_at}}</td>
+                            <td>
+                                <a class="btn btn-primary" href="/anuncios/editar/{{$ad->id}}">Atualizar</a>
+                                <a class="btn btn-danger"  href="/anuncios/deletar/{{$ad->id}}">Deletar</a>
+                            </td>
+                        </tr>
+                    @empty
+                        <h3>Você não possui anúncios cadastrados.</h3>
+                    @endforelse    
+                    </tbody>
+                </table>
             </div>
-        </section>
-        @else
-        <div class="col-6 col-md-12 col-lg-8 p-5 mt-5">
-            <h3 class="pt-5 mt-5 text-center">Você não possui anúncios cadastrados.</h3>
-        </div>
-        @endif
-
+    <div>
 @endsection
