@@ -58,7 +58,8 @@ Route::post('/anuncios',"AdController@create");
 Route::get('/anuncios/cadastro', "AdController@viewRegisterAds");
 Route::get('/anuncios/editar/{id?}', "AdController@viewFormUpdate");
 Route::post('/anuncios/editar', "AdController@update");
-Route::get('/anuncios/meus-anuncios', "AdController@viewMyAds");
+Route::get('/anuncios/deletar/{id?}', "AdController@delete");
+Route::get('/anuncios/{id?}/meus-anuncios', "AdController@viewMyAds");
 
 //Chat´s Routes
 Route::get('/chat', 'ChatController@viewChat');

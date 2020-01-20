@@ -65,12 +65,27 @@
                     @else
                     <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                
                                 {{ Auth::user()->email }}     
                                     <span class="caret"></span>
                                 </a>
                                 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+
+                                    <a class="dropdown-item" href=
+
+                        @switch (Auth::user()->user_group_id)
+                            @case(1)
+                            'admin/atualizar'
+                            @case (2)
+                            'pet/cadastro'
+                            @case(3)
+                            'guardiao/editar/'
+                        @endswitch
+
+                                    >
+                                        {{ __('Minha conta') }}
+                                    </a>
+
                                     <a class="dropdown-item" href="/logout"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -80,6 +95,8 @@
                                     <form id="logout-form" action="/logout" method="POST" style="">
                                         @csrf
                                     </form>
+
+
                                 </div>
                                 
                                 

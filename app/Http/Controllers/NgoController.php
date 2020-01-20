@@ -57,8 +57,34 @@ class NgoController extends Controller
         $newUser->status_id = 1;
 
         $result = $newUser->save();
-    //informado campos requeridos no preenchimento do formulário via controller
+
+    //criano novo usuário para ong
+    $newNgo = new Ngos();
+    $newNgo->social_name = $request->social_name;
+    $newNgo->fantasy_name = $request->fantasy_name;
+    $newNgo->cnpj = $request->cnpj;
+    $newNgo->profile_picture = $request->profile_picture;
+    $newNgo->site = $request->site;
+    $newNgo->phone_number = $request->phone_number;
+    $newNgo->responsable_name = $request->responsable_name;
+    $newNgo->address = $request->address;
+    $newNgo->number = $request->number;
+    $newNgo->complement = $request->complement;
+    $newNgo->zip_code = $request->zip_code;
+    $newNgo->neighborhood = $request->neighborhood;
+    $newNgo->city = $request->city;
+  /*   $newNgo->email = $request->email;
+    $newNgo->password = $request->password; */
+    $newNgo->state = $request->state;
+    $newNgo->about_the_ngo = $request->about_the_ngo;
+    $newNgo->type_account = $request->type_account;
+    $newNgo->bank_name = $request->bank_name;
+    $newNgo->bank_agency = $request->bank_agency;
+    $newNgo->bank_account = $request->bank_account;
+    $newNgo->user_id = $newUser->id;
         
+        
+    //informado campos requeridos no preenchimento do formulário via controller
         $request->validate([   //campos que são requeridos (obrigatórios)         
             'social_name' => 'required',
             'cnpj' => 'required',
@@ -75,7 +101,18 @@ class NgoController extends Controller
         ]);
 
         //Salvar imagem da ONG - LOGO
-        $profile_pictures = $_FILES['profile_picture']; //capturo o array da imagem
+        if($request->hasFile('profile_picture') && $request->file('profile_picture')->isValid()){
+            $name = date('HisYmd');
+            $extension = $request->profile_picture->extension();
+            $fileName = "{$name}.{$extension}";
+
+            //salvando a foto no storage:
+            $upload = $request->profile_picture->storeAs('ngos_pictures', $fileName);
+            //salvando a foto no BD:
+            $newNgo->profile_picture = $fileName;
+        }
+
+        /* $profile_pictures = $_FILES['profile_picture']; //capturo o array da imagem
         $fileDir = ''; //criei uma variável para salvar o caminho da imagem
         if(!empty($profile_pictures)){ //se for diferente de vazio 
             $name = explode('.', $profile_pictures['name']);//transforma a string em um array
@@ -87,14 +124,8 @@ class NgoController extends Controller
                 $fileDir = 'img/logo-ong' . $image; //armazeno dentro da variável o caminho da imagem
             } 
         }
-        //fim salvamento foto logo
+        //fim salvamento foto logo */
         
-/*         //Criptografar a senha.
-        $request->getNgo()->fill([
-            'password' => Hash::make($request->newPassword)
-        ])->save(); */
-     
-
         //checa se as senhas são iguais, - nao sei se está correto
         $realPass = $_POST['password'];
         $confirmPass = $_POST['re-password'];
@@ -105,14 +136,12 @@ class NgoController extends Controller
         $data = $request->post(); //salvo os dados via post
         }
 
-        $data['profile_picture'] = $fileDir; // armazena o dado enviado pelo form no campo picture dentro de filedir = caminho da imagem
-
-        //criado variável com a classe ngos criada no model para receber os dados do post
-        $ngo = Ngos::create( $data );
-        /* $user = User::create( $data ); */
+        /* $data['profile_picture'] = $fileDir;  */// armazena o dado enviado pelo form no campo picture dentro de filedir = caminho da imagem
         
+        $result = $newNgo->save();
+
         //criando condicional para informar o cadastro
-        if ($ngo){
+        if ($newNgo){
             /* echo "<script>alert('Cadastro realizado com Sucesso!);</script>"; */
             /* return view('login', ['message'=>'Cadastro realizado com sucesso!']); */
            return redirect('login')->with('success', ['Cadastro Realizado com sucesso!!']);
@@ -136,8 +165,7 @@ class NgoController extends Controller
         //retorno na condicional informando se deu certo
         if($ngo->save()){ //se deu certo ele salva os dados e retorna para perfil da ong
             echo  "<script>alert('Dados editados com sucesso!);</script>";
-            
-            return redirect('perfil/' . $request->post()['id'] );
+            return view('Ngos.editNgo', ['ngo'=>$ngo]);
         }else{
             echo  "<script>alert('Falha ao editar dados');</script>";
         }

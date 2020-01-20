@@ -58,7 +58,7 @@
                     <h2>ou cadastre-se</h2>
                 </div>
                 <div class="col-lg-5 col-md-10 col-sm-10 col-xs-5 p-2 largura-form-xs m-1 text-center">
-                    <a href="cadastroOng"><button class="btn-roxo btn-login-enviar" type="submit" name="sou-ong">Sou ONG</button></a>
+                    <a href="ong/cadastro"><button class="btn-roxo btn-login-enviar" type="submit" name="sou-ong">Sou ONG</button></a>
                 </div>
                 <div class="col-lg-5 col-md-10 col-sm-10 col-xs-5 p-2 largura-form-xs m-1 text-center">
                     <a href="cadastroGuardiao"><button class="btn-roxo btn-login-enviar" type="submit"

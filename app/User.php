@@ -40,14 +40,13 @@ class User extends Authenticatable
     ];
 
     public function getName(){
+        // Verificando se o usuário é ong, ou seja, user_group_id 2, para buscar o nome dele na tabela ngos
         if($this->user_group_id == 2){
-            $user = new User();
-            $ngo = new Ngos();
 
-            $name = Ngos::leftJoin('users', 'users.id', '=', 'ngos.user_id')->select('ngos.*')->value('social_name');
+            $ngoName = Ngos::leftJoin('users', 'users.id', '=', 'ngos.user_id')->select('ngos.social_name')->get();
 
-            return view('Ads.ads',["name"=>$name]);
-
+            return redirect('/anuncios');
+        
         }elseif($this->user_group_id == 3){
             return "Entrou no user_group 3";
         }
