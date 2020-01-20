@@ -8,7 +8,8 @@
 
  <!--Onde esta localizado as informacoes da ONG e img-->
  <section class="container-fluid" id="pfong_cx_info_principal">
- 
+ @if(isset($profile))
+ <input type="text" name="idNgo" hidden value="{{ $ngo->id }}">
     <div class="row"> 
         <div id="pfOng_cx_info_principal_ordem" class="col-lg-6 col-md-6 col-sm-12 col-12">
             <h1 class="pfOngGuard_titulo text-dark font-weight-bolder">{{ $ngo->social_name ?? '' }}</h1>
@@ -22,9 +23,10 @@
         </div>
 
         <div class="col-lg-6 col-md-6 col-sm-12 col-12 d-flex justify-content-center">
-            <img id="perfilOng_imagem" src= "{{ asset($ngo['profile_picture'] ?? '')  }}">
+            <img id="perfilOng_imagem" src= "{{ asset('storage/ngos_pictures/'.$profile->profile_picture) }}">
         </div>
     </div>
+@endif
 </section>
     
 <!--Onde esta localizado os Animais com a ONG-->
