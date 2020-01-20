@@ -55,7 +55,7 @@
 
                 <!--VERIFICAR A ROTA DE LOGIN-->
                 <li class="nav-item">
-                    <a class="nav-link header-link" href="/login.php">Login</a>
+                    <a class="nav-link header-link" href="/login">Login</a>
                     <li class="nav-item">
                 <a href="/cadastre-se" class="header-link"><button type="button" class="btn-roxo">Cadastre-se</button></a>
             </ul>

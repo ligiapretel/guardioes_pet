@@ -153,9 +153,7 @@
             <div>
             <button type="submit" class="btn btn-roxo btnGuardiao">Salvar cadastro</button>
             </div>
-            <div>
-                <button type="reset" class="btn btn-danger ">Deletar cadastro</button>
-            </div>
+            
         </form>
 
 

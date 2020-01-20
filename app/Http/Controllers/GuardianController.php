@@ -22,6 +22,13 @@ class GuardianController extends Controller
         }
     }
 
+    // Função para ver  perfil do guardião
+    public function viewMyAccountGuardian(Request $request, $id=3){
+        $profile = Guardian::find($id);
+        if($profile){
+            return view('/Guardian.myAccountGuardian', ['profile'=>$profile]);
+        }
+    }
 
     // Função para ver o formulário de cadastro de guardião
     //Essa função está funcionando!!
@@ -133,7 +140,7 @@ class GuardianController extends Controller
         //NÃO ESTÁ PUXANDO O EMAIL CADASTRADO. Mas está atualizando com o novo email informado.
         $user = User::find($guardian->user_id);
         $user->email = $request->email;
-        //$user->password = $request->password;
+        $user->password = $request->password;
 
         $user->save();
 
@@ -158,7 +165,7 @@ class GuardianController extends Controller
     public function delete(Request $request, $id=0){
     
         $result = Guardian::destroy($id);
-
+        //Aqui eu preciso trocar pra User:: ou inserir a função destroy com Guardian e User?
         if($result){
             return redirect('/home');
         }
