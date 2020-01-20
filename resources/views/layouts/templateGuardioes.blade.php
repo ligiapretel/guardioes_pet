@@ -79,7 +79,7 @@
                             @case (2)
                             'pet/cadastro'
                             @case(3)
-                            'guardiao/editar/'
+                            'guardiao/account/perfil'
                         @endswitch
 
                                     >

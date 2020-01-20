@@ -17,12 +17,12 @@ Route::get('/', function () {
 
 //Guardian´s Routes
 Route::get('/guardiao/perfil/{id?}', "GuardianController@viewProfileGuardian");
-Route::get('/guardiao/account/perfil/{id?}', "GuardianController@viewMyAccountGuardian");//incluir middleware
+Route::get('/guardiao/account/perfil/{id?}', "GuardianController@viewMyAccountGuardian");
 Route::get('/cadastroGuardiao', "GuardianController@createGuardian");
 Route::post('/cadastroGuardiao', "GuardianController@createGuardian");
-Route::get('/guardiao/editar/{id?}', "GuardianController@formUpdate")->middleware('checkguardian');
+Route::get('/guardiao/editar/{id?}', "GuardianController@formUpdate");
 Route::post('/guardiao/editar', "GuardianController@storeUpdate");
-Route::get('/guardiao/deletar/{id?}', "GuardianController@delete")->middleware('checkguardian');
+Route::get('/guardiao/deletar/{id?}', "GuardianController@delete");
 Route::get('/guardioes', "GuardianController@viewAllGuardians");
 
 //Ngo´s Routes

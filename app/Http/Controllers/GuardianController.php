@@ -107,9 +107,10 @@ class GuardianController extends Controller
     public function formUpdate(Request $request, $id=0){
 
             $guardian = Guardian::find($id);
-
+            $user = User::find($id)->where('email', '=', $guardian->id)->get();
+            
             if($guardian){
-                return view('Guardian.formUpdateGuardian', ["guardian"=>$guardian]);
+                return view('Guardian.formUpdateGuardian', ["guardian"=>$guardian, "user"=>$user]);
             } else {
                 return view('Guardian.formUpdateGuardian');
             }
@@ -140,7 +141,7 @@ class GuardianController extends Controller
         //NÃO ESTÁ PUXANDO O EMAIL CADASTRADO. Mas está atualizando com o novo email informado.
         $user = User::find($guardian->user_id);
         $user->email = $request->email;
-        $user->password = $request->password;
+        //$user->password = $request->password;
 
         $user->save();
 
@@ -164,7 +165,7 @@ class GuardianController extends Controller
     //essa função está deletando um usuário da tabela guardians. Apenas.
     public function delete(Request $request, $id=0){
     
-        $result = Guardian::destroy($id);
+        $result = User::destroy($id);
         //Aqui eu preciso trocar pra User:: ou inserir a função destroy com Guardian e User?
         if($result){
             return redirect('/home');

@@ -79,6 +79,16 @@
                 </a>	 
                 
                 <div class="card navbar-menu-itens collapse" style="width: 20rem;" id="menu-principal"> 
+                    @if(isset($profile))
+                        @if($profile)
+                            <a class="nav-link menu-ong active mt-1" href="/guardiao/editar/">Meu Perfil</a><!--depois q fizerem o login passar a session e o -> id-->
+                            <a class="nav-link menu-ong" href="/anuncios/meus-anuncios">Anúncios Cadastrados</a>
+                            <a class="nav-link menu-ong" href="/anuncios/cadastro">Cadastrar Novos Anúncios</a>
+                            <a class="nav-link menu-ong" href="/chat">Mensagens</a>
+                            <a class="nav-link menu-ong-sair" href="/logout">Sair</a>
+                            <a class="nav-link menu-ong-sair" href="/guardiao/deletar">Deletar Conta</a><!--depois q fizerem o login passar a session e o -> id-->
+                        @endif
+                    @else
                     <img id="perfil-ong" class="ml-4" src="{{ asset($ngo['profile_picture'] ?? '')  }}" alt="logo da ONG" />
                         <div class="card-body" style="width: 20rem;">
                             <nav class="nav flex-column bg-light">
@@ -90,8 +100,10 @@
                                 <a class="nav-link menu-ong" href="/chat">Mensagens</a>
                                 <a class="nav-link menu-ong-sair" href="#">Sair</a>
                                 <a class="nav-link menu-ong-sair" href="#">Deletar Conta</a>
+                                
                             </nav>    
                         </div>
+                    @endif
                 </div>
             </aside>         
         </section>
