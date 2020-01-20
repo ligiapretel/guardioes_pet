@@ -6,7 +6,7 @@
 
 @section('content')
 
-        <form action="{{ url('/editaOng') }}" method="POST" class="card col-lg-8 col-md-12 col-sm-12 col-12 p-5" id="formOng">
+        <form action="{{ url('/edita') }}" method="POST" class="card col-lg-8 col-md-12 col-sm-12 col-12 p-5" id="formOng">
         {{ csrf_field() }} <!--gera token de segurança - verifica se o usuário é autenticado-->
         
             <!-- essa div é para o título -->
