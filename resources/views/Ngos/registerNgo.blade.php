@@ -131,17 +131,6 @@
                 <button type="submit" class="btn btn-roxo btnOng">Salvar Cadastro</button>
             </div>
         </form>
-<div class="row justify-content-center ml-5">
-    <div class="col-md-12">
-        @if(isset($result))
-            @if($result)
-                <script>alert("Cadastro realizado com sucesso!");</script>
-            @else
-                <script>alert("Não foi possível realizar o cadastro");</script>
-            @endif
-        @endif
-    </div>
-</div>
         <script src="/js/completaCep.js" type="text/javascript"></script>
         <script src="/js/mascaraTel.js" type="text/javascript"></script>
 @endsection
