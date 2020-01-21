@@ -21,7 +21,8 @@ class PetController extends Controller
     // }
 
     public function viewForm (Request $request) {
-        return view ('Pets.registerPet');
+        $ngo = Auth::user();         
+        return view ('Pets.registerPet', $ngo);
     }
 
     public function register (Request $request) {
@@ -67,7 +68,9 @@ class PetController extends Controller
             $newPetPicture->save();
         }    
 
-        return view('Pets.registerPet', ["result"=>$result]);
+        $ngo = Auth::user();
+
+        return view('Pets.registerPet', ["result"=>$result, $ngo]);
         //se houver result, será mostrada uma mensagem de sucesso (está na view)
     }
 

@@ -164,8 +164,9 @@ class NgoController extends Controller
 
     //método para fazer a edição dos dados da ong
     public function doEditNgo(Request $request){
-
-        $ngo = Ngos::find($request->idNgo);
+        
+        $ngo = Ngos::find($request->id);
+        
         $ngo->social_name = $request->social_name;
         $ngo->fantasy_name = $request->fantasy_name;
         $ngo->cnpj = $request->cnpj;
@@ -187,7 +188,7 @@ class NgoController extends Controller
         $ngo->bank_name = $request->bank_name;
         $ngo->bank_agency = $request->bank_agency;
         $ngo->bank_account = $request->bank_account;
-        $ngo->user_id = $newUser->id;
+        $ngo->user_id = $ngo->id;
 
         $result = $ngo->save();
 
@@ -196,18 +197,23 @@ class NgoController extends Controller
 
         $user->save();
 
+
         if($request->hasFile('profile_picture') && $request->file('preofile_picture')->isValid()){
             $name= date('HisYmd');
             $extension = $request->profile_picture->extension();
             $fileName = "{$name}.{$extension}";
         }
-        
+
+        if(!empty($request->progile_picture)) {
             $upload = $request->progile_picture->storageAs('ngo_pictures', $fileName);
             $ngo->profile_picture = $fileName;
+        }
+
+        $result = $ngo->save(); 
+        
+        return redirect('ong/edita/' . $request->id);
     }
-    $result = $ngo->save();
-    
-    return view('Ngos.editNgo', ["result"=>$result]);
+        
         /*  $request->validate([]);
 
         $ngo = new Ngos($request->post()); // atribuo os novos valores vindo pelo formulário editado 
@@ -222,10 +228,12 @@ class NgoController extends Controller
  */
     //método para deletar a ong - APENAS PARA ADMIN??
     public function deleteNgo(Request $request){
-        //recebo os dados da ong pego o id e removo pelo metodo delete()
-        $result = $request->post();
+        //recebo os dados da ong pego o id e removo pelo metodo delete()         
+        $result = $request->post();         
         $ngo = Ngos::where('id', $result['id'])->get()[0]; //pega o primeiro índice do array  
-        $ngo->delete();
+        $user = User::where('id', $ngo->user_id)->get()[0];
+        $user->status_id = 2;
+        $user->save();
         return view('/home');
     }
 

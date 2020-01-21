@@ -92,14 +92,18 @@
                     <img id="perfil-ong" class="ml-4" src="{{ asset($ngo ?? ''['profile_picture'] ?? '')  }}" alt="logo da ONG" />
                         <div class="card-body" style="width: 20rem;">
                             <nav class="nav flex-column bg-light">
-                                <a class="nav-link menu-ong active" href="/ong/editar/{{ $user->id ?? '' }}">Meu Perfil</a><!--depois q fizerem o login passar a session e o -> id-->
+                                <a class="nav-link menu-ong active" href="/ong/edita/{{ $ngo->id ?? '' }}">Meu Perfil</a><!--depois q fizerem o login passar a session e o -> id-->
                                 <a class="nav-link menu-ong" href="#">Animais Cadastrados</a>
-                                <a class="nav-link menu-ong" href="#">Cadastrar Novos Animais</a>
+                                <a class="nav-link menu-ong" href="/pet/cadastro">Cadastrar Novos Animais</a>
                                 <a class="nav-link menu-ong" href="/anuncios/meus-anuncios">Anúncios Cadastrados</a>
                                 <a class="nav-link menu-ong" href="/anuncios/cadastro">Cadastrar Novos Anúncios</a>
                                 <a class="nav-link menu-ong" href="/chat">Mensagens</a>
-                                <a class="nav-link menu-ong-sair" href="#">Sair</a>
-                                <a class="nav-link menu-ong-sair" href="#">Deletar Conta</a>
+                                <a class="nav-link menu-ong-sair" href="/logout">Sair</a>
+                                <form method='post' action='{{ url("ong/deleta") }}' onsubmit='if(!confirm("Desdejeas realmete excluir?")) return false;'>
+                                    @csrf
+                                    <input type='hidden' value='{{ 2 }}' name='id'>
+                                    <button class="nav-link menu-ong-sair" href="#">Deletar Conta</button>
+                                </form>
                                 
                             </nav>    
                         </div>
@@ -139,9 +143,15 @@
 
                     <div class="row">
                         <div class="col-12 pt-5 pb-5">
-                            <a href="https://www.facebook.com/"><img src="/img/facebook1.png" alt="facebook"></a>
-                            <a href="https://www.instagram.com/"><img src="/img/instagram1.png" alt="instagram"></a>
-                            <a href="https://www.twitter.com/"><img src="/img/twitter1.png" alt="twitter"></a>                    
+                            <div class="rede" id="facebook">
+                                <a target="_blank" href="https://www.facebook.com/guardioesPet"><img src="/img/facebook1.png" alt="facebook"></a>
+                            </div>
+                            <div class="rede" id="instagram">
+                                <a target="_blank" href="https://www.instagram.com/petguardioes"><img src="/img/instagram1.png" alt="instagram"></a>
+                            </div>
+                            <div class="rede" id="twitter">
+                                <a target="_blank" href="https://www.twitter.com/"><img src="/img/twitter1.png" alt="twitter"></a>                    
+                            </div>         
                         </div>
                     </div> 
 
