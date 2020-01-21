@@ -10,15 +10,6 @@
         <!-- Token de segurança do Laravel para forms. Deve ser colocado em todos os forms. -->
         @csrf
                 <h3 class="tituloAnuncio pb-3">Cadastro de Anúncio</h3>
-            <!--aqui começa o formulário -->
-            <!-- o nome do anunciante deve ser o mesmo do cadastro de Guardião. Linkar os dois pra aqui no anúncio já vir preenchido -->
-            <div class="form-group row">
-                <label for="nomeAnuncio" class="col-3 col-form-label">Nome do Anunciante</label>
-                <div class="col-9">
-                    <input type="text" class="form-control" id="nomeAnuncio" placeholder="Nome do Cadastro">
-                </div>
-            </div>
-            <p class="font-weight-bold">Preciso de:</p>
                 <div class="row">
                     <div class="col-3">
                         <label for="medicamentoId" class="col-form-label">Medicamentos</label>

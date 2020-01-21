@@ -26,4 +26,9 @@ class Guardian extends Model{
         'state',
         'about_the_guardian',
     ];
+
+    // Fazendo a associação das tabelas para cruzar dados de guardians e users.
+    public function user(){
+        return $this->belongsTo('App\User');
+    }
 }

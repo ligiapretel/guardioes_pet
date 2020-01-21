@@ -13,6 +13,7 @@ class AdController extends Controller
     public function viewAllAds(Request $request){
         $listAds = Ad::all();
         return view('Ads.ads',["listAds"=>$listAds]);
+        // Na view acesso a função que faz o select na tabela users, ngos e guardians para acessar informações dessas outras tabelas. O select está na model User.
     }
 
     public function viewRegisterAds(Request $request){
@@ -28,7 +29,7 @@ class AdController extends Controller
         $newAd->accessories = $request->acessorios;
         $newAd->others = $request->outros;
         // Passando um valor de user_id fixo por enquanto
-        $newAd->user_id = 3;
+        $newAd->user_id = 4;
 
         $result = $newAd->save();
 

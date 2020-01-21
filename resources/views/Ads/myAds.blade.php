@@ -27,9 +27,9 @@
                             <td>{{$ad->medicine}}</td>
                             <td>{{$ad->hygiene_supply}}</td>
                             <td>{{$ad->food}}</td>
-                            <td>R$ {{$ad->toys}}</td>
-                            <td>{{$ad->user->accessories}}</td>
-                            <td>{{$ad->user->others}}</td>
+                            <td>{{$ad->toys}}</td>
+                            <td>{{$ad->accessories}}</td>
+                            <td>{{$ad->others}}</td>
                             <td>{{$ad->created_at}}</td>
                             <td>{{$ad->updated_at}}</td>
                             <td>

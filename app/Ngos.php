@@ -35,4 +35,9 @@ class Ngos extends Model
         'created_at',
         'updated_at'        
     ];
+
+    // Fazendo a associação das tabelas para cruzar dados de ngos e users.
+    public function user(){
+        return $this->belongsTo('App\User');
+    }
 }

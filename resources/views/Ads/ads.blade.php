@@ -10,19 +10,38 @@ Guardiões Pet | Anúncios
             <h3 class="tituloGeralAnuncios mb-4 d-flex justify-content-center">Nossos Guardiões também precisam da sua ajuda!</h3>
         </section>
         <section>
-            <div class="row p-3 d-flex justify-content-center align-items-center">
-            @foreach($listAds ?? '' as $ad)
-                <div class="col-6 col-md-4 col-lg-3 shadow p-3">
-                    <div class="card" style="border-color:  #FF9640;">
-                        <div class="card-body">
-                            <h5 class="card-title text-center col-12">{{$ad->user->getName()}}</h5>
-                            <p class="card-text text-center">{{$ad->medicine}}</p>
-                            <a href="#" class="btn btn-roxo-outline d-flex justify-content-center">Entrar em contato</a>
-                        </div>
-                    </div>
+        @forelse($listAds ?? '' as $ad)
+            <div class="mt-5">
+                <table class="table">
+                    <h4 class="bg-dark m-0 p-2 text-white">{{$ad->user->getName()}}</h4>
+                    <thead>
+                        <tr class="bg-light">
+                            <th scope="col">Medicamentos</th>
+                            <th scope="col">Itens de Higiene</th>              
+                            <th scope="col">Alimentos</th>              
+                            <th scope="col">Brinquedos</th>              
+                            <th scope="col">Acessórios</th>              
+                            <th scope="col">Outros</th>              
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{{$ad->medicine}}</td>
+                            <td>{{$ad->hygiene_supply}}</td>
+                            <td>{{$ad->food}}</td>
+                            <td>{{$ad->toys}}</td>
+                            <td>{{$ad->accessories}}</td>
+                            <td>{{$ad->others}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="row justify-content-end m-0">
+                    <button class="btn-roxo">Entrar em contato</button>              
                 </div>
-                @endforeach
             </div>
+            @empty
+                <h3>Não encontramos anúncios para exibir.</h3>
+            @endforelse                 
         </section>
 </section>
 @endsection
