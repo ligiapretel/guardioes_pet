@@ -54,7 +54,7 @@
 
                     <!--VERIFICAR A ROTA DE LOGIN-->
                     <li class="nav-item">
-                        <a class="nav-link header-link" href="/login.php">Login</a>
+                        <a class="nav-link header-link" href="/login">Login</a>
                         <li class="nav-item">
                     <a href="/cadastre-se" class="header-link"><button type="button" class="btn-roxo">Cadastre-se</button></a>
             </ul>
@@ -170,9 +170,15 @@
 
                     <div class="row">
                         <div class="col-12 pt-5 pb-5">
-                            <a href="https://www.facebook.com/"><img src="/img/facebook1.png" alt="facebook"></a>
-                            <a href="https://www.instagram.com/"><img src="/img/instagram1.png" alt="instagram"></a>
-                            <a href="https://www.twitter.com/"><img src="/img/twitter1.png" alt="twitter"></a>                    
+                            <div class="rede" id="facebook">
+                                <a target="_blank" href="https://www.facebook.com/guardioesPet"><img src="/img/facebook1.png" alt="facebook"></a>
+                            </div>
+                            <div class="rede" id="instagram">
+                                <a target="_blank" href="https://www.instagram.com/petguardioes"><img src="/img/instagram1.png" alt="instagram"></a>
+                            </div>
+                            <div class="rede" id="twitter">
+                                <a target="_blank" href="https://www.twitter.com/"><img src="/img/twitter1.png" alt="twitter"></a>                    
+                            </div>                   
                         </div>
                     </div> 
 

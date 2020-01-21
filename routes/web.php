@@ -17,13 +17,13 @@ Route::get('/', function () {
 
 //Guardian´s Routes
 Route::get('/guardiao/perfil/{id?}', "GuardianController@viewProfileGuardian");
+Route::get('/guardiao/account/perfil/{id?}', "GuardianController@viewMyAccountGuardian");
 Route::get('/cadastroGuardiao', "GuardianController@createGuardian");
 Route::post('/cadastroGuardiao', "GuardianController@createGuardian");
 Route::get('/guardiao/editar/{id?}', "GuardianController@formUpdate");
 Route::post('/guardiao/editar', "GuardianController@storeUpdate");
 Route::get('/guardiao/deletar/{id?}', "GuardianController@delete");
 Route::get('/guardioes', "GuardianController@viewAllGuardians");
-
 
 //Ngo´s Routes
 Route::get('ong/perfil/{id?}','NgoController@viewProfileNgo');
@@ -84,4 +84,4 @@ Route::post('/admin/atualizar', "AdminController@updateAdmin");
 Route::get('/admin/deletar/{id?}',"AdminController@deleteAdmin")->middleware('checkuser'); 
 Route::get('/admin', "AdminController@viewAllAdmin")->middleware('checkuser'); 
 
-/*FAZER A ROTA DE LOGIN CONFORME OS ARQUIVOS QUE O LARAVEL FORNECE */
+

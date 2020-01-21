@@ -22,8 +22,8 @@ class CreateNgosTable extends Migration
             $table->string('site', 300);
             $table->string('phone_number', 15);
             $table->string('responsable_name', 300);
-            $table->string('email', 100);
-            $table->string('password', 256);
+/*             $table->string('email', 100);
+            $table->string('password', 256); */
             $table->string('address', 300);
             $table->string('number', 14);
             $table->string('complement', 100);
@@ -36,8 +36,8 @@ class CreateNgosTable extends Migration
             $table->string('bank_name', 100);
             $table->string('bank_agency', 15);
             $table->string('bank_account', 15);
-            $table->unsignedBigInteger('user_id')->nullable();
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });    
     }

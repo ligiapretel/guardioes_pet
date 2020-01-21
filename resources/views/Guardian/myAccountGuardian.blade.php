@@ -1,12 +1,12 @@
-@extends('layouts.templateBuscaRecolhida')
+@extends('layouts.templateMenuLateral')
 
 @section('title')
-    Guardiões Pet | Perfil do Guardião
+    Guardiões Pet | Minha Conta
 @endsection
 
 @section('content') 
 
-<section  class="container-fluid" id="pfG_cx_info_principal"> 
+<section  class="container-fluid col-8" id="pfG_cx_info_principal"> 
     @if(isset($profile))
         <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-12 col-12 d-flex justify-content-center">

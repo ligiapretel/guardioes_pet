@@ -57,8 +57,34 @@ class NgoController extends Controller
         $newUser->status_id = 1;
 
         $result = $newUser->save();
-    //informado campos requeridos no preenchimento do formulário via controller
+
+    //criano novo usuário para ong
+    $newNgo = new Ngos();
+    $newNgo->social_name = $request->social_name;
+    $newNgo->fantasy_name = $request->fantasy_name;
+    $newNgo->cnpj = $request->cnpj;
+    $newNgo->profile_picture = $request->profile_picture;
+    $newNgo->site = $request->site;
+    $newNgo->phone_number = $request->phone_number;
+    $newNgo->responsable_name = $request->responsable_name;
+    $newNgo->address = $request->address;
+    $newNgo->number = $request->number;
+    $newNgo->complement = $request->complement;
+    $newNgo->zip_code = $request->zip_code;
+    $newNgo->neighborhood = $request->neighborhood;
+    $newNgo->city = $request->city;
+  /*   $newNgo->email = $request->email;
+    $newNgo->password = $request->password; */
+    $newNgo->state = $request->state;
+    $newNgo->about_the_ngo = $request->about_the_ngo;
+    $newNgo->type_account = $request->type_account;
+    $newNgo->bank_name = $request->bank_name;
+    $newNgo->bank_agency = $request->bank_agency;
+    $newNgo->bank_account = $request->bank_account;
+    $newNgo->user_id = $newUser->id;
         
+        
+    //informado campos requeridos no preenchimento do formulário via controller
         $request->validate([   //campos que são requeridos (obrigatórios)         
             'social_name' => 'required',
             'cnpj' => 'required',
@@ -75,7 +101,18 @@ class NgoController extends Controller
         ]);
 
         //Salvar imagem da ONG - LOGO
-        $profile_pictures = $_FILES['profile_picture']; //capturo o array da imagem
+        if($request->hasFile('profile_picture') && $request->file('profile_picture')->isValid()){
+            $name = date('HisYmd');
+            $extension = $request->profile_picture->extension();
+            $fileName = "{$name}.{$extension}";
+
+            //salvando a foto no storage:
+            $upload = $request->profile_picture->storeAs('ngos_pictures', $fileName);
+            //salvando a foto no BD:
+            $newNgo->profile_picture = $fileName;
+        }
+
+        /* $profile_pictures = $_FILES['profile_picture']; //capturo o array da imagem
         $fileDir = ''; //criei uma variável para salvar o caminho da imagem
         if(!empty($profile_pictures)){ //se for diferente de vazio 
             $name = explode('.', $profile_pictures['name']);//transforma a string em um array
@@ -87,14 +124,8 @@ class NgoController extends Controller
                 $fileDir = 'img/logo-ong' . $image; //armazeno dentro da variável o caminho da imagem
             } 
         }
-        //fim salvamento foto logo
+        //fim salvamento foto logo */
         
-/*         //Criptografar a senha.
-        $request->getNgo()->fill([
-            'password' => Hash::make($request->newPassword)
-        ])->save(); */
-     
-
         //checa se as senhas são iguais, - nao sei se está correto
         $realPass = $_POST['password'];
         $confirmPass = $_POST['re-password'];
@@ -105,14 +136,12 @@ class NgoController extends Controller
         $data = $request->post(); //salvo os dados via post
         }
 
-        $data['profile_picture'] = $fileDir; // armazena o dado enviado pelo form no campo picture dentro de filedir = caminho da imagem
-
-        //criado variável com a classe ngos criada no model para receber os dados do post
-        $ngo = Ngos::create( $data );
-        /* $user = User::create( $data ); */
+        /* $data['profile_picture'] = $fileDir;  */// armazena o dado enviado pelo form no campo picture dentro de filedir = caminho da imagem
         
+        $result = $newNgo->save();
+
         //criando condicional para informar o cadastro
-        if ($ngo){
+        if ($newNgo){
             /* echo "<script>alert('Cadastro realizado com Sucesso!);</script>"; */
             /* return view('login', ['message'=>'Cadastro realizado com sucesso!']); */
            return redirect('login')->with('success', ['Cadastro Realizado com sucesso!!']);
@@ -123,33 +152,89 @@ class NgoController extends Controller
 
     //método para buscar os dados da ong
     public function editNgo($id){
-        $ngo = Ngos::where('id', $id)->first(); //recebe o id da ong cadastrada o método first busca todos os registros
-        return view('Ngos.editNgo', ["ngo"=>$ngo]);
+        $ngo = Ngos::find($id); //recebe o id da ong cadastrada o método first busca todos os registros
+        $user = User::find($id)->where('email', '=', $ngo->id)->get();
+        
+        if($ngo){
+            return view('Ngos.editNgo', ["ngo"=>$ngo, "user"=>$user]);
+        }else{
+            return view('Ngos.editNgo');
+        }
     }   
 
     //método para fazer a edição dos dados da ong
     public function doEditNgo(Request $request){
+        
+        $ngo = Ngos::find($request->id);
+        
+        $ngo->social_name = $request->social_name;
+        $ngo->fantasy_name = $request->fantasy_name;
+        $ngo->cnpj = $request->cnpj;
+        $ngo->profile_picture = $request->profile_picture;
+        $ngo->site = $request->site;
+        $ngo->phone_number = $request->phone_number;
+        $ngo->responsable_name = $request->responsable_name;
+        $ngo->address = $request->address;
+        $ngo->number = $request->number;
+        $ngo->complement = $request->complement;
+        $ngo->zip_code = $request->zip_code;
+        $ngo->neighborhood = $request->neighborhood;
+        $ngo->city = $request->city;
+      /*   $ngo->email = $request->email;
+        $ngo->password = $request->password; */
+        $ngo->state = $request->state;
+        $ngo->about_the_ngo = $request->about_the_ngo;
+        $ngo->type_account = $request->type_account;
+        $ngo->bank_name = $request->bank_name;
+        $ngo->bank_agency = $request->bank_agency;
+        $ngo->bank_account = $request->bank_account;
+        $ngo->user_id = $ngo->id;
 
-        $request->validate([]);
+        $result = $ngo->save();
+
+        $user = User::find($ngo->user_id);
+        $user->email = $request->email;
+
+        $user->save();
+
+
+        if($request->hasFile('profile_picture') && $request->file('preofile_picture')->isValid()){
+            $name= date('HisYmd');
+            $extension = $request->profile_picture->extension();
+            $fileName = "{$name}.{$extension}";
+        }
+
+        if(!empty($request->progile_picture)) {
+            $upload = $request->progile_picture->storageAs('ngo_pictures', $fileName);
+            $ngo->profile_picture = $fileName;
+        }
+
+        $result = $ngo->save(); 
+        
+        return redirect('ong/edita/' . $request->id);
+    }
+        
+        /*  $request->validate([]);
 
         $ngo = new Ngos($request->post()); // atribuo os novos valores vindo pelo formulário editado 
         //retorno na condicional informando se deu certo
         if($ngo->save()){ //se deu certo ele salva os dados e retorna para perfil da ong
             echo  "<script>alert('Dados editados com sucesso!);</script>";
-            
-            return redirect('perfil/' . $request->post()['id'] );
+            return view('Ngos.editNgo', ['ngo'=>$ngo]);
         }else{
             echo  "<script>alert('Falha ao editar dados');</script>";
         }
     }
-
+ */
     //método para deletar a ong - APENAS PARA ADMIN??
     public function deleteNgo(Request $request){
-        //recebo os dados da ong pego o id e removo pelo metodo delete()
-        $data = $request->post();
-        $ngo = Ngos::where('id', $data['id'])->get()[0]; //pega o primeiro índice do array  
-        $ngo->delete();
-        return view('Ngos.profileNgo');
+        //recebo os dados da ong pego o id e removo pelo metodo delete()         
+        $result = $request->post();         
+        $ngo = Ngos::where('id', $result['id'])->get()[0]; //pega o primeiro índice do array  
+        $user = User::where('id', $ngo->user_id)->get()[0];
+        $user->status_id = 2;
+        $user->save();
+        return view('/home');
     }
 
     public function accountViewMyPets($ngoId) {

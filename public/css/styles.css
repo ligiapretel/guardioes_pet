@@ -1738,3 +1738,14 @@ footer img {
     width: 20px;
 }
 
+/* customização dos ícones das redes sociais*/
+.rede{
+    margin: 5px;
+    float: left;
+    transition: all 0.4s ease-out;
+}
+
+.rede:hover{
+    cursor: pointer;
+    transform: translateY(-20px);
+}

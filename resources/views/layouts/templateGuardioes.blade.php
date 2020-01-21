@@ -65,12 +65,27 @@
                     @else
                     <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                
                                 {{ Auth::user()->email }}     
                                     <span class="caret"></span>
                                 </a>
                                 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+
+                                    <a class="dropdown-item" href=
+
+                        @switch (Auth::user()->user_group_id)
+                            @case(1)
+                            'admin/atualizar'
+                            @case (2)
+                            'pet/cadastro'
+                            @case(3)
+                            'guardiao/account/perfil'
+                        @endswitch
+
+                                    >
+                                        {{ __('Minha conta') }}
+                                    </a>
+
                                     <a class="dropdown-item" href="/logout"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -80,6 +95,8 @@
                                     <form id="logout-form" action="/logout" method="POST" style="">
                                         @csrf
                                     </form>
+
+
                                 </div>
                                 
                                 
@@ -125,9 +142,15 @@
 
                     <div class="row">
                         <div class="col-12 pt-5 pb-5">
-                            <a href="https://www.facebook.com/"><img src="/img/facebook1.png" alt="facebook"></a>
-                            <a href="https://www.instagram.com/"><img src="/img/instagram1.png" alt="instagram"></a>
-                            <a href="https://www.twitter.com/"><img src="/img/twitter1.png" alt="twitter"></a>                    
+                            <div class="rede" id="facebook">
+                                <a target="_blank" href="https://www.facebook.com/guardioesPet"><img src="/img/facebook1.png" alt="facebook"></a>
+                            </div>
+                            <div class="rede" id="instagram">
+                                <a target="_blank" href="https://www.instagram.com/petguardioes"><img src="/img/instagram1.png" alt="instagram"></a>
+                            </div>
+                            <div class="rede" id="twitter">
+                                <a target="_blank" href="https://www.twitter.com/"><img src="/img/twitter1.png" alt="twitter"></a>                    
+                            </div>
                         </div>
                     </div> 
 
