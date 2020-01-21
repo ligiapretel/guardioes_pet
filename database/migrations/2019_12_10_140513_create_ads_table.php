@@ -15,12 +15,12 @@ class CreateAdsTable extends Migration
     {
         Schema::create('ads', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->text('medicine', 3000);
-            $table->text('hygiene_supply', 3000); 
-            $table->text('food', 3000);    
-            $table->text('toys', 3000);   
-            $table->text('accessories', 3000);    
-            $table->text('others', 3000);    
+            $table->text('medicine', 3000)->nullable();;
+            $table->text('hygiene_supply', 3000)->nullable();; 
+            $table->text('food', 3000)->nullable();;    
+            $table->text('toys', 3000)->nullable();;   
+            $table->text('accessories', 3000)->nullable();;    
+            $table->text('others', 3000)->nullable();;    
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');   
             $table->timestamps();

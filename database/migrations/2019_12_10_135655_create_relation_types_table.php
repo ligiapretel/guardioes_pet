@@ -3,6 +3,8 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use App\Relation_type;
+
 
 class CreateRelationTypesTable extends Migration
 {
@@ -18,6 +20,12 @@ class CreateRelationTypesTable extends Migration
             $table->string('relation',20);
             $table->timestamps();
         });
+
+        Relation_type::insert([
+            ['relation' => 'adoção'],
+            ['relation' => 'lar temporário'],
+            ['relation' => 'apadrinhamento']
+        ]);
     }
 
     /**
