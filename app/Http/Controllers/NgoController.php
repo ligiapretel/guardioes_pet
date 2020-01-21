@@ -152,14 +152,63 @@ class NgoController extends Controller
 
     //método para buscar os dados da ong
     public function editNgo($id){
-        $ngo = Ngos::where('id', $id)->first(); //recebe o id da ong cadastrada o método first busca todos os registros
-        return view('Ngos.editNgo', ["ngo"=>$ngo]);
+        $ngo = Ngos::find($id); //recebe o id da ong cadastrada o método first busca todos os registros
+        $user = User::find($id)->where('email', '=', $ngo->id)->get();
+        
+        if($ngo){
+            return view('Ngos.editNgo', ["ngo"=>$ngo, "user"=>$user]);
+        }else{
+            return view('Ngos.editNgo');
+        }
     }   
 
     //método para fazer a edição dos dados da ong
     public function doEditNgo(Request $request){
 
-        $request->validate([]);
+        $ngo = Ngos::find($request->idNgo);
+        $ngo->social_name = $request->social_name;
+        $ngo->fantasy_name = $request->fantasy_name;
+        $ngo->cnpj = $request->cnpj;
+        $ngo->profile_picture = $request->profile_picture;
+        $ngo->site = $request->site;
+        $ngo->phone_number = $request->phone_number;
+        $ngo->responsable_name = $request->responsable_name;
+        $ngo->address = $request->address;
+        $ngo->number = $request->number;
+        $ngo->complement = $request->complement;
+        $ngo->zip_code = $request->zip_code;
+        $ngo->neighborhood = $request->neighborhood;
+        $ngo->city = $request->city;
+      /*   $ngo->email = $request->email;
+        $ngo->password = $request->password; */
+        $ngo->state = $request->state;
+        $ngo->about_the_ngo = $request->about_the_ngo;
+        $ngo->type_account = $request->type_account;
+        $ngo->bank_name = $request->bank_name;
+        $ngo->bank_agency = $request->bank_agency;
+        $ngo->bank_account = $request->bank_account;
+        $ngo->user_id = $newUser->id;
+
+        $result = $ngo->save();
+
+        $user = User::find($ngo->user_id);
+        $user->email = $request->email;
+
+        $user->save();
+
+        if($request->hasFile('profile_picture') && $request->file('preofile_picture')->isValid()){
+            $name= date('HisYmd');
+            $extension = $request->profile_picture->extension();
+            $fileName = "{$name}.{$extension}";
+        }
+        
+            $upload = $request->progile_picture->storageAs('ngo_pictures', $fileName);
+            $ngo->profile_picture = $fileName;
+    }
+    $result = $ngo->save();
+    
+    return view('Ngos.editNgo', ["result"=>$result]);
+        /*  $request->validate([]);
 
         $ngo = new Ngos($request->post()); // atribuo os novos valores vindo pelo formulário editado 
         //retorno na condicional informando se deu certo
@@ -170,14 +219,14 @@ class NgoController extends Controller
             echo  "<script>alert('Falha ao editar dados');</script>";
         }
     }
-
+ */
     //método para deletar a ong - APENAS PARA ADMIN??
     public function deleteNgo(Request $request){
         //recebo os dados da ong pego o id e removo pelo metodo delete()
-        $data = $request->post();
-        $ngo = Ngos::where('id', $data['id'])->get()[0]; //pega o primeiro índice do array  
+        $result = $request->post();
+        $ngo = Ngos::where('id', $result['id'])->get()[0]; //pega o primeiro índice do array  
         $ngo->delete();
-        return view('Ngos.profileNgo');
+        return view('/home');
     }
 
     public function accountViewMyPets($ngoId) {

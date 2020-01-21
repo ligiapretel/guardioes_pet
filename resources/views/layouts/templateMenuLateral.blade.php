@@ -89,10 +89,10 @@
                             <a class="nav-link menu-ong-sair" href="/guardiao/deletar">Deletar Conta</a><!--depois q fizerem o login passar a session e o -> id-->
                         @endif
                     @else
-                    <img id="perfil-ong" class="ml-4" src="{{ asset($ngo['profile_picture'] ?? '')  }}" alt="logo da ONG" />
+                    <img id="perfil-ong" class="ml-4" src="{{ asset($ngo ?? ''['profile_picture'] ?? '')  }}" alt="logo da ONG" />
                         <div class="card-body" style="width: 20rem;">
                             <nav class="nav flex-column bg-light">
-                                <a class="nav-link menu-ong active" href="/ong/editar/">Meu Perfil</a><!--depois q fizerem o login passar a session e o -> id-->
+                                <a class="nav-link menu-ong active" href="/ong/editar/{{ $user->id ?? '' }}">Meu Perfil</a><!--depois q fizerem o login passar a session e o -> id-->
                                 <a class="nav-link menu-ong" href="#">Animais Cadastrados</a>
                                 <a class="nav-link menu-ong" href="#">Cadastrar Novos Animais</a>
                                 <a class="nav-link menu-ong" href="/anuncios/meus-anuncios">Anúncios Cadastrados</a>

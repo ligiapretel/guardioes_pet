@@ -6,7 +6,7 @@
 
 @section('content')
 
-        <form action="{{ url('/edita') }}" method="POST" class="card col-lg-8 col-md-12 col-sm-12 col-12 p-5" id="formOng">
+        <form action="{{ url('ong/edita') }}" method="POST" class="card col-lg-8 col-md-12 col-sm-12 col-12 p-5" id="formOng">
         {{ csrf_field() }} <!--gera token de segurança - verifica se o usuário é autenticado-->
         
             <!-- essa div é para o título -->
@@ -51,7 +51,7 @@
             <div class="form-group row">
                 <label for="emailNgo" class="col-sm-4 col-form-label">E-mail</label>
                 <div class="col-sm-8">
-                    <input type="email" class="form-control" name="email" placeholder="seunome@email.com" value="{{ isset($ngo['email']) ? $ngo['email'] : '' }}">
+                    <input type="email" class="form-control" name="email" placeholder="seunome@email.com" value="{{ isset($user['email']) ? $user['email'] : '' }}">
                 </div>
             </div>
             <div class="form-group row" id="campo">
@@ -117,7 +117,7 @@
                 <div class="form-group col-6 md-4 p-1">
                     <label>Tipo de Conta:</label>
                     <select class="form-control">
-                        <option name="type_account" value="{{ isset($ngo['type_account']) ? $ngo['type_account'] : '' }}" selected disable>Seleciona uma Opção</option>
+                        <option name="type_account" selected disable>{{ isset($ngo['type_account']) ? $ngo['type_account'] : '' }}</option>
                         <option name="Conta Corrente">Conta Corrente</option>
                         <option name="Conta Poupança">Conta Poupança</option>
                     </select>
