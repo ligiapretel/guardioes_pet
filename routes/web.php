@@ -44,7 +44,7 @@ Route::get('/parceiros', "SiteController@viewPartners");
 Route::get('/sobre', "SiteController@viewAbout");
 
 //Pet´s Routes
-Route::get('/pet/cadastro', "PetController@viewForm")->middleware('checkngo');
+Route::get('/pet/cadastro/{id?}', "PetController@viewForm")->middleware('checkngo');
 Route::post('/pet/cadastro', "PetController@register");
 Route::get('/pet/atualizar/{id?}','PetController@viewFormUpdate');
 Route::post('/pet/atualizar', "PetController@update");
