@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\User;
 use App\Pet;
+use App\Ngos;
 use App\PetPicture;
 use Auth;
 use Illuminate\Support\Facades\DB;
@@ -20,9 +21,11 @@ class PetController extends Controller
     //     return view('Pets.pets');
     // }
 
-    public function viewForm (Request $request) {
-        $ngo = Auth::user();         
-        return view ('Pets.registerPet', $ngo);
+    public function viewForm (Request $request, $id) {
+        $ngo = Ngos::find($id) ;
+        
+             
+        return view ('Pets.registerPet', ["ngo"=>$ngo]);
     }
 
     public function register (Request $request) {

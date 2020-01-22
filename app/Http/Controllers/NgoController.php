@@ -44,10 +44,7 @@ class NgoController extends Controller
     }
 
     //inicio da função para cadastro da ong via formulário  
-    public function doRegisterNgo(Request $request){
-
-
-    
+    public function doRegisterNgo(Request $request){    
 
         //criando novo usuário na tabela Users:
         $newUser = new User();
@@ -107,7 +104,7 @@ class NgoController extends Controller
             $fileName = "{$name}.{$extension}";
 
             //salvando a foto no storage:
-            $upload = $request->profile_picture->storeAs('ngos_pictures', $fileName);
+            $upload = $request->profile_picture->storeAs('public/ngos_pictures', $fileName);
             //salvando a foto no BD:
             $newNgo->profile_picture = $fileName;
         }
@@ -144,9 +141,12 @@ class NgoController extends Controller
         if ($newNgo){
             /* echo "<script>alert('Cadastro realizado com Sucesso!);</script>"; */
             /* return view('login', ['message'=>'Cadastro realizado com sucesso!']); */
-           return redirect('login')->with('success', ['Cadastro Realizado com sucesso!!']);
+           return redirect('login')
+                ->with('success', 'Cadastro Realizado com sucesso!!');
         } else {
-            return view('ong/cadastro');
+            return redirect()
+                ->back()
+                ->with('errors', 'Falha ao cadastrar, contate o suporte.');
         }
     }    
 
@@ -158,7 +158,7 @@ class NgoController extends Controller
         if($ngo){
             return view('Ngos.editNgo', ["ngo"=>$ngo, "user"=>$user]);
         }else{
-            return view('Ngos.editNgo');
+            return view('Ngos.editNgo', ["ngo"=>$ngo, "user"=>$user]);
         }
     }   
 

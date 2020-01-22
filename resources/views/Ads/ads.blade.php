@@ -6,10 +6,10 @@ Guardiões Pet | Anúncios
 
 @section('content')
 <section id="anuncios">
-        <section>
+        <!-- Se existir algum anúncio, exibe o título -->
+        @empty($listAds)
             <h3 class="tituloGeralAnuncios mb-4 d-flex justify-content-center">Nossos Guardiões também precisam da sua ajuda!</h3>
-        </section>
-        <section>
+        @endempty
         @forelse($listAds ?? '' as $ad)
             <div class="mt-5">
                 <table class="table">
@@ -40,8 +40,11 @@ Guardiões Pet | Anúncios
                 </div>
             </div>
             @empty
-                <h3>Não encontramos anúncios para exibir.</h3>
+                <div class="row justify-content-center p-5 mt-5">
+                    <h3 class="titleh3">Nenhum anúncio ativo no momento.</h3>
+                    <p class="text text-center">Se você é um Guardião ou ONG e precisa de doações (medicamentos, itens de higiene, alimentos ou qualquer outra necessidade), acesse sua conta para cadastrar anúncios, assim outras pessoas podem ajudar você. =)</p>
+                    <p class="text text-center"><span style="font-weight:bold;">Ainda não tem cadastro?</span> <a href="/cadastre-se" class="link-roxo">Cadastre-se agora</a> e faça parte da maior comunidade amiga dos pets.</p>
+                </div>
             @endforelse                 
-        </section>
 </section>
 @endsection
