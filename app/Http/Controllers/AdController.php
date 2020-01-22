@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Ad;
 use App\User;
+use Auth;
 
 class AdController extends Controller
 {
@@ -67,10 +68,11 @@ class AdController extends Controller
         return view('Ads.updateAds',["result"=>$result]);
     }
 
-    public function viewMyAds(Request $request, $id){
-        $ads = Ad::find($id);
-        $users = User::where('id', '=', $id)->get();
-        return view('Ads.myAds', ['ads'=>$ads],['users'=>$users]);
+    public function viewMyAds(Request $request){
+        // $ads = Ad::find($id);
+        // $users = User::where('id', '=', $id)->get();
+        // return view('Ads.myAds', ['ads'=>$ads],['users'=>$users]);
+        return view('Ads.myAds');
     }
 
     public function delete(Request $request, $id=0){
