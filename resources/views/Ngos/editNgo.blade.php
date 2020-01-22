@@ -39,7 +39,7 @@
             <div class="form-group row">
                 <label for="pictureNgo" class="col-sm-4 col-form-label">Foto de Perfil</label>
                 <div class="col-sm-8">
-                    <input type="file" class="form-control-file" name="profile_picture" value="{{$ngo->profile_picture}}">
+                    <input type="file" class="form-control-file" name="profile_picture" value="{{asset('storage/ngos_pictures/'.$ngo->profile_picture)}}">
                 </div>
             </div>
             <div class="form-group row">

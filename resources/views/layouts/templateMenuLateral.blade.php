@@ -131,7 +131,7 @@
                         <img
                             id="perfil-ong"
                             class="ml-4"
-                            src="{{ asset($ngo ['profile_picture'] ?? '')  }}"
+                            src="{{asset('storage/ngos_pictures/'.$ngo->profile_picture)}}"
                             alt="logo da ONG"/>
                         <div class="card-body" style="width: 20rem">
                             <nav class="nav flex-column bg-light">
@@ -139,8 +139,8 @@
                                     class="nav-link menu-ong active"
                                     href="{{ url('ong/edita/'. Auth::user()->id) }}">Meu Perfil</a>
                                 <!--depois q fizerem o login passar a session e o -> id-->
-                                <a class="nav-link menu-ong" href="#">Animais Cadastrados</a>
-                                <a class="nav-link menu-ong" href="/pet/cadastro">Cadastrar Novos Animais</a>
+                                <a class="nav-link menu-ong" href="/minhaconta/pets/. Auth::user()->id)">Animais Cadastrados</a>
+                                <a class="nav-link menu-ong" href="{{url('pet/cadastro/'. Auth::user()->id) }}">Cadastrar Novos Animais</a>
                                 <a class="nav-link menu-ong" href="/anuncios/meus-anuncios">Anúncios Cadastrados</a>
                                 <a class="nav-link menu-ong" href="/anuncios/cadastro">Cadastrar Novos Anúncios</a>
                                 <a class="nav-link menu-ong" href="/chat">Mensagens</a>
