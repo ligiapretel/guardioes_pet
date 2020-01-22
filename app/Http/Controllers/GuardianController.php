@@ -21,6 +21,7 @@ class GuardianController extends Controller
             return view('/Guardian.profileGuardian', ['profile'=>$profile]);
         }
     }
+    
 
     // Função para ver  perfil do guardião
     public function viewMyAccountGuardian(Request $request, $id=3){
@@ -107,10 +108,10 @@ class GuardianController extends Controller
     public function formUpdate(Request $request, $id=0){
 
             $guardian = Guardian::find($id);
-            $user = User::find($id)->where('email', '=', $guardian->id)->get();
+            //$user = User::find($id)->where('email', '=', $guardian->id)->get();
             
             if($guardian){
-                return view('Guardian.formUpdateGuardian', ["guardian"=>$guardian, "user"=>$user]);
+                return view('Guardian.formUpdateGuardian', ["guardian"=>$guardian]);
             } else {
                 return view('Guardian.formUpdateGuardian');
             }

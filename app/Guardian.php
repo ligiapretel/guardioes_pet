@@ -31,4 +31,8 @@ class Guardian extends Model{
     public function user(){
         return $this->belongsTo('App\User');
     }
+
+    public function relation_type(){
+        return $this->belongsTo('App\Relation_type');
+    }
 }

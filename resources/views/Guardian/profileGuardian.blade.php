@@ -10,7 +10,7 @@
     @if(isset($profile))
         <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-12 col-12 d-flex justify-content-center">
-                <img id="perfilGua_imagem" class="rounded-circle" src="{{asset('storage/guardians_pictures/'.$profile->profile_picture)}}">
+                <img id="perfilGua_imagem" class="rounded-circle" height="300" width="300" src="{{asset('storage/guardians_pictures/'.$profile->profile_picture)}}">
 {{-- Pra imagem aparecer, precisa dar o comando php artisan storage:link no bash --}}
             </div>
 
@@ -37,21 +37,28 @@
 
     {{-- Essa parte aqui também deve ser feita com back-end? Pra trazer os animais apadrinhados, lar temporário.... --}}
     <!--Onde esta localizado os Animais Apadrinhados-->
+    
     <section class="container-fluid" id="perfilOngGuar_animais"> 
         <div class="row">
             <h2 class="col-lg-12 text-dark font-weight-bold pfOngGuard_titulo">Apadrinhados</h2>
-
-            <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-                <div class="card" style="background-color: #E7E2FC">
-                    <img src="/img/pfGuardiao_cachorro1.jpg" class="card-img-top img-fluid" height="300" width="300">
-                    <div class="card-body">
-                    <h4 class="card-title text-dark font-weight-bold">Elza</h4>
-                        <p class="card-text text-secondary">Tenho uma pelagem de tres cores que é puro charme e pra completar uma carinha inocente que é i-rre-sis-tível!Adoro tomar um solzinho na janela e tirar cochilos na ...</p>
-                        <a href="#" class="btn btn-roxo-outline">Saiba mais</a> 
+            @if($relation_type->id===3)
+                @if(isset($pet))
+                <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                    <div class="card" style="background-color: #E7E2FC">
+                        @foreach ($pet_pictures as $picture)
+                        <img src="{{asset('storage/pets_pictures/'.$picture->picture)}}" class="card-img-top img-fluid">
+                        @endforeach
+                        <div class="card-body">
+                        <h4 class="card-title text-dark font-weight-bold">{{$pet->name}}</h4>
+                            <p class="card-text text-secondary">{{$pet->description}}
+                                {{-- Tenho uma pelagem de tres cores que é puro charme e pra completar uma carinha inocente que é i-rre-sis-tível!Adoro tomar um solzinho na janela e tirar cochilos na ... --}}
+                            </p>
+                            <a href="/pet/perfil/{{$pet->id}}" class="btn btn-roxo-outline">Saiba mais</a> 
+                        </div>
                     </div>
                 </div>
-            </div>
-
+                @endif
+            @endif
             <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                 <div class="card" style="background-color: #E7E2FC">
                     <img src="/img/pfGuardiao_gato1.jpeg" class="card-img-top img-fluid" height="300" width="300">

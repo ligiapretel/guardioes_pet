@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 
 //Guardian´s Routes
-Route::get('/guardiao/perfil/{id?}', "GuardianController@viewProfileGuardian");
+Route::get('/guardiao/perfil/{id?}', "GuardianAndPetController@viewProfileGuardianPet");
 Route::get('/guardiao/account/perfil/{id?}', "GuardianController@viewMyAccountGuardian");
 Route::get('/cadastroGuardiao', "GuardianController@createGuardian");
 Route::post('/cadastroGuardiao', "GuardianController@createGuardian");
