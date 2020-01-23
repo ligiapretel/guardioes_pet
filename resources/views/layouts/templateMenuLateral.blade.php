@@ -177,7 +177,7 @@
                                 <a class="nav-link menu-ong" href="/chat">Mensagens</a>
                                 <a class="nav-link menu-ong-sair" href="/logout" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                    {{ __('Logout') }}>Sair</a>
+                                    {{ __('Logout') }}</a>
                                 <form
                                     method='post'
                                     action='{{ url("ong/deleta") }}'
