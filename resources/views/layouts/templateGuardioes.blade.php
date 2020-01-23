@@ -79,7 +79,7 @@
                                     @case(1)
                                     'admin/atualizar'
                                     @case (2)
-                                    'pet/cadastro'
+                                    'ong/edita'
                                     @case(3)
                                     'guardiao/account/perfil'
                                     @endswitch

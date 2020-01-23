@@ -175,7 +175,9 @@
                                 <a class="nav-link menu-ong" href="/anuncios/meus-anuncios">Anúncios Cadastrados</a>
                                 <a class="nav-link menu-ong" href="/anuncios/cadastro">Cadastrar Novos Anúncios</a>
                                 <a class="nav-link menu-ong" href="/chat">Mensagens</a>
-                                <a class="nav-link menu-ong-sair" href="/logout">Sair</a>
+                                <a class="nav-link menu-ong-sair" href="/logout" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                    {{ __('Logout') }}>Sair</a>
                                 <form
                                     method='post'
                                     action='{{ url("ong/deleta") }}'
