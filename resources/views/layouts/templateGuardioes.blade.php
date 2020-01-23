@@ -79,7 +79,7 @@
                                     @case(1)
                                     'admin/atualizar'
                                     @case (2)
-                                    'ong/edita'
+                                    {{ url('ong/edita/'. Auth::user()->id) }}
                                     @case(3)
                                     'guardiao/account/perfil'
                                     @endswitch

@@ -162,7 +162,7 @@
                         <img
                             id="perfil-ong"
                             class="ml-4"
-                            src="{{asset('storage/ngos_pictures/'.$ngo->profile_picture)}}"
+                            src="{{asset('storage/public/ngos_pictures/'.$ngo->profile_picture)}}"
                             alt="logo da ONG"/>
                         <div class="card-body" style="width: 20rem">
                             <nav class="nav flex-column bg-light">
@@ -177,11 +177,11 @@
                                 <a class="nav-link menu-ong" href="/chat">Mensagens</a>
                                 <a class="nav-link menu-ong-sair" href="/logout" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                    {{ __('Logout') }}</a>
+                                    {{ __('Sair') }}</a>
                                 <form
                                     method='post'
                                     action='{{ url("ong/deleta") }}'
-                                    onsubmit='if(!confirm("Desdejeas realmete excluir?")) return false;'>
+                                    onsubmit='if(!confirm("Te certeza que gostaria de excluir sua conta?")) return false;'>
                                     <!--true = deleta false = cancela -->
                                     @csrf
                                     <input type='hidden' value='{{ 2 }}' name='id'>

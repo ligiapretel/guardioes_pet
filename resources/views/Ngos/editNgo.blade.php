@@ -51,13 +51,13 @@
             <div class="form-group row">
                 <label for="emailNgo" class="col-sm-4 col-form-label">E-mail</label>
                 <div class="col-sm-8">
-                    <input type="email" class="form-control" name="email" placeholder="seunome@email.com" value="{{ isset($user['email']) ? $user['email'] : '' }}">
+                    <input type="email" class="form-control" name="email" placeholder="seunome@email.com" value="{{ $user->email }}">
                 </div>
             </div>
             <div class="form-group row" id="campo">
                 <label for="passwordNgo" class="col-sm-4 col-form-label">Defina uma senha</label>
                 <div class="col-sm-6">
-                    <input type="password" class="form-control pwd" name="password" value="password" placeholder="Nova senha minimo 6 caracteres"  value="{{ isset($ngo['user_id']) ? $ngo['user_id'] : '' }}">
+                    <input type="password" class="form-control pwd" name="password" value="password" placeholder="Nova senha minimo 6 caracteres"  value="{{ $user->password }}">
                 </div>
                 <div class="col-sm-2 d-flex align-items-center">
                     <img src="http://i.stack.imgur.com/H9Sb2.png" title="Visualizar a senha" alt="visualizar senha" id="olho">
@@ -66,7 +66,7 @@
             <div class="form-group row" id="campo2">
                 <label for="passwordNgo" class="col-sm-4 col-form-label">Confirme sua senha</label>
                 <div class="col-sm-6">
-                    <input type="password" class="form-control" name="re-password" value="password" placeholder="Confirme sua nova senha" value="{{ isset($ngo['user_id']) ? $ngo['user_id'] : '' }}">
+                    <input type="password" class="form-control" name="re-password" value="password" placeholder="Confirme sua nova senha" value="{{ $user->password }}">
                 </div>
                 <div class="col-sm-2 d-flex align-items-center">
                     <img src="http://i.stack.imgur.com/H9Sb2.png" title="Visualizar a senha" alt="visualizar senha" id="olho">
@@ -117,7 +117,7 @@
                 <div class="form-group col-6 md-4 p-1">
                     <label>Tipo de Conta:</label>
                     <select class="form-control">
-                        <option name="type_account" selected disable>{{ isset($ngo['type_account']) ? $ngo['type_account'] : '' }}</option>
+                        <option name="type_account" selected>{{ isset($ngo['type_account']) ? $ngo['type_account'] : '' }}</option>
                         <option name="Conta Corrente">Conta Corrente</option>
                         <option name="Conta Poupança">Conta Poupança</option>
                     </select>
