@@ -162,7 +162,7 @@
                         <img
                             id="perfil-ong"
                             class="ml-4"
-                            src="{{asset('storage/ngos_pictures/'.$ngo->profile_picture)}}"
+                            src="{{asset('storage/ngos_pictures/'.$ngo ?? '' ->profile_picture)}}"
                             alt="logo da ONG"/>
                         <div class="card-body" style="width: 20rem">
                             <nav class="nav flex-column bg-light">

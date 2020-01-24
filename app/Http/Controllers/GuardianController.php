@@ -98,8 +98,8 @@ class GuardianController extends Controller
             }
 
             $result = $newGuardian->save();
-        
-            return view('Guardian.registerGuardian', ["result"=>$result]);
+
+           return view('Guardian.registerGuardian', ["result"=>$result]);
         }
     }
     

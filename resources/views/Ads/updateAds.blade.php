@@ -74,16 +74,5 @@ Guardiões Pet | Cadastro Anúncio
     <h3 class="pt-5 mt-5 text-center">Você não selecionou nenhum anúncio.</h3>
 </div>
 @endif
-<div class="col-6 col-md-12 col-lg-8 p-5 mt-5">
-    <!-- Verificando se a variável $result existe -->
-    @if(isset($result))
-    <!-- Verificando se a variável result é verdadeira -->
-    @if($result)
-    <h3 class="pt-5 mt-5 text-center">Anúncio atualizado com sucesso.</h3>
-    @else
-    <h3 class="pt-5 mt-5 text-center">Seu anúncio não foi atualizado. Por favor, refaça a alteração.</h3>
-    @endif
-    @endif
-</div>
 
 @endsection
