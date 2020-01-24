@@ -26,15 +26,16 @@ Route::get('/guardiao/deletar/{id?}', "GuardianController@delete");
 Route::get('/guardioes', "GuardianController@viewAllGuardians");
 
 //Ngo´s Routes
-Route::get('ong/perfil/{id?}','NgoController@viewProfileNgo');
-Route::get('ong/cadastro', "NgoController@registerNgo");
-Route::post('ong/cadastro', "NgoController@doRegisterNgo"); 
-Route::get('ong/edita/{id?}',"NgoController@editNgo")->middleware('checkngo'); 
-Route::post('ong/edita',"NgoController@doEditNgo");
-Route::post('ong/deleta',"NgoController@deleteNgo");
-Route::post('ong/visualizar',"NgoController@getNgo");
-Route::get('ong/{id?}/minhaconta/pets',"NgoController@accountViewMyPets")->middleware('checkngo');
-
+Route::group(['prefix' => 'ong'], function () {
+Route::get('/perfil/{id?}','NgoController@viewProfileNgo');
+Route::get('/cadastro', "NgoController@registerNgo");
+Route::post('/cadastro', "NgoController@doRegisterNgo"); 
+Route::get('/edita/{id?}',"NgoController@editNgo")->middleware('checkngo'); 
+Route::post('/edita',"NgoController@doEditNgo");
+Route::post('/deleta',"NgoController@deleteNgo");
+Route::post('/visualizar',"NgoController@getNgo");
+Route::get('/{id?}/minhaconta/pets',"NgoController@accountViewMyPets")->middleware('checkngo');
+});
 
 
 //Site´s Routes
