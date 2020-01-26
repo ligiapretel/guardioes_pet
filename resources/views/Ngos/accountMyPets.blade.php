@@ -9,7 +9,9 @@
 
     <div class="card col-lg-8 col-md-12 col-sm-12 col-12 p-5 mt-5">
        <div class="col-md-12 mt-5">
+       
             <table class="table">
+
                 <thead>
                     <tr>
                         <th scope="col">Nome do pet</th>
@@ -17,7 +19,8 @@
                     </tr>
                 </thead>
                  <tbody>
-                    @forelse($pets ?? '' as $pet)
+                 @forelse($pets ?? '' as $pet)
+
                         <tr>
                                 <td><a href="/pet/perfil/{{$pet->id}}">{{$pet->name}}</a></td>
 
@@ -28,7 +31,7 @@
                             </th>
                         </tr>
                     @empty
-                        <h4 class="text-danger">Não há produtos cadastrados</h4>
+                        <h4 class="text-secondary">Você ainda não cadastrou nenhum pet :(</h4>
                         
                     @endforelse    
                     </tbody>

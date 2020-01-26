@@ -22,13 +22,11 @@ class PetController extends Controller
     // }
 
     public function viewForm (Request $request, $id) {
-        $ngo = Ngos::find($id) ;
-        
-             
+        $ngo = Ngos::find($id);   
         return view ('Pets.registerPet', ["ngo"=>$ngo]);
     }
 
-    public function register (Request $request) {
+    public function register (Request $request, $id) {
         $newPet = new Pet;
         $newPet->name = $request->name;
         $newPet->type = $request->type;
@@ -50,11 +48,10 @@ class PetController extends Controller
         $newPet->adoption_available = $request->adoption_available;
         $newPet->temporary_home_available = $request->temporary_home_available;
         $newPet->sponsorship_available = $request->sponsorship_available;
-        $newPet->id_ngo = '1';
-        //$newPet->id_ngo = Auth::user()->id;
-
+        $ngo = Ngos::find($id);
+        $newPet->id_ngo = $ngo->id;
+  
         $result = $newPet->save();
-
 
         $newPetPicture = new PetPicture;
         $newPetPicture->picture = $request->picture;
@@ -71,9 +68,10 @@ class PetController extends Controller
             $newPetPicture->save();
         }    
 
-        $ngo = Auth::user();
+        // $ngoId = Auth::user();
 
-        return view('Pets.registerPet', ["result"=>$result, $ngo]);
+
+        return view('Pets.registerPet', ["result"=>$result, "ngo"=>$ngo]);
         //se houver result, será mostrada uma mensagem de sucesso (está na view)
     }
 

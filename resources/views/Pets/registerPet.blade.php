@@ -8,7 +8,7 @@
 
 <!-- início do formulário -->
 
-        <form action="/pet/cadastro" enctype="multipart/form-data" method="post"
+        <form action="/pet/cadastro/{{Auth::user()->id}}" enctype="multipart/form-data" method="post"
             class="card col-lg-8 col-md-12 col-sm-12 col-12 p-5" id="formAnimal" style="width: 50rem">
             @csrf
 
