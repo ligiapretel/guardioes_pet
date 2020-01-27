@@ -174,16 +174,16 @@
                         </div>
                         <div class="row justify-content-between mt-4">
                             <div class="cx-btn-respons">
-                                <a href="login"><button class="btn-roxo text-uppercase w-100">Adotar</button></a>
+                                <a href="/pet/perfil/adotar/{{$pet->id}}"><button class="btn-roxo text-uppercase w-100" name="adotar">Adotar</button></a>
                             </div>
                             <div class="cx-btn-respons">
-                                <button class="perfil-anim-btn-desativado w-100"
-                                    title="Opção indisponível no momento">Lar
-                                    temporário</button>
+                                <a href="/pet/perfil/lar/{{$pet->id}}"><button class="btn-roxo text-uppercase w-100"
+                                    title="Opção indisponível no momento" name="lar">Lar
+                                    temporário</button></a>
                             </div>
                             <div class="cx-btn-respons">
-                                <a href="login"><button
-                                        class="btn-roxo text-uppercase w-100">Apadrinhar</button></a>
+                                <a href="/pet/perfil/apadrinhar/{{$pet->id}}"><button
+                                        class="btn-roxo text-uppercase w-100" name="apadrinhar">Apadrinhar</button></a>
                             </div>
                         </div>
                     </div>

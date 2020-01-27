@@ -35,4 +35,8 @@ class Guardian extends Model{
     public function relation_type(){
         return $this->belongsTo('App\Relation_type');
     }
+
+    public function pets(){
+        return $this->belongsTo('App\Pet', 'guardian_has_pets', 'guardian_id', 'pet_id', 'relation_type_id');
+    }
 }

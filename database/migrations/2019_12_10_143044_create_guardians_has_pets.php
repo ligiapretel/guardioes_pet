@@ -11,9 +11,12 @@ class CreateGuardiansHasPets extends Migration
      *
      * @return void
      */ 
+
+    protected $table = "guardian_has_pets";
+    
     public function up()
     {
-        Schema::create('guardians_has_pets', function (Blueprint $table) {
+        Schema::create('guardian_has_pets', function (Blueprint $table) {
             $table->unsignedBigInteger('pet_id');
             $table->foreign('pet_id')->references('id')->on('pets');
             $table->unsignedBigInteger('guardian_id');
@@ -31,6 +34,6 @@ class CreateGuardiansHasPets extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('guardians_has_pets');
+        Schema::dropIfExists('guardian_has_pets');
     }
 }

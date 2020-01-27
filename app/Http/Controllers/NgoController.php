@@ -198,13 +198,13 @@ class NgoController extends Controller
         $user->save();
 
 
-        if($request->hasFile('profile_picture') && $request->file('preofile_picture')->isValid()){
+        if($request->hasFile('profile_picture') && $request->file('profile_picture')->isValid()){
             $name= date('HisYmd');
             $extension = $request->profile_picture->extension();
             $fileName = "{$name}.{$extension}";
         }
 
-        if(!empty($request->progile_picture)) {
+        if(!empty($request->profile_picture)) {
             $upload = $request->progile_picture->storageAs('ngo_pictures', $fileName);
             $ngo->profile_picture = $fileName;
         }

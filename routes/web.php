@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 
 //Guardian´s Routes
-Route::get('/guardiao/perfil/{id?}', "GuardianAndPetController@viewProfileGuardianPet");
+Route::get('/guardiao/perfil/{id?}', "GuardianController@viewProfileGuardian");
 Route::get('/guardiao/account/perfil/{id?}', "GuardianController@viewMyAccountGuardian");
 Route::get('/cadastroGuardiao', "GuardianController@createGuardian");
 Route::post('/cadastroGuardiao', "GuardianController@createGuardian");
@@ -24,6 +24,11 @@ Route::get('/guardiao/editar/{id?}', "GuardianController@formUpdate");
 Route::post('/guardiao/editar', "GuardianController@storeUpdate");
 Route::get('/guardiao/deletar/{id?}', "GuardianController@delete");
 Route::get('/guardioes', "GuardianController@viewAllGuardians");
+
+Route::get('/guardiao/pet/perfil/{id?}', "GuardianAndPetController@viewProfileGuardianPet");
+Route::get('/pet/perfil/adotar/{id?}', "GuardianAndPetController@createAdoption");
+Route::get('/pet/perfil/lar/{id?}', "GuardianAndPetController@createHome");
+Route::get('/pet/perfil/apadrinhar/{id?}', "GuardianAndPetController@createSponsor");
 
 //Ngo´s Routes
 Route::get('ong/perfil/{id?}','NgoController@viewProfileNgo');

@@ -19,7 +19,8 @@
                     <h5 class="card-title">{{$g->name}}</h5>
                     <p class="card-text">{{$g->about_the_guardian}}</p>
                     <div>
-                        <button type="submit" class="btn-roxo-outline">Saiba mais</button>
+                        <button type="reset" class="btn btn-outline-danger mr-3">Deletar</button>
+                        <button type="submit" class="btn-roxo-outline ml-3">Editar</button>
                     </div>
                 </div>
                 </a>

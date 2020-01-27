@@ -119,7 +119,7 @@
                         style="width: 20rem;"
                         id="menu-principal">
                         @if(isset($profile)) @if($profile)
-                        <a class="nav-link menu-ong active mt-1" href="/guardiao/editar/">Meu Perfil</a>
+                        <a class="nav-link menu-ong active mt-1" href="/guardiao/editar/{{$profile->id}}">Meu Perfil</a>
                         <!--depois q fizerem o login passar a session e o -> id-->
                         <a class="nav-link menu-ong" href="/anuncios/meus-anuncios">Anúncios Cadastrados</a>
                         <a class="nav-link menu-ong" href="/anuncios/cadastro">Cadastrar Novos Anúncios</a>
@@ -131,7 +131,7 @@
                         <img
                             id="perfil-ong"
                             class="ml-4"
-                            src="{{asset('storage/ngos_pictures/'.$ngo->profile_picture)}}"
+                            {{-- src="{{asset('storage/ngos_pictures/'.$ngo->profile_picture)}}" --}}
                             alt="logo da ONG"/>
                         <div class="card-body" style="width: 20rem">
                             <nav class="nav flex-column bg-light">

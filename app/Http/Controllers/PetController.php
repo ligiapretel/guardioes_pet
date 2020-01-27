@@ -20,8 +20,8 @@ class PetController extends Controller
     // public function viewPets(Request $request) {
     //     return view('Pets.pets');
     // }
-
-    public function viewForm (Request $request, $id) {
+        //CH: inseri id=2 pra conseguir cadastar
+    public function viewForm (Request $request, $id=2) {
         $ngo = Ngos::find($id) ;
         
              
