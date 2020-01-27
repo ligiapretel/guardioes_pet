@@ -15,21 +15,21 @@
             <!--aqui começa o formulário -->
             <input  class="form-control" type="hidden"name="id" value="{{ isset($ngo['id']) ? $ngo['id'] : '' }}"/> <!--puxa o id da ong-->
             <div class="form-group row">
-                <label for="socialNameNgo" class="col-sm-4 col-form-label">Nome da ONG</label>
+                <label for="socialNameNgo" class="col-sm-4 col-form-label">Nome da ONG*</label>
                 <div class="col-sm-8">
-                    <input type="text" class="form-control" name="social_name" placeholder="Nome da sua ONG">
+                    <input type="text" class="form-control" name="social_name" placeholder="Nome da sua ONG" required>
                 </div>
             </div>
             <div class="form-group row">
-                <label for="fantasy_name" class="col-sm-4 col-form-label">Nome Fantasia da ONG</label>
+                <label for="fantasy_name" class="col-sm-4 col-form-label">Nome Fantasia da ONG*</label>
                 <div class="col-sm-8">
-                    <input type="text" class="form-control" name="fantasy_name" placeholder="Nome fantasia da sua ONG">
+                    <input type="text" class="form-control" name="fantasy_name" placeholder="Nome fantasia da sua ONG" required>
                 </div>
             </div>
             <div class="form-group row">
-                <label for="cnpjNgo" class="col-sm-4 col-form-label">CNPJ</label>
+                <label for="cnpjNgo" class="col-sm-4 col-form-label">CNPJ*</label>
                 <div class="col-sm-8">
-                    <input type="text" class="form-control" name="cnpj" placeholder="Número do CNPJ da ONG">
+                    <input type="text" class="form-control" name="cnpj" placeholder="Número do CNPJ da ONG" required>
                 </div>
             </div>
             <div class="form-group row">
@@ -39,33 +39,33 @@
                 </div>
             </div>
             <div class="form-group row">
-                <label for="nameNgo" class="col-sm-4 col-form-label">Nome do Responsável</label>
+                <label for="nameNgo" class="col-sm-4 col-form-label">Nome do Responsável*</label>
                 <div class="col-sm-8">
-                    <input type="text" class="form-control" name="responsable_name" placeholder="Responsavel da ONG">
+                    <input type="text" class="form-control" name="responsable_name" placeholder="Responsavel da ONG" required>
                 </div>
             </div>
             <div class="form-group row">
-                <label for="emailNgo" class="col-sm-4 col-form-label">E-mail</label>
+                <label for="emailNgo" class="col-sm-4 col-form-label">E-mail*</label>
                 <div class="col-sm-8">
-                    <input type="email" class="form-control" name="email" placeholder="seunome@email.com">
+                    <input type="email" class="form-control" name="email" placeholder="seunome@email.com" required>
                 </div>
             </div>
             <div class="form-group row">
-                <label for="passwordNgo" class="col-sm-4 col-form-label">Defina uma senha</label>
+                <label for="passwordNgo" class="col-sm-4 col-form-label">Defina uma senha*</label>
                 <div class="col-sm-8">
-                    <input type="password" class="form-control" name="password" placeholder="Nova senha minimo 6 caracteres" >
+                    <input type="password" class="form-control" name="password" placeholder="Nova senha minimo 6 caracteres" required >
                 </div>
             </div>
             <div class="form-group row">
-                <label for="passwordNgo" class="col-sm-4 col-form-label">Confirme sua senha</label>
+                <label for="passwordNgo" class="col-sm-4 col-form-label">Confirme sua senha*</label>
                 <div class="col-sm-8">
-                    <input type="password" class="form-control" name="re-password" placeholder="Confirme sua nova senha">
+                    <input type="password" class="form-control" name="re-password" placeholder="Confirme sua nova senha" required>
                 </div>
             </div>
             <div class="form-group row">
-                <label for="zipCodeNgo" class="col-sm-4 col-form-label">CEP</label>
+                <label for="zipCodeNgo" class="col-sm-4 col-form-label">CEP*</label>
                 <div class="col-sm-8">
-                    <input type="text" class="form-control" id="cep" name="zip_code" placeholder="CEP">
+                    <input type="text" class="form-control" id="cep" name="zip_code" placeholder="CEP" required>
                 </div>
             </div>
             <div class="form-row">
@@ -78,19 +78,19 @@
                     <input type="text" class="form-control" name="complement" placeholder="Ex.: Bloco B">
                 </div>
                 <div class="form-group col-md-6 p-1">
-                    <label for="addressNgo">Endereço</label>
+                    <label for="addressNgo">Endereço*</label>
                     <input type="text" id="rua" class="form-control" name="address" placeholder="Rua/Avenida/Logradouro">
                 </div>
                 <div class="form-group col-md-6 p-1">
-                    <label for="neighborhoodNgo">Bairro</label>
+                    <label for="neighborhoodNgo">Bairro*</label>
                     <input type="text" id="bairro" class="form-control" name="neighborhood" placeholder="Bairro">
                 </div>
                 <div class="form-group col-md-6 p-1">
-                    <label for="cityNgo">Cidade</label>
+                    <label for="cityNgo">Cidade*</label>
                     <input type="text" id="cidade" class="form-control" name="city" placeholder="Cidade">
                 </div>
                 <div class="form-group col-md-6 p-1">
-                    <label for="stateNgo">Estado</label>
+                    <label for="stateNgo">Estado*</label>
                     <input type="text" id="uf" class="form-control" name="state" placeholder="Estado">
                 </div>
                 <div class="form-group col-md-6 p-1">
@@ -98,8 +98,8 @@
                     <input type="text" class="form-control" name="site" placeholder="Site">
                 </div>
                 <div class="form-group col-md-6 p-1">
-                    <label for="phoneNumberNgo">Telefone</label>
-                    <input type="text" id="telefone" class="form-control" name="phone_number" placeholder="Telefone/Celular">
+                    <label for="phoneNumberNgo">Telefone*</label>
+                    <input type="text" id="telefone" class="form-control" name="phone_number" placeholder="Telefone/Celular" required>
                 </div>
                 <div class="form-group col-6 md-4 p-1">
                     <label>Tipo de Conta:</label>

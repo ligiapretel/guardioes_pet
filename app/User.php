@@ -74,7 +74,8 @@ class User extends Authenticatable
         // Verificando se o usuário é ong, ou seja, user_group_id 2, para buscar o nome dele na tabela ngos
         if($this->user_group_id == 2){
 
-            // return $this->ngo->social_name;
+            // Essa linha de código faz o mesmo que as linhas comentadas abaixo
+            // return $this->ngo->fantasy_name;
 
             $ngoName = DB::table('users')
             ->join('ngos', 'users.id', '=', 'ngos.user_id')
@@ -88,6 +89,7 @@ class User extends Authenticatable
             return $ngoName;
         
         }elseif($this->user_group_id == 3){
+
             $guardianName = DB::table('users')
             ->join('guardians', 'users.id', '=', 'guardians.user_id')
             ->select('users.*', 'guardians.*')

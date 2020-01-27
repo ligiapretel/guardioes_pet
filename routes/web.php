@@ -31,15 +31,16 @@ Route::get('/pet/perfil/lar/{id?}', "GuardianAndPetController@createHome");
 Route::get('/pet/perfil/apadrinhar/{id?}', "GuardianAndPetController@createSponsor");
 
 //Ngo´s Routes
-Route::get('ong/perfil/{id?}','NgoController@viewProfileNgo');
-Route::get('ong/cadastro', "NgoController@registerNgo");
-Route::post('ong/cadastro', "NgoController@doRegisterNgo"); 
-Route::get('ong/edita/{id?}',"NgoController@editNgo")->middleware('checkngo'); 
-Route::post('ong/edita',"NgoController@doEditNgo");
-Route::post('ong/deleta',"NgoController@deleteNgo");
-Route::post('ong/visualizar',"NgoController@getNgo");
-Route::get('ong/{id?}/minhaconta/pets',"NgoController@accountViewMyPets")->middleware('checkngo');
-
+Route::group(['prefix' => 'ong'], function () {
+Route::get('/perfil/{id?}','NgoController@viewProfileNgo');
+Route::get('/cadastro', "NgoController@registerNgo");
+Route::post('/cadastro', "NgoController@doRegisterNgo"); 
+Route::get('/edita/{id?}',"NgoController@editNgo")->middleware('checkngo'); 
+Route::post('/edita',"NgoController@doEditNgo");
+Route::post('/deleta',"NgoController@deleteNgo");
+Route::post('/visualizar',"NgoController@getNgo");
+Route::get('/{id?}/minhaconta/pets',"NgoController@accountViewMyPets")->middleware('checkngo');
+});
 
 
 //Site´s Routes
@@ -50,7 +51,7 @@ Route::get('/sobre', "SiteController@viewAbout");
 
 //Pet´s Routes
 Route::get('/pet/cadastro/{id?}', "PetController@viewForm")->middleware('checkngo');
-Route::post('/pet/cadastro', "PetController@register");
+Route::post('/pet/cadastro/{id?}', "PetController@register");
 Route::get('/pet/atualizar/{id?}','PetController@viewFormUpdate');
 Route::post('/pet/atualizar', "PetController@update");
 Route::get('/pet/excluir/{id?}','PetController@delete');
@@ -60,11 +61,11 @@ Route::get('/pets', "PetController@viewAllPets");
 //Ad´s Routes
 Route::get('/anuncios',"AdController@viewAllAds");
 Route::post('/anuncios',"AdController@create");
-Route::get('/anuncios/cadastro', "AdController@viewRegisterAds");
-Route::get('/anuncios/editar/{id?}', "AdController@viewFormUpdate");
+Route::get('/anuncios/cadastro', "AdController@viewRegisterAds")->middleware('checkuser');
+Route::get('/anuncios/editar/{id?}', "AdController@viewFormUpdate")->middleware('checkuser');
 Route::post('/anuncios/editar', "AdController@update");
-Route::get('/anuncios/deletar/{id?}', "AdController@delete");
-Route::get('/anuncios/{id?}/meus-anuncios', "AdController@viewMyAds");
+Route::get('/anuncios/deletar/{id?}', "AdController@delete")->middleware('checkuser');
+Route::get('/anuncios/meus-anuncios', "AdController@viewMyAds")->middleware('checkuser');
 
 //Chat´s Routes
 Route::get('/chat', 'ChatController@viewChat');

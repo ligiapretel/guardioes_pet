@@ -11,6 +11,7 @@ use App\User;
 use App\Users_group;
 use App\Status;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
 
 class NgoController extends Controller
 {
@@ -154,7 +155,8 @@ class NgoController extends Controller
     public function editNgo($id){
         $ngo = Ngos::find($id); //recebe o id da ong cadastrada o método first busca todos os registros
         $user = User::find($id)->where('email', '=', $ngo->id)->get();
-        
+        $user = User::find($id);
+
         if($ngo){
             return view('Ngos.editNgo', ["ngo"=>$ngo, "user"=>$user]);
         }else{
@@ -164,6 +166,7 @@ class NgoController extends Controller
 
     //método para fazer a edição dos dados da ong
     public function doEditNgo(Request $request){
+        $user = User::find($id);
         
         $ngo = Ngos::find($request->id);
         
@@ -205,7 +208,7 @@ class NgoController extends Controller
         }
 
         if(!empty($request->profile_picture)) {
-            $upload = $request->progile_picture->storageAs('ngo_pictures', $fileName);
+            $upload = $request->profile_picture->storageAs('ngo_pictures', $fileName);
             $ngo->profile_picture = $fileName;
         }
 

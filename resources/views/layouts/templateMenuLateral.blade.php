@@ -24,77 +24,101 @@
         <title>@yield('title')</title>
     </head>
     <body>
-        <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-            crossorigin="anonymous"></script>
-        <script
-            src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-            crossorigin="anonymous"></script>
+
         <!--HEADER-->
         <header class="fixed-top">
 
-            <div class="container col-12 pt-2 pb-2">
+<div class="container col-12 pt-2 pb-2">
 
-                <nav class="navbar navbar-expand-lg navbar-dark header-menu">
+    <nav class="navbar navbar-expand-lg navbar-dark header-menu">
 
-                    <a class="fonteHeader" href="/home">
-                        <img
-                            src="/img/escudo.png"
-                            alt="Guardiões Pet"
-                            width="35"
-                            class="d-inline-block align-center">
-                        Guardiões Pet
+        <a class="fonteHeader" href="/home">
+            <img src="/img/escudo.png" alt="Guardiões Pet" width="35" class="d-inline-block align-center">
+            Guardiões Pet
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+
+            <ul class="navbar-nav ml-md-auto mt-2 mt-lg-0 lista-menu">
+
+                <li class="nav-item">
+                    <a class="nav-link header-link" href='/home#seja-guardiao-home'>Ser um guardião</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link header-link" href="/sobre">Sobre nós</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link header-link" href='/home#como-funciona-home'>Como funciona</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link header-link" href="/parceiros">Parceiros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link header-link" href="/anuncios">Doações</a>
+                </li>
+                <!-- <li class="nav-item">
+                <a class="nav-link header-link" href="index.php#footer">Contato</a>
+            </li> -->
+
+                <!--VERIFICAR A ROTA DE LOGIN-->
+
+                @guest
+                <li class="nav-item">
+                    <a class="nav-link header-link" href="/login">Login</a>
+                <li class="nav-item">
+                    <a href="cadastre-se" class="header-link"><button type="button"
+                            class="btn-roxo">Cadastre-se</button></a>
+                    @else
+                <li class="nav-item dropdown">
+                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                        {{ Auth::user()->email }}
+                        <span class="caret"></span>
                     </a>
 
-                    <button
-                        class="navbar-toggler"
-                        type="button"
-                        data-toggle="collapse"
-                        data-target="#navbarTogglerDemo02"
-                        aria-controls="navbarTogglerDemo02"
-                        aria-expanded="false"
-                        aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
 
-                    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                        <a class="dropdown-item" href=@switch (Auth::user()->user_group_id)
+                            @case(1)
+                            'admin/atualizar'
+                            @case (2)
+                            'pet/cadastro'
+                            @case(3)
+                            'guardiao/account/perfil'
+                            @endswitch
 
-                        <ul class="navbar-nav ml-md-auto mt-2 mt-lg-0 lista-menu">
+                            >
+                            {{ __('Minha conta') }}
+                        </a>
 
-                            <li class="nav-item">
-                                <a class="nav-link header-link" href='/home#seja-guardiao-home'>Ser um guardião</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link header-link" href="/sobre">Sobre nós</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link header-link" href='/home#como-funciona-home'>Como funciona</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link header-link" href="/parceiros">Parceiros</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link header-link" href="/anuncios">Doações</a>
-                            </li>
-                            <!-- <li class="nav-item"> <a class="nav-link header-link"
-                            href="index.php#footer">Contato</a> </li> -->
+                        <a class="dropdown-item" href="/logout" onclick="event.preventDefault();
+                                             document.getElementById('logout-form').submit();">
+                            {{ __('Logout') }}
+                        </a>
 
-                            <!--VERIFICAR A ROTA DE LOGIN-->
-                            <li class="nav-item">
-                                <a class="nav-link header-link" href="/login">Login</a>
-                            <li >
-                                <a href="/cadastre-se" class="header-link">
-                                    <button type="button" class="btn-roxo">Cadastre-se</button>
-                                </a>
-                        </ul>
+                        <form id="logout-form" action="/logout" method="POST" style="">
+                            @csrf
+                        </form>
+
 
                     </div>
 
-                </nav>
-            </div>
-        </header>
+
+                </li>
+                @endguest
+
+            </ul>
+
+        </div>
+
+    </nav>
+</div>
+</header>
         <!--FINAL DO HEADER-->
 
         <!--MENU LATERAL-->
@@ -131,7 +155,7 @@
                         <img
                             id="perfil-ong"
                             class="ml-4"
-                            {{-- src="{{asset('storage/ngos_pictures/'.$ngo->profile_picture)}}" --}}
+                            src="{{asset('storage/public/ngos_pictures/'.$ngo->profile_picture)}}"
                             alt="logo da ONG"/>
                         <div class="card-body" style="width: 20rem">
                             <nav class="nav flex-column bg-light">
@@ -139,16 +163,18 @@
                                     class="nav-link menu-ong active"
                                     href="{{ url('ong/edita/'. Auth::user()->id) }}">Meu Perfil</a>
                                 <!--depois q fizerem o login passar a session e o -> id-->
-                                <a class="nav-link menu-ong" href="/minhaconta/pets/. Auth::user()->id)">Animais Cadastrados</a>
+                                <a class="nav-link menu-ong" href="/ong/{{Auth::user()->id}}/minhaconta/pets">Animais Cadastrados</a>
                                 <a class="nav-link menu-ong" href="{{url('pet/cadastro/'. Auth::user()->id) }}">Cadastrar Novos Animais</a>
                                 <a class="nav-link menu-ong" href="/anuncios/meus-anuncios">Anúncios Cadastrados</a>
                                 <a class="nav-link menu-ong" href="/anuncios/cadastro">Cadastrar Novos Anúncios</a>
                                 <a class="nav-link menu-ong" href="/chat">Mensagens</a>
-                                <a class="nav-link menu-ong-sair" href="/logout">Sair</a>
+                                <a class="nav-link menu-ong-sair" href="/logout" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                    {{ __('Sair') }}</a>
                                 <form
                                     method='post'
                                     action='{{ url("ong/deleta") }}'
-                                    onsubmit='if(!confirm("Desdejeas realmete excluir?")) return false;'>
+                                    onsubmit='if(!confirm("Te certeza que gostaria de excluir sua conta?")) return false;'>
                                     <!--true = deleta false = cancela -->
                                     @csrf
                                     <input type='hidden' value='{{ 2 }}' name='id'>
@@ -245,6 +271,8 @@
         <!--FINAL DO FOOTER-->
 
         <!-- Script JS Bootstrap | Manter código próximo ao fechamento do body -->
-
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     </body>
 </html>

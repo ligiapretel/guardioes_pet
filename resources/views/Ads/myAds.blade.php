@@ -6,12 +6,24 @@
 
 @section('content')
 
-<div class="card col-lg-8 p-5 mt-5">
-       <div class="mt-5">
+<div class="col-9 p-5 mt-5">
+        <!-- Verificando se o anúncio foi criado com sucesso -->
+        @if(session("created"))
+            <h3 class="titleh3">Anúncio cadastrado com sucesso.</h3>
+          
+        @endif
+        <!-- Verificando se o anúncio foi atualizado com sucesso -->
+        @if(session("updated"))
+            <h3 class="titleh3">Anúncio atualizado com sucesso.</h3>
+        @endif
+
+        @if(isset($myAds))
+        @foreach($myAds ?? '' as $ad)
+        <div class="mt-5">
             <table class="table">
+            <h4 class="bg-dark m-0 p-2 text-white">Anúncio | Atualizado em {{$ad->updated_at}}</h4>
                 <thead>
-                    <tr>
-                        <th scope="col">Item</th>
+                    <tr class="bg-light">
                         <th scope="col">Medicamentos</th>
                         <th scope="col">Produtos de Higiene</th>
                         <th scope="col">Alimentos</th>
@@ -21,27 +33,27 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @forelse($ads as $ad)
-                        <tr>
-                            <th scope="row">{{$ad->id}}</th>
-                            <td>{{$ad->medicine}}</td>
-                            <td>{{$ad->hygiene_supply}}</td>
-                            <td>{{$ad->food}}</td>
-                            <td>{{$ad->toys}}</td>
-                            <td>{{$ad->accessories}}</td>
-                            <td>{{$ad->others}}</td>
-                            <td>{{$ad->created_at}}</td>
-                            <td>{{$ad->updated_at}}</td>
-                            <td>
-                                <a class="btn btn-primary" href="/anuncios/editar/{{$ad->id}}">Atualizar</a>
-                                <a class="btn btn-danger"  href="/anuncios/deletar/{{$ad->id}}">Deletar</a>
-                            </td>
-                        </tr>
-                    @empty
-                        <h3>Você não possui anúncios cadastrados.</h3>
-                    @endforelse    
-                    </tbody>
-                </table>
+                    <tr>
+                        <td>{{$ad->medicine}}</td>
+                        <td>{{$ad->hygiene_supply}}</td>
+                        <td>{{$ad->food}}</td>
+                        <td>{{$ad->toys}}</td>
+                        <td>{{$ad->accessories}}</td>
+                        <td>{{$ad->others}}</td>
+                    </tr>
+                    <!-- <h3>Você não possui anúncios cadastrados.</h3> -->
+                </tbody>
+            </table>
+            <div class="row justify-content-end m-0">
+                <a class="btn btn-primary" href="/anuncios/editar/{{$ad->id}}">Atualizar</a>
+                <a class="btn btn-danger ml-2"  href="/anuncios/deletar/{{$ad->id}}">Deletar</a>
             </div>
+        </div>
+        @endforeach
+        @else
+        <div class="col-6 col-md-12 col-lg-8 p-5 mt-5">
+            <h3 class="pt-5 mt-5 text-center">Você não possui anúncios cadastrados.</h3>
+        </div>
+        @endif
     <div>
 @endsection
