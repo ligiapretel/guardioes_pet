@@ -48,7 +48,7 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-10 text-center">
-                <a href="cadastroGuardiao"><button class="botaoCadGuardiao btn-busca-expandida cor-laranja" type="submit" name="cadastre-se-guardiao">Cadastro Guardião</button></a>
+                <a href="/guardiao/cadastrar"><button class="botaoCadGuardiao btn-busca-expandida cor-laranja" type="submit" name="cadastre-se-guardiao">Cadastro Guardião</button></a>
                 </div>
             </div>
             <div class="row justify-content-center">

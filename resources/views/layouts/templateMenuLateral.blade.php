@@ -89,7 +89,7 @@
                             @case (2)
                             'pet/cadastro'
                             @case(3)
-                            'guardiao/account/perfil'
+                            {{ url('guardiao/minhaconta/perfil/'. Auth::user()->id) }}
                             @endswitch
 
                             >
@@ -143,13 +143,13 @@
                         style="width: 20rem;"
                         id="menu-principal">
                         @if(isset($profile)) @if($profile)
-                        <a class="nav-link menu-ong active mt-1" href="/guardiao/editar/{{$profile->id}}">Meu Perfil</a>
+                        <a class="nav-link menu-ong active mt-1" href="{{ url('guardiao/editar/'. Auth::user()->id) }}">Meu Perfil</a>
                         <!--depois q fizerem o login passar a session e o -> id-->
                         <a class="nav-link menu-ong" href="/anuncios/meus-anuncios">Anúncios Cadastrados</a>
                         <a class="nav-link menu-ong" href="/anuncios/cadastro">Cadastrar Novos Anúncios</a>
                         <a class="nav-link menu-ong" href="/chat">Mensagens</a>
                         <a class="nav-link menu-ong-sair" href="/logout">Sair</a>
-                        <a class="nav-link menu-ong-sair" href="/guardiao/deletar">Deletar Conta</a>
+                        <a class="nav-link menu-ong-sair" href="{{ url('guardiao/deletar/'. Auth::user()->id) }}">Deletar Conta</a>
                         <!--depois q fizerem o login passar a session e o -> id-->
                         @endif @else
                         <img

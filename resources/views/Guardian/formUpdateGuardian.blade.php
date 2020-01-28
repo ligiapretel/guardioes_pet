@@ -38,7 +38,7 @@
             <div class="form-group row">
                 <label for="email" class="col-sm-4 col-form-label">E-mail</label>
                 <div class="col-sm-8">
-                    <input name="email" type="email" class="form-control" id="emailGuardiao" value="{{$guardian->email}}" placeholder="seunome@email.com">
+                    <input name="email" type="email" class="form-control" id="emailGuardiao" value="{{$guardian->user->email}}" placeholder="seunome@email.com">
                 </div>
             </div>
             <div class="form-group row">
@@ -66,6 +66,12 @@
                 </div>
             </div>
             <div class="form-group row">
+                <label for="zip_code" class="col-sm-4 col-form-label">CEP</label>
+                <div class="col-sm-8">
+                    <input name="zip_code" type="number" class="form-control" id="cep" value="{{$guardian->zip_code}}" placeholder="CEP">
+                </div>
+            </div>
+            <div class="form-group row">
                 <label for="address" class="col-sm-4 col-form-label">Endereço</label>
                 <div class="col-sm-8">
                     <input name="address" type="text" class="form-control" id="enderecoGuardiao" value="{{$guardian->address}}"  placeholder="Rua/Avenida/Logradouro">
@@ -80,10 +86,7 @@
                     <label for="complement">Complemento</label>
                     <input name="complement" type="number" class="form-control" id="complementoGuardiao" value="{{$guardian->complement}}" placeholder="Ex.: Bloco B">
                 </div>
-                <div class="form-group col-md-6 p-1">
-                    <label for="zip_code">CEP</label>
-                    <input name="zip_code" type="number" class="form-control" id="cepGuardiao" value="{{$guardian->zip_code}}" placeholder="CEP">
-                </div>
+                
                 <div class="form-group col-md-6 p-1">
                     <label for="neighborhood">Bairro</label>
                     <input name="neighborhood" type="text" class="form-control" id="bairroGuardiao" value="{{$guardian->neighborhood}}" placeholder="Bairro">

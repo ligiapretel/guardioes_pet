@@ -30,6 +30,7 @@ class CreateGuardiansTable extends Migration
             $table->text('about_the_guardian', 5000);   
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

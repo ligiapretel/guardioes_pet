@@ -81,7 +81,7 @@
                                     @case (2)
                                     {{ url('ong/edita/'. Auth::user()->id) }}
                                     @case(3)
-                                    'guardiao/account/perfil'
+                                    {{ url('guardiao/minhaconta/perfil/'. Auth::user()->id) }}
                                     @endswitch
 
                                     >

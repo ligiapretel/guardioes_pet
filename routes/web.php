@@ -16,19 +16,22 @@ Route::get('/', function () {
 });
 
 //Guardian´s Routes
-Route::get('/guardiao/perfil/{id?}', "GuardianController@viewProfileGuardian");
-Route::get('/guardiao/account/perfil/{id?}', "GuardianController@viewMyAccountGuardian");
-Route::get('/cadastroGuardiao', "GuardianController@createGuardian");
-Route::post('/cadastroGuardiao', "GuardianController@createGuardian");
-Route::get('/guardiao/editar/{id?}', "GuardianController@formUpdate");
-Route::post('/guardiao/editar', "GuardianController@storeUpdate");
-Route::get('/guardiao/deletar/{id?}', "GuardianController@delete");
-Route::get('/guardioes', "GuardianController@viewAllGuardians");
+Route::group(['prefix'=>'guardiao'], function(){
+    Route::get('/perfil/{id?}', "GuardianController@viewProfileGuardian");
+    Route::get('/minhaconta/perfil/{id}', "GuardianController@viewMyAccountGuardian");
+    Route::get('/cadastrar', "GuardianController@createGuardian");
+    Route::post('/cadastrar', "GuardianController@createGuardian");
+    Route::get('/editar/{id?}', "GuardianController@formUpdate");
+    Route::post('/editar', "GuardianController@storeUpdate");
+    Route::get('/deletar/{id?}', "GuardianController@delete");
+    Route::get('/guardioes', "GuardianController@viewAllGuardians");
+    Route::get('/lista', "GuardianController@listAllGuardians");
+});
 
-Route::get('/guardiao/pet/perfil/{id?}', "GuardianAndPetController@viewProfileGuardianPet");
-Route::get('/pet/perfil/adotar/{id?}', "GuardianAndPetController@createAdoption");
-Route::get('/pet/perfil/lar/{id?}', "GuardianAndPetController@createHome");
-Route::get('/pet/perfil/apadrinhar/{id?}', "GuardianAndPetController@createSponsor");
+//Rotas para marcar o pet como adotado, lar ou apadrinhado
+Route::get('/pet/perfil/adotar/{id?}', "GuardianController@createAdoption");
+Route::get('/pet/perfil/lar/{id?}', "GuardianController@createHome");
+Route::get('/pet/perfil/apadrinhar/{id?}', "GuardianController@createSponsor");
 
 //Ngo´s Routes
 Route::group(['prefix' => 'ong'], function () {

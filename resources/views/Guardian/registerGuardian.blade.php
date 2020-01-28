@@ -6,26 +6,25 @@
 
 @section('content') 
 
-{{-- Teste de erro --}}
-<div class="row justify-content-center ml-5 mt-5">
-    <div class="col-md-12">
-        @if(isset($result))
-            @if($result)
-                <h3>Cadastro realizado com sucesso!</h3>
-            @else
-                <h3>Não foi possível realizar o cadastro.</h3>
-            @endif
-        @endif
-    </div>
-</div>
-
-        <form action="/cadastroGuardiao" method="POST" enctype="multipart/form-data" class="card col-lg-8 col-md-12 col-sm-12 col-12 p-5" id="formGuardiao" style="width: 50rem">
+        <form action="/guardiao/cadastrar" method="POST" enctype="multipart/form-data" class="card col-lg-8 col-md-12 col-sm-12 col-12 p-5" id="formGuardiao" style="width: 50rem">
             @csrf
 
             <!-- input hidden com status de Status e user_type de Users_group -->
-            <input hidden type="text" name="statusGuardian"  value="ativo"> 
+            <input hidden type="text" name="statusGuardian"  value="1"> 
             <input hidden type="text" name="user_typeGuardian" value="3">
 
+            {{-- Teste de erro --}}
+            <div class="row justify-content-center ml-5 mt-5">
+                <div class="col-md-12">
+                    @if(isset($result))
+                        @if($result)
+                            <h3>Cadastro realizado com sucesso!</h3>
+                        @else
+                            <h3>Não foi possível realizar o cadastro.</h3>
+                        @endif
+                    @endif
+                </div>
+            </div>
             <!-- essa div é para o título -->
             <div class="form-group d-flex justify-content p-2">
                 <h3 class="tituloGuardiao">Cadastro de Guardião</h3>
@@ -83,6 +82,12 @@
                 </div>
             </div>
             <div class="form-group row">
+                <label for="zip_code" class="col-sm-4 col-form-label">CEP</label>
+                <div class="col-sm-8">
+                    <input name="zip_code" type="number" class="form-control" id="cep" placeholder="CEP">
+                </div>
+            </div>
+            <div class="form-group row">
                 <label for="address" class="col-sm-4 col-form-label">Endereço</label>
                 <div class="col-sm-8">
                     <input name="address" type="text" class="form-control" id="rua" placeholder="Rua/Avenida/Logradouro">
@@ -97,10 +102,7 @@
                     <label for="complement">Complemento</label>
                     <input name="complement" type="number" class="form-control" id="complementoGuardiao" placeholder="Ex.: Bloco B">
                 </div>
-                <div class="form-group col-md-6 p-1">
-                    <label for="zip_code">CEP</label>
-                    <input name="zip_code" type="number" class="form-control" id="cep" placeholder="CEP">
-                </div>
+                
                 <div class="form-group col-md-6 p-1">
                     <label for="neighborhood">Bairro</label>
                     <input name="neighborhood" type="text" class="form-control" id="bairro" placeholder="Bairro">

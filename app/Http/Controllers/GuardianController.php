@@ -8,22 +8,66 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
 use App\Guardian;
+use App\Pet;
+use App\PetPicture;
+use App\Relation_type;
+use App\Guardian_has_pets;
 use App\User;
-use App\Users_group;
-use App\Status;
+use Auth;
 
 class GuardianController extends Controller
 {
-    // Função para ver  perfil do guardião
+    
     public function viewProfileGuardian(Request $request, $id=3){
         $profile = Guardian::find($id);
+        $pets = Guardian_has_pets::join('guardians', 'guardians.id', '=', 'guardian_has_pets.guardian_id')->join('pets', 'guardian_has_pets.pet_id', '=', 'pets.id')->join('pets_pictures', 'pets_pictures.pet_id', '=', 'pets.id')->select('pets.*', 'guardian_has_pets.relation_type_id', 'pets_pictures.picture')->get();
+
+
+        function adopted($pets){
+            foreach($pets as $pet){
+                if($pet->relation_type_id==1){
+                    return true;
+                }
+            }
+            return false;
+        };
+        $adopted = adopted($pets);
+
+
+        function home($pets){
+            foreach($pets as $pet){
+                if($pet->relation_type_id==2){
+                    return true;
+                }
+            }
+            return false;
+        };
+        $home = home($pets);
+        
+        
+        function sponsor($pets){
+            foreach($pets as $pet){
+                if($pet->relation_type_id==3){
+                    return true;
+                }
+            }
+            return false;
+        };
+        $sponsor = sponsor($pets);
+
         if($profile){
-            return view('/Guardian.profileGuardian', ['profile'=>$profile]);
+            return view('Guardian.profileGuardianAndPet', 
+            ['profile'=>$profile, 
+            'pets'=>$pets,
+            'adopted'=>$adopted,
+            'home'=>$home, 
+            'sponsor'=>$sponsor
+            ]);
         }
     }
     
 
-    // Função para ver  perfil do guardião
+
     public function viewMyAccountGuardian(Request $request, $id=3){
         $profile = Guardian::find($id);
         if($profile){
@@ -31,37 +75,46 @@ class GuardianController extends Controller
         }
     }
 
-    // Função para ver o formulário de cadastro de guardião
-    //Essa função está funcionando!!
+    
+
     public function viewRegisterGuardian(Request $request){
         return view('/Guardian.registerGuardian');
     }
 
-    //Essa função está funcionando!!
-    public function createGuardian(Request $request){
+    
 
+    public function createGuardian(Request $request){
         if($request->isMethod('GET')){
             return view('/Guardian.registerGuardian');
-        } else {
+        } 
+        
+        $request->validate([   //campos que são requeridos (obrigatórios). O validate eve vir antes de salvar as informações no banco. Assim, o usuário pode saber o que deve ou não ser preenchido.         
+            'name' => 'required',
+            'nickname' => 'required',
+            'date_of_birth' => 'required',
+            'address' => 'required',
+            'number' => 'required',
+            'zip_code' => 'required',
+            'neighborhood' => 'required',
+            'city' => 'required',
+            'state' => 'required',
+        ]);
 
             //criando novo usuário na tabela Users:
             $newUser = new User();
             $newUser->email = $request->email;
             $newUser->password = Hash::make($request->senhaGuardiao);
-            $newUser->user_group_id = 3;
-            $newUser->status_id = 1;
+            $newUser->user_group_id = $request->user_typeGuardian;  
+            $newUser->status_id = $request->statusGuardian;
 
             $result = $newUser->save();
-
 
             //criando um novo usuário guardião na tabela Guardians:
             $newGuardian = new Guardian();
             $newGuardian->name = $request->name;
             $newGuardian->nickname = $request->nickname;
             $newGuardian->date_of_birth = $request->date_of_birth;
-            //$newGuardian->email = $request->email;
             $newGuardian->phone_number = $request->phone_number;
-            //$newGuardian->profile_picture = $request->profile_picture;
             $newGuardian->address = $request->address;
             $newGuardian->number = $request->number;
             $newGuardian->complement = $request->complement;
@@ -71,21 +124,6 @@ class GuardianController extends Controller
             $newGuardian->state = $request->state;
             $newGuardian->about_the_guardian = $request->about_the_guardian;
             $newGuardian->user_id = $newUser->id;
-
-
-            $request->validate([   //campos que são requeridos (obrigatórios)         
-                'name' => 'required',
-                'nickname' => 'required',
-                'date_of_birth' => 'required',
-                'phone_number' => 'required',
-                'address' => 'required',
-                'number' => 'required',
-                'complement' => 'required',
-                'zip_code' => 'required',
-                'neighborhood' => 'required',
-                'city' => 'required',
-                'state' => 'required',
-            ]);
 
             if($request->hasFile('profile_picture') && $request->file('profile_picture')->isValid()){
                 $name = date('HisYmd');
@@ -100,33 +138,35 @@ class GuardianController extends Controller
 
             $result = $newGuardian->save();
 
-           return view('Guardian.registerGuardian', ["result"=>$result]);
-        }
+           //return view('Guardian.registerGuardian', ["result"=>$result]);
+           return redirect('/guardiao/cadastrar')->with(['result'=>$result]);
     }
     
-    //Essa função está funcionando!!
-    public function formUpdate(Request $request, $id=0){
+    
 
+    public function formUpdate($id){
             $guardian = Guardian::find($id);
-            //$user = User::find($id)->where('email', '=', $guardian->id)->get();
             
+            $user = Auth::user()->email;
+
             if($guardian){
-                return view('Guardian.formUpdateGuardian', ["guardian"=>$guardian]);
+                return view('Guardian.formUpdateGuardian', [
+                    "guardian"=>$guardian, 
+                    "user"=>$user]);
             } else {
                 return view('Guardian.formUpdateGuardian');
             }
     }
 
-    //não precisa o campo email aqui:
-    //Essa função está funcionando!!
+
+
+    
     public function storeUpdate(Request $request){
         $guardian = Guardian::find($request->idGuardian);
         $guardian->name = $request->name;
         $guardian->nickname = $request->nickname;
         $guardian->date_of_birth = $request->date_of_birth;
-        //$guardian->email = $request->email;
         $guardian->phone_number = $request->phone_number;
-        //$guardian->profile_picture = $request->profile_picture;
         $guardian->address = $request->address;
         $guardian->number = $request->number;
         $guardian->complement = $request->complement;
@@ -138,13 +178,12 @@ class GuardianController extends Controller
 
         $result = $guardian->save();
 
-        //selcionando o usuário. Depois que criptografar a senha descomentar..
-        //NÃO ESTÁ PUXANDO O EMAIL CADASTRADO. Mas está atualizando com o novo email informado.
+        
         $user = User::find($guardian->user_id);
         $user->email = $request->email;
-        //$user->password = $request->password;
+        $user->password = $request->password;
 
-        $user->save();
+        $result = $user->save();
 
         if($request->hasFile('profile_picture') && $request->file('profile_picture')->isValid()){
             $name = date('HisYmd');
@@ -159,24 +198,80 @@ class GuardianController extends Controller
 
         $result = $guardian->save();
 
-        return view('guardian.formUpdateGuardian', ["result"=>$result]);
+        return redirect('/guardiao/cadastrar')->with(['result'=>$result]);
 
     }
 
-    //essa função está deletando um usuário da tabela guardians. Apenas.
-    public function delete(Request $request, $id=0){
     
+    public function delete($id=0){
         $result = User::destroy($id);
-        //Aqui eu preciso trocar pra User:: ou inserir a função destroy com Guardian e User?
+        
         if($result){
             return redirect('/home');
         }
     }
 
 
-
+    
     public function viewAllGuardians(){
         $guardians = Guardian::all();
         return view('Guardian.allGuardians', ['guardians'=>$guardians]);
+    }
+
+
+
+    public function listAllGuardians(){
+        $listGuardians = User::leftJoin('guardians', 'guardians.user_id', '=', 'users.id')->select('users.email', 'users.id', 'users.status_id', 'users.user_group_id', 'guardians.name')->get();
+
+        return view('Guardian.listGuardian', ["listGuardians"=>$listGuardians]); 
+    }
+
+
+
+
+    //FUNÇÕES PARA MARCAR O PET COMO ADOTADO, APADRINHADO OU LAR
+    public function createAdoption(Request $request, $id){
+        $adoption = new Guardian_has_pets();
+        $adoption->guardian_id = $request->guardian_id=1;
+        $adoption->pet_id = $id;
+        $adoption->relation_type_id = 1;
+
+        $result = $adoption->save();
+
+        if($result){
+            echo "Foi adotado!";
+        } else {
+            echo "Não deu certo - Adoção";
+        }
+    }
+
+    public function createHome(Request $request, $id){
+        $home = new Guardian_has_pets();
+        $home->guardian_id = $request->guardian_id=1;
+        $home->pet_id = $id;
+        $home->relation_type_id = 2;
+
+        $result = $home->save();
+
+        if($result){
+            echo "Está em Lar Temporário";
+        } else {
+            echo "Não deu certo - Lar";
+        }
+    }
+
+    public function createSponsor(Request $request, $id){
+        $sponsor = new Guardian_has_pets();
+        $sponsor->guardian_id = $request->guardian_id=1;
+        $sponsor->pet_id = $id;
+        $sponsor->relation_type_id = 3;
+
+        $result = $sponsor->save();
+
+        if($result){
+            echo "Está apadrinhado";
+        } else {
+            echo "Não deu certo - Apadrinhar";
+        }
     }
 }

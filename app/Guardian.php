@@ -3,10 +3,13 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use SoftDeletes;
 
 class Guardian extends Model{ 
     protected $table = 'guardians';
     protected $primaryKey = 'id'; 
+
+    
 
     // Por questões de segurança não é usado colocar os campos que o usuário não deve 
     // preencher no fillable. Campos como id, timestamps...

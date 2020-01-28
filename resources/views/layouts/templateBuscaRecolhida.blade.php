@@ -78,7 +78,7 @@
                             @case (2)
                             'pet/cadastro'
                             @case(3)
-                            'guardiao/account/perfil'
+                            {{ url('guardiao/minhaconta/perfil/'. Auth::user()->id) }}
                             @endswitch
 
                             >
