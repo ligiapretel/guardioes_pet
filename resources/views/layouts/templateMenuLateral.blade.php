@@ -154,8 +154,8 @@
                         <img
                             id="perfil-ong"
                             class="ml-4"
-                            src=""
-                            alt="logo da ONG"/>
+                            src="{{asset('storage/public/ngos_pictures/'.Auth::user()->getPicture())}}"
+                            alt="logo"/>
                         <div class="card-body" style="width: 20rem">
                             <nav class="nav flex-column bg-light">
                                 <a

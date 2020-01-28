@@ -41,66 +41,65 @@ class GuardianController extends Controller
 
         if($request->isMethod('GET')){
             return view('/Guardian.registerGuardian');
-        } else {
-
-            //criando novo usuário na tabela Users:
-            $newUser = new User();
-            $newUser->email = $request->email;
-            $newUser->password = Hash::make($request->senhaGuardiao);
-            $newUser->user_group_id = 3;
-            $newUser->status_id = 1;
-
-            $result = $newUser->save();
-
-
-            //criando um novo usuário guardião na tabela Guardians:
-            $newGuardian = new Guardian();
-            $newGuardian->name = $request->name;
-            $newGuardian->nickname = $request->nickname;
-            $newGuardian->date_of_birth = $request->date_of_birth;
-            //$newGuardian->email = $request->email;
-            $newGuardian->phone_number = $request->phone_number;
-            //$newGuardian->profile_picture = $request->profile_picture;
-            $newGuardian->address = $request->address;
-            $newGuardian->number = $request->number;
-            $newGuardian->complement = $request->complement;
-            $newGuardian->zip_code = $request->zip_code;
-            $newGuardian->neighborhood = $request->neighborhood;
-            $newGuardian->city = $request->city;
-            $newGuardian->state = $request->state;
-            $newGuardian->about_the_guardian = $request->about_the_guardian;
-            $newGuardian->user_id = $newUser->id;
-
-
-            $request->validate([   //campos que são requeridos (obrigatórios)         
-                'name' => 'required',
-                'nickname' => 'required',
-                'date_of_birth' => 'required',
-                'phone_number' => 'required',
-                'address' => 'required',
-                'number' => 'required',
-                'complement' => 'required',
-                'zip_code' => 'required',
-                'neighborhood' => 'required',
-                'city' => 'required',
-                'state' => 'required',
-            ]);
-
-            if($request->hasFile('profile_picture') && $request->file('profile_picture')->isValid()){
-                $name = date('HisYmd');
-                $extension = $request->profile_picture->extension();
-                $fileName = "{$name}.{$extension}";
-
-                //salvando a foto no storage:
-                $upload = $request->profile_picture->storeAs('guardians_pictures', $fileName);
-                //salvando a foto no BD:
-                $newGuardian->profile_picture = $fileName;
-            }
-
-            $result = $newGuardian->save();
-
-           return view('Guardian.registerGuardian', ["result"=>$result]);
         }
+
+        $request->validate([   //campos que são requeridos (obrigatórios)         
+            'name' => 'required',
+            'nickname' => 'required',
+            'date_of_birth' => 'required',
+            'phone_number' => 'required',
+            'address' => 'required',
+            'number' => 'required',
+            'complement' => 'required',
+            'zip_code' => 'required',
+            'neighborhood' => 'required',
+            'city' => 'required',
+            'state' => 'required',
+        ]);
+
+        //criando novo usuário na tabela Users:
+        $newUser = new User();
+        $newUser->email = $request->email;
+        $newUser->password = Hash::make($request->senhaGuardiao);
+        $newUser->user_group_id = 3;
+        $newUser->status_id = 1;
+
+        $result = $newUser->save();
+
+
+        //criando um novo usuário guardião na tabela Guardians:
+        $newGuardian = new Guardian();
+        $newGuardian->name = $request->name;
+        $newGuardian->nickname = $request->nickname;
+        $newGuardian->date_of_birth = $request->date_of_birth;
+        //$newGuardian->email = $request->email;
+        $newGuardian->phone_number = $request->phone_number;
+        //$newGuardian->profile_picture = $request->profile_picture;
+        $newGuardian->address = $request->address;
+        $newGuardian->number = $request->number;
+        $newGuardian->complement = $request->complement;
+        $newGuardian->zip_code = $request->zip_code;
+        $newGuardian->neighborhood = $request->neighborhood;
+        $newGuardian->city = $request->city;
+        $newGuardian->state = $request->state;
+        $newGuardian->about_the_guardian = $request->about_the_guardian;
+        $newGuardian->user_id = $newUser->id;
+
+        if($request->hasFile('profile_picture') && $request->file('profile_picture')->isValid()){
+            $name = date('HisYmd');
+            $extension = $request->profile_picture->extension();
+            $fileName = "{$name}.{$extension}";
+
+            //salvando a foto no storage:
+            $upload = $request->profile_picture->storeAs('guardians_pictures', $fileName);
+            //salvando a foto no BD:
+            $newGuardian->profile_picture = $fileName;
+        }
+
+        $result = $newGuardian->save();
+
+        return redirect('/cadastroGuardiao')->with(['result' => $result]);
+        // return view('Guardian.registerGuardian', ["result"=>$result]);
     }
     
     //Essa função está funcionando!!

@@ -105,7 +105,7 @@ class NgoController extends Controller
             $fileName = "{$name}.{$extension}";
 
             //salvando a foto no storage:
-            $upload = $request->profile_picture->storeAs('public/ngos_pictures', $fileName);
+            $upload = $request->profile_picture->storeAs('ngos_pictures', $fileName);
             //salvando a foto no BD:
             $newNgo->profile_picture = $fileName;
         }
