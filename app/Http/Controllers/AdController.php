@@ -37,8 +37,12 @@ class AdController extends Controller
 
         $result = $newAd->save();
 
-        // Passando um parâmetro via session no redirect (na view verifico a session para exibir a mensagem de sucesso)
-        return redirect("/anuncios/meus-anuncios/")->with('created',"Sucesso");
+        if($result){
+            // Passando um parâmetro via session no redirect (na view verifico a session para exibir a mensagem de sucesso)
+            return redirect("/anuncios/meus-anuncios/")->with('created',"Anúncio cadastrado com sucesso!");
+        }else{
+            return redirect("/anuncios/meus-anuncios/")->with('error',"Ops! Falha ao salvar o anúncio. =(");
+        }
     }
 
     public function viewFormUpdate(Request $request, $id=0, $ngoId=0){
@@ -67,7 +71,11 @@ class AdController extends Controller
         // O result é um booleano, então coloco como parâmetro da view para que a view exiba a informação de acordo com o booleano.
         $result = $ad->save();
 
-        return redirect("/anuncios/meus-anuncios/")->with('updated',"Sucesso");
+        if($result){
+            return redirect("/anuncios/meus-anuncios/")->with('updated',"Anúncio atualizado com sucesso!");
+        }else{
+            return redirect("/anuncios/meus-anuncios/")->with('error',"Ops! Falha ao salvar o anúncio. =(");
+        }
     }
 
     public function viewMyAds(Request $request, $ngoId=0){

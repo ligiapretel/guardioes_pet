@@ -61,18 +61,16 @@
                 <li class="nav-item">
                     <a class="nav-link header-link" href="/anuncios">Doações</a>
                 </li>
-                <!-- <li class="nav-item">
-                <a class="nav-link header-link" href="index.php#footer">Contato</a>
-            </li> -->
-
-                <!--VERIFICAR A ROTA DE LOGIN-->
+                
 
                 @guest
                 <li class="nav-item">
                     <a class="nav-link header-link" href="/login">Login</a>
+                </li>
                 <li class="nav-item">
                     <a href="cadastre-se" class="header-link"><button type="button"
                             class="btn-roxo">Cadastre-se</button></a>
+                </li>
                     @else
                 <li class="nav-item dropdown">
                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
@@ -80,6 +78,7 @@
                         {{ Auth::user()->email }}
                         <span class="caret"></span>
                     </a>
+                
 
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
 
@@ -145,8 +144,8 @@
                         @if(isset($profile)) @if($profile)
                         <a class="nav-link menu-ong active mt-1" href="/guardiao/editar/">Meu Perfil</a>
                         <!--depois q fizerem o login passar a session e o -> id-->
-                        <a class="nav-link menu-ong" href="/anuncios/meus-anuncios">Anúncios Cadastrados</a>
-                        <a class="nav-link menu-ong" href="/anuncios/cadastro">Cadastrar Novos Anúncios</a>
+                        <a class="nav-link menu-ong" href="/anuncios/meus-anuncios/{{Auth::user()->id}}">Anúncios Cadastrados</a>
+                        <a class="nav-link menu-ong" href="/anuncios/cadastro/{{Auth::user()->id}}">Cadastrar Novos Anúncios</a>
                         <a class="nav-link menu-ong" href="/chat">Mensagens</a>
                         <a class="nav-link menu-ong-sair" href="/logout">Sair</a>
                         <a class="nav-link menu-ong-sair" href="/guardiao/deletar">Deletar Conta</a>
@@ -155,7 +154,7 @@
                         <img
                             id="perfil-ong"
                             class="ml-4"
-                            src="{{asset('storage/public/ngos_pictures/'.$ngo->profile_picture)}}"
+                            src=""
                             alt="logo da ONG"/>
                         <div class="card-body" style="width: 20rem">
                             <nav class="nav flex-column bg-light">
@@ -165,8 +164,8 @@
                                 <!--depois q fizerem o login passar a session e o -> id-->
                                 <a class="nav-link menu-ong" href="/ong/{{Auth::user()->id}}/minhaconta/pets">Animais Cadastrados</a>
                                 <a class="nav-link menu-ong" href="{{url('pet/cadastro/'. Auth::user()->id) }}">Cadastrar Novos Animais</a>
-                                <a class="nav-link menu-ong" href="/anuncios/meus-anuncios">Anúncios Cadastrados</a>
-                                <a class="nav-link menu-ong" href="/anuncios/cadastro">Cadastrar Novos Anúncios</a>
+                                <a class="nav-link menu-ong" href="/anuncios/meus-anuncios/{{Auth::user()->id}}">Anúncios Cadastrados</a>
+                                <a class="nav-link menu-ong" href="/anuncios/cadastro/{{Auth::user()->id}}">Cadastrar Novos Anúncios</a>
                                 <a class="nav-link menu-ong" href="/chat">Mensagens</a>
                                 <a class="nav-link menu-ong-sair" href="/logout" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

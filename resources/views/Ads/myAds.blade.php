@@ -9,12 +9,31 @@
 <div class="col-9 p-5 mt-5">
         <!-- Verificando se o anúncio foi criado com sucesso -->
         @if(session("created"))
-            <h3 class="titleh3">Anúncio cadastrado com sucesso.</h3>
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <strong>{{session("created")}}</strong>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
           
         @endif
         <!-- Verificando se o anúncio foi atualizado com sucesso -->
         @if(session("updated"))
-            <h3 class="titleh3">Anúncio atualizado com sucesso.</h3>
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <strong>{{session("updated")}}</strong>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        @endif
+        <!-- Verificando de erro no cadastro/atualização do anúncio -->
+        @if(session("error"))
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <strong>{{session("error")}}</strong>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
         @endif
 
         @if(isset($myAds))

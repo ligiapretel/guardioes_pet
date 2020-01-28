@@ -60,7 +60,7 @@ Route::get('/anuncios/cadastro/{id?}', "AdController@viewRegisterAds")->middlewa
 Route::get('/anuncios/editar/{id?}', "AdController@viewFormUpdate")->middleware('checkuser');
 Route::post('/anuncios/editar/{id?}', "AdController@update");
 Route::get('/anuncios/deletar/{id?}', "AdController@delete")->middleware('checkuser');
-Route::get('/anuncios/meus-anuncios', "AdController@viewMyAds")->middleware('checkuser');
+Route::get('/anuncios/meus-anuncios/{id?}', "AdController@viewMyAds")->middleware('checkuser');
 
 //Chat´s Routes
 Route::get('/chat', 'ChatController@viewChat');
