@@ -21,6 +21,7 @@
 
         <form action="/cadastroGuardiao" method="POST" enctype="multipart/form-data" class="card col-lg-8 col-md-12 col-sm-12 col-12 p-5" id="formGuardiao" style="width: 50rem">
             @csrf
+            <!-- Código somente para testes de erro no preenchimento do form. Quando estiver ok, melhorar essa exibição para o usuário -->
             @if(!empty($errors->all()))
                 <script>alert('existem erros.' @foreach($errors->all() as $message) +"\n {{ $message }}" @endforeach)</script>
             @endif

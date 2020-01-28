@@ -9,11 +9,14 @@ use Illuminate\Support\Facades\DB;
 use App\Ngos;
 use App\Guardian;
 use App\Ad;
+use Storage;
 
 class User extends Authenticatable
 {
     use Notifiable;
 
+    const ID_ONG = 2;
+    const ID_GUARDIAO = 3;
     /**
      * The attributes that are mass assignable.
      *
@@ -86,14 +89,14 @@ class User extends Authenticatable
 
     public function getPicture(){
 
-        if($this->user_group_id == 2){
-
-            return $this->ngo->profile_picture;
-
-        }elseif($this->user_group_id == 3){
-
-            return $this->guardian->profile_picture;
-
+        if($this->user_group_id == User::ID_ONG){
+            $path = 'ngos_pictures/'.$this->ngo->profile_picture;
         }
+
+        if($this->user_group_id == User::ID_GUARDIAO){
+            $path = 'guardians_pictures/'.$this->guardian->profile_picture;
+        }
+
+        return Storage::url($path);
     }
 }

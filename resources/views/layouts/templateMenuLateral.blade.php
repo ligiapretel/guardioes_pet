@@ -144,8 +144,8 @@
                         @if(isset($profile)) @if($profile)
                         <a class="nav-link menu-ong active mt-1" href="/guardiao/editar/">Meu Perfil</a>
                         <!--depois q fizerem o login passar a session e o -> id-->
-                        <a class="nav-link menu-ong" href="/anuncios/meus-anuncios/{{Auth::user()->id}}">Anúncios Cadastrados</a>
-                        <a class="nav-link menu-ong" href="/anuncios/cadastro/{{Auth::user()->id}}">Cadastrar Novos Anúncios</a>
+                        <a class="nav-link menu-ong" href="/anuncios/meus-anuncios">Anúncios Cadastrados</a>
+                        <a class="nav-link menu-ong" href="/anuncios/cadastro">Cadastrar Novos Anúncios</a>
                         <a class="nav-link menu-ong" href="/chat">Mensagens</a>
                         <a class="nav-link menu-ong-sair" href="/logout">Sair</a>
                         <a class="nav-link menu-ong-sair" href="/guardiao/deletar">Deletar Conta</a>
@@ -154,7 +154,7 @@
                         <img
                             id="perfil-ong"
                             class="ml-4"
-                            src="{{asset('storage/public/ngos_pictures/'.Auth::user()->getPicture())}}"
+                            src="{{Auth::user()->getPicture()}}"
                             alt="logo"/>
                         <div class="card-body" style="width: 20rem">
                             <nav class="nav flex-column bg-light">
@@ -164,8 +164,8 @@
                                 <!--depois q fizerem o login passar a session e o -> id-->
                                 <a class="nav-link menu-ong" href="/ong/{{Auth::user()->id}}/minhaconta/pets">Animais Cadastrados</a>
                                 <a class="nav-link menu-ong" href="{{url('pet/cadastro/'. Auth::user()->id) }}">Cadastrar Novos Animais</a>
-                                <a class="nav-link menu-ong" href="/anuncios/meus-anuncios/{{Auth::user()->id}}">Anúncios Cadastrados</a>
-                                <a class="nav-link menu-ong" href="/anuncios/cadastro/{{Auth::user()->id}}">Cadastrar Novos Anúncios</a>
+                                <a class="nav-link menu-ong" href="/anuncios/meus-anuncios">Anúncios Cadastrados</a>
+                                <a class="nav-link menu-ong" href="/anuncios/cadastro">Cadastrar Novos Anúncios</a>
                                 <a class="nav-link menu-ong" href="/chat">Mensagens</a>
                                 <a class="nav-link menu-ong-sair" href="/logout" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -173,7 +173,7 @@
                                 <form
                                     method='post'
                                     action='{{ url("ong/deleta") }}'
-                                    onsubmit='if(!confirm("Te certeza que gostaria de excluir sua conta?")) return false;'>
+                                    onsubmit='if(!confirm("Tem certeza que gostaria de excluir sua conta?")) return false;'>
                                     <!--true = deleta false = cancela -->
                                     @csrf
                                     <input type='hidden' value='{{ 2 }}' name='id'>

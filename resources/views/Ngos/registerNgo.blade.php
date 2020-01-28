@@ -9,6 +9,12 @@
         <form action="{{ ('cadastro') }}" method="POST" class="card col-lg-8 col-md-12 col-sm-12 col-12 p-5" id="formOng" enctype='multipart/form-data'>
         {{ csrf_field() }} <!--gera token de segurança - verifica se o usuário é autenticado-->
             <!-- essa div é para o título -->
+
+        <!-- Código somente para testes de erro no preenchimento do form. Quando estiver ok, melhorar essa exibição para o usuário -->
+        @if(!empty($errors->all()))
+            <script>alert('existem erros.' @foreach($errors->all() as $message) +"\n {{ $message }}" @endforeach)</script>
+        @endif
+
             <div class="form-group d-flex justify-content p-2">
                 <h3 class="tituloOng">Cadastro de ONG</h3>
             </div>

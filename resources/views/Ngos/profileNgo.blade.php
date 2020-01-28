@@ -21,7 +21,7 @@
             </div>
         </div>
         <div class="col-lg-6 col-md-6 col-sm-12 col-12 d-flex justify-content-center">
-            <img id="perfilOng_imagem" src="{{ asset('storage/public/ngos_pictures/'.$ngo->profile_picture) }}">
+            <img id="perfilOng_imagem" src="{{Auth::user()->getPicture()}}">
         </div>
     </div>
 </section>
