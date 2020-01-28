@@ -19,7 +19,7 @@ class CheckNgo
 
         $user = Auth::user();
 
-        if($user && $user->user_group_id=2){
+        if($user && 2 == $user->user_group_id){
             return $next($request);
         } else {
             return redirect('/login');

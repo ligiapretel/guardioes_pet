@@ -32,7 +32,7 @@ class NgoController extends Controller
     return view('Ngos.profileNgo', compact(['ngo','pets','pet_pictures'])); //compact = Cria um array contendo variáveis e seus valores.
     }
 
-
+    
     public function registerNgo(){
         return view("Ngos.registerNgo"); //chama a view para cadastro
     }

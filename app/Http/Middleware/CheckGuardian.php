@@ -5,7 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Auth;
 
-class CheckNgo
+class CheckGuardian
 {
     /**
      * Handle an incoming request.
@@ -19,7 +19,7 @@ class CheckNgo
 
         $user = Auth::user();
 
-        if($user && $user->user_group_id=3){
+        if($user && 3 == $user->user_group_id){
             return $next($request);
         } else {
             return redirect('/login');

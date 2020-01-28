@@ -19,12 +19,10 @@ class AdController extends Controller
     }
 
     public function viewRegisterAds(Request $request){
-        // $ngo = Ngos::find($ngoId);
         return view('Ads.registerAds');
     }
 
     public function create(Request $request){
-        // $ngo = Ngos::find($ngoId);
         
         $newAd = new Ad();
         $newAd->medicine = $request->medicamento;
@@ -46,7 +44,6 @@ class AdController extends Controller
     }
 
     public function viewFormUpdate(Request $request, $id=0){
-        // $ngo = Ngos::find($ngoId);
         // Dentro do () do find estou recuperando o que veio pela rota
         $ad = Ad::find($id);
         if($ad){
@@ -58,7 +55,6 @@ class AdController extends Controller
     }
 
     public function update(Request $request){
-        // $ngo = Ngos::find($ngoId);
         // No find, o request traz tudo que foi enviado pelo usuário, então seleciono a informação pelo nome do atributo - igual ao que está no form    
         $ad = Ad::find($request->idAd);
         $ad->medicine = $request->medicamento;
@@ -79,7 +75,6 @@ class AdController extends Controller
     }
 
     public function viewMyAds(Request $request){
-        // $ngo = Ngos::find($ngoId);
         $listAds = Ad::all();
         $userId = Auth::user()->id;
 
