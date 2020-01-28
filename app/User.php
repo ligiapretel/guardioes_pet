@@ -83,4 +83,17 @@ class User extends Authenticatable
 
         }
     }
+
+    public function getPicture(){
+
+        if($this->user_group_id == 2){
+
+            return $this->ngo->profile_picture;
+
+        }elseif($this->user_group_id == 3){
+
+            return $this->guardian->profile_picture;
+
+        }
+    }
 }
