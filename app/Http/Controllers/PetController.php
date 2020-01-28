@@ -21,12 +21,12 @@ class PetController extends Controller
     //     return view('Pets.pets');
     // }
 
-    public function viewForm (Request $request, $id) {
-        $ngo = Ngos::find($id);   
+    public function viewForm (Request $request) {
+        $ngo = Ngos::find(Auth::user()->id);   
         return view ('Pets.registerPet', ["ngo"=>$ngo]);
     }
 
-    public function register (Request $request, $id) {
+    public function register (Request $request) {
         $newPet = new Pet;
         $newPet->name = $request->name;
         $newPet->type = $request->type;
@@ -48,8 +48,7 @@ class PetController extends Controller
         $newPet->adoption_available = $request->adoption_available;
         $newPet->temporary_home_available = $request->temporary_home_available;
         $newPet->sponsorship_available = $request->sponsorship_available;
-        $ngo = Ngos::find($id);
-        $newPet->id_ngo = $ngo->id;
+        $newPet->user_id = Auth::user()->id;
   
         $result = $newPet->save();
 
@@ -70,20 +69,29 @@ class PetController extends Controller
 
         // $ngoId = Auth::user();
 
-
-        return view('Pets.registerPet', ["result"=>$result, "ngo"=>$ngo]);
-        //se houver result, será mostrada uma mensagem de sucesso (está na view)
+        
+        if($result){
+            // Passando um parâmetro via session no redirect (na view verifico a session para exibir a mensagem de sucesso)
+            return redirect("/pet/cadastro")->with('created',"Pet cadastrado com sucesso!");
+        }else{
+            return redirect("/pet/cadastro")->with('error',"Ops! Falha ao salvar as informações do pet =(");
+        }
     }
 
-    public function viewFormUpdate (Request $request, $id=1) {
+
+    //     return view('Pets.registerPet', ["result"=>$result]);
+    //     //se houver result, será mostrada uma mensagem de sucesso (está na view)
+    // }
+
+    public function viewFormUpdate (Request $request, $id) {
         $pet = Pet::find($id);
         //$picture = DB::table('pets_pictures')->where('pet_id', $pet->id)->first();
-
-        $pictures = PetPicture::find($id)->where('pet_id', '=', $pet->id)->get();
+        $ngo = Ngos::find(Auth::user()->id);
+        $pictures = PetPicture::find($id);
         //dd($picture); //VER COMO DEIXAR A FOTO QUE JÁ EXISTE NO BANCO
 
         if($pet) {
-             return view('Pets.updatePet', ['pet'=>$pet, 'pictures'=>$pictures]);
+             return view('Pets.updatePet', ['pet'=>$pet, 'pictures'=>$pictures, 'ngo'=>$ngo]);
         } else {
             return view('Pets.updatePet');
         }
@@ -129,16 +137,24 @@ class PetController extends Controller
             $upload = $request->picture->storeAs('pets_pictures', $fileName);
             $newPetPicture->picture = $fileName;
             $newPetPicture->save();
-        }    
+        } 
 
-        return view('Pets.updatePet', ["result"=>$result, 'picture'=>$picture]);
-        //se houver result, será mostrada uma mensagem de sucesso (está na view)
+        // return view('Pets.updatePet', ["result"=>$result, 'picture'=>$picture]);
+        // //se houver result, será mostrada uma mensagem de sucesso (está na view)
+
+        if($result){
+            // Passando um parâmetro via session no redirect (na view verifico a session para exibir a mensagem de sucesso)
+            return redirect("/ong/minhaconta/pets")->with('updated',"Informações do pet atualizadas com sucesso!");
+        }else{
+            return redirect("/ong/minhaconta/pets")->with('error',"Ops! Falha ao atualizar as informações do pet =(");
+        }
+
     }
 
     public function delete (Request $request, $id=0) {
         $result = Pet::destroy($id);
         if($result) {
-            return redirect('/pet/cadastro');
+            return redirect('/ong/minhaconta/pets');
             //mesma coisa que o header Location
         }
     }

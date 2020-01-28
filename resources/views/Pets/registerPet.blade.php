@@ -8,22 +8,27 @@
 
 <!-- início do formulário -->
 
-        <form action="/pet/cadastro/{{Auth::user()->id}}" enctype="multipart/form-data" method="post"
+        <form action="/pet/cadastro" enctype="multipart/form-data" method="post"
             class="card col-lg-8 col-md-12 col-sm-12 col-12 p-5" id="formAnimal" style="width: 50rem">
             @csrf
-
-            <div class="row">
-        <div class="col-12">
-            @if(isset($result))
-                @if($result)
-                    <h4 class="mb-5">Seu pet foi cadastrado! Quer cadastrar outro pet?</h4>
-                @else
-                    <h3>O pet não foi cadastrado. Tente novamente</h3>
-                @endif
+                
+            @if(session("created"))
+                <div class="alert alert-light alert-dismissible fade show" role="alert">
+                    <strong>{{session("created")}}</strong>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
             @endif
-        </div>
-    </div>
 
+            @if(session("error"))
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <strong>{{session("error")}}</strong>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            @endif
 
             <!-- essa div é para o título -->
             <div class="form-group d-flex justify-content pb-2">
