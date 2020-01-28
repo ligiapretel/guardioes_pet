@@ -74,7 +74,7 @@
                                     'admin/atualizar'
                                     @case (2)
                                     {{ url('ong/edita/'. Auth::user()->id) }}
-                                    @case(3)
+                                    @case(3)    
                                     'guardiao/account/perfil'
                                     @endswitch
 

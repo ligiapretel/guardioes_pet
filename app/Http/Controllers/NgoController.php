@@ -218,10 +218,10 @@ class NgoController extends Controller
         return view('/home');
     }
 
-    public function accountViewMyPets($ngoId) {
-        $ngo = Ngos::find($ngoId);
-        $pets = Pet::where('id_ngo', '=', $ngoId)->get();
-        return view('Ngos.accountMyPets', compact('ngo'),['pets'=>$pets]); 
+    public function accountViewMyPets(Request $request) {
+        $user_id = Auth::user()->id;
+        $pets = Pet::where('user_id', '=', $user_id)->get();
+        return view('Ngos.accountMyPets', ['pets'=>$pets]); 
     }
 
 }

@@ -160,12 +160,12 @@
                             <nav class="nav flex-column bg-light">
                                 <a
                                     class="nav-link menu-ong active"
-                                    href="{{ url('ong/edita/'. Auth::user()->id) }}">Meu Perfil</a>
+                                    href="{{ url('ong/edita/'. Auth::user()->id) }}">Meu perfil</a>
                                 <!--depois q fizerem o login passar a session e o -> id-->
-                                <a class="nav-link menu-ong" href="/ong/{{Auth::user()->id}}/minhaconta/pets">Animais Cadastrados</a>
-                                <a class="nav-link menu-ong" href="{{url('pet/cadastro/'. Auth::user()->id) }}">Cadastrar Novos Animais</a>
-                                <a class="nav-link menu-ong" href="/anuncios/meus-anuncios">Anúncios Cadastrados</a>
-                                <a class="nav-link menu-ong" href="/anuncios/cadastro">Cadastrar Novos Anúncios</a>
+                                <a class="nav-link menu-ong" href="/ong/minhaconta/pets">Pets cadastrados</a>
+                                <a class="nav-link menu-ong" href="/pet/cadastro">Cadastrar novos pets</a>
+                                <a class="nav-link menu-ong" href="/anuncios/meus-anuncios">Anúncios cadastrados</a>
+                                <a class="nav-link menu-ong" href="/anuncios/cadastro">Cadastrar novo anúncio</a>
                                 <a class="nav-link menu-ong" href="/chat">Mensagens</a>
                                 <a class="nav-link menu-ong-sair" href="/logout" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
