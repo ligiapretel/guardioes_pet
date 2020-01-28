@@ -46,6 +46,21 @@ class NgoController extends Controller
 
     //inicio da função para cadastro da ong via formulário  
     public function doRegisterNgo(Request $request){    
+        
+        //O validate vem antes de criar qualquer registro no BD
+        //informado campos requeridos no preenchimento do formulário via controller
+        $request->validate([   //campos que são requeridos (obrigatórios)         
+            'social_name' => 'required',
+            'cnpj' => 'required',
+            'phone_number' => 'required',
+            'responsable_name' => 'required',
+            'address' => 'required',
+            'number' => 'required',
+            'zip_code' => 'required',
+            'neighborhood' => 'required',
+            'city' => 'required',
+            'state' => 'required',
+        ]);
 
         //criando novo usuário na tabela Users:
         $newUser = new User();
@@ -56,47 +71,28 @@ class NgoController extends Controller
 
         $result = $newUser->save();
 
-    //criano novo usuário para ong
-    $newNgo = new Ngos();
-    $newNgo->social_name = $request->social_name;
-    $newNgo->fantasy_name = $request->fantasy_name;
-    $newNgo->cnpj = $request->cnpj;
-    $newNgo->profile_picture = $request->profile_picture;
-    $newNgo->site = $request->site;
-    $newNgo->phone_number = $request->phone_number;
-    $newNgo->responsable_name = $request->responsable_name;
-    $newNgo->address = $request->address;
-    $newNgo->number = $request->number;
-    $newNgo->complement = $request->complement;
-    $newNgo->zip_code = $request->zip_code;
-    $newNgo->neighborhood = $request->neighborhood;
-    $newNgo->city = $request->city;
-  /*   $newNgo->email = $request->email;
-    $newNgo->password = $request->password; */
-    $newNgo->state = $request->state;
-    $newNgo->about_the_ngo = $request->about_the_ngo;
-    $newNgo->type_account = $request->type_account;
-    $newNgo->bank_name = $request->bank_name;
-    $newNgo->bank_agency = $request->bank_agency;
-    $newNgo->bank_account = $request->bank_account;
-    $newNgo->user_id = $newUser->id;
-        
-        
-    //informado campos requeridos no preenchimento do formulário via controller
-        $request->validate([   //campos que são requeridos (obrigatórios)         
-            'social_name' => 'required',
-            'cnpj' => 'required',
-            'phone_number' => 'required',
-            'responsable_name' => 'required',
-            'address' => 'required',
-            'number' => 'required',
-            'complement' => 'required',
-            'zip_code' => 'required',
-            'neighborhood' => 'required',
-            'city' => 'required',
-            'state' => 'required',
-
-        ]);
+        //criano novo usuário para ong
+        $newNgo = new Ngos();
+        $newNgo->social_name = $request->social_name;
+        $newNgo->fantasy_name = $request->fantasy_name;
+        $newNgo->cnpj = $request->cnpj;
+        $newNgo->profile_picture = $request->profile_picture;
+        $newNgo->site = $request->site;
+        $newNgo->phone_number = $request->phone_number;
+        $newNgo->responsable_name = $request->responsable_name;
+        $newNgo->address = $request->address;
+        $newNgo->number = $request->number;
+        $newNgo->complement = $request->complement;
+        $newNgo->zip_code = $request->zip_code;
+        $newNgo->neighborhood = $request->neighborhood;
+        $newNgo->city = $request->city;
+        $newNgo->state = $request->state;
+        $newNgo->about_the_ngo = $request->about_the_ngo;
+        $newNgo->type_account = $request->type_account;
+        $newNgo->bank_name = $request->bank_name;
+        $newNgo->bank_agency = $request->bank_agency;
+        $newNgo->bank_account = $request->bank_account;
+        $newNgo->user_id = $newUser->id;
 
         //Salvar imagem da ONG - LOGO
         if($request->hasFile('profile_picture') && $request->file('profile_picture')->isValid()){
@@ -105,24 +101,10 @@ class NgoController extends Controller
             $fileName = "{$name}.{$extension}";
 
             //salvando a foto no storage:
-            $upload = $request->profile_picture->storeAs('public/ngos_pictures', $fileName);
+            $upload = $request->profile_picture->storeAs('ngos_pictures', $fileName);
             //salvando a foto no BD:
             $newNgo->profile_picture = $fileName;
         }
-
-        /* $profile_pictures = $_FILES['profile_picture']; //capturo o array da imagem
-        $fileDir = ''; //criei uma variável para salvar o caminho da imagem
-        if(!empty($profile_pictures)){ //se for diferente de vazio 
-            $name = explode('.', $profile_pictures['name']);//transforma a string em um array
-            $formato = end($name); //pega o último elemento do array
-            
-            $image = time(). '.' . $formato; //ele armazena na variavel image com a data time do cadastro e a extensão da imagem.
-            
-            if(move_uploaded_file($profile_pictures['tmp_name'], 'img/logo-ong' . $image)) { //pego apenas o caminho da imagem(tmp_name)
-                $fileDir = 'img/logo-ong' . $image; //armazeno dentro da variável o caminho da imagem
-            } 
-        }
-        //fim salvamento foto logo */
         
         //checa se as senhas são iguais, - nao sei se está correto
         $realPass = $_POST['password'];
@@ -139,9 +121,7 @@ class NgoController extends Controller
         $result = $newNgo->save();
 
         //criando condicional para informar o cadastro
-        if ($newNgo){
-            /* echo "<script>alert('Cadastro realizado com Sucesso!);</script>"; */
-            /* return view('login', ['message'=>'Cadastro realizado com sucesso!']); */
+        if ($result){
            return redirect('login')
                 ->with('success', 'Cadastro Realizado com sucesso!!');
         } else {
@@ -183,8 +163,6 @@ class NgoController extends Controller
         $ngo->zip_code = $request->zip_code;
         $ngo->neighborhood = $request->neighborhood;
         $ngo->city = $request->city;
-      /*   $ngo->email = $request->email;
-        $ngo->password = $request->password; */
         $ngo->state = $request->state;
         $ngo->about_the_ngo = $request->about_the_ngo;
         $ngo->type_account = $request->type_account;
@@ -240,10 +218,10 @@ class NgoController extends Controller
         return view('/home');
     }
 
-    public function accountViewMyPets($ngoId) {
-        $ngo = Ngos::find($ngoId);
-        $pets = Pet::where('id_ngo', '=', $ngoId)->get();
-        return view('Ngos.accountMyPets', compact('ngo'),['pets'=>$pets]); 
+    public function accountViewMyPets(Request $request) {
+        $user_id = Auth::user()->id;
+        $pets = Pet::where('user_id', '=', $user_id)->get();
+        return view('Ngos.accountMyPets', ['pets'=>$pets]); 
     }
 
 }

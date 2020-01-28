@@ -18,13 +18,13 @@ class AdController extends Controller
         // Na view acesso a função que faz o select na tabela users, ngos e guardians para acessar informações dessas outras tabelas. O select está na model User.
     }
 
-    public function viewRegisterAds(Request $request, $ngoId=0){
-        $ngo = Ngos::find($ngoId);
-        return view('Ads.registerAds',["ngo"=>$ngo]);
+    public function viewRegisterAds(Request $request){
+        // $ngo = Ngos::find($ngoId);
+        return view('Ads.registerAds');
     }
 
-    public function create(Request $request, $ngoId=0){
-        $ngo = Ngos::find($ngoId);
+    public function create(Request $request){
+        // $ngo = Ngos::find($ngoId);
         
         $newAd = new Ad();
         $newAd->medicine = $request->medicamento;
@@ -37,24 +37,28 @@ class AdController extends Controller
 
         $result = $newAd->save();
 
-        // Passando um parâmetro via session no redirect (na view verifico a session para exibir a mensagem de sucesso)
-        return redirect("/anuncios/meus-anuncios/")->with('created',"Sucesso");
+        if($result){
+            // Passando um parâmetro via session no redirect (na view verifico a session para exibir a mensagem de sucesso)
+            return redirect("/anuncios/meus-anuncios/")->with('created',"Anúncio cadastrado com sucesso!");
+        }else{
+            return redirect("/anuncios/meus-anuncios/")->with('error',"Ops! Falha ao salvar o anúncio. =(");
+        }
     }
 
-    public function viewFormUpdate(Request $request, $id=0, $ngoId=0){
-        $ngo = Ngos::find($ngoId);
+    public function viewFormUpdate(Request $request, $id=0){
+        // $ngo = Ngos::find($ngoId);
         // Dentro do () do find estou recuperando o que veio pela rota
         $ad = Ad::find($id);
         if($ad){
             // Passar um array associativo como parâmetro da view: primeiro o nome da associação, que pode ser qualquer nome, e depois a variável aonde armazenei o esse parâmetro.
-            return view('Ads.updateAds',["ad"=>$ad],["ngo"=>$ngo]);
+            return view('Ads.updateAds',["ad"=>$ad]);
         }else{
             return view('Ads.updateAds');
         }
     }
 
-    public function update(Request $request, $ngoId=0){
-        $ngo = Ngos::find($ngoId);
+    public function update(Request $request){
+        // $ngo = Ngos::find($ngoId);
         // No find, o request traz tudo que foi enviado pelo usuário, então seleciono a informação pelo nome do atributo - igual ao que está no form    
         $ad = Ad::find($request->idAd);
         $ad->medicine = $request->medicamento;
@@ -67,17 +71,21 @@ class AdController extends Controller
         // O result é um booleano, então coloco como parâmetro da view para que a view exiba a informação de acordo com o booleano.
         $result = $ad->save();
 
-        return redirect("/anuncios/meus-anuncios/")->with('updated',"Sucesso");
+        if($result){
+            return redirect("/anuncios/meus-anuncios/")->with('updated',"Anúncio atualizado com sucesso!");
+        }else{
+            return redirect("/anuncios/meus-anuncios/")->with('error',"Ops! Falha ao salvar o anúncio. =(");
+        }
     }
 
-    public function viewMyAds(Request $request, $ngoId=0){
-        $ngo = Ngos::find($ngoId);
+    public function viewMyAds(Request $request){
+        // $ngo = Ngos::find($ngoId);
         $listAds = Ad::all();
         $userId = Auth::user()->id;
 
         $myAds = Ad::where('user_id','=',$userId)->get();
       
-        return view('Ads.myAds',["myAds"=>$myAds],["ngo"=>$ngo]);
+        return view('Ads.myAds',["myAds"=>$myAds]);
     }
 
     public function delete(Request $request, $id=0){

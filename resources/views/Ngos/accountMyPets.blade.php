@@ -9,7 +9,23 @@
 
     <div class="card col-lg-8 col-md-12 col-sm-12 col-12 p-5 mt-5">
        <div class="col-md-12 mt-5">
-       
+       @if(session("updated"))
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <strong>{{session("updated")}}</strong>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            @endif
+            <!-- Verificando de erro no cadastro/atualização do anúncio -->
+            @if(session("error"))
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <strong>{{session("error")}}</strong>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            @endif
             <table class="table">
 
                 <thead>

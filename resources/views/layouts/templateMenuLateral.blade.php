@@ -61,18 +61,16 @@
                 <li class="nav-item">
                     <a class="nav-link header-link" href="/anuncios">Doações</a>
                 </li>
-                <!-- <li class="nav-item">
-                <a class="nav-link header-link" href="index.php#footer">Contato</a>
-            </li> -->
-
-                <!--VERIFICAR A ROTA DE LOGIN-->
+                
 
                 @guest
                 <li class="nav-item">
                     <a class="nav-link header-link" href="/login">Login</a>
+                </li>
                 <li class="nav-item">
                     <a href="cadastre-se" class="header-link"><button type="button"
                             class="btn-roxo">Cadastre-se</button></a>
+                </li>
                     @else
                 <li class="nav-item dropdown">
                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
@@ -80,6 +78,7 @@
                         {{ Auth::user()->email }}
                         <span class="caret"></span>
                     </a>
+                
 
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
 
@@ -155,18 +154,18 @@
                         <img
                             id="perfil-ong"
                             class="ml-4"
-                            src="{{asset('storage/public/ngos_pictures/'.$ngo->profile_picture)}}"
-                            alt="logo da ONG"/>
+                            src="{{Auth::user()->getPicture()}}"
+                            alt="logo"/>
                         <div class="card-body" style="width: 20rem">
                             <nav class="nav flex-column bg-light">
                                 <a
                                     class="nav-link menu-ong active"
-                                    href="{{ url('ong/edita/'. Auth::user()->id) }}">Meu Perfil</a>
+                                    href="{{ url('ong/edita/'. Auth::user()->id) }}">Meu perfil</a>
                                 <!--depois q fizerem o login passar a session e o -> id-->
-                                <a class="nav-link menu-ong" href="/ong/{{Auth::user()->id}}/minhaconta/pets">Animais Cadastrados</a>
-                                <a class="nav-link menu-ong" href="{{url('pet/cadastro/'. Auth::user()->id) }}">Cadastrar Novos Animais</a>
-                                <a class="nav-link menu-ong" href="/anuncios/meus-anuncios">Anúncios Cadastrados</a>
-                                <a class="nav-link menu-ong" href="/anuncios/cadastro">Cadastrar Novos Anúncios</a>
+                                <a class="nav-link menu-ong" href="/ong/minhaconta/pets">Pets cadastrados</a>
+                                <a class="nav-link menu-ong" href="/pet/cadastro">Cadastrar novos pets</a>
+                                <a class="nav-link menu-ong" href="/anuncios/meus-anuncios">Anúncios cadastrados</a>
+                                <a class="nav-link menu-ong" href="/anuncios/cadastro">Cadastrar novo anúncio</a>
                                 <a class="nav-link menu-ong" href="/chat">Mensagens</a>
                                 <a class="nav-link menu-ong-sair" href="/logout" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -174,7 +173,7 @@
                                 <form
                                     method='post'
                                     action='{{ url("ong/deleta") }}'
-                                    onsubmit='if(!confirm("Te certeza que gostaria de excluir sua conta?")) return false;'>
+                                    onsubmit='if(!confirm("Tem certeza que gostaria de excluir sua conta?")) return false;'>
                                     <!--true = deleta false = cancela -->
                                     @csrf
                                     <input type='hidden' value='{{ 2 }}' name='id'>

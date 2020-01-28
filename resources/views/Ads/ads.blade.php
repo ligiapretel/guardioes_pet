@@ -42,7 +42,7 @@ Guardiões Pet | Anúncios
             @empty
                 <div class="row justify-content-center p-5 mt-5">
                     <h3 class="titleh3">Nenhum anúncio ativo no momento.</h3>
-                    <p class="text text-center">Se você é um Guardião ou ONG e precisa de doações (medicamentos, itens de higiene, alimentos ou qualquer outra necessidade), acesse sua conta para cadastrar anúncios, assim outras pessoas podem ajudar você. =)</p>
+                    <p class="text text-center">Se você é Guardião ou ONG e precisa de doações (medicamentos, itens de higiene, alimentos ou qualquer outra necessidade), acesse sua conta para cadastrar anúncios, assim outras pessoas podem ajudar você. =)</p>
                     <p class="text text-center"><span style="font-weight:bold;">Ainda não tem cadastro?</span> <a href="/cadastre-se" class="link-roxo">Cadastre-se agora</a> e faça parte da maior comunidade amiga dos pets.</p>
                 </div>
             @endforelse                 

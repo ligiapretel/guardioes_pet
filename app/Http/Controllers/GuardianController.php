@@ -135,12 +135,12 @@ class GuardianController extends Controller
                 //salvando a foto no BD:
                 $newGuardian->profile_picture = $fileName;
             }
-
             $result = $newGuardian->save();
-
+       
            //return view('Guardian.registerGuardian', ["result"=>$result]);
            return redirect('/guardiao/cadastrar')->with(['result'=>$result]);
-    }
+        }
+    
     
     
 

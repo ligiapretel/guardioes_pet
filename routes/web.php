@@ -42,7 +42,7 @@ Route::get('/edita/{id?}',"NgoController@editNgo")->middleware('checkngo');
 Route::post('/edita',"NgoController@doEditNgo");
 Route::post('/deleta',"NgoController@deleteNgo");
 Route::post('/visualizar',"NgoController@getNgo");
-Route::get('/{id?}/minhaconta/pets',"NgoController@accountViewMyPets")->middleware('checkngo');
+Route::get('/minhaconta/pets',"NgoController@accountViewMyPets")->middleware('checkngo');
 });
 
 
@@ -53,11 +53,11 @@ Route::get('/parceiros', "SiteController@viewPartners");
 Route::get('/sobre', "SiteController@viewAbout");
 
 //Pet´s Routes
-Route::get('/pet/cadastro/{id?}', "PetController@viewForm")->middleware('checkngo');
-Route::post('/pet/cadastro/{id?}', "PetController@register");
-Route::get('/pet/atualizar/{id?}','PetController@viewFormUpdate');
-Route::post('/pet/atualizar', "PetController@update");
-Route::get('/pet/excluir/{id?}','PetController@delete');
+Route::get('/pet/cadastro', "PetController@viewForm")->middleware('checkngo');
+Route::post('/pet/cadastro', "PetController@register")->middleware('checkngo');
+Route::get('/pet/atualizar/{id?}','PetController@viewFormUpdate')->middleware('checkngo');
+Route::post('/pet/atualizar/{id?}', "PetController@update")->middleware('checkngo');
+Route::get('/pet/excluir/{id?}','PetController@delete')->middleware('checkngo');
 Route::get('/pet/perfil/{id?}', "PetController@viewPetProfile");
 Route::get('/pets', "PetController@viewAllPets");
 

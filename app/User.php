@@ -9,11 +9,14 @@ use Illuminate\Support\Facades\DB;
 use App\Ngos;
 use App\Guardian;
 use App\Ad;
+use Storage;
 
 class User extends Authenticatable
 {
     use Notifiable;
 
+    const ID_ONG = 2;
+    const ID_GUARDIAO = 3;
     /**
      * The attributes that are mass assignable.
      *
@@ -74,30 +77,26 @@ class User extends Authenticatable
         // Verificando se o usuário é ong, ou seja, user_group_id 2, para buscar o nome dele na tabela ngos
         if($this->user_group_id == 2){
 
-            // Essa linha de código faz o mesmo que as linhas comentadas abaixo
-            // return $this->ngo->fantasy_name;
-
-            $ngoName = DB::table('users')
-            ->join('ngos', 'users.id', '=', 'ngos.user_id')
-            ->select('users.*', 'ngos.*')
-            ->get();
-
-            $ngoName = $ngoName[0]->social_name;
-
-            // dd($ngoName);
-
-            return $ngoName;
+            // Fazendo as declarações de relacionamentos das tabelas, consigo acessar as informações cruzando dados de tabelas conforme abaixo:
+            return $this->ngo->fantasy_name;
         
         }elseif($this->user_group_id == 3){
 
-            $guardianName = DB::table('users')
-            ->join('guardians', 'users.id', '=', 'guardians.user_id')
-            ->select('users.*', 'guardians.*')
-            ->get();
+            return $this->guardian->name;
 
-            $guardianName = $guardianName[0]->name;
-
-            return $guardianName;
         }
+    }
+
+    public function getPicture(){
+
+        if($this->user_group_id == User::ID_ONG){
+            $path = 'ngos_pictures/'.$this->ngo->profile_picture;
+        }
+
+        if($this->user_group_id == User::ID_GUARDIAO){
+            $path = 'guardians_pictures/'.$this->guardian->profile_picture;
+        }
+
+        return Storage::url($path);
     }
 }

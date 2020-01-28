@@ -8,6 +8,10 @@
 
         <form action="/guardiao/cadastrar" method="POST" enctype="multipart/form-data" class="card col-lg-8 col-md-12 col-sm-12 col-12 p-5" id="formGuardiao" style="width: 50rem">
             @csrf
+            <!-- Código somente para testes de erro no preenchimento do form. Quando estiver ok, melhorar essa exibição para o usuário -->
+            @if(!empty($errors->all()))
+                <script>alert('existem erros.' @foreach($errors->all() as $message) +"\n {{ $message }}" @endforeach)</script>
+            @endif
 
             <!-- input hidden com status de Status e user_type de Users_group -->
             <input hidden type="text" name="statusGuardian"  value="1"> 
@@ -33,87 +37,87 @@
             <div class="form-group row">
                 <label for="name" class="col-sm-4 col-form-label">Nome </label>
                 <div class="col-sm-8">
-                    <input name="name" type="text" class="form-control" id="nomeGuardiao" placeholder="Nome completo">
+                    <input name="name" value="{{ old("name", '') }}" type="text" class="form-control" id="nomeGuardiao" placeholder="Nome completo">
                 </div>
             </div>
             <div class="form-group row">
                 <label for="nickname" class="col-sm-4 col-form-label">Apelido </label>
                 <div class="col-sm-8">
-                    <input name="nickname" type="text" class="form-control" id="apelido"
+                    <input name="nickname" value="{{ old("nickname", '') }}" type="text" class="form-control" id="apelido"
                         placeholder="Como nome irá aparecer para outros usuários">
                 </div>
             </div>
             <div class="form-group row">
                 <label for="date_of_birth" class="col-sm-4 col-form-label">Data de Nascimento </label>
                 <div class="col-sm-8">
-                    <input name="date_of_birth" type="date" class="form-control" id="data">
+                    <input name="date_of_birth" value="{{ old("date_of_birth", '') }}" type="date" class="form-control" id="data">
                 </div>
             </div>
             <div class="form-group row">
                 <label for="email" class="col-sm-4 col-form-label">E-mail</label>
                 <div class="col-sm-8">
-                    <input name="email" type="email" class="form-control" id="emailGuardiao" placeholder="seunome@email.com">
+                    <input name="email" value="{{ old("email", '') }}" type="email" class="form-control" id="emailGuardiao" placeholder="seunome@email.com">
                 </div>
             </div>
             <div class="form-group row">
                 <label for="phone_number" class="col-sm-4 col-form-label">Telefone </label>
                 <div class="col-sm-8">
-                    <input name="phone_number" type="text" class="form-control" id="telefone" placeholder="(xx) xxxxx-xxxx">
+                    <input name="phone_number" value="{{ old("phone_number", '') }}" type="text" class="form-control" id="telefone" placeholder="(xx) xxxxx-xxxx">
                 </div>
             </div>
             <div class="form-group row">
                 <label for="profile_picture" class="col-sm-4 col-form-label">Foto de Perfil</label>
                 <div class="col-sm-8">
-                    <input name="profile_picture" type="file" class="form-control-file" id="fotoGuardiao">
+                    <input name="profile_picture" value="{{ old("profile_picture", '') }}" type="file" class="form-control-file" id="fotoGuardiao">
                 </div>
             </div>
             <div class="form-group row">
                 <label for="senhaGuardiao" class="col-sm-4 col-form-label">Defina uma senha</label>
                 <div class="col-sm-8">
-                    <input name="senhaGuardiao" type="password" class="form-control" id="senhaGuardiao"
+                    <input name="senhaGuardiao" value="{{ old("senhaGuardiao", '') }}" type="password" class="form-control" id="senhaGuardiao"
                         placeholder="Senha mínimo 6 caracteres">
                 </div>
             </div>
             <div class="form-group row">
                 <label for="senhaConfirmGuardiao" class="col-sm-4 col-form-label">Confirme sua senha</label>
                 <div class="col-sm-8">
-                    <input name="senhaConfirmGuardiao" type="password" class="form-control" id="senhaGuardiaoConfirm"
+                    <input name="senhaConfirmGuardiao" value="{{ old("senhaConfirmGuardiao", '') }}" type="password" class="form-control" id="senhaGuardiaoConfirm"
                         placeholder="Confirme sua senha">
                 </div>
             </div>
             <div class="form-group row">
-                <label for="zip_code" class="col-sm-4 col-form-label">CEP</label>
+                <label for="zip_code">CEP</label>
                 <div class="col-sm-8">
-                    <input name="zip_code" type="number" class="form-control" id="cep" placeholder="CEP">
+                    <input name="zip_code" value="{{ old("zip_code", '') }}" type="number" class="form-control" id="cep" placeholder="CEP">
                 </div>
             </div>
             <div class="form-group row">
                 <label for="address" class="col-sm-4 col-form-label">Endereço</label>
                 <div class="col-sm-8">
-                    <input name="address" type="text" class="form-control" id="rua" placeholder="Rua/Avenida/Logradouro">
+                    <input name="address" value="{{ old("address", '') }}" type="text" class="form-control" id="rua" placeholder="Rua/Avenida/Logradouro">
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6 p-1">
                     <label for="number">Número</label>
-                    <input name="number" type="number" class="form-control" id="telefone" placeholder="No.">
+                    <input name="number" value="{{ old("number", '') }}" type="number" class="form-control" id="telefone" placeholder="No.">
                 </div>
                 <div class="form-group col-md-6 p-1">
                     <label for="complement">Complemento</label>
-                    <input name="complement" type="number" class="form-control" id="complementoGuardiao" placeholder="Ex.: Bloco B">
+                    <input name="complement" value="{{ old("complement", '') }}" type="number" class="form-control" id="complementoGuardiao" placeholder="Ex.: Bloco B">
                 </div>
                 
                 <div class="form-group col-md-6 p-1">
                     <label for="neighborhood">Bairro</label>
-                    <input name="neighborhood" type="text" class="form-control" id="bairro" placeholder="Bairro">
+                    <input name="neighborhood" value="{{ old("neighborhood", '') }}" type="text" class="form-control" id="bairro" placeholder="Bairro">
                 </div>
                 <div class="form-group col-md-6 p-1">
                     <label for="city">Cidade</label>
-                    <input name="city" type="text" class="form-control" id="cidade" placeholder="Cidade">
+                    <input name="city" value="{{ old("city", '') }}" type="text" class="form-control" id="cidade" placeholder="Cidade">
                 </div>
                 <div class="form-group col-md-6 p-1">
                     <label for="state">Estado</label>
-                    <input name="state" type="text" class="form-control" id="uf" placeholder="">
+                    <input name="state" value="{{ old("state", '') }}" type="text" class="form-control" id="uf" placeholder="">
 
                     {{-- <select name="state" class="form-control" id="uf">
                         <option>Selecione</option>

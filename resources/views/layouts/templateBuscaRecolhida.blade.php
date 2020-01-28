@@ -50,18 +50,15 @@
                 <li class="nav-item">
                     <a class="nav-link header-link" href="/anuncios">Doações</a>
                 </li>
-                <!-- <li class="nav-item">
-                <a class="nav-link header-link" href="index.php#footer">Contato</a>
-            </li> -->
-
-                <!--VERIFICAR A ROTA DE LOGIN-->
 
                 @guest
                 <li class="nav-item">
                     <a class="nav-link header-link" href="/login">Login</a>
+                </li>
                 <li class="nav-item">
                     <a href="cadastre-se" class="header-link"><button type="button"
                             class="btn-roxo">Cadastre-se</button></a>
+                </li>
                     @else
                 <li class="nav-item dropdown">
                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
