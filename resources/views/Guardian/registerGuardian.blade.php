@@ -86,7 +86,7 @@
                 </div>
             </div>
             <div class="form-group row">
-                <label for="zip_code">CEP</label>
+                <label for="zip_code" class="col-sm-4 col-form-label">CEP</label>
                 <div class="col-sm-8">
                     <input name="zip_code" value="{{ old("zip_code", '') }}" type="number" class="form-control" id="cep" placeholder="CEP">
                 </div>
@@ -100,11 +100,11 @@
             <div class="form-row">
                 <div class="form-group col-md-6 p-1">
                     <label for="number">Número</label>
-                    <input name="number" value="{{ old("number", '') }}" type="number" class="form-control" id="telefone" placeholder="No.">
+                    <input name="number" value="{{ old("number", '') }}" type="text" class="form-control" id="telefone" placeholder="No.">
                 </div>
                 <div class="form-group col-md-6 p-1">
                     <label for="complement">Complemento</label>
-                    <input name="complement" value="{{ old("complement", '') }}" type="number" class="form-control" id="complementoGuardiao" placeholder="Ex.: Bloco B">
+                    <input name="complement" value="{{ old("complement", '') }}" type="text" class="form-control" id="complementoGuardiao" placeholder="Ex.: Bloco B">
                 </div>
                 
                 <div class="form-group col-md-6 p-1">
@@ -153,7 +153,7 @@
             </div>
             <div class="form-group row p-3">
                 <label for="about_the_guardian">Fale sobre você</label>
-                <textarea name="about_the_guardian" class="form-control" id="textoGuardiao" cols="30" rows="10"
+                <textarea name="about_the_guardian" class="form-control" id="textoGuardiao" value="{{ old("state", '') }}" cols="30" rows="10"
                     placeholder="Descreva por que você quer ser um(a) Guardião(ã)"></textarea>
             </div>
             <div>

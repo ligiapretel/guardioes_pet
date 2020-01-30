@@ -56,7 +56,7 @@ class GuardianController extends Controller
         $sponsor = sponsor($pets);
 
         if($profile){
-            return view('Guardian.profileGuardianAndPet', 
+            return view('Guardian.profileGuardian', 
             ['profile'=>$profile, 
             'pets'=>$pets,
             'adopted'=>$adopted,
