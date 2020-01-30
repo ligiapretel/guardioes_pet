@@ -50,7 +50,7 @@ Route::get('/sobre', "SiteController@viewAbout");
 
 //Login´s Route
 Route::get('/login', "Auth\LoginController@viewLogin");
-Route::post('/login', "Auth\LoginController@login"); //ROTA POST LOGIN. VER PARA ONDE DIRECIONAR (NAT/VITOR)
+Route::post('/login', "Auth\LoginController@login");
 Route::post('/logout', "Auth\LoginController@logout");
 
 //Pet´s Routes

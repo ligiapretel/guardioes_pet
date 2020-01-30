@@ -99,4 +99,5 @@ class User extends Authenticatable
 
         return Storage::url($path);
     }
+
 }

@@ -13,6 +13,7 @@ use App\PetPicture;
 use App\Relation_type;
 use App\Guardian_has_pets;
 use App\User;
+use App\Ad;
 use Auth;
 
 class GuardianController extends Controller
@@ -55,13 +56,16 @@ class GuardianController extends Controller
         };
         $sponsor = sponsor($pets);
 
+        $myAds = Ad::where('user_id','=',$profile->user_id)->get();
+
         if($profile){
-            return view('Guardian.profileGuardianAndPet', 
+            return view('Guardian.profileGuardian', 
             ['profile'=>$profile, 
             'pets'=>$pets,
             'adopted'=>$adopted,
             'home'=>$home, 
-            'sponsor'=>$sponsor
+            'sponsor'=>$sponsor,
+            'myAds'=>$myAds
             ]);
         }
     }
