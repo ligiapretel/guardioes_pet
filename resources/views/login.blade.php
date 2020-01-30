@@ -7,11 +7,20 @@
 @section('content')
 
 <main id="main-login" class="col-lg-12 col-md-12 col-sm-12 col-xs-6">
-    @if( isset($message))
+    @if(isset($message))
         <script>alert('Cadastro realizado com Sucesso!');</script>
     @endif
         <div id="container-form-login" class="col-lg-5 col-md-6 col-sm-6 col-xs-6">
-            <form action="/home" method="POST">
+            <!-- Exibindo mensagem para o usuário que estiver inativo  -->
+            @if(session("error"))
+                <div class="alert alert-danger alert-dismissible fade show mt-5" role="alert">
+                    <strong>{{session("error")}}</strong>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            @endif
+            <form action="/login" method="POST">
             {{ csrf_field() }} <!--gera o token de segurança, verifica se o usuário é autenticado-->
                 <div class="row justify-content-center">
                     <div class="col-lg-10 col-md-10 col-sm-10 col-xs-6 text-center">
@@ -61,7 +70,7 @@
                     <a href="ong/cadastro"><button class="btn-roxo btn-login-enviar" type="submit" name="sou-ong">Sou ONG</button></a>
                 </div>
                 <div class="col-lg-5 col-md-10 col-sm-10 col-xs-5 p-2 largura-form-xs m-1 text-center">
-                    <a href="cadastroGuardiao"><button class="btn-roxo btn-login-enviar" type="submit"
+                    <a href="guardiao/cadastrar"><button class="btn-roxo btn-login-enviar" type="submit"
                             name="sou-guardiao">Sou Guardião</button></a>
                 </div>
             </div>

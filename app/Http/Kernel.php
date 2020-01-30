@@ -64,7 +64,6 @@ class Kernel extends HttpKernel
         'checkuser' => \App\Http\Middleware\CheckUser::class,
         'checkngo' => \App\Http\Middleware\CheckNgo::class,
         'checkguardian' => \App\Http\Middleware\CheckGuardian::class,
-        'checkngo' => \App\Http\Middleware\CheckNgo::class,
 
     ];
 

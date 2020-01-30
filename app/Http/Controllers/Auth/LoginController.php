@@ -14,6 +14,13 @@ use Illuminate\Support\Facades\Hash;
 
 class LoginController extends Controller
 {
+
+    //Para facilitar a leitura do código, declaro 2 constantes que armazenam mensagens de erro como resposta ao usuário. A constante precisa ser em letra maiúscula.
+    const MSG_USER_INATIVO = "Sua conta foi desativada. Por favor, entre em contato com os administradores da plataforma.";
+
+    const MSG_FALHA_AUTENTICACAO = "Login ou senha incorretos.";
+
+
     //session_start();
     /*
     |--------------------------------------------------------------------------
@@ -54,13 +61,20 @@ class LoginController extends Controller
     public function login(Request $request){   
 
         $credentials = $request->only('email', 'password');
-
-        if(Auth::attempt($credentials)){
-
-            return redirect()->intended('home');
- 
+        
+        // Verificando se login e senha estão incorretos
+        if(!Auth::attempt($credentials)){
+            return redirect('/login')->with('error', self::MSG_FALHA_AUTENTICACAO);  //self:: é o mesmo que eu escrever o nome da classe aqui (LoginController::). MSG_FALHA_AUTENTICACAO é uma constante declarada dentro dessa classe.
         }
-                   
+    
+        // Verificando se status do usuário não é ativo
+        if(1 != Auth::user()->status_id){
+            Auth::logout();
+            return redirect('/login')->with('error', self::MSG_USER_INATIVO);
+        }
+
+        //Passando pelas validações acima, o usuário é redirecionado para a home    
+        return redirect()->intended('home');
     }
 
     public function logout(Request $request){   

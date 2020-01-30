@@ -11,9 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
 
 //Guardian´s Routes
 Route::group(['prefix'=>'guardiao'], function(){
@@ -45,12 +42,16 @@ Route::post('/visualizar',"NgoController@getNgo");
 Route::get('/minhaconta/pets',"NgoController@accountViewMyPets")->middleware('checkngo');
 });
 
-
 //Site´s Routes
 Route::get('/home',"SiteController@viewHome");
-Route::post('/home', "Auth\LoginController@login");
+Route::get('/',"SiteController@viewHome");
 Route::get('/parceiros', "SiteController@viewPartners");
 Route::get('/sobre', "SiteController@viewAbout");
+
+//Login´s Route
+Route::get('/login', "Auth\LoginController@viewLogin");
+Route::post('/login', "Auth\LoginController@login"); //ROTA POST LOGIN. VER PARA ONDE DIRECIONAR (NAT/VITOR)
+Route::post('/logout', "Auth\LoginController@logout");
 
 //Pet´s Routes
 Route::get('/pet/cadastro', "PetController@viewForm")->middleware('checkngo');
@@ -79,11 +80,6 @@ Route::post('/busca', "SearchController@viewSearch");
 
 //Register´s Route
 Route::get('/cadastre-se', "RegisterController@viewRegister");
-
-//Login´s Route
-Route::get('/login', "Auth\LoginController@viewLogin");
-Route::post('/login', "Auth\LoginController@login"); //ROTA POST LOGIN. VER PARA ONDE DIRECIONAR (NAT/VITOR)
-Route::post('/logout', "Auth\LoginController@logout");
 
 //Admin´s Routes
 Route::get('/admin/cadastro', "AdminController@createAdmin");
