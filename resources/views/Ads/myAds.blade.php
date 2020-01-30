@@ -7,24 +7,15 @@
 @section('content')
 
 <div class="col-9 p-5 mt-5">
-        <!-- Verificando se o anúncio foi criado com sucesso -->
-        @if(session("created"))
+        <!-- Verificando se o anúncio foi criado/atualizado com sucesso -->
+        @if(session("success"))
             <div class="alert alert-success alert-dismissible fade show" role="alert">
-                <strong>{{session("created")}}</strong>
+                <strong>{{session("success")}}</strong>
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
           
-        @endif
-        <!-- Verificando se o anúncio foi atualizado com sucesso -->
-        @if(session("updated"))
-            <div class="alert alert-success alert-dismissible fade show" role="alert">
-                <strong>{{session("updated")}}</strong>
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
         @endif
         <!-- Verificando de erro no cadastro/atualização do anúncio -->
         @if(session("error"))

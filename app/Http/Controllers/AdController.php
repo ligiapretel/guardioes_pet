@@ -11,6 +11,12 @@ use Auth;
 
 class AdController extends Controller
 {
+
+    const MSG_ANUNCIO_CADASTRADO = "Anúncio cadastrado com sucesso!";
+    const MSG_ANUNCIO_ERRO_CADASTRO = "Ops! Falha ao cadastrar o anúncio. =(";
+    const MSG_ANUNCIO_ATUALIZADO = "Anúncio atualizado com sucesso!";
+    const MSG_ANUNCIO_ERRO_ATUALIZACAO = "Ops! Falha ao atualizar o anúncio. =(";
+
     
     public function viewAllAds(Request $request){
         $listAds = Ad::all();
@@ -37,9 +43,9 @@ class AdController extends Controller
 
         if($result){
             // Passando um parâmetro via session no redirect (na view verifico a session para exibir a mensagem de sucesso)
-            return redirect("/anuncios/meus-anuncios/")->with('created',"Anúncio cadastrado com sucesso!");
+            return redirect("/anuncios/meus-anuncios/")->with('success',self::MSG_ANUNCIO_CADASTRADO);
         }else{
-            return redirect("/anuncios/meus-anuncios/")->with('error',"Ops! Falha ao salvar o anúncio. =(");
+            return redirect("/anuncios/meus-anuncios/")->with('error',self::MSG_ANUNCIO_ERRO_CADASTRO);
         }
     }
 
@@ -68,9 +74,9 @@ class AdController extends Controller
         $result = $ad->save();
 
         if($result){
-            return redirect("/anuncios/meus-anuncios/")->with('updated',"Anúncio atualizado com sucesso!");
+            return redirect("/anuncios/meus-anuncios/")->with('success',self::MSG_ANUNCIO_ATUALIZADO);
         }else{
-            return redirect("/anuncios/meus-anuncios/")->with('error',"Ops! Falha ao salvar o anúncio. =(");
+            return redirect("/anuncios/meus-anuncios/")->with('error',self::MSG_ANUNCIO_ERRO_ATUALIZACAO);
         }
     }
 
