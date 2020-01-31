@@ -17,18 +17,27 @@
             <input hidden type="text" name="statusGuardian"  value="1"> 
             <input hidden type="text" name="user_typeGuardian" value="3">
 
-            {{-- Teste de erro --}}
-            <div class="row justify-content-center ml-5 mt-5">
-                <div class="col-md-12">
-                    @if(isset($result))
-                        @if($result)
-                            <h3>Cadastro realizado com sucesso!</h3>
-                        @else
-                            <h3>Não foi possível realizar o cadastro.</h3>
-                        @endif
-                    @endif
+            @if(session("created"))
+                <div class="alert alert-light alert-dismissible fade show" role="alert">
+                    <strong>{{session("created")}}</strong>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
-            </div>
+            @endif
+
+            @if(session("error"))
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <strong>{{session("error")}}</strong>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            @endif
+
+
+
+
             <!-- essa div é para o título -->
             <div class="form-group d-flex justify-content p-2">
                 <h3 class="tituloGuardiao">Cadastro de Guardião</h3>

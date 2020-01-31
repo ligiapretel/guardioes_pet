@@ -10,6 +10,28 @@
         <!--H1 que ficara ativado somente no mobile -->
         <!-- <h1 class="text-center">Bernardo</h1> -->
 
+        <!-- Verificando se o pet foi adotado/apadrinhado/lar temp com sucesso -->
+        @if(session("success"))
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <strong>{{session("success")}}</strong>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+          
+        @endif
+        <!-- Verificação de erro no pet foi adotado/apadrinhado/lar temp-->
+        @if(session("error"))
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <strong>{{session("error")}}</strong>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        @endif
+
+
+
         @if(isset($pet))
 
         <div class="container">
@@ -178,7 +200,7 @@
                             </div>
                             <div class="cx-btn-respons">
                                 <a href="/pet/perfil/lar/{{$pet->id}}"><button class="btn-roxo text-uppercase w-100"
-                                    title="Opção indisponível no momento" name="lar">Lar
+                                    name="lar">Lar
                                     temporário</button></a>
                             </div>
                             <div class="cx-btn-respons">
@@ -220,7 +242,7 @@
             </div>
             <div class="row justify-content-between m-0 pt-5 col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                 <div class="col-4 col-sm-4 col-md-3 col-lg-3 col-xl-3 ">
-                    <a href="anuncios.php">
+                    <a href="/anuncios">
                         <figure class="figure">
                             <img src="/img/perfil_doar_01.jpg" class="figure-img img-fluid rounded rounded-circle"
                                 alt="Photo by Autri Taheri on Unsplash">
@@ -229,7 +251,7 @@
                     </a>
                 </div>
                 <div class="col-4 col-sm-4 col-md-3 col-lg-3 col-xl-3 ">
-                    <a href="anuncios.php">
+                    <a href="/anuncios">
                         <figure class="figure">
                             <img src="/img/perfil_doar_02.jpg" class="figure-img img-fluid rounded rounded-circle"
                                 alt="Photo by Matthew Henry on Unsplash">
@@ -238,7 +260,7 @@
                     </a>
                 </div>
                 <div class="col-4 col-sm-4 col-md-3 col-lg-3 col-xl-3 ">
-                    <a href="anuncios.php">
+                    <a href="/anuncios">
                         <figure class="figure">
                             <img src="/img/perfil_doar_03.jpg" class="figure-img img-fluid rounded rounded-circle"
                                 alt="Photo by Camylla Battani on Unsplash">

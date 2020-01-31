@@ -18,11 +18,21 @@ use Auth;
 
 class GuardianController extends Controller
 {
+
+
+    const MSG_PET_ADOTADO = "Pet adotado com sucesso!";
+    const MSG_PET_ADOTADO_ERRO = "Ops! Algo deu errado ao adotar o pet. =(";
+    const MSG_PET_LAR = "O Pet escolhido ficará no seu lar temporariamente.";
+    const MSG_PET_LAR_ERRO = "Ops! Algo deu errado. =(";
+    const MSG_PET_APADRINHADO = "Pet apadrinhado com sucesso!";
+    const MSG_PET_APADRINHADO_ERRO = "Ops! Algo deu errado ao apadrinhar o pet. =(";
+
+
     
     public function viewProfileGuardian(Request $request, $id=3){
         $profile = Guardian::find($id);
         $pets = Guardian_has_pets::join('guardians', 'guardians.id', '=', 'guardian_has_pets.guardian_id')->join('pets', 'guardian_has_pets.pet_id', '=', 'pets.id')->join('pets_pictures', 'pets_pictures.pet_id', '=', 'pets.id')->select('pets.*', 'guardian_has_pets.relation_type_id', 'pets_pictures.picture')->get();
-
+        dd($profile);
 
         function adopted($pets){
             foreach($pets as $pet){
@@ -74,8 +84,48 @@ class GuardianController extends Controller
 
     public function viewMyAccountGuardian(Request $request, $id=3){
         $profile = Guardian::find($id);
+
+        $pets = Guardian_has_pets::join('guardians', 'guardians.id', '=', 'guardian_has_pets.guardian_id')->join('pets', 'guardian_has_pets.pet_id', '=', 'pets.id')->join('pets_pictures', 'pets_pictures.pet_id', '=', 'pets.id')->select('pets.*', 'guardian_has_pets.relation_type_id', 'pets_pictures.picture')->get();
+
+
+        function adopted($pets){
+            foreach($pets as $pet){
+                if($pet->relation_type_id==1){
+                    return true;
+                }
+            }
+            return false;
+        };
+        $adopted = adopted($pets);
+
+
+        function home($pets){
+            foreach($pets as $pet){
+                if($pet->relation_type_id==2){
+                    return true;
+                }
+            }
+            return false;
+        };
+        $home = home($pets);
+        
+        
+        function sponsor($pets){
+            foreach($pets as $pet){
+                if($pet->relation_type_id==3){
+                    return true;
+                }
+            }
+            return false;
+        };
+        $sponsor = sponsor($pets);
         if($profile){
-            return view('/Guardian.myAccountGuardian', ['profile'=>$profile]);
+            return view('/Guardian.myAccountGuardian', [
+            'profile'=>$profile, 
+            'pets'=>$pets,
+            'adopted'=>$adopted,
+            'home'=>$home, 
+            'sponsor'=>$sponsor]);
         }
     }
 
@@ -243,9 +293,9 @@ class GuardianController extends Controller
         $result = $adoption->save();
 
         if($result){
-            echo "Foi adotado!";
+            return redirect("/pet/perfil/")->with('success', self::MSG_PET_ADOTADO);
         } else {
-            echo "Não deu certo - Adoção";
+            return redirect("/pet/perfil/")->with('error', self::MSG_PET_ADOTADO_ERRO);
         }
     }
 
@@ -258,9 +308,9 @@ class GuardianController extends Controller
         $result = $home->save();
 
         if($result){
-            echo "Está em Lar Temporário";
+            return redirect("/pet/perfil/")->with('success', self::MSG_PET_LAR);
         } else {
-            echo "Não deu certo - Lar";
+            return redirect("/pet/perfil/")->with('error', self::MSG_PET_LAR_ERRO);
         }
     }
 
@@ -273,9 +323,9 @@ class GuardianController extends Controller
         $result = $sponsor->save();
 
         if($result){
-            echo "Está apadrinhado";
+            return redirect("/pet/perfil/")->with('success', self::MSG_PET_APADRINHADO);
         } else {
-            echo "Não deu certo - Apadrinhar";
+            return redirect("/pet/perfil/")->with('error',self::MSG_PET_APADRINHADO_ERRO);
         }
     }
 }

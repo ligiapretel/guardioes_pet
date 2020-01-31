@@ -70,11 +70,7 @@
                     <a href="ong/cadastro"><button class="btn-roxo btn-login-enviar" type="submit" name="sou-ong">Sou ONG</button></a>
                 </div>
                 <div class="col-lg-5 col-md-10 col-sm-10 col-xs-5 p-2 largura-form-xs m-1 text-center">
-<<<<<<< HEAD
                     <a href="/guardiao/cadastrar"><button class="btn-roxo btn-login-enviar" type="submit"
-=======
-                    <a href="guardiao/cadastrar"><button class="btn-roxo btn-login-enviar" type="submit"
->>>>>>> 8301b9f6d6be3ab2d31e4953e9db82bcd962ed84
                             name="sou-guardiao">Sou Guardião</button></a>
                 </div>
             </div>
