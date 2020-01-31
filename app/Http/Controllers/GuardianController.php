@@ -29,9 +29,18 @@ class GuardianController extends Controller
 
 
     
-    public function viewProfileGuardian($id=3){
+    public function viewProfileGuardian($id=0){
+        //Esse id aqui, faz diferença?
         $profile = Guardian::find($id);
+        //O profile está puxando as informações certas de cada perfil de guardião.
         $pets = Guardian_has_pets::join('guardians', 'guardians.id', '=', 'guardian_has_pets.guardian_id')->join('pets', 'guardian_has_pets.pet_id', '=', 'pets.id')->join('pets_pictures', 'pets_pictures.pet_id', '=', 'pets.id')->select('pets.*', 'guardian_has_pets.relation_type_id', 'pets_pictures.picture')->get();
+        
+        
+        
+        
+        // ->join('pets', 'guardian_has_pets.pet_id', '=', 'pets.id')->join('pets_pictures', 'pets_pictures.pet_id', '=', 'pets.id')->select('pets.*', 'guardian_has_pets.relation_type_id', 'pets_pictures.picture')
+        //No primeiro join, puxa informações da tabela guardian_has_pets e retorna todos os campos desse tabela e todos os campos da tabela guardians, com o id=1, mesmo que esteja visualizando o perfil do guardião id=2. Devolve arrays para cada pet que está cadastrado com um guardião (nesse caso, todos os que estão com o guardião id=1. Não deveria retornar nada para o guardião id=2, pois não há pets cadastrados nele.)
+        //Isso acontence por que só o id=1 tem pets cadastrados?
         //dd($pets);
 
         function adopted($pets){
