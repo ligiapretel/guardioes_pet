@@ -10,6 +10,7 @@
     <link href='https://fonts.googleapis.com/css?family=Rockwell' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=Satisfy&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.5.95/css/materialdesignicons.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
     <title>@yield('title')</title>
 </head>
 <body>
