@@ -29,10 +29,10 @@ class GuardianController extends Controller
 
 
     
-    public function viewProfileGuardian(Request $request, $id=3){
+    public function viewProfileGuardian($id=3){
         $profile = Guardian::find($id);
         $pets = Guardian_has_pets::join('guardians', 'guardians.id', '=', 'guardian_has_pets.guardian_id')->join('pets', 'guardian_has_pets.pet_id', '=', 'pets.id')->join('pets_pictures', 'pets_pictures.pet_id', '=', 'pets.id')->select('pets.*', 'guardian_has_pets.relation_type_id', 'pets_pictures.picture')->get();
-        dd($profile);
+        //dd($pets);
 
         function adopted($pets){
             foreach($pets as $pet){
