@@ -20,7 +20,7 @@ class NgoController extends Controller
         $ngo = Ngos::find($ngoId);
 
         //PARA PUXAR APENAS OS PETS DA ONG
-        $pets = Pet::where('id_ngo', '=', $ngoId)->get();
+        $pets = Pet::where('user_id', '=', $ngo->id)->get();
           
         $pet_pictures = 0;
         foreach ($pets as $pet) {

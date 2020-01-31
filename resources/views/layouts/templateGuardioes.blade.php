@@ -11,53 +11,55 @@
     <link href="https://fonts.googleapis.com/css?family=Satisfy&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.5.95/css/materialdesignicons.min.css">
     <title>@yield('title')</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </head>
 <body>
     
 <!--HEADER-->
     <header class="fixed-top">
 
-        <div class="container col-12 pt-2 pb-2">
+    <div class="container col-12 pt-2 pb-2">
 
-            <nav class="navbar navbar-expand-lg navbar-dark header-menu">
+    <nav class="navbar navbar-expand-lg navbar-dark header-menu">
 
-                <a class="fonteHeader" href="/home">
-                    <img src="/img/escudo.png" alt="Guardiões Pet" width="35" class="d-inline-block align-center">
-                    Guardiões Pet
-                </a>
+    <a class="fonteHeader" href="/home">
+            <img src="/img/escudo.png" alt="Guardiões Pet" width="35" class="d-inline-block align-center"> Guardiões Pet
+        </a>
 
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
-                    aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
 
-                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
 
-                    <ul class="navbar-nav ml-md-auto mt-2 mt-lg-0 lista-menu">
+            <ul class="navbar-nav ml-md-auto mt-2 mt-lg-0 lista-menu">
 
-                        <li class="nav-item">
-                            <a class="nav-link header-link" href='/home#seja-guardiao-home'>Ser um guardião</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link header-link" href="/sobre">Sobre nós</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link header-link" href='/home#como-funciona-home'>Como funciona</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link header-link" href="/parceiros">Parceiros</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link header-link" href="/anuncios">Doações</a>
-                        </li>
+                    <li class="nav-item">
+                        <a class="nav-link header-link" href='/home#seja-guardiao-home'>Ser um guardião</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link header-link" href="/sobre">Sobre nós</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link header-link" href='/home#como-funciona-home'>Como funciona</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link header-link" href="/parceiros">Parceiros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link header-link" href="/anuncios">Doações</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link header-link" href="index.php#footer">Contato</a>
+                    </li> -->
 
-                        @guest
+                    <!--VERIFICAR A ROTA DE LOGIN-->
+                    <li class="nav-item">
+                        <a class="nav-link header-link" href="/login">Login</a>
                         <li class="nav-item">
-                            <a class="nav-link header-link" href="/login">Login</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/cadastre-se" class="header-link"><button type="button"
-                                    class="btn-roxo">Cadastre-se</button></a>
+                            <a href="/cadastre-se" class="header-link"><button type="button" class="btn-roxo">Cadastre-se</button></a>
                         </li>
                             @else
                         <li class="nav-item dropdown">
@@ -67,42 +69,9 @@
                                 <span class="caret"></span>
                             </a>
 
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+            </div>
 
-                                <a class="dropdown-item" href=@switch (Auth::user()->user_group_id)
-                                    @case(1)
-                                    'admin/atualizar'
-                                    @case (2)
-                                    {{ url('ong/edita/'. Auth::user()->id) }}
-                                    @case(3)
-                                    {{ url('guardiao/minhaconta/perfil/'. Auth::user()->id) }}
-                                    @endswitch
-
-                                    >
-                                    {{ __('Minha conta') }}
-                                </a>
-
-                                <a class="dropdown-item" href="/logout" onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                    {{ __('Logout') }}
-                                </a>
-
-                                <form id="logout-form" action="/logout" method="POST" style="">
-                                    @csrf
-                                </form>
-
-
-                            </div>
-
-
-                        </li>
-                        @endguest
-
-                    </ul>
-
-                </div>
-
-            </nav>
+        </nav>
         </div>
     </header>
 <!--FINAL DO HEADER-->
@@ -137,15 +106,9 @@
 
                     <div class="row">
                         <div class="col-12 pt-5 pb-5">
-                            <div class="rede" id="facebook">
-                                <a target="_blank" href="https://www.facebook.com/guardioesPet"><img src="/img/facebook1.png" alt="facebook"></a>
-                            </div>
-                            <div class="rede" id="instagram">
-                                <a target="_blank" href="https://www.instagram.com/petguardioes"><img src="/img/instagram1.png" alt="instagram"></a>
-                            </div>
-                            <div class="rede" id="twitter">
-                                <a target="_blank" href="https://www.twitter.com/"><img src="/img/twitter1.png" alt="twitter"></a>                    
-                            </div>
+                            <a href="https://www.facebook.com/"><img src="/img/facebook1.png" alt="facebook"></a>
+                            <a href="https://www.instagram.com/"><img src="/img/instagram1.png" alt="instagram"></a>
+                            <a href="https://www.twitter.com/"><img src="/img/twitter1.png" alt="twitter"></a>                    
                         </div>
                     </div> 
 
@@ -173,10 +136,7 @@
     </footer>
 <!--FINAL DO FOOTER-->
 
-    <!-- Script JS Bootstrap | Manter código próximo ao fechamento do body -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<!-- Script JS Bootstrap | Manter código próximo ao fechamento do body -->
 
 </body>
 </html>
