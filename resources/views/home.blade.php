@@ -43,7 +43,7 @@
                     <h2>Encontre um amigo</h2>
                 </div>
                 <div class="formulario-coluna col-11">
-                    <form action="busca" method="POST" id="myInput">
+                    <form action="busca" method="POST">
                     @csrf
                         <div class="formulario-index row">
                             <div class="formPet formulario-index-itens col-md-6 p-3">
@@ -141,18 +141,4 @@
         </section>
         <!-- Fechando seção "Doações". -->
     </section>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-    <script>
-        $(document).ready(function(){
-          $("#myInput").on("keyup", function() {
-            var value = $(this).val().toLowerCase();
-            $("#myDIV *").filter(function() {
-              $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-            });
-          });
-        });
-    </script>
 @endsection
