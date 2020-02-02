@@ -75,8 +75,7 @@ Route::get('/anuncios/meus-anuncios', "AdController@viewMyAds")->middleware('che
 Route::get('/chat', 'ChatController@viewChat');
 
 //Search´s Routes
-Route::get('/busca', "SearchController@viewSearch");
-Route::post('/busca', "SearchController@viewSearch");
+Route::get('/busca', "SearchController@search");
 
 //Register´s Route
 Route::get('/cadastre-se', "RegisterController@viewRegister");

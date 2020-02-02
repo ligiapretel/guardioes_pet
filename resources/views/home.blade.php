@@ -43,27 +43,27 @@
                     <h2>Encontre um amigo</h2>
                 </div>
                 <div class="formulario-coluna col-11">
-                    <form action="busca" method="POST">
+                    <form method="GET" action="/busca">
                     @csrf
                         <div class="formulario-index row">
                             <div class="formPet formulario-index-itens col-md-6 p-3">
-                                <select name="animal" class="form-control">
+                                <select name="type" class="form-control">
                                     <option disabled selected>Pet</option>
-                                    <option value="cachorro">Cachorro</option>
-                                    <option value="gato">Gato</option>
+                                    <option value="Cachorro">Cachorro</option>
+                                    <option value="Gato">Gato</option>
                                 </select>
                             </div>
                             <div class="formAjudar formulario-index-itens col-md-6 p-3">
                                 <select name="comoQueroAjudar" class="form-control">
                                     <option disabled selected>Como quer ajudar?</option>
-                                    <option value="adocao">Adoção</option>
-                                    <option value="apadrinhamento">Apadrinhamento</option>
-                                    <option value="lartemporario">Lar temporário</option>
+                                    <option value="adoption_available">Adoção</option>
+                                    <option value="sponsorship_available">Apadrinhamento</option>
+                                    <option value="temporary_home_available">Lar temporário</option>
                                 </select>
                             </div>
                         
                             <div class="formulario-index-itens col-md-6 p-3">
-                                <select name="porte" class="form-control">
+                                <select name="animal_bearing" class="form-control">
                                     <option disabled selected>Porte</option>
                                     <option value="pequeno">Pequeno</option>
                                     <option value="medio">Médio</option>
@@ -80,10 +80,10 @@
                             </div>
                         
                             <div class="formSexo formulario-index-itens col-md-6 p-3">
-                                <select name="sexo" class="form-control">
+                                <select name="sex" class="form-control">
                                     <option disabled selected>Sexo</option>
-                                    <option value="femea">Fêmea</option>
-                                    <option value="macho">Macho</option>
+                                    <option value="F">Fêmea</option>
+                                    <option value="M">Macho</option>
                                 </select>
                             </div>
                             <div class="formBotao formulario-index col-md-6 p-3">

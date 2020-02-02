@@ -2384,7 +2384,7 @@
     Parsley.addMessages('en', {
       defaultMessage: "This value seems to be invalid.",
       type: {
-        email: "This value should be a valid email.",
+        email: "Esse campo deveria ser um e-mail.",
         url: "This value should be a valid url.",
         number: "This value should be a valid number.",
         integer: "This value should be a valid integer.",
@@ -2403,7 +2403,7 @@
       mincheck: "You must select at least %s choices.",
       maxcheck: "You must select %s choices or fewer.",
       check: "You must select between %s and %s choices.",
-      equalto: "This value should be the same.",
+      equalto: "Valor diferente da senha digitada acima.",
       euvatin: "It's not a valid VAT Identification Number."
     });
     Parsley.setLocale('en');

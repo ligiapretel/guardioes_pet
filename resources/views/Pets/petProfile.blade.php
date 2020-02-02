@@ -161,7 +161,7 @@
                                 @foreach ($pet_pictures as $picture)
                                                                                                                 
                                     <div class="carousel-item active">
-                                        <img class="d-block w-100 rounded" src="{{asset('storage/pets_pictures/'.$picture->picture)}}">
+                                        <img class="d-block w-100 rounded" src="{{asset('storage/public/pets_pictures/'.$picture->picture)}}">
                                     </div>
                                     
                                 @endforeach
