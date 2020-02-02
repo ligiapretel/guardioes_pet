@@ -71,7 +71,7 @@
                                 </select>
                             </div>
                             <div class="formulario-index-itens col-md-6 p-3">
-                                <select name="ong" class="form-control">
+                                <select name="ong" class="form-control"><!--puxar todas as ongs cadastradas no bd-->
                                     <option disabled selected>Selecionar a ONG</option>
                                     <option value="ong-a">ONG $A</option>
                                     <option value="ong-b">ONG $B</option>

@@ -6,7 +6,7 @@
 
 @section('content')
 
-        <form action="{{ url('ong/edita') }}" method="POST" class="card col-lg-8 col-md-12 col-sm-12 col-12 p-5" id="formOng">
+        <form action="{{ url('ong/edita') }}" method="POST" class="card col-lg-8 col-md-12 col-sm-12 col-12 p-5" id="formOng"  enctype='multipart/form-data' data-parsley-validate="">
         {{ csrf_field() }} <!--gera token de segurança - verifica se o usuário é autenticado-->
         
             <!-- essa div é para o título -->
@@ -51,7 +51,7 @@
             <div class="form-group row">
                 <label for="emailNgo" class="col-sm-4 col-form-label">E-mail</label>
                 <div class="col-sm-8">
-                    <input type="email" class="form-control" name="email" placeholder="seunome@email.com" value="{{ $user->email }}">
+                    <input type="email" class="form-control" name="email" placeholder="seunome@email.com" value="{{ $user->email }}" data-parsley-trigger="change">
                 </div>
             </div>
             <div class="form-group row" id="campo">
@@ -60,16 +60,16 @@
                     <input type="password" class="form-control pwd" name="password" value="password" placeholder="Nova senha minimo 6 caracteres"  value="{{ $user->password }}">
                 </div>
                 <div class="col-sm-2 d-flex align-items-center">
-                    <img src="http://i.stack.imgur.com/H9Sb2.png" title="Visualizar a senha" alt="visualizar senha" id="olho">
+                    <!-- <img src="http://i.stack.imgur.com/H9Sb2.png" title="Visualizar a senha" alt="visualizar senha" id="olho"> -->
                 </div>
             </div>
             <div class="form-group row" id="campo2">
                 <label for="passwordNgo" class="col-sm-4 col-form-label">Confirme sua senha</label>
                 <div class="col-sm-6">
-                    <input type="password" class="form-control" name="re-password" value="password" placeholder="Confirme sua nova senha" value="{{ $user->password }}">
+                    <input type="password" class="form-control" name="re-password" value="password" placeholder="Confirme sua nova senha" value="{{ $user->password }}" data-parsley-trigger="change" data-parsley-equalto="password" >
                 </div>
                 <div class="col-sm-2 d-flex align-items-center">
-                    <img src="http://i.stack.imgur.com/H9Sb2.png" title="Visualizar a senha" alt="visualizar senha" id="olho">
+                    <!-- <img src="http://i.stack.imgur.com/H9Sb2.png" title="Visualizar a senha" alt="visualizar senha" id="olho"> -->
                 </div>
             </div>
             <div class="form-group row">
@@ -164,8 +164,11 @@
                     </ul>
                 </div>
             @endif        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="/js/parsley.js"    type="text/javascript"></script>
         <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script> 
         <script src="/js/completaCep.js" type="text/javascript"></script>         
-        <script src="/js/mostrarSenha.js" type="text/javascript"></script>         
+        <!-- <script src="/js/mostrarSenha.js" type="text/javascript"></script>   -->       
         <script src="/js/mascaraTel.js" type="text/javascript"></script>         
 @endsection
