@@ -59,13 +59,13 @@
             <div class="form-group row">
                 <label for="passwordNgo" class="col-sm-4 col-form-label">Defina uma senha*</label>
                 <div class="col-sm-8">
-                    <input type="password" class="form-control" name="password" placeholder="Nova senha minimo 6 caracteres"required >
+                    <input type="password" class="form-control" name="password" placeholder="Nova senha minimo 6 caracteres" required >
                 </div>
             </div>
             <div class="form-group row">
                 <label for="passwordNgo" class="col-sm-4 col-form-label">Confirme sua senha*</label>
                 <div class="col-sm-8">
-                    <input type="password" class="form-control" name="re-password" placeholder="Confirme sua nova senha" data-parsley-trigger="change" data-parsley-equalto="password" required>
+                    <input type="password" class="form-control" name="re-password" placeholder="Confirme sua nova senha" data-parsley-trigger="change" data-parsley-equalto="password" required="">
                 </div>
             </div>
             <div class="form-group row">
