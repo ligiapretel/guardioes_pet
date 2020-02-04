@@ -2,10 +2,11 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
-use App\Model;
+use App\User;
 use Faker\Generator as Faker;
 
 $factory->define(App\Ngos::class, function (Faker $faker) {
+    $usuarios = User::pluck('id');
     return [
         'social_name' => $faker->company,
         'fantasy_name' => $faker->name,
@@ -26,6 +27,6 @@ $factory->define(App\Ngos::class, function (Faker $faker) {
         'bank_name' => $faker->sentence(2,true),
         'bank_agency' => $faker->randomNumber(4,false),
         'bank_account' => $faker->randomNumber(7,false),
-        'user_id' => random_int(1,10),
+        'user_id'=> $faker->randomElement($usuarios), 
     ];
 });

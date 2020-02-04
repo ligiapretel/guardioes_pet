@@ -75,18 +75,26 @@ Route::get('/anuncios/meus-anuncios', "AdController@viewMyAds")->middleware('che
 Route::get('/chat', 'ChatController@viewChat');
 
 //Search´s Routes
-Route::get('/busca', "SearchController@viewSearch");
-Route::post('/busca', "SearchController@viewSearch");
+Route::get('/busca', "SearchController@search");
 
 //Register´s Route
 Route::get('/cadastre-se', "RegisterController@viewRegister");
 
 //Admin´s Routes
-Route::get('/admin/cadastro', "AdminController@createAdmin");
-Route::post('/admin/cadastro', "AdminController@createAdmin");
-Route::get('/admin/atualizar/{id?}', "AdminController@updateAdmin")->middleware('checkuser');
-Route::post('/admin/atualizar', "AdminController@updateAdmin"); 
-Route::get('/admin/deletar/{id?}',"AdminController@deleteAdmin")->middleware('checkuser'); 
-Route::get('/admin', "AdminController@viewAllAdmin")->middleware('checkuser'); 
+Route::group(['prefix'=>'admin'], function(){
+    Route::get('/cadastro', "AdminController@createAdmin")->middleware('checkadmin');
+    Route::post('/cadastro', "AdminController@createAdmin");
+    Route::get('/atualizar/{id?}', "AdminController@updateAdmin")->middleware('checkadmin');
+    Route::post('/atualizar', "AdminController@updateAdmin"); 
+    Route::get('/deletar/{id?}',"AdminController@deleteAdmin")->middleware('checkadmin');
+    Route::get('/', "AdminController@viewAllAdmin")->middleware('checkadmin');
+    Route::get('/guardiao', "AdminController@viewAllGuardian")->middleware('checkadmin');
+    Route::get('/guardiao/atualizar/{id?}', "AdminController@updateGuardian")->middleware('checkadmin');
+    Route::post('/guardiao/atualizar', "AdminController@updateGuardian");
+    Route::get('/ong', "AdminController@viewAllNgo")->middleware('checkadmin');
+    Route::get('/ong/atualizar/{id?}', "AdminController@updateNgo")->middleware('checkadmin');
+    Route::post('/ong/atualizar', "AdminController@updateNgo");
+});
+
 
 

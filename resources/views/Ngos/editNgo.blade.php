@@ -6,7 +6,6 @@
 
 @section('content')
 
-
 <form action="/ong/edita" method="POST" class="card col-lg-8 p-5" id="formOng">
     {{ csrf_field() }}
     <!--gera token de segurança - verifica se o usuário é autenticado-->
@@ -38,7 +37,6 @@
     <div class="row d-flex justify-content-center mb-5">
         <h3 class="tituloOng text-center">Editar dados</h3>
     </div>
-    <!--aqui começa o formulário -->
     <input class="form-control" type="hidden" name="id" value="{{$user->ngo->id}}" />
     <input class="form-control" type="hidden" name="userId" value="{{$user->id}}" />
     <!--puxa o id da ong-->
@@ -193,18 +191,21 @@
             </button>
         </form> -->
 
-<!-- Mostra os erros de validação na view-->
-@if (count($errors) > 0)
-<div class="alert alert-danger">
-    <ul>
-        @foreach ($errors->all() as $error)
-        <li>{{ $error }}</li>
-        @endforeach
-    </ul>
-</div>
-@endif
-<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-<script src="/js/completaCep.js" type="text/javascript"></script>
-<script src="/js/mostrarSenha.js" type="text/javascript"></script>
-<script src="/js/mascaraTel.js" type="text/javascript"></script>
+          <!-- Mostra os erros de validação na view-->
+          @if (count($errors) > 0)
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif        
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="/js/parsley.js"    type="text/javascript"></script>
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script> 
+        <script src="/js/completaCep.js" type="text/javascript"></script>         
+        <!-- <script src="/js/mostrarSenha.js" type="text/javascript"></script>   -->       
+        <script src="/js/mascaraTel.js" type="text/javascript"></script>         
 @endsection
