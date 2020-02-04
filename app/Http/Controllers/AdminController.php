@@ -93,7 +93,7 @@ class AdminController extends Controller
     //visualizando a lista de usuários tipo admin 
     public function viewAllAdmin(Request $request){ 
 
-        $listAdmin = User::join('administrators', 'users.id', '=', 'administrators.user_id')->select('users.email', 'users.id', 'users.status_id', 'administrators.name')->get();
+        $listAdmin = User::join('administrators', 'users.id', '=', 'administrators.user_id')->select('users.email', 'users.id', 'users.status_id', 'users.created_at', 'users.updated_at',  'administrators.name')->get();
 
         return view('Admin.listAdmin', ["listAdmin"=>$listAdmin]); 
     }
@@ -101,7 +101,7 @@ class AdminController extends Controller
     //visualizando a lista de usuários tipo ong
     public function viewAllNgo(Request $request){
 
-        $listNgo = User::join('ngos', 'users.id', '=', 'ngos.user_id')->select('users.id', 'users.email', 'users.status_id', 'ngos.social_name', 'ngos.cnpj')->get();
+        $listNgo = User::join('ngos', 'users.id', '=', 'ngos.user_id')->select('users.id', 'users.email', 'users.status_id', 'users.created_at', 'users.updated_at', 'ngos.social_name', 'ngos.cnpj')->get();
 
         return view('Admin.listNgo', ["listNgo"=>$listNgo]);
     }
@@ -109,12 +109,81 @@ class AdminController extends Controller
     //visualizando a lista de usuários tipo guardião
     public function viewAllGuardian(Request $request){
 
-        $listGuardian = User::join('guardians', 'users.id', '=', 'guardians.user_id')->select('users.id', 'users.email', 'users.status_id', 'guardians.name', 'guardians.created_at', 'guardians.updated_at')->get();
+        $listGuardian = User::join('guardians', 'users.id', '=', 'guardians.user_id')->select('users.id', 'users.email', 'users.status_id', 'users.created_at', 'users.updated_at', 'guardians.name')->get();
 
         return view('Admin.listGuardian', ["listGuardian"=>$listGuardian]);
     }
 
+    //editando dados de usuário tipo Ong: 
+    public function updateNgo(Request $request, $id=0){
+            
+        if($request->isMethod('GET')){
+            
+            //encontrando o id em Users:
+            $user = User::find($id);
+            
+            //encontrando os outros dados em Ngos: 
+            $ngo = Ngos::where('user_id', $id)->first();
+            
+            //enviando os objetos para a view: 
+            if($user){
+                return view('Admin.updateNgo', ["user"=>$user, "ngo"=>$ngo]);
+            } else {
+                return view('Admin.updateNgo');
+            }
+        } else {
+            
+            //alterando status_id na tabela Users:
+            $user = User::find($request->idNgo); 
+            $user->status_id = $request->statusNgo;
+            
+            $result = $user->save();
+            
+            //alterando outros dados na tabela Ngos: 
+            $ngo = Ngos::where('user_id', $user->id)->first();
+            $ngo->social_name = $request->social_name;
+            $ngo->cnpj = $request->cnpj;
+    
+            $result = $ngo->save();
+    
+            return view('Admin.updateNgo', ["result"=>$result]);
+        }
+    }
 
+    //editando dados de usuário tipo Guardião: 
+    public function updateGuardian(Request $request, $id=0){
+                
+        if($request->isMethod('GET')){
+            
+            //encontrando o id em Users:
+            $user = User::find($id);
+            
+            //encontrando os outros dados em Guardians: 
+            $guardian = Guardian::where('user_id', $id)->first();
+            
+            //enviando os objetos para a view: 
+            if($user){
+                return view('Admin.updateGuardian', ["user"=>$user, "guardian"=>$guardian]);
+            } else {
+                return view('Admin.updateGuardian');
+            }
+        } else {
+            
+            //alterando status_id na tabela Users:
+            $user = User::find($request->idGuardian); 
+            $user->status_id = $request->statusGuardian;
+            
+            $result = $user->save();
+            
+            //alterando outros dados na tabela Guardians: 
+            $guardian = Guardian::where('user_id', $user->id)->first();
+            $guardian->cpf = $request->cpf;
+
+            $result = $guardian->save();
+
+            return view('Admin.updateGuardian', ["result"=>$result]);
+        }
+    }
 
 
 

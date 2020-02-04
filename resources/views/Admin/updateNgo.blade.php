@@ -1,7 +1,7 @@
 @extends('layouts.templateGuardioes')
 
 @section('title')
-    Guardiões Pet | Atualização Admin
+    GP | Ong
 @endsection
 
 @section('content')
@@ -11,31 +11,26 @@
             <div class="col-lg-6 m-5">
 
                 @if(isset($user)) 
-                <h3 class="mt-10">Atualização de dados Admin</h3>
-                <form action="/admin/atualizar" method="POST" class="card p-4">
+                <h3 class="mt-10">Atualização de dados {{ $ngo->social_name }}</h3>
+                <form action="/admin/ong/atualizar" method="POST" class="card p-4">
                 @csrf      
                     <!-- input hidden com o id do admin em Users -->
-                    <input type="text" name="idAdmin" hidden value="{{ $user->id }}"> 
+                    <input type="text" name="idNgo" hidden value="{{ $user->id }}"> 
 
                     <div class="form-group">
-                        <label for="nameAdmin">Nome Completo</label>
-                        <input name="nameAdmin" type="text" class="form-control" id="nameAdmin" value="{{ $nameAdmin }}"> 
+                        <label for="social_name">Razão Social</label>
+                        <input name="social_name" type="text" class="form-control" id="social_name" value="{{ $ngo->social_name }}"> 
                     </div>
 
                     <div class="form-group">
-                        <label for="emailAdmin">E-mail</label>
-                        <input name="emailAdmin" type="email" class="form-control" id="emailAdmin" value="{{ $user->email }}">
+                        <label for="cnpj">CNPJ</label>
+                        <input name="cnpj" type="number" class="form-control" id="cnpj" value="{{ $ngo->cnpj }}"> 
                     </div>
 
                     <div class="form-group">
-                        <label for="passwordAdmin">Senha</label>
-                        <input name="passwordAdmin" type="password" class="form-control" id="passwordAdmin" value="{{ $user->password }}">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="statusAdmin">Status</label>
-                        <select class="form-control" name="statusAdmin">
-                        <option selected>{{ $user->status_id }}</option>
+                        <label for="statusNgo">Status</label>
+                        <select class="form-control" name="statusNgo">
+                        <option selected>{{ $ngo->status_id }}</option>
                         <option value="1">1 - Ativo</option>
                         <option value="2">2 - Inativo</option>
                         </select>
@@ -54,13 +49,13 @@
 
                 <div class="row">
                     <div class="col-md-12">
-                        @if(isset($result)) <!-- se existe -->
-                            @if($result) <!-- se é verdadeiro ou falso -->
+                        @if(isset($result)) 
+                            @if($result) 
                                 <h3>Atualização realizada com sucesso!</h3>
-                                <a href="/home">Voltar</a>
+                                <a class="btn btn-primary" href="/admin/ong">Voltar</a>
                             @else
                                 <h3>Não deu certo!</h3>
-                                <a href="/atualizar/{id?}"></a>
+                                <a href="/ong/atualizar/{id?}"></a>
                             @endif
                         @endif
 

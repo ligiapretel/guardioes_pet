@@ -15,7 +15,7 @@
             <a href="/admin/ong" class="btn btn-outline-secondary">Ong</a>
             <a href="/admin/guardiao" class="btn btn-primary">Guardião</a>
         </div>
-        
+
         <div class="col-md-12">
             <table class="table">
                 <thead>
@@ -33,13 +33,12 @@
                     <tr>
                         <th scope="row"> {{$guardian->id}} </th>
                         <td> {{ $guardian->name }} </td>
-                        <td> {{$guardian->email}} </td>
+                        <td> {{ $guardian->email }} </td>
                         <td> {{ $guardian->status_id }} </td>
                         <td> {{ $guardian->created_at }} </td>
                         <td> {{ $guardian->updated_at }} </td>
                         <td>
-                            <a class="btn btn-info" href="/admin/guardiao/atualizar/{{$guardian->id}}">Atualizar</a>
-                            <a class="btn btn-danger" href="/admin/guardiao/deletar/{{$guardian->id}}">Deletar</a>
+                            <a class="btn btn-info" href="/admin/guardiao/atualizar/{{$guardian->id}}">Atualizar</a>                            
                         </td>
                     </tr>
                 @empty

@@ -24,6 +24,8 @@
                         <th scope="col">Nome do usuário</th>
                         <th scope="col">E-mail</th>
                         <th scope="col">Status</th>
+                        <th scope="col">Criado em</th>
+                        <th scope="col">Atualizado em</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -33,6 +35,8 @@
                         <td> {{$admin->name}} </td>
                         <td> {{ $admin->email }} </td>
                         <td> {{ $admin->status_id }} </td>
+                        <td> {{ $admin->created_at }} </td>
+                        <td> {{ $admin->updated_at }} </td>
                         <td>
                             <a class="btn btn-info" href="/admin/atualizar/{{$admin->id}}">Atualizar</a>
                             <a class="btn btn-danger" href="/admin/deletar/{{$admin->id}}">Deletar</a>

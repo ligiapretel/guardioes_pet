@@ -8,7 +8,7 @@
 <div class="margem">
 <section class="container">
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-12 mb-4">
             <h3>Lista de usuários:</h3>
             
             <a href="/admin" class="btn btn-outline-secondary">Administradores</a>
@@ -24,6 +24,8 @@
                         <th scope="col">E-mail</th>
                         <th scope="col">CNPJ</th>
                         <th scope="col">Status</th>
+                        <th scope="col">Criado em</th>
+                        <th scope="col">Atualizado em</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -34,9 +36,10 @@
                         <td> {{ $ngo->email }} </td>
                         <td> {{ $ngo->cnpj }} </td>
                         <td> {{ $ngo->status_id }} </td>
+                        <td> {{ $ngo->created_at }} </td>
+                        <td> {{ $ngo->updated_at }} </td>
                         <td>
-                            <a class="btn btn-primary" href="/admin/ong/atualizar/{{$ngo->id}}">Atualizar</a>
-                            <a class="btn btn-danger" href="/admin/ong/deletar/{{$ngo->id}}">Deletar</a>
+                            <a class="btn btn-info" href="/admin/ong/atualizar/{{$ngo->id}}">Atualizar</a>
                         </td>
                     </tr>
                 @empty
