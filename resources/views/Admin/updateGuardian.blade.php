@@ -42,7 +42,7 @@
                         @if(isset($result)) 
                             @if($result) 
                                 <h3>Atualização realizada com sucesso!</h3>
-                                <a class="btn btn-primary" href="/admin/ong">Voltar</a>
+                                <a class="btn btn-primary" href="/admin/guardiao">Voltar</a>
                             @else
                                 <h3>Não deu certo!</h3>
                                 <a href="/ong/atualizar/{id?}"></a>
