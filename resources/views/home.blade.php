@@ -24,60 +24,7 @@
                 <div class="carousel-caption titulo-carrossel-home">
                     <p>Adote, abrigue, ajude, seja um guardião</p>
                     <h1>Quer cuidar de mim?</h1>
-
-                <div class="formulario-coluna col-11">
-                    <form method="GET" action="/busca">
-                    @csrf
-                        <div class="formulario-index row">
-                            <div class="formPet formulario-index-itens col-md-6 p-3">
-                                <select name="type" class="form-control">
-                                    <option disabled selected>Pet</option>
-                                    <option value="Cachorro">Cachorro</option>
-                                    <option value="Gato">Gato</option>
-                                </select>
-                            </div>
-                            <div class="formAjudar formulario-index-itens col-md-6 p-3">
-                                <select name="comoQueroAjudar" class="form-control">
-                                    <option disabled selected>Como quer ajudar?</option>
-                                    <option value="adoption_available">Adoção</option>
-                                    <option value="sponsorship_available">Apadrinhamento</option>
-                                    <option value="temporary_home_available">Lar temporário</option>
-                                </select>
-                            </div>
-                        
-                            <div class="formulario-index-itens col-md-6 p-3">
-                                <select name="animal_bearing" class="form-control">
-                                    <option disabled selected>Porte</option>
-                                    <option value="pequeno">Pequeno</option>
-                                    <option value="medio">Médio</option>
-                                    <option value="grande">Grande</option>
-                                </select>
-                            </div>
-                            <div class="formulario-index-itens col-md-6 p-3">
-                                <select name="ong" class="form-control"><!--puxar todas as ongs cadastradas no bd-->
-                                    <option disabled selected>Selecionar a ONG</option>
-                                    <option value="ong-a">ONG $A</option>
-                                    <option value="ong-b">ONG $B</option>
-                                    <option value="ong-c">ONG $C</option>
-                                </select>
-                            </div>
-                        
-                            <div class="formSexo formulario-index-itens col-md-6 p-3">
-                                <select name="sex" class="form-control">
-                                    <option disabled selected>Sexo</option>
-                                    <option value="F">Fêmea</option>
-                                    <option value="M">Macho</option>
-                                </select>
-                            </div>
-                            <div class="formBotao formulario-index col-md-6 p-3">
-                                <button class="btn-roxo formulario-index-itens btn-busca-expandida botao-home" type="submit" name="procurar">Procurar</button>
-                            </div>
-                        </div>
-                       
-                    </form>
-
                 </div>
-            </div>
             <a class="carousel-control-prev" href="#carrossel" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <!-- <span class="sr-only">Previous</span> -->
@@ -90,7 +37,7 @@
     </section>
     <!-- Fechando seção do carrossel da home. -->
     <!-- Abrindo seção quer permite fazer busca pelo perfil do animal. -->
-    <section id="container-busca-expandida" class="col-sm-10 col-xs-6">
+    <section id="container-busca-expandida" class="col-6 col-sm-10">
         <div class="row justify-content-center">
             <div class="col-11">
                 <h2>Encontre um amigo</h2>
@@ -150,7 +97,7 @@
     </section>
     <!-- Fechando seção da busca da home. -->
     <!-- Abrindo seção "Por que ser um Guardião PET?". -->
-    <section id="seja-guardiao-home" class="col-lg-11 col-md-12 col-sm-12 col-xs-6">
+    <section id="seja-guardiao-home" class="col-6 col-sm-12 col-lg-11">
         <h2>Por que ser um Guardião PET</h2>
         <p>Todos os dias as ONGs resgatam e cuidam de milhares de bichinhos. É um trabalho feito com muito amor e dedicação, mas que é exaustivo e custoso também.</p> 
         <p>Há sempre muito mais animais do que as organizações suportam . O tempo de espera pela adoção varia muito e alguns nem chegam a ganhar uma família :(</p>
@@ -158,7 +105,7 @@
     </section>
     <!-- Fechando seção "Por que ser um Guardião PET?". -->
     <!-- Abrindo seção "Como funciona". -->
-    <section id="como-funciona-home" class="col-lg-12 col-md-12 col-sm-12 col-xs-6">
+    <section id="como-funciona-home" class="col-6 col-sm-12">
         <div class="row justify-content-center">
             <h2>Como funciona?</h2>
         </div>
@@ -185,19 +132,18 @@
     </section>
     <!-- Fechando seção "Como funciona". -->
     <!-- Abrindo seção "Doações". -->
-    <section id="doacoes-home" class="col-lg-11 col-md-12 col-sm-11 col-xs-6">
+    <section id="doacoes-home" class="col-6 col-sm-11 col-md-12 col-lg-11">
         <h2>Tem itens para doação? Ajude!</h2>
         <p>Roupinhas, remédios, ração...tá sobrando na sua casa? Tem muitas organizações - e muitos guardiões também! - precisando de todo tipo de item para cuidar e alimentar gatinhos e cachorros. Veja quais as necessidades e se você pode contribuir!</p>
         <div class="row justify-content-center">
             <a href="anuncios"><button class="btn-roxo botao-home">Quero doar</button></a>
         </div>
     </section>
-<<<<<<< HEAD
     <!-- Fechando seção "Doações". -->
 </section>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
 
     <script>
         $(document).ready(function(){
