@@ -35,7 +35,7 @@ Route::group(['prefix' => 'ong'], function () {
 Route::get('/perfil/{id?}','NgoController@viewProfileNgo');
 Route::get('/cadastro', "NgoController@registerNgo");
 Route::post('/cadastro', "NgoController@doRegisterNgo"); 
-Route::get('/edita/{id?}',"NgoController@editNgo")->middleware('checkngo'); 
+Route::get('/edita/{id?}',"NgoController@editNgo")->middleware('checkngo')->name('editarOng'); 
 Route::post('/edita',"NgoController@doEditNgo");
 Route::post('/deleta',"NgoController@deleteNgo");
 Route::post('/visualizar',"NgoController@getNgo");
