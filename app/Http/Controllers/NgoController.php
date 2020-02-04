@@ -11,10 +11,15 @@ use App\User;
 use App\Users_group;
 use App\Status;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Auth;
+use Auth;
 
 class NgoController extends Controller
 {
+    const MSG_PERFIL_ATUALIZADO = "Perfil atualizado com sucesso.";
+    const MSG_PERFIL_NAO_ATUALIZADO = "Ops! Falha ao atualizar o perfil. =(";
+    const MSG_ONG_CADASTRADA = "Conta criada com sucesso. Acesse sua conta para cadastrar pets e dê-lhes a chance de encontrar uma família.";
+    const MSG_ONG_NAO_CADASTRADA = "Ops! Falha ao criar a conta. =(";
+
     //método para visualização da ong
     public function viewProfileNgo($ngoId){
         $ngo = Ngos::find($ngoId);
@@ -116,44 +121,39 @@ class NgoController extends Controller
         $data = $request->post(); //salvo os dados via post
         }
 
-        /* $data['profile_picture'] = $fileDir;  */// armazena o dado enviado pelo form no campo picture dentro de filedir = caminho da imagem
-        
         $result = $newNgo->save();
 
         //criando condicional para informar o cadastro
         if ($result){
            return redirect('login')
-                ->with('success', 'Cadastro Realizado com sucesso!!');
+                ->with('success',self::MSG_ONG_CADASTRADA);
         } else {
             return redirect()
                 ->back()
-                ->with('errors', 'Falha ao cadastrar, contate o suporte.');
+                ->with('errors',self::MSG_ONG_NAO_CADASTRADA);
         }
     }    
 
     //método para buscar os dados da ong
-    public function editNgo($id){
-        $ngo = Ngos::find($id); //recebe o id da ong cadastrada o método first busca todos os registros
-        $user = User::find($id)->where('email', '=', $ngo->id)->get();
+    public function editNgo(Request $request, $id=0){
         $user = User::find($id);
+        $ngo = Ngos::where('user_id','=',$user)->get();
 
-        if($ngo){
-            return view('Ngos.editNgo', ["ngo"=>$ngo, "user"=>$user]);
-        }else{
-            return view('Ngos.editNgo', ["ngo"=>$ngo, "user"=>$user]);
-        }
+        return view('Ngos.editNgo',["ngo"=>$ngo,"user"=>$user]);
     }   
 
     //método para fazer a edição dos dados da ong
     public function doEditNgo(Request $request){
-        $user = User::find($id);
+        $user = User::find($request->userId);
+        $user->email = $request->email;
+        $user->password = Hash::make($request->password);
+
+        $user->save();
         
         $ngo = Ngos::find($request->id);
-        
         $ngo->social_name = $request->social_name;
         $ngo->fantasy_name = $request->fantasy_name;
         $ngo->cnpj = $request->cnpj;
-        $ngo->profile_picture = $request->profile_picture;
         $ngo->site = $request->site;
         $ngo->phone_number = $request->phone_number;
         $ngo->responsable_name = $request->responsable_name;
@@ -169,44 +169,29 @@ class NgoController extends Controller
         $ngo->bank_name = $request->bank_name;
         $ngo->bank_agency = $request->bank_agency;
         $ngo->bank_account = $request->bank_account;
-        $ngo->user_id = $ngo->id;
 
-        $result = $ngo->save();
-
-        $user = User::find($ngo->user_id);
-        $user->email = $request->email;
-
-        $user->save();
-
-
+        
         if($request->hasFile('profile_picture') && $request->file('profile_picture')->isValid()){
             $name= date('HisYmd');
             $extension = $request->profile_picture->extension();
             $fileName = "{$name}.{$extension}";
         }
-
+        
         if(!empty($request->profile_picture)) {
             $upload = $request->profile_picture->storageAs('ngo_pictures', $fileName);
             $ngo->profile_picture = $fileName;
         }
-
+        
         $result = $ngo->save(); 
         
-        return redirect('ong/edita/' . $request->id);
-    }
-        
-        /*  $request->validate([]);
-
-        $ngo = new Ngos($request->post()); // atribuo os novos valores vindo pelo formulário editado 
-        //retorno na condicional informando se deu certo
-        if($ngo->save()){ //se deu certo ele salva os dados e retorna para perfil da ong
-            echo  "<script>alert('Dados editados com sucesso!);</script>";
-            return view('Ngos.editNgo', ['ngo'=>$ngo]);
+        if($result){
+            // Para passar um parâmetro na rota com redirect, dou um "name" para ela no arquivo de rotas, e uso o route passando o name e o parâmetro.
+            return redirect()->route('editarOng',['id' => $user])->with('success',self::MSG_PERFIL_ATUALIZADO);
         }else{
-            echo  "<script>alert('Falha ao editar dados');</script>";
+            return redirect()->route('editarOng',['id' => $user])->with('error',self::MSG_PERFIL_NAO_ATUALIZADO);
         }
     }
- */
+        
     //método para deletar a ong - APENAS PARA ADMIN??
     public function deleteNgo(Request $request){
         //recebo os dados da ong pego o id e removo pelo metodo delete()         

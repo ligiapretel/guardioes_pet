@@ -73,7 +73,7 @@
                             @case(1)
                             'admin/atualizar'
                             @case (2)
-                            'pet/cadastro'
+                            {{ url('ong/edita/'. Auth::user()->id) }}
                             @case(3)
                             {{ url('guardiao/minhaconta/perfil/'. Auth::user()->id) }}
                             @endswitch
