@@ -81,11 +81,16 @@ Route::get('/busca', "SearchController@search");
 Route::get('/cadastre-se', "RegisterController@viewRegister");
 
 //Admin´s Routes
-Route::get('/admin/cadastro', "AdminController@createAdmin");
-Route::post('/admin/cadastro', "AdminController@createAdmin");
-Route::get('/admin/atualizar/{id?}', "AdminController@updateAdmin")->middleware('checkuser');
-Route::post('/admin/atualizar', "AdminController@updateAdmin"); 
-Route::get('/admin/deletar/{id?}',"AdminController@deleteAdmin")->middleware('checkuser'); 
-Route::get('/admin', "AdminController@viewAllAdmin")->middleware('checkuser'); 
+Route::group(['prefix'=>'admin'], function(){
+    Route::get('/cadastro', "AdminController@createAdmin");
+    Route::post('/cadastro', "AdminController@createAdmin");
+    Route::get('/atualizar/{id?}', "AdminController@updateAdmin");
+    Route::post('/atualizar', "AdminController@updateAdmin"); 
+    Route::get('/deletar/{id?}',"AdminController@deleteAdmin");
+    Route::get('/', "AdminController@viewAllAdmin");
+    Route::get('/guardiao', "AdminController@viewAllGuardian");
+    Route::get('/ong', "AdminController@viewAllNgo");
+});
+
 
 

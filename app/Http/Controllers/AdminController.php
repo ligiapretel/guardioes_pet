@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\User; 
-use App\Administrator; 
+use App\Administrator;  
+use App\Guardian;  
+use App\Ngos;  
 use App\Status; 
 use App\Users_group;
 use Illuminate\Support\Facades\Hash;
@@ -88,14 +90,29 @@ class AdminController extends Controller
         }
     } 
 
-    //visualizando a lista de usuários admin 
+    //visualizando a lista de usuários tipo admin 
     public function viewAllAdmin(Request $request){ 
 
-        $listAdmin = User::leftJoin('administrators', 'administrators.user_id', '=', 'users.id')->select('users.email', 'users.id', 'users.status_id', 'administrators.name')->get();
+        $listAdmin = User::join('administrators', 'users.id', '=', 'administrators.user_id')->select('users.email', 'users.id', 'users.status_id', 'administrators.name')->get();
 
         return view('Admin.listAdmin', ["listAdmin"=>$listAdmin]); 
     }
 
+    //visualizando a lista de usuários tipo ong
+    public function viewAllNgo(Request $request){
+
+        $listNgo = User::join('ngos', 'users.id', '=', 'ngos.user_id')->select('users.id', 'users.email', 'users.status_id', 'ngos.social_name', 'ngos.cnpj')->get();
+
+        return view('Admin.listNgo', ["listNgo"=>$listNgo]);
+    }
+
+    //visualizando a lista de usuários tipo guardião
+    public function viewAllGuardian(Request $request){
+
+        $listGuardian = User::join('guardians', 'users.id', '=', 'guardians.user_id')->select('users.id', 'users.email', 'users.status_id', 'guardians.name', 'guardians.created_at', 'guardians.updated_at')->get();
+
+        return view('Admin.listGuardian', ["listGuardian"=>$listGuardian]);
+    }
 
 
 
