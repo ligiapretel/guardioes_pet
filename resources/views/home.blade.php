@@ -17,12 +17,65 @@
                 <div class="carousel-item">
                     <img src="img/img_banner_home02.jpg" class="d-block w-100" alt="Foto: Jesse Schoff | Unsplash">
                 </div>
+
                 <div class="carousel-item">
                     <img src="img/img_banner_home03.jpg" class="d-block w-100" alt="Foto: Hannah Troupe | Unsplash">
                 </div>
                 <div class="carousel-caption titulo-carrossel-home">
                     <p>Adote, abrigue, ajude, seja um guardião</p>
                     <h1>Quer cuidar de mim?</h1>
+
+                <div class="formulario-coluna col-11">
+                    <form method="GET" action="/busca">
+                    @csrf
+                        <div class="formulario-index row">
+                            <div class="formPet formulario-index-itens col-md-6 p-3">
+                                <select name="type" class="form-control">
+                                    <option disabled selected>Pet</option>
+                                    <option value="Cachorro">Cachorro</option>
+                                    <option value="Gato">Gato</option>
+                                </select>
+                            </div>
+                            <div class="formAjudar formulario-index-itens col-md-6 p-3">
+                                <select name="comoQueroAjudar" class="form-control">
+                                    <option disabled selected>Como quer ajudar?</option>
+                                    <option value="adoption_available">Adoção</option>
+                                    <option value="sponsorship_available">Apadrinhamento</option>
+                                    <option value="temporary_home_available">Lar temporário</option>
+                                </select>
+                            </div>
+                        
+                            <div class="formulario-index-itens col-md-6 p-3">
+                                <select name="animal_bearing" class="form-control">
+                                    <option disabled selected>Porte</option>
+                                    <option value="pequeno">Pequeno</option>
+                                    <option value="medio">Médio</option>
+                                    <option value="grande">Grande</option>
+                                </select>
+                            </div>
+                            <div class="formulario-index-itens col-md-6 p-3">
+                                <select name="ong" class="form-control"><!--puxar todas as ongs cadastradas no bd-->
+                                    <option disabled selected>Selecionar a ONG</option>
+                                    <option value="ong-a">ONG $A</option>
+                                    <option value="ong-b">ONG $B</option>
+                                    <option value="ong-c">ONG $C</option>
+                                </select>
+                            </div>
+                        
+                            <div class="formSexo formulario-index-itens col-md-6 p-3">
+                                <select name="sex" class="form-control">
+                                    <option disabled selected>Sexo</option>
+                                    <option value="F">Fêmea</option>
+                                    <option value="M">Macho</option>
+                                </select>
+                            </div>
+                            <div class="formBotao formulario-index col-md-6 p-3">
+                                <button class="btn-roxo formulario-index-itens btn-busca-expandida botao-home" type="submit" name="procurar">Procurar</button>
+                            </div>
+                        </div>
+                       
+                    </form>
+
                 </div>
             </div>
             <a class="carousel-control-prev" href="#carrossel" role="button" data-slide="prev">
@@ -139,6 +192,7 @@
             <a href="anuncios"><button class="btn-roxo botao-home">Quero doar</button></a>
         </div>
     </section>
+<<<<<<< HEAD
     <!-- Fechando seção "Doações". -->
 </section>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -155,4 +209,5 @@
           });
         });
     </script>
+
 @endsection

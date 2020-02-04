@@ -1,7 +1,7 @@
 @extends('layouts.templateGuardioes')
 
 @section('title')
-    GP | Admin
+    GP | Guardião
 @endsection
 
 @section('content')
@@ -11,9 +11,9 @@
         <div class="col-md-12 mb-4">
             <h3>Lista de usuários:</h3>
             
-            <a href="/admin" class="btn btn-primary">Administradores</a>
+            <a href="/admin" class="btn btn-outline-secondary">Administradores</a>
             <a href="/admin/ong" class="btn btn-outline-secondary">Ong</a>
-            <a href="/admin/guardiao" class="btn btn-outline-secondary">Guardião</a>
+            <a href="/admin/guardiao" class="btn btn-primary">Guardião</a>
         </div>
 
         <div class="col-md-12">
@@ -21,7 +21,7 @@
                 <thead>
                     <tr>
                         <th scope="col">id</th>
-                        <th scope="col">Nome do usuário</th>
+                        <th scope="col">Nome</th>
                         <th scope="col">E-mail</th>
                         <th scope="col">Status</th>
                         <th scope="col">Criado em</th>
@@ -29,21 +29,20 @@
                     </tr>
                 </thead>
                 <tbody>
-                @forelse ($listAdmin as $admin)
+                @forelse ($listGuardian as $guardian)
                     <tr>
-                        <th scope="row"> {{$admin->id}} </th>
-                        <td> {{$admin->name}} </td>
-                        <td> {{ $admin->email }} </td>
-                        <td> {{ $admin->status_id }} </td>
-                        <td> {{ $admin->created_at }} </td>
-                        <td> {{ $admin->updated_at }} </td>
+                        <th scope="row"> {{$guardian->id}} </th>
+                        <td> {{ $guardian->name }} </td>
+                        <td> {{ $guardian->email }} </td>
+                        <td> {{ $guardian->status_id }} </td>
+                        <td> {{ $guardian->created_at }} </td>
+                        <td> {{ $guardian->updated_at }} </td>
                         <td>
-                            <a class="btn btn-info" href="/admin/atualizar/{{$admin->id}}">Atualizar</a>
-                            <a class="btn btn-danger" href="/admin/deletar/{{$admin->id}}">Deletar</a>
+                            <a class="btn btn-info" href="/admin/guardiao/atualizar/{{$guardian->id}}">Atualizar</a>                            
                         </td>
                     </tr>
                 @empty
-                    <h1>Não há Administradores cadastrados</h1>
+                    <h1>Não há Guardiões cadastrados</h1>
                 @endforelse   
                 </tbody>
             </table>

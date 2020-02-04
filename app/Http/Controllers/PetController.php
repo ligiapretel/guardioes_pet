@@ -175,7 +175,5 @@ class PetController extends Controller
         $pets = Pet::all();
         return view ('Pets.allPets', ['pets'=>$pets]);
     }
-
-
 }
 

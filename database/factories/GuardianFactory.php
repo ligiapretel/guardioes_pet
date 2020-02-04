@@ -2,10 +2,10 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
-use App\Model;
+use App\User;
 use Faker\Generator as Faker;
-
 $factory->define(App\Guardian::class, function (Faker $faker) {
+    $usuarios = User::pluck('id');
     return [
         'name'=> $faker->name,
         'nickname'=> $faker->userName,
@@ -20,6 +20,6 @@ $factory->define(App\Guardian::class, function (Faker $faker) {
         'city' => $faker->city,
         'state' => $faker->stateAbbr,
         'about_the_guardian' => $faker->text(400),
-        'user_id' => random_int(1,10),
+        'user_id' => $faker->randomElement($usuarios), 
     ];
 });
