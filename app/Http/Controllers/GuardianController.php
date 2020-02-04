@@ -29,19 +29,24 @@ class GuardianController extends Controller
 
 
     
-    public function viewProfileGuardian($id=0){
-        //Esse id aqui, faz diferença?
+    public function viewProfileGuardian(Request $request, $id){
         $profile = Guardian::find($id);
         //O profile está puxando as informações certas de cada perfil de guardião.
-        $pets = Guardian_has_pets::join('guardians', 'guardians.id', '=', 'guardian_has_pets.guardian_id')->join('pets', 'guardian_has_pets.pet_id', '=', 'pets.id')->join('pets_pictures', 'pets_pictures.pet_id', '=', 'pets.id')->select('pets.*', 'guardian_has_pets.relation_type_id', 'pets_pictures.picture')->get();
+        //dd($profile);
+        
+
+        //$guardian = Guardian_has_pets::where('guardian_id','=', $profile->id)->value('guardian_id');
+        //aqui está puxando o id do guardião. Se muda o guardião, muda o id.
+    
+
+        $pets = Guardian_has_pets::join('guardians', 'guardians.id', '=', 'guardian_has_pets.guardian_id')
+        ->join('pets', 'guardian_has_pets.pet_id', '=', 'pets.id')
+        ->join('pets_pictures', 'pets_pictures.pet_id', '=', 'pets.id')
+        ->where('guardian_id', '=', $profile->id)
+        ->select('pets.*', 'guardian_has_pets.relation_type_id', 'pets_pictures.picture')->get();
         
         
-        
-        
-        // ->join('pets', 'guardian_has_pets.pet_id', '=', 'pets.id')->join('pets_pictures', 'pets_pictures.pet_id', '=', 'pets.id')->select('pets.*', 'guardian_has_pets.relation_type_id', 'pets_pictures.picture')
-        //No primeiro join, puxa informações da tabela guardian_has_pets e retorna todos os campos desse tabela e todos os campos da tabela guardians, com o id=1, mesmo que esteja visualizando o perfil do guardião id=2. Devolve arrays para cada pet que está cadastrado com um guardião (nesse caso, todos os que estão com o guardião id=1. Não deveria retornar nada para o guardião id=2, pois não há pets cadastrados nele.)
-        //Isso acontence por que só o id=1 tem pets cadastrados?
-        //dd($pets);
+
 
         function adopted($pets){
             foreach($pets as $pet){
@@ -85,6 +90,7 @@ class GuardianController extends Controller
             'home'=>$home, 
             'sponsor'=>$sponsor,
             'myAds'=>$myAds
+            
             ]);
         }
     }
@@ -94,7 +100,11 @@ class GuardianController extends Controller
     public function viewMyAccountGuardian(Request $request, $id=3){
         $profile = Guardian::find($id);
 
-        $pets = Guardian_has_pets::join('guardians', 'guardians.id', '=', 'guardian_has_pets.guardian_id')->join('pets', 'guardian_has_pets.pet_id', '=', 'pets.id')->join('pets_pictures', 'pets_pictures.pet_id', '=', 'pets.id')->select('pets.*', 'guardian_has_pets.relation_type_id', 'pets_pictures.picture')->get();
+        $pets = Guardian_has_pets::join('guardians', 'guardians.id', '=', 'guardian_has_pets.guardian_id')
+        ->join('pets', 'guardian_has_pets.pet_id', '=', 'pets.id')
+        ->join('pets_pictures', 'pets_pictures.pet_id', '=', 'pets.id')
+        ->where('guardian_id', '=', $profile->id)
+        ->select('pets.*', 'guardian_has_pets.relation_type_id', 'pets_pictures.picture')->get();
 
 
         function adopted($pets){
@@ -294,13 +304,16 @@ class GuardianController extends Controller
 
     //FUNÇÕES PARA MARCAR O PET COMO ADOTADO, APADRINHADO OU LAR
     public function createAdoption(Request $request, $id){
+        $guardian = Auth::user($request->id);
+        //dd($guardian);
+
         $adoption = new Guardian_has_pets();
-        $adoption->guardian_id = $request->guardian_id=1;
+        $adoption->guardian_id = $guardian->id;
         $adoption->pet_id = $id;
         $adoption->relation_type_id = 1;
-
+        //dd($adoption);
         $result = $adoption->save();
-
+        
         if($result){
             return redirect("/pet/perfil/")->with('success', self::MSG_PET_ADOTADO);
         } else {
@@ -309,8 +322,10 @@ class GuardianController extends Controller
     }
 
     public function createHome(Request $request, $id){
+        $guardian = Auth::user($request->id);
+
         $home = new Guardian_has_pets();
-        $home->guardian_id = $request->guardian_id=1;
+        $home->guardian_id = $guardian->id;
         $home->pet_id = $id;
         $home->relation_type_id = 2;
 
@@ -324,8 +339,10 @@ class GuardianController extends Controller
     }
 
     public function createSponsor(Request $request, $id){
+        $guardian = Auth::user($request->id);
+
         $sponsor = new Guardian_has_pets();
-        $sponsor->guardian_id = $request->guardian_id=1;
+        $sponsor->guardian_id = $guardian->id;
         $sponsor->pet_id = $id;
         $sponsor->relation_type_id = 3;
 

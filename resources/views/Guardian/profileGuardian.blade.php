@@ -36,33 +36,33 @@
     </section>
 
     <!--Onde esta localizado os Animais Apadrinhados-->
-    @if($sponsor == true) 
-    <section class="container-fluid" id="perfilOngGuar_animais"> 
-        <div class="row">
-            
-            <h2 class="col-lg-12 text-dark font-weight-bold pfOngGuard_titulo">Apadrinhados</h2>
-            
-               
-                        <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-                            @foreach($pets as $pet)
-                            @if($pet->relation_type_id==3)
-                            <div class="card" style="background-color: #E7E2FC">
-                                
-                                <img src="{{asset('storage/public/pets_pictures/'.$pet->picture)}}" class="card-img-top img-fluid">
-                                
-                                <div class="card-body">
-                                <h4 class="card-title text-dark font-weight-bold">{{$pet->name}}</h4>
-                                    <p class="card-text text-secondary">{{$pet->description}}</p>
-                                    <a href="/pet/perfil/{{$pet->id}}" class="btn btn-roxo-outline">Saiba mais</a> 
+   @if($sponsor == true) 
+        <section class="container-fluid" id="perfilOngGuar_animais"> 
+            <div class="row">
+                
+                <h2 class="col-lg-12 text-dark font-weight-bold pfOngGuard_titulo">Apadrinhados</h2>
+                
+                
+                            <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                                @foreach($pets as $pet)
+                                @if($pet->relation_type_id==3)
+                                <div class="card" style="background-color: #E7E2FC">
+                                    
+                                    <img src="{{asset('storage/public/pets_pictures/'.$pet->picture)}}" class="card-img-top img-fluid">
+                                    
+                                    <div class="card-body">
+                                    <h4 class="card-title text-dark font-weight-bold">{{$pet->name}}</h4>
+                                        <p class="card-text text-secondary">{{$pet->description}}</p>
+                                        <a href="/pet/perfil/{{$pet->id}}" class="btn btn-roxo-outline">Saiba mais</a> 
+                                    </div>
                                 </div>
+                                @endif
+                                @endforeach
                             </div>
-                            @endif
-                            @endforeach
-                        </div>
-                        
-        </div>
-    </section>
-@endif
+                            
+            </div>
+        </section>
+    @endif
 
 
     <!--Onde estão os animais adotados -->
@@ -88,7 +88,9 @@
         </div>
     </section>
     @endif
+
     <!--Onde estão os animais lar temporário -->
+
     @if($home == true) 
     <section class="container-fluid" id="perfilOngGuar_animais"> 
         <div class="row">
