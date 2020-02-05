@@ -67,7 +67,7 @@ class AdminController extends Controller
                 //alterando email, senha e status na tabela Users:
                 $user = User::find($request->idAdmin); 
                 $user->email = $request->emailAdmin;
-                $user->password = $request->passwordAdmin;
+                $user->password = Hash::make($request->passwordAdmin);
                 $user->status_id = $request->statusAdmin;
                 
                 $result = $user->save();
