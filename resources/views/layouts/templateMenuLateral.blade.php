@@ -86,7 +86,7 @@
                             @case(1)
                             'admin/atualizar'
                             @case (2)
-                            'pet/cadastro'
+                            {{ url('ong/edita/'. Auth::user()->id) }}
                             @case(3)
                             {{ url('guardiao/minhaconta/perfil/'. Auth::user()->id) }}
                             @endswitch
@@ -153,7 +153,7 @@
                         @endif @else
                         <img
                             id="perfil-ong"
-                            class="ml-4"
+                            class="ml-4 pt-5"
                             src="{{Auth::user()->getPicture()}}"
                             alt="logo"/>
                         <div class="card-body" style="width: 20rem">

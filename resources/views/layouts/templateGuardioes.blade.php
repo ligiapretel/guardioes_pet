@@ -18,24 +18,26 @@
 <body>
     
 <!--HEADER-->
-    <header class="fixed-top">
+<header class="fixed-top">
 
     <div class="container col-12 pt-2 pb-2">
-
-    <nav class="navbar navbar-expand-lg navbar-dark header-menu">
-
-    <a class="fonteHeader" href="/home">
-            <img src="/img/escudo.png" alt="Guardiões Pet" width="35" class="d-inline-block align-center"> Guardiões Pet
-        </a>
-
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+    
+        <nav class="navbar navbar-expand-lg navbar-dark header-menu">
+    
+            <a class="fonteHeader" href="/home">
+                <img src="/img/escudo.png" alt="Guardiões Pet" width="35" class="d-inline-block align-center">
+                Guardiões Pet
+            </a>
+    
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
-
+    
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-
-            <ul class="navbar-nav ml-md-auto mt-2 mt-lg-0 lista-menu">
-
+    
+                <ul class="navbar-nav ml-md-auto mt-2 mt-lg-0 lista-menu">
+    
                     <li class="nav-item">
                         <a class="nav-link header-link" href='/home#seja-guardiao-home'>Ser um guardião</a>
                     </li>
@@ -51,62 +53,63 @@
                     <li class="nav-item">
                         <a class="nav-link header-link" href="/anuncios">Doações</a>
                     </li>
-                    <!-- <li class="nav-item">
-                        <a class="nav-link header-link" href="index.php#footer">Contato</a>
-                    </li> -->
-
-                    <!--VERIFICAR A ROTA DE LOGIN-->
-                    @guest
-                        <li class="nav-item">
-                        <a class="nav-link header-link" href="/login">Login</a>
-                        <li class="nav-item">
-                            <a href="/cadastre-se" class="header-link"><button type="button" class="btn-roxo">Cadastre-se</button></a>
-                        </li>
-                            @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->email }}
-                                    <span class="caret"></span>
-                                </a>
     
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-
-                                <a class="dropdown-item" href=@switch (Auth::user()->user_group_id)
-                                    @case(1)
-                                    'admin/atualizar'
-                                    @case (2)
-                                    {{ url('ong/edita/'. Auth::user()->id) }}
-                                    @case(3)
-                                    {{ url('guardiao/minhaconta/perfil/'. Auth::user()->id) }}
-                                    @endswitch
-
-                                    >
-                                    {{ __('Minha conta') }}
-                                </a>
-
-                                <a class="dropdown-item" href="/logout" onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                    {{ __('Logout') }}
-                                </a>
-
-                                <form id="logout-form" action="/logout" method="POST" style="">
-                                    @csrf
-                                </form>
-
-
-                            </div>
-
-
-                        </li>
-                        @endguest
-                    </ul>
+                    @guest
+                    <li class="nav-item">
+                        <a class="nav-link header-link" href="/login">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="cadastre-se" class="header-link"><button type="button"
+                                class="btn-roxo">Cadastre-se</button></a>
+                    </li>
+                        @else
+                    <li class="nav-item dropdown">
+                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            {{ Auth::user()->email }}
+                            <span class="caret"></span>
+                        </a>
+    
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+    
+                            <a class="dropdown-item" href=@switch (Auth::user()->user_group_id)
+                                @case(1)
+                                'admin/atualizar'
+                                @case (2)
+                                {{ url('ong/edita/'. Auth::user()->id) }}
+                                
+                                @case(3)
+                                {{ url('guardiao/minhaconta/perfil/'. Auth::user()->id) }}
+                                @endswitch
+    
+                                >
+                                {{ __('Minha conta') }}
+                            </a>
+    
+                            <a class="dropdown-item" href="/logout" onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit();">
+                                {{ __('Logout') }}
+                            </a>
+    
+                            <form id="logout-form" action="/logout" method="POST" style="">
+                                @csrf
+                            </form>
+    
+    
+                        </div>
+    
+    
+                    </li>
+                    @endguest
+    
+                </ul>
+    
             </div>
-
+    
         </nav>
-        </div>
-    </header>
-<!--FINAL DO HEADER-->
+    </div>
+</header>
+    <!--FINAL DO HEADER-->
 
 <main>
     @yield('content')

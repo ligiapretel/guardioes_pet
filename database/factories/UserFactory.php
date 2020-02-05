@@ -23,6 +23,6 @@ $factory->define(User::class, function (Faker $faker) {
         'password' => $faker->password(),
         'remember_token' => Str::random(10),
         'user_group_id' => random_int(1,3),
-        'status_id' => $faker->randomElement($usuarios),
+        'status_id' => random_int(1,2),
     ];
 });

@@ -10,7 +10,7 @@
  <section class="container-fluid" id="pfong_cx_info_principal">
  <input type="text" name="idNgo" hidden value="{{ $ngo->id }}">
     <div class="row"> 
-        <div id="pfOng_cx_info_principal_ordem" class="col-lg-6 col-md-6 col-sm-12 col-12">
+        <div id="pfOng_cx_info_principal_ordem" class="col-md-6">
             <h1 class="pfOngGuard_titulo text-dark font-weight-bolder">{{ $ngo->social_name ?? '' }}</h1>
             <p class="text-dark text-justify">{{ $ngo->about_the_ngo ?? '' }}</p>
             <div id="pfG_cx_i_txt" class="d-flex align-items-center">
@@ -20,8 +20,8 @@
                 <p> Denunciar Perfil</p>
             </div>
         </div>
-        <div class="col-lg-6 col-md-6 col-sm-12 col-12 d-flex justify-content-center">
-            <img id="perfilOng_imagem" src="{{Auth::user()->getPicture()}}">
+        <div class="col-md-6 text-center my-auto">
+            <img id="perfilOng_imagem" src="{{asset('storage/ngos_pictures/'.$ngo->profile_picture)}}">
         </div>
     </div>
 </section>
@@ -29,10 +29,10 @@
 <!--Onde esta localizado os Animais com a ONG-->
 <section class="container-fluid" id="perfilOngGuar_animais"> 
     <div class="row">
-        <h2 class="col-lg-12 text-dark font-weight-bold pfOngGuard_titulo">Animais com a ONG (98)</h2>
+        <h2 class="text-dark font-weight-bold pfOngGuard_titulo">Animais com a ONG (98)</h2>
 
     @foreach ($pets ?? '' as $pet)
-        <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+        <div class="col-sm-6 col-lg-4">
             <div class="card">
             
                 <img src="{{asset('storage/pets_pictures/'.$pet_pictures[0]->picture)}}" class="card-img-top img-fluid" height="300" width="300"> 
@@ -50,21 +50,37 @@
     </div>
 </section>
 
-<!--Onde a ONG coloco os itens que estao necessitando-->
-<section class="container-fluid bg-light" id="pfong_precisa_cx_principal"> 
-    <div class="row">
-        <h2 class="text-dark font-weight-bold pfOngGuard_titulo">Estamos Precisando!</h2>
-        <div class="col-lg-12 col-md-12 col-sm-12 col-12 d-flex justify-content-around flex-wrap">
-            <div class="pfong_precisando">Item 1</div>
-            <div class="pfong_precisando">Item 2</div>
-            <div class="pfong_precisando">Item 3</div>
-            <div class="pfong_precisando">Item 4</div>
-            <div class="pfong_precisando">Item 5</div> 
-            <div class="pfong_precisando">Item 6</div> 
-            <div class="pfong_precisando">Item 7</div> 
+<!--Itens que a ONG necessita | Doações-->
+@if(isset($myAds))
+    <section class="bg-light" id="pfong_precisa_cx_principal"> 
+        @foreach($myAds ?? '' as $ad)
+        <div class="mt-5">
+            <table class="table">
+                <h4 class="bg-dark m-0 p-2 text-white">Estamos Precisando!</h4>
+                <thead>
+                    <tr class="bg-light">
+                        <th scope="col">Medicamentos</th>
+                        <th scope="col">Produtos de Higiene</th>
+                        <th scope="col">Alimentos</th>
+                        <th scope="col">Brinquedos</th>
+                        <th scope="col">Acessórios</th>
+                        <th scope="col">Outros</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{$ad->medicine}}</td>
+                        <td>{{$ad->hygiene_supply}}</td>
+                        <td>{{$ad->food}}</td>
+                        <td>{{$ad->toys}}</td>
+                        <td>{{$ad->accessories}}</td>
+                        <td>{{$ad->others}}</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-    </div>
-
-</section>
+        @endforeach
+    </section>
+    @endif
 <script type='text/javascript' src='https://code.jquery.com/jquery-3.4.1.min.js'></script>
 @endsection
