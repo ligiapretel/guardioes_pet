@@ -10,6 +10,7 @@ use App\PetPicture;
 use App\User;
 use App\Users_group;
 use App\Status;
+use App\Ad;
 use Illuminate\Support\Facades\Hash;
 use Auth;
 
@@ -33,8 +34,10 @@ class NgoController extends Controller
             where('pet_id', '=', $pet->id)
             ->get();  
         }
+
+        $myAds = Ad::where('user_id','=',$ngo->user_id)->get();
       
-    return view('Ngos.profileNgo', compact(['ngo','pets','pet_pictures'])); //compact = Cria um array contendo variáveis e seus valores.
+    return view('Ngos.profileNgo', compact(['ngo','pets','pet_pictures','myAds'])); //compact = Cria um array contendo variáveis e seus valores.
     }
 
     
@@ -146,7 +149,11 @@ class NgoController extends Controller
     public function doEditNgo(Request $request){
         $user = User::find($request->userId);
         $user->email = $request->email;
-        $user->password = Hash::make($request->password);
+        if($request->password){
+            $user->password = Hash::make($request->password);
+        }elseif(empty($request->password)){
+            
+        }
 
         $user->save();
         

@@ -124,7 +124,7 @@
         @foreach($myAds ?? '' as $ad)
         <div class="mt-5">
             <table class="table">
-                <h4 class="bg-dark m-0 p-2 text-white">Estou Precisando</h4>
+                <h4 class="bg-dark m-0 p-2 text-white">Estou Precisando!</h4>
                 <thead>
                     <tr class="bg-light">
                         <th scope="col">Medicamentos</th>
