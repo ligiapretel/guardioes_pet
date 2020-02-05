@@ -102,6 +102,9 @@
         <p>Todos os dias as ONGs resgatam e cuidam de milhares de bichinhos. É um trabalho feito com muito amor e dedicação, mas que é exaustivo e custoso também.</p> 
         <p>Há sempre muito mais animais do que as organizações suportam . O tempo de espera pela adoção varia muito e alguns nem chegam a ganhar uma família :(</p>
         <p>Para ser um Guardião, você pode adotar, oferecer um lar temporário ou então apadrinhar um animal, com mimos que deixarão ele feliz e saudável, que tal?</p>
+        <div>
+            <a href="/guardiao/guardioes"><button type="button" class="btn btn-roxo">CONHEÇA NOSSOS GUARDIÕES</button></a>
+        </div>
     </section>
     <!-- Fechando seção "Por que ser um Guardião PET?". -->
     <!-- Abrindo seção "Como funciona". -->
