@@ -30,7 +30,7 @@
                     <div class="form-group">
                         <label for="statusNgo">Status</label>
                         <select class="form-control" name="statusNgo">
-                        <option selected>{{ $ngo->status_id }}</option>
+                        <option selected>{{ $user->status_id }}</option>
                         <option value="1">1 - Ativo</option>
                         <option value="2">2 - Inativo</option>
                         </select>

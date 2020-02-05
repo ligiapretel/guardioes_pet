@@ -57,7 +57,7 @@
                         @if(isset($result)) <!-- se existe -->
                             @if($result) <!-- se é verdadeiro ou falso -->
                                 <h3>Atualização realizada com sucesso!</h3>
-                                <a href="/home">Voltar</a>
+                                <a class="btn btn-primary" href="/admin">Voltar</a>
                             @else
                                 <h3>Não deu certo!</h3>
                                 <a href="/atualizar/{id?}"></a>

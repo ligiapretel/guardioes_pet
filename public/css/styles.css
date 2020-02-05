@@ -668,13 +668,11 @@ footer img {
 
 #perfilOng_imagem {
     /* ongs */
-    height: 300px;
-    width: 300px;
+    width: 280px;
 }
 
 #perfilGua_imagem {
     /* guardiões */
-    height: 300px;
     width: 300px;
 }
 
@@ -1089,14 +1087,12 @@ footer img {
 
     #perfilOng_imagem {
         /* ongs */
-        width: 260px;
-        height: 260px;
+        width: 250px;
     }
 
     #perfilGua_imagem {
         /* guardiões */
-        width: 260px;
-        height: 260px;
+        width: 250px;
     }
 
     .pfOngGuard_titulo {
@@ -1213,13 +1209,11 @@ footer img {
         #perfilOng_imagem { /* ongs */
             margin-bottom: 30px;
             width: 230px;
-            height: 230px;
         }
     
         #perfilGua_imagem { /* guardiões */
             margin-top: 45px;
             width: 230px;
-            height: 230px;
         }
     
         .pfOngGuard_titulo { /* ambos */
@@ -1422,7 +1416,6 @@ footer img {
         margin-top: 5px;
         margin-bottom: 20px;
         width: 170px;
-        height: 170px;
     }
 
     #perfilGua_imagem {
@@ -1430,7 +1423,6 @@ footer img {
         margin-top: 0;
         margin-bottom: 20px;
         width: 170px;
-        height: 170px;
     }
 
     .pfOngGuard_titulo { /* ambos */
