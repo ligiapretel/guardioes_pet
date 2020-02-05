@@ -43,7 +43,7 @@
                 <h2>Encontre um amigo</h2>
             </div>
             <div class="formulario-coluna col-11">
-                <form action="busca" method="POST">
+                <form action="/busca" method="GET">
                 @csrf
                     <div class="formulario-index row">
                         <div class="formPet formulario-index-itens col-md-6 p-3">
