@@ -49,16 +49,16 @@
                         <div class="formPet formulario-index-itens col-md-6 p-3">
                             <select name="animal" class="form-control">
                                 <option disabled selected>Pet</option>
-                                <option value="cachorro">Cachorro</option>
-                                <option value="gato">Gato</option>
+                                <option value="Cachorro">Cachorro</option>
+                                <option value="Gato">Gato</option>
                             </select>
                         </div>
                         <div class="formAjudar formulario-index-itens col-md-6 p-3">
                             <select name="comoQueroAjudar" class="form-control">
                                 <option disabled selected>Como quer ajudar?</option>
-                                <option value="adocao">Adoção</option>
-                                <option value="apadrinhamento">Apadrinhamento</option>
-                                <option value="lartemporario">Lar temporário</option>
+                                <option name="adoption_available" value="1">Adoção</option>
+                                <option name="sponsorship_available" value="1">Apadrinhamento</option>
+                                <option name="temporary_home_available" value="1">Lar temporário</option>
                             </select>
                         </div>
                     
@@ -82,8 +82,8 @@
                         <div class="formSexo formulario-index-itens col-md-6 p-3">
                             <select name="sexo" class="form-control">
                                 <option disabled selected>Sexo</option>
-                                <option value="femea">Fêmea</option>
-                                <option value="macho">Macho</option>
+                                <option value="F">Fêmea</option>
+                                <option value="M">Macho</option>
                             </select>
                         </div>
                         <div class="formBotao formulario-index col-md-6 p-3">

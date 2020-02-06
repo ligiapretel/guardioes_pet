@@ -62,6 +62,7 @@
         </div>
     </div>
     <div class="form-group row">
+        {{-- <img src="{{asset('storage/public/ngos_pictures/'.$user->ngo->profile_picture)}}" alt=""/> --}}
         <label for="pictureNgo" class="col-sm-4 col-form-label">Foto de Perfil</label>
         <div class="col-sm-8">
             <input type="file" class="form-control-file" name="profile_picture" value="{{$user->ngo->profile_picture}}">
@@ -87,18 +88,12 @@
             <input type="password" class="form-control pwd" name="password"
                 placeholder="Nova senha minimo 6 caracteres" value="{{$user->password}}">
         </div>
-        <div class="col-sm-2 d-flex align-items-center">
-            <img src="http://i.stack.imgur.com/H9Sb2.png" title="Visualizar a senha" alt="visualizar senha" id="olho">
-        </div>
     </div>
     <div class="form-group row" id="campo2">
         <label for="passwordNgo" class="col-sm-4 col-form-label">Confirme sua senha</label>
         <div class="col-sm-6">
             <input type="password" class="form-control" name="re-password"
                 placeholder="Confirme sua nova senha" value="{{$user->password}}">
-        </div>
-        <div class="col-sm-2 d-flex align-items-center">
-            <img src="http://i.stack.imgur.com/H9Sb2.png" title="Visualizar a senha" alt="visualizar senha" id="olho">
         </div>
     </div>
     <div class="form-group row">
