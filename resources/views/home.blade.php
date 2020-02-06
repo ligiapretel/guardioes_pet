@@ -48,23 +48,24 @@
                     <div class="formulario-index row">
                         <div class="formPet formulario-index-itens col-md-6 p-3">
                             <select name="animal" class="form-control">
-                                <option disabled selected>Pet</option>
+                                <!-- Em todos os options selected, o value precisa ser nulo para não interferir no resultado da busca quando o campo não for selecionado.-->
+                                <option selected value="">Pet</option>
                                 <option value="Cachorro">Cachorro</option>
                                 <option value="Gato">Gato</option>
                             </select>
                         </div>
                         <div class="formAjudar formulario-index-itens col-md-6 p-3">
-                            <select name="comoQueroAjudar" class="form-control">
-                                <option disabled selected>Como quer ajudar?</option>
-                                <option name="adoption_available" value="1">Adoção</option>
-                                <option name="sponsorship_available" value="1">Apadrinhamento</option>
-                                <option name="temporary_home_available" value="1">Lar temporário</option>
+                            <select name="como_quero_ajudar" class="form-control">
+                                <option selected value="">Como quer ajudar?</option>
+                                <option value="adocao">Adoção</option>
+                                <option value="apadrinhamento">Apadrinhamento</option>
+                                <option value="lar_temporario">Lar temporário</option>
                             </select>
                         </div>
                     
                         <div class="formulario-index-itens col-md-6 p-3">
                             <select name="porte" class="form-control">
-                                <option disabled selected>Porte</option>
+                                <option selected value="">Porte</option>
                                 <option value="pequeno">Pequeno</option>
                                 <option value="medio">Médio</option>
                                 <option value="grande">Grande</option>
@@ -72,7 +73,7 @@
                         </div>
                         <div class="formulario-index-itens col-md-6 p-3">
                             <select name="ong" class="form-control">
-                                <option disabled selected>Selecionar a ONG</option>
+                                <option selected value="">Selecionar a ONG</option>
                                 <option value="ong-a">ONG $A</option>
                                 <option value="ong-b">ONG $B</option>
                                 <option value="ong-c">ONG $C</option>
@@ -81,13 +82,13 @@
                     
                         <div class="formSexo formulario-index-itens col-md-6 p-3">
                             <select name="sexo" class="form-control">
-                                <option disabled selected>Sexo</option>
+                                <option selected value="">Sexo</option>
                                 <option value="F">Fêmea</option>
                                 <option value="M">Macho</option>
                             </select>
                         </div>
                         <div class="formBotao formulario-index col-md-6 p-3">
-                            <button class="btn-roxo formulario-index-itens btn-busca-expandida botao-home" type="submit" name="procurar">Procurar</button>
+                            <button class="btn-roxo formulario-index-itens btn-busca-expandida botao-home" type="submit">Procurar</button>
                         </div>
                     </div>
                    
