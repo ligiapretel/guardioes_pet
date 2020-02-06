@@ -6,7 +6,7 @@
 
 @section('content') 
 
-        <form action="/guardiao/cadastrar" method="POST" enctype="multipart/form-data" class="card col-lg-8 col-md-12 col-sm-12 col-12 p-5" id="formGuardiao" style="width: 50rem">
+        <form action="/guardiao/cadastrar" method="POST" enctype="multipart/form-data" class="card col-lg-8 col-md-12 col-sm-12 col-12 p-5" id="formGuardiao" style="width: 50rem" data-parsley-validate="">
             @csrf
             <!-- Código somente para testes de erro no preenchimento do form. Quando estiver ok, melhorar essa exibição para o usuário -->
             @if(!empty($errors->all()))
@@ -17,22 +17,23 @@
             <input hidden type="text" name="statusGuardian"  value="1"> 
             <input hidden type="text" name="user_typeGuardian" value="3">
 
-            @if(session("created"))
-                <div class="alert alert-light alert-dismissible fade show" role="alert">
-                    <strong>{{session("created")}}</strong>
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
+            @if(session("success"))
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <strong>{{session("success")}}</strong>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+          
             @endif
 
             @if(session("error"))
-                <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                    <strong>{{session("error")}}</strong>
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <strong>{{session("error")}}</strong>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
             @endif
 
 
@@ -46,7 +47,7 @@
             <div class="form-group row">
                 <label for="name" class="col-sm-4 col-form-label">Nome </label>
                 <div class="col-sm-8">
-                    <input name="name" value="{{ old("name", '') }}" type="text" class="form-control" id="nomeGuardiao" placeholder="Nome completo">
+                    <input name="name" value="{{ old("name", '') }}" type="text" class="form-control" id="nomeGuardiao" placeholder="Nome completo" required="">
                 </div>
             </div>
             <div class="form-group row">
@@ -59,57 +60,57 @@
             <div class="form-group row">
                 <label for="date_of_birth" class="col-sm-4 col-form-label">Data de Nascimento </label>
                 <div class="col-sm-8">
-                    <input name="date_of_birth" value="{{ old("date_of_birth", '') }}" type="date" class="form-control" id="data">
+                    <input name="date_of_birth" value="{{ old("date_of_birth", '') }}" type="date" class="form-control" id="data" required="">
                 </div>
             </div>
             <div class="form-group row">
                 <label for="email" class="col-sm-4 col-form-label">E-mail</label>
                 <div class="col-sm-8">
-                    <input name="email" value="{{ old("email", '') }}" type="email" class="form-control" id="emailGuardiao" placeholder="seunome@email.com">
+                    <input name="email" value="{{ old("email", '') }}" type="email" class="form-control" id="emailGuardiao" placeholder="seunome@email.com" data-parsley-trigger="change" required="">
                 </div>
             </div>
             <div class="form-group row">
                 <label for="phone_number" class="col-sm-4 col-form-label">Telefone </label>
                 <div class="col-sm-8">
-                    <input name="phone_number" value="{{ old("phone_number", '') }}" type="text" class="form-control" id="telefone" placeholder="(xx) xxxxx-xxxx">
+                    <input name="phone_number" value="{{ old("phone_number", '') }}" type="text" class="form-control" id="telefone" placeholder="(xx) xxxxx-xxxx" required="">
                 </div>
             </div>
             <div class="form-group row">
                 <label for="profile_picture" class="col-sm-4 col-form-label">Foto de Perfil</label>
                 <div class="col-sm-8">
-                    <input name="profile_picture" value="{{ old("profile_picture", '') }}" type="file" class="form-control-file" id="fotoGuardiao">
+                    <input name="profile_picture" value="{{ old("profile_picture", '') }}" type="file" class="form-control-file" id="fotoGuardiao" required="">
                 </div>
             </div>
             <div class="form-group row">
                 <label for="senhaGuardiao" class="col-sm-4 col-form-label">Defina uma senha</label>
                 <div class="col-sm-8">
                     <input name="senhaGuardiao" value="{{ old("senhaGuardiao", '') }}" type="password" class="form-control" id="senhaGuardiao"
-                        placeholder="Senha mínimo 6 caracteres">
+                        placeholder="Senha mínimo 6 caracteres" equalto="" required="" >
                 </div>
             </div>
             <div class="form-group row">
                 <label for="senhaConfirmGuardiao" class="col-sm-4 col-form-label">Confirme sua senha</label>
                 <div class="col-sm-8">
                     <input name="senhaConfirmGuardiao" value="{{ old("senhaConfirmGuardiao", '') }}" type="password" class="form-control" id="senhaGuardiaoConfirm"
-                        placeholder="Confirme sua senha">
+                        placeholder="Confirme sua senha" data-parsley-trigger="change" equalto="senhaGuardiao" required="">
                 </div>
             </div>
             <div class="form-group row">
                 <label for="zip_code" class="col-sm-4 col-form-label">CEP</label>
                 <div class="col-sm-8">
-                    <input name="zip_code" value="{{ old("zip_code", '') }}" type="number" class="form-control" id="cep" placeholder="CEP">
+                    <input name="zip_code" value="{{ old("zip_code", '') }}" type="number" class="form-control" id="cep" placeholder="CEP" required="">
                 </div>
             </div>
             <div class="form-group row">
                 <label for="address" class="col-sm-4 col-form-label">Endereço</label>
                 <div class="col-sm-8">
-                    <input name="address" value="{{ old("address", '') }}" type="text" class="form-control" id="rua" placeholder="Rua/Avenida/Logradouro">
+                    <input name="address" value="{{ old("address", '') }}" type="text" class="form-control" id="rua" placeholder="Rua/Avenida/Logradouro" required="">
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6 p-1">
                     <label for="number">Número</label>
-                    <input name="number" value="{{ old("number", '') }}" type="text" class="form-control" id="telefone" placeholder="No.">
+                    <input name="number" value="{{ old("number", '') }}" type="text" class="form-control" id="telefone" placeholder="No." required="">
                 </div>
                 <div class="form-group col-md-6 p-1">
                     <label for="complement">Complemento</label>
@@ -118,7 +119,7 @@
                 
                 <div class="form-group col-md-6 p-1">
                     <label for="neighborhood">Bairro</label>
-                    <input name="neighborhood" value="{{ old("neighborhood", '') }}" type="text" class="form-control" id="bairro" placeholder="Bairro">
+                    <input name="neighborhood" value="{{ old("neighborhood", '') }}" type="text" class="form-control" id="bairro" placeholder="Bairro" required="">
                 </div>
                 <div class="form-group col-md-6 p-1">
                     <label for="city">Cidade</label>
@@ -172,7 +173,8 @@
         </form>
 
 
-        
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="/js/parsley.js"    type="text/javascript"></script>
 <script src="/js/completaCep.js" type="text/javascript"></script>
-<script src="/js/mascaraTel.js" type="text/javascript"></script>
+{{-- <script src="/js/mascaraTel.js" type="text/javascript"></script> --}}
 @endsection

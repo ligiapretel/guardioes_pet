@@ -15,20 +15,20 @@
 //Guardian´s Routes
 Route::group(['prefix'=>'guardiao'], function(){
     Route::get('/perfil/{id?}', "GuardianController@viewProfileGuardian");
-    Route::get('/minhaconta/perfil/{id}', "GuardianController@viewMyAccountGuardian");
+    Route::get('/minhaconta/perfil/{id}', "GuardianController@viewMyAccountGuardian")->middleware('checkguardian');
     Route::get('/cadastrar', "GuardianController@createGuardian");
     Route::post('/cadastrar', "GuardianController@createGuardian");
-    Route::get('/editar/{id?}', "GuardianController@formUpdate");
+    Route::get('/editar/{id?}', "GuardianController@formUpdate")->middleware('checkguardian');
     Route::post('/editar', "GuardianController@storeUpdate");
-    Route::get('/deletar/{id?}', "GuardianController@delete");
+    Route::get('/deletar/{id?}', "GuardianController@delete")->middleware('checkguardian');
     Route::get('/guardioes', "GuardianController@viewAllGuardians");
     Route::get('/lista', "GuardianController@listAllGuardians");
 });
 
 //Rotas para marcar o pet como adotado, lar ou apadrinhado
-Route::get('/pet/perfil/adotar/{id?}', "GuardianController@createAdoption");
-Route::get('/pet/perfil/lar/{id?}', "GuardianController@createHome");
-Route::get('/pet/perfil/apadrinhar/{id?}', "GuardianController@createSponsor");
+Route::post('/pet/perfil/adotar/{id?}', "GuardianController@createAdoption")->middleware('checkguardian');
+Route::post('/pet/perfil/lar/{id?}', "GuardianController@createHome")->middleware('checkguardian');
+Route::post('/pet/perfil/apadrinhar/{id?}', "GuardianController@createSponsor")->middleware('checkguardian');
 
 //Ngo´s Routes
 Route::group(['prefix' => 'ong'], function () {
