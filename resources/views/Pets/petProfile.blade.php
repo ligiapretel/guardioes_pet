@@ -196,16 +196,22 @@
                         </div>
                         <div class="row justify-content-between mt-4">
                             <div class="cx-btn-respons">
-                                <a href="/pet/perfil/adotar/{{$pet->id}}"><button class="btn-roxo text-uppercase w-100" name="adotar">Adotar</button></a>
+                                <form action="/pet/perfil/adotar/{{$pet->id}}" method="POST">
+                                @csrf
+                                <input name="user" type="hidden" value="{{Auth::user()->id}}">
+                                <button class="btn-roxo text-uppercase w-100" name="adotar">Adotar</button></form>
                             </div>
                             <div class="cx-btn-respons">
-                                <a href="/pet/perfil/lar/{{$pet->id}}"><button class="btn-roxo text-uppercase w-100"
-                                    name="lar">Lar
-                                    temporário</button></a>
+                                <form action="/pet/perfil/lar/{{$pet->id}}" method="POST">
+                                    @csrf
+                                    <input name="user" type="hidden" value="{{Auth::user()->id}}">
+                                <button class="btn-roxo text-uppercase w-100"              name="lar"> Lar temporário</button></form>
                             </div>
                             <div class="cx-btn-respons">
-                                <a href="/pet/perfil/apadrinhar/{{$pet->id}}"><button
-                                        class="btn-roxo text-uppercase w-100" name="apadrinhar">Apadrinhar</button></a>
+                                <form action="/pet/perfil/apadrinhar/{{$pet->id}}" method="POST">
+                                    @csrf
+                                    <input name="user" type="hidden"  value="{{Auth::user()->id}}">
+                                <button class="btn-roxo text-uppercase w-100" name="apadrinhar">Apadrinhar</button></form>
                             </div>
                         </div>
                     </div>

@@ -26,28 +26,24 @@ class GuardianController extends Controller
     const MSG_PET_LAR_ERRO = "Ops! Algo deu errado. =(";
     const MSG_PET_APADRINHADO = "Pet apadrinhado com sucesso!";
     const MSG_PET_APADRINHADO_ERRO = "Ops! Algo deu errado ao apadrinhar o pet. =(";
+    const MSG_GUARDIAO_CADASTRADO = "Cadastro realizado com sucesso!";
+    const MSG_GUARDIAO_ERRO = "Não foi possível realizar o seu cadastro.";
 
 
     
     public function viewProfileGuardian(Request $request, $id){
         $profile = Guardian::find($id);
-        //O profile está puxando as informações certas de cada perfil de guardião.
-        //dd($profile);
-        
-
-        //$guardian = Guardian_has_pets::where('guardian_id','=', $profile->id)->value('guardian_id');
-        //aqui está puxando o id do guardião. Se muda o guardião, muda o id.
-    
 
         $pets = Guardian_has_pets::join('guardians', 'guardians.id', '=', 'guardian_has_pets.guardian_id')
         ->join('pets', 'guardian_has_pets.pet_id', '=', 'pets.id')
         ->join('pets_pictures', 'pets_pictures.pet_id', '=', 'pets.id')
         ->where('guardian_id', '=', $profile->id)
         ->select('pets.*', 'guardian_has_pets.relation_type_id', 'pets_pictures.picture')->get();
+        //dd($pets);
+        
+        //o where tá voltando vazio;
         
         
-
-
         function adopted($pets){
             foreach($pets as $pet){
                 if($pet->relation_type_id==1){
@@ -210,8 +206,11 @@ class GuardianController extends Controller
             }
             $result = $newGuardian->save();
        
-           //return view('Guardian.registerGuardian', ["result"=>$result]);
-           return redirect('/guardiao/cadastrar')->with(['result'=>$result]);
+           if($result){
+                return redirect("/guardiao/cadastrar")->with('success', self::MSG_GUARDIAO_CADASTRADO);
+            } else {
+                return redirect("/guardiao/cadastrar")->with('error', self::MSG_GUARDIAO_ERRO);
+            }
         }
     
     
@@ -304,7 +303,7 @@ class GuardianController extends Controller
 
     //FUNÇÕES PARA MARCAR O PET COMO ADOTADO, APADRINHADO OU LAR
     public function createAdoption(Request $request, $id){
-        $guardian = Auth::user($request->id);
+        $guardian = Guardian::where('user_id', '=', $request->user)->first();
         //dd($guardian);
 
         $adoption = new Guardian_has_pets();
@@ -322,7 +321,7 @@ class GuardianController extends Controller
     }
 
     public function createHome(Request $request, $id){
-        $guardian = Auth::user($request->id);
+        $guardian = Guardian::where('user_id', '=', $request->user)->first();
 
         $home = new Guardian_has_pets();
         $home->guardian_id = $guardian->id;
@@ -339,9 +338,11 @@ class GuardianController extends Controller
     }
 
     public function createSponsor(Request $request, $id){
-        $guardian = Auth::user($request->id);
+        $guardian = Guardian::where('user_id', '=', $request->user)->first();
+     
 
         $sponsor = new Guardian_has_pets();
+       // dd($guardian->id);
         $sponsor->guardian_id = $guardian->id;
         $sponsor->pet_id = $id;
         $sponsor->relation_type_id = 3;
