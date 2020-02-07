@@ -74,9 +74,9 @@
                         <div class="formulario-index-itens col-md-6 p-3">
                             <select name="ong" class="form-control">
                                 <option selected value="">Selecionar a ONG</option>
-                                <option value="ong-a">ONG $A</option>
-                                <option value="ong-b">ONG $B</option>
-                                <option value="ong-c">ONG $C</option>
+                                @foreach($ngos as $ngo)
+                                    <option value="{{$ngo->fantasy_name}}">{{$ngo->fantasy_name}}</option>
+                                @endforeach
                             </select>
                         </div>
                     

@@ -8,7 +8,14 @@
 
 <section class="py-2 p-md-4">
 
-    @if(!empty($pets))
+    @if(!isset($pets[0]))
+        <div class="row justify-content-center mt-5">
+            <h3 class="text-center p-5 m-5">Não encontramos o perfil que buscou, refaça a pesquisa com novas
+                opções.</h3>
+        </div>
+    @endif
+
+    @if(isset($pets[0]))
     <div class="resultados-busca">
         <h1 class="text-center">Deu match! </h1>
         <h3 class="text-center">Animais com o perfil que você buscou. Conheça:</h3>
@@ -28,13 +35,8 @@
                 </a>
             </div>
             @endforeach
-            @else
-            <div class="col-lg-8">
-                <h1 id="buscaVazia">Infelizmente não encontramos o perfil que buscou, tente buscar novamente com novas
-                    opções.</h1>
-            </div>
-            @endif
         </div>
     </div>
+    @endif
 </section>
 @endsection
