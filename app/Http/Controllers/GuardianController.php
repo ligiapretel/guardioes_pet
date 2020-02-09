@@ -14,6 +14,7 @@ use App\Relation_type;
 use App\Guardian_has_pets;
 use App\User;
 use App\Ad;
+use App\Ngos;
 use Auth;
 
 class GuardianController extends Controller
@@ -78,6 +79,12 @@ class GuardianController extends Controller
 
         $myAds = Ad::where('user_id','=',$profile->user_id)->get();
 
+        // Pegando todas as ongs, somente com status ativo, para exibir na busca recolhida que aparece na view profileGuardian
+        $ngos = Ngos::join('users','users.id', '=', 'ngos.user_id')
+                    ->where('users.status_id','=',1)
+                    ->orderBy('ngos.fantasy_name','asc')
+                    ->get();
+
         if($profile){
             return view('Guardian.profileGuardian', 
             ['profile'=>$profile, 
@@ -85,7 +92,8 @@ class GuardianController extends Controller
             'adopted'=>$adopted,
             'home'=>$home, 
             'sponsor'=>$sponsor,
-            'myAds'=>$myAds
+            'myAds'=>$myAds,
+            'ngos'=>$ngos
             
             ]);
         }
@@ -287,7 +295,14 @@ class GuardianController extends Controller
     
     public function viewAllGuardians(){
         $guardians = Guardian::all();
-        return view('Guardian.allGuardians', ['guardians'=>$guardians]);
+
+        // Pegando todas as ongs, somente com status ativo, para exibir na busca recolhida que aparece na view allGuardians
+        $ngos = Ngos::join('users','users.id', '=', 'ngos.user_id')
+                    ->where('users.status_id','=',1)
+                    ->orderBy('ngos.fantasy_name','asc')
+                    ->get();
+
+        return view('Guardian.allGuardians', ['guardians'=>$guardians],['ngos'=>$ngos]);
     }
 
 

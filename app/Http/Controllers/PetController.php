@@ -134,7 +134,7 @@ class PetController extends Controller
             $extension = $request->picture->extension();
             $fileName = "{$name}.{$extension}";
 
-            $upload = $request->picture->storeAs('pets_pictures', $fileName);
+            $upload = $request->picture->storeAs('public/pets_pictures', $fileName);
             $newPetPicture->picture = $fileName;
             $newPetPicture->save();
         } 

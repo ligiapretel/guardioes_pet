@@ -36,8 +36,14 @@ class NgoController extends Controller
         }
 
         $myAds = Ad::where('user_id','=',$ngo->user_id)->get();
+
+        // Pegando todas as ongs, somente com status ativo, para exibir na busca recolhida que aparece na view profileNgo
+        $ngos = Ngos::join('users','users.id', '=', 'ngos.user_id')
+                    ->where('users.status_id','=',1)
+                    ->orderBy('ngos.fantasy_name','asc')
+                    ->get();
       
-    return view('Ngos.profileNgo', compact(['ngo','pets','pet_pictures','myAds'])); //compact = Cria um array contendo variáveis e seus valores.
+    return view('Ngos.profileNgo', compact(['ngo','pets','pet_pictures','myAds','ngos'])); //compact = Cria um array contendo variáveis e seus valores.
     }
 
     

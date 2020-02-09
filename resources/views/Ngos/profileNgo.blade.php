@@ -35,7 +35,7 @@
         <div class="col-sm-6 col-lg-4">
             <div class="card">
             
-                <img src="{{asset('storage/pets_pictures/'.$pet_pictures[0]->picture)}}" class="card-img-top img-fluid" height="300" width="300"> 
+                <img src="{{asset('storage/public/pets_pictures/'.$pet_pictures[0]->picture)}}" class="card-img-top img-fluid" height="300" width="300"> 
 
                 <div class="card-body" style="background-color: #E7E2FC">
                     <h4 class="card-title text-dark font-weight-bold">{{$pet->name}}</h4>

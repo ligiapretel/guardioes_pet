@@ -651,6 +651,12 @@ footer img {
     text-decoration: none;
 }
 
+#img-pet-busca{
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
 /* PERFIL DAS ONGS E GUARDIÕES */
 
 /*Informacoes*/
@@ -1036,13 +1042,12 @@ footer img {
     .perfil-anim-btn-desativado{
         margin: 10px 0px;
     }
-   
     /*FIM PAGINA PERFIL ANIMAL*/
+    
+    #img-pet-busca{
+        height: 160px;
+    }
 }
-
-
-
-
 
 
 /* INICIANDO CSS MEDIUM DEVICES (até 992px) */
@@ -1165,9 +1170,11 @@ footer img {
     .cx-btn-respons{
         width: 100%;
     }
-   
-
     /*--FIM PERFIL ANIMAL--*/
+    
+    #img-pet-busca{
+        height: 160px;
+    }
 
 }
 
@@ -1372,8 +1379,11 @@ footer img {
             margin-top: 52px;
             height: 40px;
         }
-
-    /*Fim da página cadastre-se*/
+        /*Fim da página cadastre-se*/
+        
+        #img-pet-busca{
+            height: 168px;
+        }
     }    
 
 /* INICIANDO CSS EXTRA SMALL DEVICES (até 576px) */
@@ -1740,6 +1750,10 @@ footer img {
     }
 
     /*---FIM PERFIL ANIMAL---*/
+    
+    #img-pet-busca{
+        height: 280px;
+    }
 
 }
 /*CSS MOSTRAR SENHA - form editar ong*/
@@ -1779,9 +1793,4 @@ footer img {
     font-size: 12px;
     list-style: none;
     color: #f05050;
-}
-/*mensagem de busca vazio na página search*/
-#buscaVazia{
-    background-color:#FF4A4A;
-    border-radius:5px;
 }
