@@ -161,13 +161,14 @@ class PetController extends Controller
 
     public function viewPetProfile(Request $request, $id=1) {
         $pet = Pet::find($id);
+        $ngo = Ngos::leftJoin('pets', 'pets.user_id', '=', 'ngos.user_id')->get()[0];
 
         $pet_pictures = DB::table('pets_pictures')
             ->where('pet_id', '=', $pet->id)
             ->get();
 
         if($pet) {
-           return view('Pets.petProfile', ['pet'=>$pet, 'pet_pictures'=>$pet_pictures]);
+           return view('Pets.petProfile', ['pet'=>$pet, 'pet_pictures'=>$pet_pictures, 'ngo'=>$ngo]);
         }
     }
  

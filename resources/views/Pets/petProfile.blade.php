@@ -5,6 +5,8 @@
 @endsection
 
 @section('content')
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v6.0"></script>
 
     <section id="perfil-animal">
         <!--H1 que ficara ativado somente no mobile -->
@@ -181,20 +183,22 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row justify-content-between mt-1">
+                        <div class="row justify-content-between mt-1"  id="acoes-pet">
                             <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 pl-0">
-                                <img class="perfil-anim-icon-respos" src="/img/icon_whatsapp.png" alt="">
-                                <img class="perfil-anim-icon-respos" src="/img/icon_facebook.png" alt="">
-                                <img class="perfil-anim-icon-respos" src="/img/icon_twitter.png" alt="">
-                                <p class="d-inline"><a href="#">Compartilhar</a></p>
+                                <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false" data-text="Este pet está precisando de um guardião! Que tal conhecê-lo melhor?">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>  
                             </div>
 
                             <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 pr-0 text-right">
-                                <p class="d-inline"><a href="#">Favoritar</a></p>
-                                <img class="perfil-anim-icon-respos col-1 pr-0 pl-0 ml-1" src="/img/like_no.png">
+                                <!-- <p class="d-inline"><a href="#">Favoritar</a></p>
+                                <img class="perfil-anim-icon-respos col-1 pr-0 pl-0 ml-1" src="/img/like_no.png"> -->
+                                <span class="tw-heart-box">
+                                <input type="checkbox" name="name" value="">
+                                <span class="tw-heart"></span>
+                                </span>
+
                             </div>
                         </div>
-                        <div class="row justify-content-between mt-4">
+                        <div class="row justify-content-between mt-4" >
                             <div class="cx-btn-respons">
                                 <form action="/pet/perfil/adotar/{{$pet->id}}" method="POST">
                                 @csrf
@@ -214,7 +218,10 @@
                                 <button class="btn-roxo text-uppercase w-100" name="apadrinhar">Apadrinhar</button></form>
                             </div>
                         </div>
-                    </div>
+
+                        <div class="row justify-content-between mt-4">
+                        <p><i>Este pet está sendo cuidado com muito carinho por: <u><a href="/ong/perfil/{{$ngo->id}}" class="">{{$ngo->social_name}}</a></u></i></p>
+                        </div>
 
                 </div>
             </div>
@@ -281,6 +288,7 @@
     @else
         <h3>Você tentou acessar uma página que não existe :(</h3>
     @endif
+
 
 @endsection
 
