@@ -192,7 +192,7 @@
                                 <!-- <p class="d-inline"><a href="#">Favoritar</a></p>
                                 <img class="perfil-anim-icon-respos col-1 pr-0 pl-0 ml-1" src="/img/like_no.png"> -->
                                 <span class="tw-heart-box">
-                                <input type="checkbox" name="name" value="">
+                                <input type="checkbox" name="name" value="" id="curtir">
                                 <span class="tw-heart"></span>
                                 </span>
 

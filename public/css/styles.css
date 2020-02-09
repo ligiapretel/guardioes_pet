@@ -1813,12 +1813,12 @@ footer img {
     top: 0;
   }
   
-  [type="checkbox"]:checked + .tw-heart {
+  #curtir[ type="checkbox"]:checked + .tw-heart {
     transition: background .8s steps(28);
     background-position: -2800px 0;
   }
   
-  [type="checkbox"] {
+  #curtir[type="checkbox"] {
     opacity: 0;
     cursor: pointer;
     position: absolute;
