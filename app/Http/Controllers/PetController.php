@@ -159,15 +159,17 @@ class PetController extends Controller
         }
     }
 
-    public function viewPetProfile(Request $request, $id=1) {
+    public function viewPetProfile(Request $request, $id) {
         $pet = Pet::find($id);
+        $ngo = Ngos::where("user_id", $pet->user_id)->get()[0];
+        //dd($ngo);
 
         $pet_pictures = DB::table('pets_pictures')
             ->where('pet_id', '=', $pet->id)
             ->get();
 
         if($pet) {
-           return view('Pets.petProfile', ['pet'=>$pet, 'pet_pictures'=>$pet_pictures]);
+           return view('Pets.petProfile', ['pet'=>$pet, 'pet_pictures'=>$pet_pictures, 'ngo'=>$ngo]);
         }
     }
  
