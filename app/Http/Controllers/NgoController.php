@@ -29,6 +29,7 @@ class NgoController extends Controller
         $pets = Pet::join('ngos','ngos.user_id','=','pets.user_id')
                     ->join('pets_pictures','pets_pictures.pet_id','=','pets.id')
                     ->where('pets.user_id','=',$ngo->user_id)
+                    ->select('pets.name','pets.description','pets.id','pets_pictures.picture')
                     ->get();
 
         $myAds = Ad::where('user_id','=',$ngo->user_id)->get();

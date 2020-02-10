@@ -168,8 +168,6 @@ class PetController extends Controller
             ->where('pet_id', '=', $pet->id)
             ->get();
 
-            // dd($pet->id);
-
         if($pet) {
            return view('Pets.petProfile', ['pet'=>$pet, 'pet_pictures'=>$pet_pictures, 'ngo'=>$ngo]);
         }
