@@ -202,19 +202,25 @@
                             <div class="cx-btn-respons">
                                 <form action="/pet/perfil/adotar/{{$pet->id}}" method="POST">
                                 @csrf
+                                @auth
                                 <input name="user" type="hidden" value="{{Auth::user()->id}}">
+                                @endauth
                                 <button class="btn-roxo text-uppercase w-100" name="adotar">Adotar</button></form>
                             </div>
                             <div class="cx-btn-respons">
                                 <form action="/pet/perfil/lar/{{$pet->id}}" method="POST">
                                     @csrf
+                                    @auth
                                     <input name="user" type="hidden" value="{{Auth::user()->id}}">
-                                <button class="btn-roxo text-uppercase w-100"              name="lar"> Lar temporário</button></form>
+                                    @endauth
+                                <button class="btn-roxo text-uppercase w-100" name="lar"> Lar temporário</button></form>
                             </div>
                             <div class="cx-btn-respons">
                                 <form action="/pet/perfil/apadrinhar/{{$pet->id}}" method="POST">
                                     @csrf
+                                    @auth
                                     <input name="user" type="hidden"  value="{{Auth::user()->id}}">
+                                    @endauth
                                 <button class="btn-roxo text-uppercase w-100" name="apadrinhar">Apadrinhar</button></form>
                             </div>
                         </div>

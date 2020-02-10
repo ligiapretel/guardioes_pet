@@ -31,11 +31,8 @@
     @endif
 
     <!-- essa div é para o título -->
-    <div class="row d-flex justify-content-center mb-2">
-        <h1 class="tituloOng text-center">Meu Perfil</h1>
-    </div>
-    <div class="row d-flex justify-content-center mb-5">
-        <h3 class="tituloOng text-center">Editar dados</h3>
+    <div class="row mb-4 pl-3">
+        <h3 class="tituloOng">Meu perfil | Editar dados</h3>
     </div>
     <input class="form-control" type="hidden" name="id" value="{{$user->ngo->id}}" />
     <input class="form-control" type="hidden" name="userId" value="{{$user->id}}" />

@@ -177,7 +177,7 @@
                                     <!--true = deleta false = cancela -->
                                     @csrf
                                     <input type='hidden' value='{{ 2 }}' name='id'>
-                                    <button class="nav-link menu-ong-sair" href="#">Deletar Conta</button>
+                                    <button class="nav-link menu-ong-sair border-none">Deletar Conta</button>
                                 </form>
 
                             </nav>
