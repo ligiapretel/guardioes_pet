@@ -26,18 +26,20 @@ class NgoController extends Controller
         $ngo = Ngos::find($ngoId);
 
         //PARA PUXAR APENAS OS PETS DA ONG
-        $pets = Pet::where('user_id', '=', $ngo->id)->get();
-          
-        $pet_pictures = 0;
-        foreach ($pets as $pet) {
-            $pet_pictures = PetPicture::
-            where('pet_id', '=', $pet->id)
-            ->get();  
-        }
+        $pets = Pet::join('ngos','ngos.user_id','=','pets.user_id')
+                    ->join('pets_pictures','pets_pictures.pet_id','=','pets.id')
+                    ->where('pets.user_id','=',$ngo->user_id)
+                    ->get();
 
         $myAds = Ad::where('user_id','=',$ngo->user_id)->get();
+
+        // Pegando todas as ongs, somente com status ativo, para exibir na busca recolhida que aparece na view profileNgo
+        $ngos = Ngos::join('users','users.id', '=', 'ngos.user_id')
+                    ->where('users.status_id','=',1)
+                    ->orderBy('ngos.fantasy_name','asc')
+                    ->get();
       
-    return view('Ngos.profileNgo', compact(['ngo','pets','pet_pictures','myAds'])); //compact = Cria um array contendo variáveis e seus valores.
+        return view('Ngos.profileNgo', compact(['ngo','pets','myAds','ngos'])); //compact = Cria um array contendo variáveis e seus valores.
     }
 
     

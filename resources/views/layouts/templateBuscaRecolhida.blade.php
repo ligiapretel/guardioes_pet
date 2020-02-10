@@ -111,85 +111,73 @@
     @yield('content')
 </main>
 
-<!--BUSCA RECOLHIDA-->
-<main class="container">
-    <div class="row">
-        <section class="col-12">
         <!--Busca recolhida-->
-            <div class="alinhamento-busca-recolhida mt-5">
-                <section id="container-busca-recolhida" class="col-10">
-                    <div class="row d-flex flex-row justify-content-between align-items-center" id="busca-recolhida-titulo">
-                        <h2>Encontre um amigo</h2>
-                        <button class="ico-seta-expande-busca" data-toggle="collapse" data-target="#collapseExample">&#8250;
-                        </button>
-                    </div>
+        <div class="alinhamento-busca-recolhida mt-5">
+            <section id="container-busca-recolhida" class="col-10">
+                <div class="row d-flex flex-row justify-content-between align-items-center" id="busca-recolhida-titulo">
+                    <h2>Encontre um amigo</h2>
+                    <button class="ico-seta-expande-busca" data-toggle="collapse" data-target="#collapseExample">&#8250;
+                    </button>
+                </div>
 
-                    <div class="row collapse" id="collapseExample">
-                        <form action="#" method="POST" class="pt-3 col pb-2">
-
-                            <div class="row">
-                                <div class="col-lg-6 col-md-6 col-sm-12 p-3">
-                                    <select name="animal" class="form-control">
-                                        <option disabled selected>Pet</option>
-                                        <option value="cachorro">Cachorro</option>
-                                        <option value="gato">Gato</option>
-                                    </select>
-                                </div>
-                                <div class="buscaRecolAjudar col-lg-6 col-md-6 col-sm-12 p-3">
-                                <select name="comoQueroAjudar" class="form-control">
-                                        <option disabled selected>Como quer ajudar?</option>
-                                        <option value="adocao">Adoção</option>
-                                        <option value="apadrinhamento">Apadrinhamento</option>
-                                        <option value="lartemporario">Lar temporário</option>
-                                    </select>
-                                </div>
-                            <!-- </div> -->
-                            
-                            <!-- <div class="row"> -->
-                                <div class="buscaRecolPorte col-lg-6 col-md-6 col-sm-12 p-3">
-                                    <select name="porte" class="form-control">
-                                        <option disabled selected>Porte</option>
-                                        <option value="pequeno">Pequeno</option>
-                                        <option value="medio">Médio</option>
-                                        <option value="grande">Grande</option>
-                                    </select>
-                                </div>
-                                <div class="buscaReclOng col-lg-6 col-md-6 col-sm-12 p-3">
-                                    <select name="ong" class="form-control">
-                                        <option disabled selected>Selecionar a ONG</option>
-                                        <option value="ong-a">ONG $A</option>
-                                        <option value="ong-b">ONG $B</option>
-                                        <option value="ong-c">ONG $C</option>
-                                    </select>
-                                </div>
-                            <!-- </div> -->
-                            
-                            <!-- <div class="row"> -->
-                                <div class="col-lg-6 col-md-6 col-sm-12 p-3">
-                                    <select name="sexo" class="form-control">
-                                        <option disabled selected>Sexo</option>
-                                        <option value="femea">Fêmea</option>
-                                        <option value="macho">Macho</option>
-                                    </select>
-                                </div>
-                                <div class="buscaRecolBotao col-lg-6 col-md-6 col-sm-12 p-3">
-                                    <button class="btn-busca-recolhida" type="submit" name="procurar">Procurar</button>
-                                </div>
+                <div class="row collapse" id="collapseExample">
+                    <form action="/busca" method="GET" class="pt-3 col pb-2">
+                        @csrf
+                        <div class="row">
+                            <div class="col-md-6 p-3">
+                            <select name="animal" class="form-control">
+                                <!-- Em todos os options selected, o value precisa ser nulo para não interferir no resultado da busca quando o campo não for selecionado.-->
+                                <option selected value="">Pet</option>
+                                <option value="Cachorro">Cachorro</option>
+                                <option value="Gato">Gato</option>
+                            </select>
                             </div>
-                            
-                        </form>
-                    </div>
-                </section>
-            </div> 
-        </section>
-    </div>  
-</main>
+                            <div class="buscaRecolAjudar col-md-6 p-3">
+                                <select name="como_quero_ajudar" class="form-control">
+                                    <option selected value="">Como quer ajudar?</option>
+                                    <option value="adocao">Adoção</option>
+                                    <option value="apadrinhamento">Apadrinhamento</option>
+                                    <option value="lar_temporario">Lar temporário</option>
+                                </select>
+                            </div>
+                            <div class="buscaRecolPorte col-md-6 p-3">
+                                <select name="porte" class="form-control">
+                                    <option selected value="">Porte</option>
+                                    <option value="pequeno">Pequeno</option>
+                                    <option value="medio">Médio</option>
+                                    <option value="grande">Grande</option>
+                                </select>
+                            </div>
+                            <div class="buscaReclOng col-md-6 p-3">
+                                <select name="ong" class="form-control">
+                                    <option selected value="">Selecionar a ONG</option>
+                                    @foreach($ngos ?? '' as $ngo)
+                                        <option value="{{$ngo->fantasy_name}}">{{$ngo->fantasy_name}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="col-md-6 p-3">
+                                <select name="sexo" class="form-control">
+                                    <option selected value="">Sexo</option>
+                                    <option value="F">Fêmea</option>
+                                    <option value="M">Macho</option>
+                                </select>
+                            </div>
+                            <div class="buscaRecolBotao col-md-6 p-3">
+                                <button class="btn-busca-recolhida" type="submit" name="procurar">Procurar</button>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </section>
+        </div>
 
 <!--FOOTER-->
     <footer>
         <section class="container">
             <div class="row pt-4">
-                <div class="col-lg-7 col-md-7 col-sm-12">
+                <div class="col-md-7">
                     <div class="row">
 
                         <ul class="col-lg-4 col-md-5 col-sm-6 align-content-around list-unstyled">
@@ -225,7 +213,7 @@
 
                 </div>
                                                 
-                <div class="col-lg-5 col-md-5 col-sm-12 pr-5">
+                <div class="col-md-5 pr-5">
                     <h5>Quer conversar com a gente?</h5><br>
                     <form action="chat.php" method="POST">
                         <div class="form-group">

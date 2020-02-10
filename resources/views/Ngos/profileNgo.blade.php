@@ -29,24 +29,21 @@
 <!--Onde esta localizado os Animais com a ONG-->
 <section class="container-fluid" id="perfilOngGuar_animais"> 
     <div class="row">
-        <h2 class="text-dark font-weight-bold pfOngGuard_titulo">Animais com a ONG (98)</h2>
-
-    @foreach ($pets ?? '' as $pet)
-        <div class="col-sm-6 col-lg-4">
-            <div class="card">
-            
-                <img src="{{asset('storage/pets_pictures/'.$pet_pictures[0]->picture)}}" class="card-img-top img-fluid" height="300" width="300"> 
-
-                <div class="card-body" style="background-color: #E7E2FC">
-                    <h4 class="card-title text-dark font-weight-bold">{{$pet->name}}</h4>
-                        <p class="card-text text-secondary">{{$pet->description}}</p>
-                        <a href="/pet/perfil/{{$pet->id}}" class="btn btn-roxo-outline">Saiba mais</a> 
+        <h2 class="text-dark font-weight-bold pfOngGuard_titulo">Animais com a ONG</h2>
+    </div>
+    <div class="row pt-5">
+        @foreach ($pets ?? '' as $pet)
+            <div class="col-sm-6 col-lg-4">
+                <div class="card">
+                    <img src="{{asset('storage/public/pets_pictures/'.$pet->picture)}}" class="card-img-top img-fluid" height="300" width="300"> 
+                    <div class="card-body" style="background-color: #E7E2FC">
+                        <h4 class="card-title text-dark font-weight-bold">{{$pet->name}}</h4>
+                            <p class="card-text text-secondary">{{$pet->description}}</p>
+                            <a href="/pet/perfil/{{$pet->id}}" class="btn btn-roxo-outline">Saiba mais</a> 
+                    </div>
                 </div>
-
             </div>
-        </div>
-    @endforeach
-
+        @endforeach
     </div>
 </section>
 
