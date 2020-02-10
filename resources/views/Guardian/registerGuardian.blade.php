@@ -85,7 +85,7 @@
                 <label for="senhaGuardiao" class="col-sm-4 col-form-label">Defina uma senha</label>
                 <div class="col-sm-8">
                     <input name="senhaGuardiao" value="{{ old("senhaGuardiao", '') }}" type="password" class="form-control" id="senhaGuardiao"
-                        placeholder="Senha mínimo 6 caracteres" equalto="" required="" >
+                        placeholder="Senha mínimo 6 caracteres" equalto="senhaGuardiaoConfirm" required="" >
                 </div>
             </div>
             <div class="form-group row">

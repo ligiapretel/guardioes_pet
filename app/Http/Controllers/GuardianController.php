@@ -34,7 +34,9 @@ class GuardianController extends Controller
     
     public function viewProfileGuardian(Request $request, $id){
         $profile = Guardian::find($id);
+        //dd($profile);
         //aqui está trazendo as informações certas de cada guardião cadastrado.
+        //$guardian = Guardian::where('user_id', '=', $request->user)->first();
         
         $pets = Guardian_has_pets::join('guardians', 'guardians.id', '=', 'guardian_has_pets.guardian_id')
         ->join('pets', 'guardian_has_pets.pet_id', '=', 'pets.id')
@@ -43,7 +45,7 @@ class GuardianController extends Controller
         ->select('pets.*', 'guardian_has_pets.relation_type_id', 'pets_pictures.picture')
         ->get();
 
-        dd($pets);
+        //dd($pets);
         // ->join('pets', 'guardian_has_pets.pet_id', '=', 'pets.id')
         // ->join('pets_pictures', 'pets_pictures.pet_id', '=', 'pets.id')
         // ->where('guardian_id', '=', $profile->id)
@@ -115,7 +117,7 @@ class GuardianController extends Controller
 
     public function viewMyAccountGuardian(Request $request, $id=3){
         $profile = Guardian::find($id);
-
+        //dd($profile);
         $pets = Guardian_has_pets::join('guardians', 'guardians.id', '=', 'guardian_has_pets.guardian_id')
         ->join('pets', 'guardian_has_pets.pet_id', '=', 'pets.id')
         ->join('pets_pictures', 'pets_pictures.pet_id', '=', 'pets.id')

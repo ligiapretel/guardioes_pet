@@ -79,6 +79,7 @@
                                 {{ url('ong/edita/'. Auth::user()->id) }}
                                 
                                 @case(3)
+                                {{-- {{ url('guardiao/minhaconta/perfil/'. Auth::user()->id) }} --}}
                                 {{ url('guardiao/minhaconta/perfil/'. Auth::user()->id) }}
                                 @endswitch
     
