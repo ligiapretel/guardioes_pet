@@ -59,11 +59,14 @@ class SearchController extends Controller
                         ->join('ngos','ngos.user_id','=','users.id')
                         ->join('pets_pictures','pets_pictures.pet_id','=','pets.id')
                         ->where($filter_all)
+                        ->select('pets.name','pets.description','pets.id','pets_pictures.picture')
                         ->get();
         }else{
             // $pets = Pet::where($filter_all)->get();
             $pets = Pet::join('pets_pictures','pets_pictures.pet_id','=','pets.id')
-                        ->where($filter_all)->get();
+                        ->where($filter_all)
+                        ->select('pets.name','pets.description','pets.id','pets_pictures.picture')
+                        ->get();
         }
 
         // Pegando todas as ongs, somente com status ativo, para exibir na busca recolhida que aparece na view search
