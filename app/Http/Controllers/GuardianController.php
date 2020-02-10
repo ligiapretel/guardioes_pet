@@ -33,16 +33,28 @@ class GuardianController extends Controller
     
     public function viewProfileGuardian(Request $request, $id){
         $profile = Guardian::find($id);
-
+        //aqui está trazendo as informações certas de cada guardião cadastrado.
+        
         $pets = Guardian_has_pets::join('guardians', 'guardians.id', '=', 'guardian_has_pets.guardian_id')
         ->join('pets', 'guardian_has_pets.pet_id', '=', 'pets.id')
         ->join('pets_pictures', 'pets_pictures.pet_id', '=', 'pets.id')
         ->where('guardian_id', '=', $profile->id)
-        ->select('pets.*', 'guardian_has_pets.relation_type_id', 'pets_pictures.picture')->get();
+        ->select('pets.*', 'guardian_has_pets.relation_type_id', 'pets_pictures.picture')
+        ->get();
+
+        dd($pets);
+        // ->join('pets', 'guardian_has_pets.pet_id', '=', 'pets.id')
+        // ->join('pets_pictures', 'pets_pictures.pet_id', '=', 'pets.id')
+        // ->where('guardian_id', '=', $profile->id)
+        // ->select('pets.*', 'guardian_has_pets.relation_type_id', 'pets_pictures.picture')->get();
         //dd($pets);
         
         //o where tá voltando vazio;
-        
+        //O primeiro join retorna todos os pets com todos os guardiões.
+        //depois do primeiro join, se acrescentar o where, retorna as informações de cada guardião, com seus pets.
+        //Se acrescentar o segundo join depois do primeiro, sem o where, aparece todas infos dos guardiões e todas dos pets cadastrados com os guardiões.
+        //se depois de 2 join acrescentar o where, o id=1 retorna com os pets cadastrados, o id=5 tb. O id=2 retorna vazio.
+        //Com 3 joins retorna todas as infos dos guardiões com todas dos pets e a foto do pet.
         
         function adopted($pets){
             foreach($pets as $pet){
