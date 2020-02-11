@@ -6,7 +6,7 @@
 
 @section('content') 
         
-<form action="{{ ('cadastro') }}" method="POST" class="card col-lg-8 col-md-12 col-sm-12 col-12 p-5" id="formOng" enctype='multipart/form-data' data-parsley-validate="">
+<form action="{{ ('cadastro') }}" method="POST" class="card col-lg-8 p-5" id="formOng" enctype='multipart/form-data' data-parsley-validate="">
     {{ csrf_field() }}
     <!--gera token de segurança - verifica se o usuário é autenticado-->
     <!-- essa div é para o título -->
@@ -20,11 +20,10 @@
         </button>
     </div>
     @endif
-
-    <div class="form-group d-flex justify-content p-2">
+    <div class="form-group py-2">
         <h3 class="tituloOng">Cadastro de ONG</h3>
     </div>
-    <!--aqui começa o formulário -->
+    <p class="observacao-roxo">*Campos obrigatórios</p>
     <input class="form-control" type="hidden" name="id" value="{{ isset($ngo['id']) ? $ngo['id'] : '' }}" />
     <!--puxa o id da ong-->
     <div class="form-group row">
@@ -107,7 +106,7 @@
         </div>
         <div class="form-group col-md-6 p-1">
             <label for="stateNgo">Estado*</label>
-            <input type="text" id="uf" class="form-control" name="state" placeholder="Estado">
+            <input type="text" id="uf" class="form-control" name="state" placeholder="UF">
         </div>
         <div class="form-group col-md-6 p-1">
             <label for="siteNgo">Site</label>
@@ -127,16 +126,16 @@
             </select>
         </div>
         <div class="form-group col-md-6 p-1">
-            <label for="bankNameOng">Nome do Banco</label>
-            <input type="text" class="form-control" name="bank_name" placeholder="Nome do Banco(Número)">
+            <label for="bankNameOng">Banco</label>
+            <input type="text" class="form-control" name="bank_name" placeholder="Nome do Banco">
         </div>
         <div class="form-group col-md-6 p-1">
             <label for="bankAgencyNgo">Agência</label>
             <input type="text" class="form-control" name="bank_agency" placeholder="Agência">
         </div>
         <div class="form-group col-md-6 p-1">
-            <label for="bankAccountNgo">Número Conta</label>
-            <input type="text" class="form-control" name="bank_account" placeholder="Número Conta">
+            <label for="bankAccountNgo">Conta</label>
+            <input type="text" class="form-control" name="bank_account" placeholder="Número da Conta">
         </div>
         <div class="form-group form-row col-12">
             <label for="texto">Fale sobre a ONG</label>
@@ -144,8 +143,8 @@
                 placeholder="Descreva o trabalho desenvolvido pela ONG"></textarea>
         </div>
     </div>
-    <div>
-        <button type="submit" class="btn btn-roxo btnOng">Salvar Cadastro</button>
+    <div class="row justify-content-end mr-2">
+        <button type="submit" class="btn-roxo">Salvar Cadastro</button>
     </div>
 </form>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

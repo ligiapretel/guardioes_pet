@@ -29,13 +29,13 @@
 <!--Onde esta localizado os Animais com a ONG-->
 <section class="container-fluid" id="perfilOngGuar_animais"> 
     <div class="row">
-        <h2 class="text-dark font-weight-bold pfOngGuard_titulo">Animais com a ONG</h2>
+        <h2 class="text-dark font-weight-bold pfOngGuard_titulo pl-3">Animais com a ONG</h2>
     </div>
     <div class="row pt-5">
         @foreach ($pets ?? '' as $pet)
-            <div class="col-sm-6 col-lg-4">
+            <div class="col-sm-6 col-lg-4 p-4">
                 <div class="card">
-                    <div id="img-pet-busca">
+                    <div id="img-pet-perfil">
                         <img src="{{asset('storage/public/pets_pictures/'.$pet->picture)}}" class="card-img-top img-fluid"> 
                     </div>
                     <div class="card-body" style="background-color: #E7E2FC">
@@ -51,29 +51,29 @@
 
 <!--Itens que a ONG necessita | Doações-->
 @if(isset($myAds))
-    <section class="bg-light" id="pfong_precisa_cx_principal"> 
+    <section> 
         @foreach($myAds ?? '' as $ad)
-        <div class="mt-5">
+        <div class="mt-5 bg-light" id="pfong_precisa_cx_principal">
             <table class="table">
                 <h4 class="bg-dark m-0 p-2 text-white">Estamos Precisando!</h4>
                 <thead>
                     <tr class="bg-light">
-                        <th scope="col">Medicamentos</th>
-                        <th scope="col">Produtos de Higiene</th>
-                        <th scope="col">Alimentos</th>
-                        <th scope="col">Brinquedos</th>
-                        <th scope="col">Acessórios</th>
-                        <th scope="col">Outros</th>
+                        <th scope="col" class="cinza largura-coluna">Medicamentos</th>
+                        <th scope="col" class="cinza largura-coluna">Higiene</th>
+                        <th scope="col" class="cinza largura-coluna">Alimentos</th>
+                        <th scope="col" class="cinza largura-coluna">Brinquedos</th>
+                        <th scope="col" class="cinza largura-coluna">Acessórios</th>
+                        <th scope="col" class="cinza largura-coluna">Outros</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>{{$ad->medicine}}</td>
-                        <td>{{$ad->hygiene_supply}}</td>
-                        <td>{{$ad->food}}</td>
-                        <td>{{$ad->toys}}</td>
-                        <td>{{$ad->accessories}}</td>
-                        <td>{{$ad->others}}</td>
+                        <td class="cinza largura-coluna">{{$ad->medicine}}</td>
+                        <td class="cinza largura-coluna">{{$ad->hygiene_supply}}</td>
+                        <td class="cinza largura-coluna">{{$ad->food}}</td>
+                        <td class="cinza largura-coluna">{{$ad->toys}}</td>
+                        <td class="cinza largura-coluna">{{$ad->accessories}}</td>
+                        <td class="cinza largura-coluna">{{$ad->others}}</td>
                     </tr>
                 </tbody>
             </table>

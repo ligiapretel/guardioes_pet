@@ -72,7 +72,7 @@ Route::get('/anuncios/deletar/{id?}', "AdController@delete")->middleware('checku
 Route::get('/anuncios/meus-anuncios', "AdController@viewMyAds")->middleware('checkuser');
 
 //Chat´s Routes
-Route::get('/chat', 'ChatController@viewChat');
+Route::get('/chat', 'ChatController@viewChat')->middleware('checkuser');
 
 //Search´s Routes
 Route::get('/busca', "SearchController@search");

@@ -198,6 +198,6 @@
         <script src="/js/parsley.js"    type="text/javascript"></script>
         <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script> 
         <script src="/js/completaCep.js" type="text/javascript"></script>         
-        <!-- <script src="/js/mostrarSenha.js" type="text/javascript"></script>   -->       
+        <!-- <script src="/js/mostrarSenha.js" type="text/javascript"></script>          -->
         <script src="/js/mascaraTel.js" type="text/javascript"></script>         
 @endsection

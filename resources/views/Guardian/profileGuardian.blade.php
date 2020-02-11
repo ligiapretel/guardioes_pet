@@ -127,22 +127,22 @@
                 <h4 class="bg-dark m-0 p-2 text-white">Estou Precisando!</h4>
                 <thead>
                     <tr class="bg-light">
-                        <th scope="col">Medicamentos</th>
-                        <th scope="col">Produtos de Higiene</th>
-                        <th scope="col">Alimentos</th>
-                        <th scope="col">Brinquedos</th>
-                        <th scope="col">Acessórios</th>
-                        <th scope="col">Outros</th>
+                        <th scope="col" class="cinza largura-coluna">Medicamentos</th>
+                        <th scope="col" class="cinza largura-coluna">Higiene</th>
+                        <th scope="col" class="cinza largura-coluna">Alimentos</th>
+                        <th scope="col" class="cinza largura-coluna">Brinquedos</th>
+                        <th scope="col" class="cinza largura-coluna">Acessórios</th>
+                        <th scope="col" class="cinza largura-coluna">Outros</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>{{$ad->medicine}}</td>
-                        <td>{{$ad->hygiene_supply}}</td>
-                        <td>{{$ad->food}}</td>
-                        <td>{{$ad->toys}}</td>
-                        <td>{{$ad->accessories}}</td>
-                        <td>{{$ad->others}}</td>
+                        <td class="cinza largura-coluna">{{$ad->medicine}}</td>
+                        <td class="cinza largura-coluna">{{$ad->hygiene_supply}}</td>
+                        <td class="cinza largura-coluna">{{$ad->food}}</td>
+                        <td class="cinza largura-coluna">{{$ad->toys}}</td>
+                        <td class="cinza largura-coluna">{{$ad->accessories}}</td>
+                        <td class="cinza largura-coluna">{{$ad->others}}</td>
                     </tr>
                 </tbody>
             </table>
