@@ -14,12 +14,14 @@
             @foreach ($guardians as $g)
             <div class="card mb-4 col-11 col-sm-5 col-md-4 col-lg-4 border-none">
                 <a href="guardiao/perfil/{{$g->id}}">
-                <img src="{{asset('storage/guardians_pictures/'.$g->profile_picture)}}" class="card-img-top img-fluid" alt="fotoDePerfilDoGuardiao">
+                <div id="img-pet-busca">
+                    <img src="{{asset('storage/guardians_pictures/'.$g->profile_picture)}}" class="card-img-top img-fluid" alt="fotoDePerfilDoGuardiao">
+                </div>
                 <div class="card-body">
                     <h5 class="card-title">{{$g->name}}</h5>
                     <p class="card-text">{{$g->about_the_guardian}}</p>
                     <div class="d-flex justify-content-center" >
-                        <button type="button" class="btn btn-roxo "><a href="/guardiao/perfil/{{$g->id}}"> Saiba Mais </a></button>
+                        <button type="button" class="btn btn-roxo"><a href="/guardiao/perfil/{{$g->id}}" > Saiba Mais </a></button>
                     </div>
                 </div>
                 </a>

@@ -115,13 +115,21 @@ class GuardianController extends Controller
     
 
 
-    public function viewMyAccountGuardian(Request $request, $id=3){
-        $profile = Guardian::find($id);
-        //dd($profile);
+    public function viewMyAccountGuardian(Request $request, $id){
+        //$guardian = Auth::user()->id;
+        //Devolve os resultados da tabela users. Aqui está retornando id=3 (chaiana).
+        $profile = Auth::user()->id;
+        //Aqui está retornando o perfil com id=3, pois o Auth::user está enviando que o id é 3, porém o Auth::user está retornando o user_id=3, que deveria ser o id=1.
+        $guardianId = Guardian::join('users', 'users.id', '=', 'guardians.user_id')->where('guardians.user_id', '=', $profile)->select('guardians.id', 'guardians.profile_picture', 'guardians.name', 'guardians.about_the_guardian')->first();
+         //where('user_id', '=', $request->user)->get();
+         //where('guardians.id', '=', $guardian->id)->
+        //aqui está retornando um array vazio.
+        //dd($guardianId);
+
         $pets = Guardian_has_pets::join('guardians', 'guardians.id', '=', 'guardian_has_pets.guardian_id')
         ->join('pets', 'guardian_has_pets.pet_id', '=', 'pets.id')
         ->join('pets_pictures', 'pets_pictures.pet_id', '=', 'pets.id')
-        ->where('guardian_id', '=', $profile->id)
+        ->where('guardian_id', '=', $guardianId->id)
         ->select('pets.*', 'guardian_has_pets.relation_type_id', 'pets_pictures.picture')->get();
 
 
@@ -156,9 +164,10 @@ class GuardianController extends Controller
             return false;
         };
         $sponsor = sponsor($pets);
-        if($profile){
+        if($guardianId){
             return view('/Guardian.myAccountGuardian', [
-            'profile'=>$profile, 
+            'profile'=>$profile,
+            'guardianId'=>$guardianId, 
             'pets'=>$pets,
             'adopted'=>$adopted,
             'home'=>$home, 
