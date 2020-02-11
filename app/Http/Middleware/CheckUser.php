@@ -4,6 +4,8 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Auth;
+use Illuminate\Auth\AuthenticationException;
+
 
 class CheckUser
 {
@@ -20,8 +22,10 @@ class CheckUser
 
         if($user){
             return $next($request);
-        } else {
-            return redirect('/login');
         }
+
+        throw new AuthenticationException(
+            'Unauthenticated.', [null], route('login')
+        );
     }
 }
