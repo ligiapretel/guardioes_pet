@@ -20,8 +20,10 @@
                 <div class="card-body">
                     <h5 class="card-title">{{$g->name}}</h5>
                     <p class="card-text">{{$g->about_the_guardian}}</p>
-                    <div class="d-flex justify-content-center" >
-                        <button type="button" class="btn btn-roxo-outline"><a href="/guardiao/perfil/{{$g->id}}" > Saiba Mais </a></button>
+                    <div class="d-flex justify-content-center">
+                    <a href="/guardiao/perfil/{{$g->id}}">
+                        <button type="button" class="btn-roxo-outline">Saiba Mais</button>
+                    </a>
                     </div>
                 </div>
                 </a>

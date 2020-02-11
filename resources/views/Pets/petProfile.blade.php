@@ -14,17 +14,20 @@
 
         <!-- Verificando se o pet foi adotado/apadrinhado/lar temp com sucesso -->
         @if(session("success"))
-            <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <div class="d-flex justify-content-center pt-5">
+            <div class="alert alert-success-acoes alert-dismissible fade show w-75" role="alert">
                 <strong>{{session("success")}}</strong>
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
+        </div>
+            
           
         @endif
         <!-- Verificação de erro no pet foi adotado/apadrinhado/lar temp-->
         @if(session("error"))
-            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <div class="alert alert-danger alert-dismissible fade show col-8" role="alert">
                 <strong>{{session("error")}}</strong>
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
@@ -146,41 +149,12 @@
                 <div id="perfil-anim-cx-img" class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
                     <div class="container">
                         <div class="row">
-                            <div id="perfil-animal-carrossel" class="carousel slide" data-ride="carousel">
-                                <ol class="carousel-indicators">
-                                    <li data-target="#perfil-animal-carrossel" data-slide-to="0"
-                                        class="active rounded-circle"></li>
-                                    <li data-target="#perfil-animal-carrossel" data-slide-to="1" class="rounded-circle">
-                                    </li>
-                                    <li data-target="#perfil-animal-carrossel" data-slide-to="2" class="rounded-circle">
-                                    </li>
-                                </ol>
-
-
-                                <div class="carousel-inner">
-
-
+                            <div id="perfil-animal-carrossel">
                                 @foreach ($pet_pictures as $picture)
-                                                                                                                
-                                    <div class="carousel-item active">
+                                    <div>
                                         <img class="d-block w-100 rounded" src="{{asset('storage/public/pets_pictures/'.$picture->picture)}}">
                                     </div>
-                                    
                                 @endforeach
-
-                                    <!-- <div class="carousel-item active">
-                                        <img class="d-block w-100 rounded" src="/img/perfil_animal_01.jpg"
-                                            alt="First slide">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img class="d-block w-100 rounded" src="/img/perfil_animal_02.jpg"
-                                            alt="Photo by Holly Bartley on Unsplash">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img class="d-block w-100 rounded" src="/img/perfil_animal_03.jpg"
-                                            alt="Photo by Bogdan Todoran on Unsplash">
-                                    </div> -->
-                                </div>
                             </div>
                         </div>
                         <div class="row justify-content-between mt-1"  id="acoes-pet">

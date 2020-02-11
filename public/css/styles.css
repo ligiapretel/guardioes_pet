@@ -71,6 +71,12 @@
     font-style: italic;
 }
 
+.alert-success-acoes{
+    color: #d66203;
+    background-color: #fbd2b0;
+    border-color: #d66203;
+}
+
 .link-roxo{
     color:#6E5DB3;
 }
@@ -741,7 +747,11 @@ footer img {
 
 /* Animais das Ongs e dos Guardiões */
 
-#perfilOngGuar_animais {
+#pets .card-body{
+    background-color: #D6EBE8
+}
+
+#perfilOngGuar_animais{
     padding: 5%;
 }
 

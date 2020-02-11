@@ -65,7 +65,7 @@
 
     <!--Onde estão os animais adotados -->
     @if($adopted == true) 
-    <section class="container-fluid bg-light" id="perfilOngGuar_animais"> 
+    <section class="container-fluid" id="perfilOngGuar_animais"> 
         <div class="row">
             <h2 class="col-lg-12 text-dark font-weight-bold pfOngGuard_titulo">Adotados</h2>
         </div>
@@ -73,20 +73,21 @@
             @foreach($pets as $pet)
             @if($pet->relation_type_id==1)
             <div class="col-sm-6 col-md-4">
-                <div class="card">
-                    <div id="img-pet-busca">
-                        <img src="{{asset('storage/public/pets_pictures/'.$pet->picture)}}" class="card-img-top img-fluid" height="300" width="300">
-                    </div>
-                    <div class="card-body" style="background-color:#D6EBE8">
-                    <h4 class="card-title text-dark font-weight-bold">{{$pet->name}}</h4>
-                        <p class="card-text text-secondary">{{$pet->description}}</p>
-                        <a href="/pet/perfil/{{$pet->id}}" class="btn btn-roxo-outline">Saiba mais</a> 
-                    </div>
+            <div class="card mb-4">
+                <div id="img-pet-busca">
+                    <img src="{{asset('storage/public/pets_pictures/'.$pet->picture)}}" class="card-img-top img-fluid" height="300" width="300">
                 </div>
-            @endif
-            @endforeach
+                <div class="card-body" style="background-color:#D6EBE8">
+                <h4 class="card-title text-dark font-weight-bold">{{$pet->name}}</h4>
+                    <p class="card-text text-secondary">{{$pet->description}}</p>
+                    <a href="/pet/perfil/{{$pet->id}}" class="btn btn-roxo-outline">Saiba mais</a> 
+                </div>
             </div>
         </div>
+            @endif
+            @endforeach
+            
+        </div>           
     </section>
     @endif
 
