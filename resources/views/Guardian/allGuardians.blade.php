@@ -21,7 +21,7 @@
                     <h5 class="card-title">{{$g->name}}</h5>
                     <p class="card-text">{{$g->about_the_guardian}}</p>
                     <div class="d-flex justify-content-center" >
-                        <button type="button" class="btn btn-roxo"><a href="/guardiao/perfil/{{$g->id}}" > Saiba Mais </a></button>
+                        <button type="button" class="btn btn-roxo-outline"><a href="/guardiao/perfil/{{$g->id}}" > Saiba Mais </a></button>
                     </div>
                 </div>
                 </a>

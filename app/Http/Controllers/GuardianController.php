@@ -352,9 +352,9 @@ class GuardianController extends Controller
         $result = $adoption->save();
         
         if($result){
-            return redirect("/pet/perfil/")->with('success', self::MSG_PET_ADOTADO);
+            return redirect("/pet/perfil/{$id}")->with('success', self::MSG_PET_ADOTADO);
         } else {
-            return redirect("/pet/perfil/")->with('error', self::MSG_PET_ADOTADO_ERRO);
+            return redirect("/pet/perfil/{$id}")->with('error', self::MSG_PET_ADOTADO_ERRO);
         }
     }
 
@@ -369,9 +369,9 @@ class GuardianController extends Controller
         $result = $home->save();
 
         if($result){
-            return redirect("/pet/perfil/")->with('success', self::MSG_PET_LAR);
+            return redirect("/pet/perfil/{$id}")->with('success', self::MSG_PET_LAR);
         } else {
-            return redirect("/pet/perfil/")->with('error', self::MSG_PET_LAR_ERRO);
+            return redirect("/pet/perfil/{$id}")->with('error', self::MSG_PET_LAR_ERRO);
         }
     }
 
@@ -388,9 +388,9 @@ class GuardianController extends Controller
         $result = $sponsor->save();
 
         if($result){
-            return redirect("/pet/perfil/")->with('success', self::MSG_PET_APADRINHADO);
+            return redirect("/pet/perfil/{$id}")->with('success', self::MSG_PET_APADRINHADO);
         } else {
-            return redirect("/pet/perfil/")->with('error',self::MSG_PET_APADRINHADO_ERRO);
+            return redirect("/pet/perfil/{$id}")->with('error',self::MSG_PET_APADRINHADO_ERRO);
         }
     }
 }

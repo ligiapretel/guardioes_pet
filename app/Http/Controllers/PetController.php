@@ -161,7 +161,7 @@ class PetController extends Controller
 
     public function viewPetProfile(Request $request, $id=0) {
         $pet = Pet::find($id);
-        $ngo = Ngos::where("user_id", $pet->user_id)->get()[0];
+        $ngo = Ngos::where("user_id", $pet->user_id)->first();
         //dd($ngo);
 
         $pet_pictures = DB::table('pets_pictures')

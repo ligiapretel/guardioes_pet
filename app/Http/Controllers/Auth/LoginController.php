@@ -75,6 +75,7 @@ class LoginController extends Controller
 
         //Passando pelas validações acima, o usuário é redirecionado para a home    
         return redirect()->intended('home');
+        
     }
 
     public function logout(Request $request){   

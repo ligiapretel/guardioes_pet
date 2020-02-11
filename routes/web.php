@@ -49,7 +49,7 @@ Route::get('/parceiros', "SiteController@viewPartners");
 Route::get('/sobre', "SiteController@viewAbout");
 
 //Login´s Route
-Route::get('/login', "Auth\LoginController@viewLogin");
+Route::get('/login', "Auth\LoginController@viewLogin")->name('login');
 Route::post('/login', "Auth\LoginController@login");
 Route::post('/logout', "Auth\LoginController@logout");
 
