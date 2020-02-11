@@ -3,9 +3,10 @@
 namespace App\Http\Middleware;
 
 use Closure;
+use Illuminate\Auth\AuthenticationException;
 use Auth;
 
-class CheckGuardian
+class CheckGuardian 
 {
     /**
      * Handle an incoming request.
@@ -21,9 +22,10 @@ class CheckGuardian
 
         if($user && 3 == $user->user_group_id){
             return $next($request);
-        } else {
-            return redirect('/login');
-        }
-        
+        } 
+
+        throw new AuthenticationException(
+            'Unauthenticated.', [null], route('login')
+        );
     }
 }

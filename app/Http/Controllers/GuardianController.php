@@ -34,16 +34,30 @@ class GuardianController extends Controller
     
     public function viewProfileGuardian(Request $request, $id){
         $profile = Guardian::find($id);
-
+        //dd($profile);
+        //aqui está trazendo as informações certas de cada guardião cadastrado.
+        //$guardian = Guardian::where('user_id', '=', $request->user)->first();
+        
         $pets = Guardian_has_pets::join('guardians', 'guardians.id', '=', 'guardian_has_pets.guardian_id')
         ->join('pets', 'guardian_has_pets.pet_id', '=', 'pets.id')
         ->join('pets_pictures', 'pets_pictures.pet_id', '=', 'pets.id')
         ->where('guardian_id', '=', $profile->id)
-        ->select('pets.*', 'guardian_has_pets.relation_type_id', 'pets_pictures.picture')->get();
+        ->select('pets.*', 'guardian_has_pets.relation_type_id', 'pets_pictures.picture')
+        ->get();
+
+        //dd($pets);
+        // ->join('pets', 'guardian_has_pets.pet_id', '=', 'pets.id')
+        // ->join('pets_pictures', 'pets_pictures.pet_id', '=', 'pets.id')
+        // ->where('guardian_id', '=', $profile->id)
+        // ->select('pets.*', 'guardian_has_pets.relation_type_id', 'pets_pictures.picture')->get();
         //dd($pets);
         
         //o where tá voltando vazio;
-        
+        //O primeiro join retorna todos os pets com todos os guardiões.
+        //depois do primeiro join, se acrescentar o where, retorna as informações de cada guardião, com seus pets.
+        //Se acrescentar o segundo join depois do primeiro, sem o where, aparece todas infos dos guardiões e todas dos pets cadastrados com os guardiões.
+        //se depois de 2 join acrescentar o where, o id=1 retorna com os pets cadastrados, o id=5 tb. O id=2 retorna vazio.
+        //Com 3 joins retorna todas as infos dos guardiões com todas dos pets e a foto do pet.
         
         function adopted($pets){
             foreach($pets as $pet){
@@ -101,13 +115,21 @@ class GuardianController extends Controller
     
 
 
-    public function viewMyAccountGuardian(Request $request, $id=3){
-        $profile = Guardian::find($id);
+    public function viewMyAccountGuardian(Request $request, $id){
+        //$guardian = Auth::user()->id;
+        //Devolve os resultados da tabela users. Aqui está retornando id=3 (chaiana).
+        $profile = Auth::user()->id;
+        //Aqui está retornando o perfil com id=3, pois o Auth::user está enviando que o id é 3, porém o Auth::user está retornando o user_id=3, que deveria ser o id=1.
+        $guardianId = Guardian::join('users', 'users.id', '=', 'guardians.user_id')->where('guardians.user_id', '=', $profile)->select('guardians.id', 'guardians.profile_picture', 'guardians.name', 'guardians.about_the_guardian')->first();
+         //where('user_id', '=', $request->user)->get();
+         //where('guardians.id', '=', $guardian->id)->
+        //aqui está retornando um array vazio.
+        //dd($guardianId);
 
         $pets = Guardian_has_pets::join('guardians', 'guardians.id', '=', 'guardian_has_pets.guardian_id')
         ->join('pets', 'guardian_has_pets.pet_id', '=', 'pets.id')
         ->join('pets_pictures', 'pets_pictures.pet_id', '=', 'pets.id')
-        ->where('guardian_id', '=', $profile->id)
+        ->where('guardian_id', '=', $guardianId->id)
         ->select('pets.*', 'guardian_has_pets.relation_type_id', 'pets_pictures.picture')->get();
 
 
@@ -142,9 +164,10 @@ class GuardianController extends Controller
             return false;
         };
         $sponsor = sponsor($pets);
-        if($profile){
+        if($guardianId){
             return view('/Guardian.myAccountGuardian', [
-            'profile'=>$profile, 
+            'profile'=>$profile,
+            'guardianId'=>$guardianId, 
             'pets'=>$pets,
             'adopted'=>$adopted,
             'home'=>$home, 
@@ -329,9 +352,9 @@ class GuardianController extends Controller
         $result = $adoption->save();
         
         if($result){
-            return redirect("/pet/perfil/")->with('success', self::MSG_PET_ADOTADO);
+            return redirect("/pet/perfil/{$id}")->with('success', self::MSG_PET_ADOTADO);
         } else {
-            return redirect("/pet/perfil/")->with('error', self::MSG_PET_ADOTADO_ERRO);
+            return redirect("/pet/perfil/{$id}")->with('error', self::MSG_PET_ADOTADO_ERRO);
         }
     }
 
@@ -346,9 +369,9 @@ class GuardianController extends Controller
         $result = $home->save();
 
         if($result){
-            return redirect("/pet/perfil/")->with('success', self::MSG_PET_LAR);
+            return redirect("/pet/perfil/{$id}")->with('success', self::MSG_PET_LAR);
         } else {
-            return redirect("/pet/perfil/")->with('error', self::MSG_PET_LAR_ERRO);
+            return redirect("/pet/perfil/{$id}")->with('error', self::MSG_PET_LAR_ERRO);
         }
     }
 
@@ -365,9 +388,9 @@ class GuardianController extends Controller
         $result = $sponsor->save();
 
         if($result){
-            return redirect("/pet/perfil/")->with('success', self::MSG_PET_APADRINHADO);
+            return redirect("/pet/perfil/{$id}")->with('success', self::MSG_PET_APADRINHADO);
         } else {
-            return redirect("/pet/perfil/")->with('error',self::MSG_PET_APADRINHADO_ERRO);
+            return redirect("/pet/perfil/{$id}")->with('error',self::MSG_PET_APADRINHADO_ERRO);
         }
     }
 }
