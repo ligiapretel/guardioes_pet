@@ -28,7 +28,7 @@
                 </div>
                     <div class="card-body">
                         <h5 class="card-title">{{$pet->name}}</h5>
-                        <p class="card-text">{{$pet->description}}</p>
+                        <p class="card-text pet-description">{{$pet->description}}</p>
                         <div class="d-flex justify-content-center">
                             <button type="button" class="btn-roxo-outline">Veja mais</button>
                         </div>
