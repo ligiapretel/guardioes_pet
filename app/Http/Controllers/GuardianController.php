@@ -238,7 +238,7 @@ class GuardianController extends Controller
             $result = $newGuardian->save();
        
            if($result){
-                return redirect("/guardiao/cadastrar")->with('success', self::MSG_GUARDIAO_CADASTRADO);
+                return redirect("/login")->with('success', self::MSG_GUARDIAO_CADASTRADO);
             } else {
                 return redirect("/guardiao/cadastrar")->with('error', self::MSG_GUARDIAO_ERRO);
             }
