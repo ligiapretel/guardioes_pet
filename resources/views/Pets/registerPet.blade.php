@@ -38,7 +38,7 @@
                 <div class="form-group row">
                     <label for="nomeAnimal" class="col-sm-4 col-form-label">Nome do Animal</label>
                     <div class="col-sm-8">
-                        <input type="text" class="form-control" name="name" id="nomeAnimal" placeholder="Nome do Pet">
+                        <input type="text" class="form-control" name="name" id="nomeAnimal" placeholder="Nome do Pet" required>
                     </div>
                 </div>
 
@@ -83,19 +83,19 @@
             <div class="form-group row">
                 <label for="coal_type" class="col-sm-4 col-form-label">Pelagem</label>
                 <div class="col-sm-8">
-                    <input type="text" class="form-control" name="coal_type" id="coal_type" placeholder="Cor e tipo de pêlo">
+                    <input type="text" class="form-control" name="coal_type" id="coal_type" placeholder="Cor e tipo de pêlo" required>
                 </div>
             </div>
             <div class="form-group row">
                 <label for="raca" class="col-sm-4 col-form-label">Raça</label>
                 <div class="col-sm-8">
-                    <input type="text" class="form-control" name="breed" id="breed" placeholder="Descrição da raça">
+                    <input type="text" class="form-control" name="breed" id="breed" placeholder="Descrição da raça" required>
                 </div>
             </div>
             <div class="form-group row">
                 <label for="fotoAnimal" class="col-sm-4 col-form-label">Foto do Animal</label>
                 <div class="col-sm-8">
-                    <input type="file" class="form-control-file" id="picture" name="picture">
+                    <input type="file" class="form-control-file" id="picture" name="picture" required>
                 </div>
 
             </div>
@@ -117,7 +117,7 @@
             <div class="form-group row">
                 <label for="age" class="col-sm-4 col-form-label">Idade do animal</label>
                 <div class="col-sm-8">
-                    <input type="number" class="form-control" name="age">
+                    <input type="number" class="form-control" name="age" required>
                 </div>
             </div>      
 
@@ -203,7 +203,7 @@
                 <div class="form-group row p-3">
                     <label class="col-sm-4 col-form-label  tituloCaracteristicasAnimal" for="description">Descreva o pet:</label>
                     <textarea class="form-control" id="descricao" name="description" cols="30" rows="10"
-                        placeholder="Fale mais sobre o animal: qual a sua história, suas características físicas e comportamentais, o tipo de lar que mais se adequaria, do que ele(a) gosta, etc."></textarea>
+                        placeholder="Fale mais sobre o animal: qual a sua história, suas características físicas e comportamentais, o tipo de lar que mais se adequaria, do que ele(a) gosta, etc." required></textarea>
                 </div>
                 <div class="botaoLimparECadastro">
                     <button type="reset" class="btn-roxo botaoAnimal">Limpar dados</button>
