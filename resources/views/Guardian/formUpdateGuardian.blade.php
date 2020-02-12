@@ -26,11 +26,11 @@
 </div>
 @endif
 
-    @if(isset($guardian))
+    @if(isset($guardianId))
         <form action="/guardiao/editar" method="POST" enctype="multipart/form-data" class="card col-lg-8 col-md-12 col-sm-12 col-12 p-5" id="formGuardiao" style="width: 50rem">
             @csrf
             <!-- input hidden com o id do admin em Users -->
-            <input type="text" name="idGuardian" hidden value="{{ $guardian->id }}">
+            <input type="text" name="idGuardian" hidden value="{{ $guardianId->id }}">
 
             <!-- essa div é para o título -->
             <div class="form-group d-flex justify-content p-2">
@@ -40,43 +40,43 @@
             <div class="form-group row">
                 <label for="name" class="col-sm-4 col-form-label">Nome </label>
                 <div class="col-sm-8">
-                    <input name="name" type="text" class="form-control" id="nomeGuardiao" value="{{$guardian->name}}" placeholder="Nome completo">
+                    <input name="name" type="text" class="form-control" id="nomeGuardiao" value="{{$guardianId->name}}" placeholder="Nome completo">
                 </div>
             </div>
             <div class="form-group row">
                 <label for="nickname" class="col-sm-4 col-form-label">Apelido </label>
                 <div class="col-sm-8">
-                    <input name="nickname" type="text" class="form-control" id="apelido" value="{{$guardian->nickname}}" placeholder="Como nome irá aparecer para outros usuários">
+                    <input name="nickname" type="text" class="form-control" id="apelido" value="{{$guardianId->nickname}}" placeholder="Como nome irá aparecer para outros usuários">
                 </div>
             </div>
             <div class="form-group row">
                 <label for="date_of_birth" class="col-sm-4 col-form-label">Data de Nascimento </label>
                 <div class="col-sm-8">
-                    <input name="date_of_birth" type="date" class="form-control" id="data" value="{{$guardian->date_of_birth}}">
+                    <input name="date_of_birth" type="date" class="form-control" id="data" value="{{$guardianId->date_of_birth}}">
                 </div>
             </div>
             <div class="form-group row">
                 <label for="email" class="col-sm-4 col-form-label">E-mail</label>
                 <div class="col-sm-8">
-                    <input name="email" type="email" class="form-control" id="emailGuardiao" value="{{$guardian->user->email}}" placeholder="seunome@email.com">
+                    <input name="email" type="email" class="form-control" id="emailGuardiao" value="{{$guardianId->email}}" placeholder="seunome@email.com">
                 </div>
             </div>
             <div class="form-group row">
                 <label for="phone_number" class="col-sm-4 col-form-label">Telefone </label>
                 <div class="col-sm-8">
-                    <input name="phone_number" type="text" class="form-control" id="telefone" value="{{$guardian->phone_number}}" placeholder="(xx) xxxxx-xxxx">
+                    <input name="phone_number" type="text" class="form-control" id="telefone" value="{{$guardianId->phone_number}}" placeholder="(xx) xxxxx-xxxx">
                 </div>
             </div>
             <div class="form-group row">
                 <label for="profile_picture" class="col-sm-4 col-form-label">Foto de Perfil</label>
                 <div class="col-sm-8">
-                    <input name="profile_picture" type="file" class="form-control-file" id="fotoGuardiao" value="{{$guardian->profile_picture}}">
+                    <input name="profile_picture" type="file" class="form-control-file" id="fotoGuardiao" value="{{$guardianId->profile_picture}}">
                 </div>
             </div>
             <div class="form-group row">
                 <label for="senhaGuardiao" class="col-sm-4 col-form-label">Defina uma senha</label>
                 <div class="col-sm-8">
-                    <input name="senhaGuardiao" type="password" class="form-control" id="senhaGuardiao" value="{{$guardian->senhaGuardiao}}" placeholder="Senha mínimo 6 caracteres">
+                    <input name="senhaGuardiao" type="password" class="form-control" id="senhaGuardiao" value="{{$guardianId->senhaGuardiao}}" placeholder="Senha mínimo 6 caracteres">
                 </div>
             </div>
             <div class="form-group row">
@@ -88,36 +88,36 @@
             <div class="form-group row">
                 <label for="zip_code" class="col-sm-4 col-form-label">CEP</label>
                 <div class="col-sm-8">
-                    <input name="zip_code" type="number" class="form-control" id="cep" value="{{$guardian->zip_code}}" placeholder="CEP">
+                    <input name="zip_code" type="number" class="form-control" id="cep" value="{{$guardianId->zip_code}}" placeholder="CEP">
                 </div>
             </div>
             <div class="form-group row">
                 <label for="address" class="col-sm-4 col-form-label">Endereço</label>
                 <div class="col-sm-8">
-                    <input name="address" type="text" class="form-control" id="enderecoGuardiao" value="{{$guardian->address}}"  placeholder="Rua/Avenida/Logradouro">
+                    <input name="address" type="text" class="form-control" id="enderecoGuardiao" value="{{$guardianId->address}}"  placeholder="Rua/Avenida/Logradouro">
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6 p-1">
                     <label for="number">Número</label>
-                    <input name="number" type="number" class="form-control" id="numeroGuardiao" value="{{$guardian->number}}" placeholder="No.">
+                    <input name="number" type="number" class="form-control" id="numeroGuardiao" value="{{$guardianId->number}}" placeholder="No.">
                 </div>
                 <div class="form-group col-md-6 p-1">
                     <label for="complement">Complemento</label>
-                    <input name="complement" type="number" class="form-control" id="complementoGuardiao" value="{{$guardian->complement}}" placeholder="Ex.: Bloco B">
+                    <input name="complement" type="number" class="form-control" id="complementoGuardiao" value="{{$guardianId->complement}}" placeholder="Ex.: Bloco B">
                 </div>
                 
                 <div class="form-group col-md-6 p-1">
                     <label for="neighborhood">Bairro</label>
-                    <input name="neighborhood" type="text" class="form-control" id="bairroGuardiao" value="{{$guardian->neighborhood}}" placeholder="Bairro">
+                    <input name="neighborhood" type="text" class="form-control" id="bairroGuardiao" value="{{$guardianId->neighborhood}}" placeholder="Bairro">
                 </div>
                 <div class="form-group col-md-6 p-1">
                     <label for="city">Cidade</label>
-                    <input name="city" type="text" class="form-control" id="cidadeGuardiao" value="{{$guardian->city}}" placeholder="Cidade">
+                    <input name="city" type="text" class="form-control" id="cidadeGuardiao" value="{{$guardianId->city}}" placeholder="Cidade">
                 </div>
                 <div class="form-group col-md-6 p-1">
                     <label for="state">Estado</label>
-                    <select name="state" class="form-control" id="estadoGuardiao" value="{{$guardian->state}}">
+                    <select name="state" class="form-control" id="estadoGuardiao" value="{{$guardianId->state}}">
                         <option>Selecione</option>
                         <option>Acre</option>
                         <option>Alagoas</option>
@@ -151,7 +151,7 @@
             </div>
             <div class="form-group row p-3">
                 <label for="about_the_guardian">Fale sobre você</label>
-                <textarea name="about_the_guardian" class="form-control" id="textoGuardiao" cols="30" rows="10">{{$guardian->about_the_guardian}}</textarea>
+                <textarea name="about_the_guardian" class="form-control" id="textoGuardiao" cols="30" rows="10">{{$guardianId->about_the_guardian}}</textarea>
             </div>
             <div>
             <button type="submit" class="btn btn-roxo btnGuardiao">Salvar atualização</button>
@@ -164,7 +164,7 @@
         <h3>Você não passou um id ou o guardião não existe</h3>
     @endif
 
-        {{-- Teste de erro --}}
+        {{-- Teste de erro
         <div class="row justify-content-center ml-5">
             <div class="col-md-12">
                 @if(isset($result))
@@ -175,6 +175,6 @@
                     @endif
                 @endif
             </div>
-        </div>
+        </div> --}}
 
 @endsection
