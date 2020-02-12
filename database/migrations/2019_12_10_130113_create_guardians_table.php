@@ -18,7 +18,7 @@ class CreateGuardiansTable extends Migration
             $table->string('name', 300);   
             $table->string('nickname', 300);
             $table->date('date_of_birth'); 
-            $table->string('phone_number', 14)->nullable();    
+            $table->string('phone_number', 15)->nullable();    
             $table->string('profile_picture', 300);   
             $table->string('address', 300);   
             $table->string('number', 14);    
