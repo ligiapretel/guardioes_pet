@@ -174,15 +174,6 @@
         <button type="submit" class="btn-roxo">Salvar Edição</button>
     </div>
 </form>
-
-<!-- <form method='POST' action='{{ url("/delete") }}'>
-            @csrf
-            <input type='hidden' name='id' value=''>
-            <button type='submit' onclick='if(!confirm("Deseja realmente excluir seu perfil?")) return false; '>
-                <i class="far fa-trash-alt"></i>
-            </button>
-        </form> -->
-
           <!-- Mostra os erros de validação na view-->
           @if (count($errors) > 0)
                 <div class="alert alert-danger">

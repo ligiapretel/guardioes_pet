@@ -1,4 +1,4 @@
-@extends('layouts.templateGuardioes')
+@extends('layouts.templateMenuLateral')
 
 @section('title')
     Guardiões Pet | Cadastro Guardião
@@ -33,8 +33,8 @@
             <input type="text" name="idGuardian" hidden value="{{ $guardianId->id }}">
 
             <!-- essa div é para o título -->
-            <div class="form-group d-flex justify-content p-2">
-                <h3 class="tituloGuardiao">Cadastro de Guardião</h3>
+            <div class="form-group">
+                <h3 class="tituloGuardiao">Meu perfil | Editar dados</h3>
             </div>
             <!--aqui começa o formulário -->
             <div class="form-group row">
@@ -91,12 +91,6 @@
                     <input name="zip_code" type="number" class="form-control" id="cep" value="{{$guardianId->zip_code}}" placeholder="CEP">
                 </div>
             </div>
-            <div class="form-group row">
-                <label for="address" class="col-sm-4 col-form-label">Endereço</label>
-                <div class="col-sm-8">
-                    <input name="address" type="text" class="form-control" id="enderecoGuardiao" value="{{$guardianId->address}}"  placeholder="Rua/Avenida/Logradouro">
-                </div>
-            </div>
             <div class="form-row">
                 <div class="form-group col-md-6 p-1">
                     <label for="number">Número</label>
@@ -106,7 +100,10 @@
                     <label for="complement">Complemento</label>
                     <input name="complement" type="number" class="form-control" id="complementoGuardiao" value="{{$guardianId->complement}}" placeholder="Ex.: Bloco B">
                 </div>
-                
+                <div class="form-group col-md-6 p-1">
+                    <label for="address">Endereço</label>
+                    <input name="address" type="text" class="form-control" id="enderecoGuardiao" value="{{$guardianId->address}}"  placeholder="Rua/Avenida/Logradouro">
+                </div>
                 <div class="form-group col-md-6 p-1">
                     <label for="neighborhood">Bairro</label>
                     <input name="neighborhood" type="text" class="form-control" id="bairroGuardiao" value="{{$guardianId->neighborhood}}" placeholder="Bairro">
