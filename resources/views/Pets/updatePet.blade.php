@@ -26,14 +26,14 @@
                 </div>
 
                 <div class="form-group row">
-                    <label class="col-sm-4 col-form-label" for="tipo">Tipo de Animal</label>
+                    <label class="col-sm-4 col-form-label" for="type">Tipo de Animal</label>
                     <div class="col-sm-2">
-                        <input class="form-check-input" type="radio" name="type" id="type" value="cachorro"  
-                        {{ $pet->type == 'cachorro' ? 'checked' : '' }} >
+                        <input class="form-check-input" type="radio" name="type" id="type" value="Cachorro"  
+                        {{ $pet->type == 'Cachorro' ? 'checked' : '' }} >
                         <label class="form-check-label" for="type">Cachorro</label>
                     </div>
                     <div class="col-sm-2">
-                        <input class="form-check-input" type="radio" name="type" id="type" value="gato" {{ $pet->type == 'gato' ? 'checked' : '' }}>
+                        <input class="form-check-input" type="radio" name="type" id="type" value="Gato" {{ $pet->type == 'Gato' ? 'checked' : '' }}>
                         <label class="form-check-label" for="type">Gato</label>
                     </div>
                 </div>

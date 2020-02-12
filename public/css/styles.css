@@ -692,6 +692,12 @@ footer img {
     overflow: hidden;
 }
 
+.pet-description {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
 /* PERFIL DAS ONGS E GUARDIÕES */
 
 /*Informacoes*/
