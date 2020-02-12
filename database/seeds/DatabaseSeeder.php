@@ -21,6 +21,8 @@ class DatabaseSeeder extends Seeder
 
         $this->call(NgoTableSeeder::class);
 
+        $this->call(AdministratorsTableSeeder::class);
+
         DB::statement('set foreign_key_checks = 1');
     }
 }

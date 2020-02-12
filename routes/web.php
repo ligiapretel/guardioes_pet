@@ -82,7 +82,7 @@ Route::get('/cadastre-se', "RegisterController@viewRegister");
 
 //Admin´s Routes
 Route::group(['prefix'=>'admin'], function(){
-    Route::get('/cadastro', "AdminController@createAdmin")->middleware('checkadmin');
+    Route::get('/cadastro', "AdminController@createAdmin");
     Route::post('/cadastro', "AdminController@createAdmin");
     Route::get('/atualizar/{id?}', "AdminController@updateAdmin")->middleware('checkadmin');
     Route::post('/atualizar', "AdminController@updateAdmin"); 

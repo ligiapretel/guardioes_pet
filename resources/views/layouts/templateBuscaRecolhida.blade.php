@@ -71,7 +71,7 @@
 
                         <a class="dropdown-item" href=@switch (Auth::user()->user_group_id)
                             @case(1)
-                            'admin/atualizar'
+                            'admin'
                             @case (2)
                             {{ url('ong/edita/'. Auth::user()->id) }}
                             @case(3)
