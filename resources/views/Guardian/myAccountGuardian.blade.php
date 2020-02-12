@@ -6,15 +6,15 @@
 
 @section('content') 
 
-<section  class="container-fluid col-8 mb-3" id="pfG_cx_info_principal"> 
+<section  class="container-fluid col-8 mb-3" id="box_minha_conta"> 
     @if(isset($guardianId))
         <div class="row">
-            <div class="col-md-6 d-flex justify-content-center">
-                <img id="perfilGua_imagem" class="rounded-circle" src="{{asset('storage/guardians_pictures/'.$guardianId->profile_picture)}}">
+            <div class="round-container col-md-4">
+                <img src="{{asset('storage/guardians_pictures/'.$guardianId->profile_picture)}}">
 {{-- Pra imagem aparecer, precisa dar o comando php artisan storage:link no bash --}}
             </div>
 
-            <div class="col-md-6"> 
+            <div class="col-md-7"> 
                 <h1 class="pfOngGuard_titulo text-dark font-weight-bolder">
                     {{-- Essa função if verifica se existe o campo e se o mesmo está preenchido, estando ele imprime o apelido. É a mesma forma de escrever com o ?? ''. --}}
                     {{-- if(isset($guardian[`nickname`] && $guardian[`nickname`]) $guardian[`nickname`] --}}
@@ -40,12 +40,11 @@
     @if($sponsor == true) 
     <section id="pets" class="py-2 px-5"> 
         <div class="row px-2">
-            <h2 class="text-dark font-weight-bold pfOngGuard_titulo">Apadrinhados</h2>
+            <h2 class="text-dark font-weight-bold pl-3 pfOngGuard_titulo">Apadrinhados</h2>
         </div>
         <div class="row px-2">
             @foreach($pets as $pet)
             @if($pet->relation_type_id==3)
-            <!-- <div class="col-sm-6 col-md-4"> -->
             <div class="card mb-4 col-11 col-sm-5 col-md-4 col-lg-3 border-none">
                 <div id="img-pet-busca">
                     <img src="{{asset('storage/public/pets_pictures/'.$pet->picture)}}" class="card-img-top img-fluid">
@@ -66,12 +65,11 @@
     @if($adopted == true) 
     <section id="pets" class="py-2 px-5"> 
         <div class="row px-2">
-            <h2 class="text-dark font-weight-bold pfOngGuard_titulo">Adotados</h2>
+            <h2 class="text-dark font-weight-bold pl-3 pfOngGuard_titulo">Adotados</h2>
         </div>
         <div class="row px-2">
             @foreach($pets as $pet)
             @if($pet->relation_type_id==1)
-            <!-- <div class="col-sm-6 col-md-4"> -->
             <div class="card mb-4 col-11 col-sm-5 col-md-4 col-lg-3 border-none">
                 <div id="img-pet-busca">
                     <img src="{{asset('storage/public/pets_pictures/'.$pet->picture)}}" class="card-img-top img-fluid">
@@ -92,13 +90,12 @@
     @if($home == true) 
     <section id="pets" class="py-2 px-5"> 
         <div class="row px-2">
-            <h2 class="text-dark font-weight-bold pfOngGuard_titulo">Lar Temporário</h2>
+            <h2 class="text-dark font-weight-bold pl-3 pfOngGuard_titulo">Lar Temporário</h2>
         </div>
         <div class="row px-2">
             @foreach($pets as $pet)
             @if($pet->relation_type_id==2)
-            <!-- <div class="col-sm-6 col-md-4"> -->
-            <div class="card m-4 col-11 col-sm-5 col-md-4 col-lg-3 border-none">
+            <div class="card mb-4 col-11 col-sm-5 col-md-4 col-lg-3 border-none">
                 <div id="img-pet-busca">
                     <img src="{{asset('storage/public/pets_pictures/'.$pet->picture)}}" class="card-img-top img-fluid">
                 </div>

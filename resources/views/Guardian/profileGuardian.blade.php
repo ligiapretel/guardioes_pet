@@ -6,15 +6,15 @@
 
 @section('content') 
 
-<section  class="container-fluid" id="pfG_cx_info_principal"> 
+<section id="pfG_cx_info_principal"> 
     @if(isset($profile))
         <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-12 col-12 d-flex justify-content-center">
-                <img id="perfilGua_imagem" class="rounded-circle" height="300" width="300" src="{{asset('storage/guardians_pictures/'.$profile->profile_picture)}}">
+            <div class="round-container">
+                <img src="{{asset('storage/guardians_pictures/'.$profile->profile_picture)}}">
 {{-- Pra imagem aparecer, precisa dar o comando php artisan storage:link no bash --}}
             </div>
 
-            <div class="col-lg-6 col-md-6 col-sm-12 col-12"> 
+            <div class="col-md-6"> 
                 <h1 class="pfOngGuard_titulo text-dark font-weight-bolder">
                     {{-- Essa função if verifica se existe o campo e se o mesmo está preenchido, estando ele imprime o apelido. É a mesma forma de escrever com o ?? ''. --}}
                     {{-- if(isset($guardian[`nickname`] && $guardian[`nickname`]) $guardian[`nickname`] --}}
@@ -121,7 +121,7 @@
     @endif
 
 <!--Itens que o Guardião necessita | Doações-->
-    @if(isset($myAds))
+    @if(isset($myAds[0]))
     <section class="bg-light" id="pfong_precisa_cx_principal"> 
         @foreach($myAds ?? '' as $ad)
         <div class="mt-5">

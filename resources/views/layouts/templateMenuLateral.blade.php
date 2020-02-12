@@ -118,76 +118,79 @@
     </nav>
 </div>
 </header>
-        <!--FINAL DO HEADER-->
+<!--FINAL DO HEADER-->
 
-        <!--MENU LATERAL-->
-        <main class="row d-flex">
-            <section class="col-lg-3 d-flex">
-                <!--menu lateral na esquerda-->
-                <aside id="menu-ong" class="col-lg-3 col-md-12 col-sm-10 col-xs-8 p-4">
-                    <a
-                        href="#menu-principal"
-                        data-toggle="collapse"
-                        aria-expanded="false"
-                        class="navbar-menu-principal collapsed col-12 dropdown-toggle">
-                        <img
-                            src="/img/user-icon.png"
-                            class="ml-3"
-                            alt="icone de usuário"
-                            id="user-icon">
-                    </a>
-
-                    <div
-                        class="card navbar-menu-itens collapse"
-                        style="width: 20rem;"
-                        id="menu-principal">
-                        @if(isset($profile)) @if($profile)
-                        <a class="nav-link menu-ong active mt-1" href="{{ url('guardiao/editar/'. Auth::user()->id) }}">Meu Perfil</a>
-                        <!--depois q fizerem o login passar a session e o -> id-->
-                        <a class="nav-link menu-ong" href="/anuncios/meus-anuncios">Anúncios Cadastrados</a>
-                        <a class="nav-link menu-ong" href="/anuncios/cadastro">Cadastrar Novos Anúncios</a>
+<!--MENU LATERAL-->
+<main class="row d-flex">
+    <section class="col-lg-3 d-flex">
+        <aside id="menu-ong" class="col-lg-3 col-md-12 col-sm-10 col-xs-8 p-4">
+            <a
+                href="#menu-principal"
+                data-toggle="collapse"
+                aria-expanded="false"
+                class="navbar-menu-principal collapsed col-12 dropdown-toggle">
+                <img
+                    src="/img/user-icon.png"
+                    class="ml-3"
+                    alt="icone de usuário"
+                    id="user-icon">
+            </a>
+            @if(isset($profile)) @if($profile)
+            <div class="card navbar-menu-itens collapse mt-5" style="width: 20rem;" id="menu-principal">
+                <a class="nav-link menu-ong active" href="{{ url('guardiao/editar/'. Auth::user()->id) }}">Atualizar Perfil</a>
+                <a class="nav-link menu-ong" href="/anuncios/meus-anuncios">Anúncios Cadastrados</a>
+                <a class="nav-link menu-ong" href="/anuncios/cadastro">Cadastrar Novos Anúncios</a>
+                <a class="nav-link menu-ong" href="/chat">Mensagens</a>
+                <a class="nav-link menu-ong-sair" href="/logout" onclick="event.preventDefault();
+                                        document.getElementById('logout-form').submit();">
+                    {{ __('Sair') }}</a>
+                <form
+                    method='post'
+                    action='{{ url("guardiao/deletar") }}'
+                    onsubmit='if(!confirm("Tem certeza que gostaria de excluir sua conta?")) return false;'>
+                    <!--true = deleta false = cancela -->
+                    @csrf
+                    <input type='hidden' value='{{ 2 }}' name='id'>
+                    <button class="nav-link menu-ong-sair border-none">Deletar Conta</button>
+                </form>
+            </div>
+            @endif @else
+            <div class="card navbar-menu-itens collapse" style="width: 20rem;" id="menu-principal">
+                <img
+                    id="perfil-ong"
+                    class="ml-4 pt-5"
+                    src="{{Auth::user()->getPicture()}}"
+                    alt="logo"/>
+                <div class="card-body" style="width: 20rem">
+                    <nav class="nav flex-column bg-light">
+                        <a
+                            class="nav-link menu-ong active"
+                            href="{{ url('ong/edita/'. Auth::user()->id) }}">Meu perfil</a>
+                        <a class="nav-link menu-ong" href="/ong/minhaconta/pets">Pets cadastrados</a>
+                        <a class="nav-link menu-ong" href="/pet/cadastro">Cadastrar novos pets</a>
+                        <a class="nav-link menu-ong" href="/anuncios/meus-anuncios">Anúncios cadastrados</a>
+                        <a class="nav-link menu-ong" href="/anuncios/cadastro">Cadastrar novo anúncio</a>
                         <a class="nav-link menu-ong" href="/chat">Mensagens</a>
-                        <a class="nav-link menu-ong-sair" href="/logout">Sair</a>
-                        <a class="nav-link menu-ong-sair" href="{{ url('guardiao/deletar/'. Auth::user()->id) }}">Deletar Conta</a>
-                        <!--depois q fizerem o login passar a session e o -> id-->
-                        @endif @else
-                        <img
-                            id="perfil-ong"
-                            class="ml-4 pt-5"
-                            src="{{Auth::user()->getPicture()}}"
-                            alt="logo"/>
-                        <div class="card-body" style="width: 20rem">
-                            <nav class="nav flex-column bg-light">
-                                <a
-                                    class="nav-link menu-ong active"
-                                    href="{{ url('ong/edita/'. Auth::user()->id) }}">Meu perfil</a>
-                                <!--depois q fizerem o login passar a session e o -> id-->
-                                <a class="nav-link menu-ong" href="/ong/minhaconta/pets">Pets cadastrados</a>
-                                <a class="nav-link menu-ong" href="/pet/cadastro">Cadastrar novos pets</a>
-                                <a class="nav-link menu-ong" href="/anuncios/meus-anuncios">Anúncios cadastrados</a>
-                                <a class="nav-link menu-ong" href="/anuncios/cadastro">Cadastrar novo anúncio</a>
-                                <a class="nav-link menu-ong" href="/chat">Mensagens</a>
-                                <a class="nav-link menu-ong-sair" href="/logout" onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                    {{ __('Sair') }}</a>
-                                <form
-                                    method='post'
-                                    action='{{ url("ong/deleta") }}'
-                                    onsubmit='if(!confirm("Tem certeza que gostaria de excluir sua conta?")) return false;'>
-                                    <!--true = deleta false = cancela -->
-                                    @csrf
-                                    <input type='hidden' value='{{ 2 }}' name='id'>
-                                    <button class="nav-link menu-ong-sair border-none">Deletar Conta</button>
-                                </form>
-
-                            </nav>
-                        </div>
-                        @endif
-                    </div>
-                </aside>
-            </section>
-            @yield('content')
-        </main>
+                        <a class="nav-link menu-ong-sair" href="/logout" onclick="event.preventDefault();
+                                                document.getElementById('logout-form').submit();">
+                            {{ __('Sair') }}</a>
+                        <form
+                            method='post'
+                            action='{{ url("ong/deleta") }}'
+                            onsubmit='if(!confirm("Tem certeza que gostaria de excluir sua conta?")) return false;'>
+                            <!--true = deleta false = cancela -->
+                            @csrf
+                            <input type='hidden' value='{{ 2 }}' name='id'>
+                            <button class="nav-link menu-ong-sair border-none">Deletar Conta</button>
+                        </form>
+                    </nav>
+                </div>
+                @endif
+            </div>
+        </aside>
+    </section>
+    @yield('content')
+</main>
 
         <!--FOOTER-->
         <footer>
