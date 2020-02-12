@@ -29,6 +29,8 @@ class GuardianController extends Controller
     const MSG_PET_APADRINHADO_ERRO = "Ops! Algo deu errado ao apadrinhar o pet. =(";
     const MSG_GUARDIAO_CADASTRADO = "Cadastro realizado com sucesso!";
     const MSG_GUARDIAO_ERRO = "Não foi possível realizar o seu cadastro.";
+    const MSG_GUARDIAO_EDITADO = "Perfil editado com sucesso";
+    const MSG_GUARDIAO_ERRO_EDITADO = "Não foi possível editar seu perfil =(";
 
 
     
@@ -164,6 +166,7 @@ class GuardianController extends Controller
             return false;
         };
         $sponsor = sponsor($pets);
+
         if($guardianId){
             return view('/Guardian.myAccountGuardian', [
             'profile'=>$profile,
@@ -238,7 +241,7 @@ class GuardianController extends Controller
             $result = $newGuardian->save();
        
            if($result){
-                return redirect("/guardiao/cadastrar")->with('success', self::MSG_GUARDIAO_CADASTRADO);
+                return redirect("/login")->with('success', self::MSG_GUARDIAO_CADASTRADO);
             } else {
                 return redirect("/guardiao/cadastrar")->with('error', self::MSG_GUARDIAO_ERRO);
             }
@@ -249,13 +252,20 @@ class GuardianController extends Controller
 
     public function formUpdate($id){
             $guardian = Guardian::find($id);
-            
+            //retorna todos os dados do id=3 e user_id=5.
+            $profile = Auth::user()->id;
+            //retorna o id=3 da tabela users.
             $user = Auth::user()->email;
 
-            if($guardian){
+            $guardianId = Guardian::join('users', 'users.id', '=', 'guardians.user_id')->where('guardians.user_id', '=', $profile)->select('guardians.id',  'guardians.name', 'guardians.nickname', 'guardians.date_of_birth', 'guardians.phone_number', 'guardians.profile_picture', 'guardians.address', 'guardians.number', 'guardians.complement', 'guardians.zip_code', 'guardians.neighborhood', 'guardians.city', 'guardians.state', 'guardians.about_the_guardian', 'users.email')->first();
+           
+
+            if($guardianId){
                 return view('Guardian.formUpdateGuardian', [
                     "guardian"=>$guardian, 
-                    "user"=>$user]);
+                    "user"=>$user,
+                    "profile"=>$profile,
+                    "guardianId"=>$guardianId]);
             } else {
                 return view('Guardian.formUpdateGuardian');
             }
@@ -284,7 +294,7 @@ class GuardianController extends Controller
         
         $user = User::find($guardian->user_id);
         $user->email = $request->email;
-        $user->password = $request->password;
+        $user->password = Hash::make($request->senhaGuardiao);
 
         $result = $user->save();
 
@@ -301,8 +311,12 @@ class GuardianController extends Controller
 
         $result = $guardian->save();
 
-        return redirect('/guardiao/cadastrar')->with(['result'=>$result]);
-
+        //return redirect('/guardiao/cadastrar')->with(['result'=>$result]);
+        if($result){
+            return redirect('/guardiao/cadastrar')->with('success', self::MSG_GUARDIAO_EDITADO);
+        } else {
+            return redirect("/guardiao/cadastrar")->with('error', self::MSG_GUARDIAO_ERRO_EDITADO);
+        }
     }
 
     

@@ -59,7 +59,7 @@
                         <a class="nav-link header-link" href="/login">Login</a>
                     </li>
                     <li class="nav-item">
-                        <a href="cadastre-se" class="header-link"><button type="button"
+                        <a href="/cadastre-se" class="header-link"><button type="button"
                                 class="btn-roxo">Cadastre-se</button></a>
                     </li>
                         @else
