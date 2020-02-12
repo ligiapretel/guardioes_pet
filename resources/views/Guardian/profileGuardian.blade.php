@@ -51,7 +51,7 @@
                 </div>
                     <div class="card-body">
                     <h4 class="card-title text-dark font-weight-bold">{{$pet->name}}</h4>
-                        <p class="card-text text-secondary">{{$pet->description}}</p>
+                        <p class="card-text text-secondary pet-description">{{$pet->description}}</p>
                         <a href="/pet/perfil/{{$pet->id}}" class="btn btn-roxo-outline">Saiba mais</a> 
                     </div>
             </div>
@@ -79,7 +79,7 @@
                 </div>
                 <div class="card-body" style="background-color:#D6EBE8">
                 <h4 class="card-title text-dark font-weight-bold">{{$pet->name}}</h4>
-                    <p class="card-text text-secondary">{{$pet->description}}</p>
+                    <p class="card-text text-secondary pet-description">{{$pet->description}}</p>
                     <a href="/pet/perfil/{{$pet->id}}" class="btn btn-roxo-outline">Saiba mais</a> 
                 </div>
             </div>
@@ -108,7 +108,7 @@
                 </div>
                 <div class="card-body" style="background-color:#fdead1">
                 <h4 class="card-title text-dark font-weight-bold">{{$pet->name}}</h4>
-                    <p class="card-text text-secondary">{{$pet->description}}</p>
+                    <p class="card-text text-secondary pet-description">{{$pet->description}}</p>
                     <a href="/pet/perfil/{{$pet->id}}" class="btn btn-roxo-outline">Saiba mais</a> 
                 </div>
             </div>

@@ -19,7 +19,7 @@
                 </div>
                 <div class="card-body">
                     <h5 class="card-title">{{$g->name}}</h5>
-                    <p class="card-text">{{$g->about_the_guardian}}</p>
+                    <p class="card-text pet-description">{{$g->about_the_guardian}}</p>
                     <div class="d-flex justify-content-center">
                     <a href="/guardiao/perfil/{{$g->id}}">
                         <button type="button" class="btn-roxo-outline">Saiba Mais</button>
