@@ -52,12 +52,42 @@
     font-size: 1.4rem;
 }
 
+.cinza{
+    color: #343F4B;
+}
+
+.largura-coluna{
+    width: 16.66%;
+}
+
+.observacao-roxo{
+    font-size: 12px;
+    color: #4a3f78;
+    font-style: italic;
+}
+
+.observacao-laranja{
+    font-size: 12px;
+    color: #ff9640;
+    font-style: italic;
+}
+
+.alert-success-acoes{
+    color: #d66203;
+    background-color: #fbd2b0;
+    border-color: #d66203;
+}
+
 .link-roxo{
     color:#6E5DB3;
 }
 
 .link-roxo:hover{
     color: #4a3f78;
+}
+
+.bg-cinza{
+    background-color: #6c757d;
 }
 
 /*CSS Menu lateral ONG´s*/
@@ -111,9 +141,8 @@
 
 /*BOX de mensagens para a ONG*/
 .mensagem-guardiao {
-    border: 3px groove #ff9640;
+    box-shadow: inset 0px -1px 0px 0px #dadbdc;
     padding: 10px;
-    margin-bottom: 2%;
 }
 
 .mensagem-guardiao:hover {
@@ -658,6 +687,18 @@ footer img {
     overflow: hidden;
 }
 
+#img-pet-perfil{
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.pet-description {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
 /* PERFIL DAS ONGS E GUARDIÕES */
 
 /*Informacoes*/
@@ -713,7 +754,11 @@ footer img {
 
 /* Animais das Ongs e dos Guardiões */
 
-#perfilOngGuar_animais {
+#pets .card-body{
+    background-color: #D6EBE8
+}
+
+#perfilOngGuar_animais{
     padding: 5%;
 }
 
@@ -935,10 +980,6 @@ footer img {
     width: 50%;
 }
 
-#box-chat{
-    margin-top: 200px;
-}
-
 /* css das páginas de admin */
 .margem {
     margin-top: 100px;
@@ -1047,6 +1088,10 @@ footer img {
     
     #img-pet-busca{
         height: 160px;
+    }
+
+    #img-pet-perfil{
+        height: 190px;
     }
 }
 
@@ -1753,6 +1798,10 @@ footer img {
     /*---FIM PERFIL ANIMAL---*/
     
     #img-pet-busca{
+        height: 280px;
+    }
+
+    #img-pet-perfil{
         height: 280px;
     }
 

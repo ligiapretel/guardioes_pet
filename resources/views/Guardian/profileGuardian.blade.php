@@ -65,7 +65,7 @@
 
     <!--Onde estão os animais adotados -->
     @if($adopted == true) 
-    <section class="container-fluid bg-light" id="perfilOngGuar_animais"> 
+    <section class="container-fluid" id="perfilOngGuar_animais"> 
         <div class="row">
             <h2 class="col-lg-12 text-dark font-weight-bold pfOngGuard_titulo">Adotados</h2>
         </div>
@@ -73,20 +73,21 @@
             @foreach($pets as $pet)
             @if($pet->relation_type_id==1)
             <div class="col-sm-6 col-md-4">
-                <div class="card">
-                    <div id="img-pet-busca">
-                        <img src="{{asset('storage/public/pets_pictures/'.$pet->picture)}}" class="card-img-top img-fluid" height="300" width="300">
-                    </div>
-                    <div class="card-body" style="background-color:#D6EBE8">
-                    <h4 class="card-title text-dark font-weight-bold">{{$pet->name}}</h4>
-                        <p class="card-text text-secondary">{{$pet->description}}</p>
-                        <a href="/pet/perfil/{{$pet->id}}" class="btn btn-roxo-outline">Saiba mais</a> 
-                    </div>
+            <div class="card mb-4">
+                <div id="img-pet-busca">
+                    <img src="{{asset('storage/public/pets_pictures/'.$pet->picture)}}" class="card-img-top img-fluid" height="300" width="300">
                 </div>
-            @endif
-            @endforeach
+                <div class="card-body" style="background-color:#D6EBE8">
+                <h4 class="card-title text-dark font-weight-bold">{{$pet->name}}</h4>
+                    <p class="card-text text-secondary">{{$pet->description}}</p>
+                    <a href="/pet/perfil/{{$pet->id}}" class="btn btn-roxo-outline">Saiba mais</a> 
+                </div>
             </div>
         </div>
+            @endif
+            @endforeach
+            
+        </div>           
     </section>
     @endif
 
@@ -128,22 +129,22 @@
                 <h4 class="bg-dark m-0 p-2 text-white">Estou Precisando!</h4>
                 <thead>
                     <tr class="bg-light">
-                        <th scope="col">Medicamentos</th>
-                        <th scope="col">Produtos de Higiene</th>
-                        <th scope="col">Alimentos</th>
-                        <th scope="col">Brinquedos</th>
-                        <th scope="col">Acessórios</th>
-                        <th scope="col">Outros</th>
+                        <th scope="col" class="cinza largura-coluna">Medicamentos</th>
+                        <th scope="col" class="cinza largura-coluna">Higiene</th>
+                        <th scope="col" class="cinza largura-coluna">Alimentos</th>
+                        <th scope="col" class="cinza largura-coluna">Brinquedos</th>
+                        <th scope="col" class="cinza largura-coluna">Acessórios</th>
+                        <th scope="col" class="cinza largura-coluna">Outros</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>{{$ad->medicine}}</td>
-                        <td>{{$ad->hygiene_supply}}</td>
-                        <td>{{$ad->food}}</td>
-                        <td>{{$ad->toys}}</td>
-                        <td>{{$ad->accessories}}</td>
-                        <td>{{$ad->others}}</td>
+                        <td class="cinza largura-coluna">{{$ad->medicine}}</td>
+                        <td class="cinza largura-coluna">{{$ad->hygiene_supply}}</td>
+                        <td class="cinza largura-coluna">{{$ad->food}}</td>
+                        <td class="cinza largura-coluna">{{$ad->toys}}</td>
+                        <td class="cinza largura-coluna">{{$ad->accessories}}</td>
+                        <td class="cinza largura-coluna">{{$ad->others}}</td>
                     </tr>
                 </tbody>
             </table>

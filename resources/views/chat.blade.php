@@ -7,7 +7,7 @@
 @section('content')
     <section class="col d-flex" >
         <!-- Início do chat-->
-        <section class="col-lg-4 col-md-3 col-sm-6 col-xs-6 m-5">
+        <section class="col-6 col-md-3 col-lg-4 m-5">
             <div class="card-body">
                 <div class="mensagem-guardiao mt-5">
                     <img id="perfil-chat-guardiao" src="img/johndoe.png" alt="foto perfil guardião" />
@@ -39,10 +39,10 @@
                 </div>
             </div>
         </section>
-        <div id="box-chat" class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-            <div class="d-flex justify-content-start align-items-center">
+        <div class="col-md-6 mt-5 pt-3">
+            <div class="d-flex justify-content-start align-items-center mt-5">
                 <img id="perfil-chat-guardiao" src="img/johndoe.png" alt="foto perfil guardião" />
-                <div class="d-flex flex-column">
+                <div class="d-flex flex-column pt-3 pl-1">
                     <h6>John Doe</h6>
                     <p>Assunto: Lar Temporário</p>
                 </div>
@@ -55,8 +55,10 @@
             <label>Responder:</label>
             <form>
                 <textarea class="form-control" type="text" rows="10"
-                    placeholder="Responder a mensagem do Guardião aqui." name=""></textarea>
-                <button type="submit" class="btn btn-roxo-outline d-flex justify-content-end m-3">Responder</button>
+                    placeholder="Responder a mensagem do Guardião aqui."></textarea>
+                    <div class="row justify-content-end p-3">
+                        <button type="submit" class="btn-roxo">Responder</button>
+                    </div>
             </form>
         </div>
     </div>
