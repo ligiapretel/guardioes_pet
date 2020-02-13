@@ -46,20 +46,6 @@ class GuardianController extends Controller
         ->where('guardian_id', '=', $profile->id)
         ->select('pets.*', 'guardian_has_pets.relation_type_id', 'pets_pictures.picture')
         ->get();
-
-        //dd($pets);
-        // ->join('pets', 'guardian_has_pets.pet_id', '=', 'pets.id')
-        // ->join('pets_pictures', 'pets_pictures.pet_id', '=', 'pets.id')
-        // ->where('guardian_id', '=', $profile->id)
-        // ->select('pets.*', 'guardian_has_pets.relation_type_id', 'pets_pictures.picture')->get();
-        //dd($pets);
-        
-        //o where tá voltando vazio;
-        //O primeiro join retorna todos os pets com todos os guardiões.
-        //depois do primeiro join, se acrescentar o where, retorna as informações de cada guardião, com seus pets.
-        //Se acrescentar o segundo join depois do primeiro, sem o where, aparece todas infos dos guardiões e todas dos pets cadastrados com os guardiões.
-        //se depois de 2 join acrescentar o where, o id=1 retorna com os pets cadastrados, o id=5 tb. O id=2 retorna vazio.
-        //Com 3 joins retorna todas as infos dos guardiões com todas dos pets e a foto do pet.
         
         function adopted($pets){
             foreach($pets as $pet){
@@ -123,10 +109,6 @@ class GuardianController extends Controller
         $profile = Auth::user()->id;
         //Aqui está retornando o perfil com id=3, pois o Auth::user está enviando que o id é 3, porém o Auth::user está retornando o user_id=3, que deveria ser o id=1.
         $guardianId = Guardian::join('users', 'users.id', '=', 'guardians.user_id')->where('guardians.user_id', '=', $profile)->select('guardians.id', 'guardians.profile_picture', 'guardians.name', 'guardians.about_the_guardian')->first();
-         //where('user_id', '=', $request->user)->get();
-         //where('guardians.id', '=', $guardian->id)->
-        //aqui está retornando um array vazio.
-        //dd($guardianId);
 
         $pets = Guardian_has_pets::join('guardians', 'guardians.id', '=', 'guardian_has_pets.guardian_id')
         ->join('pets', 'guardian_has_pets.pet_id', '=', 'pets.id')
@@ -331,7 +313,11 @@ class GuardianController extends Controller
 
     
     public function viewAllGuardians(){
-        $guardians = Guardian::all();
+        // Selecionando somente guardiões ativos para serem listados
+        $guardians = Guardian::join('users','users.id','=','guardians.user_id')
+                            ->select('guardians.*')
+                            ->where('users.status_id','=',1)
+                            ->get();
 
         // Pegando todas as ongs, somente com status ativo, para exibir na busca recolhida que aparece na view allGuardians
         $ngos = Ngos::join('users','users.id', '=', 'ngos.user_id')
