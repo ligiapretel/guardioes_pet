@@ -45,15 +45,17 @@
         <div class="row px-2">
             @foreach($pets as $pet)
             @if($pet->relation_type_id==3)
-            <div class="card mb-4 col-11 col-sm-5 col-md-4 col-lg-3 border-none">
-                <div id="img-pet-busca">
+            <div class="col-sm-6 col-md-4">
+            <div class="card mb-4">
+                <div id="img-pet-perfil">
                     <img src="{{asset('storage/public/pets_pictures/'.$pet->picture)}}" class="card-img-top img-fluid">
                 </div>
                     <div class="card-body">
-                        <h4 class="card-title text-dark font-weight-bold">{{$pet->name}}</h4>
-                        <p class="card-text text-secondary pet-description">{{$pet->description}}</p>
+                    <h4 class="card-title text-dark font-weight-bold">{{$pet->name}}</h4>
+                        <p class="card-text text-secondary pet-description-myaccount">{{$pet->description}}</p>
                         <a href="/pet/perfil/{{$pet->id}}" class="btn btn-roxo-outline">Saiba mais</a> 
                     </div>
+            </div>
             </div>
             @endif
             @endforeach
@@ -70,15 +72,17 @@
         <div class="row px-2">
             @foreach($pets as $pet)
             @if($pet->relation_type_id==1)
-            <div class="card mb-4 col-11 col-sm-5 col-md-4 col-lg-3 border-none">
-                <div id="img-pet-busca">
+            <div class="col-sm-6 col-md-4">
+            <div class="card mb-4">
+                <div id="img-pet-perfil">
                     <img src="{{asset('storage/public/pets_pictures/'.$pet->picture)}}" class="card-img-top img-fluid">
                 </div>
                     <div class="card-body">
-                        <h4 class="card-title text-dark font-weight-bold">{{$pet->name}}</h4>
-                        <p class="card-text text-secondary pet-description">{{$pet->description}}</p>
+                    <h4 class="card-title text-dark font-weight-bold">{{$pet->name}}</h4>
+                        <p class="card-text text-secondary pet-description-myaccount">{{$pet->description}}</p>
                         <a href="/pet/perfil/{{$pet->id}}" class="btn btn-roxo-outline">Saiba mais</a> 
                     </div>
+            </div>
             </div>
             @endif
             @endforeach
@@ -95,15 +99,17 @@
         <div class="row px-2">
             @foreach($pets as $pet)
             @if($pet->relation_type_id==2)
-            <div class="card mb-4 col-11 col-sm-5 col-md-4 col-lg-3 border-none">
-                <div id="img-pet-busca">
+            <div class="col-sm-6 col-md-4">
+            <div class="card mb-4">
+                <div id="img-pet-perfil">
                     <img src="{{asset('storage/public/pets_pictures/'.$pet->picture)}}" class="card-img-top img-fluid">
                 </div>
                     <div class="card-body">
-                        <h4 class="card-title text-dark font-weight-bold">{{$pet->name}}</h4>
-                        <p class="card-text text-secondary pet-description">{{$pet->description}}</p>
+                    <h4 class="card-title text-dark font-weight-bold">{{$pet->name}}</h4>
+                        <p class="card-text text-secondary pet-description-myaccount">{{$pet->description}}</p>
                         <a href="/pet/perfil/{{$pet->id}}" class="btn btn-roxo-outline">Saiba mais</a> 
                     </div>
+            </div>
             </div>
             @endif
             @endforeach

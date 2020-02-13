@@ -717,6 +717,13 @@ footer img {
     white-space: nowrap;
 }
 
+.pet-description-myaccount {
+    max-width: 130ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
 /* PERFIL DAS ONGS E GUARDIÕES */
 
 /*Informacoes*/
