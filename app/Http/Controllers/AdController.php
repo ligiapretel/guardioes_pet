@@ -26,14 +26,7 @@ class AdController extends Controller
     }
 
     public function viewRegisterAds(Request $request){
-        //Identificando se existe guardião logado, para exibir o menu lateral diferente.
-        $userId = Auth::user()->id;
-        $profile = User::join('guardians','guardians.user_id','=','users.id')
-        ->where('guardians.user_id','=',$userId)
-        ->select('guardians.id')
-        ->get();
-
-        return view('Ads.registerAds',["profile"=>$profile]);
+        return view('Ads.registerAds');
     }
 
     public function create(Request $request){
@@ -60,17 +53,10 @@ class AdController extends Controller
     public function viewFormUpdate(Request $request, $id=0){
         // Dentro do () do find estou recuperando o que veio pela rota
         $ad = Ad::find($id);
-        
-        //Identificando se existe guardião logado, para exibir o menu lateral diferente.
-        $userId = Auth::user()->id;
-        $profile = User::join('guardians','guardians.user_id','=','users.id')
-        ->where('guardians.user_id','=',$userId)
-        ->select('guardians.id')
-        ->get();
 
         if($ad){
             // Passar um array associativo como parâmetro da view: primeiro o nome da associação, que pode ser qualquer nome, e depois a variável aonde armazenei o esse parâmetro.
-            return view('Ads.updateAds',["ad"=>$ad],["profile"=>$profile]);
+            return view('Ads.updateAds',["ad"=>$ad]);
         }else{
             return view('Ads.updateAds');
         }
@@ -100,15 +86,9 @@ class AdController extends Controller
         $listAds = Ad::all();
         $userId = Auth::user()->id;
         
-        //Identificando se existe guardião logado, para exibir o menu lateral diferente.
-        $profile = User::join('guardians','guardians.user_id','=','users.id')
-                        ->where('guardians.user_id','=',$userId)
-                        ->select('guardians.id')
-                        ->get();
-        
         $myAds = Ad::where('user_id','=',$userId)->get();
       
-        return view('Ads.myAds',["myAds"=>$myAds],["profile"=>$profile]);
+        return view('Ads.myAds',["myAds"=>$myAds]);
     }
 
     public function delete(Request $request, $id=0){
