@@ -40,7 +40,7 @@
                     </div>
                     <div class="card-body" style="background-color: #E7E2FC">
                         <h4 class="card-title text-dark font-weight-bold">{{$pet->name}}</h4>
-                            <p class="card-text text-secondary">{{$pet->description}}</p>
+                            <p class="card-text text-secondary pet-description">{{$pet->description}}</p>
                             <a href="/pet/perfil/{{$pet->id}}" class="btn btn-roxo-outline">Saiba mais</a> 
                     </div>
                 </div>
